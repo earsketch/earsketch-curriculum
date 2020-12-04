@@ -13,8 +13,8 @@ phases:
       - pip install BeautifulSoup4
   pre_build:
     commands:
-      - export ES_SCRIPT_HOME="$CODEBUILD_SRC_DIR/scripts/earsketch-deployment/scripts"
-      - export ASCIIDOC_DIR="$CODEBUILD_SRC_DIR/curriculum-asciidoc"
+      - export ES_SCRIPT_HOME="$CODEBUILD_SRC_DIR/scripts"
+      - export ASCIIDOC_DIR="$CODEBUILD_SRC_DIR/src"
       - export LOCAL_STAGING_DIR_NAME="${CODEBUILD_SOURCE_VERSION//\//-}"
       - export LOCAL_STAGING_DIR="$CODEBUILD_SRC_DIR/$LOCAL_STAGING_DIR_NAME"
   build:
@@ -27,7 +27,7 @@ phases:
       - echo Finished printing variables
       - echo "Entered the build phase..."
       - echo "Converting curriculum to html with asciidoctor..."
-      - asciidoctor -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" -D "$ASCIIDOC_DIR/curriculum" "$ASCIIDOC_DIR/*.asc"
+      - asciidoctor -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" -D "$LOCAL_STAGING_DIR" "$ASCIIDOC_DIR/*.asc"
       - python "$ES_SCRIPT_HOME/curr_add_html_features.py" "$CODEBUILD_SRC_DIR"
       - python "$ES_SCRIPT_HOME/curr_toc.py" "$CODEBUILD_SRC_DIR"
       - python "$ES_SCRIPT_HOME/curr_searchdoc.py" "$CODEBUILD_SRC_DIR"
