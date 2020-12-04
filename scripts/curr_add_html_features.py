@@ -9,20 +9,16 @@ import sys
 
 if len(sys.argv) < 2:
 	print("Error, no arguments given")
-	print("Usage: curr_add_html_features.py <GIT_REPO_DIR>")
+	print("Usage: curr_add_html_features.py <CURRICULUM_STAGE_DIR>")
 	exit(1)
 curr_dir = sys.argv[1]
 
-slides_dir = curr_dir+'/teacher-materials/'
-slides_output_dir = curr_dir+'/curriculum-asciidoc/teachermaterials/'
-jar_file = curr_dir+'/utilities/pptx_convertor.jar'
-video_caption_dir = curr_dir+'/webclient/videoMedia/NewCaptions/'
-curr_dir = curr_dir+'/webclient/curriculum/'
+video_caption_dir = curr_dir+'/videoMedia/NewCaptions/'
+curr_dir = curr_dir+'/curriculum/'
 
 caption_files = [cap_name[:-4] for cap_name in os.listdir(video_caption_dir)]
 
 chapters = [ch for ch in os.listdir(curr_dir) if 'ch_' in ch]
-units = [unit for unit in os.listdir(slides_dir) if 'Unit' in unit]
 
 print("Processing html files...")
 n_processed = 0
@@ -57,7 +53,7 @@ for ch in chapters:
 		skip = False
 		if lang == 'python':
 			lang_str = 'python'
-		elif lang == 'javascript': 
+		elif lang == 'javascript':
 			lang_str = 'javascript'
 		else:
 			skip = True #don't add copy icon
@@ -75,7 +71,7 @@ for ch in chapters:
 			i = soup.new_tag('i')
 			i['class'] = 'icon icon-paste2'
 			i['title'] = 'Open the example code in the editor'
-	
+
 			el.insert_before(i)
 			i.wrap(button)
 
