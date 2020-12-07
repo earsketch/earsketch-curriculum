@@ -15,7 +15,6 @@ source_dir = sys.argv[1]
 curr_dir = sys.argv[2]
 
 video_caption_dir = source_dir+'/videoMedia/NewCaptions/'
-curr_dir = curr_dir+'/curriculum/'
 
 caption_files = [cap_name[:-4] for cap_name in os.listdir(video_caption_dir)]
 
