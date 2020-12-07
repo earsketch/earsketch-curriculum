@@ -92,7 +92,10 @@ for unitIdx, unit in enumerate(toc_data):
 		for secIdx, sec in enumerate(ch['sections']):
 			toc_pages.append([unitIdx, chIdx, secIdx])
 
-wf = open(curr_dir+'webclient/scripts/src/data/curr_toc.js', 'w')
+webclientFilename = curr_dir+'/webclient/scripts/src/data/curr_toc.js'
+os.makedirs(os.path.dirname(webclientFilename), exist_ok=True)
+
+wf = open(webclientFilename, 'w')
 wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
 wf.close()
 
