@@ -7,11 +7,11 @@ import sys
 
 if len(sys.argv) < 2:
 	print("Error, no arguments given")
-	print("Usage: curr_toc.py <GIT_REPO_DIR>")
+	print("Usage: curr_toc.py <CURRICULUM_STAGE_DIR>")
 	exit(1)
 curr_dir = sys.argv[1]
 
-toc = codecs.open(curr_dir+'/webclient/curriculum/toc.html', 'r').read()
+toc = codecs.open(curr_dir+'/toc.html', 'r').read()
 parser = BeautifulSoup(toc, 'html.parser')
 toc_data = []
 chapter_count = 0
@@ -57,7 +57,7 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 			display_chapter_number = -1
 
 		# read the html of current chapter
-		chapter_html = codecs.open(curr_dir+'/webclient/curriculum/'+url, 'r').read()
+		chapter_html = codecs.open(curr_dir+'/'+url, 'r').read()
 		sections = BeautifulSoup(chapter_html, 'html.parser')
 
 		ch_data = {
@@ -96,7 +96,7 @@ wf = open(curr_dir+'/webclient/scripts/src/data/curr_toc.js', 'w')
 wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
 wf.close()
 
-wf = open(curr_dir+'/curriculum-asciidoc/curr_toc.js', 'w')
+wf = open(curr_dir+'/curr_toc.js', 'w')
 wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
 wf.close()
 
@@ -104,7 +104,7 @@ wf = open(curr_dir+'/webclient/scripts/src/data/curr_pages.js', 'w')
 wf.write('var ESCurr_Pages = ' + json.dumps(toc_pages) + ';')
 wf.close()
 
-wf = open(curr_dir+'/curriculum-asciidoc/curr_pages.js', 'w')
+wf = open(curr_dir+'/curr_pages.js', 'w')
 wf.write('var ESCurr_Pages = ' + json.dumps(toc_pages) + ';')
 wf.close()
 

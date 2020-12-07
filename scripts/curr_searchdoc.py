@@ -8,11 +8,11 @@ import sys
 
 if len(sys.argv) < 2:
 	print("Error, no arguments given")
-	print("Usage: curr_searchdoc.py <GIT_REPO_DIR>")
+	print("Usage: curr_searchdoc.py <CURRICULUM_STAGE_DIR>")
 	exit(1)
 curr_dir = sys.argv[1]
 
-toc = codecs.open(curr_dir+'/webclient/curriculum/toc.html', 'r').read()
+toc = codecs.open(curr_dir+'/toc.html', 'r').read()
 parser = BeautifulSoup(toc, 'html.parser')
 
 documents = []
@@ -34,7 +34,7 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 		url = chapter.find('a').attrs['href']
 
 		# read the html of current chapter
-		chapter_html = codecs.open(curr_dir+'/webclient/curriculum/'+url, 'r').read()
+		chapter_html = codecs.open(curr_dir+'/'+url, 'r').read()
 		sections = BeautifulSoup(chapter_html, 'html.parser')
 
 		ch_data = {
@@ -60,7 +60,7 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 
 
 # print documents
-wf = open(curr_dir+'/curriculum-asciidoc/curr_searchdoc.js', 'w')
+wf = open(curr_dir+'/curr_searchdoc.js', 'w')
 wf.write('var ESCurr_SearchDoc = ' + json.dumps(documents, indent=4) + ';')
 wf.close()
 
