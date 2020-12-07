@@ -28,7 +28,7 @@ phases:
       - echo "Entered the build phase..."
       - echo "Converting curriculum to html with asciidoctor..."
       - asciidoctor -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" -D "$LOCAL_STAGING_DIR" "$ASCIIDOC_DIR/*.asc"
-      - python "$ES_SCRIPT_HOME/curr_add_html_features.py" "$LOCAL_STAGING_DIR"
+      - python "$ES_SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STAGING_DIR"
       - python "$ES_SCRIPT_HOME/curr_toc.py" "$CODEBUILD_SRC_DIR"
       - python "$ES_SCRIPT_HOME/curr_searchdoc.py" "$CODEBUILD_SRC_DIR"
       - echo "Moving JSON files from staging area to webclient..."
