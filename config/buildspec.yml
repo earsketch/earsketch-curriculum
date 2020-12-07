@@ -15,7 +15,7 @@ phases:
     commands:
       - export ES_SCRIPT_HOME="$CODEBUILD_SRC_DIR/scripts"
       - export ASCIIDOC_DIR="$CODEBUILD_SRC_DIR/src"
-      - export LOCAL_STAGING_DIR_NAME="${CODEBUILD_SOURCE_VERSION//\//-}"
+      - export LOCAL_STAGING_DIR_NAME="${CODEBUILD_SOURCE_VERSION//\//-}/"
       - export LOCAL_STAGING_DIR="$CODEBUILD_SRC_DIR/$LOCAL_STAGING_DIR_NAME"
   build:
     commands:
