@@ -43,4 +43,5 @@ phases:
 
 artifacts:
   files:
-    - $LOCAL_STAGING_DIR_NAME/**/*
+    - '**/*'
+  base-directory: $LOCAL_STAGING_DIR_NAME
