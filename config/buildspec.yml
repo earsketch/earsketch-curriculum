@@ -38,7 +38,7 @@ phases:
       - echo "Completed curriculum build"
       - cd src
       - echo "Copying curriculum files to local distribution folder..."
-      - cp -r audioMedia/ videoMedia/ theme/ "$LOCAL_STAGING_DIR"
+      - cp -r audioMedia/ curriculum/ videoMedia/ theme/ "$LOCAL_STAGING_DIR"
       # - python "$ES_SCRIPT_HOME/github_create_deployment.py" $GITHUB_USER $GITHUB_TOKEN $CODEBUILD_RESOLVED_SOURCE_VERSION $LOCAL_STAGING_DIR_NAME
 
 artifacts:
