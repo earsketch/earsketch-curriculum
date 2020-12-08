@@ -108,7 +108,7 @@ for ch in chapters:
 			# track_tag.attrs['default'] = None # Comment in if we want to show the captions by default.
 			el.append(track_tag)
 		el['preload'] = 'none'
-		el['poster'] = 'img/video-thumbnail.png'
+		el['poster'] = '/earsketch2/img/video-thumbnail.png'
 
 	#special case for teacher materials link
 	for el in soup.find_all('a', href=lambda x: x.startswith('teachermaterials')):
