@@ -7,12 +7,13 @@ import subprocess
 import re
 import sys
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 4:
 	print("Error, no arguments given")
-	print("Usage: curr_add_html_features.py <CURRICULUM_SOURCE_DIR> <CURRICULUM_STAGE_DIR>")
+	print("Usage: curr_add_html_features.py <CURRICULUM_SOURCE_DIR> <CURRICULUM_STAGE_DIR> <BASE_HOST_URL>")
 	exit(1)
 source_dir = sys.argv[1]
 curr_dir = sys.argv[2]
+base_host_url = sys.argv[3]
 
 video_caption_dir = source_dir+'/videoMedia/NewCaptions/'
 
@@ -30,15 +31,15 @@ for ch in chapters:
 
 	# fix the image file paths
 	for el in soup.find_all('img', src=lambda x: x.startswith('../media')):
-		el['src'] = el['src'].replace('../media', 'curriculum/media')
+		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/media')
 
 	# fix special video paths
 	for el in soup.find_all('video', src=lambda x: x.startswith('../media')):
-		el['src'] = el['src'].replace('../media', 'curriculum/media')
+		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/media')
 
 	# fix legacy video paths
 	for el in soup.find_all('video', src=lambda x: x.startswith('./videoMedia')):
-		el['src'] = el['src'].replace('./videoMedia', '/videoMedia')
+		el['src'] = el['src'].replace('./videoMedia', base_host_url+'/videoMedia')
 
 	# remove the unwanted inline style chunk
 	[el.extract() for el in soup('style')]
@@ -104,7 +105,7 @@ for ch in chapters:
 		# Note: The names of video file and caption file have to be identical!
 		video_name = el['src'][12:-4]
 		if video_name in caption_files:
-			track_tag = soup.new_tag('track', src='./videoMedia/NewCaptions/'+video_name+'.vtt', srclang='en', kind='captions')
+			track_tag = soup.new_tag('track', src=base_host_url+'/videoMedia/NewCaptions/'+video_name+'.vtt', srclang='en', kind='captions')
 			# track_tag.attrs['default'] = None # Comment in if we want to show the captions by default.
 			el.append(track_tag)
 		el['preload'] = 'none'
