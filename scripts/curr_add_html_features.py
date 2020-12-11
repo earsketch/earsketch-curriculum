@@ -31,11 +31,11 @@ for ch in chapters:
 
 	# fix the image file paths
 	for el in soup.find_all('img', src=lambda x: x.startswith('../media')):
-		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/media')
+		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/curriculum/media')
 
 	# fix special video paths
 	for el in soup.find_all('video', src=lambda x: x.startswith('../media')):
-		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/media')
+		el['src'] = el['src'].replace('../media', base_host_url+'/curriculum/curriculum/media')
 
 	# fix legacy video paths
 	for el in soup.find_all('video', src=lambda x: x.startswith('./videoMedia')):
