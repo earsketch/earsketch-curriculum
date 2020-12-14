@@ -41,6 +41,10 @@ for ch in chapters:
 	for el in soup.find_all('video', src=lambda x: x.startswith('./videoMedia')):
 		el['src'] = el['src'].replace('./videoMedia', base_host_url+'/videoMedia')
 
+	# fix curriculum script paths
+	for el in soup.find_all('script', src=lambda x: x.startswith('curriculum/scripts/')):
+		el['src'] = el['src'].replace('curriculum/scripts/', base_host_url+'/curriculum/curriculum/scripts/')
+
 	# remove the unwanted inline style chunk
 	[el.extract() for el in soup('style')]
 
