@@ -52,6 +52,14 @@ for ch in chapters:
 	for el in soup.find_all('div', {'class':'curriculum-mp3'}):
 		el.contents[0] = soup.new_tag('audio', src=el.string, controls='')
 
+	# fix legacy audio paths
+	for el in soup.find_all('audio', src=lambda x: x.startswith('audioMedia/')):
+		el['src'] = el['src'].replace('audioMedia/', base_host_url+'/curriculum/audioMedia/')
+
+	# fix legacy audio paths
+	for el in soup.find_all('audio', src=lambda x: x.startswith('./audioMedia/')):
+		el['src'] = el['src'].replace('./audioMedia/', base_host_url+'/curriculum/audioMedia/')
+
 	# for highlight.js to work
 	for el in soup.find_all('code', {'class': lambda x: x and x.startswith('language-')}):
 		el['class'] = el['class'][0].replace('language-', '')
