@@ -111,7 +111,7 @@ for ch in chapters:
 	for el in soup('video'):
 		# If a caption file with matching name is found, add it to HTML.
 		# Note: The names of video file and caption file have to be identical!
-		video_name = el['src'][12:-4]
+		video_name = el['src'][len(base_host_url)+12:-4]
 		if video_name in caption_files:
 			track_tag = soup.new_tag('track', src=base_host_url+'/videoMedia/NewCaptions/'+video_name+'.vtt', srclang='en', kind='captions')
 			# track_tag.attrs['default'] = None # Comment in if we want to show the captions by default.
