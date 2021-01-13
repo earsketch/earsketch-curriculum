@@ -5,5 +5,5 @@ To build locally for development:
 
 ```shell
 cd /path/to/earsketch-curricilum
-./scripts/local_dev_curriculum_asciidoc_builder.sh ./
+./scripts/local_dev_curriculum_asciidoc_builder.sh /path/to/earsketch-curricilum
 ```
