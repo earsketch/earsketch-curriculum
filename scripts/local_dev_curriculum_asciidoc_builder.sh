@@ -28,7 +28,10 @@ sudo python "$SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STA
 sudo python "$SCRIPT_HOME/curr_toc.py" "$LOCAL_STAGING_DIR" || exit 1
 sudo python "$SCRIPT_HOME/curr_searchdoc.py" "$LOCAL_STAGING_DIR" || exit 1
 
-
+echo "Moving media files and resources to curriculum-local directory"
+cd "$ASCIIDOC_DIR" || exit 1
+sudo cp -r audioMedia curriculum videoMedia theme "$LOCAL_STAGING_DIR"
+cd "$GIT_REPO" || exit 1
 echo
 # echo "Moving JSON files from staging area to webclient..."
 # cd "$GIT_REPO" || exit 1
