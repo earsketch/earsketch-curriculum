@@ -24,9 +24,9 @@ sudo asciidoctor \
   -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
   -D "$LOCAL_STAGING_DIR" "$ASCIIDOC_DIR/*.asc" || exit 1
 
-sudo python "$SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STAGING_DIR" "$ES_HOST" || exit 1
-sudo python "$SCRIPT_HOME/curr_toc.py" "$LOCAL_STAGING_DIR" || exit 1
-sudo python "$SCRIPT_HOME/curr_searchdoc.py" "$LOCAL_STAGING_DIR" || exit 1
+sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STAGING_DIR" "$ES_HOST" || exit 1
+sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCAL_STAGING_DIR" || exit 1
+sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCAL_STAGING_DIR" || exit 1
 
 echo "Moving media files and resources to curriculum-local directory"
 cd "$ASCIIDOC_DIR" || exit 1
