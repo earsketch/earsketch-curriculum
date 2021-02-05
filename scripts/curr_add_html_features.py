@@ -92,22 +92,6 @@ for ch in chapters:
 	# for el in soup.find_all('a', href=lambda x: x.startswith('http')):
 	# 	el['target'] = '_blank'
 
-	# open internal cross references with loadChapter()
-	# TODO: figure out ng-binding with the curriculumPaneController
-	# for x-refs pointing to a different section in the same chapter
-	for el in soup.find_all('a', href=lambda x: x.startswith('#')):
-		el['onclick'] = 'angular.element(\'[ng-controller=layoutController]\').scope().loadChapter(\'' + ch + el['href'] + '\')'
-		el['href'] = '#'
-
-	for el in soup.find_all('a', href=lambda x: x.startswith('ch_')):
-		el['onclick'] = 'angular.element(\'[ng-controller=layoutController]\').scope().loadChapter(\'' + el['href'] + '\')'
-		el['href'] = '#'
-
-	# fix the link to open the ES API browser
-	for el in soup.find_all('a', href='<toc.html>'):
-		el['href'] = '#'
-		el['onclick'] = 'angular.element(\'[ng-controller=layoutController]\').scope().openSidebarTab(\'api\')'
-
 	for el in soup('video'):
 		# If a caption file with matching name is found, add it to HTML.
 		# Note: The names of video file and caption file have to be identical!
