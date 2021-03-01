@@ -13,6 +13,11 @@ then
     echo "asciidoctor could not be found"
     exit
 fi
+if sudo python3 -c "from bs4 import BeautifulSoup" &> /dev/null; then
+    echo 'BeautifulSoup is installed'
+else
+    echo 'BeautifulSoup is not installed. Please run "pip install beautifulsoup4"'
+fi
 if [ ! -d "$2" ]; then
     SCRIPT_HOME=$GIT_REPO/scripts
 else
