@@ -8,6 +8,11 @@ if [ ! -d "$1" ]; then
 else
     GIT_REPO="$1"
 fi
+if ! command -v asciidoctor &> /dev/null
+then
+    echo "asciidoctor could not be found"
+    exit
+fi
 if [ ! -d "$2" ]; then
     SCRIPT_HOME=$GIT_REPO/scripts
 else
