@@ -94,7 +94,7 @@ for ch in chapters:
 	# for el in soup.find_all('a', href=lambda x: x.startswith('http')):
 	# 	el['target'] = '_blank'
 
-	for el in soup.find_all('a', href=lambda x: not x.startswith('http')):
+	for el in soup.find_all('a', href=lambda x: not x.startswith('http') and not x.startswith('#')):
 		# print("non-http link in "+ ch + ": " + str(el))
 		el['data-es-internallink'] = "true";
 
