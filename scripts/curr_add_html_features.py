@@ -19,11 +19,13 @@ video_caption_dir = source_dir+'/videoMedia/NewCaptions/'
 
 caption_files = [cap_name[:-4] for cap_name in os.listdir(video_caption_dir)]
 
-chapters = [ch for ch in os.listdir(curr_dir) if 'ch_' in ch]
+# chapters = [ch for ch in os.listdir(curr_dir) if 'ch_' in ch]
+chapters = [ch for ch in os.listdir(curr_dir) if '.html' in ch and ch != 'toc.html']
 
 print("Processing html files...")
 n_processed = 0
 for ch in chapters:
+	# print('processing chapter: ' + ch)
 	n_processed += 1
 
 	data = codecs.open(curr_dir + ch, 'r').read()
@@ -91,6 +93,11 @@ for ch in chapters:
 	# # add target="_blank" to outbound links
 	# for el in soup.find_all('a', href=lambda x: x.startswith('http')):
 	# 	el['target'] = '_blank'
+
+	for el in soup.find_all('a', href=lambda x: not x.startswith('http')):
+		# print("non-http link in "+ ch + ": " + str(el))
+		el['data-es-internallink'] = "true";
+
 
 	for el in soup('video'):
 		# If a caption file with matching name is found, add it to HTML.
