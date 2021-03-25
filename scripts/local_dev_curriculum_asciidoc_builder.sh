@@ -16,7 +16,7 @@ fi
 
 ASCIIDOC_DIR=$GIT_REPO/src
 LOCAL_STAGING_DIR=$GIT_REPO/curriculum-local/
-ES_HOST="https://earsketch-test.ersktch.gatech.edu"
+ES_HOST="http://localhost:8080"
 
 cd "$GIT_REPO" || exit 1
 echo "Converting curriculum to html with asciidoctor..."
