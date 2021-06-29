@@ -3,8 +3,6 @@
 import os, os.path
 import codecs
 from bs4 import BeautifulSoup
-import subprocess
-import re
 import sys
 
 if len(sys.argv) < 4:
@@ -80,7 +78,6 @@ for ch in chapters:
 		if not skip:
 			button = soup.new_tag('button')
 			button['class'] = 'btn-copy copy-btn-' + lang_str
-			button['onclick'] = 'doCopy(this)'
 			button['style'] = 'display:block'
 
 			i = soup.new_tag('i')
