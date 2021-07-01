@@ -25,22 +25,28 @@ else
     SCRIPT_HOME="$2"
 fi
 
-ASCIIDOC_DIR=$GIT_REPO/src
+SRC_DIR=$GIT_REPO/src
+ASCIIDOC_DIR=$GIT_REPO/src/locales
 LOCAL_STAGING_DIR=$GIT_REPO/curriculum-local/
 ES_HOST="http://localhost:8888"
 
 cd "$GIT_REPO" || exit 1
-echo "Converting curriculum to html with asciidoctor..."
-sudo asciidoctor \
-  -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
-  -D "$LOCAL_STAGING_DIR" "$ASCIIDOC_DIR/*.asc" || exit 1
 
-sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STAGING_DIR" "$ES_HOST" || exit 1
-sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCAL_STAGING_DIR" || exit 1
-sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCAL_STAGING_DIR" || exit 1
+for locale_full_path in $ASCIIDOC_DIR/*/
+do
+  echo "Converting curriculum to html with asciidoctor in directory " $locale_full_path
+  LOCALE=$(basename $locale_full_path)
+  LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$LOCALE/
+  sudo asciidoctor \
+    -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+    -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.asc" || exit 1
+  sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
+  sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+  sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+done
 
 echo "Moving media files and resources to curriculum-local directory"
-cd "$ASCIIDOC_DIR" || exit 1
+cd "$SRC_DIR" || exit 1
 sudo cp -r audioMedia curriculum videoMedia theme "$LOCAL_STAGING_DIR"
 cd "$GIT_REPO" || exit 1
 echo

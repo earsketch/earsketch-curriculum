@@ -31,18 +31,6 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 		'sections': []
 	}
 
-	# # parse and add sections for the units with no chapters
-	# url = unit.find('a').attrs['href']
-	# unit_html = codecs.open(curr_dir+'/webclient/curriculum/'+url, 'r').read()
-	# sections = BeautifulSoup(unit_html, 'html.parser')
-	#
-	# for section in sections.find_all('div', attrs={'class':'sect2'}):
-	# 	sec_data = {
-	# 		'title': section.find('h3').text,
-	# 		'URL': url+'#'+section.find('h3').attrs['id'],
-	# 	}
-	# 	unit_data['sections'].append(sec_data)
-
 	# chapters
 	for chapter in unit.find_all('div', attrs={'class':'sect2'}):
 		n_processed_ch += 1
@@ -92,19 +80,8 @@ for unitIdx, unit in enumerate(toc_data):
 		for secIdx, sec in enumerate(ch['sections']):
 			toc_pages.append([unitIdx, chIdx, secIdx])
 
-webclientFilename = curr_dir+'/webclient/scripts/src/data/curr_toc.js'
-os.makedirs(os.path.dirname(webclientFilename), exist_ok=True)
-
-wf = open(webclientFilename, 'w')
-wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
-wf.close()
-
 wf = open(curr_dir+'/curr_toc.js', 'w')
 wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
-wf.close()
-
-wf = open(curr_dir+'/webclient/scripts/src/data/curr_pages.js', 'w')
-wf.write('var ESCurr_Pages = ' + json.dumps(toc_pages) + ';')
 wf.close()
 
 wf = open(curr_dir+'/curr_pages.js', 'w')

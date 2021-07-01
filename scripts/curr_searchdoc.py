@@ -64,8 +64,4 @@ wf = open(curr_dir+'/curr_searchdoc.js', 'w')
 wf.write('var ESCurr_SearchDoc = ' + json.dumps(documents, indent=4) + ';')
 wf.close()
 
-wf = open(curr_dir+'/webclient/scripts/src/data/curr_searchdoc.js', 'w')
-wf.write('var ESCurr_SearchDoc = ' + json.dumps(documents, indent=4) + ';')
-wf.close()
-
 print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
