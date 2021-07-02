@@ -80,11 +80,11 @@ for unitIdx, unit in enumerate(toc_data):
 		for secIdx, sec in enumerate(ch['sections']):
 			toc_pages.append([unitIdx, chIdx, secIdx])
 
-wf = open(curr_dir+'/curr_toc.js', 'w')
+wf = open(curr_dir+'/curr_toc.json', 'w')
 wf.write(json.dumps(toc_data, indent=4))
 wf.close()
 
-wf = open(curr_dir+'/curr_pages.js', 'w')
+wf = open(curr_dir+'/curr_pages.json', 'w')
 wf.write(json.dumps(toc_pages))
 wf.close()
 
