@@ -45,7 +45,7 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 			display_chapter_number = -1
 
 		# read the html of current chapter
-		chapter_html = codecs.open(curr_dir+'/'+url, 'r').read()
+		chapter_html = codecs.open(curr_dir+'../'+url, 'r').read()
 		sections = BeautifulSoup(chapter_html, 'html.parser')
 
 		ch_data = {
@@ -81,11 +81,11 @@ for unitIdx, unit in enumerate(toc_data):
 			toc_pages.append([unitIdx, chIdx, secIdx])
 
 wf = open(curr_dir+'/curr_toc.js', 'w')
-wf.write('var ESCurr_TOC = ' + json.dumps(toc_data, indent=4) + ';')
+wf.write(json.dumps(toc_data, indent=4))
 wf.close()
 
 wf = open(curr_dir+'/curr_pages.js', 'w')
-wf.write('var ESCurr_Pages = ' + json.dumps(toc_pages) + ';')
+wf.write(json.dumps(toc_pages))
 wf.close()
 
 print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
