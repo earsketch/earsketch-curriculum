@@ -16,7 +16,8 @@ phases:
   pre_build:
     commands:
       - export ES_SCRIPT_HOME="$CODEBUILD_SRC_DIR/scripts"
-      - export ASCIIDOC_DIR="$CODEBUILD_SRC_DIR/src"
+      - export SRC_DIR="$CODEBUILD_SRC_DIR/src"
+      - export ASCIIDOC_DIR="$CODEBUILD_SRC_DIR/src/locales"
       - export LOCAL_STAGING_DIR_NAME="${CODEBUILD_SOURCE_VERSION//\//-}/"
       - export LOCAL_STAGING_DIR="$CODEBUILD_SRC_DIR/$LOCAL_STAGING_DIR_NAME"
   build:
@@ -28,13 +29,21 @@ phases:
       - echo $LOCAL_STAGING_DIR
       - echo Finished printing variables
       - echo "Entered the build phase..."
-      - echo "Converting curriculum to html with asciidoctor..."
-      - asciidoctor -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" -D "$LOCAL_STAGING_DIR" "$ASCIIDOC_DIR/*.asc"
-      - python "$ES_SCRIPT_HOME/curr_add_html_features.py" "$ASCIIDOC_DIR" "$LOCAL_STAGING_DIR" "$ES_HOST"
-      - python "$ES_SCRIPT_HOME/curr_toc.py" "$LOCAL_STAGING_DIR"
-      - python "$ES_SCRIPT_HOME/curr_searchdoc.py" "$LOCAL_STAGING_DIR"
+      - |
+        for locale_full_path in $ASCIIDOC_DIR/*/
+        do
+          echo "Converting curriculum to html with asciidoctor in directory " $locale_full_path
+          LOCALE=$(basename $locale_full_path)
+          LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$LOCALE/
+          asciidoctor \
+            -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
+            -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.asc" || exit 1
+          python "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
+          python "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+          python "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+        done
       - echo "Completed curriculum build"
-      - cd src
+      - cd "$SRC_DIR"
       - echo "Copying curriculum files to local distribution folder..."
       - cp -r audioMedia/ curriculum/ videoMedia/ theme/ "$LOCAL_STAGING_DIR"
 
