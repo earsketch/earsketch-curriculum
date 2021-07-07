@@ -38,9 +38,9 @@ phases:
           asciidoctor \
             -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
             -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.asc" || exit 1
-          python "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
-          python "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
-          python "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+          python "$ES_SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
+          python "$ES_SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+          python "$ES_SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
         done
       - echo "Completed curriculum build"
       - cd "$SRC_DIR"
