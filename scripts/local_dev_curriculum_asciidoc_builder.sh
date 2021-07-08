@@ -33,11 +33,11 @@ ES_HOST="http://localhost:8888"
 cd "$GIT_REPO" || exit 1
 
 ## array of paths to be processed
-declare -a path_array=(en
-                      en/v1
+declare -a path_array=(en/v1
                       en/v2
+                      es/v2
                       es
-                      es/v2)
+                      en)
 
 for locale_path in "${path_array[@]}"
 do
