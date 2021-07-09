@@ -34,7 +34,7 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 		url = chapter.find('a').attrs['href']
 
 		# read the html of current chapter
-		chapter_html = codecs.open(curr_dir+'/'+url, 'r').read()
+		chapter_html = codecs.open(curr_dir+'../'+url, 'r').read()
 		sections = BeautifulSoup(chapter_html, 'html.parser')
 
 		ch_data = {
@@ -60,12 +60,8 @@ for unit in parser.find_all('div', attrs={'class':'sect1'}):
 
 
 # print documents
-wf = open(curr_dir+'/curr_searchdoc.js', 'w')
-wf.write('var ESCurr_SearchDoc = ' + json.dumps(documents, indent=4) + ';')
-wf.close()
-
-wf = open(curr_dir+'/webclient/scripts/src/data/curr_searchdoc.js', 'w')
-wf.write('var ESCurr_SearchDoc = ' + json.dumps(documents, indent=4) + ';')
+wf = open(curr_dir+'/curr_searchdoc.json', 'w')
+wf.write(json.dumps(documents, indent=4))
 wf.close()
 
 print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
