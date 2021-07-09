@@ -94,7 +94,7 @@ for ch in chapters:
 	for el in soup.find_all('a', href=lambda x: not x.startswith('http') and not x.startswith('#')):
 		#print("non-http link in "+ ch + ": " + str(el))
 		# fix legacy internal links from v1 curriculum
-		if not el['href'].startswith('/'):
+		if not el['href'].startswith('/') and el['href'] != "<api>":
 			el['href'] = "/en/v1/" + el['href']
 		el['data-es-internallink'] = "true";
 
