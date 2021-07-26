@@ -470,16 +470,55 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of these options is a string?", '“Five”', "5", "FIVE", "Five");
-question2 = new Question(2, "What does \"0\" represent in a beat pattern string?", "Start playing the clip", "Rest", "Extend the clip", "End the clip");
-question3 = new Question(3,"In EarSketch, one measure is...","4 beats long", "4 sub-beats long", "16 beats long", "1 quarter note");
-question4 = new Question(4, "One sixteenth note is...", "a quarter of a quarter note", "half a beat", "a quarter of a measure","1 measure");
-question5 = new Question(5, "To use the makeBeat() function, what parameters do you need?","clip name, track, start measure, beat string","tempo, track, start measure, end measure","clip name, start measure, end measure, beat string","beat string, track, start measure, clip name");
-</script>
-++++
+[question]
+--
+Which of these options is a string?
+[answers]
+* "Five"
+* 5
+* FIVE
+* Five
+--
+
+[question]
+--
+What does "0" represent in a beat pattern string?
+[answers]
+* Start playing the clip
+* Rest
+* Extend the clip
+* End the clip
+--
+
+[question]
+--
+In EarSketch, one measure is...
+[answers]
+* 4 beats long
+* 4 sub-beats long
+* 16 beats long
+* 1 quarter note
+--
+
+[question]
+--
+One sixteenth note is...
+[answers]
+* a quarter of a quarter note
+* half a beat
+* a quarter of a measure
+* 1 measure
+--
+
+[question]
+--
+To use the makeBeat() function, what parameters do you need?
+[answers]
+* clip name, track, start measure, beat string
+* tempo, track, start measure, end measure
+* clip name, start measure, end measure, beat string
+* beat string, track, start measure, clip name
+--
 
 
 
