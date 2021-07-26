@@ -32,10 +32,10 @@
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
 | CHORUS_LENGTH | The length of time (in ms) from the original sound within which the chorus effect is activated. | 15.0 | 1.0 | 250.0 | `setEffect(1, CHORUS, CHORUS_LENGTH, 53.0)`
-| CHORUS_NUMVOICES | The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. | 1.0 | 1.0 | 8.0 | `setEffect(1, CHORUS, CHORUS_NUMVOICES, 4.0) `
-| CHORUS_RATE | The rate (in Hz) which the pitch cycles or “wobbles” at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. | 0.5 | 0.1 | 16.0 | `setEffect(1, CHORUS, CHORUS_RATE, 3.0) `
-| MIX | The percentage of the effected sound (wet) that is mixed with the original sound (dry). At its minimum value (0.0), no effect can be heard. At its maximum value (1.0), none of the original sound is heard – it is all effect. | 1.0 | 0.0 | 1.0 | `setEffect(1, CHORUS, MIX, 0.5) `
-| CHORUS_MOD | The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. | 0.7 | 0.0 | 1.0 | `setEffect(1, CHORUS, CHORUS_MOD, 0.4) `
+| CHORUS_NUMVOICES | The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. | 1.0 | 1.0 | 8.0 | `setEffect(1, CHORUS, CHORUS_NUMVOICES, 4.0)`
+| CHORUS_RATE | The rate (in Hz) which the pitch cycles or “wobbles” at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. | 0.5 | 0.1 | 16.0 | `setEffect(1, CHORUS, CHORUS_RATE, 3.0)`
+| MIX | The percentage of the effected sound (wet) that is mixed with the original sound (dry). At its minimum value (0.0), no effect can be heard. At its maximum value (1.0), none of the original sound is heard – it is all effect. | 1.0 | 0.0 | 1.0 | `setEffect(1, CHORUS, MIX, 0.5)`
+| CHORUS_MOD | The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. | 0.7 | 0.0 | 1.0 | `setEffect(1, CHORUS, CHORUS_MOD, 0.4)`
 |========================================================================
 
 [[compressor]]
