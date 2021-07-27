@@ -121,7 +121,7 @@ from earsketch import *
 init()
 setTempo(120)
 
-myImage = importImage("http://earsketch.gatech.edu/wp-content/uploads/2013/03/grid_zoomed.png", 8, 8)
+myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
 
 print myImage
 
@@ -134,7 +134,7 @@ finish()
 ----
 init();
 setTempo(120);
-var myImage = importImage("http://earsketch.gatech.edu/wp-content/uploads/2013/03/grid_zoomed.png", 8, 8);
+var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8);
 
 println(myImage);
 
@@ -406,7 +406,7 @@ def createDrumbeats(myImage):
 
 # now, use the createDrumbeats function to create a list of drumbeats representing each row of the image
 
-myImage = importImage("http://earsketch.gatech.edu/wp-content/uploads/2013/03/grid_zoomed.png", 8, 8)
+myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
 
 snare = Y01_SNARE_1
 
@@ -457,7 +457,7 @@ function createDrumbeats(myImage) {
 
 // now, use the createDrumbeats function to create a list of drumbeats representing each row of the image
 
-var myImage = importImage("http://earsketch.gatech.edu/wp-content/uploads/2013/03/grid_zoomed.png", 8, 8);
+var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8);
 
 var snare = Y01_SNARE_1;
 
