@@ -882,18 +882,100 @@ Thank you video
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following operations is used to join lists/arrays?", "Concatenation", "Slicing", "Combination", "Addition");
-question2 = new Question(2, "What is the index number of the first element of a list in Python?", "0", "1", "2", "-1","python");
-question3 = new Question(3, "What does len(myList) return?", "The number of elements in myList", "The data types of myList", "The elements of myList", "The width of myList","python");
-question4 = new Question(4, "What is the syntax to concatenate two lists (listA and listB)?", "listA + listB", "listA ++ listB", "listA and listB", "listB + listA","python");
-question5 = new Question(5, "How to get an list from oldList without the first and last elements?", "oldList[1:len(oldList)-1]", "oldList[1:len(oldList)]", "oldList[0:len(oldList)]", "oldList[2:len(oldList-1)]","python");
+[question]
+--
+Which of the following operations is used to join lists/arrays?
+[answers]
+* Concatenation
+* Slicing
+* Combination
+* Addition
+--
 
-question6 = new Question(2, "What is the index number of the first element of an array in Javascript?", "0", "1", "2", "-1","javascript",3);
-question7 = new Question(3, "What does myArray.length return?", "The number of elements in myArray", "The data types of myArray", "The elements of myArray", "The width of myArray","javascript",4);
-question8 = new Question(4, "What is the syntax to concatenate two arrays (arrayA and arrayB)?", "arrayA.concat(arrayB)", "arrayA.concatenate(arrayB)", "arrayB.concat(arrayA)", "arrayB.concatenate(arrayB)","javascript",5);
-question8 = new Question(5, "How to get an array from oldArray without the first and last elements?", "oldArray.slice(1,oldArray.length-1]", "oldArray.slice(1,oldArray.length)", "oldArray.slice(0,oldArray.length)", "oldArray.slice(2:oldArray.length-1)","javascript",6);
-</script>
-++++
+[role="curriculum-python"]
+[question]
+--
+What is the index number of the first element of a list in Python?
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-python"]
+[question]
+--
+What does `len(myList)` return?
+[answers]
+* The number of elements in `myList`
+* The data types of `myList`
+* The elements of `myList`
+* The width of `myList`
+--
+
+[role="curriculum-python"]
+[question]
+--
+What is the syntax to concatenate two lists (`listA` and `listB`)?
+[answers]
+* `listA + listB`
+* `listA ++ listB`
+* `listA and listB`
+* `listB + listA`
+--
+
+[role="curriculum-python"]
+[question]
+--
+How can you get a list from oldList without the first and last elements?
+[answers]
+* `oldList[1:len(oldList)-1]`
+* `oldList[1:len(oldList)]`
+* `oldList[0:len(oldList)]`
+* `oldList[2:len(oldList-1)]`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What is the index number of the first element of an array in Javascript?
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What does `myArray.length` return?
+[answers]
+* The number of elements in `myArray`
+* The data types of `myArray`
+* The elements of `myArray`
+* The width of `myArray`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+[answers]
+* `arrayA.concat(arrayB)`
+* `arrayA.concatenate(arrayB)`
+* `arrayB.concat(arrayA)`
+* `arrayB.concatenate(arrayB)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+How can you get an array from `oldArray` without the first and last elements?
+[answers]
+* `oldArray.slice(1,oldArray.length-1]`
+* `oldArray.slice(1,oldArray.length)`
+* `oldArray.slice(0,oldArray.length)`
+* `oldArray.slice(2:oldArray.length-1)`
+--

@@ -52,22 +52,6 @@ Which of these options correctly defines the function `myFunction()` with the pa
 
 These examples show how do include a code sample at the top of the question.
 ```asciidoc
-[role="curriculum-javascript"]
-[question]
---
-What does 0 represent in a beat pattern string?
-[source,javascript]
-----
-// here is javascript some code
-makeBeat(2, "000-00000-000--0");
-----
-[answers]
-* Start playing the clip
-* Rest
-* Extend the clip
-* End the clip
---
-
 [role="curriculum-python"]
 [question]
 --
@@ -76,6 +60,22 @@ What does 0 represent in a beat pattern string?
 ----
 # here is some python code
 makeBeat(2, "000-00000-000--0")
+----
+[answers]
+* Start playing the clip
+* Rest
+* Extend the clip
+* End the clip
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What does 0 represent in a beat pattern string?
+[source,javascript]
+----
+// here is javascript some code
+makeBeat(2, "000-00000-000--0");
 ----
 [answers]
 * Start playing the clip

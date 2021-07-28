@@ -537,14 +537,62 @@ TODO: when options are ready, modify the link
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following is NOT a panel in the EarSketch workspace?", "The effects browser", "The code editor", "The DAW", "The console");
-question2 = new Question(2, "How many parameters do you need for your fitMedia() function?", "4", "6", "2", "3");
-question3 = new Question(3,"One script corresponds to...", "One EarSketch song", "One line of code", "One programming language", "One programmer");
-question4 = new Question(4,"What is a measure?","A musical time unit","An audio volume unit", "A line in the DAW", "A pitch unit");
-question5 = new Question(5, "Which of the following is NOT a common type of error found in code?", "Grammatical Errors", "Runtime Errors", "Logic Errors", "Syntax Errors");
-question6 = new Question(6, "Where in the EarSketch workspace can you get information about your bugs?", "The console", "The sound browser", "The script browser", "The DAW");
-</script>
-++++
+[question]
+--
+Which of the following is NOT a panel in the EarSketch workspace?
+[answers]
+* The effects browser
+* The code editor
+* The DAW
+* The console
+--
+
+[question]
+--
+How many parameters do you need for your `fitMedia()` function?
+[answers]
+* 4
+* 6
+* 2
+* 3
+--
+
+[question]
+--
+One script corresponds to...
+[answers]
+* One EarSketch song
+* One line of code
+* One programming language
+* One programmer
+--
+
+[question]
+--
+What is a measure?
+[answers]
+* A musical time unit
+* An audio volume unit
+* A line in the DAW
+* A pitch unit
+--
+
+[question]
+--
+Which of the following is NOT a common type of error found in code?
+[answers]
+* Grammatical Errors
+* Runtime Errors
+* Logic Errors
+* Syntax Errors
+--
+
+[question]
+--
+Where in the EarSketch workspace can you get information about your bugs?
+[answers]
+* The console
+* The sound browser
+* The script browser
+* The DAW
+--

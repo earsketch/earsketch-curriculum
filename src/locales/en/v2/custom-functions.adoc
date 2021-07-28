@@ -824,14 +824,54 @@ In that example, we have used a for loop inside a custom function! We have used 
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of these is NOT an example of a musical section?", "Drums", "Intro", "Verse", "Chorus");
-question2 = new Question(2, "What is an abstraction?", "A bundling of ideas to form a single concept", "A variety of sounds throughout sections", "Parts of a song that are related, but also are distinct from each other", "A statement that returns a value to the function call");
-question3 = new Question(3, "Which of these options correctly defines the function myFunction() with the parameters, startMeasure and endMeasure?", "def myFunction(startMeasure, endMeasure):", "def myFunction():", "myFunction(startMeasure, endMeasure):", "myFunction(2, 5)","python");
+[question]
+--
+Which of these is NOT an example of a musical section?
+[answers]
+* Drums
+* Intro
+* Verse
+* Chorus
+--
 
-question4 = new Question(3, "Which of these options correctly defines the function myFunction() with the parameters, startMeasure and endMeasure?", "function myFunction(startMeasure, endMeasure) {}", "function myFunction() {}", "myFunction(startMeasure, endMeasure){}", "myFunction(2, 5)","javascript",4);
-question5 = new Question(4, "Which of these is NOT an example of a transition?", "Melody Consistency", "Crash Cymbal", "Riser", "Track Dropouts");
-</script>
-++++
+[question]
+--
+What is an abstraction?
+[answers]
+* A bundling of ideas to form a single concept
+* A variety of sounds throughout sections
+* Parts of a song that are related, but also are distinct from each other
+* A statement that returns a value to the function call
+--
+
+[role="curriculum-python"]
+[question]
+--
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+[answers]
+* `def myFunction(startMeasure, endMeasure):`
+* `def myFunction():`
+* `myFunction(startMeasure, endMeasure):`
+* `myFunction(2, 5)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+[answers]
+* `function myFunction(startMeasure, endMeasure) {}`
+* `function myFunction() {}`
+* `myFunction(startMeasure, endMeasure){}`
+* `myFunction(2, 5)`
+--
+
+[question]
+--
+Which of these is NOT an example of a transition?
+[answers]
+* Melody Consistency
+* Crash Cymbal
+* Riser
+* Track Dropouts
+--

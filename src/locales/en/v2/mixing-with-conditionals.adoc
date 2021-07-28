@@ -596,14 +596,71 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following elements is a boolean?", "5+4 == 5", "measure = 1", "2<3<4", "False()");
-question2 = new Question(2, "What would the output of this block of code be (what would print to the console)?", "10", "5", "True", "False","python",2,"n = 5 \n if (n * 3 == 15):  \n\t print(n + 5)  \n else: \n\t print(n)");
+[question]
+--
+Which of the following elements is a boolean?
+[answers]
+* `5+4 == 5`
+* `measure = 1`
+* `2<3<4`
+* `False()`
+--
 
-question3 = new Question(2, "What would the output of this block of code be (what would print to the console)?", "10", "5", "True", "False","javascript",3,"var n = 5; \n if (n * 3 == 15) { \n\t println(5 + n); \n } else { \n\t print(n);  }");
-question4 = new Question(3, "What is mixing?","adapting the volume of each track so they sound well balanced","adapting the pitch of each track so they sound well balanced","adding a fade in","adding a fade out");
-question5 = new Question(4,"How many conditions can you check in a conditional statement?","any number of conditions","1 condition","2 conditions","3 conditions");
-</script>
-++++
+[role="curriculum-python"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+[source,python]
+----
+n = 5
+if (n * 3 == 15):
+    print(n + 5)
+else:
+    print(n)
+----
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+[source,javascript]
+----
+var n = 5;
+if (n * 3 == 15) {
+    println(5 + n);
+} else {
+    print(n);
+}
+----
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[question]
+--
+What is mixing?
+[answers]
+* adapting the volume of each track so they sound well balanced
+* adapting the pitch of each track so they sound well balanced
+* adding a fade in
+* adding a fade out
+--
+
+[question]
+--
+How many conditions can you check in a conditional statement?
+[answers]
+* any number of conditions
+* 1 condition
+* 2 conditions
+* 3 conditions
+--
