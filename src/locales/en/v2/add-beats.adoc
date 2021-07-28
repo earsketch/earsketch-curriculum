@@ -535,22 +535,3 @@ To use the makeBeat() function, what parameters do you need?
 * clip name, start measure, end measure, beat string
 * beat string, track, start measure, clip name
 --
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
