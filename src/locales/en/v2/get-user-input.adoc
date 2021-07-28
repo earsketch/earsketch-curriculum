@@ -754,7 +754,10 @@ Which of the following would be considered an example of data type conversion?
 What would the output of this block of code be (what would print to the console)?
 [source,python]
 ----
-!(True && (4>5))
+n = 5
+if (n * 3 == 15):
+    m = 5 + n
+    print(m)
 ----
 [answers]
 * `10`
@@ -771,8 +774,8 @@ What would the output of this block of code be (what would print to the console)
 ----
 var n = 5;
 if (n * 3 == 15) {
-    m = 5 + n;
-    print(m);
+    var m = 5 + n;
+    println(m);
 }
 ----
 [answers]
@@ -798,10 +801,7 @@ Which of the following is an example of concatenation?
 How does the following expression evaluate?
 [source,python]
 ----
-n = 5
-if (n * 3 == 15):
-    m = 5 + n
-    print(m)
+not (True and (4>5))
 ----
 [answers]
 * `True`
