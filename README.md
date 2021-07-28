@@ -30,9 +30,10 @@ If a question needs to be language-specific (python or javascript), prepend the 
 [question]
 --
 What does 0 represent in a beat pattern string?
+[source,javascript]
 ----
 // here is javascript some code
-makeBeat(2, "000-00000-000");
+makeBeat(2, "000-00000-000--0");
 ----
 [answers]
 * Start playing the clip
@@ -45,9 +46,10 @@ makeBeat(2, "000-00000-000");
 [question]
 --
 What does 0 represent in a beat pattern string?
+[source,python]
 ----
-# here is python some code
-makeBeat(2, "000-00000-000")
+# here is some python code
+makeBeat(2, "000-00000-000--0")
 ----
 [answers]
 * Start playing the clip
