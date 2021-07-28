@@ -515,10 +515,22 @@ video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following is not true regarding APIs?", "They allow you to use Ableton Live within EarSketch.", "They let different software components talk to one another.", "They allow you to simplify complex coding tasks.", "They often come as a collection, or library.");
-question2 = new Question(2, "fitMedia() is an example of what?", "A Function", "A Comment", "A DAW", "A Library");
-</script>
-++++
+[question]
+--
+Which of the following is not true regarding APIs?"
+[answers]
+* They allow you to use Ableton Live within EarSketch.
+* They let different software components talk to one another.
+* They allow you to simplify complex coding tasks.
+* They often come as a collection, or library.
+--
+
+[question]
+--
+`fitMedia()` is an example of what?
+[answers]
+* A Function
+* A Comment
+* A DAW
+* A Library
+--

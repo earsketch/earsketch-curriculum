@@ -443,10 +443,23 @@ Video Idea: A quick example of print debugging and commenting out. We discussed 
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following is not a recommended technique for debugging?", "Copying and pasting code into Google", "Printing variable values to the console", "Looking at error lines identified in the console", "Asking others for help");
-question2 = new Question(2, "Which of the following is not something that can be printed to the console?", "Code Comments", "Strings", "Mathematical Expressions", "Variables");
-</script>
-++++
+[question]
+--
+Which of the following is not a recommended technique for debugging?
+[answers]
+* Copying and pasting code into Google
+* Printing variable values to the console
+* Looking at error lines identified in the console
+* Asking others for help
+--
+
+[question]
+--
+Which of the following is not something that can be printed to the console?
+[answers]
+* Code Comments
+* Strings
+* Mathematical Expressions
+* Variables
+--
+

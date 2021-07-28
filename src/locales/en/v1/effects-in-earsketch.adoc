@@ -155,11 +155,33 @@ EarSketch supports a variety of effects that are common in music production. For
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "What does an effect allow you to do in EarSketch?", "Change the qualities of sound within a project", "Add a sound to a track", "Create a drum beat", "Change the tempo of a song");
-question2 = new Question(2, "Which of these is NOT a setEffect() argument?", "Clip Name", "Effect Name", "Effect Value", "Track Number");
-question3 = new Question(3, "How would you set the delay time of a delay effect on track 3 to 50 milliseconds?", "setEffect(3, DELAY, DELAY_TIME, 50.0)", "setEffect(DELAY, 3, DELAY_TIME, 50.0)", "fitMedia(DELAY, 3, DELAY_TIME, 50.0)", "setEffect(50, DELAY_FEEDBACK, 1)");
-</script>
-++++
+[question]
+--
+What does an effect allow you to do in EarSketch?
+[answers]
+* Change the qualities of sound within a project
+* Add a sound to a track
+* Create a drum beat
+* Change the tempo of a song
+--
+
+[question]
+--
+Which of these is NOT a `setEffect()` argument?
+[answers]
+* Clip Name
+* Effect Name
+* Effect Value
+* Track Number
+--
+
+[question]
+--
+How would you set the delay time of a delay effect on track 3 to 50 milliseconds?
+[answers]
+* `setEffect(3, DELAY, DELAY_TIME, 50.0)`
+* `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
+* `fitMedia(DELAY, 3, DELAY_TIME, 50.0)`
+* `setEffect(50, DELAY_FEEDBACK, 1)`
+--
+

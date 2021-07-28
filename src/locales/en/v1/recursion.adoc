@@ -603,14 +603,31 @@ Notice that in this example, there is more than one recursive call used within t
 
 [[chapter-questions]]
 === Questions
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "A function can:", "Be called an unlimited amount of times", "Have multiple definitions", "Never call itself");
 
-question2 = new Question(2, "Recursion is used:", "When a function calls itself", "When a function has multiple names", "When a function calls another function");
+[question]
+--
+A function can:
+[answers]
+* Be called an unlimited amount of times
+* Have multiple definitions
+* Never call itself
+--
 
-question3 = new Question(3, "With a recursive function a working stopping condition:", "Always needed", "Needed sometimes", "Useful, but not needed", "Causes an error message");
+[question]
+--
+Recursion is used:
+[answers]
+* When a function calls itself
+* When a function has multiple names
+* When a function calls another function
+--
 
-</script>
-++++
+[question]
+--
+With a recursive function a working stopping condition:
+[answers]
+* Always needed
+* Needed sometimes
+* Useful, but not needed
+* Causes an error message
+--

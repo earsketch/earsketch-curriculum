@@ -362,13 +362,47 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "What is the index number of the first element of a list in Python?", "0", "1", "2", "-1","python");
-question2 = new Question(2, "What does len(myList) return?", "The number of elements in myList", "The data types of myList", "The elements of myList", "The width of myList","python");
+[role="curriculum-python"]
+[question]
+--
+What is the index number of the first element of a list in Python?
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
 
-question3 = new Question(1, "What is the index number of the first element of an array in Javascript?", "0", "1", "2", "-1","javascript",3);
-question4 = new Question(2, "What does myArray.length return?", "The number of elements in myArray", "The data types of myArray", "The elements of myArray", "The width of myArray","javascript",4);
-</script>
-++++
+[role="curriculum-python"]
+[question]
+--
+What does `len(myList)` return?
+[answers]
+* The number of elements in `myList`
+* The data types of `myList`
+* The elements of `myList`
+* The width of `myList`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What is the index number of the first element of an array in Javascript?
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What does `myArray.length` return?
+[answers]
+* The number of elements in `myArray`
+* The data types of `myArray`
+* The elements of `myArray`
+* The width of `myArray`
+--
+

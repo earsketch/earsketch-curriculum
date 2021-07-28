@@ -125,10 +125,22 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following operations is used to join lists/arrays?", "Concatenation", "Slicing", "Modulo", "Addition");
-question2 = new Question(2, "Which of the following evaluates to True?", "100 % 10 == 0", "10 % 10 == 1", "10 % 1 == 10", "100 % 10 == 1");
-</script>
-++++
+[question]
+--
+Which of the following operations is used to join lists/arrays?
+[answers]
+* Concatenation
+* Slicing
+* Modulo
+* Addition
+--
+
+[question]
+--
+Which of the following evaluates to True?
+[answers]
+* `100 % 10 == 0`
+* `10 % 10 == 1`
+* `10 % 1 == 10`
+* `100 % 10 == 1`
+--

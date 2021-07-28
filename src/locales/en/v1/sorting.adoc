@@ -253,15 +253,26 @@ See if you can sort these audio clips based on their spectral centroids from hig
 
 [[chapter-questions]]
 === Questions
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Select the statement below that is not true:", "Lists are not useful for Music Information Retrieval", "A selection sort passes through a list multiple times", "Lists can be used to organize music by an analyzed feature", "", "python");
 
-question2 = new Question(1, "Select the statement below that is not true:", "Arrays are not useful for Music Information Retrieval", "A selection sort passes through an array multiple times", "Arrays can be used to organize music by an analyzed feature", "", "javascript");
-</script>
-++++
-
+[role="curriculum-python"]
+[question]
+--
+Select the statement below that is not true:
+[answers]
+* Lists are not useful for Music Information Retrieval
+* A selection sort passes through a list multiple times
+* Lists can be used to organize music by an analyzed feature
+--
+Question(1, "", "", "", "", "", "javascript");
+[role="curriculum-javascript"]
+[question]
+--
+Select the statement below that is not true:
+[answers]
+* Arrays are not useful for Music Information Retrieval
+* A selection sort passes through an array multiple times
+* Arrays can be used to organize music by an analyzed feature
+--
 
 
 ////

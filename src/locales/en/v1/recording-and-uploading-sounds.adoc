@@ -57,10 +57,22 @@ video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following statements is true?", "A hard drive is an example of secondary storage.", "Audio data is saved to a computer’s CPU.", "The CPU holds instructional data for programs.", "Secondary storage stores data for short periods of time.");
-question2 = new Question(2, "Which of the following is not used in EarSketch's Quick Record process?", "Your computer’s hard drive", "Your computer’s RAM", "Your computer’s CPU", "EarSketch Server’s CPU");
-</script>
-++++
+[question]
+--
+Which of the following statements is true?
+[answers]
+* A hard drive is an example of secondary storage.
+* Audio data is saved to a computer’s CPU.
+* The CPU holds instructional data for programs.
+* Secondary storage stores data for short periods of time.
+--
+
+[question]
+--
+Which of the following is not used in EarSketch's Quick Record process?
+[answers]
+* Your computer’s hard drive
+* Your computer’s RAM
+* Your computer’s CPU
+* EarSketch Server’s CPU
+--

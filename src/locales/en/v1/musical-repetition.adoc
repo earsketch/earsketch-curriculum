@@ -414,10 +414,22 @@ Notice that inside our `chordProg()` function we are using an incrementing techn
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "_____________ refers to repeated sections of music.", "Repetition", "Contrast", "Crossfading", "Anacrusis");
-question2 = new Question(2, "Using makeBeat() to create a sequence of repeated drum hits is an example of what type of transition?", "Snare Roll", "Anacrusis", "Looping", "Crossfading");
-</script>
-++++
+[question]
+--
+_____________ refers to repeated sections of music.
+[answers]
+* Repetition
+* Contrast
+* Crossfading
+* Anacrusis
+--
+
+[question]
+--
+Using `makeBeat()` to create a sequence of repeated drum hits is an example of what type of transition?
+[answers]
+* Snare Roll
+* Anacrusis
+* Looping
+* Crossfading
+--

@@ -642,13 +642,54 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "What is the following code doing?", "Assigning the first three index values of stringA to newString", "Slicing stringA into 4 parts", "Assigning newString to the first three indices of stringA", "Subtracting stringA from newString","python",1,"newString = stringA[0:3]");
-question2 = new Question(2, "Which of the following is an example of concatenation?", "x = beatstring1 + beatstring2", "x = beatstring1.beatstring2", "x = (beatstring1, beatstring2)", "x = beatstring1[beatstring2]","python");
+[role="curriculum-python"]
+[question]
+--
+What is the following code doing?
+[source,python]
+----
+newString = stringA[0:3]
+----
+[answers]
+* Assigning the first three index values of `stringA` to `newString`
+* Slicing `stringA` into 4 parts
+* Assigning `newString` to the first three indices of `stringA`
+* Subtracting `stringA` from `newString`
+--
 
-question3 = new Question(1, "What is the following code doing?", "Assigning the first three index values of stringA to newString", "Slicing stringA into 4 parts", "Assigning newString to the first three indices of stringA", "Subtracting stringA from newString","javascript",3,"newString = stringA.substring(0, 3);");
-question4 = new Question(2, "Which of the following is an example of concatenation?", "x = beatstring1 + beatstring2", "x = beatstring1.beatstring2", "x = (beatstring1, beatstring2)", "x = beatstring1[beatstring2]","javascript",4);
-</script>
-++++
+[role="curriculum-python"]
+[question]
+--
+Which of the following is an example of concatenation?
+[answers]
+* `x = beatstring1 + beatstring2`
+* `x = beatstring1.beatstring2`
+* `x = (beatstring1, beatstring2)`
+* `x = beatstring1[beatstring2]`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What is the following code doing?
+[source,javascript]
+----
+newString = stringA.substring(0, 3);
+----
+[answers]
+* Assigning the first three index values of `stringA` to `newString`
+* Slicing `stringA` into 4 parts
+* Assigning `newString` to the first three indices of `stringA`
+* Subtracting `stringA` from `newString`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Which of the following is an example of concatenation?
+[answers]
+* `x = beatstring1 + beatstring2`
+* `x = beatstring1.beatstring2`
+* `x = (beatstring1, beatstring2)`
+* `x = beatstring1[beatstring2]`
+--

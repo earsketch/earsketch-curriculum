@@ -142,10 +142,23 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of these options is a string?", '“Five”', "5", "FIVE", "Five");
-question2 = new Question(2, "What does “0” represent in a beat pattern string?", "Start playing the clip", "Rest", "Extend the clip", "End the clip");
-</script>
-++++
+[question]
+--
+Which of these options is a string?
+[answers]
+* "Five"
+* 5
+* FIVE
+* Five
+--
+
+[question]
+--
+What does “0” represent in a beat pattern string?
+[answers]
+* Start playing the clip
+* Rest
+* Extend the clip
+* End the clip
+--
+

@@ -941,13 +941,49 @@ BMW - 9/20/16
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "Which of the following would be considered an example of data type conversion?", "Turning a string into a number.", "Storing a user-defined tempo in a variable.", "Using readInput() to ask a user for a genre.", "Producing a Boolean through a comparison operator.");
-question2 = new Question(2, "What would the output of this block of code be (what would print to the console)?", "10", "n", "True", "False","python",2,"n = 5 \n if (n * 3 == 15):  \n\t n = 5 + n  \n\t print(n)");
+[question]
+--
+Which of the following would be considered an example of data type conversion?
+[answers]
+* Turning a string into a number.
+* Storing a user-defined tempo in a variable.
+* Using readInput() to ask a user for a genre.
+* Producing a Boolean through a comparison operator.
+--
 
-question3 = new Question(2, "What would the output of this block of code be (what would print to the console)?", "10", "n", "True", "False","javascript",3,"var n = 5; \n if (n * 3 == 15) { \n\t n = 5 + n; \n\t println(n); \n }");
+[role="curriculum-python"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+[source,python]
+----
+n = 5
+if (n * 3 == 15):
+    n = 5 + n
+    print(n)
+----
+[answers]
+* `10`
+* `n`
+* `True`
+* `False`
+--
 
-</script>
-++++
+[role="curriculum-javascript"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+[source,javascript]
+----
+var n = 5;
+if (n * 3 == 15) {
+    n = 5 + n;
+    println(n);
+}
+----
+[answers]
+* `10`
+* `n`
+* `True`
+* `False`
+--

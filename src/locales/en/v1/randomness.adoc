@@ -349,13 +349,36 @@ finish();
 [[chapter-questions]]
 === Questions
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "What set of numbers will randint(1,5) choose a random number from?", "1, 2, 3, 4, 5", "1, 2, 3, 4", "2, 3, 4, 5", "1, 5","python");
-question2 = new Question(2, "In order to use EarSketch functions, we must include the EarSketch API by including “from earsketch import *.” What do we need to include to use randint()?", "from random import *", "from earsketch2 import *", "from integer import *", "from randint import *","python");
+[role="curriculum-python"]
+[question]
+--
+What set of numbers will `randint(1,5)` choose a random number from?
+[answers]
+* `1, 2, 3, 4, 5`
+* `1, 2, 3, 4`
+* `2, 3, 4, 5`
+* `1, 5`
+--
 
-question3 = new Question(1, "What set of numbers will (Math.floor(Math.random() * 5)) choose a random number from?", "0, 1, 2, 3, 4", "0, 1, 2, 3", "1, 2, 3, 4", "0, 4","javascript",3);
+[role="curriculum-python"]
+[question]
+--
+In order to use EarSketch functions, we must include the EarSketch API by including `from earsketch import *`. What do we need to include to use `randint()` ?
+[answers]
+* `from random import *`
+* `from earsketch2 import *`
+* `from integer import *`
+* `from randint import *`
+--
 
-</script>
-++++
+[role="curriculum-javascript"]
+[question]
+--
+What set of numbers will (Math.floor(Math.random() * 5)) choose a random number from?
+[answers]
+* `0, 1, 2, 3, 4`
+* `0, 1, 2, 3`
+* `1, 2, 3, 4`
+* `0, 4`
+--
+
