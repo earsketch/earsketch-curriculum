@@ -470,22 +470,6 @@ finish();
 [[chapter-questions]]
 === Questions
 
-[role="curriculum-python"]
-[question]
---
-What does 0 represent in a beat pattern string?
-[source,python]
-----
-# here is python some code
-makeBeat(2, "000-00000-000--0")
-----
-[answers]
-* Start playing the clip
-* Rest
-* Extend the clip
-* End the clip
---
-
 [question]
 --
 Which of these options is a string?
