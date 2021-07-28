@@ -24,7 +24,33 @@ Which of these options is a string?
 --
 ```
 
-If a question needs to be language-specific (python or javascript), prepend the question block with the same `[role="curriculum-javascript"]` block used in the rest of the curriculum for language-specific content. These examples also show how do include a code sample at the top of the question.
+If a question needs to be language-specific (python or javascript), prepend the question block with the same `[role="curriculum-javascript"]` block used in the rest of the curriculum for language-specific content. 
+
+```asciidoc
+[role="curriculum-python"]
+[question]
+--
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+[answers]
+* `def myFunction(startMeasure, endMeasure):`
+* `def myFunction():`
+* `myFunction(startMeasure, endMeasure):`
+* `myFunction(2, 5)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+[answers]
+* `function myFunction(startMeasure, endMeasure) {}`
+* `function myFunction() {}`
+* `myFunction(startMeasure, endMeasure){}`
+* `myFunction(2, 5)`
+--
+```
+
+These examples show how do include a code sample at the top of the question.
 ```asciidoc
 [role="curriculum-javascript"]
 [question]
