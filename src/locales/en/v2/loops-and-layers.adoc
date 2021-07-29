@@ -2,15 +2,15 @@
 == Loops and layers!
 :nofooter:
 
-In this chapter you will learn about 'for' loops and how you can create repetition in your code and music. We will also cover musical layers and textures as well as some debugging tips.
+In this chapter you will learn about `for` loops and how you can create repetition in your code and music. We will also cover musical layers and textures as well as some debugging tips.
 
 
 [[forloops]]
-=== For loops
+=== `for` loops
 
 Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more efficient: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
 
-For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a for loop. Here is how:
+For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop. Here is how:
 
 ////
 add new video
@@ -191,20 +191,20 @@ and it ends there since measure has to be lower than 5, so 4 is your limit.
 
 .PRACTICE
 ****
-. Create a for loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4, like in the video
+. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4, like in the video
 . Modify your code to go from measures 3 to 7
 . Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
-. Then modify your counter name, pick a track and measures, and create the appropriate for loop
-. Show your neighbor your last for loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
+. Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
+. Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
 ****
 
-You can have more than one line of instructions inside the for loop.
+You can have more than one line of instructions inside the `for` loop.
 
 [role="curriculum-python"]
-For loops in Python consist of 3 basic parts:
+`for` loops in Python consist of 3 basic parts:
 
 [role="curriculum-javascript"]
-For loops in JavaScript consist of 4 basic parts:
+`for` loops in JavaScript consist of 4 basic parts:
 
 [[loop-components-PY]]
 .The basic components of a for loop
@@ -229,12 +229,12 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 * *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
 * *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
 
-You can have more than one line of instructions inside the for loop.
+You can have more than one line of instructions inside the `for` loop.
 
 [[controlflow]]
 === Control Flow
 
-Here is another example of how you can use for loops:
+Here is another example of how you can use `for` loops:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12bpy]]
@@ -336,7 +336,7 @@ fitMedia(drums2, 1, 8.5, 9);
 finish();
 ----
 
-We can use a for loop to create the exact same music more efficiently. Our counter here is "measure". Note that the body of the loop contains 2 lines of code, both of which use the counter "measure".
+We can use a `for` loop to create the exact same music more efficiently. Our counter here is "measure". Note that the body of the loop contains 2 lines of code, both of which use the counter "measure".
 
 [role="curriculum-python"]
 [source,python]
@@ -406,7 +406,7 @@ The *interpreter* reads and executes a script. The order it is executed in is ca
 
 A loop is a *control flow statement*, which changes the order. At the end of a loop body, it jumps back to the top of the loop.
 
-This animation shows how the control flow moves in a for loop, and how the value of the loop counter changes on each *iteration*, or repetition of the loop body:
+This animation shows how the control flow moves in a `for` loop, and how the value of the loop counter changes on each *iteration*, or repetition of the loop body:
 
 [[loop-py]]
 .Stepping through a for loop
@@ -426,13 +426,13 @@ Although it is valid syntax, a `*monospace bold phrase*` causes a build error in
 BMW
 ////
 
-One last interesting thing about for loops is incrementation.
+One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-Incrementation means increasing the counter's value. In for loops we used the range() function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
 
 [role="curriculum-javascript"]
-Incrementation means increasing the counter's value. In for loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
+Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
 
 .PRACTICE
 *****
@@ -494,7 +494,7 @@ finish();
 
 
 [role="curriculum-python"]
-Here we used the range() function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` (or `-=` to decrement). Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
+Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` (or `-=` to decrement). Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
 
 [role="curriculum-javascript"]
 Here we wrote `measure = measure + 4`, which means measure is now equal to its former value plus four. You can use some shorthands:
@@ -536,7 +536,7 @@ You've seen a list of potential errors in chapter 1. Here are some other errors 
 [role="curriculum-python"]
 . *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
 . *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python comments must start with a `#` symbol.
-. *Indentation:* Indentation is critical in Python. Lack of indentation in for loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
+. *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
 . *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
 
@@ -554,7 +554,7 @@ Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained i
 [[musicaltips]]
 === Musical tips
 
-Now that you have many tools to create your music, like `fitMedia()`, `makeBeat()` and for loops, we will look at musical ideas.
+Now that you have many tools to create your music, like `fitMedia()`, `makeBeat()` and `for` loops, we will look at musical ideas.
 
 Let's start with the *key* of your song:
 
@@ -587,7 +587,7 @@ Create a complete song with:
 
 * A theme (please mention your chosen theme in your commented intro in the code)
 * The `fitMedia()` and `makeBeat()` functions
-* One or more for loop(s) either with `fitMedia()` or `makeBeat()`
+* One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
 * At least 4 tracks
 * At least 16 measures
 * At least one uploaded sound
@@ -602,21 +602,21 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 === Chapter 4 Summary
 
 [role="curriculum-python"]
-* A *for loop* instructs the computer to execute a code section repeatedly, creating more efficient code. for loops consist of a loop body, loop counter, and range. The code in the loop body must be indented. 
+* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
 * The `print` statement evaluates its accompanying expression and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<ch_15#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
 * You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 [role="curriculum-javascript"]
-* A *for loop* instructs the computer to execute a code section repeatedly, creating more efficient code. for loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented. 
+* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
 * The `println()` function evaluates its argument and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<ch_15#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
 * You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
@@ -627,7 +627,7 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 
 [question]
 --
-Which of the following is NOT a component of a for loop?
+Which of the following is NOT a component of a `for` loop?
 [answers]
 * Loop interpreter
 * Loop Counter
