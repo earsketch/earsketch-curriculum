@@ -206,10 +206,12 @@ To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the par
 . *End measure*: when your sound will stop playing.
 *For example: `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.*
 
-[role="curriculum-javascript"]
-A *statement* tells the computer to carry out an action. For example, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` is a statement. Every statement in JavaScript *_should end with a semicolon_*. 
-
 Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
+
+[role="curriculum-javascript"]
+****
+A *statement* tells the computer to carry out an action. For example, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` is a statement. Every statement in JavaScript *_should end with a dsemicolon_*.
+****
 
 
 ////
