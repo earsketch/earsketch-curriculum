@@ -47,7 +47,7 @@ do
   LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
   sudo asciidoctor \
     -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
-    -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.asc" || exit 1
+    -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.adoc" || exit 1
   sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
   if [[ ${locale_path} != *"/"* ]];then
     # this is a root locale directory. process the table of contents

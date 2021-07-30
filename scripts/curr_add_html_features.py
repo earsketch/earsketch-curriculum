@@ -71,6 +71,10 @@ for ch in chapters:
 		else:
 			skip = True #don't add copy icon
 
+		# if the code example is inside a question, don't add the copy/paste icon
+		if el.find_parent("div", class_="question"):
+			skip = True
+
 		container = soup.new_tag('div')
 		container['class'] = 'currcode-container'
 		el.wrap(container)
