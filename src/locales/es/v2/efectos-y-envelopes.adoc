@@ -288,7 +288,7 @@ Para cambiar un envelope, sólo se necesita la función `setEffect()` con 7 argu
 . effectEndValue (valorFinalDelEfecto)
 . effectEndLocation (compasFinalDelEfecto)
 
-Los últimos 3 de los 7 parámetros son *parámetros opcionales*. Si no se especifican, como fue el caso cuando sólo asignamos 4 parámetros a seEffect(), el efecto se aplicará a la pista entera.
+Los últimos 3 de los 7 parámetros son *parámetros opcionales*. Si no se especifican, como fue el caso cuando sólo asignamos 4 parámetros a setEffect(), el efecto se aplicará a la pista entera.
 
 Aquí hay un ejemplo de un _fade in_:
 
@@ -626,13 +626,56 @@ finish()
 [[chapter-questions]]
 === Preguntas
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "¿Qué te permite hacer un efecto en EarSketch?", "Cambiar las características de sonido dentro del proyecto", "Añadir un sonido a una pista musical", "Crear un ritmo de tambor", "Cambiar el tempo de una canción");
-question2 = new Question(2, "¿Cuál de éstos NO es un argumento setEffect()?", "Nombre del clip", "Nombre del efecto", "Valor del efecto", "Número de pista musical");
-question3 = new Question(3, "¿Cómo asignarías un tiempo de retardo (_delay_) de 50 milisegundos a un efecto de retardo en la pista musical 3?", "setEffect(3, DELAY, DELAY_TIME, 50.0)", "setEffect(DELAY, 3, DELAY_TIME, 50.0)", "fitMedia(DELAY, 3, DELAY_TIME, 50.0)", "setEffect(50, DELAY_FEEDBACK, 1)");
-question4 = new Question(4, "¿Cuál de las siguientes opciones no es un parámetro que se usa con los envelopes setEffect()?", "Duración del clip", "Valor de comienzo", "Número de pista musical", "Efecto");
-question5 = new Question(5, "¿Qué haría la siguiente función setEffect()? setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)", "Aumentar la intensidad de la distorsión de la pista 1 durante 10 compases.", "Reducir la intensidad de la distorsión de la pista 1 durante 50 compases.", "Aumentar el volumen de la pista 1 durante 10 compases.", "Reducir el volumen de la pista 1 durante 50 compases.");
-</script>
-++++
+[question]
+--
+¿Qué te permite hacer un efecto en EarSketch?
+[answers]
+* Cambiar las características de sonido dentro del proyecto
+* Añadir un sonido a una pista musical
+* Crear un ritmo de tambor
+* Cambiar el tempo de una canción
+--
+
+[question]
+--
+¿Cuál de éstos NO es un argumento `setEffect()`?
+[answers]
+* Nombre del clip
+* Nombre del efecto
+* Valor del efecto
+* Número de pista musical
+--
+
+[question]
+--
+¿Cómo asignarías un tiempo de retardo (_delay_) de 50 milisegundos a un efecto de retardo en la pista musical 3?
+[answers]
+* `setEffect(3, DELAY, DELAY_TIME, 50.0)`
+* `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
+* `fitMedia(DELAY, 3, DELAY_TIME, 50.0)`
+* `setEffect(50, DELAY_FEEDBACK, 1)`
+--
+
+[question]
+--
+¿Cuál de las siguientes opciones no es un parámetro que se usa con los envelopes `setEffect()`?
+[answers]
+* Duración del clip
+* Valor de comienzo
+* Número de pista musical
+* Efecto
+--
+
+[question]
+--
+¿Qué haría la siguiente función `setEffect()`?
+[source,python]
+----
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
+----
+[answers]
+* Aumentar la intensidad de la distorsión de la pista 1 durante 10 compases.
+* Reducir la intensidad de la distorsión de la pista 1 durante 50 compases.
+* Aumentar el volumen de la pista 1 durante 10 compases.
+* Reducir el volumen de la pista 1 durante 50 compases.
+--

@@ -8,19 +8,25 @@ In this chapter you will learn how to change the tempo of your song, add comment
 === The `setTempo()` function
 
 [role="curriculum-python"]
+--
 By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
+
 . Some comments starting with `#` in grey: we'll cover that in next section
 . the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project 
 . the `init()` function, which initializes, or turns on, the DAW
 . the `setTempo(120)` function, which we will see in detail below
 . the `finish()` function: it tells the DAW that you are done composing and are ready to play your music.
+--
 
 [role="curriculum-javascript"]
+--
 By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
+
 . Some comments starting with `//` in grey: we'll cover that in next section
 . the `init()` function, which initializes, or turns on, the DAW
 . the `setTempo(120)` function, which we will see in detail below
 . the `finish()` function: it tells the DAW that you are done composing and are ready to play your music.
+--
 
 Note: Your code goes after `setTempo()` and before `finish()`.
 
@@ -190,7 +196,8 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
 .PRACTICE
 ****
-Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. It can be a feeling that you'd like to share, or a story. 
+Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. It can be a feeling that you'd like to share, or a story.
+
 . Think about what you'd like to express 
 . Then either A. Write some lyrics and record yourself singing or reading them or B. Record or download some sounds that are related to your message
 . Add these recordings to your song using the `fitMedia()` function

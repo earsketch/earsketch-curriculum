@@ -30,6 +30,7 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 ////
 
 To use EarSketch
+
 . You can browse and select sounds in your *sound browser*
 . You will write code in your *code editor*, 
 . When you click the *run* button, your music will be shown in the *Digital Audio Workstation* (or *DAW*)
@@ -42,9 +43,13 @@ OPTIONAL:
 ////
 
 What is a DAW?
+
 A *Digital Audio Workstation*, or *DAW*, is a piece of software that produces or edits audio or sound clips on a computer, be it in a professional studio or in home laptop-based studios.
+
 Some popular DAWs include https://www.ableton.com/[Ableton^] and https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], and http://www.reaper.fm/[Reaper^].
-With a DAW, you can record, edit, visualize and play audio files. These audio files are called *clips*.  
+
+With a DAW, you can record, edit, visualize and play audio files. These audio files are called *clips*.
+
 EarSketch is just like a DAW, except you get to directly program the musical elements using code.
 
 Here is how to make full use of the DAW:
@@ -194,6 +199,7 @@ video::./videoMedia/001-10-ComposingInEarSketch-PY.mp4[]
 video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
 
 To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the parenthesis, we'll have 4 parameters, separated by commas:
+
 . *A clip name*: place your cursor between the parenthesis, go to the sound browser, select a clip, and paste it using the blue paste icon.
 . *The track number*: tracks are the rows that run across the DAW; they help you organize your sounds by instrument-type (vocals, lead guitar, rhythm guitar, bass, drums, etc.). You can start at track one for your first sound.
 . *Start measure*: when your sound will start playing. Measures are musical time units. One measure is 4 beats. You can start at measure one with your first sound.
@@ -389,7 +395,8 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 OPTIONAL
 ////
 
-What are the different types of errors? 
+What are the different types of errors?
+
 . *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote fitMedia incorrectly).
 . *Runtime errors*: Your program starts to run, but halts due to an error.
 . *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place. 

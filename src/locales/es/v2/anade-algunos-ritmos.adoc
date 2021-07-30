@@ -471,16 +471,52 @@ finish();
 [[chapter-questions]]
 === Preguntas
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question6 = new Question(6, "questions:v2.addBeats.1.question", "questions:v2.addBeats.1.a1", "questions:v2.addBeats.1.a2", "questions:v2.addBeats.1.a3", "questions:v2.addBeats.1.a4");
-question7 = new Question(7, "questions:v2.addBeats.2.question", "questions:v2.addBeats.2.a1", "questions:v2.addBeats.2.a2", "questions:v2.addBeats.2.a3", "questions:v2.addBeats.2.a4");
-question1 = new Question(1, "¿Cuál de estas opciones es una cadena?", "Cinco", "5", "CINCO", "Cinco");
-question2 = new Question(2, "¿Qué representa \"0\" en una cadena de patrón de tiempos?", "Empieza a tocar el clip", "Silencio", "Extiende el clip", "Para el clip");
-question3 = new Question(3,"En EarSketch, un compás tiene...", "4 tiempos", "4 subdivisiones", "16 tiempos", "1 negra");
-question4 = new Question(4, "Una semicorchea (1/16 de nota) es...", "un cuarto de una negra (1/4 de nota)", "la mitad de un tiempo", "un cuarto de compás", "1 compás");
-question5 = new Question(5, "Para usar la función makeBeat(), cuáles son los parámetros que necesitas?", "el nombre del clip, la pista musical, el compás donde comienza el ritmo, la cadena de tiempos", "el tempo, la pista musical, el compás donde comienza el ritmo, el último compás", "el nombre del clip, el compás donde comienza el ritmo, el último compás, la cadena de tiempos", "la cadena de tiempos, la pista musical, el compás donde comienza el ritmo, el nombre del clip");
-</script>
-++++
+[question]
+--
+¿Cuál de estas opciones es una cadena?
+[answers]
+* "Cinco"
+* 5
+* CINCO
+* Cinco
+--
 
+[question]
+--
+¿Qué representa "0" en una cadena de patrón de tiempos?
+[answers]
+* Empieza a tocar el clip
+* Silencio
+* Extiende el clip
+* Para el clip
+--
+
+[question]
+--
+En EarSketch, un compás tiene...
+[answers]
+* 4 tiempos
+* 4 subdivisiones
+* 16 tiempos
+* 1 negra
+--
+
+[question]
+--
+Una semicorchea (1/16 de nota) es...
+[answers]
+* un cuarto de una negra (1/4 de nota)
+* la mitad de un tiempo
+* un cuarto de compás
+* 1 compás
+--
+
+[question]
+--
+Para usar la función `makeBeat()`, ¿cuáles son los parámetros que necesitas?
+[answers]
+* el nombre del clip, la pista musical, el compás donde comienza el ritmo, la cadena de tiempos
+* el tempo, la pista musical, el compás donde comienza el ritmo, el último compás
+* el nombre del clip, el compás donde comienza el ritmo, el último compás, la cadena de tiempos
+* la cadena de tiempos, la pista musical, el compás donde comienza el ritmo, el nombre del clip
+--

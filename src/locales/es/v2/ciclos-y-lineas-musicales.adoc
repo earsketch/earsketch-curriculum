@@ -163,7 +163,7 @@ var cadena_de_tiempos="0---0---0-0-0---";
 println(1+3);
 
 //Poner nuestro ritmo en un ciclo
-//Toma en cuenta que la declaración de impresión está dentro del ciclo _for_ para ejecutarla en cada iteración del ciclo. 
+//Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
 for (var compas=1; compas<5; compas++) {
   makeBeat(drum1, 1, compas, beat_string);
   println(compas);
@@ -614,7 +614,7 @@ Recuerda que puedes probar cosas y quedarte sólo con los sonidos/ideas que más
 * El *flujo de control* representa el orden en el cual la computadora ejecuta sus declaraciones.
 * La función `println()` evalúa su argumento y muestra el resultado en la consola. Es una herramienta útil para depurar porque permite que el programador aprenda cuál es el estado del programa.
 * Para depurar el código, se puede imprimir (_print_), insertar la sintaxis que se usa para los comentarios en un bloque de código (comentar líneas de código, o _comment out code_ en inglés) y usar la consola. Además, pedirle ayuda a alguien puede acelerar significativamente el proceso de depuración.
-* Revisa otra vez la lista expandida de errores comunes de programación: <<ch_15#commonerrors,Common Errors>>.
+* Revisa otra vez la lista expandida de errores comunes de programación: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * El *registro* de un sonido determina cuán agudo o grave suena en una escala relativa.
 * La *tonalidad* de una canción determina la *escala*, o conjunto de registros, en el cual la pieza está compuesta, así como la nota *tónica*. Las tonalidades son mayores o menores, lo cual tiende a crear reacciones diferentes en el oyente.
 * Puedes usar 3 pistas básicas como base de tus canciones: una melodía de registro más agudo, una línea de bajo con registro más grave y percusión.
@@ -623,13 +623,52 @@ Recuerda que puedes probar cosas y quedarte sólo con los sonidos/ideas que más
 [[chapter-questions]]
 === Preguntas
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "¿Cuál de las siguientes opciones NO es un componente de un ciclo _for_?", "El intérprete de ciclo", "El contador del ciclo", "El cuerpo del ciclo", "El rango del ciclo");
-question2 = new Question(2, "¿Cuál de las siguientes opciones NO representa un buen uso de ciclos en una composición musical?", "Crear un patrón rítmico que nunca se repite", "Colocar clips musicales en  cada tercer compás", "Repetir un ritmo en varios compases consecutivos", "Colocar clips musicales en los compases impares");
-question3 = new Question(3, "¿Cuál de las siguientes opciones NO es una técnica recomendada para depurar?", "Copiar y pegar código a Google", "Imprimir valores de variables a la consola", "Mirar las líneas de error identificadas en la consola", "Pedirle ayuda a otras personas");
-question4 = new Question(4, "¿Cuál de las siguientes opciones NO es algo que se puede imprimir en la consola?", "Los comentarios sobre el código", "Las cadenas", "Las expresiones matemáticas", "Las variables");
-question5 = new Question(5, "____ es la característica de sonido que determina cuán agudo o grave suena.", "El registro", "El tempo", "El ritmo", "El volumen");
-</script>
-++++
+[question]
+--
+¿Cuál de las siguientes opciones NO es un componente de un ciclo `for`?
+[answers]
+* El intérprete de ciclo
+* El contador del ciclo
+* El cuerpo del ciclo
+* El rango del ciclo
+--
+
+[question]
+--
+¿Cuál de las siguientes opciones NO representa un buen uso de ciclos en una composición musical?
+[answers]
+* Crear un patrón rítmico que nunca se repite
+* Colocar clips musicales en cada tercer compás
+* Repetir un ritmo en varios compases consecutivos
+* Colocar clips musicales en los compases impares
+--
+
+[question]
+--
+¿Cuál de las siguientes opciones NO es una técnica recomendada para depurar?
+[answers]
+* Copiar y pegar código a Google
+* Imprimir valores de variables a la consola
+* Mirar las líneas de error identificadas en la consola
+* Pedirle ayuda a otras personas
+--
+
+[question]
+--
+¿Cuál de las siguientes opciones NO es algo que se puede imprimir en la consola?
+[answers]
+* Los comentarios sobre el código
+* Las cadenas
+* Las expresiones matemáticas
+* Las variables
+--
+
+[question]
+--
+____ ____ es la característica de sonido que determina cuán agudo o grave suena.
+[answers]
+* El registro
+* El tempo
+* El ritmo
+* El volumen
+--

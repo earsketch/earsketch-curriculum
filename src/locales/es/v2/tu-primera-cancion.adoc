@@ -9,6 +9,7 @@ En este capítulo aprenderás a cambiar el tempo de tu canción, añadir comenta
 
 [role="curriculum-python"]
 Hasta ahora has notado que, cuando creas un nuevo script, hay elementos preexistentes que definitivamente no pueden faltar para que tu código funcione:
+
 . Algunos comentarios que empiezan con `#` en gris: vamos a cubrirlo en la siguiente sección
 . la línea `from earsketch import*`, que añade las funciones de EarSketch (como `fitMedia()`) al proyecto
 . la función `init()`, que inicia, o prende, la EAD
@@ -19,6 +20,7 @@ Nota: Tu código va después de `setTempo()` y antes de `finish()`.
 
 [role="curriculum-javascript"]
 Hasta ahora has notado que, cuando creas un nuevo script, hay elementos preexistentes que definitivamente no pueden faltar para que tu código funcione:
+
 . Algunos comentarios que empiezan con `//` en gris: vamos a cubrirlo en la siguiente sección
 . la función `init()`, que inicia, o prende, la EAD
 . la función `setTempo(120)`, que vamos a considerar en detalle a continuación
@@ -150,7 +152,7 @@ finish()
 // descripción: Aquí hay un breve ejemplo de un script que usa comentarios para describir lo que hace el código.
 //
 //
-                                                                                                                                                                                                                                                                                                                                                                
+
 //Configuración
 init();
 setTempo(130);
@@ -181,7 +183,7 @@ finish();
 
 Puedes cargar tu propio archivo de audio a través del Navegador de Sonidos. Abre tu Navegador de Sonidos y haz clic en el botón de "añadir sonido" debajo de los filtros (si no ves el botón, asegúrate de iniciar la sesión)--se abrirá una ventana. Vamos a explorar las primeras 3 opciones:
 
-. *Cargar nuevos sonidos* permite que elijas archivos de audio (.mp3, .aiff, etcétera) que ya están en tu computadora. Modifica el nombre del archivo si es necesario ("(se requiere) un valor constante"), y haz clic en "CARGAR".
+    . *Cargar nuevos sonidos* permite que elijas archivos de audio (.mp3, .aiff, etcétera) que ya están en tu computadora. Modifica el nombre del archivo si es necesario ("(se requiere) un valor constante"), y haz clic en "CARGAR".
 . *Grabación Rápida* permite que se grabe un clip corto directamente a la biblioteca EarSketch. Mira el video a continuación para más información.
 . *Freesound* permite que se importen sonidos directamente de Freesound.org, una base de datos de código abierto. En la barra de búsqueda, puedes buscar ciertos tipos de sonidos (por ejemplo, los cantos de pájaro, la lluvia, una calle ocupada...). Bajo "Results", una lista de sonidos aparecerá. Si haces clic en el botón de _play_, puedes escuchar los sonidos preliminarmente, y, si te gusta uno, selecciona el botón de "toggle" en frente del nombre del archivo y luego haz clic en "UPLOAD" al final de la pantalla.
 
@@ -194,6 +196,7 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 .PRÁCTICA
 ****
 La música, y el arte en general, muchas veces sirve para comunicar un mensaje. Se puede lograr a través de las letras y/o el sentimiento que transmite la canción. Nos gustaría que hagas una breve canción que exprese algo. Puede ser un sentimiento que quieras compartir o una historia.
+
 . Piensa en algo que te gustaría expresar
 . Entonces puedes A. Escribir unas letras y grabarte a ti mismo/a cantándolas o leyéndolas, o B. Grabar o descargar unos sonidos que tengan que ver con tu mensaje
 . Añade estas grabaciones a tu canción usando la función `fitMedia()`
@@ -277,14 +280,62 @@ END OF OPTIONAL
 [[chapter-questions]]
 === Preguntas
 
-++++
-<ul id="questionsContainer"></ul>
-<script>
-question1 = new Question(1, "En EarSketch, ¿qué es lo que te permite hacer setTempo()?", "Especificar el tempo de una canción", "Añadir un sonido a una pista musical", "Crear un ritmo de batería", "Cambiar las características de sonido dentro de un proyecto");
-question2 = new Question(2, "¿Cuál es la unidad que describe el tempo?", "Pulsaciones por minuto (PPM)", "Compases", "Decibelios(dB)", "Segundos")
-question3 = new Question(3, "¿Para qué sirven los comentarios?", "Todas las respuestas a continuación", "Organizar tu código", "Escribir una descripción de tu script al comienzo de tu script", "Facilitar que otros programadores lean tu código")
-question4 = new Question(4, "¿Cuál de las siguientes declaraciones es cierta?", "Un disco duro es un ejemplo de almacenamiento secundario", "Los datos de audio se graban en el CPU de la computadora", "El CPU mantiene datos instruccionales para los programas", "El almacenamiento secundario almacena datos por breves periodos de tiempo");
-question5 = new Question(5, "¿Cómo consigues los derechos de autor?", "Creando y publicando cualquier obra nueva", "Comprando una patente", "Juntándose a una organización secreta", "Escogiendo una licencia para tu obra)");
-question6 = new Question(6, "¿Qué es el Creative Commons?", "Una licencia para compartir tu obra abiertamente con ciertas restricciones", "Un proceso de composición", "El derecho de demandar a cualquier persona que use tu música", "Una licencia que permite que cobres una regalía")
-</script>
-++++
+[question]
+--
+En EarSketch, ¿qué es lo que te permite hacer `setTempo()`?
+[answers]
+* Especificar el tempo de una canción
+* Añadir un sonido a una pista musical
+* Crear un ritmo de batería
+* Cambiar las características de sonido dentro de un proyecto
+--
+
+[question]
+--
+¿Cuál es la unidad que describe el tempo?
+[answers]
+* Pulsaciones por minuto (PPM)
+* Compases
+* Decibelios(dB)
+* Segundos
+--
+
+[question]
+--
+¿Para qué sirven los comentarios?
+[answers]
+* Todas las respuestas a continuación
+* Organizar tu código
+* Escribir una descripción de tu script al comienzo de tu script
+* Facilitar que otros programadores lean tu código
+--
+
+[question]
+--
+¿Cuál de las siguientes declaraciones es cierta?
+[answers]
+* Un disco duro es un ejemplo de almacenamiento secundario
+* Los datos de audio se graban en el CPU de la computadora
+* El CPU mantiene datos instruccionales para los programas
+* El almacenamiento secundario almacena datos por breves periodos de tiempo
+--
+
+[question]
+--
+¿Cómo consigues los derechos de autor?
+[answers]
+* Creando y publicando cualquier obra nueva
+* Comprando una patente
+* Juntándose a una organización secreta
+* Escogiendo una licencia para tu obra
+--
+
+[question]
+--
+¿Qué es el Creative Commons?
+[answers]
+* Una licencia para compartir tu obra abiertamente con ciertas restricciones
+* Un proceso de composición
+* El derecho de demandar a cualquier persona que use tu música
+* Una licencia que permite que cobres una regalía
+--

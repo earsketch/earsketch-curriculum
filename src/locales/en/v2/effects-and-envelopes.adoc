@@ -289,7 +289,7 @@ To change an envelope, you just need the `setEffect()` function with 7 arguments
 . effectEndValue
 . effectEndLocation
 
-The last 3 out of 7 parameters are *optional parameters*. If left unspecified, as was the case when we used setEffect() with only 4 parameters, the effect is applied to the entire track.
+The last 3 out of 7 parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only 4 parameters, the effect is applied to the entire track.
 
 Here is an example of fade in:
 
