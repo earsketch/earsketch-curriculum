@@ -236,11 +236,6 @@ from earsketch import *
 init()
 setTempo(120)
 
-#Setup
-from earsketch import *
-init()
-setTempo(120)
-
 melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
 melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
 drums1 = RD_WORLD_PERCUSSION_DRUMPART_24

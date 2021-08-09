@@ -603,7 +603,7 @@ Let's create a full song using all the tools you've discovered in EarSketch! Her
 
 . Choose a theme for your song. Think about the type of sounds, or instruments, or lyrics that will best convey your message.
 . Then select a simple structure. For each section, try to think of some
-. And finally, start coding! start with some `fitMedia()` functions to select sounds.
+. And finally, start coding! Start by selecting sounds and putting them in `fitMedia()` functions.
 . Use `makeBeat()` to add some percussions.
 . You can upload your own sounds.
 . Use for loops to reduce repetition in your code.
