@@ -276,7 +276,7 @@ We will use 2 value-time pairs. Each pair contains an effect value and a corresp
 
 [[envelopepoints]]
 .An annotated envelope in EarSketch
-[caption="Figure 5.1: "]
+[caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
 To change an envelope, you just need the `setEffect()` function with 7 arguments. The last 4 arguments are the 2 value-time pairs.

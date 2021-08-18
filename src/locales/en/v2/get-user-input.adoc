@@ -115,7 +115,7 @@ With the return statement, the complete control flow for a function looks like t
 
 [[return]]
 .Return statement control flow
-[caption="Figure 13.1: "]
+[caption="Figure 8.1.1: "]
 image::../media/U2/Return.png[Alt Text]
 
 .PRACTICE
@@ -754,15 +754,12 @@ Which of the following would be considered an example of data type conversion?
 What would the output of this block of code be (what would print to the console)?
 [source,python]
 ----
-n = 5
-if (n * 3 == 15):
-    m = 5 + n
-    print(m)
+not(True and (4>5))
 ----
 [answers]
-* `10`
-* `n`
 * `True`
+* `5`
+* `4`
 * `False`
 --
 
@@ -772,17 +769,13 @@ if (n * 3 == 15):
 What would the output of this block of code be (what would print to the console)?
 [source,javascript]
 ----
-var n = 5;
-if (n * 3 == 15) {
-    var m = 5 + n;
-    println(m);
-}
+!(true && (4>5))
 ----
 [answers]
-* `10`
-* `n`
-* `True`
-* `False`
+* `true`
+* `4`
+* `false`
+* `5`
 --
 
 [question]
@@ -798,29 +791,29 @@ Which of the following is an example of concatenation?
 [role="curriculum-python"]
 [question]
 --
-How does the following expression evaluate?
+How would you obtain the boolean True with the booleans True and False?
 [source,python]
 ----
 not (True and (4>5))
 ----
 [answers]
-* `True`
-* `False`
-* `true`
-* `"False"`
+* `True or False`
+* `not True`
+* `True and False`
+* `true or false`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-How does the following expression evaluate?
+How would you obtain the boolean true with the booleans true and false?
 [source,javascript]
 ----
 !(true && (4>5))
 ----
 [answers]
-* `true`
-* `false`
-* `True`
-* `"false"`
+* `true||false`
+* `!true`
+* `true&&false`
+* `True||False`
 --

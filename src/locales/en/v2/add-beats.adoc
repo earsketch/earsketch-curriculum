@@ -159,17 +159,17 @@ Let's first learn some basic concepts about rhythm:
 
 [[imediameasurepng]]
 .A measure
-[caption="Figure 1: "]
-image::../media/U1P1/beat.png[A measure]
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
 .A beat
-[caption="Figure 2: "]
+[caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
 .A sixteenth note
-[caption="Figure 3: "]
+[caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 .PRACTICE

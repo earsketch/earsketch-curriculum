@@ -307,31 +307,6 @@ We will see 2 ways you can use data structures with `makeBeat()`. First, let's h
 The indices of the string `"EarSketch"` are shown in the table below.
 
 
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|Character
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
-
 [role="curriculum-javascript"]
 1. Like arrays, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
 2. You can use the property `.length` with strings, which returns the number of characters in the string. The last character is at index `string.length-1`.
@@ -841,15 +816,6 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * If necessary, place some elements in an array.
 ****
 
-[[conclusion]]
-=== Conclusion
-
-Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learnt many things with this tool :) There is more to discover in optional chapters!
-
-////
-Thank you video
-////
-
 
 [[chapter9summary]]
 === Chapter 9 Summary
@@ -979,3 +945,12 @@ How can you get an array from `oldArray` without the first and last elements?
 * `oldArray.slice(0,oldArray.length)`
 * `oldArray.slice(2:oldArray.length-1)`
 --
+
+[[conclusion]]
+=== Conclusion
+
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learnt many things with this tool :) There is more to discover in optional chapters!
+
+////
+Thank you video
+////
