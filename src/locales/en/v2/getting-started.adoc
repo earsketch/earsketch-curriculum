@@ -377,7 +377,7 @@ If you have errors when running your code, check out the next chapter about debu
 
 
 [[debugging]]
-=== Debugging your code
+=== Debug your code
 
 Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. You can use debugging strategies, using the console.
 

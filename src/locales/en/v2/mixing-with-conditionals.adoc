@@ -1,12 +1,12 @@
 [[mixingwithconditionnals]]
-== Mixing with conditionals!
+== Mix with conditionals!
 :nofooter:
 
 In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected: the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch, using conditionals (“if” statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
 
 
 [[analyzetrack]]
-=== Using `analyzeTrack()`
+=== Use `analyzeTrack()`
 
 We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. We’ll use an EarSketch function called `analyzeTrack()`. Copy and run the following code:
 
@@ -395,7 +395,7 @@ if (condition1) {
 ----
 
 [[mixingyourtracks]]
-=== Mixing your tracks
+=== Mix your tracks
 
 Let's use all these tools to mix your song. Mixing is modifying the volume of tracks so that they sound well balanced together. 
 
@@ -423,16 +423,16 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 
 [role="curriculum-python"]
 Let's review some vocabulary:
-* *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
-* *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
-* *Statements*: instructions for the computer to execute.
+. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
+. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
+. *Statements*: instructions for the computer to execute.
 
 
 [role="curriculum-javascript"]
 Let's review some vocabulary:
-* *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `*`, `=`) and comparison operators (`>`, `\>=`, `<`, `\<=`, `==`, `!=`).
-* *Expression*: A combination of one or more values, constants, variables, operators, and functions. The computer evaluates expressions to produce a another value, usually a single numeric or boolean value. For example: `1+2` (evaluated to 3) or `1<2` (evaluated to true) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
-* *Statements*: instructions for the computer to execute.
+. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `*`, `=`) and comparison operators (`>`, `\>=`, `<`, `\<=`, `==`, `!=`).
+. *Expression*: A combination of one or more values, constants, variables, operators, and functions. The computer evaluates expressions to produce a another value, usually a single numeric or boolean value. For example: `1+2` (evaluated to 3) or `1<2` (evaluated to true) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
+. *Statements*: instructions for the computer to execute.
 
 
 Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.

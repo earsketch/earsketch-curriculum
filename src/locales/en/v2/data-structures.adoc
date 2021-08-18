@@ -293,7 +293,7 @@ finish();
 ----
 
 [[usingdatastructureswithmakebeat]]
-=== Using Data Structures with `makeBeat()`
+=== Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
 We will see 2 ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
@@ -746,7 +746,7 @@ Using what you have learnt in this chapter, create rhythms that you like with `m
 ****
 
 [[evaluatingcorrectness]]
-=== Evaluating Correctness
+=== Evaluate Correctness
 
 Congratulations, now you have acquired musical and coding skills that allows you to be creative with EarSketch! One last thing we want to see with you, is making sure your code is as neat as possible. Here are some elements that you can check:
 

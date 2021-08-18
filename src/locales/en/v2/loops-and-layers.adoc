@@ -411,12 +411,12 @@ This animation shows how the control flow moves in a `for` loop, and how the val
 [[loop-py]]
 .Stepping through a for loop
 [role="curriculum-python"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 image::../media/U1P2/LoopPy_updated.gif[Alt Text]
 
 .Stepping through a for loop
 [role="curriculum-javascript"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 [[loop-js]]
 image::../media/U1P2/LoopJS_updated.gif[Alt Text]
 

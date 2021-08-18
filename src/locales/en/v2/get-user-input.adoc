@@ -305,7 +305,7 @@ finish();
 ----
 
 [[userinput]]
-=== Getting User Input
+=== Get User Input
 
 We'll see how to ask for user input when the "run" button is pressed. This is possible thanks to the `readInput()` function. This functions takes as parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. The `readInput()` function returns what the user types there.
 

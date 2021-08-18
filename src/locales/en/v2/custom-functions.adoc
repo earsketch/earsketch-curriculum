@@ -48,7 +48,7 @@ setEffect(3,VOLUME,GAIN,-20,1,0,5) # increasing volume of bass line
 
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # main melody differs
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # drums differ
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # contrasting bass: its slower and louder
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # contrasting bass: it's slower and louder
 setEffect(3,VOLUME,GAIN,5,5,5,9) # increasing bass volume
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # rattling: adding a new element
 
@@ -118,7 +118,7 @@ Select a song that you like. Listen to it and try to notice the different sectio
 Keep in mind that a musical phrase sounds most natural when clips are arranged into groups of 2, 4, 8, 16, etc. So your sections should preferably have a size of 2, 4, 8, 16 measures.
 
 [[creatingyourcustomfunctions]]
-=== Creating your custom functions
+=== Create your custom functions
 
 In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more efficient, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.  
 
