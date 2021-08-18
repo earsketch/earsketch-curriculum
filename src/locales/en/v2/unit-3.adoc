@@ -1,0 +1,5 @@
+[[usecustomfunctionsforyoursongstructure]]
+== Use custom functions for your song structure
+:nofooter:
+
+Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. We'll be using custom functions for that: these are functions that you will create yourself!

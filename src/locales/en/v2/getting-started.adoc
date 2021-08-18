@@ -1,23 +1,6 @@
-[[getstartedwithearsketch]]
-== Get Started with EarSketch
-:nofooter:
-
-In this chapter you will learn how EarSketch works, how to place sounds (clips) into your music, and how to debug your code.
-
-Anyone (especially you) can learn to program! Like learning a musical instrument, it takes consistent practice to make progress. Don't get discouraged if you get stuck, this is part of the process. Ask for help in your class or look online if needed.
-
-We wish you the best of luck, and before you start here's an example of what you can do with EarSketch: 
-
-[role="curriculum-python curriculum-mp4"]
-[[video1livepy]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-PY.mp4[]
-
-[role="curriculum-javascript curriculum-mp4"]
-[[video1livejs]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-JS.mp4[]
-
 [[discoverearsketch]]
 === Discover EarSketch
+:nofooter:
 
 In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. Where in the program does the code go? Find out in the video!
 

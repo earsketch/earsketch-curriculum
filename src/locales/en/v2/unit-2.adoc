@@ -1,0 +1,5 @@
+[[effectsandenvelopes]]
+== Effects and envelopes
+:nofooter:
+
+EarSketch lets the composer alter sound clips to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.

@@ -1,11 +1,6 @@
-[[usecustomfunctionsforyoursongstructure]]
-== Use custom functions for your song structure
-:nofooter:
-
-Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. We'll be using custom functions for that: these are functions that you will create yourself!
-
 [[asongsstructure]]
 === A song's structure
+:nofooter:
 
 A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually musicians try to add contrast between different sections. Intros, Verses, Choruses, and Outros are examples of sections.
 
