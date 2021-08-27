@@ -355,9 +355,9 @@ You've learned that a musical genre is a category of artistic composition (e.g. 
 
 We will use 3 types of sounds: kick (track 1), snare (track 2), and hihat (track 3). We will use one `makeBeat()` function for each of these sounds, on 3 different tracks.
 
-////
-video is currently being edited
-////
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_1_BeatByGenre-PY-JS.mp4[]
 
 Here is the corresponding code:
 
@@ -395,7 +395,7 @@ makeBeat(snare,2,3,"----0++0+0++0+++")
 makeBeat(hihat,3,3,"0+0+0+0+0+0+0+0+")
 
 # Jazz beat on measure 5
-makeBeat(hihat,3,5,"0++0+00++0+00++0")
+makeBeat(hihat,3,5,"0++0+00++0+0")
 
 # Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick,1,7,"0+++0+++0+++0+++")
@@ -440,7 +440,7 @@ makeBeat(snare,2,3,"----0++0+0++0+++");
 makeBeat(hihat,3,3,"0+0+0+0+0+0+0+0+");
 
 // Jazz beat on measure 5
-makeBeat(hihat,3,5,"0++0+00++0+00++0");
+makeBeat(hihat,3,5,"0++0+00++0+0");
 
 // Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick,1,7,"0+++0+++0+++0+++");
