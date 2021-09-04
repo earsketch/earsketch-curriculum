@@ -207,7 +207,7 @@ finish();
 A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list)-1]` is the last one. For example, if `list = ["Hello","fellow","EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `len(array)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
 .PRACTICE
