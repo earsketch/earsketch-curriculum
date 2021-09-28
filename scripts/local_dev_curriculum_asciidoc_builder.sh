@@ -35,6 +35,7 @@ cd "$GIT_REPO" || exit 1
 ## array of paths to be processed
 declare -a path_array=(en/v1
                       en/v2
+                      es/v1
                       es/v2
                       es
                       en)
