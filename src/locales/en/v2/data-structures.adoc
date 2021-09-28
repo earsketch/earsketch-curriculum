@@ -1,5 +1,5 @@
 [[getorganizedwithdatastructures]]
-== Get organized with data structures
+== Data Structures
 :nofooter:
 
 [role="curriculum-python"]
@@ -9,7 +9,7 @@ You now have numerous tools at your disposal to create songs with EarSketch. The
 You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionnality of `makeBeat()`.
 
 [[datastructures]]
-=== Data Structures
+=== What is a Data Structure
 
 [role="curriculum-python"]
 If you have very long lists of sound variables, it's possible to arrange them efficiently thanks to *lists*. A *list*, also called array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:

@@ -1,3 +1,9 @@
+[[customfunctionssongstructure]]
+== Custom Functions, Song Structure
+:nofooter:
+
+The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own functions: custom functions, to structure your songs!
+
 [[asongsstructure]]
 === A song's structure
 :nofooter:

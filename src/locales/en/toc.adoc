@@ -9,27 +9,27 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 
 :nofooter:
 // core curriculum
-== <</en/v2/welcome#,Welcome students and teachers!>>
-=== <</en/v2/unit-1#,Unit 1: Compose your tracks and add beats>>
+== <</en/v2/welcome#,Welcome Students and Teachers!>>
+=== <</en/v2/unit-1#,Unit 1: Compose and add Beats>>
 ==== <</en/v2/getting-started#,Get Started with EarSketch>>
-==== <</en/v2/your-first-song#,Customize Your First Song>>
-==== <</en/v2/add-beats#,Add some beats!>>
-=== <</en/v2/unit-2#,Unit 2: Add loops, effects and mix your tracks>>
+==== <</en/v2/your-first-song#,Customize your First Song>>
+==== <</en/v2/add-beats#,Add some Beats!>>
+=== <</en/v2/unit-2#,Unit 2: Loops, Effects, Mixing>>
 ==== <</en/v2/loops-and-layers#,Loops and Layers>>
 ==== <</en/v2/effects-and-envelopes#,Effects and Envelopes>>
 ==== <</en/v2/mixing-with-conditionals#,Mix with Conditionals>>
-=== <</en/v2/unit-3#,Unit 3: Structure your songs>>
-==== <</en/v2/custom-functions#,Custom Functions and Song Structure>>
+=== <</en/v2/unit-3#,Unit 3: Structure your Songs>>
+==== <</en/v2/custom-functions#,Custom Functions, Song Structure>>
 ==== <</en/v2/get-user-input#,Get User Input>>
 ==== <</en/v2/data-structures#,Data Structures>>
 // reference
-== <</en/v1/every-effect-explained-in-detail#,Lists of effects, errors, and EarSketch functions>>
-=== <</en/v1/every-effect-explained-in-detail#,Every Effect Explained in Detail>>
-=== <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>
-=== <</en/v1/the-earSketch-api#,EarSketch functions>>
-=== <</en/v1/programming-reference#,Programming vocabulary>>
+== <</en/v1/every-effect-explained-in-detail#,Effects, Errors, and EarSketch Functions>>
+=== <</en/v1/every-effect-explained-in-detail#,List of all Effects>>
+=== <</en/v1/every-error-explained-in-detail#,List of all Errors>>
+=== <</en/v1/the-earSketch-api#,EarSketch Functions>>
+=== <</en/v1/programming-reference#,Programming Vocabulary>>
 // optional chapters
-== <</en/v1/teaching-computers-to-listen#,Optional: click here to learn more!>>
+== <</en/v1/teaching-computers-to-listen#,Optional: to learn more!>>
 === <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
 === <</en/v1/creating-beats#,More beat examples>>
 === <</en/v1/randomness#,Randomness>>

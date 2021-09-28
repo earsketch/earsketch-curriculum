@@ -210,8 +210,6 @@ Music, and art in general, is often a way to convey a message. It can be either 
 OPTIONAL
 ////
 
-Click here to understand where your sounds are stored on your computer!
-
 *Processes*, or tasks, are programs that run on your computer. The computer's CPU, or *Central Processing Unit*, carries them out. 
 
 A computer's *memory* holds data and processing instructions for the CPU to use. Memory, also called primary storage or RAM (Random Access Memory), stores its data temporarily. Only the information for processes that are actively running is stored in the RAM. This allows fast access to instructions and data for the CPU.

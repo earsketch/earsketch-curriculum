@@ -1,5 +1,5 @@
-[[effectsandenvelopes]]
-== Effects and envelopes
+[[unit2]]
+== Unit 2: Loops, effects, mixing
 :nofooter:
 
-EarSketch lets the composer alter sound clips to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.
+In this unit you will learn about for loops, which allow you to repeat code instructions effucuently. We'll also go over sound effects and envelopes - the evolution of effects over time. Finally, you learn about mixing your tracks and using conditionnals.

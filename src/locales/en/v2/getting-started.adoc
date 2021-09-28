@@ -1,3 +1,10 @@
+[[getstartedwithearsketch]]
+== Get Started with EarSketch
+:nofooter:
+
+In this chapter you will learn how EarSketch works, you will place sounds (clips) into your music, and see how to debug your code.
+
+
 [[discoverearsketch]]
 === Discover EarSketch
 :nofooter:
@@ -198,14 +205,9 @@ A *statement* tells the computer to carry out an action. For example, `fitMedia(
 ////
 OPTIONAL
 ////
-Learn more about the sound browser
-
 
 The *Sound Browser*: Browse or search 4,000 audio clips to use in your music, made by musicians/producers https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, and https://www.sndbrd.com/[Milknsizz^].
 
-////
-TODO: add the correct number of clips and new musicians
-////
 
 ////
 END OF OPTIONAL

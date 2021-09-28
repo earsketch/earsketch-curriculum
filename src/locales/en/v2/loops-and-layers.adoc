@@ -1,5 +1,5 @@
 [[loopandlayers]]
-== Loops and layers!
+== Loops and layers
 :nofooter:
 
 In this chapter you will learn about `for` loops and how you can create repetition in your code and music. We will also cover musical layers and textures as well as some debugging tips.
