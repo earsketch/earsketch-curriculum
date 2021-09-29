@@ -1,5 +1,5 @@
 [[welcome]]
-== Welcome students and teachers!
+== Welcome Students and Teachers!
 :nofooter:
 
 Welcome to EarSketch! 

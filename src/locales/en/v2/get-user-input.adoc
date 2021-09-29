@@ -1,5 +1,5 @@
 [[getuserinput]]
-== Get user input
+== Get User Input
 :nofooter:
 
 In this chapter, you will learn how to ask for input from users and adapt your music accordingly. For that, we'll look at return statements and the `readInput()` function.

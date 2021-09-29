@@ -1,5 +1,5 @@
 [[addsomebeats]]
-== Add some beats!
+== Add some Beats!
 :nofooter:
 
 In this chapter you will learn how to make your own beats! We'll look at variables, a new function called makeBeat(), and different beat examples by genre.
