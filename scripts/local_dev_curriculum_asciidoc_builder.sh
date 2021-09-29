@@ -37,8 +37,11 @@ declare -a path_array=(en/v1
                       en/v2
                       es/v1
                       es/v2
+                      fr/v1
+                      fr/v2
                       es
-                      en)
+                      en
+                      fr)
 
 for locale_path in "${path_array[@]}"
 do
