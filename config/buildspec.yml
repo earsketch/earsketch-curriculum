@@ -32,6 +32,7 @@ phases:
       - |
         declare -a path_array=(en/v1
                               en/v2
+                              es/v1
                               es/v2
                               es
                               en)
