@@ -9,28 +9,28 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 
 :nofooter:
 
-== <</en/v2/welcome#,Welcome>>
-== <</en/v2/getting-started#,Curriculum>>
-=== <</en/v2/getting-started#,Getting Started with EarSketch>>
-=== <</en/v2/your-first-song#,Customize Your First Song>>
-=== <</en/v2/add-beats#,Add some beats!>>
-=== <</en/v2/loops-and-layers#,Loops and Layers>>
-=== <</en/v2/effects-and-envelopes#,Effects and Envelopes>>
-=== <</en/v2/mixing-with-conditionals#,Mixing with Conditionals>>
-=== <</en/v2/custom-functions#,Custom Functions and Song Structure>>
-=== <</en/v2/get-user-input#,Get User Input>>
-=== <</en/v2/data-structures#,Data Structures>>
+== <</fr/v2/welcome#,Bienvenue aux élèves et profs!>>
+== <</fr/v2/getting-started#,Curriculum>>
+=== <</fr/v2/getting-started#,Débutez avec EarSketch>>
+=== <</en/v2/your-first-song#,Votre premier Morceau>>
+=== <</fr/v2/add-beats#,Ajoutez du Rythme!>>
+=== <</fr/v2/loops-and-layers#,Boucles et Texture>>
+=== <</fr/v2/effects-and-envelopes#,Effets et Enveloppes>>
+=== <</fr/v2/mixing-with-conditionals#,Mixer avec le Conditionnel>>
+=== <</fr/v2/custom-functions#,Fonctions Personnalisées>>
+=== <</fr/v2/get-user-input#,Récupérer des Entrées Utilisateur>>
+=== <</fr/v2/data-structures#,Structures de Données>>
 
-== <</en/v1/teaching-computers-to-listen#,Optional>>
+== <</en/v1/teaching-computers-to-listen#,Optional (Anglaise)>>
 === <</en/v1/teaching-computers-to-listen#,Teaching Computers to Listen>>
 === <</en/v1/sonification#,Sonification>>
 === <</en/v1/sorting#,Sorting>>
 === <</en/v1/recursion#,Recursion>>
 === <</en/v1/intro-to-groovemachine#,Groove Machine>>
-== <</en/v1/the-earSketch-api#,Reference>>
-=== <</en/v1/the-earSketch-api#,The EarSketch API>>
-=== <</en/v1/every-effect-explained-in-detail#,Every Effect Explained in Detail>>
-=== <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>
+== <</fr/v1/the-earSketch-api#,Reference (Française)>>
+=== <</fr/v1/the-earSketch-api#,Fonctions EarSketch (Française)>>
+=== <</fr/v1/every-effect-explained-in-detail#,Liste de tous les Effets (Française)>>
+=== <</fr/v1/every-error-explained-in-detail#,Liste de toutes les Erreurs (Française)>>
 === <</en/v1/analysis-features#,Analysis Features>>
 === <</en/v1/creating-beats#,Creating Beats with makeBeat>>
 === <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
@@ -47,7 +47,7 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</en/v1/ch_YVIP_FinalSubmission#,Your Voice is Power: Submit Your Remix>>
 
 // old curriculum
-== <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020)>>
+== <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020) (Anglaise)>>
 === <</en/v1/ch_u1_intro#,Unit 1 Fundamentals>>
 === <</en/v1/getting-started#,Getting Started with EarSketch>>
 === <</en/v1/building-blocks#,The Building Blocks of a Program>>
