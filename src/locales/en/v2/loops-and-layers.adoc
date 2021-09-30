@@ -1,5 +1,5 @@
 [[loopandlayers]]
-== Loops and layers!
+== Loops and Layers
 :nofooter:
 
 In this chapter you will learn about `for` loops and how you can create repetition in your code and music. We will also cover musical layers and textures as well as some debugging tips.
@@ -78,6 +78,46 @@ finish();
 
 ----
 
+[role="curriculum-python"]
+`for` loops in Python consist of 3 basic parts:
+
+[role="curriculum-javascript"]
+`for` loops in JavaScript consist of 4 basic parts:
+
+[[loop-components-PY]]
+.The basic components of a for loop
+[role="curriculum-python"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_PY.png[Alt Text]
+
+[[loop-components-JS]]
+.The basic components of a for loop
+[role="curriculum-javascript"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_JS.png[Alt Text]
+
+[role="curriculum-python"]
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
+* *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
+* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+
+[role="curriculum-javascript"]
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
+* *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
+* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
+* *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
+
+.PRACTICE
+****
+. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4, like in the video
+. Modify your code to go from measures 3 to 7
+. Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
+. Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
+. Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
+****
+
+[[printstatements]]
+=== Print statements
 
 To better understand the flow of your code, you can use a `print` statement. It allows you to display information in the console when you run the code.
 
@@ -189,47 +229,7 @@ Here, you will see in your console the following lines:
 ----
 and it ends there since measure has to be lower than 5, so 4 is your limit.
 
-.PRACTICE
-****
-. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4, like in the video
-. Modify your code to go from measures 3 to 7
-. Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
-. Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
-. Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
-****
 
-You can have more than one line of instructions inside the `for` loop.
-
-[role="curriculum-python"]
-`for` loops in Python consist of 3 basic parts:
-
-[role="curriculum-javascript"]
-`for` loops in JavaScript consist of 4 basic parts:
-
-[[loop-components-PY]]
-.The basic components of a for loop
-[role="curriculum-python"]
-[caption="Figure 12.2: "]
-image::../media/U1P2/Loop_Components_PY.png[Alt Text]
-
-[[loop-components-JS]]
-.The basic components of a for loop
-[role="curriculum-javascript"]
-[caption="Figure 12.2: "]
-image::../media/U1P2/Loop_Components_JS.png[Alt Text]
-
-[role="curriculum-python"]
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
-* *Loop Counter*: Creates a variable to be used as a loop counter.
-* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
-
-[role="curriculum-javascript"]
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key).
-* *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
-* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
-* *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
-
-You can have more than one line of instructions inside the `for` loop.
 
 [[controlflow]]
 === Control Flow
@@ -411,12 +411,12 @@ This animation shows how the control flow moves in a `for` loop, and how the val
 [[loop-py]]
 .Stepping through a for loop
 [role="curriculum-python"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 image::../media/U1P2/LoopPy_updated.gif[Alt Text]
 
 .Stepping through a for loop
 [role="curriculum-javascript"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 [[loop-js]]
 image::../media/U1P2/LoopJS_updated.gif[Alt Text]
 

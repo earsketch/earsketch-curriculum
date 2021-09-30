@@ -1,11 +1,12 @@
-[[usecustomfunctionsforyoursongstructure]]
-== Use custom functions for your song structure
+[[customfunctionssongstructure]]
+== Custom Functions, Song Structure
 :nofooter:
 
-Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. The song structure its organization over time: how to create meaningful sections and transitions for the flow of your music. We'll be using custom functions for that: these are functions that you will create yourself!
+The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own functions: custom functions, to structure your songs!
 
 [[asongsstructure]]
 === A song's structure
+:nofooter:
 
 A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually musicians try to add contrast between different sections. Intros, Verses, Choruses, and Outros are examples of sections.
 
@@ -48,7 +49,7 @@ setEffect(3,VOLUME,GAIN,-20,1,0,5) # increasing volume of bass line
 
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # main melody differs
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # drums differ
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # contrasting bass: its slower and louder
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # contrasting bass: it's slower and louder
 setEffect(3,VOLUME,GAIN,5,5,5,9) # increasing bass volume
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # rattling: adding a new element
 
@@ -118,7 +119,7 @@ Select a song that you like. Listen to it and try to notice the different sectio
 Keep in mind that a musical phrase sounds most natural when clips are arranged into groups of 2, 4, 8, 16, etc. So your sections should preferably have a size of 2, 4, 8, 16 measures.
 
 [[creatingyourcustomfunctions]]
-=== Creating your custom functions
+=== Create your custom functions
 
 In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more efficient, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.  
 
@@ -164,11 +165,11 @@ Now we want to add section A from measures 9 to 13. However, when we call sectio
 .PRACTICE
 ****
 In your current script, 
-. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition. (`sectionA(startMeasure,endMeasure)`).
-. In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
-. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
-. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
-. Define a function for section B, using the same process, and call section B from measures 5 to 9 and from measures 13 to 17.
+* Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition. (`sectionA(startMeasure,endMeasure)`).
+* In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
+* When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
+* Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
+* Define a function for section B, using the same process, and call section B from measures 5 to 9 and from measures 13 to 17.
 ****
 
 Here is what your code could look like:
@@ -595,14 +596,14 @@ finish();
 [[yourfullsong]]
 === Your full song
 
-In programming we can create *abstractions*:  bundling of ideas to form a single concept. Just like in musicjust as we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
+In programming we can create *abstractions*:  bundling of ideas to form a single concept. Just like in music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
 
 .PRACTICE
 ****
 Let's create a full song using all the tools you've discovered in EarSketch! Here is a suggestion of how to work, but you can adapt it as you like:
 
 . Choose a theme for your song. Think about the type of sounds, or instruments, or lyrics that will best convey your message.
-. Then select a simple structure. For each section, try to think of some
+. Then select a simple structure. 
 . And finally, start coding! start with some `fitMedia()` functions to select sounds.
 . Use `makeBeat()` to add some percussions.
 . You can upload your own sounds.

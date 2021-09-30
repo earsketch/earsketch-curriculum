@@ -1,5 +1,5 @@
 [[getorganizedwithdatastructures]]
-== Get organized with data structures
+== Data Structures
 :nofooter:
 
 [role="curriculum-python"]
@@ -9,7 +9,7 @@ You now have numerous tools at your disposal to create songs with EarSketch. The
 You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionnality of `makeBeat()`.
 
 [[datastructures]]
-=== Data Structures
+=== What is a Data Structure
 
 [role="curriculum-python"]
 If you have very long lists of sound variables, it's possible to arrange them efficiently thanks to *lists*. A *list*, also called array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
@@ -207,7 +207,7 @@ finish();
 A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list)-1]` is the last one. For example, if `list = ["Hello","fellow","EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `len(array)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
 .PRACTICE
@@ -293,7 +293,7 @@ finish();
 ----
 
 [[usingdatastructureswithmakebeat]]
-=== Using Data Structures with `makeBeat()`
+=== Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
 We will see 2 ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
@@ -306,31 +306,6 @@ We will see 2 ways you can use data structures with `makeBeat()`. First, let's h
 2. You can use the function `len()` with strings, which returns the number of characters in the string. The last character is at index `len(string)-1`.
 The indices of the string `"EarSketch"` are shown in the table below.
 
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|Character
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
 
 [role="curriculum-javascript"]
 1. Like arrays, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
@@ -371,7 +346,7 @@ The indices of the string `"EarSketch"` are shown in the table below.
 3. You can concatenate arrays together like you do with strings. We use the `concat` *method*. A method is similar to a function as it has parentheses which contain parameters. To use it, place it after your array name, with a dot: the syntax is `newArray = arrayA.concat(arrayB)`. This is called *dot-notation*.
 
 [role="curriculum-python"]
-4. You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1,4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
+4. You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
 4. You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1,4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
@@ -771,7 +746,7 @@ Using what you have learnt in this chapter, create rhythms that you like with `m
 ****
 
 [[evaluatingcorrectness]]
-=== Evaluating Correctness
+=== Evaluate Correctness
 
 Congratulations, now you have acquired musical and coding skills that allows you to be creative with EarSketch! One last thing we want to see with you, is making sure your code is as neat as possible. Here are some elements that you can check:
 
@@ -840,15 +815,6 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * You can ask for user input to modify something in your song.
 * If necessary, place some elements in an array.
 ****
-
-[[conclusion]]
-=== Conclusion
-
-Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learnt many things with this tool :) There is more to discover in optional chapters!
-
-////
-Thank you video
-////
 
 
 [[chapter9summary]]
@@ -979,3 +945,12 @@ How can you get an array from `oldArray` without the first and last elements?
 * `oldArray.slice(0,oldArray.length)`
 * `oldArray.slice(2:oldArray.length-1)`
 --
+
+[[conclusion]]
+=== Conclusion
+
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learnt many things with this tool :) There is more to discover in optional chapters!
+
+////
+Thank you video
+////

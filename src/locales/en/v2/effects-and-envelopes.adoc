@@ -1,11 +1,13 @@
 [[effectsandenvelopes]]
-== Effects and envelopes
+== Effects and Envelopes
 :nofooter:
 
 EarSketch lets the composer alter sound clips to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.
 
+
 [[effectsinearsketch]]
-=== Using Effects in EarSketch
+=== Use Effects in EarSketch
+:nofooter:
 
 *Effects* allow us to change qualities of sounds. Similar to how adding a filter alters a photo, adding an audio effect changes the sound. For example, you can change the volume, add some echo or reverb...
 
@@ -276,7 +278,7 @@ We will use 2 value-time pairs. Each pair contains an effect value and a corresp
 
 [[envelopepoints]]
 .An annotated envelope in EarSketch
-[caption="Figure 5.1: "]
+[caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
 To change an envelope, you just need the `setEffect()` function with 7 arguments. The last 4 arguments are the 2 value-time pairs.
@@ -285,9 +287,9 @@ To change an envelope, you just need the `setEffect()` function with 7 arguments
 . effectName
 . effectParameter
 . effectStartValue
-. effectStartLocation
+. effectStartMeasure
 . effectEndValue
-. effectEndLocation
+. effectEndMeasure
 
 The last 3 out of 7 parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only 4 parameters, the effect is applied to the entire track.
 

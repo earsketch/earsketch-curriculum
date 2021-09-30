@@ -1,5 +1,5 @@
 [[addsomebeats]]
-== Add some beats!
+== Add some Beats!
 :nofooter:
 
 In this chapter you will learn how to make your own beats! We'll look at variables, a new function called makeBeat(), and different beat examples by genre.
@@ -24,17 +24,16 @@ What is a variable? It's a name that will help the computer find a piece of info
 
 We give the data a name so that it's easier to call it and change it. 
 
-[role="curriculum-python"]
+
 To use a variable,
 
+[role="curriculum-python"]
 . You first have to *assign* it. We use the symbol "=", which is called the *assignment operator*. Writing `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` means that you create a variable called synth1 and you store the data HIPHOP_SYNTHPLUCKLEAD_005 into that variable.
 . HIPHOP_SYNTHPLUCKLEAD_005 is the *value* of `synth1`.
 . Then you need to call the variable: use `synth1` in your code. You can only use the variable after it has been assigned, not before. For example, write `fitMedia(synth1, 1, 1, 3)`.
 . When you run the code, the computer will understand that it must use the sound clip name HIPHOP_SYNTHPLUCKLEAD_005 when it reads `synth1`. 
 
 [role="curriculum-javascript"]
-To use a variable,
-
 . You first have to *assign* it. We use the symbol "=", which is called the *assignment operator*. We also use the command `var` at the beginning of the line. Writing `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` means that you create a variable called synth1 and you store the data HIPHOP_SYNTHPLUCKLEAD_005 into that variable.
 . HIPHOP_SYNTHPLUCKLEAD_005 is the *value* of `synth1`.
 . Then you need to call the variable: use `synth1` in your code. For example, write `fitMedia(synth1, 1, 1, 3);`.
@@ -159,17 +158,17 @@ Let's first learn some basic concepts about rhythm:
 
 [[imediameasurepng]]
 .A measure
-[caption="Figure 1: "]
-image::../media/U1P1/beat.png[A measure]
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
 .A beat
-[caption="Figure 2: "]
+[caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
 .A sixteenth note
-[caption="Figure 3: "]
+[caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 .PRACTICE
@@ -356,9 +355,9 @@ You've learned that a musical genre is a category of artistic composition (e.g. 
 
 We will use 3 types of sounds: kick (track 1), snare (track 2), and hihat (track 3). We will use one `makeBeat()` function for each of these sounds, on 3 different tracks.
 
-////
-video is currently being edited
-////
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_1_BeatByGenre-PY-JS.mp4[]
 
 Here is the corresponding code:
 
@@ -396,7 +395,7 @@ makeBeat(snare,2,3,"----0++0+0++0+++")
 makeBeat(hihat,3,3,"0+0+0+0+0+0+0+0+")
 
 # Jazz beat on measure 5
-makeBeat(hihat,3,5,"0++0+00++0+00++0")
+makeBeat(hihat,3,5,"0++0+00++0+0")
 
 # Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick,1,7,"0+++0+++0+++0+++")
@@ -441,7 +440,7 @@ makeBeat(snare,2,3,"----0++0+0++0+++");
 makeBeat(hihat,3,3,"0+0+0+0+0+0+0+0+");
 
 // Jazz beat on measure 5
-makeBeat(hihat,3,5,"0++0+00++0+00++0");
+makeBeat(hihat,3,5,"0++0+00++0+0");
 
 // Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick,1,7,"0+++0+++0+++0+++");

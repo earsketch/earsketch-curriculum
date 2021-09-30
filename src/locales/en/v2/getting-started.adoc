@@ -2,22 +2,12 @@
 == Get Started with EarSketch
 :nofooter:
 
-In this chapter you will learn how EarSketch works, how to place sounds (clips) into your music, and how to debug your code.
+In this chapter you will learn how EarSketch works, you will place sounds (clips) into your music, and see how to debug your code.
 
-Anyone (especially you) can learn to program! Like learning a musical instrument, it takes consistent practice to make progress. Don't get discouraged if you get stuck, this is part of the process. Ask for help in your class or look online if needed.
-
-We wish you the best of luck, and before you start here's an example of what you can do with EarSketch: 
-
-[role="curriculum-python curriculum-mp4"]
-[[video1livepy]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-PY.mp4[]
-
-[role="curriculum-javascript curriculum-mp4"]
-[[video1livejs]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-JS.mp4[]
 
 [[discoverearsketch]]
 === Discover EarSketch
+:nofooter:
 
 In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. Where in the program does the code go? Find out in the video!
 
@@ -209,22 +199,15 @@ To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the par
 Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
 
 [role="curriculum-javascript"]
-****
 A *statement* tells the computer to carry out an action. For example, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` is a statement. Every statement in JavaScript *_should end with a dsemicolon_*.
-****
 
 
 ////
 OPTIONAL
 ////
-Learn more about the sound browser
-
 
 The *Sound Browser*: Browse or search 4,000 audio clips to use in your music, made by musicians/producers https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, and https://www.sndbrd.com/[Milknsizz^].
 
-////
-TODO: add the correct number of clips and new musicians
-////
 
 ////
 END OF OPTIONAL
@@ -377,7 +360,7 @@ If you have errors when running your code, check out the next chapter about debu
 
 
 [[debugging]]
-=== Debugging your code
+=== Debug your code
 
 Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. You can use debugging strategies, using the console.
 

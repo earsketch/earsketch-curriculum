@@ -8,35 +8,38 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 ////
 
 :nofooter:
-
-== <</en/v2/welcome#,Welcome>>
-== <</en/v2/getting-started#,Curriculum>>
-=== <</en/v2/getting-started#,Getting Started with EarSketch>>
-=== <</en/v2/your-first-song#,Customize Your First Song>>
-=== <</en/v2/add-beats#,Add some beats!>>
+// core curriculum
+== <</en/v2/welcome#,Welcome Students and Teachers!>>
+== <</en/v2/unit-1#,Unit 1: Compose and Add Beats>>
+=== <</en/v2/getting-started#,Get Started with EarSketch>>
+=== <</en/v2/your-first-song#,Customize your First Song>>
+=== <</en/v2/add-beats#,Add some Beats!>>
+== <</en/v2/unit-2#,Unit 2: Loops, Effects, Mixing>>
 === <</en/v2/loops-and-layers#,Loops and Layers>>
 === <</en/v2/effects-and-envelopes#,Effects and Envelopes>>
-=== <</en/v2/mixing-with-conditionals#,Mixing with Conditionals>>
-=== <</en/v2/custom-functions#,Custom Functions and Song Structure>>
+=== <</en/v2/mixing-with-conditionals#,Mix with Conditionals>>
+== <</en/v2/unit-3#,Unit 3: Structure your Songs>>
+=== <</en/v2/custom-functions#,Custom Functions, Song Structure>>
 === <</en/v2/get-user-input#,Get User Input>>
 === <</en/v2/data-structures#,Data Structures>>
-
-== <</en/v1/teaching-computers-to-listen#,Optional>>
-=== <</en/v1/teaching-computers-to-listen#,Teaching Computers to Listen>>
+// reference
+== <</en/v1/every-effect-explained-in-detail#,Effects, Errors, and EarSketch Functions>>
+=== <</en/v1/every-effect-explained-in-detail#,List of all Effects>>
+=== <</en/v1/every-error-explained-in-detail#,List of all Errors>>
+=== <</en/v1/the-earSketch-api#,EarSketch Functions>>
+=== <</en/v1/programming-reference#,Programming Vocabulary>>
+// optional chapters
+== <</en/v1/teaching-computers-to-listen#,Optional: To Learn More!>>
+=== <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
+=== <</en/v1/creating-beats#,More Beat Examples>>
+=== <</en/v1/randomness#,Randomness>>
 === <</en/v1/sonification#,Sonification>>
+=== <</en/v1/teaching-computers-to-listen#,Teaching Computers to Listen>>
 === <</en/v1/sorting#,Sorting>>
 === <</en/v1/recursion#,Recursion>>
 === <</en/v1/intro-to-groovemachine#,Groove Machine>>
-== <</en/v1/the-earSketch-api#,Reference>>
-=== <</en/v1/the-earSketch-api#,The EarSketch API>>
-=== <</en/v1/every-effect-explained-in-detail#,Every Effect Explained in Detail>>
-=== <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>
 === <</en/v1/analysis-features#,Analysis Features>>
-=== <</en/v1/creating-beats#,Creating Beats with makeBeat>>
-=== <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
-=== <</en/v1/programming-reference#,Programming Reference>>
-== <</en/v1/ch_AdditionalCurricula#,Additional Curricula>>
-== <</en/v1/ch_TeacherMaterials#,Teacher Materials and Community>>
+// Hour of code and comeptition
 == <</en/v1/ch_HourOfCode#,Hour of Code>>
 === <</en/v1/ch_HourOfCode#,Hour of Code>>
 == <</en/v1/ch_YVIPModule1#,Your Voice is Power>>
@@ -45,7 +48,6 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</en/v1/ch_YVIPModule3#,Your Voice is Power: Module 3>>
 === <</en/v1/ch_YVIPModule4#,Your Voice is Power: Module 4>>
 === <</en/v1/ch_YVIP_FinalSubmission#,Your Voice is Power: Submit Your Remix>>
-
 // old curriculum
 == <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020)>>
 === <</en/v1/ch_u1_intro#,Unit 1 Fundamentals>>
