@@ -9,30 +9,30 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 
 :nofooter:
 // core curriculum
-== <</es/v2/welcome#,Bienvenidos>>
+== <</fr/v2/welcome#,Bienvenue aux élèves et profs!>>
 //todo create /v2/unit-1# in this language
-== <</en/v2/getting-started#,Unidad 1: Componer y Agregar Beats>>
-=== <</es/v2/getting-started#,Empezamos con EarSketch>>
-=== <</es/v2/your-first-song#,Cómo Personalizar tu Primera Canción>>
-=== <</es/v2/add-beats#,¡Añade Algunos Ritmos!>>
+== <</en/v2/getting-started#,Unité 1: Commencez à Composer !>>
+=== <</fr/v2/getting-started#,Débutez Avec EarSketch>>
+=== <</en/v2/your-first-song#,Votre Premier Morceau>>
+=== <</fr/v2/add-beats#,Ajoutez du Rythme!>>
 //todo create /v2/unit-2# in this language
-== <</en/v2/loops-and-layers#,Unidad 2: Loops, Efectos, Mezcla>>
-=== <</es/v2/loops-and-layers#,Ciclos y Líneas Musicales>>
-=== <</es/v2/effects-and-envelopes#,Efectos y Envelopes>>
-=== <</en/v2/mixing-with-conditionals#,Mix with Conditionals>>
+== <</fr/v2/loops-and-layers#,Unité 2: Boulces, Effets, et Mixage>>
+=== <</fr/v2/loops-and-layers#,Boucles et Texture>>
+=== <</fr/v2/effects-and-envelopes#,Effets et Enveloppes>>
+=== <</fr/v2/mixing-with-conditionals#,Mixer avec le Conditionnel>>
 //todo create /v2/unit-3# in this language
-== <</en/v2/custom-functions#,Unidad 3: Estructura tus Canciones>>
-=== <</en/v2/custom-functions#,Custom Functions, Song Structure>>
-=== <</en/v2/get-user-input#,Get User Input>>
-=== <</en/v2/data-structures#,Data Structures>>
+== <</en/v2/custom-functions#,Unité 3: Structurez votre Musique>>
+=== <</fr/v2/custom-functions#,Fonctions Personnalisées>>
+=== <</fr/v2/get-user-input#,Récupérer des Entrées Utilisateur>>
+=== <</fr/v2/data-structures#,Structures de Données>>
 // reference
-== <</en/v1/every-effect-explained-in-detail#,Effects, Errors, and EarSketch Functions>>
-=== <</en/v1/every-effect-explained-in-detail#,List of all Effects>>
-=== <</en/v1/every-error-explained-in-detail#,List of all Errors>>
-=== <</en/v1/the-earSketch-api#,EarSketch Functions>>
+== <</fr/v1/every-effect-explained-in-detail#,Effets, Erreurs, et Fonctions EarSketch>>
+=== <</fr/v1/every-effect-explained-in-detail#,Liste de tous les Effets>>
+=== <</fr/v1/every-error-explained-in-detail#,Liste de toutes les Erreurs>>
+=== <</en/v1/the-earSketch-api#,Fonctions EarSketch>>
 === <</en/v1/programming-reference#,Programming Vocabulary>>
 // optional chapters
-== <</en/v1/teaching-computers-to-listen#,Optional: To Learn More! (Inglés)>>
+== <</en/v1/teaching-computers-to-listen#,Optional: To Learn More! (Anglaise)>>
 === <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
 === <</en/v1/creating-beats#,More Beat Examples>>
 === <</en/v1/randomness#,Randomness>>
@@ -43,16 +43,16 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</en/v1/intro-to-groovemachine#,Groove Machine>>
 === <</en/v1/analysis-features#,Analysis Features>>
 // Hour of code and comeptition
-== <</en/v1/ch_HourOfCode#,Hour of Code (Inglés)>>
+== <</en/v1/ch_HourOfCode#,Hour of Code (Anglaise)>>
 === <</en/v1/ch_HourOfCode#,Hour of Code>>
-== <</en/v1/ch_YVIPModule1#,Your Voice is Power (Inglés)>>
+== <</en/v1/ch_YVIPModule1#,Your Voice is Power (Anglaise)>>
 === <</en/v1/ch_YVIPModule1#,Your Voice is Power: Module 1>>
 === <</en/v1/ch_YVIPModule2#,Your Voice is Power: Module 2>>
 === <</en/v1/ch_YVIPModule3#,Your Voice is Power: Module 3>>
 === <</en/v1/ch_YVIPModule4#,Your Voice is Power: Module 4>>
 === <</en/v1/ch_YVIP_FinalSubmission#,Your Voice is Power: Submit Your Remix>>
 // old curriculum
-== <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020) (Inglés)>>
+== <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020) (Anglaise)>>
 === <</en/v1/ch_u1_intro#,Unit 1 Fundamentals>>
 === <</en/v1/getting-started#,Getting Started with EarSketch>>
 === <</en/v1/building-blocks#,The Building Blocks of a Program>>

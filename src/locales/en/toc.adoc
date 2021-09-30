@@ -29,7 +29,7 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</en/v1/the-earSketch-api#,EarSketch Functions>>
 === <</en/v1/programming-reference#,Programming Vocabulary>>
 // optional chapters
-== <</en/v1/teaching-computers-to-listen#,Optional: to Learn More!>>
+== <</en/v1/teaching-computers-to-listen#,Optional: To Learn More!>>
 === <</en/v1/earsketch-sound-library#,EarSketch Sound Library>>
 === <</en/v1/creating-beats#,More Beat Examples>>
 === <</en/v1/randomness#,Randomness>>
@@ -48,7 +48,6 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</en/v1/ch_YVIPModule3#,Your Voice is Power: Module 3>>
 === <</en/v1/ch_YVIPModule4#,Your Voice is Power: Module 4>>
 === <</en/v1/ch_YVIP_FinalSubmission#,Your Voice is Power: Submit Your Remix>>
-
 // old curriculum
 == <</en/v1/ch_u1_intro#,Archived Curriculum (2015-2020)>>
 === <</en/v1/ch_u1_intro#,Unit 1 Fundamentals>>
