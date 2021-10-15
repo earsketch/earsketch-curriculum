@@ -2,7 +2,11 @@
 == Welcome Students and Teachers!
 :nofooter:
 
-Welcome to EarSketch! 
+Welcome to EarSketch!
+
+*Teachers*: https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[Click here^] to view our new curriculum guide, and visit our https://www.teachers.earsketch.org[EarSketch Teacher Site^] for additional resources.
+
+*Students*: Continue below to learn more about EarSketch
 
 Here you will learn computer science and music technology side by side. You will use either Python or JavaScript to create your own music. 
 
