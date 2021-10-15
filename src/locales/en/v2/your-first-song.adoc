@@ -230,13 +230,14 @@ video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
 END OF OPTIONAL
 ////
 
+[[copyright]]
+=== Copyright
+
 *Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
 ////
 OPTIONAL
 ////
-
-*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. 
 
 When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
 
