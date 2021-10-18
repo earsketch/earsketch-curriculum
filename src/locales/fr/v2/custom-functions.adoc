@@ -163,12 +163,12 @@ Nous voulons maintenant ajouter la partie A de la mesure 9 à 13. Cependant, lor
 
 .ENTRAÎNEZ-VOUS
 ****
-In your current script, 
-. ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition. (`sectionA(startMeasure,endMeasure)`).
-. Dans le corps de la fonction, remplacez les mesures de début (1) et de fin (5) par `startMeasure` et `endMeasure` respectivement.
-. Lorsque vous appelez votre fonction, ajoutez les paramètres `1` et `5` entre les parenthèses. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
-. Ajoutez un deuxième appel de fonction, mais cette fois-ci, avec les paramètres `9` et `13`. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
-. Définissez une fonction pour la partie B, en suivant le même processus, et appelez la partie B des mesures 5 à 9 et des mesures 13 à 17.
+Dans votre script en cours, 
+1. Ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition. (`sectionA(startMeasure,endMeasure)`).
+2. Dans le corps de la fonction, remplacez les mesures de début (1) et de fin (5) par `startMeasure` et `endMeasure` respectivement.
+3. Lorsque vous appelez votre fonction, ajoutez les paramètres `1` et `5` entre les parenthèses. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
+4. Ajoutez un deuxième appel de fonction, mais cette fois-ci, avec les paramètres `9` et `13`. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
+5. Définissez une fonction pour la partie B, en suivant le même processus, et appelez la partie B des mesures 5 à 9 et des mesures 13 à 17.
 ****
 
 Voici à quoi devrait ressembler votre code :

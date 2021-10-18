@@ -96,7 +96,7 @@ setEffect(3,VOLUME,GAIN,-20,1,0,5); // increasing volume of bass line
 
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // main melody differs
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // drums differ
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // contrasting bass: its slower and louder
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // contrasting bass: it's slower and louder
 setEffect(3,VOLUME,GAIN,5,5,5,9); // increasing bass volume
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // rattling: adding a new element
 
@@ -165,11 +165,11 @@ Now we want to add section A from measures 9 to 13. However, when we call sectio
 .PRACTICE
 ****
 In your current script, 
-* Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition. (`sectionA(startMeasure,endMeasure)`).
-* In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
-* When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
-* Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
-* Define a function for section B, using the same process, and call section B from measures 5 to 9 and from measures 13 to 17.
+1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition. (`sectionA(startMeasure,endMeasure)`).
+2. In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
+3. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
+4. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
+5. Define a function for section B, using the same process, and call section B from measures 5 to 9 and from measures 13 to 17.
 ****
 
 Here is what your code could look like:
@@ -206,7 +206,7 @@ def sectionA(startMeasure,endMeasure):
 def sectionB(startMeasure,endMeasure):
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure) # main melody differs
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure) # drums differ
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # contrasting bass: its slower and louder
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # contrasting bass: it's slower and louder
 	setEffect(3,VOLUME,GAIN,5,startMeasure,5,endMeasure) # increasing bass volume
 	fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure) # rattling: adding a new element
 
@@ -252,7 +252,7 @@ function sectionA(startMeasure,endMeasure){
 function sectionB(startMeasure,endMeasure){
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure); // main melody differs
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure); // drums differ
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); // contrasting bass: its slower and louder
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); // contrasting bass: it's slower and louder
 	setEffect(3,VOLUME,GAIN,5,startMeasure,5,endMeasure); // increasing bass volume
 	fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); // rattling: adding a new element
 }

@@ -131,10 +131,10 @@ En EarSketch, cada script que escribas corresponderá a una canción. Vamos a ve
 +
 Si ya tienes un script o más abiertos, entonces haz clic en el icono "+" azul a lado de las pestañas.
 +
-[[newscriptpluspng]]
+[[newscriptplus]]
 .Create a new script, open scripts
 [caption="Figure 1.2.1: "]
-image::../media/U1P1/newScriptPlus.png[Alt Text]
+image::../media/U1P1/NewScriptPlus.png[Alt Text]
 
 ////
 TODO: update this screenshot to the current "+"
@@ -496,14 +496,9 @@ TODO: when options are ready, modify the link
 * *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
 * Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
-* Los comentarios son líneas de código que la computadora no ejecuta. Sin embargo, son útiles cuando se quiere escribir notas dentro de un script.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
 * Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
-* `from earsketch import *` añade el EarSketch API, una interfaz de programación de aplicaciones, a tu proyecto. Hay que incluirla en la parte superior de cada script.
-* `init()` prepara la EAD para que acepte y exhiba la música. Tiene que estar presente en cada script de EarSketch.
-* `setTempo()` permite que se especifique el tempo de tu canción. Se tiene que incluir en cada script de EarSketch.
-* `finish()` notifica a la EAD que tu código se ha terminado. Hay que incluirlo al final de cada script de EarSketch.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
@@ -520,13 +515,9 @@ TODO: when options are ready, modify the link
 * *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
 * Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
-* Los comentarios son líneas de código que la computadora no ejecuta. Sin embargo, son útiles cuando se quiere hacer notas dentro del script.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
 * Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
-* `init()` prepara la EAD para que acepte y exhiba la música. Tiene que estar presente en cada script de EarSketch.
-* `setTempo()` permite que se especifique el tempo de tu canción. Se tiene que incluir en cada script de EarSketch.
-* `finish()` notifica a la EAD que tu código termina. Hay que incluirlo al final de cada script de EarSketch.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.

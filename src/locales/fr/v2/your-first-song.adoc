@@ -232,11 +232,10 @@ video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
 END OF OPTIONAL
 ////
 
-Le *droit d'auteur ou Copyright* est la partie de la loi qui couvre la *propriété intellectuelle* ou la propriété de l'œuvre créative, comme la musique. Lorsque vous utilisez des échantillons (petits extraits musicaux) ou remixez de la musique existante, vous devez absolument créditer les auteurs et vous pouvez le faire dans les commentaires de votre code. Avant d’utiliser les sons créés par d’autres musiciens et de partager votre propre musique, apprenez-en davantage sur le droit d’auteur !
+[[copyright]]
+=== Utilisez le copyright
 
-////
-OPTIONAL
-////
+Le *droit d'auteur ou Copyright* est la partie de la loi qui couvre la *propriété intellectuelle* ou la propriété de l'œuvre créative, comme la musique. Lorsque vous utilisez des échantillons (petits extraits musicaux) ou remixez de la musique existante, vous devez absolument créditer les auteurs et vous pouvez le faire dans les commentaires de votre code. Avant d’utiliser les sons créés par d’autres musiciens et de partager votre propre musique, apprenez-en davantage sur le droit d’auteur !
 
 Le *droit d'auteur ou Copyright* est la partie de la loi qui couvre la *propriété intellectuelle* ou la propriété de l'œuvre créative, comme la musique. 
 
@@ -258,24 +257,42 @@ Les licences *Creative Commons* (ou CC) permettent aux créateur.rice.s de préc
 Pour désigner une licence Creative Commons, il vous suffit de sélectionner un type et de l'appliquer à votre travail. Lorsque vous partagez un script dans EarSketch, il vous sera demandé de choisir une licence pour votre chanson. 
 
 
-////
-END OF OPTIONAL
-////
-
-
 [[chapter2summary]]
 === Résumé du chapitre 2
 
+[role="curriculum-python"]
 * Le *tempo* est la vitesse à laquelle un morceau de musique est joué, exprimé en battements ou beats par minute (bpm). Le tempo est lié au genre musical.
 * Les clips de la bibliothèque de sons EarSketch sont regroupés dans des dossiers de sons apparentés. Pour connaître le tempo exact de l'extrait, survolez le nom du clip dans la bibliothèque de sons.
-* Vous pouvez charger vos propres clips audio dans EarSketch à travers la bibliothèque de sons. Cliquez simplement sur « Ajouter un son ».
-* Le *droit d’auteur* est une partie de la loi qui couvre la propriété d'une œuvre créative, comme la musique. C'est très important pour les musiciens, car cela définit comment l'œuvre d'une autre personne peut être utilisée et partagée.
-* Si vous créez une nouvelle œuvre musicale, vous disposez automatiquement d’un droit d’auteur. En d'autres termes, vous avez des droits sur le travail que vous avez créé.
-* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser. Parfois, certains droits sur une œuvre sont conservés avec les licences *Creative Commons*. EarSketch vous permet d'ajouter des licences Creative Commons à votre musique par le biais de la fenêtre de partage.
 * Les commentaires sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Elles sont cependant utiles pour créer des notes dans un script.
+* La fonction `from earsketch import *` permet d'ajouter l'API de EarSketch à votre projet. Elle doit être incluse au début de chaque script.
+* La fonction `init()` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
+* La fonction `setTempo()` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
+* La fonction `finish()` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
+* Vous pouvez charger vos propres clips audio dans EarSketch à travers la bibliothèque de sons. Cliquez simplement sur « Ajouter un son ».
 * Un *processus* est une tâche exécutée sur un ordinateur. Le traitement est effectué par le *CPU* d'un ordinateur, qui est responsable de l'exécution des instructions du programme.
 * La *mémoire* (mémoire de stockage primaire ou RAM) contient temporairement des instructions de traitement et de données afin que le CPU puisse les utiliser.
 * Le *stockage secondaire* fait référence à un stockage de données à long terme, souvent en grands volumes. Les données du stockage secondaire doivent être mises en mémoire avant que le CPU puisse y accéder.
+* Le *droit d’auteur* est une partie de la loi qui couvre la propriété d'une œuvre créative, comme la musique. C'est très important pour les musiciens, car cela définit comment l'œuvre d'une autre personne peut être utilisée et partagée.
+* Si vous créez une nouvelle œuvre musicale, vous disposez automatiquement d’un droit d’auteur. En d'autres termes, vous avez des droits sur le travail que vous avez créé.
+* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser. Parfois, certains droits sur une œuvre sont conservés avec les licences *Creative Commons*. EarSketch vous permet d'ajouter des licences Creative Commons à votre musique par le biais de la fenêtre de partage.
+
+
+[role="curriculum-javascript"]
+* Le *tempo* est la vitesse à laquelle un morceau de musique est joué, exprimé en battements ou beats par minute (bpm). Le tempo est lié au genre musical.
+* Les clips de la bibliothèque de sons EarSketch sont regroupés dans des dossiers de sons apparentés. Pour connaître le tempo exact de l'extrait, survolez le nom du clip dans la bibliothèque de sons.
+* Les commentaires sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Elles sont cependant utiles pour créer des notes dans un script.
+* La fonction `init()` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
+* La fonction `setTempo()` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
+* La fonction `finish()` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
+* Vous pouvez charger vos propres clips audio dans EarSketch à travers la bibliothèque de sons. Cliquez simplement sur « Ajouter un son ».
+* Un *processus* est une tâche exécutée sur un ordinateur. Le traitement est effectué par le *CPU* d'un ordinateur, qui est responsable de l'exécution des instructions du programme.
+* La *mémoire* (mémoire de stockage primaire ou RAM) contient temporairement des instructions de traitement et de données afin que le CPU puisse les utiliser.
+* Le *stockage secondaire* fait référence à un stockage de données à long terme, souvent en grands volumes. Les données du stockage secondaire doivent être mises en mémoire avant que le CPU puisse y accéder.
+* Le *droit d’auteur* est une partie de la loi qui couvre la propriété d'une œuvre créative, comme la musique. C'est très important pour les musiciens, car cela définit comment l'œuvre d'une autre personne peut être utilisée et partagée.
+* Si vous créez une nouvelle œuvre musicale, vous disposez automatiquement d’un droit d’auteur. En d'autres termes, vous avez des droits sur le travail que vous avez créé.
+* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser. Parfois, certains droits sur une œuvre sont conservés avec les licences *Creative Commons*. EarSketch vous permet d'ajouter des licences Creative Commons à votre musique par le biais de la fenêtre de partage.
+
+
 
 
 [[chapter-questions]]

@@ -134,10 +134,10 @@ Dans EarSketch, chaque script que vous écrivez correspond à une chanson. Voyon
 +
 Si vous avez déjà un ou plusieurs scripts(s) ouverts, cliquez sur l'icône blanche « + » à côté des onglets.
 +
-[[newscriptpluspng]]
+[[newscriptplus]]
 .Créer un nouveau script, ouvrir des scripts
 [caption="Figure 1.2.1: "]
-image::../media/U1P1/newScriptPlus.png[Alt Text]
+image::../media/U1P1/NewScriptPlus.png[Alt Text]
 
 ////
 TODO: update this screenshot to the current "+"
@@ -498,14 +498,9 @@ TODO: when options are ready, modify the link
 * Une *station de travail audionumérique ou DAW* est un logiciel informatique spécialisé pour l'enregistrement, l'édition et la lecture de fichiers audio numériques ou *clips*. EarSketch est un DAW qui permet de placer des clips audio sur une séquence temporelle avec du code. 
 * Pour créer de la musique dans EarSketch, le code doit d'abord être saisi dans le panneau de l'éditeur de code. Après avoir appuyé sur « Exécuter », la musique est visible dans le panneau du DAW.
 * Les clips de sons peuvent être trouvés dans la bibliothèque de sons. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule.
-* Les commentaires sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Elles sont cependant utiles pour créer des notes dans un script.
 * Un *programme* d'ordinateur est une séquence d'instructions que l'ordinateur exécute pour accomplir une tâche spécifique. 
 * Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Un langage de programmation suit une syntaxe spécifique afin d'organiser le code.
 * Un script EarSketch comprend une section de commentaires, une section de paramétrage, une section dédiée à la musique et une section de fin.
-* La fonction `from earsketch import *` permet d'ajouter l'API de EarSketch à votre projet. Elle doit être incluse au début de chaque script.
-* La fonction `init()` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `setTempo()` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `finish()` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + » si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. Elle comprend quatre arguments, soient les informations dont elle a besoin pour faire de la musique :
 ** *Nom de clip :* Le clip de son qui est placé dans le DAW.
@@ -513,7 +508,7 @@ TODO: when options are ready, modify the link
 ** *Mesure de début :* La mesure de départ du clip de son.
 ** *Mesure de fin :* La mesure de fin du clip de son.
 * Le *débogage* est le processus de recherche et de correction de *bogues* ou d'erreurs faites par le programmeur.
-* Les règles de syntaxe ** définissent comment le code doit être écrit dans un langage de programmation spécifique.
+* Les *règles de syntaxe* définissent comment le code doit être écrit dans un langage de programmation spécifique.
 * La *console* affiche des informations sur l'état d'un programme, ce qui la rend utile pour déboguer les erreurs de syntaxe. 
 * Parmi les erreurs habituelles, on retrouve les fautes de frappe, les erreurs de casse, les parenthèses manquantes, le paramétrage incorrect du script, etc.
 
@@ -526,9 +521,6 @@ TODO: when options are ready, modify the link
 * Un *programme* d'ordinateur est une séquence d'instructions que l'ordinateur exécute pour accomplir une tâche spécifique. 
 * Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Un langage de programmation suit une syntaxe spécifique pour organiser le code.
 * Un script EarSketch comprend une section de commentaires, une section de paramétrage, une section dédiée à la musique et une section de fin.
-* La fonction `init()` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `setTempo()` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `finish()` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + », si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. Elle comprend quatre arguments, soient les informations dont elle a besoin pour faire de la musique :
 ** *Nom du clip :* Le clip de son qui est placé dans le DAW.
@@ -536,7 +528,7 @@ TODO: when options are ready, modify the link
 ** *Mesure de début :* La mesure de départ du clip de son.
 ** *Mesure de fin :* La mesure de fin du clip de son.
 * Le *débogage* est le processus de recherche et de correction de *bogues* ou d'erreurs faites par le programmeur.
-* Les règles de syntaxe ** définissent comment le code doit être écrit dans un langage de programmation spécifique.
+* Les *règles de syntaxe* définissent comment le code doit être écrit dans un langage de programmation spécifique.
 * La *console* affiche des informations sur l'état d'un programme, ce qui la rend utile pour déboguer les erreurs de syntaxe. 
 * Parmi les erreurs habituelles, on retrouve les fautes de frappe, les erreurs de casse, les parenthèses manquantes, le paramétrage incorrect du script, etc.
 
