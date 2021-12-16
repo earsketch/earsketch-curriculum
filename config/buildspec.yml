@@ -38,7 +38,8 @@ phases:
                               fr/v2
                               es
                               en
-                              fr)
+                              fr
+                              iu)
         for locale_path in "${path_array[@]}"
         do
           echo "Converting curriculum to html with asciidoctor in directory " $locale_path
