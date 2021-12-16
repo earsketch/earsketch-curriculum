@@ -432,8 +432,8 @@ from earsketch import *
 init)
 setTempo(88)
 
-fitMdia(HIPHOP_DUSTYGROOVE_017, 1, 1 9)
-fitmedia(2,HIPHOP_DUSTYGROOVE_015,1,9)
+fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
+fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
 
 
 finish()
@@ -454,8 +454,8 @@ finish()
 init;
 setTempo(88);
 
-fitMdia(HIPHOP_DUSTYGROOVE_017, 1, 1 9);
-fitmedia(2,HIPHOP_DUSTYGROOVE_015,1,9);
+fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
+fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
 
 
 finish();
