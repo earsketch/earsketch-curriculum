@@ -231,13 +231,11 @@ END OF OPTIONAL
 ////
 
 [[copyright]]
-=== Copyright
+=== Use Copyright Wisely
 
 *Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
-////
-OPTIONAL
-////
+*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. 
 
 When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
 
@@ -257,24 +255,42 @@ Besides fair use, there is a way to use and share music openly. Copyright should
 To specify a Creative Commons license, all you have to do is choose a type and put it on your work. In EarSketch, when you share a script, you will be asked to specify a license for your song. 
 
 
-////
-END OF OPTIONAL
-////
-
 
 [[chapter2summary]]
 === Chapter 2 Summary
 
+[role="curriculum-python"]
 * *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
 * The clips in the EarSketch Sounds Library are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
-* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
-* *Copyright* is a portion of law that covers ownership of creative work, like music. It is important to musicians because it defines how another person's work can be used and shared.
-* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
 * Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
+* `from earsketch import *` adds the EarSketch API to your project. It must be included at the top of every script.
+* `init()` prepares the DAW to accept and display music. It must be present in every EarSketch script.
+* `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
+* `finish()` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
 * A *process* is a task running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
 * *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
 * *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative work, like music. It is important to musicians because it defines how another person's work can be used and shared.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+
+[role="curriculum-javascript"]
+* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
+* The clips in the EarSketch Sounds Library are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
+* Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
+* `init();` prepares the DAW to accept and display music. It must be present in every EarSketch script.
+* `setTempo();` lets you specify the tempo of your song. It must be included in every EarSketch script.
+* `finish();` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
+* A *process* is a task running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
+* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
+* *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative work, like music. It is important to musicians because it defines how another person's work can be used and shared.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+
+
 
 
 [[chapter-questions]]

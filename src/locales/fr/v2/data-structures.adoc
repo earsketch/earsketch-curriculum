@@ -126,10 +126,10 @@ finish();
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-We've seen that `list[index]` will call an element of the list. Ceci peut également être utilisé pour modifier un élément de la liste. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+Nous avons vu que  `list[index]` va invoquer un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` dans l'exemple précédent va modifier le premier élément de la liste en `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 [role="curriculum-javascript"]
-We've seen that `array[index]` will call an element of the array. Ceci peut également être utilisé pour modifier un élément du tableau. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+Nous avons vu que `array[index]` va invoquer un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` dans l'exemple précédent va modifier le premier élément du tableau en `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -306,31 +306,6 @@ Nous allons voir deux façons d'utiliser les structures de données avec la fonc
 2. Vous pouvez utiliser la fonction `len()` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `len(string)-1`.
 Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tableau ci-dessous.
 
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|Caractère
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
 
 [role="curriculum-javascript"]
 1. Tout comme les tableaux, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. For example `"Sarah"[3]` returns `a`.

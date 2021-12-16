@@ -231,11 +231,10 @@ video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
 END OF OPTIONAL
 ////
 
-Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música. Cuando usas _samples_ (breves fragmentos de música) o remezclas música que ya existe, tienes que dar crédito a los autores, y puedes hacerlo en los comentarios de tu código. Antes de usar sonidos de otros músicos y compartir tu propia música, ¡aprende más sobre los derechos de autor!
+[[copyright]]
+=== Los derechos de autor
 
-////
-OPTIONAL
-////
+Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música. Cuando usas _samples_ (breves fragmentos de música) o remezclas música que ya existe, tienes que dar crédito a los autores, y puedes hacerlo en los comentarios de tu código. Antes de usar sonidos de otros músicos y compartir tu propia música, ¡aprende más sobre los derechos de autor!
 
 Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música.
 
@@ -257,24 +256,41 @@ Las licencias *Creative Commons* (o CC) permiten que los creadores especifiquen 
 Para especificar cuál licencia de Creative Commons vas a emplear, lo único que tienes que hacer es elegir un tipo y ponerlo en tu trabajo. En EarSketch, cuando compartas un script, se te va a pedir que especifiques cuál tipo de licencia quieres para tu canción.
 
 
-////
-END OF OPTIONAL
-////
-
 
 [[chapter2summary]]
 === El resumen del capítulo 2
 
+[role="curriculum-python"]
 * El *tempo* es la velocidad en que se pone una pieza de música, expresada en pulsaciones por minuto (ppm). El tempo está vinculado al género.
 * Los clips en la Biblioteca de Sonidos de EarSketch se organizan en archivos por sonidos parecidos. Para ver cuál es el tempo exacto de un clip, mantén el cursor sobre su nombre en el Navegador de Sonidos.
-* Puedes cargar tus propios sonidos a EarSketch a través del Navegador de Sonidos. Sólo haz clic en "Añadir sonido".
-* Los *derechos de autor* son una porción de la ley que cubre la posesión del trabajo creativo, como la música. Es importante para los músicos porque define cómo se puede usar y compartir el trabajo de otra persona.
-* Si creas una pieza de música que es tangible y nueva, automáticamente recibes los derechos de autor. En otras palabras, tú tienes los derechos de la pieza que has creado.
-* *Licenciar* una pieza de música les da a otros permiso para usarla. A veces, ciertos derechos a una pieza se basan en licencias *Creative Commons*. EarSketch permite que se añadan licencias Creative Commons a tu música a través de la ventana de Compartir.
+* `from earsketch import *` añade el EarSketch API, una interfaz de programación de aplicaciones, a tu proyecto. Hay que incluirla en la parte superior de cada script.
+* `init()` prepara la EAD para que acepte y exhiba la música. Tiene que estar presente en cada script de EarSketch.
+* `setTempo()` permite que se especifique el tempo de tu canción. Se tiene que incluir en cada script de EarSketch.
+* `finish()` notifica a la EAD que tu código se ha terminado. Hay que incluirlo al final de cada script de EarSketch.
 * Los comentarios son líneas de código que la computadora no ejecuta. Sin embargo, son útiles si quieres hacer notas dentro de un script.
+* Puedes cargar tus propios sonidos a EarSketch a través del Navegador de Sonidos. Sólo haz clic en "Añadir sonido".
 * Un *proceso* es una tarea que se ejecuta en una computadora. El *CPU*, la parte responsable de ejecutar las instrucciones del programa, ejecuta el procesamiento.
 * La *memoria* (también conocida como RAM o almacenamiento primario) mantiene datos e instrucciones de procesamiento temporalmente para que el CPU los use.
 * El *almacenamiento secundario* se refiere al almacenamiento de datos a largo plazo, muchas veces cuando hay una alta cantidad. Los datos del almacenamiento secundario tienen que transferirse a la memoria antes de que el CPU pueda accederlos.
+* Los *derechos de autor* son una porción de la ley que cubre la posesión del trabajo creativo, como la música. Es importante para los músicos porque define cómo se puede usar y compartir el trabajo de otra persona.
+* Si creas una pieza de música que es tangible y nueva, automáticamente recibes los derechos de autor. En otras palabras, tú tienes los derechos de la pieza que has creado.
+* *Licenciar* una pieza de música les da a otros permiso para usarla. A veces, ciertos derechos a una pieza se basan en licencias *Creative Commons*. EarSketch permite que se añadan licencias Creative Commons a tu música a través de la ventana de Compartir.
+
+[role="curriculum-javascript"]
+* El *tempo* es la velocidad en que se pone una pieza de música, expresada en pulsaciones por minuto (ppm). El tempo está vinculado al género.
+* Los clips en la Biblioteca de Sonidos de EarSketch se organizan en archivos por sonidos parecidos. Para ver cuál es el tempo exacto de un clip, mantén el cursor sobre su nombre en el Navegador de Sonidos.
+* `init()` prepara la EAD para que acepte y exhiba la música. Tiene que estar presente en cada script de EarSketch.
+* `setTempo()` permite que se especifique el tempo de tu canción. Se tiene que incluir en cada script de EarSketch.
+* `finish()` notifica a la EAD que tu código termina. Hay que incluirlo al final de cada script de EarSketch.
+* Los comentarios son líneas de código que la computadora no ejecuta. Sin embargo, son útiles si quieres hacer notas dentro de un script.
+* Puedes cargar tus propios sonidos a EarSketch a través del Navegador de Sonidos. Sólo haz clic en "Añadir sonido".
+* Un *proceso* es una tarea que se ejecuta en una computadora. El *CPU*, la parte responsable de ejecutar las instrucciones del programa, ejecuta el procesamiento.
+* La *memoria* (también conocida como RAM o almacenamiento primario) mantiene datos e instrucciones de procesamiento temporalmente para que el CPU los use.
+* El *almacenamiento secundario* se refiere al almacenamiento de datos a largo plazo, muchas veces cuando hay una alta cantidad. Los datos del almacenamiento secundario tienen que transferirse a la memoria antes de que el CPU pueda accederlos.
+* Los *derechos de autor* son una porción de la ley que cubre la posesión del trabajo creativo, como la música. Es importante para los músicos porque define cómo se puede usar y compartir el trabajo de otra persona.
+* Si creas una pieza de música que es tangible y nueva, automáticamente recibes los derechos de autor. En otras palabras, tú tienes los derechos de la pieza que has creado.
+* *Licenciar* una pieza de música les da a otros permiso para usarla. A veces, ciertos derechos a una pieza se basan en licencias *Creative Commons*. EarSketch permite que se añadan licencias Creative Commons a tu música a través de la ventana de Compartir.
+
 
 
 [[chapter-questions]]
