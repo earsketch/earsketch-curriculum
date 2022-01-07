@@ -8,7 +8,10 @@ import sys
 
 englishDict = {
     "es": "Inglés",
-    "fr": "Anglaise"
+    "fr": "Anglaise",
+    "ar": "إنجليزي",
+    "he": "אנגלית",
+    "iu": "English"
 }
 
 if len(sys.argv) < 2:

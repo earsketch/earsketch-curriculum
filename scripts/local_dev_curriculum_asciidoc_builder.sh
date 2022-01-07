@@ -33,8 +33,10 @@ ES_HOST="http://localhost:8888"
 cd "$GIT_REPO" || exit 1
 
 ## array of paths to be processed
-declare -a locale_array=(es
-                      en
+declare -a locale_array=(en
+                      es
+                      ar
+                      he
                       fr
                       iu)
 
@@ -51,18 +53,20 @@ sudo asciidoctor \
 for locale_path in "${locale_array[@]}"
 do
   LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
+  sudo mkdir $LOCALE_STAGE_DIR
   for locale_subdir in "${locale_subdir_array[@]}"
   do
     echo "Converting curriculum to html with asciidoctor in directory " $locale_path/$locale_subdir
     locale_full_path=$ASCIIDOC_DIR/$locale_path/$locale_subdir
     echo "Curriculum full path " $locale_full_path
     LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
+    [ ! -d "$locale_full_path" ] && continue
     sudo asciidoctor \
       -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
       -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
     sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
   done
-
+  echo "about to copy toc template"
   # outer loop, this is a root locale directory. process the table of contents
   sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
   sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1

@@ -35,14 +35,14 @@ Voyez l'exemple ci-dessous :
 [role="curriculum-python"]
 [source,python]
 ----
-#   python code
-#   script_name: Volume Effect
+#   code python
+#   script_name : Effet de volume
 #
-#   author: The EarSketch Team
-#   description: Modifying the volume of 2 tracks
+#   auteur : L'équipe EarSketch
+#   description : Modification du volume de deux pistes
 #
 
-# Setup
+# Paramétrage
 from earsketch import *
 
 init()
@@ -52,15 +52,15 @@ setTempo(120)
 piano1 = COMMON_LOVE_THEME_PIANO_2
 percussions1 = HOUSE_BREAK_FILL_002
 
-# Placing the sounds:
+# Placement des sons :
 fitMedia(piano1,1,1,5)
 fitMedia(percussions1,2,3,5)
 
-# Mixing: increase the piano track and reduce the percussion track volumes
+# Mixage : augmentation du volume de la piste de piano et réduction du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
 
-#Finish
+#Fin
 finish()
 
 ----
@@ -68,18 +68,18 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Volume Effect
+// script_name : Effet de volume
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Modifying the volume of 2 tracks
+// description : Modification du volume de deux pistes
 //
 //
 //
 
-//Setup
+//Paramétrage
 init()
 setTempo(120)
 
@@ -87,16 +87,16 @@ setTempo(120)
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percussions1 = HOUSE_BREAK_FILL_002;
 
-// Placing the sounds
+// Placement des sons
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
 
-// Mixing: increase the piano track and reduce the percussion track volumes
+// Mixage : augmentation du volume de la piste du piano et baisse du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2);
 setEffect(2, VOLUME, GAIN, -15);
 
-//Finish
+//Fin
 finish()
 ----
 
@@ -116,35 +116,35 @@ Dans ce cas, le nom de l'effet (2ᵉ argument) est `DELAY` et le paramètre de l
 
 .ENTRAÎNEZ-VOUS
 ****
-. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#,effects>>
+. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#, effects>>
 . Exécutez ensuite le code ci-dessous et écoutez la musique sans les effets.
 . Puis, décommentez (« décommenter » signifie supprimer la syntaxe du commentaire, `#` ou <0>//</0> dans un bloc de code) la première ligne <0>setEffect()</0> et observez la différence.
-. Then uncomment the second `setEffect()` line and listen to the difference ("uncomment" means to erase the comment syntax, `#` or `//` from a block of code)
-Note that the delay time, 500ms, is the length of one beat. Comme le tempo correspond à 120 battements par minute, il y a un battement tous les 60/120 = 1/2 seconde. 1 seconde correspond à 1000 ms, donc 1/2 seconde correspond à 1000/2 = 500 ms.
+. Puis, décommentez la deuxième ligne `setEffect()` et écoutez la différence. 
+Notez que le délai, soit 500 ms, correspond à la longueur d'un beat. Comme le tempo correspond à 120 battements par minute, il y a un battement tous les 60/120 = 1/2 seconde. 1 seconde correspond à 1000 ms, donc 1/2 seconde correspond à 1000/2 = 500 ms.
 Vous pouvez essayer de modifier le délai et d'évaluer si votre musique sonne mieux ou pas.
 ****
 
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Delay Effect
+# script_name : Effet de délai
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Adding delay to a track
+# description : Ajout d'un délai à une piste
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 
 init()
 setTempo(120)
 
-#Music
+#Musique
 lead1 = EIGHT_BIT_ATARI_SYNTH_001
 lead2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -163,34 +163,34 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(drums1, 3, 3, 5)
 fitMedia(drums2, 3, 5, 9)
 
-#Effects
+#Effets
 
-#setEffect(1, DELAY, DELAY_TIME, 500) #Adds a delay (echo) effect at intervals of 500ms.
+#setEffect(1, DELAY, DELAY_TIME, 500) #Ajout d'un effet de délai (écho) à des intervalles de 500 ms.
 #setEffect(1, DELAY, DELAY_FEEDBACK, -20.0) #Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0).
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Delay Effect
+// script_name : Effet de délai
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Adding delay to a track
+// description : Ajout d'un délai à une piste
 //
 //
 //
 
-//Setup
+//Paramétrage
 init()
 setTempo(120)
 
-//Music
+//Musique
 var lead1 = EIGHT_BIT_ATARI_SYNTH_001;
 var lead2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
@@ -207,12 +207,12 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(drums1, 3, 3, 5);
 fitMedia(drums2, 3, 5, 9);
 
-//Effects
+//Effets
 
-//setEffect(1, DELAY, DELAY_TIME, 500); // Adds a delay (echo) effect at intervals of 500ms
-//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Lowers the relative amount of repeats (default is -3.0)
+//setEffect(1, DELAY, DELAY_TIME, 500); // Ajout d'un effet de délai (écho) à des intervalles de 500 ms
+//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0)
 
-//Finish
+//Fin
 finish()
 ----
 
@@ -260,7 +260,7 @@ Effet de réverbération :
 
 .ENTRAÎNEZ-VOUS
 ****
-Go to this chapter for a complete list of effects: <</en/v1/every-effect-explained-in-detail#,effects>>.
+Go to this chapter for a complete list of effects: <</en/v1/every-effect-explained-in-detail#, effects>>.
 Créez une chanson avec un effet de volume et deux autres effets. N'oubliez pas d'inscrire ce que vous souhaitez faire dans les commentaires et de créer des variables si nécessaire.
 ****
 
@@ -296,59 +296,59 @@ Voici un exemple de fondu d'ouverture :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Envelopes
+# script_name : Enveloppes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Making envelopes with 7-parameter setEffect()
+# description : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB.
-# This is a fade in
+# Établissement d'une rampe d'effet entre les mesures 1 et 3, allant de -60 dB à 0 dB.
+# Ceci est un fondu d'ouverture
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Envelopes
+// script_name : Enveloppes
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Making envelopes with 7-parameter setEffect()
+// description : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
-// Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB.
-// This is a fade in
+// Établissement d'une rampe d'effet entre les mesures 1 et 3, allant de -60 dB à 0 dB.
+# Ceci est un fondu d'ouverture
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
 
-//Finish
+#Fin
 finish();
 ----
 
@@ -362,26 +362,26 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Complex Envelopes
+# script_name: Enveloppes complexes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Using multiple setEffect() calls on a track to make changes in the effect envelope
+# description : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Envelope time points (in measures)
+# Points de temps de l'enveloppe (en mesure)
 pointA = 1
 pointB = 4
 pointC = 6.5
@@ -389,14 +389,14 @@ pointD = 7
 pointE = 8.5
 pointF = 9
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB) # First effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB) # Premier effet, modulation de filtre
 
-# Second effect, volume changes
+# Deuxième effet, changement de volume
 setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC)  # Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # Begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF) # End of fade out
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # Commencement du fondu de fermeture
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF) # Fin du fondu de fermeture
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -407,25 +407,25 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Complex Envelopes
+// script_name : Enveloppes complexes
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Using multiple setEffect() calls on a track to make changes in the effect envelope
+// description : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
-// Envelope time points (in measures)
+// Points de temps de l'enveloppe (en mesures)
 var pointA = 1;
 var pointB = 4;
 var pointC = 6.5;
@@ -433,14 +433,14 @@ var pointD = 7;
 var pointE = 8.5;
 var pointF = 9;
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // First effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Premier effet, modulation de filtre
 
-// Second effect, volume changes
+// Deuxième effet, changements de volume
 setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC);  // Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE);  // Begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // End of fade out
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE);  // Commencement du fondu de fermeture
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Fin du fondu de fermeture
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -456,52 +456,52 @@ Voyez l'exemple ci-dessous. Chaque itération de la boucle ajoute un segment (du
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Rhythmic Ramps
+# script_name : Rampes rythmiques
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Automating effects with a for-loop
+# description : Automatisation des effets avec une boucle « for »
 #
 #
 #
 
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-# Music
+# Musique
 fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
 for measure in range(1, 9):
   setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
 
-# Finish
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Rhythmic Ramps
+// script_name : Rampes rythmiques
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Automating effects with a for-loop
+// description : Automatisation des effets avec une boucle  « for »
 //
 //
 //
 
-// Setup
+// Paramétrage
 init()
 setTempo(120)
 
-// Music
+// Musique
 fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
@@ -509,7 +509,7 @@ for (var measure = 1; measure < 9; measure++) {
   setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
 }
 
-// Finish
+// Fin
 finish()
 ----
 
@@ -518,18 +518,18 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Fade in and fade out
+# script_name : Fondus d'ouverture et de fermeture
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Looping on all tracks to add a fade in and fade out
+# description : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 #
 #
 #
 
-# Setup
+# Paramétrage
 from earsketch import*
 init()
 setTempo(100)
@@ -542,39 +542,39 @@ hihat = OS_OPENHAT03
 kickBeat = '0-------0-0-0---'
 hihatBeat = '---0---0--00----'
 
-# Placing melodies on track 1
+# Placement de mélodies sur la piste 1
 fitMedia(melody1, 1, 1, 5)
 fitMedia(melody2, 1, 5, 9)
 
-# Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
+# Placement de beats sur la piste 2 (grosse caisse) et sur piste 3 (charleston) grâce à une boucle for sur les mesures
 for measure in range(1,9):
   makeBeat(kick,2,measure,kickBeat)
   makeBeat(hihat,3,measure,hihatBeat)
 
-# Adding the fade in and fade out on tracks 1 through 3
+# Ajout d'un fondu d'ouverture et d'un fondu de fermeture sur les pistes 1 à 3
 for track in range(1,4):
   setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
   setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
 
-# Finish
+# Fin
 finish()
 
 ----
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Fade in and fade out
+// script_name : Fondu d'ouverture et fondu de fermeture
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Looping on all tracks to add a fade in and fade out
+// description : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 //
 //
 //
 
-// Setup
+// Paramétrage
 init()
 setTempo(100)
 
@@ -586,23 +586,23 @@ var hihat = OS_OPENHAT03;
 var kickBeat = '0-------0-0-0---';
 var hihatBeat = '---0---0--00----';
 
-// Placing melodies on track 1
+// Ajout de mélodies sur la piste 1
 fitMedia(melody1, 1, 1, 5);
 fitMedia(melody2, 1, 5, 9);
 
-// Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
+// Placement de beats sur la piste 2 (grosse caisse) et sur la piste 3 (charleston) grâce à une boucle « for » sur les mesures
 for (var measure = 1; measure<9; measure++){
   makeBeat(kick,2,measure,kickBeat);
   makeBeat(hihat,3,measure,hihatBeat);
 }
 
-// Adding the fade in and fade out on tracks 1 through 3
+// Ajout d'un fondu d'ouverture et d'un fondu de fermeture sur les pistes 1 à 3
 for (var track = 1; track < 4; track++) {
   setEffect(track, VOLUME, GAIN, -60, 1, 0, 3);
   setEffect(track, VOLUME, GAIN, 0,7,-60,9);
 }
 
-// Finish
+// Fin
 finish()
 ----
 
@@ -618,7 +618,7 @@ finish()
 ** *Paramètre de l'effet* : Le paramètre utilisé pour l'effet.
 ** *Valeur de l'effet* : La valeur du paramètre, un nombre dans une plage spécifique.
 * Les *fonctions* contiennent des instructions que l'ordinateur exécute. Les données sont envoyées aux fonctions par les *arguments*, qui affectent la façon dont la fonction s'exécute. Par exemple, la syntaxe d'un *appel* de fonction à deux arguments est `myFunction(argument1, argument2)` et pour un *appel* de fontion à quatre arguments on a `makeBeat(kick, 2, measure, kickBeat)`.
-* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
+* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#, effects>>, along with descriptions for each.
 * Les *enveloppes* nous permettent de définir comment un paramètre d'effet change au fil du temps. Elles sont décrites avec des paires de valeur-temps, comme _(valeur, temps, valeur, temps)_.
 * Pour une enveloppe, les arguments de la fonction `setEffect()` à sept paramètres sont : `setEffect(Numéro de piste, Nom de l'effet, Paramètre de l'effet, Valeur de départ, Mesure de départ, Valeur de fin, Mesure de fin)`.
 
