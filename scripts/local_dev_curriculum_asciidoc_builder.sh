@@ -71,7 +71,6 @@ do
   sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
   sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
   sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
-
 done
 
 echo "Moving media files and resources to curriculum-local directory"
