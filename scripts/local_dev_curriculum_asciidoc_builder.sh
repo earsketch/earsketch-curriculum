@@ -33,32 +33,41 @@ ES_HOST="http://localhost:8888"
 cd "$GIT_REPO" || exit 1
 
 ## array of paths to be processed
-declare -a path_array=(en/v1
-                      en/v2
-                      es/v1
-                      es/v2
-                      fr/v1
-                      fr/v2
-                      es
+declare -a locale_array=(es
                       en
                       fr
                       iu)
 
-for locale_path in "${path_array[@]}"
-do
-  echo "Converting curriculum to html with asciidoctor in directory " $locale_path
-  locale_full_path=$ASCIIDOC_DIR/$locale_path
-  echo "Curriculum full path " $locale_full_path
-  LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
-  sudo asciidoctor \
+declare -a locale_subdir_array=(v1
+                              v2)
+
+# render the table of contents template first
+TOC_TEMPLATE=$ASCIIDOC_DIR/toc_template.adoc
+TOC_TEMPLATE_HTML=$LOCAL_STAGING_DIR/toc_template.html
+sudo asciidoctor \
     -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
-    -D "$LOCALE_STAGE_DIR" "$locale_full_path/*.adoc" || exit 1
-  sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_DIR" "$ES_HOST" || exit 1
-  if [[ ${locale_path} != *"/"* ]];then
-    # this is a root locale directory. process the table of contents
-    sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
-    sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
-  fi
+    -D "$LOCAL_STAGING_DIR" "$TOC_TEMPLATE" || exit 1
+
+for locale_path in "${locale_array[@]}"
+do
+  LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
+  for locale_subdir in "${locale_subdir_array[@]}"
+  do
+    echo "Converting curriculum to html with asciidoctor in directory " $locale_path/$locale_subdir
+    locale_full_path=$ASCIIDOC_DIR/$locale_path/$locale_subdir
+    echo "Curriculum full path " $locale_full_path
+    LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
+    sudo asciidoctor \
+      -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+      -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
+    sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
+  done
+
+  # outer loop, this is a root locale directory. process the table of contents
+  sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
+  sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+  sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+
 done
 
 echo "Moving media files and resources to curriculum-local directory"

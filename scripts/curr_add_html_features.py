@@ -18,7 +18,7 @@ video_caption_dir = source_dir+'/videoMedia/NewCaptions/'
 caption_files = [cap_name[:-4] for cap_name in os.listdir(video_caption_dir)]
 
 # chapters = [ch for ch in os.listdir(curr_dir) if 'ch_' in ch]
-chapters = [ch for ch in os.listdir(curr_dir) if '.html' in ch and ch != 'toc.html']
+chapters = [ch for ch in os.listdir(curr_dir) if '.html' in ch and ch != 'toc.html' and ch != 'toc_template.html']
 
 print("Processing html files...")
 n_processed = 0
