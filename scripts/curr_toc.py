@@ -6,6 +6,11 @@ import json
 from bs4 import BeautifulSoup
 import sys
 
+englishDict = {
+    "es": "Inglés",
+    "fr": "Anglaise"
+}
+
 if len(sys.argv) < 2:
     print("Error, no arguments given")
     print("Usage: curr_toc.py <CURRICULUM_STAGE_DIR>")
@@ -28,13 +33,29 @@ def get_curriculum_locale(href):
     else:
         return 'en'  # default to english if the localized file does not exist
 
-
-for el in parser.find_all('a'):
-    el['href'] = el['href'].replace('{{EARSKETCH_LOCALE_CODE}}', get_curriculum_locale(el['href']))
-    link_html = codecs.open(curr_dir+'../'+el['href'], 'r').read()
+current_unit = parser.h2 # grab the first h2 to populate
+num_chapters = 0
+num_chapters_localized = 0
+first_iteration = True
+for h in parser.find_all(['h2', 'h3']):
+    curriculum_locale = get_curriculum_locale(h.a['href'])
+    h.a['href'] = h.a['href'].replace('{{EARSKETCH_LOCALE_CODE}}', curriculum_locale)
+    link_html = codecs.open(curr_dir+'../'+h.a['href'], 'r').read()
     link_content = BeautifulSoup(link_html, 'html.parser')
-    el.string = link_content.h2.string
-
+    h.a.string = link_content.h2.string
+    if h.name == 'h2' and not first_iteration:
+        # h2 starts a new unit section in TOC
+        # append English designation to previous unit if all of its chapters were in english
+        if num_chapters_localized == 0 and num_chapters > 0:
+            current_unit.a.string = current_unit.a.string + " (" + englishDict[current_locale] + ")"
+        current_unit = h
+        num_chapters, num_chapters_localized = 0, 0
+    elif h.name == 'h3':
+        # h3 are child chapters of an h2 unit in TOC, but not actual DOM children
+        num_chapters += 1
+        if current_locale == curriculum_locale:
+            num_chapters_localized += 1
+    first_iteration = False
 
 wf = open(curr_dir + '/toc.html', 'wb')
 wf.write(parser.encode_contents())
