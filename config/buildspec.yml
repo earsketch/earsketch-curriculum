@@ -45,28 +45,28 @@ phases:
         sudo asciidoctor \
         -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
         -D "$LOCAL_STAGING_DIR" "$TOC_TEMPLATE" || exit 1
-        for locale_path in "${locale_array[@]}"
-        do
-          LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
-          sudo mkdir $LOCALE_STAGE_DIR
-          for locale_subdir in "${locale_subdir_array[@]}"
-          do
-            echo "Converting curriculum to html with asciidoctor in directory " $locale_path/$locale_subdir
-            locale_full_path=$ASCIIDOC_DIR/$locale_path/$locale_subdir
-            echo "Curriculum full path " $locale_full_path
-            LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
-            [ ! -d "$locale_full_path" ] && continue
-            sudo asciidoctor \
-            -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
-            -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
-            sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
-          done
-          echo "about to copy toc template"
-          # outer loop, this is a root locale directory. process the table of contents
-          sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
-          sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
-          sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
-        done
+#        for locale_path in "${locale_array[@]}"
+#        do
+#          LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
+#          sudo mkdir $LOCALE_STAGE_DIR
+#          for locale_subdir in "${locale_subdir_array[@]}"
+#          do
+#            echo "Converting curriculum to html with asciidoctor in directory " $locale_path/$locale_subdir
+#            locale_full_path=$ASCIIDOC_DIR/$locale_path/$locale_subdir
+#            echo "Curriculum full path " $locale_full_path
+#            LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
+#            [ ! -d "$locale_full_path" ] && continue
+#            sudo asciidoctor \
+#            -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+#            -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
+#            sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
+#          done
+#          echo "about to copy toc template"
+#          # outer loop, this is a root locale directory. process the table of contents
+#          sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
+#          sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+#          sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+#        done
       - echo "Completed curriculum build"
       - cd "$SRC_DIR"
       - echo "Copying curriculum files to local distribution folder..."
