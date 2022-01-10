@@ -20,9 +20,9 @@ else
     exit 1
 fi
 if [ ! -d "$2" ]; then
-    SCRIPT_HOME=$GIT_REPO/scripts
+    ES_SCRIPT_HOME=$GIT_REPO/scripts
 else
-    SCRIPT_HOME="$2"
+    ES_SCRIPT_HOME="$2"
 fi
 
 SRC_DIR=$GIT_REPO/src
@@ -46,14 +46,14 @@ declare -a locale_subdir_array=(v1
 # render the table of contents template first
 TOC_TEMPLATE=$ASCIIDOC_DIR/toc_template.adoc
 TOC_TEMPLATE_HTML=$LOCAL_STAGING_DIR/toc_template.html
-sudo asciidoctor \
-    -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+asciidoctor \
+    -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
     -D "$LOCAL_STAGING_DIR" "$TOC_TEMPLATE" || exit 1
 
 for locale_path in "${locale_array[@]}"
 do
   LOCALE_STAGE_DIR=$LOCAL_STAGING_DIR/$locale_path/
-  sudo mkdir $LOCALE_STAGE_DIR
+  mkdir $LOCALE_STAGE_DIR
   for locale_subdir in "${locale_subdir_array[@]}"
   do
     echo "Converting curriculum to html with asciidoctor in directory " $locale_path/$locale_subdir
@@ -61,27 +61,21 @@ do
     echo "Curriculum full path " $locale_full_path
     LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
     [ ! -d "$locale_full_path" ] && continue
-    sudo asciidoctor \
-      -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+    asciidoctor \
+      -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
       -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
-    sudo python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
+    python3 "$ES_SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
   done
   echo "about to copy toc template"
   # outer loop, this is a root locale directory. process the table of contents
-  sudo cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
-  sudo python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
-  sudo python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+  cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
+  python3 "$ES_SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+  python3 "$ES_SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
 done
 
 echo "Moving media files and resources to curriculum-local directory"
 cd "$SRC_DIR" || exit 1
-sudo cp -r audioMedia curriculum videoMedia theme "$LOCAL_STAGING_DIR"
+cp -r audioMedia curriculum videoMedia theme "$LOCAL_STAGING_DIR"
 cd "$GIT_REPO" || exit 1
-echo
-# echo "Moving JSON files from staging area to webclient..."
-# cd "$GIT_REPO" || exit 1
-# sudo mv -v curriculum-asciidoc/curr_toc.js webclient/scripts/src/data
-# sudo mv -v curriculum-asciidoc/curr_pages.js webclient/scripts/src/data
-# sudo mv -v curriculum-asciidoc/curr_searchdoc.js webclient/scripts/src/data
 
 echo "Completed currciulum build"
