@@ -11,7 +11,7 @@
 *Message de la console :* ImportError : Impossible de trouver ou d'importer les modules appropriés.
 
 [role="curriculum-python"]
-*Description:* An import error occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. Cela peut être dû à une erreur d'orthographe ou au fait que le module à importer n'existe pas.
+*Description :* Une erreur de type « Import Error » se produit lorsqu'un programme ne parvient pas à charger le module indiqué dans une instruction `from...import`, comme `from module import *`. Cela peut être dû à une erreur d'orthographe ou au fait que le module à importer n'existe pas.
 
 [role="curriculum-python"]
 *Exemple :* Bien que l'extrait de code ci-dessous indique le mot « EarSketch » dans son style habituel, les modules Python doivent être indiqués en minuscules.
@@ -36,10 +36,10 @@ from earsketch import *
 ----
 
 [role="curriculum-python"]
-*Solution:* Check your `from...import` statements at the top of your script for typos and letter case.
+*Solution :* Vérifiez que les instructions `from...import` dans la section supérieure de votre script ne comportent pas de fautes de frappe ni d'erreurs de casse.
 
 [role="curriculum-javascript"]
-Les erreurs de type « Import Error » ne se produisent pas en JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+Les erreurs de type « Import Error » ne se produisent pas en JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
 
 [[indentationerror]]
 === Indentation Error
@@ -63,9 +63,10 @@ Can't turn off pasting without this appearing in JS mode
 [source,python]
 ----
 for measure in range(1, 9, 2):
-    fitMedia(melody, 1, measure, measure + 2)
-    makeBeat(kick, 2, measure, beatString)
+  fitMedia(melody, 1, measure, measure + 2)
+  makeBeat(kick, 2, measure, beatString)
   makeBeat(kick, 2, measure + 1, beatString)
+
 fitMedia(beat, 3, 3, 9)
 ----
 
@@ -87,7 +88,7 @@ fitMedia(beat, 3, 3, 9)
 *Solution :* Essayez de supprimer toutes les tabulations devant le code dans le corps pour que chaque ligne soit contre le côté gauche de l'éditeur de code. Indentez ensuite chaque ligne du corps à la fois, en veillant à ce que le niveau d'indentation soit constant.
 
 [role="curriculum-javascript"]
-Les erreurs relatives à l'indentation ne se produisent pas en JavaScript, bien qu'il soit recommandé de toujours utiliser l'indentation correcte pour une lisibilité optimale. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+Les erreurs relatives à l'indentation ne se produisent pas en JavaScript, bien qu'il soit recommandé de toujours utiliser l'indentation correcte pour une lisibilité optimale. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
 
 [[indexerror]]
 === Index Error
@@ -102,7 +103,7 @@ Les erreurs relatives à l'indentation ne se produisent pas en JavaScript, bien 
 *Description :* Une erreur de type « Index Error » est renvoyée lors de la tentative d'accès à un index qui est hors de plage ou qui n'existe pas dans une liste ou une chaîne de caractères.
 
 [role="curriculum-javascript"]
-*Description :* Une erreur de type « Index Error » est renvoyée lors de la tentative d'accès à un index qui est hors de plage ou qui n'existe pas dans un tableau ou une chaîne de caractères. Elle est renvoyée comme erreur de type « Type Error » en JavaScript. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
+*Description :* Une erreur de type « Index Error » est renvoyée lors de la tentative d'accès à un index qui est hors de plage ou qui n'existe pas dans un tableau ou une chaîne de caractères. Elle est renvoyée comme erreur de type « Type Error » en JavaScript. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror, type errors>>.
 
 [role="curriculum-python"]
 *Exemple :* Dans le code suivant, nous allons tenter de créer une structure additive à l'aide de clips à partir d'une liste.
@@ -426,7 +427,7 @@ finish()
 *Solution :* Consultez la console pour savoir où se trouve la ligne fautive. Assurez-vous que toutes les définitions de fonctions, les appels de fonctions et les autres expressions possèdent des parenthèses d'ouverture et de fermeture. Vérifiez s'il y a des signes de ponctuation manquants ou en trop à d'autres endroits de votre script. De plus, vérifiez s'il manque des définitions de fonctions et des arguments. Enfin, vérifiez l'orthographe des arguments que vous passez aux fonctions.
 
 [role="curriculum-javascript"]
-Parse errors are interpreted broadly as syntax errors in JavaScript, which is covered <<every-error-explained-in-detail#syntaxerror,next>>.
+Parse errors are interpreted broadly as syntax errors in JavaScript, which is covered <<every-error-explained-in-detail#syntaxerror, next>>.
 
 [[syntaxerror]]
 === Syntax Error

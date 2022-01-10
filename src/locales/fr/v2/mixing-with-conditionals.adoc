@@ -13,59 +13,59 @@ Nous allons maintenant voir comment détecter l'intensité sonore ou le volume d
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: the analyzeTrack() function
+# script_name : La fonction analyzeTrack()
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: using the analyzeTrack() function to print the loudness of a track
+# description : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
 #
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(120)
- 
-# Placing a sound on track 1
+
+# Placement d'un son sur la piste 1
 sound = COMMON_LOVE_VOX_COMMON_1
 fitMedia(sound,1,1,9)
- 
-# Creating a variable to store the loudness of track 1
+
+# Création d'une variable pour stocker l'intensité sonore de la piste 1
 loudness1 = analyzeTrack(1,RMS_AMPLITUDE)
- 
-# Showing the loudness in the console
+
+# Affichage de l'intensité sonore dans la console
 print(loudness1)
- 
-# Finish
+
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: the analyzeTrack() function
+// script_name : La fonction analyzeTrack()
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: using the analyzeTrack() function to print the loudness of a track
+// description : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
 //
-// Setup
+// Paramétrage
 init();
 setTempo(120);
- 
-// Placing a sound on track 1
+
+// Placement d'un son sur une piste
 sound = COMMON_LOVE_VOX_COMMON_1;
 fitMedia(sound,1,1,9);
- 
-// Creating a variable to store the loudness of track 1
+
+// Création d'une variable pour stocker l'intensité sonore de la piste 1
 loudness1 = analyzeTrack(1,RMS_AMPLITUDE);
- 
-// Showing the loudness in the console
+
+// Affichage de l'intensité sonore dans la console
 println(loudness1);
- 
-// Finish
+
+// Fin
 finish();
 ----
 
@@ -76,9 +76,9 @@ Vous pouvez lire dans votre console que l'intensité sonore affichée est de 0.0
 * Parfois, vous verrez un nombre comme ceci : 1.74630733714e-05. C'est ce qu'on appelle la notation scientifique. Vous voyez le e-05 à la fin ? Cela signifie écrire cinq zéros avant le nombre 17... Ceci correspond à 0,0000174630733714. 
 * La plupart des sons auront une intensité sonore inférieure à 0.4. 
 
-The `analyzeTrack()` function takes 2 arguments:
-* the track number,
-* the parameter we want to analyze. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
+La fonction `analyzeTrack()` prend 2 arguments :
+* le numéro de piste,
+* le paramètre que nous voulons analyser. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -107,15 +107,15 @@ Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 =
 |==
 | est identique à
 |!=
-|n'est pas identique à
+| n'est pas identique à
 |>
-|est supérieur à
+| est supérieur à
 |>=
-|est supérieur ou égal à
+| est supérieur ou égal à
 |<
-|est inférieur à
+| est inférieur à
 |\<=
-|est inférieur ou égal à
+| est inférieur ou égal à
 |===
 --
 
@@ -127,21 +127,21 @@ Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 =
 | ==
 | est identique à
 |!=
-|n'est pas identique à
+| n'est pas identique à
 |>
-|supérieur à
+| supérieur à
 |>=
-|supérieur ou égal à
+| supérieur ou égal à
 |<
-|inférieur à
+| inférieur à
 |\<=
-|inférieur ou égal à
+| inférieur ou égal à
 |===
 --
 
-Notez la différence entre :
-1. Comparer deux valeurs pour vérifier si elles sont identiques avec `==`
-2. Affecter une valeur à une variable grâce à `=`
+Note the difference between:
+1. Comparing two values to see if they are identical: `==`
+2. l'affectation d'une valeur à une variable `=`
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -177,84 +177,84 @@ Voici un exemple :
 [role="curriculum-python"]
 [source, python]
 ----
-#        python code
-#        script_name: Boolean Example
+#        code python
+#        script_name : Exemple de booléen
 #
-#        author: The EarSketch Team
-#        description: We analyze the loudness of our tracks
+#        auteur : L'équipe EarSketch
+#        description : Analyse de l'intensité sonore de pistes.
 #
 
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-# Creating 2 tracks
+# Création de deux pistes
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
 fitMedia(melody1,1,1,9)
 fitMedia(melody2,2,1,9)
 
-# Evaluating the loudness of the tracks
+# Évaluation de l'intensité sonore des pistes
 loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
 
-# Checking if track 1 is louder than track 2
-# We create the boolean comparison1
+# Vérification si la piste 1 est plus forte que la piste 2
+# Nous créons la comparaison booléenne 1
 comparison1 = (loudnessTrack1 > loudnessTrack2)
-print('Is Track 1 louder than track 2?')
+print('La piste 1 est-elle plus forte que la piste 2 ?')
 print(comparison1)
 
-# Creating a for loop to compare each track's loudness to 0.5
+# Création d'une boucle pour comparer l'intensité sonore de chaque piste à la valeur 0.5
 for track in range(1,3) :
   loudness = analyzeTrack(track,RMS_AMPLITUDE)
-  print('Is track number ' + str(track) + ' greater than 0.01?')
+  print('Est-ce que l'intensité sonore de la piste ' + str(track) + ' est plus élevée que 0.01 ?')
   print(loudness > 0.01)
 
-# Finish
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Simple Boolean Example
+// script_name : Exemple de booléen simple
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: We analyze the loudness of our tracks
+// description : Analyse de l'intensité sonore de pistes
 //
 //
-// Setup
+// Paramétrage
 init();
 setTempo(120);
 
-// Creating 2 tracks
+// Création de deux pistes
 var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
 var melody2 = RD_UK_HOUSE__5THCHORD_1;
 fitMedia(melody1,1,1,9);
 fitMedia(melody2,2,1,9);
 
-// Evaluating the loudness of the tracks
+// Évaluation de l'intensité sonore des pistes
 var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
 var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
 
-// Checking if track 1 is louder than track 2
-// We create the boolean comparison1
+// Vérification si la piste 1 est plus forte que la piste 2
+// Nous créons la comparaison booléenne 1
 var comparison1 = (loudnessTrack1 > loudnessTrack2);
-println('Is Track 1 louder than track 2?');
+println('La piste 1 est-elle plus forte que la piste 2 ?');
 println(comparison1);
 
-// Creating a for loop to compare each track's loudness to 0.5
+// Création d'une boucle for pour comparer l'intensité sonore de chaque piste à la valeur 0.5
 for (var track = 1; track < 3; track++) {
   var loudness = analyzeTrack(track,RMS_AMPLITUDE);
-  println ('Is track number ' + track + ' greater than 0.01?');
+  println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
   println (loudness > 0.01);
 }
 
-//Finish
+//Fin
 finish();
 
 ----
@@ -276,17 +276,16 @@ Voyez ci-dessous un exemple d'instruction conditionnelle. Notez la similitude av
 [source, python]
 ----
 if (condition):
-    # Here write the instructions the computer needs to execute if the condition evaluates to True
-    # Note that the instructions are indented, just like in for loops
+    # Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est True (vraie)
+    # Notez que les instructions sont indentées, tout comme pour les boucles
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
 if (condition){
-    // Here write the instructions the computer needs to execute if the condition evaluates to true
-    // Note that the instructions are indented, just like in for loops
-}
+    // Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est true (vraie)
+    // Notez que les instructions sont indentées, comme pour les boucles
 ----
 
 .ENTRAÎNEZ-VOUS
@@ -300,68 +299,68 @@ Voici un exemple :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Remixing 1
+# script_name : Remixage 1
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: If track 1 is louder than track 2, we'll reduce its volume
+# description : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 #
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-# Creating 2 tracks
+# Création de deux pistes
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
 fitMedia(melody1,1,1,9)
 fitMedia(melody2,2,1,9)
 
-# Evaluating the loudness of the tracks
+# Évaluation de l'intensité sonore des pistes
 loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
 
-# If track 1 is louder than track 2, we reduce its volume
+# Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
 if (loudnessTrack1 > loudnessTrack2):
 	setEffect(1,VOLUME,GAIN,-10)
 
-# Finish
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Remixing 1
+// script_name : Remixage 1
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: If track 1 is louder than track 2, we'll reduce its volume
+// description : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 
-// Setup
+// Paramétrage
 init();
 setTempo(120);
 
-// Creating 2 tracks
+// Création de deux pistes
 var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
 var melody2 = RD_UK_HOUSE__5THCHORD_1;
 fitMedia(melody1,1,1,9);
 fitMedia(melody2,2,1,9);
 
-// Evaluating the loudness of the tracks
+// Évaluation de l'intensité sonore des pistes
 var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
 var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
 
-// If track 1 is louder than track 2, we reduce its volume
+// Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 if (loudnessTrack1 > loudnessTrack2){
 	setEffect(1,VOLUME,GAIN,-10);
 }
 
-//Finish
+//Fin
 finish();
 ----
 Il est possible de vérifier plusieurs conditions et d'exécuter des instructions différente selon chaque condition. Vous pouvez ajouter autant de conditions que vous le souhaitez. Nous utiliserons la syntaxe suivante :
@@ -370,27 +369,27 @@ Il est possible de vérifier plusieurs conditions et d'exécuter des instruction
 [source, python]
 ----
 if (condition1):
-    # Here write the instructions the computer needs to execute if the condition1 evaluates to True. If it's False, move to the next line
+    # Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est True (vraie). Si la condition est False (n'est pas respectée), passez à la ligne suivante
 elif (condition2):
-	# Here write the instructions if condition2 is True. If condition2 is False, move to the next line
+	# Ici, écrivez les instructions si condition2 est True. Si la condition2 est False, passez à la ligne suivante
 elif (condition3):
-	# Here write the instructions if condition3 is True. If condition3 is False, move to the next line
+	# Ici, écrivez ici les instructions si condition3 est True. Si la condition3 est False, passez à la ligne suivante
 else:
-	# Here write the instructions in case all 3 conditions are False
+	# Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
 if (condition1) {
-    // Here write the instructions the computer needs to execute if the condition1 evaluates to true
+    // Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est true (vraie)
 } else if (condition2) {
-	// Here write the instructions if condition2 is True. If condition2 is False, move to the next line
-	// elif is short for else if
+	// Ici, écrivez les instructions si la condition2 est True. Si la condition2 est False, passez à la prochaine ligne
+	// elif est l'abbréviation de else if
 } else if (condition3) {
-	// Here write the instructions if condition3 is True. If condition3 is False, move to the next line  
+	// Ici, écrivez les instructions si la condition3 est True. Si la condition3 est False, passez à la ligne suivante
 } else {
-	// Here write the instructions in case all 3 conditions are False
+	// Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
 }
 ----
 
@@ -421,13 +420,14 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 * Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `println('Est-ce que le numéro de piste' + track + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?".
 ****
 
-Voyons un peu de vocabulaire :
-1.  Un *opérateur* est un caractère qui représente une action. Nous avons vu des opérateurs arithmétiques (`+`, `-`, `\*`, `=`) et des opérateurs de comparaison (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
-* Une *expression* est une combinaison de valeurs, constantes, variables, opérateurs et fonctions. L'ordinateur évalue les expressions pour produire une autre valeur, généralement une valeur numérique ou booléenne unique. Par exemple : `1+2` (évaluée à 3) ou `1<2` (évaluée à True) ou `analyzeTrack(1,RMS_AMPLITUDE)` (évaluée au volume de la piste 1, un nombre décimal entre 0 et 1).
-* *Instructions* : des commandes que l'ordinateur exécute.
+
+Let's review some vocabulary:
+1. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
+2. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
+3. *Statements*: instructions for the computer to execute.
 
 
-Voici un exemple de mixage automatisé. Nous dirons que c'est automatisé, car si vous modifiez un ou plusieurs sons, vous n'aurez pas à vérifier l'intensité sonore et à modifier le volume en conséquence vous-même, puisque ce sera déjà inclus dans le code.
+Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
 
 [role="curriculum-python"]
 [source, python]

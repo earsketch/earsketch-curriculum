@@ -4,20 +4,10 @@
 
 En este capítulo vas a aprender cómo funciona EarSketch, cómo colocar sonidos (clips) en tu música, y cómo depurar tu código.
 
-¡Cualquier persona (especialmente tú) puede aprender a programar! Igual que al aprender a tocar un instrumento musical, hay que practicar consistentemente para progresar. No te desanimes si te trancas. Es parte del proceso. Pide ayuda en tu clase o busca en línea si es necesario.
-
-¡Te deseamos mucha suerte! Antes de comenzar, mira este ejemplo de lo que puedes hacer con EarSketch:
-
-[role="curriculum-python curriculum-mp4"]
-[[video1livepy]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-PY.mp4[]
-
-[role="curriculum-javascript curriculum-mp4"]
-[[video1livejs]]
-video::./videoMedia/001-01-WhyLearnProgrammingforMusic-JS.mp4[]
 
 [[discoverearsketch]]
 === Descubre EarSketch
+:nofooter:
 
 En EarSketch, darás instrucciones a la computadora escribiendo código. Una línea del código corresponde a una instrucción. Todas las instrucciones juntas forman el programa (estas instrucciones también se pueden llamar un algoritmo). De la misma manera que se usan las recetas de un libro de cocina para preparar una comida, se ejecuta un programa de EarSketch para crear una canción. ¿Dónde se coloca el código dentro de un programa? ¡Averígualo mirando este video!
 
@@ -32,7 +22,7 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 Para usar EarSketch
 
 . Puedes navegar y seleccionar sonidos en el *navegador de sonidos*
-. Escribirás código en el *editor de código*,
+. Escribirás código en el *editor de código*, 
 . Cuando hagas clic en el botón de *ejecutar*, verás tu música en la *Estación de Audio Digital* (o *EAD*)
 . Puedes entonces hacer clic en *play* para escuchar tu música
 . ¡Puedes seguir cambiando tu programa (tu código) hasta que estés satisfecho con lo que escuchas!
@@ -45,8 +35,11 @@ OPTIONAL:
 ¿Qué es una EAD?
 
 Una *Estación de Audio Digital*, o *EAD*, es un software que produce o edita clips de audio o sonido en una computadora, sea en un estudio profesional o en tu computadora personal.
-Algunas EADs populares incluyen http://www.avid.com/US/products/pro-tools-software[Pro Tools^] y https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], y http://www.reaper.fm/[Reaper^].
+
+Algunas EADs populares incluyen https://www.ableton.com/[Ableton^] y https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], y http://www.reaper.fm/[Reaper^].
+
 Con una EAD, puedes grabar, editar, visualizar y poner archivos de audio. Estos archivos de audio también se llaman *clips*.
+
 EarSketch es igual que una EAD, con la diferencia de que puedes programar directamente los elementos musicales usando código.
 
 Este video explica cómo se hace pleno uso de la EAD:
@@ -123,11 +116,11 @@ finish();
 [[createanewscript]]
 === ¡Crea tu primer script!
 
-En EarSketch, cada script que escribas corresponderá a una canción. Vamos a ver cómo crear un script.
+En EarSketch, cada script que escribas corresponderá a una canción. Vamos a ver cómo crear un script:
 
-. *Iniciar una sesión (_sign in_) o crear una nueva cuenta* en la esquina derecha superior de tu pantalla. Si haces clic en el botón blanco que dice "Crear / Resetear la Cuenta", puedes recuperar una contraseña perdida o crear una nueva cuenta ("Registrar una Nueva Cuenta"). Advertencia: en general en el Internet, no uses la misma contraseña para todas tus cuentas y nunca compartas tu contraseña.
+. *Iniciar una sesión (_sign in_) o crear una nueva cuenta* en la esquina derecha superior de tu pantalla. Si haces clic en el botón blanco que dice "Crear / Reiniciar la cuenta", puedes recuperar una contraseña perdida o crear una nueva cuenta ("Registrar una Nueva Cuenta"). Advertencia: en general en el Internet, no uses la misma contraseña para todas tus cuentas y nunca compartas tu contraseña.
 
-. *Haz clic para crear:* Si no tienes abierto ningún script, haz clic en el enlace grande azul en el editor de código "haz clic aquí para crear un nuevo script".
+. *Haz clic para crear:* Si no tienes abierto ningún script, haz clic en el enlace grande azul en el editor de código "haz clic aquí para crear un nuevo script". 
 +
 Si ya tienes un script o más abiertos, entonces haz clic en el icono "+" azul a lado de las pestañas.
 +
@@ -159,7 +152,7 @@ OPTIONAL
 
 ¿Qué es un lenguaje de programación?
 
-El código está escrito en un *lenguaje de programación*, el cual incluye su propio vocabulario y sintaxis, igual que cualquier lenguaje regular. Tienes que saber cuáles son las reglas gramaticales de tu lenguaje de programación, o la computadora no podrá ejecutar tus instrucciones.
+El código está escrito en un *lenguaje de programación*, el cual incluye su propio vocabulario y sintaxis, igual que cualquier lenguaje regular. Tienes que saber cuáles son las reglas gramaticales de tu lenguaje de programación, o la computadora no podrá ejecutar tus instrucciones. 
 
 En EarSketch, puedes programar en Python o JavaScript.
 
@@ -183,7 +176,7 @@ Ahora que has creado tu primer script, ¡empecemos a trabajar en tu música!
 [role="curriculum-python"]
 Empieza a escribir tu código entre las líneas `setTempo(120)` y `finish()`.
 [role="curriculum-javascript"]
-Empieza a escribir tu código entre las líneas `setTempo(120);` y `finish();`.
+Empieza a escribir tu código entre las líneas ``etTempo(120);` y `finish();`.
 
 Mira este video para ver cómo agregar un clip de audio a tu canción:
 
@@ -203,24 +196,18 @@ Para agregar un clip de sonido a la EAD, empezamos escribiendo `fitMedia()`. Ent
 . El *último compás*: cuando tu sonido deja de sonar.
 *Por ejemplo: `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` colocará el sonido `Y18_DRUM_SAMPLES_2` en la pista musical 1 (track 1) del compás 1 al compás 5.*
 
+Entonces, haz clic en _ejecutar_: debes poder visualizar tu sonido en la EAD. Cuando toques _play_ puedes escucharlo.
+
 [role="curriculum-javascript"]
 Una *declaración* le indica a la computadora que ejecute una acción. Por ejemplo, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` es una declaración. Todas las declaraciones en JavaScript *_deben terminar con punto y coma_*.
-
-Entonces, haz clic en _ejecutar_: debes poder visualizar tu sonido en la EAD. Cuando toques _play_ puedes escucharlo.
 
 
 ////
 OPTIONAL
 ////
-Aprende más sobre el navegador de sonidos
 
+El *Navegador de Sonidos*: Navega o busca entre los 4,000 clips de audio para usarlos en tu música, hechos por músicos/productores https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, y https://www.sndbrd.com/[Milknsizz^].
 
-El *Navegador de Sonidos*: Navega o busca entre los 4,000 clips de audio para usarlos en tu música, hechos por músicos/productores
-https://en.wikipedia.org/wiki/Young_Guru[Young Guru^] y https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^].
-
-////
-TODO: add the correct number of clips and new musicians
-////
 
 ////
 END OF OPTIONAL
@@ -229,7 +216,7 @@ END OF OPTIONAL
 ////
 OPTIONAL
 ////
-
+ 
 Mira algunos ejemplos de código usando `fitMedia()`:
 
 [role="curriculum-python"]
@@ -362,7 +349,7 @@ END OF OPTIONAL
 ****
 Cómo usar sonidos que te gusten:
 
-. Coloca sonidos en 2 pistas musicales diferentes
+. Coloca sonidos en 2 pistas musicales diferentes 
 . Coloca sonidos de compás 2 a 12
 . Crea una corta canción con 3 pistas musicales que duren 8 compases o más
 
@@ -386,7 +373,7 @@ video::./videoMedia/003-02-UsingtheConsole-PY.mp4[]
 video::./videoMedia/003-02-UsingtheConsole-JS.mp4[]
 
 ////
-TODO: This video needs some revamping. See recommendations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
 ////
@@ -397,7 +384,7 @@ OPTIONAL
 
 . Los *errores de sintaxis*: Tu programa no se ejecuta porque tu código rompe las reglas de *sintaxis* del lenguaje (por ejemplo, te olvidaste cerrar un paréntesis o escribiste fitMedia incorrectamente).
 . Los *errores en tiempo de ejecución*: Tu programa se empieza a ejecutar, pero se detiene por un error.
-. Los *errores de lógica*: Tu programa se ejecuta, pero no hace lo que se espera. Puedes arreglar estos errores mirando la EAD para revisar si los clips que quiso agregar fueron en realidad agregados en el lugar correcto.
+. Los *errores de lógica*: Tu programa se ejecuta, pero no hace lo que se espera. Puedes arreglar estos errores mirando la EAD para revisar si los clips que quiso agregar fueron en realidad agregados en el lugar correcto. 
 
 ////
 END OF OPTIONAL
@@ -408,9 +395,9 @@ Algunos errores comunes son:
 
 . Los *errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()`, o constantes sonoras. También, el código no puede llevar acentos. Hay que escribir "musica" en vez de "música", por ejemplo.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
-. *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
 . La *configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`, `init()`, `setTempo()`, o `finish()`. Asegúrate de que estas funciones aparezcan en cada script.
-. *Puntuación:* La falta de comas u otros errores de puntuación.
+. *Puntuación:* La falta de comas u otros errores de puntuación
 
 ¡Es hora de practicar!
 Encuentra los 5 errores en el siguiente código:
@@ -476,7 +463,7 @@ Aquí está la respuesta
 END OF OPTIONAL
 ////
 
-Mira a <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> para una descripción de diferentes tipos de errores y cómo prevenirlos.
+Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
 
 
 ////
@@ -493,40 +480,40 @@ TODO: when options are ready, modify the link
 
 [role="curriculum-python"]
 * Una línea de código es una instrucción que la computadora ejecute. Todas las instrucciones juntas forman el programa.
-* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
+* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código. 
 * Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
-* Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
+* Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica. 
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
 * Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
-** *númeroDePistaMusical:* La pista (track) en la cual se coloca la música.
+** *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
 ** *momentoDeComienzo:* El compás en el cual el clip de sonido empezará.
 ** *momentoCuandoTermina:* El compás en el cual el clip de sonido terminará.
 * *Depuración* es el proceso de encontrar y arreglar *_bugs_*, errores hechos por el/la programador/a.
 * Las reglas de *sintaxis* determinan cómo se escribe el código en el lenguaje de programación en cuestión.
-* La *consola* muestra información sobre el estado de un programa. Es útil para depurar errores de sintaxis.
+* La *consola* muestra información sobre el estado de un programa. Es útil para depurar errores de sintaxis. 
 * Errores comunes de principiantes incluyen las erratas, el uso incorrecto de mayúsculas o minúsculas, la falta de paréntesis, la configuración incorrecta del script...
 
 [role="curriculum-javascript"]
 * Una línea de código es una instrucción que la computadora ejecute. Todas las instrucciones juntas forman el programa.
-* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
+* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código. 
 * Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
-* Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
+* Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica. 
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
 * Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
-** *númeroDePistaMusical:* La pista (track) en la cual se coloca la música.
+** *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
 ** *momentoDeComienzo:* El compás en el cual el clip de sonido empezará.
 ** *momentoCuandoTermina:* El compás en el cual el clip de sonido terminará.
 * *Depuración* es el proceso de encontrar y arreglar *_bugs_*, errores hechos por el/la programador/a.
 * Las reglas de *sintaxis* determinan cómo se escribe el código en el lenguaje de programación en cuestión.
-* La *consola* muestra información sobre el estado del programa. Es útil para depurar errores de sintaxis.
+* La *consola* muestra información sobre el estado de un programa. Es útil para depurar errores de sintaxis. 
 * Errores comunes de principiantes incluyen las erratas, el uso incorrecto de mayúsculas o minúsculas, la falta de paréntesis, la configuración incorrecta del script...
 
 

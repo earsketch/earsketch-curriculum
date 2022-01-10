@@ -12,40 +12,40 @@ Vous avez maintenant de nombreux outils à votre disposition pour créer des mor
 === Les structures de données
 
 [role="curriculum-python"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. A *list*, also called array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. En voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. Une *liste<strong>, également appelée tableau dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-javascript"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. An *array*, also called list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. En voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. Un *tableau<strong>, également appelé liste dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-python"]
 [source, python]
 ----
-# Instead of wiriting this:
+# Au lieu d'écrire ceci :
 kick = OS_KICK03
 hihat = OS_OPENHAT01
 snare = OS_SNARE05
 
-# You can write this:
+# Vous pouvez écrire ceci :
 drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05]
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// Instead of wiriting this:
+// Au lieu d'écrire ceci :
 var kick = OS_KICK03;
 var hihat = OS_OPENHAT01;
 var snare = OS_SNARE05;
 
-// You can write this:
+// Vous pouvez écrire ceci :
 var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
 ----
 
 [role="curriculum-python"]
-Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, commençant par `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling OS_SNARE05`.
+Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
 
 [role="curriculum-javascript"]
-Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
+Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -58,65 +58,65 @@ Voici un exemple :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Lists
+# script_name : Listes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Using a list to hold several audio clips
+# description : Utilisation d'une liste pour contenir plusieurs clips audio
 #
 #
 #
 
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(130)
 
-# Music
+# Musique
 
-# Creating a list of clips
+# Création d'une liste de clips
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
-# Placing sounds from measure 1 to 5
-fitMedia(myEnsemble[0], 1, 1, 5) # accessing index 0
-fitMedia(myEnsemble[1], 2, 1, 5) # accessing index 1
-fitMedia(myEnsemble[2], 3, 1, 5) # accessing index 2
+# Placement de sons de la mesure 1 à 5
+fitMedia(myEnsemble[0], 1, 1, 5) # accès à l'index 0
+fitMedia(myEnsemble[1], 2, 1, 5) # accès à l'index 1
+fitMedia(myEnsemble[2], 3, 1, 5) # accès à l'index 2
 
-# Finish
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Arrays
+// script_name : Tableaux
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Using an array to hold several audio clips
+// description : Utilisation d'un tableau pour contenir plusieurs clips audio
 //
 //
 //
 
-// Setup
+// Paramétrage
 init();
 setTempo(130);
 
-// Music
+// Musique
 
-// Creating an array of clips
+// Création d'un tableau de clips
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
-// Placing sounds from measure 1 to 5
-fitMedia(myEnsemble[0], 1, 1, 5); // accessing index 0
-fitMedia(myEnsemble[1], 2, 1, 5); // accessing index 1
-fitMedia(myEnsemble[2], 3, 1, 5); // accessing index 2
+// Placement de sons de la mesure 1 à 5
+fitMedia(myEnsemble[0], 1, 1, 5); // accès à l'index 0
+fitMedia(myEnsemble[1], 2, 1, 5); // accès à l'index 1
+fitMedia(myEnsemble[2], 3, 1, 5); // accès à l'index 2
 
-// Finish
+// Fin
 finish();
 ----
 
@@ -126,10 +126,10 @@ finish();
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-Nous avons vu que  `list[index]` va invoquer un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` dans l'exemple précédent va modifier le premier élément de la liste en `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
+Nous avons vu que `liste[index]` appellera un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple, dans l'exemple précédent : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément de la liste Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
 
 [role="curriculum-javascript"]
-Nous avons vu que `array[index]` va invoquer un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` dans l'exemple précédent va modifier le premier élément du tableau en `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
+Nous avons vu que `tableau[index]` appellera un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple, dans l'ensemble précédent : l'expression `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément du tableau. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -142,32 +142,32 @@ Voyez l'exemple ci-dessous. Vous pouvez jeter un coup d'œil dans la console pou
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Iterating through Lists
+# script_name : Itération à l'aide de listes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+# description : Utilisation d'une liste pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
 
 
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 setTempo(130)
 
-# Music
+# Musique
 
-# Creating a list of clips
+# Création d'une liste de clips
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
-# Going through the list
+# Parcours de la liste
 for track in range(1,4):
 	index = track-1
-	fitMedia(myEnsemble[index], track, 1, 5) 
+	fitMedia(myEnsemble[index], track, 1, 5)
 	print ("this iteration, track = " + str(track) + " and index = "+ str(index))
 
-# Finish
+# Fin
 finish()
 ----
 
@@ -175,22 +175,22 @@ finish()
 [source, javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: Iterating through Arrays
+// script_name : Itération à l'aide de tableaux
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+// description : Utilisation d'un tableau pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
 
 
-// Setup
+// Paramétrage
 init();
 setTempo(130);
 
-//Music
+// Musique
 
-// Creating an array of clips
+// Création d'un tableau de clips
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
 for (var track = 1; track<4; track++){
@@ -199,15 +199,15 @@ for (var track = 1; track<4; track++){
 	println ("this iteration, track = " + track + " and index = "+ index);
 }
 
-//Finish
+//Fin
 finish();
 ----
 
 [role="curriculum-python"]
-Conseil utile : la fonction len(), avec le nom de la liste comme paramètre, renvoie le nombre d'éléments de la liste. So `list[0]` is the first element of `list`, and `list[len(list)-1]` is the last one. For example, if `list = ["Hello","fellow","EarSketchers"]`, `len(list)` returns `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
+Conseil utile : la fonction len(), avec le nom de la liste comme paramètre, renvoie le nombre d'éléments de la liste. Donc `list[0]` est le premier élément de `list` et `list[len(list)-1]` est le dernier. Par exemple, si `list = ["Hello","fellow","EarSketchers"]`, `len(list)` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
 
 [role="curriculum-javascript"]
-Conseil utile : la propriété `length` (`tableau.length`) renvoie le nombre d'éléments du tableau. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `len(array)` returns `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
+Conseil utile : la propriété `length` (`tableau.length`) renvoie le nombre d'éléments du tableau. Donc `array[0]` est le premier élément de `tableau` et `tableau[tableau.length-1]` est le dernier. Par exemple, si `tableau = ["Hello","fellow","EarSketchers"];`, `tableau.length` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
 
 [role="curriculum-python"]
 .ENTRAÎNEZ-VOUS
@@ -230,65 +230,65 @@ Voici un exemple :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Additive Introduction
+# script_name : Introduction additive
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Creating an additive introduction with array iteration
+# description : Création d'une introduction additive avec itération de liste
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
 
 for measure in range(1, len(introSounds)+1):
-	# we add 1 to len(introSounds) since the second argument of range is exclusive
-	index = measure - 1 # zero-based list index
-	track = measure # change track with measure
+	# nous ajoutons 1 à len(introSounds) puisque le deuxième argument de la plage est exclusif
+	index = measure - 1 # index de liste basé sur zéro
+	track = measure # la piste est la même que le compteur "measure"
 	fitMedia(introSounds[index], track, measure, 5)
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Additive Introduction
+// script_name : Introduction additive
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Creating an additive introduction with array iteration
+// description : Création d'une introduction additive avec une itération de tableau
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
 
 
 for (var measure = 1; measure < introSounds.length + 1; measure++) {
-	// we add 1 to introSounds.length since we want measure to go up to introSounds.length
-	var index = measure - 1; // zero-based array index
-	var track = measure; // change track with measure
+	// nous ajoutons 1 à introSounds.length, car nous voulons que "measure" aille jusqu'à "introSounds.length"
+	var index = measure - 1; // index de tableau basé sur 0
+	var track = measure; // la piste "track" est la même que le compteur "measure"
 	fitMedia(introSounds[index], track, measure, 5);
 }
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -302,13 +302,38 @@ Nous allons voir deux façons d'utiliser les structures de données avec la fonc
 Nous allons voir deux façons d'utiliser les structures de données avec la fonction `makeBeat()`. Tout d'abord, voyons à quel point les chaînes de caractères et les tableaux sont similaires :
 
 [role="curriculum-python"]
-1. Tout comme les listes, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. For example `"Sarah"[3]` returns `a`.
+1. Tout comme les listes, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
 2. Vous pouvez utiliser la fonction `len()` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `len(string)-1`.
 Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tableau ci-dessous.
 
 
+[cols="h,^,^,^,^,^,^,^,^,^"]
+|===
+|Caractère
+|E
+|a
+|r
+|S
+|k
+|e
+|t
+|c
+|h
+
+|Index
+|0
+|1
+|2
+|3
+|4
+|5
+|6
+|7
+|8
+|===
+
 [role="curriculum-javascript"]
-1. Tout comme les tableaux, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. For example `"Sarah"[3]` returns `a`.
+1. Tout comme les tableaux, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
 2. Vous pouvez utiliser la propriété `.length` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `string.length-1`.
 Les index de la chaîne `"EarSketch"` sont affichés dans le tableau ci-dessous.
 
@@ -346,7 +371,7 @@ Les index de la chaîne `"EarSketch"` sont affichés dans le tableau ci-dessous.
 3. Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. Nous utiliserons la *méthode* `concat`. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des paramètres. Pour l'utiliser, vous devez la placer après le nom de votre tableau avec un point : la syntaxe est `newArray = arrayA.concat(arrayB)`. C'est ce qu'on appelle la *notation par points*.
 
 [role="curriculum-python"]
-4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Its syntax is `newString = oldString[startIndex: endIndex]`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. For example, `"Sarah[1,4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
+4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Sa syntaxe est `newString = oldString[startIndex: endIndex]`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. Par exemple, `"Sarah"[1:4]` renverra `"ara"`. Vous pouvez faire la même chose avec des listes : `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
 4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Sa syntaxe est `newString = oldString.substring(startIndex, endIndex)`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. Par exemple, `"Sarah.substring(1,4)"` renverra `"ara"`. Vous pouvez faire la même chose avec des tableaux, en utilisant la méthode `slice()` : `newList = oldList.slice(startIndex, endIndex)`. Notez que `concat()`, `substring()` et `slice()` sont des méthodes et utilisent toutes la notation par points.
@@ -384,52 +409,52 @@ Voici un exemple de solution :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: String and Lists Operations
+# script_name : Opérations de chaînes de caractères et de listes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Showing what we can do with lists and strings
+# description : Ce qui peut être réalisé avec des listes et des chaînes de caractères
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-# Creating my beat strings and arrays
+# Création de chaînes de caractères et listes de beats
 stringA = "0+++----0+++--0+"
 stringB = "0-0-0-0-----0-0-"
 soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1,RD_FUTURE_DUBSTEP_BASSWOBBLE_2,RD_POP_SFX_NOISERHYTHM_1]
 soundsB = [YG_GOSPEL_GUITAR_2,YG_GOSPEL_ORGAN_2]
 
-# Print the second character of each string.
+# Affichage du deuxième caractère de chaque chaîne de caractères.
 print(stringA[1])
 print(stringB[1])
 
-# Print the last element of your arrays.
+# Affichage du dernier élément de vos listes.
 print(soundsA[len(soundsA)-1])
 print(soundsB[len(soundsB)-1])
 
-# Create and print stringC, the concatenation of stringA and stringB.
+# Création et affichage de stringC, la concaténation de stringA et stringB.
 stringC = stringA + stringB
 print(stringC)
 
-# Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+# Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
 soundsC = soundsA + soundsB + soundsA
 print(soundsC)
 
-# Create and print stringD, the slice of stringC from the second to the fifth characters included.
+# Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
 stringD = stringC[1:5]
 print(stringD)
 
-# Create and print soundsD, the slice of stringC from the third to the last elements included.
+# Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
 soundsD = soundsC[2:len(soundsC)]
 print(soundsD)
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -438,50 +463,50 @@ finish()
 ----
 "use strict";
 
-// javascript code
+// code javascript
 //
-// script_name: String and Arrays Operations
+// script_name : Opérations de chaînes de caractères et de tableaux
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Showing what we can do with lists and arrays
+// description : Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
 //
 //
-// Setup
+// Paramétrage
 init()
 setTempo(120)
 
-// Creating my beat strings and arrays
+// Création des chaînes de caractères et des tableaux de mes beats
 var stringA = "0+++----0+++--0+";
 var stringB = "0-0-0-0-----0-0-";
 var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1,RD_FUTURE_DUBSTEP_BASSWOBBLE_2,RD_POP_SFX_NOISERHYTHM_1];
 var soundsB = [YG_GOSPEL_GUITAR_2,YG_GOSPEL_ORGAN_2];
 
-// Print the second character of each string.
+// Affichage du deuxième caractère de chaque chaîne de caractères.
 println(stringA[1]);
 println(stringB[1]);
 
-// Print the last element of your arrays.
+// Affichage du dernier élément de vos tableaux.
 println(soundsA[soundsA.length-1]);
 println(soundsB[soundsB.length-1]);
 
-// Create and print stringC, the concatenation of stringA and stringB.
+// Création et affichage de stringC, la concatenation de stringA et de stringB.
 var stringC = stringA + stringB
 println(stringC);
 
-// Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+// Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
 var soundsC = (soundsA.concat(soundsB)).concat(soundsA)
 println(soundsC);
 
-// Create and print stringD, the slice of stringC from the second to the fifth characters included.
+// Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
 var stringD = stringC.substring(1,5)
 println(stringD);
 
-// Create and print soundsD, the slice of stringC from the third to the last elements included.
+// Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
 var soundsD = soundsC.slice(2,soundsC.lenght)
 println(soundsD);
 
-// Finish
+// Fin
 finish();
 ----
 
@@ -498,22 +523,22 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: String Operations
+# script_name : Opérations de chaînes de caractères
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Expand a beat string into a longer beat string.
+# description : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue.
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 initialBeat = "0+0+00-00+++-0++"
 drumInstr = RD_UK_HOUSE_MAINBEAT_10
 
@@ -522,38 +547,38 @@ def expander(beatString):
   for i in range(0, len(beatString)):
     beatSlice = beatString[0:i]
     newBeat = newBeat + beatSlice
-  # return the new beat string so it can be used outside the function
+  # renvoie la nouvelle chaîne de caractères pour qu'elle puisse être utilisée à l'extérieur de la fonction
   return newBeat
 
 finalBeat = expander(initialBeat)
 print finalBeat
 
-#makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
+#makeBeat(drumInstr, 1, 1, initialBeat) # chaîne de caractères de beat initiale
 makeBeat(drumInstr, 1, 1, finalBeat)
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: String Operations
+// script_name : Opérations de chaînes de caractères
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Expand a beat string into a longer beat string.
+// description : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue.
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 var initialBeat = "0+0+00-00+++-0++";
 var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
 
@@ -563,17 +588,17 @@ function expander(beatString){
     beatSlice = beatString.substring(0, i);
     newBeat = newBeat + beatSlice;
   }
-  // return the new beat string so it can be used outside the function
+  // renvoie la nouvelle chaîne de caractères pour qu'elle puisse être utilisée à l'extérieur de la fonction
   return newBeat;
 }
 
 var finalBeat = expander(initialBeat);
 println(finalBeat);
 
-//makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
+//makeBeat(drumInstr, 1, 1, initialBeat); // chaîne de caractères de beat initiale
 makeBeat(drumInstr, 1, 1, finalBeat);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -586,21 +611,21 @@ Enfin, `makeBeat()` vous permet de gérer plusieurs clips de sons à la fois. Ce
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Making a drum set
+# script_name : Création d'un enchaînement de rythmes percussifs
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Using arrays with makeBeat()
+# description : Utilisation de listes avec la fonction makeBeat()
 #
 
-# Setup 
+# Paramétrage
 from earsketch import *
 init()
 setTempo(100)
 
-# Before, we had one track for every sound (measure 1):
+# Avant, nous avions une piste pour chaque son (mesure 1) :
 kick = OS_KICK05
 snare = OS_SNARE01
 kickBeat = "0+++----0+++----"
@@ -608,12 +633,12 @@ snareBeat = "----0+++----0+++"
 makeBeat(kick,1,1,kickBeat)
 makeBeat(snare,2,1,snareBeat)
 
-# Now, we can combine them (measure 3):
+# Maintenant, nous allons les combiner (mesure 3) :
 drums = [OS_KICK05, OS_SNARE01]
 beat = "0+++1+++0+++1+++"
 makeBeat(drums,1,3,beat)
 
-# Finish
+# Fin
 finish()
 
 ----
@@ -621,23 +646,23 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Making a drum set
+// script_name : Création d'un enchaînement de rythmes percussifs
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Using arrays with makeBeat()
+// description : Utilisation de tableaux avec la fonction makeBeat()
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(100);
 
-//Music
-// Before, we had one track for every sound (measure 1):
+//Musique
+// Avant, nous avions une piste pour chaque son (mesure 1) :
 var kick = OS_KICK05;
 var snare = OS_SNARE01;
 var kickBeat = "0+++----0+++----";
@@ -645,12 +670,12 @@ var snareBeat = "----0+++----0+++";
 makeBeat(kick,1,1,kickBeat);
 makeBeat(snare,2,1,snareBeat);
 
-// Now, we can combine them (measure 3):
+// Maintenant, nous allons les combiner (mesure 3) :
 var drums = [OS_KICK05, OS_SNARE01];
 var beat = "0+++1+++0+++1+++";
 makeBeat(drums,1,3,beat);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -664,39 +689,39 @@ Voici la solution :
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Examples of beats
+# script_name : Exemples de beats ou rythmes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Creating beats with different genre examples
+# description : Création de beats avec des exemples de divers genres musicaux
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(110)
 
-# Sound clips
+# Clips de sons
 drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01]
 
-# Rock beat on measure 1
+# Beat de rock sur la mesure 1
 makeBeat(drums,1,1,"0+++1+++0+++1+++")
 makeBeat(drums,2,1,"2+2+2+2+2+2+2+2+")
 
-# Hip hop beat on measure 3
+# Beat de hip-hop sur la mesure 3
 makeBeat(drums,1,3,"0+++1++1+10+1+++")
 makeBeat(drums,2,3,"2+2+2+2+2+2+2+2+")
 
-# Jazz beat on measure 5
+# Beat de jazz sur la mesure 5
 makeBeat(drums,2,5,"2++2+22++2+22++2")
 
-# Dembow (latin, caribbean) beat on measure 7
+# Beat de dembow (latin, caribéen) sur la mesure 7
 makeBeat(drums,1,7,"0++10+1+0++10+1+")
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -705,38 +730,38 @@ finish()
 ----
 "use strict";
 
-// javascript code
+// code javascript
 //
-// script_name: Examples of beats
+// script_name : Exemples de beats ou rythmes
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Creating beats with different genre examples
+// description : Création de beats (rythmes) avec divers exemples de genres musicaux
 //
 //
 
-// Setup
+// Paramétrage
 init();
 setTempo(110);
 
-// Sound clips
+// Clips de sons
 var drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
 
-// Rock beat on measure 1
+// Beat de rock sur la mesure 1
 makeBeat(drums,1,1,"0+++1+++0+++1+++");
 makeBeat(drums,2,1,"2+2+2+2+2+2+2+2+");
 
-// Hip hop beat on measure 3
+// Beat de hip-hop sur la mesure 3
 makeBeat(drums,1,3,"0+++1++1+10+1+++");
 makeBeat(drums,2,3,"2+2+2+2+2+2+2+2+");
 
-// Jazz beat on measure 5
+// Beat de jazz sur la mesure 5
 makeBeat(drums,2,5,"2++2+22++2+22++2");
 
-// Dembow (latin, caribbean) beat on measure 7
+// Beat de dembow (latin, caribéen) sur la mesure 7
 makeBeat(drums,1,7,"0++10+1+0++10+1+");
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -832,10 +857,10 @@ Thank you video
 [role="curriculum-python"]
 * Une *liste* ou « list » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans une liste.
 * Tout comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
-* List elements are accessed with bracket notation, like `myList[1]`. Characters in a string can be accessed similarly: `myString[1]`.
+* Les éléments d'une liste sont accessibles par la notation entre crochets `myList[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
 * La fonction `len()` renvoie le nombre d'éléments dans une liste ou le nombre de caractères dans une chaîne avec la syntaxe `len(list)`.
 * Les listes peuvent être concaténées et découpées en utilisant les *opérations de liste*, un ensemble d'outils pour modifier une liste.
-* The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
+* La syntaxe pour créer un sous-ensemble de liste à partir d'une liste existante plus grande est `newList = oldList[startIndex: endIndex]`.
 * Les listes peuvent être combinées en utilisant l'opérateur de concaténation, `+`, comme dans l'exemple : `newList = listA + listB`.
 * `makeBeat()` permet de composer des rythmes à partir de plusieurs clips à la fois à l'aide d'une chaîne de caractères de beat (rythme) qui fait référence à différents index de liste. Aussi, `makeBeat()` peut accéder aux clips dans les index 0 à 9, à condition qu'ils soient stockés dans le même tableau.
 * L'échange de commentaires constructifs avec d'autres personnes est une forme de *feedback par les pairs*. Cela offre la possibilité d’apprendre des autres.
@@ -844,7 +869,7 @@ Thank you video
 [role="curriculum-javascript"]
 * Un *tableau* ou « array » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans un tableau.
 * Tout comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
-* Array elements are accessed with bracket notation, like `myArray[1]`. Characters in a string can be accessed similarly: `myString[1]`.
+* Les éléments d'un tableau sont accessibles par la notation entre crochets `myArray[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
 * La propriété `length` renvoie le nombre d'éléments dans un tableau ou le nombre de caractères dans une chaîne avec la syntaxe `array.length` ou `string.length`.
 * Les tableaux peuvent être concaténés et découpés en utilisant des *opérations de tableau*, soit un ensemble d'outils pour modifier un tableau.
 * La syntaxe pour découper un tableau à partir d'un tableau existant plus grand est `newArray = oldArray.slice(startIndex, endIndex)`.

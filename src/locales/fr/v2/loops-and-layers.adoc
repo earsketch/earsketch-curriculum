@@ -23,16 +23,16 @@ Voyez ci-dessous le code final de la vidéo :
 [role="curriculum-python"]
 [source,python]
 ----
-#        python code
-#        script_name: Looping my beats
+#        code python
+#        script_name : Création de boucle de beats
 #
-#        author: The EarSketch Team
-#        description: Looping a makeBeat() instruction thanks to a for loop. Le compteur ici est "measure".
+#        auteur : L'équipe EarSketch
+#        description : Création d'une boucle d'une instruction makeBeat() grâce à une boucle for. Le compteur ici est "measure".
 #
 
 from earsketch import *
 
-# Setup:
+# Paramétrage
 init()
 setTempo(120)
 
@@ -40,7 +40,7 @@ setTempo(120)
 drum1=OS_SNARE03
 beat_string="0---0---0-0-0---"
 
-#Looping our beat
+#Création de la boucle pour notre beat
 for measure in range(1,5):
   makeBeat(drum1,1,measure,beat_string)
 
@@ -54,14 +54,14 @@ finish()
 
 "use strict";
 
-//    javascript code
-//    script_name: Looping my beats
+//    code javascript
+//    script_name : Création de boucle pour mes beats
 //
-//    author: The EarSketch Team
-//    description: Looping a makeBeat() instruction thanks to a for loop. Le compteur ici est "measure".
+//    auteur : L'équipe EarSketch
+//    description : Création d'une boucle d'instruction makeBeat() grâce à une boucle « for ». Le compteur ici est "measure".
 //
 
-// Setup:
+// Paramétrage
 init();
 setTempo(120);
 
@@ -69,7 +69,7 @@ setTempo(120);
 var drum1=OS_SNARE03;
 var beat_string="0---0---0-0-0---";
 
-// Looping our beat
+// Création d'une boucle pour notre beat
 for (var measure=1; measure<5; measure++) {
   makeBeat(drum1,1,measure,beat_string);
 }
@@ -102,18 +102,18 @@ Avant d'exécuter le code suivant, essayez de deviner ce que la console va affic
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Printing Demo
+# script_name : Démonstration d'affichage
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Using the print statement to print messages in the console
+# description : Utilisation de l'instruction « print » pour afficher des messages dans la console
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
@@ -122,36 +122,36 @@ setTempo(120)
 drum1=OS_SNARE03
 beat_string="0---0---0-0-0---"
 
-#First print statement
+#Première instruction « print »
 print(1+3)
 
-#Looping our beat
-#Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+#Création d'une boucle pour notre beat
+#Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
 for measure in range(1,5):
   makeBeat(drum1,1,measure,beat_string)
   print(measure)
   print("ok")
 
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Printing Demo
+// script_name : Démonstration d'affichage
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Using println() to print messages in the console
+// description : Utilisation de println() pour afficher des messages dans la console
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
@@ -159,11 +159,11 @@ setTempo(120);
 var drum1=OS_SNARE03;
 var beat_string="0---0---0-0-0---";
 
-//First print statement
+//Première instruction « print »
 println(1+3);
 
-//Looping our beat
-//Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+//Création d'une boucle pour notre beat
+//Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
 for (var measure=1; measure<5; measure++) {
   makeBeat(drum1,1,measure,beat_string);
   println(measure);
@@ -171,17 +171,17 @@ for (var measure=1; measure<5; measure++) {
 }
 
 
-//Finish
+//Fin
 finish();
 ----
 
 Vous verrez apparaître dans votre console les lignes suivantes :
 ----
-4 (this is 1+3, simplified)
-1 (initially your counter measure is equal to 1)
+4 (cela correspond à 1+3, simplifié)
+1 (au début, votre compteur "measure" est égal à 1)
 "ok"
-2 (now your counter measure is equal to 2)
-"ok" (every time we go through one loop, we print "ok", that's why it's repeated)
+2 (maintenant, votre compteur "measure" est égal à 2)
+"ok" (chaque fois que nous passons à travers une boucle, nous affichons "ok", voilà pourquoi cela se répète)
 3
 "ok"
 4
@@ -249,25 +249,25 @@ Nous pouvons créer des répétitions dans notre musique en saisissant la foncti
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Drum beat (no loops)
+# script_name : Rythme percussif (sans boucle)
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-#	description: Musical repetition created without code loops
+#	description : Répétition musicale créée sans boucle dans le code
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-# All of these fitMedia() calls could be replaced with two calls placed in a loop.
+# Tous ces appels de fonction fitMedia() peuvent être remplacés par deux appels placés dans une boucle.
 
 fitMedia(drums1, 1, 1, 1.5)
 fitMedia(drums2, 1, 1.5, 2)
@@ -286,7 +286,7 @@ fitMedia(drums2, 1, 7.5, 8)
 fitMedia(drums1, 1, 8, 8.5)
 fitMedia(drums2, 1, 8.5, 9)
 
-#Finish
+#Fin
 finish()
 
 ----
@@ -294,26 +294,26 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Drum beat (no loops)
+// script_name : Rythme percussif (sans boucle)
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Musical repetition created without code loops
+// description : Répétition musicale créée sans boucle dans le code
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
-// All of these fitMedia() calls could be replaced with two calls placed in a loop.
+// Tous ces appels de fonction fitMedia() pourraient être remplacés par deux appels placés dans une boucle.
 
 fitMedia(drums1, 1, 1, 1.5);
 fitMedia(drums2, 1, 1.5, 2);
@@ -332,7 +332,7 @@ fitMedia(drums2, 1, 7.5, 8);
 fitMedia(drums1, 1, 8, 8.5);
 fitMedia(drums2, 1, 8.5, 9);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -341,32 +341,32 @@ Nous pouvons utiliser une boucle `for` pour créer exactement la même musique, 
 [role="curriculum-python"]
 [source,python]
 ----
-#	python code
+#	code python
 #
-#	script_name: Drum beat (with loops)
+#	script_name : Rythme percussif (avec boucles)
 #
-#	author: The EarSketch Team
+#	auteur : L'équipe EarSketch
 #
-#	description: Musical repetition created with code loops
+#	description : Répétition musicale créée à partir de boucles dans le code.
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+#Musique
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-#Using a loop instead of repeatedly writing similar lines of code
+#Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
 
 for measure in range(1, 9):
   fitMedia(drums1, 1, measure, measure + 0.5)
   fitMedia(drums2, 1, measure + 0.5 , measure + 1)
 
 
-#Finish
+#Fin
 finish()
 
 ----
@@ -374,31 +374,31 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Drum beat (with loops)
+// script_name : Rythme percussif (avec boucles)
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Musical repetition created with code loops
+// description : Répétition musicale créée à partir de boucles dans le code
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
+//Musique
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
-// Using a loop instead of repeatedly writing similar lines of code
+// Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
 
 for (var measure = 1; measure < 9; measure = measure + 1) {
   fitMedia(drums1, 1, measure, measure + 0.5);
   fitMedia(drums2, 1, measure + 0.5 , measure + 1);
 }
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -442,13 +442,13 @@ Avant d'exécuter le code suivant, essayez de deviner ce qu'il va renvoyer.
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Incrementing
+# script_name : Incrémentation
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Creating an alternating drum beat
+# description : Création d'un rythme percussif alternatif
 #
 
 from earsketch import *
@@ -469,13 +469,13 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Incrementing
+// script_name : Incrémentation
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Creating an alternating drum beat
+// description : Création d'un rythme percussif alternatif
 //
 
 init();
@@ -497,8 +497,7 @@ finish();
 Ici, nous avons utilisé la fonction `range()` , mais vous pouvez également incrémenter (augmenter) ou décrémenter (diminuer) une variable en utilisant le type d'expression suivant : `measure = measure + 1`. Cela signifie que « measure » est maintenant égal à sa valeur précédente +1. Vous pouvez utiliser le raccourci `+=` (ou `-=` pour décrémenter) de la manière suivante : `measure += 1` est équivalent à `measure = measure + 1`. Et `measure -= 1` est équivalent à `measure = measure - 1`.
 
 [role="curriculum-javascript"]
-Ici, nous avons écrit `measure = measure + 4`, ce qui signifie que « measure » est maintenant égale à sa valeur précédente +4. You can use some shorthands:
- `+=` (or `-=` to decrement). Voici une méthode de raccourci pour incrémenter (ou décrémenter) un compteur :
+Ici, nous avons écrit `measure = measure + 4`, ce qui signifie que « measure » est maintenant égale à sa valeur précédente +4. Vous pouvez aussi utiliser le raccourci `+=` (ou `-=` pour décrémenter). Voici une méthode de raccourci pour incrémenter (ou décrémenter) un compteur :
 
 * `measure++` ou `measure += 1` incrémente « measure » par 1. Si vous voulez incrémenter par une valeur supérieure à un, utilisez `measure += 2`.
 * `measure--` ou `measure -= 1` décrémente « measure » par 1. Si vous voulez décrémenter par une valeur supérieure à un, utilisez `measure -= 2`.
@@ -535,20 +534,20 @@ Dans le chapitre 1, nous vous avons présenté une liste d'erreurs potentielles 
 
 [role="curriculum-python"]
 . L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. Cela signifie que vous devez affecter des valeurs à vos variables au début de votre script.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. En Python, les commentaires doivent commencer par le symbole `#`.
-. L'*indentation *: L'indentation est très importante en Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. En Python, les commentaires doivent commencer par le symbole `#`.
+. L'*indentation *: L'indentation est très importante en Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror, indentation error>>.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
 . Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction.
 
 [role="curriculum-javascript"]
 . L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. Cela signifie que vous devez affecter des valeurs à vos variables dans le haut de votre script. N'oubliez pas d'initialiser les variables avec l'expression `var` !
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. En JavaScript, les commentaires doivent commencer par le symbole `//`.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. En JavaScript, les commentaires doivent commencer par le symbole `//`.
 . Les *points-virgules* : Inclure des points-virgules après chaque instruction est fortement recommandé en JavaScript. 
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
 . Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction. 
 
 
-Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
+Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
 
 
 [[musicaltips]]
@@ -606,7 +605,7 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 * Le *flux de commande* représente l'ordre dans lequel les instructions sont exécutées par l'ordinateur.
 * L'instruction `print` évalue l'expression qui l'accompagne et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au programmeur d'en apprendre davantage sur l'état du programme.
 * La fonction « print », la mise en commentaire de code et la console sont des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * La *hauteur* d'un son détermine à quel point il est aiguë ou grave.
 * La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures ou mineures, ce qui crée une impression différente chez l'auditeur.
 * Vous pouvez utiliser trois pistes de base pour créer la structure de vos chansons : une mélodie aiguë, une basse grave et des percussions.
@@ -616,7 +615,7 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 * Le *flux de commande* représente l'ordre dans lequel les instructions sont exécutées par l'ordinateur.
 * La fonction `println()` évalue son argument et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au programmeur d'en apprendre davantage sur l'état du programme.
 * La fonction « print », la mise en commentaire de code et la console sont toutes des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * La *hauteur* d'un son détermine à quel point il est aiguë ou grave.
 * La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures ou mineures, ce qui crée une impression différente chez l'auditeur.
 * Vous pouvez utiliser trois pistes de base pour créer la structure de vos chansons : une mélodie aiguë, une basse grave et des percussions.

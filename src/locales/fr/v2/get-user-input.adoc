@@ -27,18 +27,18 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Return Statements
+# script_name : Instructions de retour
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Linking two beats together with return statements
+# description : Liaison de deux beats (rythmes) à l'aide d'instructions de retour
 #
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(100)
@@ -46,49 +46,49 @@ setTempo(100)
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
-#Music
+#Musique
 
 def createBeat(startMeasure, soundClip, beatString):
   endMeasure = startMeasure + 3
   for measure in range(startMeasure, endMeasure):
     makeBeat(soundClip, 1, measure, beatString)
 
-  # Return ending measure so we can use it outside function
+  # Renvoi de la mesure de fin pour qu'elle puisse être utilisée à l'extérieur de la fonction
   return endMeasure
 
-# Function calls
+# Appels de fonction
 
-# Assigning the value we return to a variable
+# Affectation de la valeur retournée à une variable
 newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
-# Passing the returned value into another function
+# Passage de la valeur retournée dans une autre fonction
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
 
-#Finish
+#Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
+// code javascript
 //
-// script_name: Return Statements
+// script_name : Instructions de retour
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Linking two beats together with return statements
+// description : Liaison de deux beats (rythmes) à l'aide d'instructions de retour
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(100);
 
 var rhythm1 = "0+++0+0+0+--0+00";
 var rhythm2 = "0+0-00++0-000+++";
 
-//Music
+//Musique
 
 function createBeat(startMeasure, soundClip, beatString){
   endMeasure = startMeasure + 3;
@@ -96,18 +96,18 @@ function createBeat(startMeasure, soundClip, beatString){
     makeBeat(soundClip, 1, measure, beatString);
   }
 
-  // Return ending measure so we can use it outside function
+  // Renvoi de la mesure de fin pour qu'elle puisse être utilisée à l'extérieur de la fonction
   return endMeasure;
 }
 
-// Function calls
+// Appels de fonction
 
-// Assigning the value we return to a variable
+// Affectation de la valeur retournée à une valeur
 var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
-// Passing the returned value into another function
+// Passage de la valeur retournée dans une autre fonction
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -135,17 +135,17 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Return Statements 2
+# script_name : Instructions de retour 2
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: returning the end measure of a section function
+# description : Renvoi de la mesure de fin d'une fonction de partie
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
@@ -153,18 +153,18 @@ setTempo(120)
 melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
 drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
-# Function definition
+# Définition de fonction
 def verse(start):
   end = start + 4
   fitMedia(melody1,1,start,end)
   fitMedia(drums1,2,start,end)
   return end
 
-# Function calls
-endMeasure = verse(1) #calling verse function and start is measure 1
+# Appels de fonction
+endMeasure = verse(1) #appel de la fonction du couplet et début à la mesure 1
 print(endMeasure)
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -172,36 +172,36 @@ finish()
 [source,javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: Return Statements 2
+// script_name : Instructions de retour 2
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: returning the end measure of a section function
+// description : Renvoi de la mesure de fin d'une fonction de partie
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
-// Function definition
+// Définition de fonction
 function verse(start) {
   var end = start + 4;
   fitMedia(melody1,1,start,end);
   fitMedia(drums1,2,start,end);
   return end;
 }
-// Function calls
-var endMeasure = verse(1); //calling verse function and start is measure 1
+// Appels de fonction
+var endMeasure = verse(1); //appel de la fonction du couplet et début à la mesure 1
  println(endMeasure);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -221,17 +221,17 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+# code python
 #
-# script_name: Conditional statement in function
+# script_name : Instruction conditionnelle dans une fonction
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: using a boolean to create variation in a function
+# description : Utilisation d'une booléenne pour créer une variation dans une fonction
 #
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
@@ -240,20 +240,20 @@ melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
 melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
 drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
-# Function definition
+# Définition de fonction
 def verse(start,variation):
-  # variation is either equal to True or False
+  # la variation est soit égale à True ou False
   if variation:
     fitMedia(melody1,1,start,start+4)
   else:
   	fitMedia(melody2,1,start,start+4)
-  fitMedia(drums1,2,start,start+4) # this is outside the conditional statement (no indentation)
+  fitMedia(drums1,2,start,start+4) #ceci est à l'extérieur de l'instruction conditionnelle (sans indentation)
 
-# Function calls
+# Appels de fonction
 verse(1,True)
 verse(7,False)
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -261,18 +261,18 @@ finish()
 [source,javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: Conditional statement in function
+// script_name : Instruction conditionnelle dans une fonction
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: using a boolean to create variation in a function
+// description : Utilisation d'une booléenne pour créer une variation dans une fonction
 //
 //
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
@@ -280,22 +280,22 @@ var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
 var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
-// Function definition
+// Définition de fonction
 function verse(start,variation){
-  // variation is either equal to true or false
+  // la variation est soit égale à true ou false
   if(variation){
     fitMedia(melody1,1,start,start+4);
   } else {
   	fitMedia(melody2,1,start,start+4);
   }
-  fitMedia(drums1,2,start,start+4); // this is outside the conditional statement (no indentation)
+  fitMedia(drums1,2,start,start+4); // ceci est à l'extérieur de l'instruction conditionnelle (sans indentation)
 }
 
-// Function calls
+// Appels de fonction
 verse(1,true);
 verse(7,false);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -316,7 +316,7 @@ print (answer)
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-var answer = readInput("What tempo would you like for your music?");
+var answer = readInput("Quel tempo désirez-vous appliquer pour votre musique ?");
 print(answer)
 ----
 
@@ -336,32 +336,32 @@ Dans l'exemple ci-dessous, l'entrée de la console est utilisée pour détermine
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: User input 1
+# script_name : Entrée de l'utilisateur 1
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Asking the user for the tempo
+# description : Demande de saisie du tempo à l'utilisateur
 
-# Setup
+# Paramétrage
 from earsketch import *
 init()
 
-# asking for tempo
-question = "What tempo would you like for your music? Choose a number between 45 and 220"
+# Demande de saisie du tempo
+question = "Quel tempo désirez-vous appliquer pour votre chanson ? Sélectionnez un chiffre entre 45 et 220."
 answer = readInput(question)
 
-# converting to an integer
+# Conversion à un entier
 tempo = int(answer)
 
-# setting the tempo
+# Définition du tempo
 setTempo(tempo)
 
-# music
+# Musique
 fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5)
 
-# finish
+# Fin
 finish()
 
 ----
@@ -370,30 +370,30 @@ finish()
 [source, javascript]
 ----
 "use strict";
-//	javascript code
-//	script_name: User input 1
+//	code javascript
+//	script_name : Entrée de l'utilisateur 1
 //
-//	author: the EarSketch team
-//	description: Asking the user for the tempo
+//	auteur : L'équipe EarSketch
+//	description : Demande de saisie de tempo à l'utilisateur
 
 
-// Setup
+// Paramétrage
 init();
 
-// asking for tempo
-var question = "What tempo would you like for your music? Choose a number between 45 and 220";
+// Demande de saisie de tempo
+var question = "Quel tempo désirez-vous appliquer pour votre musique ? Sélectionnez un chiffre entre 45 et 220.";
 var answer = readInput(question);
 
-// converting to a number
+// Conversion à un nombre
 var tempo = Number(answer);
 
-// setting the tempo
+// Définition du tempo
 setTempo(tempo);
 
-// music
+// Musique
 fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5);
 
-// finish
+// Fin
 finish();
 ----
 
@@ -404,29 +404,29 @@ La *concaténation* est un moyen de lier des chaînes de caractères ensemble, �
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: User input 2
+# script_name : Entrée d'utilisateur
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Creating a dubstep song with user-specified parameters
+# description : Création d'une chanson de dubstep à l'aide de paramètres spécifiés par l'utilisateur
 #
 
-#Setup
+#Paramétrage
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
-clipNumber = readInput("Type a clip number between 10 and 46: ")
+#Musique
+clipNumber = readInput("Entrez un numéro de clip entre 10 et 46 : ")
 dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
 finalClip = dubStepClip + clipNumber
 
-# user selected dubstep wobbles
+# « wobbles » de dubstep sélectionnés par l'utilisateur
 fitMedia(finalClip, 1, 1, 5)
 
-#Finish
+#Fin
 finish()
 ----
 
@@ -434,28 +434,28 @@ finish()
 [source, javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: User input 2
+// script_name : Entrée d'utilisateur 2
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Creating a dubstep song with user-specified parameters
+// description : Création d'une chanson de dubstep avec des paramètres spécifiés par l'utilisateur
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-//Music
-var clipNumber = readInput("Type a clip number between 10 and 46: ");
+//Musique
+var clipNumber = readInput("Entrez un numéro de clip entre 10 et 46 : ");
 var dubStepClip = "DUBSTEP_BASS_WOBBLE_0";
 var finalClip = dubStepClip + clipNumber;
 
-// user-selected dubstep wobbles
+// « wobbles » de dubstep sélectionnés par l'utilisateur
 fitMedia(finalClip, 1, 1, 5);
 
-//Finish
+//Fin
 finish();
 ----
 
@@ -529,13 +529,13 @@ Utilisez le code suivant pour afficher les réponses :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Boolean expressions 
+# script_name : Expressions booléennes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: printing boolean expressions
+# description : Affichage d'expressions booléennes
 #
 
 from earsketch import *
@@ -556,16 +556,16 @@ finish()
 [source, javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: Boolean expressions
+// script_name : Expressions booléennes
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: printing boolean expressions
+// description : Affichage d'expressions booléennes
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
@@ -594,43 +594,43 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 .ENTRAÎNEZ-VOUS
 ****
-Now we will combine user input and boolean operations:
-Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Selon la réponse de l'utilisateur, sélectionnez une chaîne de caractères de beat (ou rythme) qui s'adapte bien au genre musical. Vous pouvez accepter plusieurs possibilités, par exemple : "HIP HOP", "hip hop" et "Hip Hop" afficheront la même chanson.
+Combinons maintenant des entrées d'utilisateur et des opérations booléennes :
+Rédigez un script qui demandera à l'utilisateur de choisir un genre, avec un nombre limité d'options (par exemple "hip-hop" et "classique"). Selon la réponse de l'utilisateur, sélectionnez une chaîne de caractères de beat (ou rythme) qui s'adapte bien au genre musical. Vous pouvez accepter plusieurs possibilités, par exemple : "HIP HOP", "hip hop" et "Hip Hop" afficheront la même chanson.
 ****
 
 Voici un exemple :
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
+# code python
 #
-# script_name: Boolean operations 
+# script_name : Opérations booléennes
 #
-# author: The EarSketch Team
+# auteur : L'équipe EarSketch
 #
-# description: Asking user for genre and creating beat accordingly
+# description : Demande à l'utilisateur d'entrer un genre musical et création d'un beat en conséquence
 #
 
 from earsketch import *
 init()
 setTempo(120)
 
-# Sound variables
+# Variables de sons
 kick = OS_KICK02
 hihat = OS_CLOSEDHAT04
 clap = OS_CLAP03
 
-# Beat string variables
+# Variables de chaînes de caractères de beats
 hiphopKickBeat = "0++++---0+++0+++"
 hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
 
-# Requesting user input
-genre = readInput("What genre is your favourite? Le hip-hop ou l'EDM (musique électronique) ?")
+# Demande à l'utilisateur de faire une entrée
+genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
 
-# Creating the appropriate rhythm
+# Création du rythme approprié
 if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
 	makeBeat(kick,1,1,hiphopKickBeat)
 	makeBeat(hihat,2,1,hiphopHihatBeat)
@@ -638,9 +638,9 @@ elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
 	makeBeat(kick,1,1,edmKickBeat)
 	makeBeat(clap,2,1,edmClapBeat)
 else:
-	print("Sorry we couldn't read the genre you selected. Please run the code again")
+	print("Désolé, nous n'avons pas pu lire le genre que vous avez sélectionné. Veuillez exécuter le code à nouveau.")
 
-# Adding some reverb on track 2
+# Ajout de réverbération sur la piste 2
 setEffect(2,REVERB, MIX, 0.1)
 
 
@@ -651,35 +651,35 @@ finish()
 [source, javascript]
 ----
 "use strict";
-// javascript code
+// code javascript
 //
-// script_name: Boolean operations
+// script_name : Opérations booléennes
 //
-// author: The EarSketch Team
+// auteur : L'équipe EarSketch
 //
-// description: Asking user for genre and creating beat accordingly
+// description : Demande à l'utilisateur d'entrer un genre musical et création d'un beat (rythme) en conséquence
 //
 
-//Setup
+//Paramétrage
 init();
 setTempo(120);
 
-// Sound variables
+// Variables de sons
 var kick = OS_KICK02;
 var hihat = OS_CLOSEDHAT04;
 var clap = OS_CLAP03;
 
-// Beat string variables
+// Variables de chaînes de caractères de beats
 var hiphopKickBeat = "0++++---0+++0+++";
 var hiphopHihatBeat = "----0---00---000";
 var edmKickBeat = "0+++----0+++----";
 var edmClapBeat = "----0-------0---";
 
 
-// Requesting user input
-var genre = readInput("What genre is your favourite? Le hip-hop ou l'EDM (musique électronique) ?")
+// Demande à l'utilisateur de faire une entrée
+var genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
 
-// Creating the appropriate rhythm
+// Création d'un rythme approprié
 if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
 	makeBeat(kick,1,1,hiphopKickBeat);
 	makeBeat(hihat,2,1,hiphopHihatBeat);
@@ -687,10 +687,10 @@ if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
 	makeBeat(kick,1,1,edmKickBeat);
 	makeBeat(clap,2,1,edmClapBeat);
 } else {
-	println("Sorry we couldn't read the genre you selected. Please run the code again");
+	println("Désolé, nous n'avons pas pu lire le genre que vous avez sélectionné. Veuillez exécuter le code à nouveau.");
 }
 
-// Adding some reverb on track 2
+// Ajout de réverbération sur la piste 2
 setEffect(2,REVERB, MIX, 0.1);
 
 finish();
