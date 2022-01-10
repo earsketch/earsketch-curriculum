@@ -31,14 +31,14 @@ phases:
       - echo "Entered the build phase..."
       - |
         declare -a locale_array=(en
-                      es
-                      ar
-                      he
-                      fr
-                      iu)
+                              es
+                              ar
+                              he
+                              fr
+                              iu)
   
         declare -a locale_subdir_array=(v1
-        v2)
+                                      v2)
 
         # render the table of contents template first
         TOC_TEMPLATE=$ASCIIDOC_DIR/toc_template.adoc
