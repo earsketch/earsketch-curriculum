@@ -43,7 +43,7 @@ phases:
         TOC_TEMPLATE=$ASCIIDOC_DIR/toc_template.adoc
         TOC_TEMPLATE_HTML=$LOCAL_STAGING_DIR/toc_template.html
         asciidoctor \
-          -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+          -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
           -D "$LOCAL_STAGING_DIR" "$TOC_TEMPLATE" || exit 1
         for locale_path in "${locale_array[@]}"
         do
@@ -57,15 +57,15 @@ phases:
             LOCALE_STAGE_SUB_DIR=$LOCAL_STAGING_DIR/$locale_path/$locale_subdir/
             [ ! -d "$locale_full_path" ] && continue
             asciidoctor \
-              -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
+              -a stylesheet="$ES_SCRIPT_HOME/curr_blank.css" \
               -D "$LOCALE_STAGE_SUB_DIR" "$locale_full_path/*.adoc" || exit 1
-            python3 "$SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
+            python3 "$ES_SCRIPT_HOME/curr_add_html_features.py" "$SRC_DIR" "$LOCALE_STAGE_SUB_DIR" "$ES_HOST" || exit 1
           done
           echo "about to copy toc template"
           # outer loop, this is a root locale directory. process the table of contents
           cp $TOC_TEMPLATE_HTML $LOCALE_STAGE_DIR/toc.html
-          python3 "$SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
-          python3 "$SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
+          python3 "$ES_SCRIPT_HOME/curr_toc.py" "$LOCALE_STAGE_DIR" || exit 1
+          python3 "$ES_SCRIPT_HOME/curr_searchdoc.py" "$LOCALE_STAGE_DIR" || exit 1
         done
       - echo "Completed curriculum build"
       - cd "$SRC_DIR"
