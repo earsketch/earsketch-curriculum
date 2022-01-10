@@ -42,7 +42,7 @@ phases:
         # render the table of contents template first
         TOC_TEMPLATE=$ASCIIDOC_DIR/toc_template.adoc
         TOC_TEMPLATE_HTML=$LOCAL_STAGING_DIR/toc_template.html
-        sudo asciidoctor \
+        asciidoctor \
           -a stylesheet="$SCRIPT_HOME/curr_blank.css" \
           -D "$LOCAL_STAGING_DIR" "$TOC_TEMPLATE" || exit 1
 #        for locale_path in "${locale_array[@]}"
