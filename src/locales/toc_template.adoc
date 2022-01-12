@@ -40,7 +40,7 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/intro-to-groovemachine#,Groove Machine>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/analysis-features#,Analysis Features>>
 // Hour of code and competition
-== <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_HourOfCode#,Hour of Code>>
+== <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_HourOfCode_Intro#,Hour of Code>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_HourOfCode#,Hour of Code>>
 == <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_YVIP_Intro#,Your Voice is Power>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_YVIPModule1#,Your Voice is Power: Module 1>>

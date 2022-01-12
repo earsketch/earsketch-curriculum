@@ -2,7 +2,6 @@
 == Hour of Code with EarSketch
 :nofooter:
 
-[role="curriculum-python"]
 Welcome to the EarSketch Hour of Code.
 
 [[WhatIs]]
