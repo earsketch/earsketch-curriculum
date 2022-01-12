@@ -258,11 +258,11 @@ Let's see more details with this video:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
-video::./videoMedia/011-03-makeBeat()-PY.mp4[]
+video::./videoMedia/3_3 makebeat_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video12js]]
-video::./videoMedia/011-03-makeBeat()-JS.mp4[]
+video::./videoMedia/3_3_makebeat_js.mp4[]
 
 Here is the example shown in the video:
 
@@ -368,7 +368,7 @@ We will use 3 types of sounds: kick (track 1), snare (track 2), and hihat (track
 
 [role="curriculum-mp4"]
 [[video1a]]
-video::./videoMedia/3_4_1_BeatByGenre-PY-JS.mp4[]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
 
 Here is the corresponding code:
 

@@ -254,6 +254,8 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
+_VIDEO ABOUT MAKING EFFECTS COMING SOON_
+
 *Reverb* (short for reverberation) is sound bouncing off walls and returning to your ears. It gives a sense of space to your sound. Think about the difference between talking in a small bedroom and talking in a large church. The larger and "flatter" the room, the longer it takes the waves to return to your ears, hence that "large echoey room" sound. The `REVERB` effect has parameters to control the decay time (`REVERB_DECAY`) and amount of the effect present (`MIX`).
 
 Listen to the clips below to hear the result of adding reverb to a track:

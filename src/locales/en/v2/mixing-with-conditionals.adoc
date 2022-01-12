@@ -147,11 +147,11 @@ Note the difference between:
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
-video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video17ajs]]
-video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
 
 // this video will be cut at 2' to delete the section about boolean operators//
 
