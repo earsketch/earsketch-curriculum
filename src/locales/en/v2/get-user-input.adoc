@@ -17,10 +17,10 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-. In addition to taking some input (parameters), functions can output a value. In programming, we call this returning a value. 
-. The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
-. To use the value that is returned by the function, create a variable and assign it the function call.
-. A return statement is not compulsary. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
+* In addition to taking some input (parameters), functions can output a value. In programming, we call this returning a value. 
+* The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
+* To use the value that is returned by the function, create a variable and assign it the function call.
+* A return statement is not compulsary. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
 
 Here is a code example:
 
@@ -171,7 +171,6 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
 // javascript code
 //
 // script_name: Return Statements 2
@@ -204,6 +203,8 @@ var endMeasure = verse(1); //calling verse function and start is measure 1
 //Finish
 finish();
 ----
+
+{nbsp} +
 
 .PRACTICE
 ****
@@ -265,7 +266,6 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
 // javascript code
 //
 // script_name: Conditional statement in function
@@ -303,6 +303,8 @@ verse(7,false);
 //Finish
 finish();
 ----
+
+{nbsp} +
 
 [[userinput]]
 === Get User Input
@@ -374,7 +376,6 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-"use strict";
 //	javascript code
 //	script_name: User input 1
 //
@@ -464,6 +465,8 @@ fitMedia(finalClip, 1, 1, 5);
 finish();
 ----
 
+{nbsp} +
+
 .PRACTICE
 ****
 Ask for a user input to modify something in your song.
@@ -474,6 +477,8 @@ Here are ideas of tools you can use:
 . data conversion, 
 . creating a specific parameter in a custom function
 ****
+
+{nbsp} +
 
 [[booleanlogic]]
 === Boolean Logic
@@ -559,7 +564,6 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-"use strict";
 // javascript code
 //
 // script_name: Boolean expressions
@@ -579,7 +583,7 @@ println(true || false);
 println(true && true);
 println((true && false) || true);
 println(true && !false);
-println(!(false || false);
+println(!(false || false));
 
 finish();
 
@@ -598,7 +602,8 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 .PRACTICE
 ****
-Now we will combine user input and boolean operations:
+Now we will combine user input and boolean operations.
+
 Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities, for example: "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
 ****
 
@@ -654,7 +659,6 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
-"use strict";
 // javascript code
 //
 // script_name: Boolean operations
@@ -701,10 +705,14 @@ finish();
 
 ----
 
+{nbsp} +
+
 .CHALLENGE
 ****
 This is the Jukebox challence: write a script that will ask for user input in terms of genre, with 3 options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
 ****
+
+{nbsp} +
 
 [[chapter8summary]]
 === Chapter 8 Summary
@@ -792,10 +800,6 @@ Which of the following is an example of concatenation?
 [question]
 --
 How would you obtain the boolean True with the booleans True and False?
-[source,python]
-----
-not (True and (4>5))
-----
 [answers]
 * `True or False`
 * `not True`
@@ -807,10 +811,6 @@ not (True and (4>5))
 [question]
 --
 How would you obtain the boolean true with the booleans true and false?
-[source,javascript]
-----
-!(true && (4>5))
-----
 [answers]
 * `true||false`
 * `!true`
