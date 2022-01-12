@@ -655,7 +655,7 @@ hihat = OS_CLOSEDHAT03
 
 # Adding drums:
 def addingDrums(start,end,pattern):
-  #first, we create beat strings, depening on the parameter pattern:
+  # first, we create beat strings, depening on the parameter pattern:
   if (pattern == "heavy"):
     beatStringKick = "0---0---0---00--"
     beatStringHihat = "-----000----0-00"
@@ -813,7 +813,7 @@ setEffect(3,VOLUME,GAIN,-10);
 finish();
 ----
 
-In that example, we have used a for loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
+In this example, we have used a for loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
 
 
 [[chapter7summary]]
