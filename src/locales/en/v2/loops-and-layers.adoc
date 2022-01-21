@@ -51,7 +51,7 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
+"use strict"
 //    javascript code
 //    script_name: Looping my beats
 //

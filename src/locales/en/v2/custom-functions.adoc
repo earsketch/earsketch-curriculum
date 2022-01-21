@@ -131,7 +131,7 @@ The difference with functions that you have used like `fitMedia()`, is that `fit
 [source, python]
 ----
 def sectionA():
-	# Write your instructions here. This is the body of the functions
+	# Write your instructions here. This is the body of the function
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # main
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # bassline
@@ -143,7 +143,7 @@ def sectionA():
 [source, javascript]
 ----
 function sectionA() {
-	// Write your instructions here. This is the body of the functions
+	// Write your instructions here. This is the body of the function
  	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Making
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5);// Drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bassline
