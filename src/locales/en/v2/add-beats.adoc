@@ -61,10 +61,14 @@ var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;
 fitMedia(synth1, 1, 1, 2);
 ----
 
+{nbsp} +
+
 .PRACTICE
 ****
 In your previous scripts, use variables to store your sound clip names. Look at the examples below for help. Make sure that your variables have short and understandable names (like "bass","voice_1",...) that describe your sound clip.
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
@@ -152,8 +156,9 @@ Let's first learn some basic concepts about rhythm:
 * The *tempo* is the speed of the music in BPM (beats per minute).
 * A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
 * A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
-* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4..." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and..." An 1/8 note can also be divided in 2 *sixteenth (1/16) notes*.
-* 1 measure is 4 1/4 notes, or 8 1/8 notes, or 16 1/16 notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
+* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4..." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and..." 
+* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/8 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a"
+* 1 measure is 4 1/4 notes, 8 1/8 notes, or 16 1/16 notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
 * A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon to the left of the sound level.
 
 [[imediameasurepng]]
@@ -228,6 +233,8 @@ Sixteenth notes: `"0000000000000000"`
 <div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
 ++++
 
+{nbsp} +
+
 ////
 ADDITIONAL VIDEO TO BE ADDED
 See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
@@ -251,11 +258,11 @@ Let's see more details with this video:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
-video::./videoMedia/011-03-makeBeat()-PY.mp4[]
+video::./videoMedia/3_3 makebeat_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video12js]]
-video::./videoMedia/011-03-makeBeat()-JS.mp4[]
+video::./videoMedia/3_3_makebeat_js.mp4[]
 
 Here is the example shown in the video:
 
@@ -328,6 +335,8 @@ makeBeat(cymbal, 2, 1, beat2);
 finish();
 ----
 
+{nbsp} +
+
 .PRACTICE
 ****
 Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
@@ -338,8 +347,10 @@ Please note that:
 . Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
 . Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
 
-When you hear your music, if you don't like your first version, it's perfectly fine: tweak your beat to make it sound better and better, until you like what you have.
+When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
 ****
+
+{nbsp} +
 
 .PRACTICE
 ****
@@ -357,7 +368,7 @@ We will use 3 types of sounds: kick (track 1), snare (track 2), and hihat (track
 
 [role="curriculum-mp4"]
 [[video1a]]
-video::./videoMedia/3_4_1_BeatByGenre-PY-JS.mp4[]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
 
 Here is the corresponding code:
 

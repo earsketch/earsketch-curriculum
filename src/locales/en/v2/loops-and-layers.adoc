@@ -18,7 +18,7 @@ more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPu
 in the "revamping videos" tab (includes link to script)
 ////
 
-Here is the final code from the video:
+_VIDEO ABOUT FOR LOOPS COMING SOON_
 
 [role="curriculum-python"]
 [source,python]
@@ -51,9 +51,7 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-"use strict";
-
+"use strict"
 //    javascript code
 //    script_name: Looping my beats
 //
@@ -97,24 +95,26 @@ image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 * *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
 * *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
 * *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
-* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
 * *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
+* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
 
 .PRACTICE
 ****
-. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4, like in the video
+. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4
 . Modify your code to go from measures 3 to 7
 . Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
 . Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
 . Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
 ****
+
+{nbsp} +
 
 [[printstatements]]
 === Print statements
@@ -138,6 +138,8 @@ Before running the following code, try to guess what the console will display fo
 ****
 Before running the following code, try to guess what the console will display for each `println()` call.
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
@@ -219,13 +221,13 @@ Here, you will see in your console the following lines:
 ----
 4 (this is 1+3, simplified)
 1 (initially your counter measure is equal to 1)
-"ok"
+ok
 2 (now your counter measure is equal to 2)
-"ok" (every time we go through one loop, we print "ok", that's why it's repeated)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
 3
-"ok"
+ok
 4
-"ok"
+ok
 ----
 and it ends there since measure has to be lower than 5, so 4 is your limit.
 
@@ -429,7 +431,7 @@ BMW
 One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive, meaning the for loop stops when the counter becomes the endingNumber). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
 
 [role="curriculum-javascript"]
 Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
@@ -438,6 +440,8 @@ Incrementation means increasing the counter's value. In `for` loops we used the 
 *****
 Before running the following code, try to guess what it will do.
 *****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source, python]
@@ -494,7 +498,7 @@ finish();
 
 
 [role="curriculum-python"]
-Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` (or `-=` to decrement). Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
+Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` to increment or `-=` to decrement. Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
 
 [role="curriculum-javascript"]
 Here we wrote `measure = measure + 4`, which means measure is now equal to its former value plus four. You can use some shorthands:
@@ -507,17 +511,23 @@ Here we wrote `measure = measure + 4`, which means measure is now equal to its f
 [[debuggingtips]]
 === Debugging Tips
 
-Programming is not only writing code. It's also debugging and maintaining it. Debugging means solving the errors. Try following these steps if you run into an error:
+Programming is not only writing code. It's also debugging and maintaining it. Debugging means finding and solving bugs. Bugs are another term for errors in your code. Try following these steps if you run into an error:
 
 [role="curriculum-python"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have 3 options here. 1. If the console provided a line number, take a look at that line and the previous line in your code. 2. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *Commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block. 3. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print` statements where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
+. *Locate the error in your code:* You have 3 options here.
+.. If the console provided a line number, take a look at that line and the previous line in your code. 
+.. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
+.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print` statements where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
 . *Squash the bug* Check for errors and edit the offending code, then run it to verify its correctness.
 . *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes. 
 
 [role="curriculum-javascript"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have 3 options here. 1. If the console provided a line number, take a look at that line and the previous line in your code. 2. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *Commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block. 3. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
+. *Locate the error in your code:* You have 3 options here.
+.. If the console provided a line number, take a look at that line and the previous line in your code.
+.. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
+.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
 . *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
 . *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes. 
 
@@ -531,7 +541,7 @@ video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
 [[video15js]]
 video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
 
-You've seen a list of potential errors in chapter 1. Here are some other errors that you might encounter:
+You've seen a list of potential errors in Chapter 1. Here are some other errors that you might encounter:
 
 [role="curriculum-python"]
 . *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
@@ -562,7 +572,7 @@ Let's start with the *key* of your song:
 * The *key* of a song indicates the scale, or group of pitches, in which the music is composed. Keys can be major (usually sounds "happier") or minor (usually sounds "darker"). 
 * For beginner composers, we recommend that you have just one key for your song. Selecting sounds from different keys might sound... off-key! In general, sounds within the same folder in the EarSketch sound library are all in the same key. 
 
-Listen to the audio clip below to hear the difference between major and minor keys:
+Listen to the audio clip below to hear the difference between major and minor keys (the major scale and chord is first):
 
 ++++
 <div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
@@ -570,16 +580,16 @@ Listen to the audio clip below to hear the difference between major and minor ke
 
 Now let's talk about the different types of tracks you can have. You might remember that you can use one track of your DAW for each type of instrument. In a pop song, you can find the following basic tracks:
 
-* Melody is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar...
-* Harmony is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
-* You also have a bass line. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard...
-* Then there is percussion. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
+* *Melody* is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar, etc.
+* *Harmony* is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
+* You also have a *bass line*. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
+* Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
 
-These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain 1 or 2 of the 4. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes... explore ideas and keep the ones you like most!
+These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain 1 or 2 of the 4. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
 
-Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the mere exposure effect. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
+Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
 
-Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used. A good example of contrast comes around 0'21 (second 21) and 1'01 (minute 1, second 1) of the song https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] by Son Lux.
+Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used. A good example of contrast comes around 0:21 (second 21) and 1:01 (minute 1, second 1) of the song https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] by Son Lux.
 
 .PRACTICE
 ****
@@ -596,6 +606,7 @@ Create a complete song with:
 Remember that you can try things out and keep only the sounds/ideas that you like most. Feel free to share your music!
 ****
 
+{nbsp} +
 
 
 [[chapter4summary]]

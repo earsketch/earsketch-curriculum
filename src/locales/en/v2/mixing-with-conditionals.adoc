@@ -2,7 +2,7 @@
 == Mix with Conditionals!
 :nofooter:
 
-In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected: the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch, using conditionals (“if” statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (“if” statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
 
 
 [[analyzetrack]]
@@ -70,19 +70,20 @@ finish();
 ----
 
 
-You can read in your console that the printed loudness is 0.0967737948641.
+You can read in your console that the printed loudness is 0.10306035109110138.
 
 * The loudness can go from 0 (silence) to 1 (maximum loudness). 
-* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means write 5 zeros before the number 17....This is equal to 0,0000174630733714. 
+* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the right 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714. 
 * Most of the sounds will have a loudness under 0.4 
 
 The `analyzeTrack()` function takes 2 arguments:
-* the track number,
-* the parameter we want to analyze. For loudness it's: `RMS_AMPLITUDE`.
+
+. the track number,
+. the parameter we want to analyze. For loudness it's: `RMS_AMPLITUDE`.
 
 .PRACTICE
 ****
-. You can try this code with different sounds (change the variable "sound") to see what the output is.
+. Try using the code given above with different sounds (change the variable "sound") to see what the output is.
 . Add a second track and use the `analyzeTrack()` function to print its loudness in the console. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
 ****
 
@@ -140,16 +141,17 @@ To create a boolean, you can either initialise a variable (`var variable1 = true
 --
 
 Note the difference between:
+
 1. Comparing two values to see if they are identical: `==`
 2. Assigning a value to a variable: `=`
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
-video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video17ajs]]
-video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
 
 // this video will be cut at 2' to delete the section about boolean operators//
 
@@ -160,7 +162,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 * Create a new script and add sounds on 2 tracks
 * Print `True` if the first track is louder than the second track, and `False` otherwise.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `True`, if not, print `False`.
-* You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`.
+* You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`. For example, you can first print the track number and then 'True' or 'False'
 ****
 
 [role="curriculum-javascript"]
@@ -169,7 +171,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 * Create a new script and add sounds on 2 tracks
 * Print `true` if the first track is louder than the second track, and `false` otherwise.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `true`, if not, print `false`.
-* You can use additional print statements before printing `true` or `false` so that when you read the console, you know what is `true` or `false`.
+* You can use additional print statements before printing `true` or `false` so that when you read the console, you know what is `true` or `false`. For example, you can first print the track number and then 'true' or 'false'.
 ****
 
 Here is an example:
@@ -406,7 +408,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or one track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns indeed a mean whereas percussions are bursts of sound so a mean doesn't raelly evaluate the loudness.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound so a mean doesn't really evaluate the loudness.
 * Use print statements to show your process in the console. Here is an example of print statement: `print('Is track number' + str(track) + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'. The function `str()` converts a number (ex: 1) into a string (ex: '1').
 ****
 
@@ -417,12 +419,13 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or the track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound so a mean doesn't really evaluate the loudness.
 * Use print statements to show your process in the console. Here is an example of print statement: `println('Is track number' + track + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'.
 ****
 
 
 Let's review some vocabulary:
+
 1. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
 2. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
 3. *Statements*: instructions for the computer to execute.
@@ -555,6 +558,8 @@ if (loudnessTrack1 < loudnessTrack2){
 // Finish
 finish();
 ----
+
+{nbsp} +
 
 
 [[chapter6summary]]

@@ -2,37 +2,33 @@
 == Get Started with EarSketch
 :nofooter:
 
-In this chapter you will learn how EarSketch works, you will place sounds (clips) into your music, and see how to debug your code.
+In this chapter you will learn how EarSketch works, you will place sounds (clips) into your music and see how to debug your code.
 
 
 [[discoverearsketch]]
 === Discover EarSketch
 :nofooter:
 
-In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. Where in the program does the code go? Find out in the video!
+In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. Where in the program does the code go? Find out in the video below!
 
 [role="curriculum-mp4"]
 [[video1a]]
-video::./videoMedia/001-03-EarSketchWorkplace-PY-JS.mp4[]
+video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 
 ////
-TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+TODO: upload video
 ////
 
 To use EarSketch
 
-. You can browse and select sounds in your *sound browser*
-. You will write code in your *code editor*, 
-. When you click the *run* button, your music will be shown in the *Digital Audio Workstation* (or *DAW*)
-. You can then click the *play* button to listen to your music
+. You can browse and select sounds in your *sound browser*.
+. You will write code in your *code editor* .
+. When you click the *run* button, your music will be shown in the *Digital Audio Workstation* (or *DAW*).
+. You can then click the *play* button to listen to your music.
 . Then change your code until you are satisfied with what you hear!
-. You can open and close this curriculum panel using the toggle button on the top of the panel
+. You can open and close this curriculum panel using the toggle button on the top of the panel.
 
-////
-OPTIONAL:
-////
-
-What is a DAW?
+_What is a DAW?_
 
 A *Digital Audio Workstation*, or *DAW*, is a piece of software that produces or edits audio or sound clips on a computer, be it in a professional studio or in home laptop-based studios.
 
@@ -52,11 +48,8 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-////
-END OF OPTIONAL
-////
 
-Let's try running a code example in EarSketch! On the box below, press the blue clipboard icon in the top right. This will paste the example code into the *code editor*. No need to understand the code yet, just press the _run_ button: your music will show up in the DAW. You can press _play_ to hear it.
+Let's try running a code example in EarSketch! On the box below, press the blue clipboard icon in the top right corner. This will paste the example code onto a new file in the *code editor*. No need to understand the code yet, just press the _run_ button and your music will show up in the DAW. You can press the _play_ button to hear it.
 
 [role="curriculum-python"]
 [source,python]
@@ -111,6 +104,8 @@ finish();
 
 ----
 
+{nbsp} +
+
 
 
 [[createanewscript]]
@@ -118,22 +113,19 @@ finish();
 
 In EarSketch, each script that you write will correspond to one song. Let's see how to create a script:
 
-. *Sign in or create a new account* in the top right corner of your screen. If you click the white button that reads "Create / Reset Account", you can either recover a lost password, or create a new account ("Register a New Account"). Caution: in general on the internet, don't use the same password for all your accounts & never share your passwords.
+. *Sign in or create a new account* in the top right corner of your screen. If you click the white button that reads "Create / Reset Account", you can either recover a lost password, or create a new account ("Register a New Account"). _Caution:_ in general on the internet, don't use the same password for all your accounts & never share your passwords.
 
-. *Click to create:* If you don't have any scripts open, click on the large blue link in the code editor "click here to create a new script". 
+. *Click to create.* If you don't have any scripts open, click on the large blue link in the code editor that states "Click here to create a new script!"
 +
-If you have one or more script(s) open already, then click on the white "+" icon next to the tabs.
+If you have one or more scripts open already, then click on the white "+" icon next to the right most tab.
 +
 [[newscriptplus]]
 .Create a new script, open scripts
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
 
-////
-TODO: update this screenshot to the current "+"
-////
 
-. *Choose a name and language:* The "Create a new script" dialog box opens. Give your new script a name: it's the name of your song. Then select the programming language (Python or Javascript). Finally, click the "Create" button.
+. *Choose a name and language:* The "Create a new script" dialog box opens. Give your new script a name which will be name of your song. Then select the programming language (Python or Javascript). Finally, click the "Create" button.
 +
 [[newscriptpromptpy]]
 .The create a new script dialog box
@@ -146,27 +138,20 @@ image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
 
-////
-OPTIONAL
-////
 
-What is a programming language?
+*_What is a programming language?_*
 
-Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar rules of your programming language, or the computer won't be able to execute your instructions. 
+Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar rules of your programming language or the computer won't be able to execute your instructions. 
 
-In EarSketch, you can code either in Python or JavaScript.
+In EarSketch, you can code in either Python or JavaScript.
 
 [role="curriculum-python"]
-You are in Python mode. Python is used by companies like Google, Yahoo, NASA, Disney and to code games like Civilization 4, Battlefield 2 and Crystal Space.
+_You are in Python mode. Python is used by companies like Google, Yahoo, NASA, Disney and to code games like Civilization 4, Battlefield 2 and Crystal Space._
 
 [role="curriculum-javascript"]
-You are in JavaScript mode. JavaScript is one of the ten most popular programming languages in the world. Almost every website uses JavaScript.
+_You are in JavaScript mode. JavaScript is one of the ten most popular programming languages in the world. Almost every website uses JavaScript._
 
-At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is *executed* by the computer, and you can see your music appear in the DAW.
-
-////
-END OF OPTIONAL
-////
+At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is then *executed* by the computer, and you can see your music appear in the DAW.
 
 [[fitmedia]]
 === The `fitMedia()` function
@@ -182,19 +167,20 @@ Watch this video to see how to add an audio clip to your song:
 
 [role="curriculum-python curriculum-mp4"]
 [[video110py]]
-video::./videoMedia/001-10-ComposingInEarSketch-PY.mp4[]
+video::./videoMedia/1_3_fitmedia_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video110js]]
-video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
+video::./videoMedia/1_3_fitmedia_js.mp4[]
 
 To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the parenthesis, we'll have 4 parameters, separated by commas:
 
 . *A clip name*: place your cursor between the parenthesis, go to the sound browser, select a clip, and paste it using the blue paste icon.
 . *The track number*: tracks are the rows that run across the DAW; they help you organize your sounds by instrument-type (vocals, lead guitar, rhythm guitar, bass, drums, etc.). You can start at track one for your first sound.
-. *Start measure*: when your sound will start playing. Measures are musical time units. One measure is 4 beats. You can start at measure one with your first sound.
-. *End measure*: when your sound will stop playing.
-*For example: `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.*
+. *Start measure*: the measure when your sound will start playing. Measures are musical time units. One measure is 4 beats. You can start at measure one with your first sound.
+. *End measure*: the measure when your sound will stop playing.
+
+_Example:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.
 
 Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
 
@@ -217,7 +203,7 @@ END OF OPTIONAL
 OPTIONAL
 ////
  
-See some examples of code using `fitMedia()`:
+See some examples of code using `fitMedia()` (Remember you can click the blue clip board in the top right corner of the box to paste the code into a new file):
 
 [role="curriculum-python"]
 [source,python]
@@ -339,11 +325,7 @@ finish();
 
 ----
 
-
-////
-END OF OPTIONAL
-////
-
+{nbsp} +
 
 .PRACTICE
 ****
@@ -366,11 +348,11 @@ Sometimes programmers make mistakes that cause code to work incorrectly, or not 
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
-video::./videoMedia/003-02-UsingtheConsole-PY.mp4[]
+video::./videoMedia/1_4_Debugging_Console_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video3js]]
-video::./videoMedia/003-02-UsingtheConsole-JS.mp4[]
+video::./videoMedia/1_4_Debugging_Console_js.mp4[]
 
 ////
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
@@ -383,7 +365,7 @@ OPTIONAL
 What are the different types of errors?
 
 . *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote fitMedia incorrectly).
-. *Runtime errors*: Your program starts to run, but halts due to an error.
+. *Runtime errors*: Your program starts to run but halts due to an error.
 . *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place. 
 
 ////
@@ -393,10 +375,18 @@ END OF OPTIONAL
 
 Here are some common errors:
 
+[role="curriculum-python"]
 . *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
 . *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. Most items in a script follow a rule called *camel-caps*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `from earsketch import *`, `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
+. *Punctuation:* Missing commas or other punctuation errors
+
+[role="curriculum-javascript"]
+. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
+. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. Most items in a script follow a rule called *camel-caps*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
 . *Punctuation:* Missing commas or other punctuation errors
 
 Time to practice!
@@ -438,7 +428,7 @@ finish()
 // description: Find and fix the errors in this script
 //
 
-init;
+init);
 setTempo(88);
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);

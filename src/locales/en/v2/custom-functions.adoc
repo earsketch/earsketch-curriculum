@@ -2,15 +2,15 @@
 == Custom Functions, Song Structure
 :nofooter:
 
-The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own functions: custom functions, to structure your songs!
+The song structure is the song's organization over time. The goal is to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own function, custom functions, to structure your songs!
 
 [[asongsstructure]]
 === A song's structure
 :nofooter:
 
-A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually musicians try to add contrast between different sections. Intros, Verses, Choruses, and Outros are examples of sections.
+A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually musicians try to add contrast between different sections. _Intros, Verses, Choruses_, and _Outros_ are examples of sections.
 
-A common and simple *form*, or song structure, is ABA. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A: a slower and louder bass, and an additional rattling:
+A common and simple *form*, or song structure, is ABA. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
 
 [[imediau2sections_052016png]]
 .An ABA form within the EarSketch DAW
@@ -111,6 +111,8 @@ setEffect(3,VOLUME,GAIN,-20,9,0,13); // increasing volume of bass line
 finish();
 ----
 
+{nbsp} +
+
 .PRACTICE
 ****
 Select a song that you like. Listen to it and try to notice the different sections. Can you tell when the musicians change sections? How many chorus or verse can you hear? What kind of contrasts can your observe? Share your example with your neighbor.
@@ -123,13 +125,13 @@ Keep in mind that a musical phrase sounds most natural when clips are arranged i
 
 In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more efficient, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.  
 
-The difference with functions that you have used like `fitMedia()`, is that you will need to define your custom function, whereas `fitMedia()` is already pre-defined. Here is how you would define section A:
+The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a song. In a custom function, you get to define exactly what it does. Here is how you would define section A:
 
 [role="curriculum-python"]
 [source, python]
 ----
 def sectionA():
-	# Here write your instructions. This is the body of the functions
+	# Write your instructions here. This is the body of the function
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # main
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # bassline
@@ -141,16 +143,15 @@ def sectionA():
 [source, javascript]
 ----
 function sectionA() {
-	// Here write your instructions. This is the body of the functions
+	// Write your instructions here. This is the body of the function
  	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Making
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5);// Drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bassline
 	setEffect(3,VOLUME,GAIN,-20,1,0,5); // increasing volume of bass line
-	//This code is indented. When writing the rest of your script, make sure you stop indenting
 }
 ----
 
-. Here, sectionA() is the name we chose for our function, you can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
+. sectionA() is the name we chose for our function, you can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
 . The instructions are the *body* of the function. They are indented.
 
 .PRACTICE
@@ -164,8 +165,9 @@ Now we want to add section A from measures 9 to 13. However, when we call sectio
 
 .PRACTICE
 ****
-In your current script, 
-1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition. (`sectionA(startMeasure,endMeasure)`).
+In your current script you created for the previous practice problem:app-name:
+
+1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`
 2. In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
 3. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
 4. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
@@ -283,13 +285,13 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Transition Strategies
 
-Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help go smoothly from one section to the next. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. The goal of a transition is to grab the listener's attention and let them know a change is about to occur. 
+Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help one section smoothly go into the next. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. The goal of a transition is to grab the listener's attention and let them know a change is about to occur. 
 
 Following are some popular strategies for creating musical transitions:
 
 . *Crash Cymbal*: placing a crash cymbal on the first beat of a new section. See this https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[example^].
 . *Drum Fill*: A rhythmic variation to fill the gap before a new section. See these https://www.youtube.com/watch?v=YMskGG39Y0Y[examples^] of drum fills.
-. *Track Dropouts*: Making some tracks temporarily drop out to create pauses. Listent to https://www.youtube.com/watch?v=PxIgHSOLO_Q[Imagine Dragon's Love], at 1'16 for an example.
+. *Track Dropouts*: Making some tracks temporarily drop out to create pauses. Listen to https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
 . *Melody Variation*: Introducing a variation of the chords, bassline, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff. 
 . *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music), and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1. Here is an example of riser in https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[a techno set from Carl Cox^].
 . *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a clip like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`. Here is an https://www.youtube.com/watch?v=c3HLuTAsbFE[example^].
@@ -300,8 +302,10 @@ Following are some popular strategies for creating musical transitions:
 .PRACTICE
 ****
 Looking at this list of possible transitions, select 2 of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
+
+The transition should be placed 1 or 2 measures before the new section. You can use several transition techniques at the same time.
 ****
-The transition should be placed 1 or 2 measures before the new section. You can use several transition techniques at the same time. 
+ 
 
 Drum fills:
 
@@ -593,10 +597,12 @@ setEffect(8, VOLUME, GAIN, -20);
 finish();
 ----
 
+{nbsp} +
+
 [[yourfullsong]]
 === Your full song
 
-In programming we can create *abstractions*:  bundling of ideas to form a single concept. Just like in music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
+In programming we can create *abstractions*, bundling of ideas to form a single concept. Just like in music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
 
 .PRACTICE
 ****
@@ -604,10 +610,10 @@ Let's create a full song using all the tools you've discovered in EarSketch! Her
 
 . Choose a theme for your song. Think about the type of sounds, or instruments, or lyrics that will best convey your message.
 . Then select a simple structure. 
-. And finally, start coding! start with some `fitMedia()` functions to select sounds.
+. And finally, start coding! Start with some `fitMedia()` functions to select sounds.
 . Use `makeBeat()` to add some percussions.
 . You can upload your own sounds.
-. Use for loops to reduce repetition in your code.
+. Use `for` loops to reduce repetition in your code.
 . Use custom functions to define your sections, and create your song structure.
 . Add one or two meaningful transition(s).
 . Add effects with setEffect().
@@ -651,7 +657,7 @@ hihat = OS_CLOSEDHAT03
 
 # Adding drums:
 def addingDrums(start,end,pattern):
-  #first, we create beat strings, depening on the parameter pattern:
+  # first, we create beat strings, depening on the parameter pattern:
   if (pattern == "heavy"):
     beatStringKick = "0---0---0---00--"
     beatStringHihat = "-----000----0-00"
@@ -809,7 +815,7 @@ setEffect(3,VOLUME,GAIN,-10);
 finish();
 ----
 
-In that example, we have used a for loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
+In this example, we have used a for loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
 
 
 [[chapter7summary]]
