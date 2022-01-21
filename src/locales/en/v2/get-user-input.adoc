@@ -171,6 +171,8 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
+"use strict";
+
 // javascript code
 //
 // script_name: Return Statements 2
@@ -266,6 +268,8 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
+"use strict";
+
 // javascript code
 //
 // script_name: Conditional statement in function
@@ -376,6 +380,8 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
+"use strict";
+
 //	javascript code
 //	script_name: User input 1
 //
@@ -564,6 +570,8 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
+"use strict";
+
 // javascript code
 //
 // script_name: Boolean expressions
@@ -659,6 +667,8 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
+"use strict";
+
 // javascript code
 //
 // script_name: Boolean operations

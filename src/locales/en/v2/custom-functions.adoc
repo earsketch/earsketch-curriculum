@@ -68,6 +68,8 @@ finish()
 [role="curriculum-javascript"]
 [source, javascript]
 ----
+"use strict";
+
 // JavaScript code
 //
 // script_name: A-B-A Form
