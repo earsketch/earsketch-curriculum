@@ -172,7 +172,6 @@ finish()
 [source,javascript]
 ----
 "use strict";
-
 // javascript code
 //
 // script_name: Return Statements 2
@@ -269,7 +268,6 @@ finish()
 [source,javascript]
 ----
 "use strict";
-
 // javascript code
 //
 // script_name: Conditional statement in function
@@ -381,7 +379,6 @@ finish()
 [source, javascript]
 ----
 "use strict";
-
 //	javascript code
 //	script_name: User input 1
 //
@@ -571,7 +568,6 @@ finish()
 [source, javascript]
 ----
 "use strict";
-
 // javascript code
 //
 // script_name: Boolean expressions
@@ -668,7 +664,6 @@ finish()
 [source, javascript]
 ----
 "use strict";
-
 // javascript code
 //
 // script_name: Boolean operations
