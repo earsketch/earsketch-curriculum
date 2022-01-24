@@ -11,7 +11,8 @@ englishDict = {
     "fr": "Anglaise",
     "ar": "إنجليزي",
     "he": "אנגלית",
-    "iu": "English"
+    "iu": "English",
+    "oj": "English"
 }
 
 if len(sys.argv) < 2:
@@ -118,8 +119,7 @@ for unit in parser.find_all('div', attrs={'class': 'sect1'}):
 toc_pages = []
 
 for unitIdx, unit in enumerate(toc_data):
-    if len(unit['chapters']) == 0:
-        toc_pages.append([unitIdx])
+    toc_pages.append([unitIdx])
 
     for chIdx, ch in enumerate(unit['chapters']):
         if len(ch['sections']) == 0:
