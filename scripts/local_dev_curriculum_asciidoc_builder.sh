@@ -38,7 +38,8 @@ declare -a locale_array=(en
                       ar
                       he
                       fr
-                      iu)
+                      iu
+                      oj)
 
 declare -a locale_subdir_array=(v1
                               v2)
