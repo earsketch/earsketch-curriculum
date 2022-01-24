@@ -17,10 +17,10 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-. In addition to taking some input (parameters), functions can output a value. In programming, we call this returning a value. 
-. The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
-. To use the value that is returned by the function, create a variable and assign it the function call.
-. A return statement is not compulsary. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
+* In addition to taking some input (parameters), functions can output a value. In programming, we call this returning a value. 
+* The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
+* To use the value that is returned by the function, create a variable and assign it the function call.
+* A return statement is not compulsary. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
 
 Here is a code example:
 
@@ -38,7 +38,7 @@ Here is a code example:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(100)
@@ -46,7 +46,7 @@ setTempo(100)
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
-#Music
+# Music
 
 def createBeat(startMeasure, soundClip, beatString):
   endMeasure = startMeasure + 3
@@ -63,7 +63,7 @@ newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
 # Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -81,14 +81,14 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(100);
 
 var rhythm1 = "0+++0+0+0+--0+00";
 var rhythm2 = "0+0-00++0-000+++";
 
-//Music
+// Music
 
 function createBeat(startMeasure, soundClip, beatString){
   endMeasure = startMeasure + 3;
@@ -107,7 +107,7 @@ var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
 // Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -145,7 +145,7 @@ Here is an example:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
@@ -164,7 +164,7 @@ def verse(start):
 endMeasure = verse(1) #calling verse function and start is measure 1
 print(endMeasure)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -183,7 +183,7 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
@@ -201,9 +201,11 @@ function verse(start) {
 var endMeasure = verse(1); //calling verse function and start is measure 1
  println(endMeasure);
 
-//Finish
+// Finish
 finish();
 ----
+
+{nbsp} +
 
 .PRACTICE
 ****
@@ -231,12 +233,12 @@ Here is an example code:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
@@ -246,19 +248,19 @@ melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
 drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
 # Function definition
-def verse(start,variation):
+def verse(start, variation):
   # variation is either equal to True or False
   if variation:
-    fitMedia(melody1,1,start,start+4)
+    fitMedia(melody1, 1, start, start+4)
   else:
-  	fitMedia(melody2,1,start,start+4)
-  fitMedia(drums1,2,start,start+4) # this is outside the conditional statement (no indentation)
+  	fitMedia(melody2, 1, start, start+4)
+  fitMedia(drums1, 2, start, start+4) # this is outside the conditional statement (no indentation)
 
 # Function calls
-verse(1,True)
-verse(7,False)
+verse(1, True)
+verse(7, False)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -277,7 +279,7 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
@@ -286,28 +288,30 @@ var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
 // Function definition
-function verse(start,variation){
+function verse(start, variation){
   // variation is either equal to true or false
   if(variation){
-    fitMedia(melody1,1,start,start+4);
+    fitMedia(melody1, 1, start, start+4);
   } else {
-  	fitMedia(melody2,1,start,start+4);
+  	fitMedia(melody2, 1, start, start+4);
   }
-  fitMedia(drums1,2,start,start+4); // this is outside the conditional statement (no indentation)
+  fitMedia(drums1, 2, start, start+4); // this is outside the conditional statement (no indentation)
 }
 
 // Function calls
-verse(1,true);
-verse(7,false);
+verse(1, true);
+verse(7, false);
 
-//Finish
+// Finish
 finish();
 ----
+
+{nbsp} +
 
 [[userinput]]
 === Get User Input
 
-We'll see how to ask for user input when the "run" button is pressed. This is possible thanks to the `readInput()` function. This functions takes as parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. The `readInput()` function returns what the user types there.
+We'll see how to ask for user input when the "run" button is pressed. This is possible thanks to the `readInput()` function. This function takes as a parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. The `readInput()` function returns what the user types there.
 
 For example, copy the following code in a new script, and run it:
 
@@ -325,7 +329,7 @@ var answer = readInput("What tempo would you like for your music?");
 print(answer)
 ----
 
-We might need to convert an information into a different data type. Here are useful functions:
+We might need to convert the returned user input into a different data type. Here are useful functions:
 
 [role="curriculum-python"]
 * `str()` - converts any value into a string.
@@ -364,7 +368,7 @@ tempo = int(answer)
 setTempo(tempo)
 
 # music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5)
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
 
 # finish
 finish()
@@ -396,7 +400,7 @@ var tempo = Number(answer);
 setTempo(tempo);
 
 // music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5);
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
 
 // finish
 finish();
@@ -418,20 +422,20 @@ Here is another example of what you can do with user input.
 # description: Creating a dubstep song with user-specified parameters
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+# Music
 clipNumber = readInput("Type a clip number between 10 and 46: ")
 dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
 finalClip = dubStepClip + clipNumber
 
-# user selected dubstep wobbles
+# user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -448,11 +452,11 @@ finish()
 // description: Creating a dubstep song with user-specified parameters
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
-//Music
+// Music
 var clipNumber = readInput("Type a clip number between 10 and 46: ");
 var dubStepClip = "DUBSTEP_BASS_WOBBLE_0";
 var finalClip = dubStepClip + clipNumber;
@@ -460,9 +464,11 @@ var finalClip = dubStepClip + clipNumber;
 // user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5);
 
-//Finish
+// Finish
 finish();
 ----
+
+{nbsp} +
 
 .PRACTICE
 ****
@@ -474,6 +480,8 @@ Here are ideas of tools you can use:
 . data conversion, 
 . creating a specific parameter in a custom function
 ****
+
+{nbsp} +
 
 [[booleanlogic]]
 === Boolean Logic
@@ -494,11 +502,11 @@ Now let's look at *boolean operators*: these help combine several booleans. Ther
 * `not`: Takes 1 boolean input and returns the opposite (negated) boolean.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
-* `!`: is called "not": it takes 1 boolean input and returns the opposite (negated) boolean.
+* `&&`: is called "and"; it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+* `||`: is called "or"; it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
+* `!`: is called "not"; it takes 1 boolean input and returns the opposite (negated) boolean.
 
-For example if you are 16, the sentence "I'm 16" is true and the sentences "I'm 17" is false. "I'm 16 and I'm 17" (true and false) is false because you are not both 16 and 17. But the sentence "I'm 16 or I'm 17" (true or false) is true.
+For example if you are 16, the sentence "I'm 16" is true and the sentence "I'm 17" is false. "I'm 16 and I'm 17" (true and false) is false because you are not both 16 and 17. But the sentence "I'm 16 or I'm 17" (true or false) is true.
 
 [role="curriculum-python"]
 .PRACTICE
@@ -569,7 +577,7 @@ finish()
 // description: printing boolean expressions
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
@@ -579,7 +587,7 @@ println(true || false);
 println(true && true);
 println((true && false) || true);
 println(true && !false);
-println(!(false || false);
+println(!(false || false));
 
 finish();
 
@@ -598,8 +606,9 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 .PRACTICE
 ****
-Now we will combine user input and boolean operations:
-Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities, for example: "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
+Now we will combine user input and boolean operations.
+
+Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
 ****
 
 Here is an example:
@@ -632,20 +641,20 @@ edmClapBeat = "----0-------0---"
 
 
 # Requesting user input
-genre = readInput("What genre is your favourite? Hip Hop or EDM?")
+genre = readInput("What genre is your favorite? Hip Hop or EDM?")
 
 # Creating the appropriate rhythm
 if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
-	makeBeat(kick,1,1,hiphopKickBeat)
-	makeBeat(hihat,2,1,hiphopHihatBeat)
+	makeBeat(kick, 1, 1, hiphopKickBeat)
+	makeBeat(hihat, 2, 1, hiphopHihatBeat)
 elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
-	makeBeat(kick,1,1,edmKickBeat)
-	makeBeat(clap,2,1,edmClapBeat)
+	makeBeat(kick, 1, 1, edmKickBeat)
+	makeBeat(clap, 2, 1, edmClapBeat)
 else:
-	print("Sorry we couldn't read the genre you selected. Please run the code again")
+	print("Sorry we couldn't read the genre you selected. Please run the code again.")
 
 # Adding some reverb on track 2
-setEffect(2,REVERB, MIX, 0.1)
+setEffect(2, REVERB, MIX, 0.1)
 
 
 finish()
@@ -664,7 +673,7 @@ finish()
 // description: Asking user for genre and creating beat accordingly
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
@@ -681,56 +690,60 @@ var edmClapBeat = "----0-------0---";
 
 
 // Requesting user input
-var genre = readInput("What genre is your favourite? Hip Hop or EDM?")
+var genre = readInput("What genre is your favorite? Hip Hop or EDM?")
 
 // Creating the appropriate rhythm
 if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
-	makeBeat(kick,1,1,hiphopKickBeat);
-	makeBeat(hihat,2,1,hiphopHihatBeat);
+	makeBeat(kick, 1, 1, hiphopKickBeat);
+	makeBeat(hihat, 2, 1, hiphopHihatBeat);
 } else if((genre == "edm") || (genre == "Edm") || (genre == "EDM")){
-	makeBeat(kick,1,1,edmKickBeat);
-	makeBeat(clap,2,1,edmClapBeat);
+	makeBeat(kick, 1, 1, edmKickBeat);
+	makeBeat(clap, 2, 1, edmClapBeat);
 } else {
-	println("Sorry we couldn't read the genre you selected. Please run the code again");
+	println("Sorry we couldn't read the genre you selected. Please run the code again.");
 }
 
 // Adding some reverb on track 2
-setEffect(2,REVERB, MIX, 0.1);
+setEffect(2, REVERB, MIX, 0.1);
 
 finish();
 
 ----
+
+{nbsp} +
 
 .CHALLENGE
 ****
 This is the Jukebox challence: write a script that will ask for user input in terms of genre, with 3 options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
 ****
 
+{nbsp} +
+
 [[chapter8summary]]
 === Chapter 8 Summary
 
 [role="curriculum-python"]
-* *Return statements* can be included in a function definition to output a result when the function is called
+* *Return statements* can be included in a function definition to output a result when the function is called.
 * `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example to change the tempo or the genre of your music.
 * Some functions allow you to convert data from one type to another. `str()` converts any value into a string.
 `int()` converts a string containing digits into an integer. `float()` convert a string containing digits with a decimal point into a float.
-* You can *concatenate* (link) strings together : "Hello"+"World" will evaluate to "HelloWorld"
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld"
 * *Boolean logic* includes boolean operations. Here are boolean operators:
-** `and`: Takes 2 boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`. 
-** `or`: Takes 2 boolean inputs and returns `True` when at least 1 input is `True`, otherwise returns `False`.
-** `not`: Takes 1 boolean input and returns the opposite (negated) boolean.
-* You have now many tools to introduce variations in your music: user input can determine elements. You can add paramater in your custom functions to select a variation when you call your function.
+** `and`: takes 2 boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+** `or`: takes 2 boolean inputs and returns `True` when at least 1 input is `True`, otherwise returns `False`.
+** `not`: takes 1 boolean input and returns the opposite (negated) boolean.
+* You now have many tools to introduce variations in your music: user input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
 
 [role="curriculum-javascript"]
-* *Return statements* can be included in a function definition to output a result when the function is called
+* *Return statements* can be included in a function definition to output a result when the function is called.
 * `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example to change the tempo or the genre of your music.
 * Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` converts any value into a string. Note that for once, it's a funciton name that starts with an upper case letter.  `Number()`converts a string into a number.
-* You can *concatenate* (link) strings together : "Hello"+"World" will evaluate to "HelloWorld"
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld"
 * *Boolean logic* includes boolean operations. Here are boolean operators:
 ** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
 ** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
 ** `!`: is called "not": it takes 1 boolean input and returns the opposite (negated) boolean.
-* You have now many tools to introduce variations in your music: user input can determine elements. You can add paramater in your custom functions to select a variation when you call your function.
+* You now have many tools to introduce variations in your music: user input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
 
 
 
@@ -792,10 +805,6 @@ Which of the following is an example of concatenation?
 [question]
 --
 How would you obtain the boolean True with the booleans True and False?
-[source,python]
-----
-not (True and (4>5))
-----
 [answers]
 * `True or False`
 * `not True`
@@ -807,10 +816,6 @@ not (True and (4>5))
 [question]
 --
 How would you obtain the boolean true with the booleans true and false?
-[source,javascript]
-----
-!(true && (4>5))
-----
 [answers]
 * `true||false`
 * `!true`
