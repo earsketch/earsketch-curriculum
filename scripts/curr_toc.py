@@ -11,8 +11,8 @@ englishDict = {
     "fr": "Anglaise",
     "ar": "إنجليزي",
     "he": "אנגלית",
-    "iu": "English",
-    "oj": "English"
+    "iu": "ᖃᓪᓗᓈᑎᑐᑦ",
+    "oj": "Zhaaganaashiimong"
 }
 
 if len(sys.argv) < 2:
