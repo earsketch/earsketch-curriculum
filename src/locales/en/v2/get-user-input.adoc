@@ -20,7 +20,7 @@ video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 * In addition to taking some input (parameters), functions can output a value. In programming, we call this returning a value. 
 * The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
 * To use the value that is returned by the function, create a variable and assign it the function call.
-* A return statement is not compulsary. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
+* A return statement is not compulsory. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
 
 Here is a code example:
 
@@ -337,7 +337,7 @@ We might need to convert the returned user input into a different data type. Her
 * `float()` - convert a string containing digits with a decimal point into a float (for example: `"3.5"` becomes `3.5`).
 
 [role="curriculum-javascript"]
-* `String()` - converts any value into a string. Note that for once, it's a funciton name that starts with an upper case letter.
+* `String()` - converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.
 * `Number()` - converts a string into a number (for example: `"3.5"` becomes `3.5`).
 
 In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer. 
@@ -714,7 +714,7 @@ finish();
 
 .CHALLENGE
 ****
-This is the Jukebox challence: write a script that will ask for user input in terms of genre, with 3 options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
+This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with 3 options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
 ****
 
 {nbsp} +
@@ -724,10 +724,10 @@ This is the Jukebox challence: write a script that will ask for user input in te
 
 [role="curriculum-python"]
 * *Return statements* can be included in a function definition to output a result when the function is called.
-* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example to change the tempo or the genre of your music.
+* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
 * Some functions allow you to convert data from one type to another. `str()` converts any value into a string.
-`int()` converts a string containing digits into an integer. `float()` convert a string containing digits with a decimal point into a float.
-* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld"
+`int()` converts a string containing digits into an integer. `float()` converts a string containing digits with a decimal point into a float.
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
 * *Boolean logic* includes boolean operations. Here are boolean operators:
 ** `and`: takes 2 boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
 ** `or`: takes 2 boolean inputs and returns `True` when at least 1 input is `True`, otherwise returns `False`.
@@ -736,9 +736,9 @@ This is the Jukebox challence: write a script that will ask for user input in te
 
 [role="curriculum-javascript"]
 * *Return statements* can be included in a function definition to output a result when the function is called.
-* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` converts any value into a string. Note that for once, it's a funciton name that starts with an upper case letter.  `Number()`converts a string into a number.
-* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld"
+* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
+* Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.  `Number()` converts a string into a number.
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
 * *Boolean logic* includes boolean operations. Here are boolean operators:
 ** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
 ** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
