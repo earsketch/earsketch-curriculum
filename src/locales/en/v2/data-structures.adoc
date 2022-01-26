@@ -3,10 +3,10 @@
 :nofooter:
 
 [role="curriculum-python"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionnality of `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionality of `makeBeat()`.
 
 [role="curriculum-javascript"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionnality of `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionality of `makeBeat()`.
 
 [[datastructures]]
 === What is a Data Structure
@@ -42,7 +42,7 @@ var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
 ----
 
 [role="curriculum-python"]
-If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling OS_SNARE05`.
+If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
 If you have replaced variables with an array, how will you call the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
@@ -50,7 +50,7 @@ If you have replaced variables with an array, how will you call the content of t
 .PRACTICE
 ****
 Create an array with 3 sound clip names.
-Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3; from measures 1 to 5.
+Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3 from measures 1 to 5.
 ****
 
 Here is an example:
@@ -126,10 +126,10 @@ finish();
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-We've seen that `list[index]` will call an element of the list. This can also be used to modify an element of the list. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable, it uses the *assignment operator* `=`.
+We've seen that `list[index]` will call an element of the list. This can also be used to modify an element of the list. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 [role="curriculum-javascript"]
-We've seen that `array[index]` will call an element of the array. This can also be used to modify an element of the array. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable, it uses the *assignment operator* `=`.
+We've seen that `array[index]` will call an element of the array. This can also be used to modify an element of the array. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 .PRACTICE
 ****
@@ -149,7 +149,8 @@ Below is an example. You can have a look in the console to see what is printed w
 # author: The EarSketch Team
 #
 # description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
-
+#
+#
 
 # Setup
 from earsketch import *
@@ -181,8 +182,9 @@ finish()
 //
 // author: The EarSketch Team
 //
-// description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
-
+// description: Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
+//
+//
 
 // Setup
 init();
@@ -193,6 +195,7 @@ setTempo(130);
 // Creating an array of clips
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
+// Going through the array
 for (var track = 1; track<4; track++){
 	var index = track-1;
 	fitMedia(myEnsemble[index], track, 1, 5);
@@ -204,10 +207,10 @@ finish();
 ----
 
 [role="curriculum-python"]
-A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list)-1]` is the last one. For example, if `list = ["Hello","fellow","EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
 .PRACTICE
