@@ -85,12 +85,8 @@ for unit in parser.find_all('div', attrs={'class': 'sect1'}):
 
         url = chapter.find('a').attrs['href']
 
-        # check if Intro section is present in this unit
-        if url.find("_intro") < 0 and url.find("_summary") < 0:
-            chapter_count = chapter_count + 1
-            display_chapter_number = chapter_count
-        else:
-            display_chapter_number = -1
+        chapter_count = chapter_count + 1
+        display_chapter_number = chapter_count
 
         # read the html of current chapter
         chapter_html = codecs.open(curr_dir+'../'+url, 'r').read()
