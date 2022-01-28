@@ -367,7 +367,7 @@ In a new script:
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
 . Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
 . Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
-. Create and print `soundsD`, the slice of `stringC` from the third to the last elements included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 [role="curriculum-javascript"]
@@ -381,7 +381,7 @@ In a new script:
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
 . Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
 . Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
-. Create and print `soundsD`, the slice of `stringC` from the third to the last elements included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 Here is an example of solution:
