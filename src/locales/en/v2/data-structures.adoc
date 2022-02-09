@@ -3,10 +3,10 @@
 :nofooter:
 
 [role="curriculum-python"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionnality of `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionality of `makeBeat()`.
 
 [role="curriculum-javascript"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionnality of `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionality of `makeBeat()`.
 
 [[datastructures]]
 === What is a Data Structure
@@ -42,7 +42,7 @@ var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
 ----
 
 [role="curriculum-python"]
-If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling OS_SNARE05`.
+If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
 If you have replaced variables with an array, how will you call the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
@@ -50,7 +50,7 @@ If you have replaced variables with an array, how will you call the content of t
 .PRACTICE
 ****
 Create an array with 3 sound clip names.
-Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3; from measures 1 to 5.
+Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3 from measures 1 to 5.
 ****
 
 Here is an example:
@@ -126,10 +126,10 @@ finish();
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-We've seen that `list[index]` will call an element of the list. This can also be used to modify an element of the list. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable, it uses the *assignment operator* `=`.
+We've seen that `list[index]` will call an element of the list. This can also be used to modify an element of the list. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 [role="curriculum-javascript"]
-We've seen that `array[index]` will call an element of the array. This can also be used to modify an element of the array. For example: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable, it uses the *assignment operator* `=`.
+We've seen that `array[index]` will call an element of the array. This can also be used to modify an element of the array. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 .PRACTICE
 ****
@@ -149,7 +149,8 @@ Below is an example. You can have a look in the console to see what is printed w
 # author: The EarSketch Team
 #
 # description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
-
+#
+#
 
 # Setup
 from earsketch import *
@@ -181,33 +182,35 @@ finish()
 //
 // author: The EarSketch Team
 //
-// description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
-
+// description: Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
+//
+//
 
 // Setup
 init();
 setTempo(130);
 
-//Music
+// Music
 
 // Creating an array of clips
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
+// Going through the array
 for (var track = 1; track<4; track++){
 	var index = track-1;
 	fitMedia(myEnsemble[index], track, 1, 5);
 	println ("this iteration, track = " + track + " and index = "+ index);
 }
 
-//Finish
+// Finish
 finish();
 ----
 
 [role="curriculum-python"]
-A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list)-1]` is the last one. For example, if `list = ["Hello","fellow","EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: len() function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length-1]` is the last one. For example, if `array = ["Hello","fellow","EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
 .PRACTICE
@@ -241,12 +244,12 @@ Here is an example:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+# Music
 introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
 
 for measure in range(1, len(introSounds)+1):
@@ -255,7 +258,7 @@ for measure in range(1, len(introSounds)+1):
 	track = measure # change track with measure
 	fitMedia(introSounds[index], track, measure, 5)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -273,11 +276,11 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
-//Music
+// Music
 var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
 
 
@@ -288,7 +291,7 @@ for (var measure = 1; measure < introSounds.length + 1; measure++) {
 	fitMedia(introSounds[index], track, measure, 5);
 }
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -364,7 +367,7 @@ In a new script:
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
 . Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
 . Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
-. Create and print `soundsD`, the slice of `stringC` from the third to the last elements included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 [role="curriculum-javascript"]
@@ -378,10 +381,10 @@ In a new script:
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
 . Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
 . Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
-. Create and print `soundsD`, the slice of `stringC` from the third to the last elements included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
-Here is an example of solution:
+Here is an example of a solution:
 
 [role="curriculum-python"]
 [source, python]
@@ -396,7 +399,7 @@ Here is an example of solution:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
@@ -404,16 +407,16 @@ setTempo(120)
 # Creating my beat strings and arrays
 stringA = "0+++----0+++--0+"
 stringB = "0-0-0-0-----0-0-"
-soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1,RD_FUTURE_DUBSTEP_BASSWOBBLE_2,RD_POP_SFX_NOISERHYTHM_1]
-soundsB = [YG_GOSPEL_GUITAR_2,YG_GOSPEL_ORGAN_2]
+soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
+soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
 
 # Print the second character of each string.
 print(stringA[1])
 print(stringB[1])
 
-# Print the last element of your arrays.
-print(soundsA[len(soundsA)-1])
-print(soundsB[len(soundsB)-1])
+# Print the last element of your lists.
+print(soundsA[len(soundsA) - 1])
+print(soundsB[len(soundsB) - 1])
 
 # Create and print stringC, the concatenation of stringA and stringB.
 stringC = stringA + stringB
@@ -431,7 +434,7 @@ print(stringD)
 soundsD = soundsC[2:len(soundsC)]
 print(soundsD)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -446,9 +449,10 @@ finish()
 //
 // author: The EarSketch Team
 //
-// description: Showing what we can do with lists and arrays
+// description: Showing what we can do with strings and arrays
 //
 //
+
 // Setup
 init()
 setTempo(120)
@@ -456,16 +460,16 @@ setTempo(120)
 // Creating my beat strings and arrays
 var stringA = "0+++----0+++--0+";
 var stringB = "0-0-0-0-----0-0-";
-var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1,RD_FUTURE_DUBSTEP_BASSWOBBLE_2,RD_POP_SFX_NOISERHYTHM_1];
-var soundsB = [YG_GOSPEL_GUITAR_2,YG_GOSPEL_ORGAN_2];
+var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
+var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
 
 // Print the second character of each string.
 println(stringA[1]);
 println(stringB[1]);
 
 // Print the last element of your arrays.
-println(soundsA[soundsA.length-1]);
-println(soundsB[soundsB.length-1]);
+println(soundsA[soundsA.length - 1]);
+println(soundsB[soundsB.length - 1]);
 
 // Create and print stringC, the concatenation of stringA and stringB.
 var stringC = stringA + stringB
@@ -476,11 +480,11 @@ var soundsC = (soundsA.concat(soundsB)).concat(soundsA)
 println(soundsC);
 
 // Create and print stringD, the slice of stringC from the second to the fifth characters included.
-var stringD = stringC.substring(1,5)
+var stringD = stringC.substring(1, 5)
 println(stringD);
 
 // Create and print soundsD, the slice of stringC from the third to the last elements included.
-var soundsD = soundsC.slice(2,soundsC.lenght)
+var soundsD = soundsC.slice(2, soundsC.length)
 println(soundsD);
 
 // Finish
@@ -510,12 +514,12 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+# Music
 initialBeat = "0+0+00-00+++-0++"
 drumInstr = RD_UK_HOUSE_MAINBEAT_10
 
@@ -530,10 +534,10 @@ def expander(beatString):
 finalBeat = expander(initialBeat)
 print finalBeat
 
-#makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
+# makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat)
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -551,11 +555,11 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
-//Music
+// Music
 var initialBeat = "0+0+00-00+++-0++";
 var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
 
@@ -572,10 +576,10 @@ function expander(beatString){
 var finalBeat = expander(initialBeat);
 println(finalBeat);
 
-//makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
+// makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat);
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -594,7 +598,7 @@ Finally, `makeBeat()` can handle multiple sound clips at once. This allows you t
 #
 # author: The EarSketch Team
 #
-# description: Using arrays with makeBeat()
+# description: Using lists with makeBeat()
 #
 
 # Setup 
@@ -607,13 +611,13 @@ kick = OS_KICK05
 snare = OS_SNARE01
 kickBeat = "0+++----0+++----"
 snareBeat = "----0+++----0+++"
-makeBeat(kick,1,1,kickBeat)
-makeBeat(snare,2,1,snareBeat)
+makeBeat(kick, 1, 1, kickBeat)
+makeBeat(snare, 2, 1, snareBeat)
 
 # Now, we can combine them (measure 3):
 drums = [OS_KICK05, OS_SNARE01]
 beat = "0+++1+++0+++1+++"
-makeBeat(drums,1,3,beat)
+makeBeat(drums, 1, 3, beat)
 
 # Finish
 finish()
@@ -634,25 +638,25 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(100);
 
-//Music
+// Music
 // Before, we had one track for every sound (measure 1):
 var kick = OS_KICK05;
 var snare = OS_SNARE01;
 var kickBeat = "0+++----0+++----";
 var snareBeat = "----0+++----0+++";
-makeBeat(kick,1,1,kickBeat);
-makeBeat(snare,2,1,snareBeat);
+makeBeat(kick, 1, 1, kickBeat);
+makeBeat(snare, 2, 1, snareBeat);
 
 // Now, we can combine them (measure 3):
 var drums = [OS_KICK05, OS_SNARE01];
 var beat = "0+++1+++0+++1+++";
-makeBeat(drums,1,3,beat);
+makeBeat(drums, 1, 3, beat);
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -660,7 +664,7 @@ finish();
 
 .PRACTICE
 ****
-Copy the code example in chapter 3.4 for beats by genre. Modify the code to have just one `makeBeat()` line for each genre. Sometimes, the hihat is playing at the same time as the kick or snare: in that case, you can have one `makeBeat()` line just for the hihat.
+Copy the code example in chapter 3.4 for beats by genre. Modify the code to have just one `makeBeat()` line for each genre. Sometimes, the hihat is playing at the same time as the kick or snare. In that case, you can have one `makeBeat()` line just for the hihat.
 ****
 
 Here is the solution:
@@ -678,7 +682,7 @@ Here is the solution:
 #
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(110)
@@ -687,20 +691,20 @@ setTempo(110)
 drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01]
 
 # Rock beat on measure 1
-makeBeat(drums,1,1,"0+++1+++0+++1+++")
-makeBeat(drums,2,1,"2+2+2+2+2+2+2+2+")
+makeBeat(drums, 1, 1, "0+++1+++0+++1+++")
+makeBeat(drums, 2, 1, "2+2+2+2+2+2+2+2+")
 
 # Hip hop beat on measure 3
-makeBeat(drums,1,3,"0+++1++1+10+1+++")
-makeBeat(drums,2,3,"2+2+2+2+2+2+2+2+")
+makeBeat(drums, 1, 3, "0+++1++1+10+1+++")
+makeBeat(drums, 2, 3, "2+2+2+2+2+2+2+2+")
 
 # Jazz beat on measure 5
-makeBeat(drums,2,5,"2++2+22++2+22++2")
+makeBeat(drums, 2, 5, "2++2+22++2+22++2")
 
 # Dembow (latin, caribbean) beat on measure 7
-makeBeat(drums,1,7,"0++10+1+0++10+1+")
+makeBeat(drums, 1, 7, "0++10+1+0++10+1+")
 
-#Finish
+# Finish
 finish()
 ----
 
@@ -727,20 +731,20 @@ setTempo(110);
 var drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
 
 // Rock beat on measure 1
-makeBeat(drums,1,1,"0+++1+++0+++1+++");
-makeBeat(drums,2,1,"2+2+2+2+2+2+2+2+");
+makeBeat(drums, 1, 1, "0+++1+++0+++1+++");
+makeBeat(drums, 2, 1, "2+2+2+2+2+2+2+2+");
 
 // Hip hop beat on measure 3
-makeBeat(drums,1,3,"0+++1++1+10+1+++");
-makeBeat(drums,2,3,"2+2+2+2+2+2+2+2+");
+makeBeat(drums, 1, 3, "0+++1++1+10+1+++");
+makeBeat(drums, 2, 3, "2+2+2+2+2+2+2+2+");
 
 // Jazz beat on measure 5
-makeBeat(drums,2,5,"2++2+22++2+22++2");
+makeBeat(drums, 2, 5, "2++2+22++2+22++2");
 
 // Dembow (latin, caribbean) beat on measure 7
-makeBeat(drums,1,7,"0++10+1+0++10+1+");
+makeBeat(drums, 1, 7, "0++10+1+0++10+1+");
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -748,7 +752,7 @@ finish();
 
 .PRACTICE
 ****
-Using what you have learnt in this chapter, create rhythms that you like with `makeBeat()`. You can refer to the video in chapter 3.4 for beats by genre. Don't forget that you can run your code, listen to what you've created, and modify it until it sounds good to you.
+Using what you have learned in this chapter, create rhythms that you like with `makeBeat()`. You can refer to the video in chapter 3.4 for beats by genre. Don't forget that you can run your code, listen to what you've created, and modify it until it sounds good to you.
 ****
 
 {nbsp} +
@@ -756,7 +760,7 @@ Using what you have learnt in this chapter, create rhythms that you like with `m
 [[evaluatingcorrectness]]
 === Evaluate Correctness
 
-Congratulations, now you have acquired musical and coding skills that allows you to be creative with EarSketch! One last thing we want to see with you, is making sure your code is as neat as possible. Here are some elements that you can check:
+Congratulations, now you have acquired musical and coding skills that allows you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
 [role="curriculum-python"]
 * *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
@@ -807,7 +811,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * Add some effects with `setEffect()`, you can add a fade in, fade out, some delay, reverb...
 * You can use a conditional statement to mix your song (adapt the volume of each track).
 * You can ask for user input to modify something in your song.
-* If necessary, place some elements in an array.
+* If necessary, place some elements in a list.
 ****
 
 [role="curriculum-javascript"]
@@ -904,10 +908,10 @@ What is the syntax to concatenate two lists (`listA` and `listB`)?
 --
 How can you get a list from oldList without the first and last elements?
 [answers]
-* `oldList[1:len(oldList)-1]`
+* `oldList[1:len(oldList) - 1]`
 * `oldList[1:len(oldList)]`
 * `oldList[0:len(oldList)]`
-* `oldList[2:len(oldList-1)]`
+* `oldList[2:len(oldList - 1)]`
 --
 
 [role="curriculum-javascript"]
@@ -948,10 +952,10 @@ What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
 --
 How can you get an array from `oldArray` without the first and last elements?
 [answers]
-* `oldArray.slice(1,oldArray.length-1]`
-* `oldArray.slice(1,oldArray.length)`
-* `oldArray.slice(0,oldArray.length)`
-* `oldArray.slice(2:oldArray.length-1)`
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
 --
 
 [[conclusion]]
