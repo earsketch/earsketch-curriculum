@@ -9,40 +9,36 @@
 === اكتشف EarSketch
 :nofooter:
 
-في برنامج EarSketch ، سوف تعطي تعليمات للكمبيوتر عن طريق كتابة كود من التعليمات البرمجية. سطر واحد من الكود (التعليمات البرمجية) هو تعليمة/امر واحدة. جميع التعليمات معاً تسمى برنامج (يمكن أن تسمى هذه التعليمات أيضًا خوارزمية/الغوريثم). تمامًا مثل اتباع وصفة في كتاب طبخ يمكن أن يؤدي إلى وجبة مطبوخة ، فإن تنفيذ برنامج في EarSketch يمكن أن يؤدي إلى أغنية. أين يذهب الكود في البرنامج؟ اكتشف هذا من الفيديو!
+في برنامج EarSketch ، سوف تعطي تعليمات للكمبيوتر عن طريق كتابة كود من التعليمات البرمجية. سطر واحد من الكود (التعليمات البرمجية) هو تعليمة/امر واحدة. جميع التعليمات معاً تسمى برنامج (يمكن أن تسمى هذه التعليمات أيضًا خوارزمية/الغوريثم). تمامًا مثل اتباع وصفة في كتاب طبخ يمكن أن يؤدي إلى وجبة مطبوخة ، فإن تنفيذ برنامج في EarSketch يمكن أن يؤدي إلى أغنية. أين يذهب الكود في البرنامج؟ اكتشف في الفيديو أدناه!
 
 [role="curriculum-mp4"]
 [[video1a]]
-video::./videoMedia/001-03-EarSketchWorkplace-PY-JS.mp4[]
+video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 
 ////
-TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+TODO: upload video
 ////
 
 لاستخدام EarSketch:
 
 . يمكنك تصفح واختيار الأصوات من متصفح الصوت sound browser.
-. سوف تكتب التعليمات البرمجية/الكود في محرر التعليمات البرمجية code editor. 
+. سوف تكتب التعليمات البرمجية/الكود في محرر التعليمات البرمجية code editor.
 . عند النقر فوق الزر * تشغيل * ، ستظهر الموسيقى الخاصة بك في * محطة عمل الصوت الرقمي * (أو * DAW *)
 . يمكنك بعد ذلك النقر على زر *تشغيل* للاستماع إلى الموسيقى الخاصة بك
 .  قم بتغيير التعليمات البرمجية/الكود الخاصة بك حتى تكون راضياً عما تسمعه!
 . يمكنك فتح وإغلاق لوحة المناهج الدراسية هذه باستخدام زر التبديل في الجزء العلوي من اللوحة
 
-////
-OPTIONAL:
-////
+_ما هي منصة العمل الصوتية DAW؟_
 
-ما هو ال DAW?
+* محطة عمل الصوت الرقمي * ، أو *DAWDAW* ، هي جزء من البرنامج ينتج أو يعدل مقاطع الصوت أو الصوت على جهاز كمبيوتر ، سواء كان ذلك في استوديو احترافي أو في كمبيوتر محمول منزلي- الاستوديوهات القائمة.
 
-A *Digital Audio Workstation*, or *DAW*, is a piece of software that produces or edits audio or sound clips on a computer, be it in a professional studio or in home laptop-based studios.
+تتضمن بعض المنصات الصوتية https://www.ableton.com/[Ableton^]و https://www.apple.com/logic-pro/[Logic Pro^],http://www.apple.com/mac/garageband/[GarageBand^],http://www.reaper.fm/[<3>^]</3>Reaper</3>.
 
-Some popular DAWs include https://www.ableton.com/[Ableton^] and https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], and http://www.reaper.fm/[Reaper^].
+باستخدام DAW ، يمكنك تسجيل الملفات الصوتية, تحريرها, تصورها وتشغيلها. تسمى هذه الملفات الصوتية * مقاطع *.
 
-With a DAW, you can record, edit, visualize and play audio files. These audio files are called *clips*.
+يشبه EarSketch منصّة عمل صوتيةDAW ، إلا أنه يمكنك برمجة العناصر الموسيقية مباشرةً باستخدام المقطع البرمجي.
 
-EarSketch is just like a DAW, except you get to directly program the musical elements using code.
-
-Here is how to make full use of the DAW:
+إليك كيفية الاستفادة الكاملة من منصة العمل الصوتية-DAW:
 
 [role="curriculum-mp4"]
 [[video1b]]
@@ -52,11 +48,9 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-////
-END OF OPTIONAL
-////
 
-Let's try running a code example in EarSketch! On the box below, press the blue clipboard icon in the top right. This will paste the example code into the *code editor*. No need to understand the code yet, just press the _run_ button: your music will show up in the DAW. You can press _play_ to hear it.
+دعونا 'نحاول تشغيل مثال لمقطع برمجي في EarSketch! في المربع أدناه ، اضغط على أيقونة الحافظة الزرقاء في الزاوية اليمنى العليا. سيؤدي هذا إلى لصق مثال المقطع البرمجي في ملف جديد في* محرر المقطع البرمجي*. لا حاجة لفهم المقطع البرمجي حتى الآن ، فقط اضغط على الزر _ تشغيل _ وستظهر الموسيقى الخاصة بك في منصة العمل الصوتيةDAW. يمكنك الضغط على الزر _ تشغيل _ لسماعه.
+طلب السياق.
 
 [role="curriculum-python"]
 [source,python]
@@ -111,102 +105,95 @@ finish();
 
 ----
 
+{nbsp} +
+
 
 
 [[createanewscript]]
-=== Create your first script!
+=== قم بإنشاء البرنامج النصي الأول الخاص بك!
 
-In EarSketch, each script that you write will correspond to one song. Let's see how to create a script:
+في EarSketch ، سيتوافق كل نص تكتبه مع أغنية واحدة. دعونا 'نرى كيفية إنشاء برنامج نصي:
 
-. *Sign in or create a new account* in the top right corner of your screen. If you click the white button that reads "Create / Reset Account", you can either recover a lost password, or create a new account ("Register a New Account"). Caution: in general on the internet, don't use the same password for all your accounts & never share your passwords.
+. *تسجيل الدخول أو إنشاء حساب جديد* في الزاوية العلوية اليمنى من شاشتك. إذا قمت بالنقر فوق الزر الأبيض المكتوب عليه "إنشاء / إعادة تعيين الحساب" ، يمكنك إما استعادة كلمة المرور المفقودة ، أو إنشاء حساب جديد ("تسجيل حساب جديد"). _Caution- الحذر:_بشكل عام على الإنترنت ، لا' تستخدم نفس كلمة المرور لجميع حساباتك &؛ لا تشارك كلمات مرورك أبدًا.
 
-. *Click to create:* If you don't have any scripts open, click on the large blue link in the code editor "click here to create a new script". 
+. *انقر لإنشاء* إذا لم يكن' لديك أي نصوص مفتوحة ، فانقر على الرابط الأزرق الكبير في محرر المقطع البرمجي الذي ينص على "انقر هنا لإنشاء نص جديد!"
 +
-If you have one or more script(s) open already, then click on the white "+" icon next to the tabs.
+إذا كان لديك نص أو أكثر مفتوحًا بالفعل ، فانقر على أيقونة "+" البيضاء بجوار علامة التبويب الموجودة في أقصى اليمين.
 +
 [[newscriptplus]]
-.Create a new script, open scripts
+.إنشاء نص جديد ، فتح البرامج النصية
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
 
-////
-TODO: update this screenshot to the current "+"
-////
 
-. *Choose a name and language:* The "Create a new script" dialog box opens. Give your new script a name: it's the name of your song. Then select the programming language (Python or Javascript). Finally, click the "Create" button.
+. *اختر اسمًا ولغة:*يفتح مربع الحوار "إنشاء برنامج نصي جديد". امنح برنامجك النصي الجديد اسمًا وسيكون اسم أغنيتك. ثم حدد لغة البرمجة (Python أو Javascript). أخيرًا ، انقر فوق الزر "إنشاء".
 +
 [[newscriptpromptpy]]
-.The create a new script dialog box
+.إنشاء صندوق حوار لبرنامج نصي جديد
 [role="curriculum-python"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 [[newscriptpromptjs]]
-.The create a new script dialog box
+.إنشاء صندوق حوار لبرنامج نصي جديد
 [role="curriculum-javascript"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
 
-////
-OPTIONAL
-////
 
-What is a programming language?
+*_ما هي لغة البرمجة؟_*
 
-Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar rules of your programming language, or the computer won't be able to execute your instructions. 
+تمت كتابة المقطع البرمجي* بلغة برمجة* ، والتي تتضمن مفردات وبناء جملة ، تمامًا مثل اللغة العادية. تحتاج إلى معرفة القواعد النحوية للغة البرمجة الخاصة بك أو لن يتمكن' الكمبيوتر من تنفيذ تعليماتك. 
 
-In EarSketch, you can code either in Python or JavaScript.
+في EarSketch ، يمكنك البرمجة باستخدام Python أو JavaScript.
 
 [role="curriculum-python"]
-You are in Python mode. Python is used by companies like Google, Yahoo, NASA, Disney and to code games like Civilization 4, Battlefield 2 and Crystal Space.
+_أنت في وضع بايثون-Python. يتم استخدام Python من قبل شركات مثل Google و Yahoo و NASA و Disney ولألعاب البرمجة مثل Civilization 4 و Battlefield 2 و Crystal Space._
 
 [role="curriculum-javascript"]
-You are in JavaScript mode. JavaScript is one of the ten most popular programming languages in the world. Almost every website uses JavaScript.
+_أنت في وضع JavaScript. JavaScript هي إحدى لغات البرمجة العشر الأكثر شيوعًا في العالم. يستخدم كل موقع ويب تقريبًا JavaScript._
 
-At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is *executed* by the computer, and you can see your music appear in the DAW.
-
-////
-END OF OPTIONAL
-////
+في المستوى الأعمق ، تعمل أجهزة الكمبيوتر في مجموعات من 1 و 0: أرقام ثنائية. ذلك 'لأن المكونات الإلكترونية يمكن أن تتفاعل بشكل مختلف إذا كان هناك تيار كهربائي (1) أو إذا لم يكن هناك تيار كهربائي (0). عندما تضغط على الزر * تشغيل * ، يترجم الكمبيوتر تعليمات Python أو JavaScript إلى كود ثنائي. ثم يتم *تنفيذ*الرمز بواسطة الكمبيوتر ، ويمكنك رؤية الموسيقى الخاصة بك تظهر في منصة العمل الصوتية-DAW.
 
 [[fitmedia]]
-=== The `fitMedia()` function
+=== دالة ال `fitMedia()`
 
-Now that you have created your first script, let's start working on your music!
+الآن بعد أن أنشأت السيناريو الأول ، دعنا' نبدأ العمل على موسيقاك!
 
 [role="curriculum-python"]
-Start writing your code between the `setTempo(120)` and `finish()` lines.
+ابدأ في كتابة التعليمات البرمجية الخاصة بك بين السطور `setTempo(120)` و `finish()` lines.
 [role="curriculum-javascript"]
-Start writing your code between the `setTempo(120);` and `finish();` lines.
+ابدأ في كتابة التعليمات البرمجية الخاصة بك بين السطور `setTempo(120)` و `finish()` lines.
 
-Watch this video to see how to add an audio clip to your song:
+شاهد هذا الفيديو لمعرفة كيفية إضافة مقطع صوتي إلى ألاغنية الخاصة بك:
 
 [role="curriculum-python curriculum-mp4"]
 [[video110py]]
-video::./videoMedia/001-10-ComposingInEarSketch-PY.mp4[]
+video::./videoMedia/1_3_fitmedia_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video110js]]
-video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
+video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the parenthesis, we'll have 4 parameters, separated by commas:
+لإضافة مقطع صوتي إلى منصة العمل الصوتيةDAW</code>، نبدأ بكتابة <code>fitMedia()</0>. بين القوسين ، سيكون 'لدينا 4 عوامل ، مفصولة بفاصلات:
 
-. *A clip name*: place your cursor between the parenthesis, go to the sound browser, select a clip, and paste it using the blue paste icon.
-. *The track number*: tracks are the rows that run across the DAW; they help you organize your sounds by instrument-type (vocals, lead guitar, rhythm guitar, bass, drums, etc.). You can start at track one for your first sound.
-. *Start measure*: when your sound will start playing. Measures are musical time units. One measure is 4 beats. You can start at measure one with your first sound.
-. *End measure*: when your sound will stop playing.
-*For example: `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.*
+. * اسم مقطع *: ضع المؤشر بين القوسين ، وانتقل إلى متصفح الصوت ، وحدد مقطعًا ، والصقه باستخدام رمز اللصق الأزرق.
+. * رقم المسار *: المسارات هي الصفوف التي تعمل عبر منصة العمل الصوتيةDAW الرقمية ؛ أنها تساعدك على تنظيم الأصوات الخاصة بك حسب نوع الآلة (غناء ، الغيتار الرئيسي ، إيقاع الغيتار ، الجهير ، الطبول ، إلخ). يمكنك البدء في المسار الأول لصوتك الأول.
+. * بدء القياس *: قياس وقت بدء تشغيل الصوت. القياسات هي وحدات زمنية موسيقية. مقياس واحد هو 4 دقات-ضربات. يمكنك البدء في قياس واحد بصوتك الأول.
+. * نهاية القياس *: القياس وقت توقف الصوت عن التشغيل.
 
-Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
+_مثال:_``fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` سيضع الصوت <1>Y18_DRUM_SAMPLES_2` على المسار 1 من القياس 1 إلى القياس 5.
+
+ثم اضغط على _ تشغيل _: يجب أن تتخيل صوتك في منصة العمل الصوتية الرقميةDAW. عند الضغط على _ تشغيل _ يمكنك سماعه.
 
 [role="curriculum-javascript"]
-A *statement* tells the computer to carry out an action. For example, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` is a statement. Every statement in JavaScript *_should end with a semicolon_*.
+تخبر*العبارة* الحاسوب بتنفيذ إجراء ما. على سبيل المثال,`fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);`هو بيان. كل عبارة في JavaScript *_<1>يجب أن تنتهي بفاصلة منقوطة_*.
 
 
 ////
 OPTIONAL
 ////
 
-The *Sound Browser*: Browse or search 4,000 audio clips to use in your music, made by musicians/producers https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, and https://www.sndbrd.com/[Milknsizz^].
+* متصفح الصوت *: تصفح أو ابحث عن 4000 مقطع صوتي لاستخدامها في موسيقاك ، من تأليف الموسيقيين / المنتجين https://en.wikipedia.org/wiki/Young_Guru[ Young Guru ^] ، https://en.wikipedia.org/wiki/Richard_Devine[ Richard Devine ^] ، <3 > Ciara </a> و https://en.wikipedia.org/wiki/Common_(rapper)[ Common ^] و https://en.wikipedia.org/wiki/Pharrell_Williams[ Pharrell Williams ^] و Irizarry y Caraballo و https://www.sndbrd.com/[ Milknsizz ^].
 
 
 ////
@@ -217,12 +204,12 @@ END OF OPTIONAL
 OPTIONAL
 ////
  
-See some examples of code using `fitMedia()`:
+شاهد بعض الأمثلة على التعليمات البرمجية باستخدام ` fitMedia () ` (تذكر أنه يمكنك النقر فوق لوحة الحافظة الزرقاء في الزاوية اليمنى العليا من المربع للصق الرمز في ملف جديد):
 
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
+python code
 #
 # script_name: EarSketch Demo
 #
@@ -273,7 +260,7 @@ finish();
 
 ----
 
-For an extra challenge, add more `fitMedia()` calls to your script like we do below. Notice that we use a different track number for each `fitMedia()` call:
+لتحدي إضافي ، أضف المزيد من استدعاءات `fitMedia()`إلى البرنامج النصي كما نفعل أدناه. لاحظ أننا نستخدم رقم مسار مختلف لكل استدعاء` fitMedia () `:
 
 [role="curriculum-python"]
 [source,python]
@@ -339,38 +326,34 @@ finish();
 
 ----
 
+{nbsp} +
 
-////
-END OF OPTIONAL
-////
-
-
-.PRACTICE
+.تدريب
 ****
-Using sounds that you like:
+باستخدام الأصوات التي تحبها:
 
-. Place sounds on 2 different tracks 
-. Place sounds from measures 2 to 12
-. Create a short song with 3 tracks that is 8 measures long or more
+. ضع الأصوات على مسارين مختلفين 
+. ضع الأصوات من قياس 2 حتى12
+. قم بإنشاء أغنية قصيرة من 3 مسارات بطول 8 مقاييس أو أكثر
 
-For each exercise, you can have your neighbour listen to your song.
+لكل تمرين ، يمكنك أن تجعل صديقك يستمع إلى أغنيتك.
 
-If you have errors when running your code, check out the next chapter about debugging.
+إذا كانت لديك أخطاء عند تشغيل التعليمات البرمجية الخاصة بك ، فتحقق من الفصل التالي حول تصحيح الأخطاء.
 ****
 
 
 [[debugging]]
-=== Debug your code
+=== تصحيح التعليمات البرمجية الخاصة بك
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. You can use debugging strategies, using the console.
+يرتكب المبرمجون أحيانًا أخطاء تؤدي إلى عمل التعليمات البرمجية بشكل غير صحيح أو عدم تشغيلها على الإطلاق. في البرمجة ، تسمى أخطاء الترميز * أخطاء * أو * خلل برمجي *. تسمى عملية البحث عن الأخطاء وإصلاحها * تصحيح الأخطاء *. يمكنك استخدام استراتيجيات التصحيح باستخدام وحدة التحكم.
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
-video::./videoMedia/003-02-UsingtheConsole-PY.mp4[]
+video::./videoMedia/1_4_Debugging_Console_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video3js]]
-video::./videoMedia/003-02-UsingtheConsole-JS.mp4[]
+video::./videoMedia/1_4_Debugging_Console_js.mp4[]
 
 ////
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
@@ -380,27 +363,35 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 OPTIONAL
 ////
 
-What are the different types of errors?
+ما هي أنواع الأخطاء المختلفة؟
 
-. *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote fitMedia incorrectly).
-. *Runtime errors*: Your program starts to run, but halts due to an error.
-. *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place. 
+. * أخطاء في بناء الجملة *: برنامجك لا يعمل لأن مقطعك البرمجي يكسر قواعد *<0>بناء الجملة* للغة ' (على سبيل المثال: نسيت إغلاق قوس ، أو كتبت fitMedia بشكل غير صحيح).
+. * أخطاء وقت التشغيل *: يبدأ برنامجك في العمل ولكنه يتوقف بسبب خطأ.
+. * أخطاء منطقية *: يعمل برنامجك ، لكنه لا يفعل' ما هو متوقع. يمكنك إصلاحها من خلال النظر إلى منصة العمل الصوتية للتحقق مما إذا كانت المقاطع التي قصدت إضافتها قد تمت إضافتها بالفعل في المكان الصحيح. 
 
 ////
 END OF OPTIONAL
 ////
 
 
-Here are some common errors:
+فيما يلي بعض الأخطاء الشائعة:
 
-. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
-. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. Most items in a script follow a rule called *camel-caps*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+[role="curriculum-python"]
+. * خطأ إملائي: * تدقق من الاملاء عند استخدام دالة مثل ` fitMedia () ` أو ثوابت الصوت.
+. * حساسية حالة الأحرف: * معظم الكلمات المستخدمة في البرمجة حساسة لحالة الأحرف (يتعرف الكمبيوتر على الفرق بين الأحرف الكبيرة وغير الكبيرة). انتبه للأحرف الصغيرة والكبيرة. على سبيل المثال ، اكتب ` fitMedia () ` وليس ` FitMedia () ` أو ` fitmedia () `. تتبع معظم العناصر في البرنامج النصي قاعدة تسمى * camel-caps *: الكلمة الأولى هي أحرف صغيرة ، والحرف الأول من الكلمات اللاحقة مكتوب بأحرف كبيرة ، كما في ` exampleFunctionName () `.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `from earsketch import *`, `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
-. *Punctuation:* Missing commas or other punctuation errors
+. * إعداد البرنامج النصي: * يضيف EarSketch دوال الإعداد إلى برنامج نصي جديد تلقائيًا ، ولكن قد تحذف عن طريق الخطأ ` earsketch من استيراد * ` ، ` init () ` ، <1 > setTempo () </code> أو ` finish () `. تأكد من ظهور هذه الدوال في كل نص برمجي.
+. * علامات الترقيم: * الفواصل المفقودة أو أخطاء علامات الترقيم الأخرى
 
-Time to practice!
-Find the 5 errors in the following code:
+[role="curriculum-javascript"]
+. * خطأ إملائي: * تدقق من الاملاء عند استخدام دالة مثل ` fitMedia () ` أو ثوابت الصوت.
+. * حساسية حالة الأحرف: * معظم الكلمات المستخدمة في البرمجة حساسة لحالة الأحرف (يتعرف الكمبيوتر على الفرق بين الأحرف الكبيرة وغير الكبيرة). انتبه للأحرف الصغيرة والكبيرة. على سبيل المثال ، اكتب ` fitMedia () ` وليس ` FitMedia () ` أو ` fitmedia () `. تتبع معظم العناصر في البرنامج النصي قاعدة تسمى * camel-caps *: الكلمة الأولى هي أحرف صغيرة ، والحرف الأول من الكلمات اللاحقة مكتوب بأحرف كبيرة ، كما في ` exampleFunctionName () `.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
+. * إعداد البرنامج النصي: * يضيف EarSketch دوال الإعداد إلى برنامج نصي جديد تلقائيًا ، ولكن قد تحذف عن طريق الخطأ ` init () ` أو ` setTempo () ` أو <1 > النهاية () </code>. تأكد من ظهور هذه الدوال في كل نص برمجي.
+. * علامات الترقيم: * الفواصل المفقودة أو أخطاء علامات الترقيم الأخرى
+
+حان وقت التدريب!
+ابحث عن الأخطاء الخمسة في المقطع البرمجي التالي:
 
 [role="curriculum-python"]
 [source,python]
@@ -438,7 +429,7 @@ finish()
 // description: Find and fix the errors in this script
 //
 
-init;
+init);
 setTempo(88);
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
@@ -451,13 +442,13 @@ finish();
 OPTIONAL
 ////
 
-Here is the answer
+إليك الإجابة
 
-. The `init()` function is missing a parentheses
-. The first `fitMedia()` is missing an 'e'
-. The first `fitMedia()` is missing a comma between the third and fourth parameters
-. The second `fitMedia()` is missing an uppercase 'M'
-. In the second `fitMedia()`, the order of parameters is not correct: it should be sound clip name then track number
+. الدالة `init()`تفتقد إلى الأقواس
+. أول ` fitMedia () ` ينقصه الحرف "e"
+. أول ` fitMedia () ` ينقصه فاصلة بين العاملين الثالث والرابع
+. الثانية ` fitMedia () ` تفتقد إلى حرف كبير "M"
+. في الثانية ` fitMedia () ` ، ترتيب العوامل غير صحيح: يجب أن يكون اسم مقطع الصوت ثم رقم المسار
 
 ////
 END OF OPTIONAL
@@ -476,63 +467,63 @@ TODO: when options are ready, modify the link
 
 
 [[chapter1summary]]
-=== Chapter 1 Summary
+=== الفصل 1ملخص
 
 [role="curriculum-python"]
-* A line of code is an instruction to be carried out by the computer. All the instructions together make up the program.
-* *DAW's* are specialized computer software for recording, editing, and playing digital audio files, or *clips*. EarSketch is a DAW that allows audio clips to be placed on a timeline with code. 
-* To make music in EarSketch, code is first typed into the code editor panel. After pressing run, music is played in the DAW panel.
-* Sound clips can be found in the Sound Browser. They are referred to by typing or pasting their name in all caps.
-* A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
-* *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
-* Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
-** *fileName:* The sound clip that is placed in the DAW.
-** *trackNumber:* The track on which music is placed.
-** *startLocation:* The measure at which the sound clip will start.
-** *endLocation:* The measure at which the sound clip will end.
-* *Debugging* is the process of finding and fixing *bugs*, errors made by the programmer.
-* The rules of *syntax* define how code must be written in a particular programming language.
-* The *console* shows information about the state of a program, making it useful for debugging syntax errors. 
-* Common beginner errors include typos, incorrect case, missing parentheses, improper script setup...
+* سطر من التعليمات البرمجية هو تعليمات يجب أن يتم تنفيذها بواسطة الكمبيوتر. كل التعليمات معا تشكل البرنامج.
+* *DAW'*هي برامج كمبيوتر متخصصة لتسجيل وتحرير وتشغيل ملفات الصوت الرقمية أو * مقاطع *. EarSketch هو منصة عمل صوتية تسمح بوضع المقاطع الصوتية في جدول زمني مع رمز. 
+* لإنشاء موسيقى في EarSketch ، يتم كتابة المقطع البرمجي أولاً في لوحة محرر المقطع. بعد الضغط على تشغيل ، يتم تشغيل الموسيقى في لوحة DAW.
+* يمكن العثور على مقاطع الصوت في متصفح الصوت. يشار إليهم بكتابة أو لصق اسمهم بأحرف كبيرة.
+* الحسوب * برنامج * وهو سلسلة من التعليمات التي ينفذها الكمبيوتر لإنجاز مهمة محددة. 
+* * لغات البرمجة * هي مجموعة من الكلمات والرموز التي يفهمها الحاسوب. تتبع لغة البرمجة بناء الجملة من أجل تنظيم المقطع الرمجي.
+* يتكون برنامج EarSketch النصي من قسم التعليقات وقسم الإعداد وقسم الموسيقى وقسم النهاية.
+* قم بإنشاء برنامج نصي جديد عن طريق النقر فوق الارتباط الأزرق الكبير أو الرمز "+" إذا كان هناك نص برمجي آخر مفتوح بالفعل.
+* ` fitMedia () ` هي الطريقة الأساسية لإضافة الصوت إلى منصة العمل الصوتية الرقميةDAW. لديها أربع عوامل ، المعلومات التي تحتاجها لصنع الموسيقى:
+** * اسم الملف: * مقطع الصوت الذي يتم وضعه في DAW.
+** * رقم المسار: * المسار الذي يتم وضع الموسيقى عليه.
+** * بداية الموقع: * المقياس الذي سيبدأ عنده مقطع الصوت.
+** * موقع النهاية: * المقياس الذي سينتهي عنده مقطع الصوت.
+* * تصحيح الأخطاء * هي عملية البحث عن* خلل برمجي وإصلاحه * ، الأخطاء التي يرتكبها المبرمج.
+* تحدد قواعد *بناء الجملة * كيفية كتابة التعليمات البرمجية بلغة برمجة معينة.
+* تعرض *وحدة التحكم *معلومات حول حالة البرنامج ، مما يجعلها مفيدة لتصحيح أخطاء بناء الجملة. 
+* تتضمن أخطاء المبتدئين الشائعة الأخطاء الإملائية ، والحالة غير الصحيحة ، والأقواس المفقودة ، وإعداد البرنامج النصي غير الصحيح ...؛
 
 [role="curriculum-javascript"]
-* A line of code is an instruction to be carried out by the computer. All the instructions together make up the program.
-* *DAW's* are specialized computer software for recording, editing, and playing digital audio files, or *clips*. EarSketch is a DAW that allows audio clips to be placed on a timeline with code. 
-* To make music in EarSketch, code is first typed into the code editor panel. After pressing run, music is played in the DAW panel.
-* Sound clips can be found in the Sound Browser. They are referred to be typing or pasting their name in all caps.
-* A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
-* *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
-* Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
-** *fileName:* The sound clip that is placed in the DAW.
-** *trackNumber:* The track on which music is placed.
-** *startLocation:* The measure at which the sound clip will start.
-** *endLocation:* The measure at which the sound clip will end.
-* *Debugging* is the process of finding and fixing *bugs*, errors made by the programmer.
-* The rules of *syntax* define how code must be written in a particular programming language.
-* The *console* shows information about the state of a program, making it useful for debugging syntax errors. 
-* Common beginner errors include typos, incorrect case, missing parentheses, improper script setup...
+* سطر من التعليمات البرمجية هو تعليمات يجب أن يتم تنفيذها بواسطة الحاسوب. كل التعليمات معا تشكل البرنامج.
+* *<strong>DAWDAW'*</strong>هي برامج حاسوب متخصصة لتسجيل وتحرير وتشغيل ملفات الصوت الرقمية أو <0> مقاطع </0>. EarSketch هو منصة عمل صوتية تسمح بوضع المقاطع الصوتية في جدول زمني مع مقطع برمجي. 
+* لإنشاء موسيقى في EarSketch ، يتم كتابة الكود أولاً في لوحة محرر المقطع البرمجي. بعد الضغط على تشغيل ، يتم تشغيل الموسيقى في لوحة DAW.
+* يمكن العثور على مقاطع الصوت في متصفح الصوت. يشار إلى أنهم يكتبون أو يلصقون اسمهم بأحرف كبيرة.
+* الحاسوب * برنامج * وهو سلسلة من التعليمات التي ينفذها الكمبيوتر لإنجاز مهمة محددة. 
+* * لغات البرمجة * هي مجموعة من الكلمات والرموز التي يفهمها الحاسوب. تتبع لغة البرمجة بناء الجملة من أجل تنظيم المقطع الرمجي.
+* يتكون برنامج EarSketch النصي من قسم التعليقات وقسم الإعداد وقسم الموسيقى وقسم النهاية.
+* قم بإنشاء برنامج نصي جديد عن طريق النقر فوق الارتباط الأزرق الكبير أو الرمز "+" إذا كان هناك نص برمجي آخر مفتوح بالفعل.
+* ` fitMedia () ` هي الطريقة الأساسية لإضافة الصوت إلى منصة العمل الصوتية الرقميةDAW. لديها أربع عوامل ، المعلومات التي تحتاجها لصنع الموسيقى:
+** * اسم الملف: * مقطع الصوت الذي يتم وضعه في DAW.
+** * رقم المسار: * المسار الذي يتم وضع الموسيقى عليه.
+** * بداية الموقع: * المقياس الذي سيبدأ عنده مقطع الصوت.
+** * موقع النهاية: * المقياس الذي سينتهي عنده مقطع الصوت.
+* * تصحيح الأخطاء * هي عملية البحث عن* خلل برمجي وإصلاحه * ، الأخطاء التي يرتكبها المبرمج.
+* تحدد قواعد *بناء الجملة * كيفية كتابة التعليمات البرمجية بلغة برمجة معينة.
+* تعرض *وحدة التحكم *معلومات حول حالة البرنامج ، مما يجعلها مفيدة لتصحيح أخطاء بناء الجملة. 
+* تتضمن أخطاء المبتدئين الشائعة الأخطاء الإملائية ، والحالة غير الصحيحة ، والأقواس المفقودة ، وإعداد البرنامج النصي غير الصحيح ...؛
 
 
 [[chapter-questions]]
-=== Questions
+=== الأسئلة
 
 [question]
 --
-Which of the following is NOT a panel in the EarSketch workspace?
+أي مما يلي ليس مجال في مساحة عمل EarSketch؟
 [answers]
-* The effects browser
-* The code editor
-* The DAW
-* The console
+* متصفح التأثيرات
+* محرر المقطع البرمجي
+* منصة العمل الصوتيةDAW
+* وحدة التحكم
 --
 
 [question]
 --
-How many parameters do you need for your `fitMedia()` function?
+كم عدد العوامل التي تحتاجها لدالة ` fitMedia () `؟
 [answers]
 * 4
 * 6
@@ -542,40 +533,40 @@ How many parameters do you need for your `fitMedia()` function?
 
 [question]
 --
-One script corresponds to...
+أحد البرامج النصية يتوافق مع ...
 [answers]
-* One EarSketch song
-* One line of code
-* One programming language
-* One programmer
+* أغنية EarSketch واحدة
+* سطر واحد من التعليمات البرمجية
+* لغة برمجة واحدة
+* مبرمج واحد
 --
 
 [question]
 --
-What is a measure?
+ما هو المقياس؟
 [answers]
-* A musical time unit
-* An audio volume unit
-* A line in the DAW
-* A pitch unit
+* وحدة زمنية موسيقية
+* وحدة حجم الصوت
+* خط في منصة العمل الصوتية الرقميةDAW
+* وحدة التسلسل
 --
 
 [question]
 --
-Which of the following is NOT a common type of error found in code?
+أي مما يلي ليس نوعًا شائعًا من الأخطاء الموجودة في التعليمات البرمجية؟
 [answers]
-* Grammatical Errors
-* Runtime Errors
-* Logic Errors
-* Syntax Errors
+* الأخطاء النحوية
+* أخطاء وقت التشغيل
+* أخطاء منطقية
+* أخطاء نحوية
 --
 
 [question]
 --
-Where in the EarSketch workspace can you get information about your bugs?
+في أي مكان في مساحة عمل EarSketch يمكنك الحصول على معلومات حول أخطائك؟
 [answers]
-* The console
-* The sound browser
-* The script browser
-* The DAW
+* وحدة التحكم
+* متصفح الصوت
+* متصفح البرنامج النصي
+* منصة العمل الصوتيةDAW
 --
