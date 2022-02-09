@@ -105,43 +105,43 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 [cols="^h,1"]
 |===
 |==
-| is identical to
+| مطابق لـ
 |!=
-| is not identical to
+| ليس مطابقًا لـ
 |>
-| is greater than
+| أكبر من
 |>=
-| is greater than or equal
+| أكبر من أو يساوي
 |<
-| is less than
+| اصغر من
 |\<=
-| is less than or equal
+| أصغر من أو يساوي
 |===
 --
 
 [role="curriculum-javascript"]
 --
-To create a boolean, you can either initialise a variable (`var variable1 = true;`), or you can use a comparison. To make a comparison, we use a *comparison operator*. Here are the comparison operators:
+لإنشاء قيمة منطقية ، يمكنك إما تهيئة متغير (` var variable1 = true ؛ `) ، أو يمكنك استخدام مقارنة. لإجراء مقارنة ،نستخدم * عامل المقارنة *. فيما يلي عوامل المقارنة:
 [cols="^h,1"]
 |===
 | ==
-| is identical to
+| مطابق لـ
 |!=
-| is not identical to
+| غير مطابقًا لـ
 |>
-| is greater than
+| أكبر من
 |>=
-| is greater than or equal
+| أكبر من أو يساوي
 |<
-| is less than
+| اصغر من
 |\<=
-| is less than or equal
+| أصغر من أو يساوي
 |===
 --
 
-Note the difference between:
-1. Comparing two values to see if they are identical: `==`
-2. Assigning a value to a variable: `=`
+لاحظ الفرق بين:
+1. مقارنة قيمتين لمعرفة ما إذا كانتا متطابقتين: ` == `
+2. تخصيص قيمة لمتغير: `=`
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -155,10 +155,10 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 
 [role="curriculum-python"]
-.PRACTICE
+.تدريب
 ****
-* Create a new script and add sounds on 2 tracks
-* Print `True` if the first track is louder than the second track, and `False` otherwise.
+* قم بإنشاء برنامج نصي جديد وإضافة الأصوات على مسارين
+* اطبع ` صحيح ` إذا كان الصوت الأول أعلى من المسار الثاني ، و ` خطأ ` بخلاف ذلك.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `True`, if not, print `False`.
 * You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`.
 ****
