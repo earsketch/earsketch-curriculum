@@ -258,7 +258,7 @@ Let's see more details with this video:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
-video::./videoMedia/3_3 makebeat_py.mp4[]
+video::./videoMedia/3_3_makebeat_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video12js]]
