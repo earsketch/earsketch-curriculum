@@ -522,7 +522,7 @@ One sixteenth note is...
 
 [question]
 --
-To use the `makeBeat()` function, what parameters do you need?
+To use the `makeBeat()` function, what is the order of parameters you need to provide?
 [answers]
 * clip name, track, start measure, beat string
 * tempo, track, start measure, end measure
