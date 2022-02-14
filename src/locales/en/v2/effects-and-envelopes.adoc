@@ -279,7 +279,7 @@ Create a song with a volume effect and 2 other effects. Don't forget to write wh
 ****
 
 
-[[effectsandenvelopes]]
+[[effectsandenvelopes2]]
 === Effects and Envelopes
 
 You've started using effects, and maybe you'd like for one effect to change over time. For example, you might want a fade in (volume getting higher) at the beginning of your song.
