@@ -62,6 +62,9 @@ for ch in chapters:
 
 	# add the code-paste button
 	for el in soup.find_all('pre', {'class':'highlight'}):
+		# Force LTR direction for code examples in all locales
+		el['dir'] = 'ltr'
+
 		lang = el('code')[0]['class']
 		skip = False
 		if lang == 'python':
