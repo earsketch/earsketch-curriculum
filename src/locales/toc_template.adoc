@@ -37,7 +37,6 @@ Unit summaries and intros must have "_intro" and "_summary" within the anchor in
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/teaching-computers-to-listen#,Teaching Computers to Listen>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/sorting#,Sorting>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/recursion#,Recursion>>
-=== <</{{EARSKETCH_LOCALE_CODE}}/v1/intro-to-groovemachine#,Groove Machine>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/analysis-features#,Analysis Features>>
 === <</{{EARSKETCH_LOCALE_CODE}}/v1/ch_AdditionalCurricula#,Additional Curricula>>
 // Hour of code and competition
