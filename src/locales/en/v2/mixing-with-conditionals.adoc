@@ -15,11 +15,11 @@ We’ll see how to detect the loudness, or volume of a track. Make sure you unde
 ----
 # python code
 #
-# script_name: the analyzeTrack() function
+# script_name: The analyzeTrack() function
 #
 # author: The EarSketch Team
 #
-# description: using the analyzeTrack() function to print the loudness of a track
+# description: Using the analyzeTrack() function to print the loudness of a track
 #
 # Setup
 from earsketch import *
@@ -73,7 +73,7 @@ finish();
 You can read in your console that the printed loudness is 0.10306035109110138.
 
 * The loudness can go from 0 (silence) to 1 (maximum loudness). 
-* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the right 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714. 
+* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
 * Most of the sounds will have a loudness under 0.4 
 
 The `analyzeTrack()` function takes 2 arguments:
@@ -162,7 +162,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 * Create a new script, and add sounds on 2 tracks.
 * Print `True` if the first track is louder than the second track, and `False` otherwise.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `True`, if not, print `False`.
-* You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`. For example, you can first print the track number and then 'True' or 'False'
+* You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`. For example, you can first print the track number and then 'True' or 'False'.
 ****
 
 [role="curriculum-javascript"]
@@ -179,11 +179,11 @@ Here is an example:
 [role="curriculum-python"]
 [source, python]
 ----
-#        python code
-#        script_name: Boolean Example
+# python code
+# script_name: Boolean Example
 #
-#        author: The EarSketch Team
-#        description: We analyze the loudness of our tracks
+# author: The EarSketch Team
+# description: We analyze the loudness of our tracks
 #
 
 # Setup
@@ -207,8 +207,8 @@ comparison1 = (loudnessTrack1 > loudnessTrack2)
 print('Is Track 1 louder than track 2?')
 print(comparison1)
 
-# Creating a for loop to compare each track's loudness to 0.1
-for track in range(1,3) :
+# Creating a for loop to compare each track's loudness to 0.01
+for track in range(1, 3) :
   loudness = analyzeTrack(track, RMS_AMPLITUDE)
   print('Is track number ' + str(track) + ' greater than 0.01?')
   print(loudness > 0.01)
@@ -408,7 +408,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or one track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound so a mean doesn't really evaluate the loudness.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use print statements to show your process in the console. Here is an example of a print statement: `print('Is track number' + str(track) + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'. The function `str()` converts a number (ex: 1) into a string (ex: '1').
 ****
 
@@ -419,7 +419,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or the track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound so a mean doesn't really evaluate the loudness.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use print statements to show your process in the console. Here is an example of a print statement: `println('Is track number' + track + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'.
 ****
 
@@ -436,11 +436,11 @@ Below is an example of automated mixing. We can say it's automated because if yo
 [role="curriculum-python"]
 [source, python]
 ----
-#		python code
-#		script_name: Mixing
+# python code
+# script_name: Mixing
 #
-#		author: the EarSketch team
-#		description: Creating a short song and using conditional statements to mix the tracks
+# author: the EarSketch team
+# description: Creating a short song and using conditional statements to mix the tracks
 #
 # Setup
 from earsketch import *
@@ -471,22 +471,22 @@ for measure in range(5,17):
 # Mixing my tracks
 # First, we analyze the tracks for loudness
 loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
-print('The loudness of track 1 is'+str(loudnessTrack1))
+print('The loudness of track 1 is' + str(loudnessTrack1))
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
-print('The loudness of track 2 is'+str(loudnessTrack2))
+print('The loudness of track 2 is' + str(loudnessTrack2))
 loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
-print('The loudness of track 3 is'+str(loudnessTrack3))
+print('The loudness of track 3 is' + str(loudnessTrack3))
 
 if (loudnessTrack1 < loudnessTrack2):
-  #if track 1 is quieter than track 2 then we increase the volume of track 1
+  # if track 1 is quieter than track 2 then we increase the volume of track 1
   setEffect(1, VOLUME, GAIN, +5)
   print ('track 1 was quieter than track 2')
 elif (loudnessTrack1 < loudnessTrack3):
-  #if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+  # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
   setEffect(1, VOLUME, GAIN, +5)
   print ('track 1 was quieter than track 3')
 else: 
-  #if track 1 is louder than tracks 2 and 3, then we change nothing
+  # if track 1 is louder than tracks 2 and 3, then we change nothing
   print('track 1 was the loudest track already')
 
 
@@ -499,11 +499,11 @@ finish()
 ----
 "use strict";
 
-//		javascript code
-//		script_name: Mixing
+// javascript code
+// script_name: Mixing
 //
-//		author: The EarSketch team
-//		description: Creating a short song and using conditional statements to mix the tracks
+// author: The EarSketch team
+// description: Creating a short song and using conditional statements to mix the tracks
 //
 
 // Setup
@@ -527,7 +527,7 @@ var beatKick = '0---0-----0-0---';
 var beatSnare = '--0-0------000-';
 var soundKick = OS_KICK02;
 var soundSnare = OS_SNARE06;
-for (var measure=5; measure>17; measure ++){
+for (var measure = 5; measure > 17; measure++){
   makeBeat(soundKick, 4, measure, beatKick);
   makeBeat(soundSnare, 5, measure, beatSnare);
 }
@@ -536,22 +536,22 @@ for (var measure=5; measure>17; measure ++){
 // Mixing my tracks
 // First, we analyze the tracks for loudness
 var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
-println('The loudness of track 1 is'+loudnessTrack1);
+println('The loudness of track 1 is' + loudnessTrack1);
 var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
-println('The loudness of track 2 is'+loudnessTrack2);
+println('The loudness of track 2 is' + loudnessTrack2);
 var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
-println('The loudness of track 3 is'+loudnessTrack3);
+println('The loudness of track 3 is' + loudnessTrack3);
 
 if (loudnessTrack1 < loudnessTrack2){
-  //if track 1 is quieter than track 2 then we increase the volume of track 1
+  // if track 1 is quieter than track 2 then we increase the volume of track 1
   setEffect(1, VOLUME, GAIN, +5);
   println ('track 1 was quieter than track 2');
 } else if (loudnessTrack1 < loudnessTrack3){
-  //if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+  // if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
   setEffect(1, VOLUME, GAIN, +5);
   println ('track 1 was quieter than track 3');
 } else { 
-  //if track 1 is louder than tracks 2 and 3, then we change nothing
+  // if track 1 is louder than tracks 2 and 3, then we change nothing
   println('track 1 was the loudest track already');
 }
 
