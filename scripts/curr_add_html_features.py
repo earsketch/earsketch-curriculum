@@ -59,9 +59,14 @@ for ch in chapters:
 	# for highlight.js to work
 	for el in soup.find_all('code', {'class': lambda x: x and x.startswith('language-')}):
 		el['class'] = el['class'][0].replace('language-', '')
+		# Force LTR direction for code examples in all locales
+		el['dir'] = 'ltr'
 
 	# add the code-paste button
 	for el in soup.find_all('pre', {'class':'highlight'}):
+		# Force LTR direction for code examples in all locales
+		el['dir'] = 'ltr'
+
 		lang = el('code')[0]['class']
 		skip = False
 		if lang == 'python':
