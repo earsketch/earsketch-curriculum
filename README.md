@@ -11,7 +11,7 @@ Table of Contents
 - [Multiple-choice Questions](#question-formatting-in-asciidoc)
 - [Filename Conventions](#filename-conventions-for-earsketch)
 - [Content Formatting Requirements](#content-formatting-requirements)
-    - [Table of Contents](#table-of-contents)
+    - [Table of Contents](#table-of-contents-formatting)
 - [Example Chapter](#example-chapter)
 
 ----------------------------------
@@ -210,7 +210,7 @@ Don’t show paste icon (used to sub snippets of code):
 5. To cross-reference: `<<filename#section_name,text>>`
 
 
-### Table of Contents
+### Table of Contents Formatting
 
 1. `toc_template.adoc` is used to maintain the hierarchy in the curriculum
 
