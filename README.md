@@ -8,10 +8,10 @@ Table of Contents
 - [About ASCIIDOC](#about-curriculum-asciidocs)
 - [ASCIIDOC Quick Reference](#ascii-doc-quick-reference)
   - [Further References](#further-formatting-references)
-- [Multiple-choice Questions](#question-formatting-in-asciidoc)
 - [Filename Conventions](#filename-conventions-for-earsketch)
 - [Content Formatting Requirements](#content-formatting-requirements)
     - [Table of Contents](#table-of-contents-formatting)
+    - [Multiple-choice Questions](#question-formatting-in-asciidoc)
 - [Example Chapter](#example-chapter)
 
 ----------------------------------
@@ -88,7 +88,61 @@ c = a + b  # expecting 2
 
 * [AsciiDoc LIVE Online Editor](https://asciidoclive.com)
 
-## Question formatting in `asciidoc`
+## Filename Conventions for EarSketch
+
+1. Table of contents
+    * `toc_template.adoc` name should not be changed. This file lives in the `/src/locales/` directory
+    * The table of contents is generated for each locale at build time based on this template. If a translated version does not exist for a locale, the English version is referenced so that all locales have access to all chapters. If all chapters of a unit are un-translated, then a localized `(English)` is appended to the unit heading in the table of contents to signal that the entire unit is in English.
+
+2. English Source Content
+    * All other files that have English content should be placed in `/src/locales/en/` and should have the `.adoc` extension
+
+    * For example `ch_8.adoc` OR `getting-started.adoc` OR `loops-and-layers.adoc`
+
+3. Other Languages / Locales
+    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content. 
+    * Other language `.adoc` files should only be updated by building and downloading from CrowdIn, and copying/overwriting those files into their appropriate locale directories in this repository.
+
+
+## Content Formatting Requirements
+
+1. Include `:nofooter:` in every file to remove the last update tag to appear at the bottom of the page
+
+2. To include code snippets, use following code before the snippet
+
+```
+Show in python mode:
+[role="curriculum-python"]
+[source,python]
+
+Show in javascript mode:
+[role="curriculum-javascript"]
+[source,javascript]
+
+Don’t show paste icon (used to sub snippets of code):
+[role="curriculum-python"]
+[source,noicon]
+```
+
+3. To point to external URLs that open in a new tab use `^` at the end
+   `link:http://example.com[linktext^]`
+
+4. To point to video/audio/images consider curriculum-asciidoc folder as root and build URL respective to that.
+
+5. To cross-reference: `<<filename#section_name,text>>`
+
+
+### Table of Contents Formatting
+
+1. `toc_template.adoc` is used to maintain the hierarchy in the curriculum
+
+2. `==` means Unit level
+
+3. `===` means Chapter level
+
+4. `<<chapter_filename#,title>>` : you can change the title that appear on the “table of contents” by changing the title text
+
+### Question formatting in `asciidoc`
 
 Multiple choice questions can be embedded in curriculum pages. The correct answer should be listed first. The web client will randomize the order of the answers at runtime.
 
@@ -105,7 +159,7 @@ Which of these options is a string?
 --
 ```
 
-If a question needs to be language-specific (python or javascript), prepend the question block with the same `[role="curriculum-javascript"]` block used in the rest of the curriculum for language-specific content. 
+If a question needs to be language-specific (python or javascript), prepend the question block with the same `[role="curriculum-javascript"]` block used in the rest of the curriculum for language-specific content.
 
 ```asciidoc
 [role="curriculum-python"]
@@ -165,61 +219,6 @@ makeBeat(2, "000-00000-000--0");
 * End the clip
 --
 ```
-
-## Filename Conventions for EarSketch
-
-1. Table of contents
-    * `toc_template.adoc` name should not be changed. This file lives in the `/src/locales/` directory
-    * The table of contents is generated for each locale at build time based on this template. If a translated version does not exist for a locale, the English version is referenced so that all locales have access to all chapters. If all chapters of a unit are un-translated, then a localized `(English)` is appended to the unit heading in the table of contents to signal that the entire unit is in English.
-
-2. English Source Content
-    * All other files that have English content should be placed in `/src/locales/en/` and should have the `.adoc` extension
-
-    * For example `ch_8.adoc` OR `getting-started.adoc` OR `loops-and-layers.adoc`
-
-3. Other Languages / Locales
-    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content. 
-    * Other language `.adoc` files should only be updated by building and downloading from CrowdIn, and copying/overwriting those files into their appropriate locale directories in this repository.
-
-
-## Content Formatting Requirements
-
-1. Include `:nofooter:` in every file to remove the last update tag to appear at the bottom of the page
-
-2. To include code snippets, use following code before the snippet
-
-```
-Show in python mode:
-[role="curriculum-python"]
-[source,python]
-
-Show in javascript mode:
-[role="curriculum-javascript"]
-[source,javascript]
-
-Don’t show paste icon (used to sub snippets of code):
-[role="curriculum-python"]
-[source,noicon]
-```
-
-3. To point to external URLs that open in a new tab use `^` at the end
-   `link:http://example.com[linktext^]`
-
-4. To point to video/audio/images consider curriculum-asciidoc folder as root and build URL respective to that.
-
-5. To cross-reference: `<<filename#section_name,text>>`
-
-
-### Table of Contents Formatting
-
-1. `toc_template.adoc` is used to maintain the hierarchy in the curriculum
-
-2. `==` means Unit level
-
-3. `===` means Chapter level
-
-4. `<<chapter_filename#,title>>` : you can change the title that appear on the “table of contents” by changing the title text
-
 
 ## Example Chapter
 
