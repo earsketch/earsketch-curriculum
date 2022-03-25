@@ -33,7 +33,7 @@ The advantage of using ascii-doc format is that a non-techincal person can add t
 
 ## Ascii-doc Quick Reference
 
-```
+```asciidoc
 Heading
 = H1
 == H2
@@ -110,16 +110,19 @@ c = a + b  # expecting 2
 
 2. To include code snippets, use following code before the snippet
 
-```
+
 Show in python mode:
+```asciidoc
 [role="curriculum-python"]
 [source,python]
-
+```
 Show in javascript mode:
+```asciidoc
 [role="curriculum-javascript"]
 [source,javascript]
-
+```
 Don’t show paste icon (used to sub snippets of code):
+```asciidoc
 [role="curriculum-python"]
 [source,noicon]
 ```
@@ -224,7 +227,7 @@ makeBeat(2, "000-00000-000--0");
 
 `ch_RemixComp.asc`
 
-```
+```asciidoc
 [[RemixCompetition]]
 == Remix Competition
 :nofooter:
