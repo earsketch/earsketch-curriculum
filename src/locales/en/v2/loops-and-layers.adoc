@@ -23,11 +23,11 @@ _VIDEO ABOUT FOR LOOPS COMING SOON_
 [role="curriculum-python"]
 [source,python]
 ----
-#        python code
-#        script_name: Looping my beats
+# python code
+# script_name: Looping my beats
 #
-#        author: The EarSketch Team
-#        description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure".
+# author: The EarSketch Team
+# description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure"
 #
 
 from earsketch import *
@@ -52,11 +52,11 @@ finish()
 [source,javascript]
 ----
 "use strict"
-//    javascript code
-//    script_name: Looping my beats
+// javascript code
+// script_name: Looping my beats
 //
-//    author: The EarSketch Team
-//    description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure".
+// author: The EarSketch Team
+// description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure"
 //
 
 // Setup:
@@ -68,8 +68,8 @@ var drum1=OS_SNARE03;
 var beat_string="0---0---0-0-0---";
 
 // Looping our beat
-for (var measure=1; measure<5; measure++) {
-  makeBeat(drum1,1,measure,beat_string);
+for (var measure = 1; measure < 5; measure++) {
+  makeBeat(drum1, 1, measure, beat_string);
 }
 
 finish();
@@ -122,7 +122,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 To better understand the flow of your code, you can use a `print` statement. It allows you to display information in the console when you run the code.
 
 [role="curriculum-python"]
-`print`  *evaluates* an expression: it simplifies it to its basic form, whatever its data-type, and then shows it in the console. Note that in Python, `print` is different from other functions because we do not always need to use parentheses.
+`print` *evaluates* an expression: it simplifies it to its basic form, whatever its data-type, and then shows it in the console. Note that in Python, `print` is different from other functions because we do not always need to use parentheses.
 
 [role="curriculum-javascript"]
 The function `println()` *evaluates* an expression: it simplifies it to its basic form, whatever its data type, and then shows it in the console.
@@ -257,15 +257,15 @@ We can create repetition in our music by typing `fitMedia()` again and again, wi
 #
 # author: The EarSketch Team
 #
-#	description: Musical repetition created without code loops
+# description: Musical repetition created without code loops
 #
 
-#Setup
+# Setup
 from earsketch import *
 init()
 setTempo(120)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
@@ -288,7 +288,7 @@ fitMedia(drums2, 1, 7.5, 8)
 fitMedia(drums1, 1, 8, 8.5)
 fitMedia(drums2, 1, 8.5, 9)
 
-#Finish
+# Finish
 finish()
 
 ----
@@ -307,11 +307,11 @@ finish()
 //
 //
 
-//Setup
+// Setup
 init();
 setTempo(120);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
@@ -334,7 +334,7 @@ fitMedia(drums2, 1, 7.5, 8);
 fitMedia(drums1, 1, 8, 8.5);
 fitMedia(drums2, 1, 8.5, 9);
 
-//Finish
+// Finish
 finish();
 ----
 
@@ -519,8 +519,8 @@ Programming is not only writing code. It's also debugging and maintaining it. De
 .. If the console provided a line number, take a look at that line and the previous line in your code. 
 .. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
 .. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print` statements where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
-. *Squash the bug* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes. 
+. *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
+. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
 [role="curriculum-javascript"]
 . *Read the console for clues*.
@@ -529,7 +529,7 @@ Programming is not only writing code. It's also debugging and maintaining it. De
 .. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
 .. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
 . *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes. 
+. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
 Below, we walk through an example of printing variables to help debug a script:
 

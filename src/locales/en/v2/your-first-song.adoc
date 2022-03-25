@@ -183,7 +183,7 @@ finish();
 [[uploadingsounds]]
 === Upload your own sounds
 
-You can upload your own audio through the _Content Manager_. Open your _Content Manager_ on the left side of your screen.Under the "Sounds" tab, click on the "Add sound" button below the filters to open up the add a sound window (if the button doesn’t show, make sure you are logged in). Let's explore the first 3 options:
+You can upload your own audio through the _Content Manager_. Open your _Content Manager_ on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button below the filters to open up the add a sound window (if the button doesn’t show, make sure you are logged in). Let's explore the first 3 options:
 
 . *Upload Sound* allows you to choose audio files (.mp3, .aiff, and so on) already on your computer. Modify the file name if needed ("constant value(required)"), and click on "UPLOAD".
 . *Quick Record* lets you record short clips directly into the EarSketch library. Check out the video below for more information.
@@ -199,7 +199,7 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 ****
 Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. It can be a feeling that you'd like to share, or a story.
 
-. Think about what you'd like to express. 
+. Think about what you'd like to express
 . Then either:
 .. Write some lyrics and record yourself singing or reading them or
 .. Record or download some sounds that are related to your message
@@ -247,8 +247,8 @@ Besides fair use, there is a way to use and share music openly. Copyright should
 *Creative Commons* (or CC) licenses let creators specify what rights they keep and what rights they give away. Here are the possible parts of a CC license: "You can use this work however you like, EXCEPT..."
 
 * "...you have to put my name on it." - Attribution (BY)
-* "...you can not change it at all." - No Derivatives (ND)
-* "...you can not make money from it." - Non-Commercial (NC)
+* "...you cannot change it at all." - No Derivatives (ND)
+* "...you cannot make money from it." - Non-Commercial (NC)
 * "...you have to share whatever new thing you make under the same license." - Share-Alike (SA)
 
 To specify a Creative Commons license, all you have to do is choose a type and put it on your work. In EarSketch, when you share a script, you will be asked to specify a license for your song. 

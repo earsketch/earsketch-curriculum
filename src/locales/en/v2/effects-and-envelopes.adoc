@@ -462,7 +462,7 @@ finish();
 
 .PRACTICE
 ****
-Create a new song. Use one for-loop to add an enveloppe to all the tracks (for example: fade in and fade out for all your tracks), or to repeat an effect on the same track. You can use any effect you like. 
+Create a new song. Use one `for` loop to add an envelope to all the tracks (for example: fade in and fade out for all your tracks), or to repeat an effect on the same track. You can use any effect you like.
 Have your neighbor listen to your song, with and without the effect (to hear your song without the effect, comment out the lines that create the effect). Your neighbor has to guess which effect you added.
 ****
 
@@ -478,7 +478,7 @@ Below is an example of the above practice. Each iteration of the loop adds a one
 #
 # author: The EarSketch Team
 #
-# description: Automating effects with a for-loop
+# description: Automating effects with a for loop
 #
 #
 #
@@ -508,7 +508,7 @@ finish()
 //
 // author: The EarSketch Team
 //
-// description: Automating effects with a for-loop
+// description: Automating effects with a for loop
 //
 //
 //
@@ -563,12 +563,12 @@ fitMedia(melody1, 1, 1, 5)
 fitMedia(melody2, 1, 5, 9)
 
 # Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
-for measure in range(1,9):
-  makeBeat(kick,2,measure,kickBeat)
-  makeBeat(hihat,3,measure,hihatBeat)
+for measure in range(1, 9):
+  makeBeat(kick, 2, measure, kickBeat)
+  makeBeat(hihat, 3, measure, hihatBeat)
 
 # Adding the fade in and fade out on tracks 1 through 3
-for track in range(1,4):
+for track in range(1, 4):
   setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
   setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
 
@@ -607,15 +607,15 @@ fitMedia(melody1, 1, 1, 5);
 fitMedia(melody2, 1, 5, 9);
 
 // Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
-for (var measure = 1; measure<9; measure++){
-  makeBeat(kick,2,measure,kickBeat);
-  makeBeat(hihat,3,measure,hihatBeat);
+for (var measure = 1; measure < 9; measure++){
+  makeBeat(kick, 2, measure, kickBeat);
+  makeBeat(hihat, 3, measure, hihatBeat);
 }
 
 // Adding the fade in and fade out on tracks 1 through 3
 for (var track = 1; track < 4; track++) {
   setEffect(track, VOLUME, GAIN, -60, 1, 0, 3);
-  setEffect(track, VOLUME, GAIN, 0,7,-60,9);
+  setEffect(track, VOLUME, GAIN, 0, 7, -60, 9);
 }
 
 // Finish
@@ -633,11 +633,11 @@ finish()
 ** *trackNumber:* The track the effect is added to.
 ** *effectName:* The specific effect being used.
 ** *effectParameter:* The setting used for the effect.
-** *effectValue:* The value of the parameter: a number in a specific range.
+** *effectValue:* The value of the parameter (a number in a specific range).
 * *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
 * A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
 * *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
-* For an enveloppe, the 7-parameter `setEffect()` arguments are: `setEffect(trackNumber, effectName, effectParameter, startEffectValue, effectStartLocation, endEffectValue, effectEndLocation)`.
+* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(trackNumber, effectName, effectParameter, startEffectValue, effectStartLocation, endEffectValue, effectEndLocation)`.
 
 
 [[chapter-questions]]
