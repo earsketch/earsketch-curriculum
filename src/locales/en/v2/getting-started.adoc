@@ -32,7 +32,7 @@ _What is a DAW?_
 
 A *Digital Audio Workstation*, or *DAW*, is a piece of software that produces or edits audio or sound clips on a computer, be it in a professional studio or in home laptop-based studios.
 
-Some popular DAWs include https://www.ableton.com/[Ableton^] and https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], and http://www.reaper.fm/[Reaper^].
+Some popular DAWs include https://www.ableton.com/[Ableton^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], and http://www.reaper.fm/[Reaper^].
 
 With a DAW, you can record, edit, visualize and play audio files. These audio files are called *clips*.
 

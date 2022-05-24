@@ -354,7 +354,7 @@ The indices of the string `"EarSketch"` are shown in the table below.
 * You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
-* You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1,4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
+* You can get a *substring*, also known as slice of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1, 4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
 
 [role="curriculum-python"]
 .PRACTICE
@@ -778,7 +778,7 @@ Congratulations, now you have acquired musical and coding skills that allows you
 * *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
 ** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
 ** Am I reusing any blocks of code? If so, put them in a function!
-** Are there sound constants or mathematical expressions that I use repeatedly throughout my code?(If so, assign them to variables! An array might also be useful.
+** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! An array might also be useful.
 * *Clarity* relates to how well code communicates its function and the programmer's intent. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
 ** Did I complete the introduction comments with my script title, author and description? 
 ** Are the names of my variables and functions descriptive? If not, rename them.
@@ -808,7 +808,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA. 
 * Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
 * Whenever it's useful, create for-loops and custom functions.
-* Add some effects with `setEffect()`, you can add a fade in, fade out, some delay, reverb...
+* Add some effects with `setEffect()`. You can add a fade in, fade out, some delay, reverb...
 * You can use a conditional statement to mix your song (adapt the volume of each track).
 * You can ask for user input to modify something in your song.
 * If necessary, place some elements in a list.
@@ -822,7 +822,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA. 
 * Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
 * Whenever it's useful, create for-loops and custom functions.
-* Add some effects with `setEffect()`, you can add a fade in, fade out, some delay, reverb...
+* Add some effects with `setEffect()`.  You can add a fade in, fade out, some delay, reverb...
 * You can use a conditional statement to mix your song (adapt the volume of each track).
 * You can ask for user input to modify something in your song.
 * If necessary, place some elements in an array.
@@ -845,7 +845,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 
 
 [role="curriculum-javascript"]
-* A *array* is a collection of values combined into a single entity, an efficient way to store data. Items stored within a array, or elements, can be any data type.
+* An *array* is a collection of values combined into a single entity, an efficient way to store data. Items stored within a array, or elements, can be any data type.
 * Like strings, array elements get assigned an index. Array indices start at 0.
 * Array elements are accessed with bracket notation, like `myArray[1]`. Characters in a string can be accessed similarly: `myString[1]`.
 * The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
