@@ -156,12 +156,12 @@ drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 # Function definition
 def verse(start):
   end = start + 4
-  fitMedia(melody1,1,start,end)
-  fitMedia(drums1,2,start,end)
+  fitMedia(melody1 , 1, start, end)
+  fitMedia(drums1, 2, start, end)
   return end
 
 # Function calls
-endMeasure = verse(1) #calling verse function and start is measure 1
+endMeasure = verse(1) # calling verse function and start is measure 1
 print(endMeasure)
 
 # Finish
@@ -193,12 +193,12 @@ var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 // Function definition
 function verse(start) {
   var end = start + 4;
-  fitMedia(melody1,1,start,end);
-  fitMedia(drums1,2,start,end);
+  fitMedia(melody1, 1, start, end);
+  fitMedia(drums1, 2, start, end);
   return end;
 }
 // Function calls
-var endMeasure = verse(1); //calling verse function and start is measure 1
+var endMeasure = verse(1); // calling verse function and start is measure 1
  println(endMeasure);
 
 // Finish
@@ -232,11 +232,6 @@ Here is an example code:
 # description: using a boolean to create variation in a function
 #
 #
-
-# Setup
-from earsketch import *
-init()
-setTempo(120)
 
 # Setup
 from earsketch import *
@@ -379,11 +374,11 @@ finish()
 [source, javascript]
 ----
 "use strict";
-//	javascript code
-//	script_name: User input 1
+// javascript code
+// script_name: User input 1
 //
-//	author: the EarSketch team
-//	description: Asking the user for the tempo
+// author: the EarSketch team
+// description: Asking the user for the tempo
 
 
 // Setup

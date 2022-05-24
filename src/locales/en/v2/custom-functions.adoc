@@ -145,7 +145,7 @@ def sectionA():
 function sectionA() {
 	// Write your instructions here. This is the body of the function.
  	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // main
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5);// drums
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bass line
 	setEffect(3,VOLUME,GAIN, -20, 1, 0, 5); // increasing volume of bass line
 }
@@ -165,9 +165,9 @@ Now we want to add section A from measures 9 to 13. However, when we call sectio
 
 .PRACTICE
 ****
-In your current script you created for the previous practice problem:app-name:
+In your current script you created for the previous practice problem:
 
-1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`
+1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
 2. In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
 3. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
 4. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
@@ -198,14 +198,14 @@ setTempo(120)
 # Music
 
 # Create an A section function
-def sectionA(startMeasure,endMeasure):
+def sectionA(startMeasure, endMeasure):
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure) # main
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure) # drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure) # bass line
 	setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure) # increasing volume of bass line
 
 # Create a B section function
-def sectionB(startMeasure,endMeasure):
+def sectionB(startMeasure, endMeasure):
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure) # main melody differs
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure) # drums differ
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # contrasting bass: it's slower and louder
@@ -243,7 +243,7 @@ setTempo(120);
 // Music
 
 // Create an A section function
-function sectionA(startMeasure,endMeasure){
+function sectionA(startMeasure, endMeasure){
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure); // main
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure);// drums
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure); // bass line
@@ -251,7 +251,7 @@ function sectionA(startMeasure,endMeasure){
 }
 
 // Create a B section function
-function sectionB(startMeasure,endMeasure){
+function sectionB(startMeasure, endMeasure){
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure); // main melody differs
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure); // drums differ
 	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); // contrasting bass: it's slower and louder
@@ -289,7 +289,7 @@ Now that you know how to create custom functions to structure your song, let's l
 
 Following are some popular strategies for creating musical transitions:
 
-. *Crash Cymbal*: placing a crash cymbal on the first beat of a new section. See this https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[example^].
+. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section. See this https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[example^].
 . *Drum Fill*: A rhythmic variation to fill the gap before a new section. See these https://www.youtube.com/watch?v=YMskGG39Y0Y[examples^] of drum fills.
 . *Track Dropouts*: Making some tracks temporarily drop out to create pauses. Listen to https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
 . *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
@@ -297,7 +297,7 @@ Following are some popular strategies for creating musical transitions:
 . *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a clip like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`. Here is an https://www.youtube.com/watch?v=c3HLuTAsbFE[example^].
 . *Looping*: Repeating a short segment of melody before a new section. Here is an https://www.youtube.com/watch?v=AQg4wnbBjiQ[example^] of looping in DJ'ing.
 . *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section. 
-. *Anacrusis*: when the melody of the new section starts a couple beats early.
+. *Anacrusis*: When the melody of the new section starts a couple beats early.
 
 .PRACTICE
 ****
@@ -629,11 +629,11 @@ Here is an example of a full song:
 [role="curriculum-python"]
 [source, python]
 ----
-#		python code
-#		script_name: Total Atlanta Song of Summer 
-#		author: the EarSketch team
-#		description: creating a complete song with abstractions
-#   structure of the song : intro-A-B-A-B
+# python code
+# script_name: Total Atlanta Song of Summer
+# author: the EarSketch team
+# description: creating a complete song with abstractions
+# structure of the song : intro-A-B-A-B
 
 from earsketch import *
 
@@ -676,12 +676,12 @@ def addingDrums(start, end, pattern):
 
 # Intro:
 def intro(start, end):
-  fitMedia(melody1, 1, start, start+1)
-  fitMedia(melody1, 1, start+2, start+3)
-  fitMedia(bass1, 2, start, start+3)
+  fitMedia(melody1, 1, start, start + 1)
+  fitMedia(melody1, 1, start + 2, start + 3)
+  fitMedia(bass1, 2, start, start + 3)
   #transition:
-  fitMedia(bass2, 2, start+3, end)
-  fitMedia(shout, 3, start+3.75, end)
+  fitMedia(bass2, 2, start + 3, end)
+  fitMedia(shout, 3, start + 3.75, end)
 
 # SectionA:
 def sectionA(start, end):
@@ -694,8 +694,8 @@ def sectionA(start, end):
 
 # SectionB:
 def sectionB(start, end):
-  fitMedia(melody3, 1, start, start+2)
-  fitMedia(melody4, 1, start+2, end)
+  fitMedia(melody3, 1, start, start + 2)
+  fitMedia(melody4, 1, start + 2, end)
   fitMedia(piano, 2, start, end)
   addingDrums(start, end, "light")
   
@@ -771,12 +771,12 @@ function addingDrums(start, end , pattern) {
 
 // Intro:
 function intro(start, end){
-  fitMedia(melody1, 1, start, start+1);
-  fitMedia(melody1, 1, start+2, start+3);
-  fitMedia(bass1, 2, start, start+3);
+  fitMedia(melody1, 1, start, start + 1);
+  fitMedia(melody1, 1, start + 2, start + 3);
+  fitMedia(bass1, 2, start, start + 3);
   // transition:
-  fitMedia(bass2, 2, start+3, end);
-  fitMedia(shout, 3, start+3.75, end);
+  fitMedia(bass2, 2, start + 3, end);
+  fitMedia(shout, 3, start + 3.75, end);
 }
 // SectionA:
 function sectionA(start, end){
@@ -790,8 +790,8 @@ function sectionA(start, end){
 
 // SectionB:
 function sectionB(start, end){
-  fitMedia(melody3, 1, start, start+2);
-  fitMedia(melody4, 1, start+2, end);
+  fitMedia(melody3, 1, start, start + 2);
+  fitMedia(melody4, 1, start + 2, end);
   fitMedia(piano, 2, start, end);
   addingDrums(start, end, "light");
 }
@@ -804,7 +804,7 @@ sectionA(13, 17);
 sectionB(17, 21);
 
 // Fade out:
-for (var track = 1; track<5; track++){
+for (var track = 1; track < 5; track++){
   setEffect(track, VOLUME, GAIN, 0, 19, -60, 21);
 }
 
