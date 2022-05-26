@@ -1,11 +1,11 @@
 [[unit1]]
-== Unidad 1: componer y añadir ritmos
+== Unidad 1: Componer y añadir ritmos
 
 :nofooter:
 
 En esta unidad vas a aprender cómo funciona EarSketch. Vas a colocar sonidos (clips) en tu música, depurar tu código, personalizar tu canción, y añadir ritmos según tu género musical.
 
-¡Cualquier persona (especialmente tú) puede aprender a programar! Igual que al aprender a tocar un instrumento musical, hay que practicar consistentemente para progresar. No te desanimes si te trancas. Es parte del proceso. Pide ayuda en tu clase o busca en línea si es necesario.
+¡Cualquier persona (incluso tú) puede aprender a programar! De la misma manera que se aprende a tocar un instrumento musical, hay que practicar consistentemente para progresar. No te desanimes si te trancas. Es parte del proceso. Pide ayuda en tu clase o busca en línea si es necesario.
 
 ¡Te deseamos mucha suerte! Antes de comenzar, mira este ejemplo de lo que puedes hacer con EarSketch:
 

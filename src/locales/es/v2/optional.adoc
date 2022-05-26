@@ -1,5 +1,5 @@
-[[unit2]]
-== Unidad 2: Ciclos, efectos y mezclas
+[[optional]]
+== Opcional: ¡Para aprender más!
 
 :nofooter:
 
