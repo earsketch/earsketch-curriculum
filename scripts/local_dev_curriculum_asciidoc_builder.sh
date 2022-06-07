@@ -79,4 +79,4 @@ cd "$SRC_DIR" || exit 1
 cp -r audioMedia curriculum videoMedia theme "$LOCAL_STAGING_DIR"
 cd "$GIT_REPO" || exit 1
 
-echo "Completed currciulum build"
+echo "Completed curriculum build"

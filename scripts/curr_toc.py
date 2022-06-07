@@ -61,9 +61,8 @@ for h in parser.find_all(['h2', 'h3']):
             num_chapters_localized += 1
     first_iteration = False
 
-wf = open(curr_dir + '/toc.html', 'wb')
-wf.write(parser.encode_contents())
-wf.close()
+with open(curr_dir + '/toc.html', 'wb') as wf:
+    wf.write(parser.encode_contents())
 
 # units
 print("Processing html files to create Table-Of-Contents data structure...")
@@ -112,23 +111,7 @@ for unit in parser.find_all('div', attrs={'class': 'sect1'}):
 
     toc_data.append(unit_data)
 
-toc_pages = []
-
-for unitIdx, unit in enumerate(toc_data):
-    toc_pages.append([unitIdx])
-
-    for chIdx, ch in enumerate(unit['chapters']):
-        if len(ch['sections']) == 0:
-            toc_pages.append([unitIdx, chIdx])
-        for secIdx, sec in enumerate(ch['sections']):
-            toc_pages.append([unitIdx, chIdx, secIdx])
-
-wf = open(curr_dir + '/curr_toc.json', 'w')
-wf.write(json.dumps(toc_data, indent=4))
-wf.close()
-
-wf = open(curr_dir + '/curr_pages.json', 'w')
-wf.write(json.dumps(toc_pages))
-wf.close()
+with open(curr_dir + '/curr_toc.json', 'w') as wf:
+    wf.write(json.dumps(toc_data, indent=4))
 
 print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
