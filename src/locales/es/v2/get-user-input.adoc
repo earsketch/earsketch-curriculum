@@ -1,6 +1,5 @@
 [[getuserinput]]
 == Consigue respuestas del usuario
-
 :nofooter:
 
 En este capítulo, aprenderás cómo pedir sugerencias de los usuarios y adaptar tu música basándote en ellas. Para hacerlo, vamos a considerar las declaraciones de retorno y la función `readInput()`.
@@ -18,8 +17,8 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-* Además de requerir ciertos argumentos (parámetros), las funciones pueden generar un valor. En programación, le llamamos a ésto devolver un valor.
-* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: A. pide que la función devuelva un valor cuando se llama. B. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
+* Además de requerir ciertos argumentos (parámetros), las funciones pueden generar un valor. En programación, le llamamos a ésto devolver un valor. 
+* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: 1. pide que la función devuelva un valor cuando se llama. 2. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
 * Para usar el valor que la función devuelve, crea una variable y asígnala a la llamada a función. Recuerda que las variables no llevan acento.
 * No es obligatorio tener una declaración de retorno. Sin una declaración de retorno una función no genera ningún valor. `fitMedia()` y `setEffect()` son ejemplos de funciones que no devuelven nada.
 
@@ -34,7 +33,7 @@ Aquí hay un ejemplo usando código:
 #
 # autor: El Equipo de EarSketch
 #
-# descripción: Vincular dos ritmos usando declaraciones de retorno 
+# descripción: Vincular dos ritmos usando declaraciones de retorno
 #
 #
 #
@@ -212,11 +211,11 @@ finish();
 ****
 Imaginemos que ya tienes una sección A, pero quieres que varíe levemente cuando la llames en diferentes momentos de la canción. Crearás una función llamada `seccionA()` con 2 llamadas a `fitMedia()`.
 
-La función debe tener 2 parámetros: `comienzo` y un parámetro booleano llamado `variacion` que permitirá que el usuario escoja una variación cuando se llame a la función.
+La función debe tener 2 parámetros: `comienzo` y un parámetro booleano llamado `variacion` que permitirá que el usuario escoja una variación cuando se llame a la función. 
 
 En el cuerpo de la función, debes tener una declaración condicional que evaluará el parámetro. Dependiendo del valor del parámetro, cambiarás el clip de sonido que usas en una de tus llamadas a `fitMedia()`.
 
-Entonces llama a la función en compases diferentes escogiendo variaciones diferentes.
+Entonces llama a la función en compases diferentes escogiendo variaciones diferentes. 
 ****
 
 Aquí hay un ejemplo usando código:
@@ -245,14 +244,11 @@ bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
 # Definición de la función
 def verso(comienzo, variacion):
-  # Variacion es igual a True o False.
-  if variacion:
+  # Variacion es igual a True o False. if variacion:
     fitMedia(melodia1, 1, comienzo, comienzo+4)
   else:
   	fitMedia(melodia2, 1, comienzo, comienzo+4)
-  fitMedia(bateria1, 2, comienzo, comienzo+4) # Está fuera de la declaración condicional (no hay sangría).
-
-# Llamadas a función
+  fitMedia(bateria1, 2, comienzo, comienzo+4) # Está fuera de la declaración condicional (no hay sangría). # Llamadas a función
 verso(1, True)
 verso(7, False)
 
@@ -316,6 +312,7 @@ Por ejemplo, copia el siguiente código en un nuevo script y ejecútalo:
 ----
 respuesta = readInput("¿Que tempo te gustaria tener en tu musica?")
 print (respuesta)
+print (respuesta)
 ----
 
 [role="curriculum-javascript"]
@@ -336,7 +333,7 @@ Posiblemente tendremos que convertir el dato que ha dado el usuario en otro tipo
 * `String()` - convierte a cualquier valor en una cadena. Toma en cuenta que esta vez el nombre de la función empieza con una letra en mayúscula.
 * `Number()` - convierte una cadena en un número (por ejemplo: `"3.5"` se convierte en `3.5`).
 
-En el siguiente ejemplo, se usa el valor que el usuario escribió en la consola para determinar el tempo de la canción. Tenemos que asegurarnos de convertir en un número entero el valor escogido por el usuario.
+En el siguiente ejemplo, se usa el valor que el usuario escribió en la consola para determinar el tempo de la canción. Tenemos que asegurarnos de convertir en un número entero el valor escogido por el usuario. 
 
 [role="curriculum-python"]
 [source, python]
@@ -354,8 +351,7 @@ from earsketch import *
 init()
 
 # Pedir que escoja el tempo
-pregunta = "Que tempo te gustaria tener en tu musica? Elije un numero entre 45 y 220."
-respuesta = readInput(pregunta)
+pregunta = "Que tempo te gustaria tener en tu musica? Elije un numero entre 45 y 220." respuesta = readInput(pregunta)
 
 # Convertirla en un número entero
 tempo = int(respuesta)
@@ -380,13 +376,13 @@ finish()
 // nombre_del_script: Respuesta del usuario 1
 //
 // autor: El Equipo de EarSketch
-//	
+//
 // descripción: Cómo pedir que el usuario escoja el tempo
 
 // Configuración
 init();
 
-// Pedir que escoja el tempo 
+// Pedir que escoja el tempo
 var pregunta = "Que tempo te gustaria tener en tu musica? Elije un número entre 45 y 220.";
 var respuesta = readInput(pregunta);
 
@@ -403,7 +399,7 @@ fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
 finish();
 ----
 
-Aquí está otro ejemplo de lo que se puede hacer con las respuestas del usuario.
+Aquí está otro ejemplo de lo que se puede hacer con las respuestas del usuario. 
 
 La *concatenación* es una manera de combinar las cadenas, usando el símbolo `+`.  Por ejemplo, concatenar las cadenas `"hola"` y `"mundo"` produce `"holamundo"`. En el siguiente ejemplo, se pide que el usuario elija un número de clip. El número se concatena con `DUBSTEP_BASS_WOBBLE_0` para formar un nombre completo de clip como `DUBSTEP_BASS_WOBBLE_010`.
 
@@ -473,8 +469,8 @@ Pide que el usuario dé una respuesta que modifique algún elemento de tu canci�
 
 Aquí hay ideas de herramientas que puedes usar:
 
-. concatenación de cadenas,
-. conversión de datos,
+. concatenación de cadenas, 
+. conversión de datos, 
 . crear un parámetro específico en una función personalizada
 ****
 
@@ -489,18 +485,18 @@ Ahora daremos otro ejemplo de interacción con el usuario en el cual combinaremo
 Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `==` determina si 2 valores son iguales, y, si es así, el booleano creado es `True`.
 
 [role="curriculum-javascript"]
-Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `==` determina si 2 valores son iguales, y, si es así, el booleano creado es `true`.
+Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `==` determina si 2 valores son iguales, y, si es así, el booleano creado es `true`. 
 
 Ahora vamos a considerar los *operadores booleanos*: ayudan a combinar varios booleanos. Hay 3 operadores booleanos:
 
 [role="curriculum-python"]
-* `and` ("y" en español): requiere 2 valores booleanas y devuelve `True` sólo cuando los dos valores son `True` (ciertos). De lo contrario devuelve `False`.
-* `or` ("o" en español): requiere 2 valores booleanos y devuelve `True` cuando por lo menos 1 valor es `True`. De lo contrario devuelve `False`.
+* Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`True` o `False`?
+* Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`true` o `false`?
 * `not` ("no" en español): requiere 1 valor booleano y devuelve el booleano opuesto.
 
 [role="curriculum-javascript"]
-* `&&`: se llama "and" ("y" en español); requiere 2 valores booleanos y devuelve `true` sólo cuando los dos valores son `true` (ciertos); de lo contrario devuelve `false`.
-* `||`: se llama "or" ("o" en español); requiere 2 valores booleanos y devuelve `true` cuando por lo menos 1 valor es `true`; de lo contrario devuelve `false`.
+* `&&`: is called "and"; it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+* `||`: is called "or"; it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
 * `!`: se llama "not" ("no" en español); requiere 1 valor booleano y devuelve el booleano opuesto.
 
 Por ejemplo, si uno tiene 16 años, la frase "tengo 16" es cierta (true) y la frase "tengo 17" es falsa (false). "Tengo 16 y tengo 17" (true and false) es falsa porque uno no puede tener 16 y 17 años. Sin embargo, la frase "tengo 16 o tengo 17" (true or false) es cierta (true).
@@ -527,7 +523,7 @@ Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`true` o 
 * `!true`
 * `true && false`
 * `true || false`
-* `true || false`
+* `true && true`
 * `(true && false) || true`
 * `true && !false`
 * `!(false || false)`
@@ -540,7 +536,7 @@ Usa el siguiente programa para imprimir las respuestas:
 ----
 # código python
 #
-# nombre_del_script: Expresiones booleanas 
+# nombre_del_script: Expresiones booleanas
 #
 # autor: El Equipo de EarSketch
 #
@@ -600,32 +596,32 @@ video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
 [[video17ajs]]
 video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
+
 .PRÁCTICA
 ****
 Ahora combinaremos la respuesta de usuario y las operaciones booleanas.
 
-Escribe un script en que se pedirá que el usuario elija un género, dándole un número limitado de opciones (por ejemplo, "hip hop" y "clasica"). Selecciona una cadena de tiempos según la respuesta del usuario que vaya bien con el género. Puedes aceptar varias posibilidades. Por ejemplo, "HIP HOP", "hip hop" y "Hip Hop" ocasionarán que se toque la misma canción.
+Escribe un script en que se pedirá que el usuario elija un género, dándole un número limitado de opciones (por ejemplo, "hip hop" y "clasica"). Escribe un script en que se pedirá que el usuario elija un género, dándole un número limitado de opciones (por ejemplo, "hip hop" y "clasica"). Puedes aceptar varias posibilidades. Por ejemplo, "HIP HOP", "hip hop" y "Hip Hop" ocasionarán que se toque la misma canción.
 ****
 
 Aquí hay un ejemplo:
-
 [role="curriculum-python"]
 [source, python]
 ----
 # código python
 #
-# nombre_del_script: Operaciones booleanas 
+# nombre_del_script: Operaciones booleanas
 #
 # autor: El Equipo de EarSketch
 #
-# descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección 
+# descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
 #
 
 from earsketch import *
 init()
 setTempo(120)
 
-# Variables de sonido 
+# Variables de sonido
 bombo = OS_KICK02
 hihat = OS_CLOSEDHAT04
 palmada = OS_CLAP03
@@ -640,15 +636,17 @@ ritmoDePalmadasEdm = "----0-------0---"
 # Pedir que el usuario dé su respuesta
 genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?")
 
-# Crear el ritmo adecuado
-if((genero == "Hip Hop") or (genero == "hip hop") or (genero == "HIP HOP")):
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop)
-	makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop)
-elif((genero == "edm") or (genero == "Edm") or (genero == "EDM")):
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm)
-	makeBeat(palmada, 2, 1, ritmoDePalmadasEdm)
-else:
-	print("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
+¿Hip Hop o EDM?")
+
+// Crear el ritmo adecuado
+if((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")){
+	makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop);
+	makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop);
+} else if((genero == "edm") || (genero == "Edm") || (genero == "EDM")){
+	makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm);
+	makeBeat(palmada, 2, 1, ritmoDePalmadasEdm);
+} else {
+	println("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
 
 # Añadir alguna reverberación en la pista 2 (track 2)
 setEffect(2, REVERB, MIX, 0.1)
@@ -687,7 +685,7 @@ var ritmoDePalmadasEdm = "----0-------0---";
 
 
 // Pedir que el usuario dé su respuesta
-var genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?")
+var genero = readInput("¿Cual de estos generos es tu favorito? Hip Hop o EDM?")
 
 // Crear el ritmo adecuado
 if((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")){
@@ -737,10 +735,13 @@ Este es el desafío de la rocola: escribe un script que pedirá que el usuario e
 * Algunas funciones permiten que conviertas los datos de un tipo a otro. Por ejemplo, str() convierte los datos en una cadena. `String()` - convierte a cualquier valor en una cadena. Toma en cuenta que esta vez el nombre de la función empieza con una letra en mayúscula.  `Number()` convierte una cadena en un número.
 * Se puede *concatenar* (unir) cadenas: "Hola"+"Mundo" se combinarán para formar "HolaMundo".
 * La *lógica booleana* incluye operaciones booleanas. Aquí están los operadores booleanos:
-** `&&`: se llama "and" ("y" en español); requiere 2 valores booleanos y devuelve `true` sólo cuando los dos valores son `true` (ciertos). De lo contrario devuelve `false`.
-** `||`: se llama "or" ("o" en español); requiere 2 valores booleanos y devuelve `true` cuando por lo menos 1 valor es `true`. De lo contrario devuelve `false`.
+** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
 ** `!`: se llama "not" ("no" en español); requiere 1 valor booleano y devuelve el booleano opuesto.
 * Ahora tienes varias herramientas para introducir variaciones en tu música: las respuestas del usuario pueden determinar los elementos. Puedes añadir un parámetro a tu función personalizada para seleccionar una variación cuando llames a tu función.
+
+
+
 
 [[chapter-questions]]
 === Preguntas
@@ -748,7 +749,6 @@ Este es el desafío de la rocola: escribe un script que pedirá que el usuario e
 [question]
 --
 ¿Cuál de las siguientes opciones se consideraría un ejemplo de la conversión de tipos de datos?
-
 [answers]
 * Convertir una cadena en un número.
 * Almacenar en una variable un tempo escogido por un usuario.
@@ -756,15 +756,14 @@ Este es el desafío de la rocola: escribe un script que pedirá que el usuario e
 * Producir un Booleano a través de un operador de comparación.
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
-
 [source,python]
 ----
 not(True and (4>5))
 ----
-
 [answers]
 * `True`
 * `5`
@@ -772,15 +771,14 @@ not(True and (4>5))
 * `False`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
-
 [source,javascript]
 ----
 !(true && (4>5))
 ----
-
 [answers]
 * `true`
 * `4`
@@ -791,7 +789,6 @@ not(True and (4>5))
 [question]
 --
 ¿Cuál de las siguientes opciones es un ejemplo de la concatenación?
-
 [answers]
 * `x = cadenadetiempos1 + cadenadetiempos2`
 * `x = cadenadetiempos1.cadenadetiempos2`
@@ -799,10 +796,10 @@ not(True and (4>5))
 * `x = cadenadetiempos1[cadenadetiempos2]`
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cómo obtendrías el booleano True con los booleanos True y False?
-
 [answers]
 * `True or False`
 * `not True`
@@ -810,10 +807,10 @@ not(True and (4>5))
 * `true or false`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cómo obtendrías el booleano true con los booleanos true y false?
-
 [answers]
 * `true||false`
 * `!true`

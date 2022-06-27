@@ -1,13 +1,11 @@
 [[customfunctionssongstructure]]
-== Las funciones personalizadas y la estructura de tu canción
-
+== Funciones personalizadas y estructura de la canción
 :nofooter:
 
-La estructura de la canción es su organización a lo largo del tiempo. La meta es crear secciones y transiciones coherentes para que fluya tu música. ¡En este capítulo, crearás tus propias funciones, funciones personalizadas, para dar estructura a tus canciones!
+La estructura de la canción es la organización de la propia canción a lo largo del tiempo. La meta es crear secciones y transiciones coherentes para que fluya tu música. ¡En este capítulo, crearás tus propias funciones, funciones personalizadas, para dar estructura a tus canciones!
 
 [[asongsstructure]]
 === La estructura de una canción
-
 :nofooter:
 
 Se puede dividir una canción en *secciones*. Una sección se compone de varios compases (unidades musicales de tiempo), y expresa una idea o sentimiento. Usualmente, los músicos tratan de crear contrastes entre secciones diferentes. _Intros, Versos, Coros_ y _Outros_ son ejemplos de secciones.
@@ -40,31 +38,17 @@ setTempo(120)
 
 # Música
 
-# Crea una sección A.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
+# Crea una sección A. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) # Aumentar el volumen de la línea de bajo
 
-# Crea una sección B con 4 compases entre el compás 5 y el 9.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # La melodía principal es diferente.
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # Los tambores son diferentes.
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
-setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # Aumentar el volumen de la línea de bajo
+# Crea una sección B con 4 compases entre el compás 5 y el 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # La melodía principal es diferente. fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # Los tambores son diferentes. fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # Aumentar el volumen de la línea de bajo
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # El traqueteo: añadir un nuevo elemento
 
 # Entonces se regresa a la sección A en el compás 9.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13) # Principal
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13) # Tambores
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13) # Línea de bajo
-setEffect(3, VOLUME, GAIN, 0, 9, -20, 13) # Aumentar el volumen de la línea de bajo
-
-# Fin
-finish()
 ----
+
 
 [role="curriculum-javascript"]
 [source, javascript]
@@ -86,24 +70,15 @@ setTempo(120);
 
 // Música
 
-// Crea una sección A.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
+// Crea una sección A. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
 
-// Crea una sección B con 4 compases entre el compás 5 y el 9.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente.
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes.
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
-setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de bajo
+// Crea una sección B con 4 compases entre el compás 5 y el 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente. fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes. fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de bajo
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // El traqueteo: añadir un nuevo elemento
 
-// Entonces se regresa a la sección A en el compás 9.
-
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
+// Entonces se regresa a la sección A en el compás 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 9, 0, 13); // Aumentar el volumen de la línea de bajo
@@ -122,11 +97,11 @@ Selecciona una canción que te guste. Escúchala y trata de determinar cuáles s
 Ten en cuenta que una frase musical suena más natural cuando se arreglan los clips en grupos de 2, 4, 8, 16, etc. Por lo tanto, tus secciones preferiblemente deben durar 2, 4, 8, o 16 compases.
 
 [[creatingyourcustomfunctions]]
-=== Crear tus funciones personalizadas
+=== Crea tus funciones personalizadas
 
-En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. ¡Hay una manera más eficiente de hacerlo usando *funciones personalizadas*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.
+En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. ¡Hay una manera más eficiente de hacerlo usando *funciones personalizadas*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces. Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.  
 
-La diferencia entre estas funciones y funciones como fitMedia() que has usado es que nuestro equipo ya ha definido `fitMedia()` de antemano para que ponga una canción. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
+La diferencia con las funciones que has utilizado como `fitMedia()`, es que `fitMedia()` ya está predefinida por nuestro equipo para reproducir una canción. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
 
 [role="curriculum-python"]
 [source, python]
@@ -157,8 +132,8 @@ function seccionA() {
 
 .PRÁCTICA
 ****
-Pega este código en el nuevo script, y ejecútalo. Debes ver que tu EAD permanece vacío.
-Es porque tienes que *llamar* a una función para usarla.
+Pega este código en el nuevo script, y ejecútalo. Debes ver que tu EAD permanece vacío. 
+Es porque tienes que *llamar* a una función para usarla.  
 Para llamar a la función, añade la línea `seccionA()`, sin sangría, después de la definición de la función. Cuando ejecutes el código, debes ver la sección A en tu EAD.
 ****
 
@@ -169,10 +144,10 @@ Ahora queremos añadir la sección A de los compases 9 al 13. Sin embargo, cuand
 En tu script actual que creaste para el problema previo de práctica:
 
 1. Añade los parámetros `compasDeComienzo` y `ultimoCompas` separados por una coma entre los paréntesis de la función seccionA en su definición así: `seccionA(compasDeComienzo, ultimoCompas)`.
-1. En el cuerpo de la función, reemplaza el compás de comienzo (1) y el último compás (5) con `compasDeComienzo` y `ultimoCompas` respectivamente.
-1. Cuando llames a tu función, añade los parámetros `1` y `5` entre paréntesis. Ejecuta el código para asegurarte de que no haya ningún error.
-1. Añade una segunda llamada a función, esta vez con los parámetros `9` y `13`. Ejecuta el código para asegurarte de que no haya ningún error.
-1. Define una función para la sección B, usando el mismo proceso, y llama a la sección B desde los compases 5 al 9 y del 13 al 17.
+2. En el cuerpo de la función, reemplaza el compás de comienzo (1) y el último compás (5) con `compasDeComienzo` y `ultimoCompas` respectivamente.
+3. Cuando llames a tu función, añade los parámetros `1` y `5` entre paréntesis. Ejecuta el código para asegurarte de que no haya ningún error.
+4. Añade una segunda llamada a función, esta vez con los parámetros `9` y `13`. Ejecuta el código para asegurarte de que no haya ningún error.
+5. Define una función para la sección B, usando el mismo proceso, y llama a la sección B desde los compases 5 al 9 y del 13 al 17.
 ****
 
 Aquí está un ejemplo del código que podrías escribir:
@@ -202,7 +177,7 @@ setTempo(120)
 def seccionA(compasDeComienzo, ultimoCompas):
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas) # Principal
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas) # Tambores
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas) # Línea de bajo
+	fitMedia(RD_UK_HOUSE_EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas) # Línea de bajo
 	setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas) # Aumentar el volumen de la línea de bajo
 
 # Crea una función para la sección B.
@@ -270,7 +245,9 @@ seccionB(13, 17);
 finish();
 ----
 
+
 //The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
+
 
 [role="curriculum-python curriculum-mp4"]
 [[video93py]]
@@ -280,10 +257,11 @@ video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
 [[video93js]]
 video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 
+
 [[transitionstrategies]]
 === Estrategias de transición
 
-Ahora que sabes cómo crear funciones personalizadas para estructurar tu canción, vamos a considerar las transiciones. Las *transiciones* ayudan a crear un cambio natural de una sección a otra. Pueden conectar el verso y el coro, subir progresivamente la intensidad sonora (_build-up_) antes de cambiar repentinamente el ritmo (_drop_), remezclar pistas (_DJing_) o cambiar la tonalidad. El objetivo de una transición es captar la atención del oyente e indicarle que la canción está a punto de cambiar.
+Ahora que sabes cómo crear funciones personalizadas para estructurar tu canción, vamos a considerar las transiciones. Las *transiciones* ayudan a crear un cambio natural de una sección a otra. Pueden conectar el verso y el coro, subir progresivamente la intensidad sonora (_build-up_) antes de cambiar repentinamente el ritmo (_drop_), remezclar pistas (_DJing_) o cambiar la tonalidad. El objetivo de una transición es captar la atención del oyente e indicarle que la canción está a punto de cambiar. 
 
 A continuación, hay unas estrategias populares para crear transiciones musicales:
 
@@ -291,10 +269,10 @@ A continuación, hay unas estrategias populares para crear transiciones musicale
 . *Drum Fill*: Una variación rítmica que llena el espacio antes de la nueva sección. Ve a estos https://www.youtube.com/watch?v=YMskGG39Y0Y[ejemplos^] de drum fills.
 . *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
 . *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (_riff_ en inglés).
-. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como _riser_, como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
-. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
+. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
+. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^]. Aquí hay un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
 . *Looping* (*Ciclos* en español): Repetir un corto segmento de una melodía antes de una nueva sección. Aquí está un https://www.youtube.com/watch?v=AQg4wnbBjiQ[ejemplo^] de looping en DJ'ing.
-. *Crossfading*: Reducir el volumen de una sección mientras aumentas el volumen de una nueva sección.
+. *Crossfading*: Reducir el volumen de una sección mientras aumentas el volumen de una nueva sección. 
 . *Anacrusa* (*_Anacrusis_* en inglés): Cuando la melodía de una nueva sección empieza unos tiempos antes del comienzo de la sección.
 
 .PRÁCTICA
@@ -303,6 +281,7 @@ Mira esta lista de posibles transiciones, selecciona 2 y trata de averiguar cóm
 
 Se debe colocar la transición 1 o 2 compases antes de la nueva sección. Puedes usar varias técnicas de transición a la vez.
 ****
+ 
 
 Drum fills:
 
@@ -393,7 +372,7 @@ fitMedia(bateria2, 3, 9, 17);
 finish();
 ----
 
-La técnica de silencios de pista (_track dropout_) sólo requiere la modificación de unas llamadas a `fitMedia()`. Aquí hay un ejemplo.
+La técnica de silencio de pista (_track dropout_) sólo requiere la modificación de unas llamadas a `fitMedia()`. Aquí hay un ejemplo.
 
 [role="curriculum-python"]
 [source, python]
@@ -606,8 +585,8 @@ En la programación, se puede crear *abstracciones*: la agrupación de ideas con
 ¡Vamos a crear una canción completa usando todas las herramientas que has aprendido en EarSketch! Aquí está una sugerencia de cómo proseguir, pero lo puedes adaptar como quieras:
 
 . Elige un tema para tu canción. Piensa en los tipos de sonidos, instrumentos o letras que mejor expresen tu mensaje.
-. Entonces selecciona una estructura sencilla.
-. Y, por fin, ¡empieza a programar! Empieza seleccionando sonidos y colocándolos en funciones `fitMedia()`.
+. Luego, selecciona una estructura sencilla. 
+. Y, por fin, ¡empieza a programar! Y, por fin, ¡empieza a programar! Empieza seleccionando sonidos y colocándolos en funciones `fitMedia()`.
 . Usa `makeBeat()` para añadir algunos sonidos percusivos.
 . Puedes subir tus propios sonidos.
 . Usa ciclos `for` para reducir la repetición en tu código.
@@ -714,22 +693,21 @@ for pista in range(1, 5):
 setEffect(4, VOLUME, GAIN, -15)
 setEffect(3, VOLUME, GAIN, -10)
 
-finish()
+finish() 
 ----
-
 [role="curriculum-javascript"]
 [source, javascript]
 ----
 "use strict";
 
 // código javascript
-// 
-// nombre_del_script: Canción completa de verano en Atlanta 
+//
+// nombre_del_script: Canción completa de verano en Atlanta
 //
 // autor: El Equipo de EarSketch
-// 
-// descripción: Cómo crear una canción completa usando abstracciones 
-// 
+//
+// descripción: Cómo crear una canción completa usando abstracciones
+//
 // la estructura de la canción: Intro-A-B-A-B
 //
 
@@ -762,14 +740,13 @@ function anadirBateria(comienzo, fin, patron) {
     cadenaDeTiemposDeBombo = "0-------0---0---";
     cadenaDeTiemposDeHihat = "--0----0---0---";
   }
-  // Entonces creamos el ritmo 
-  // de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4) 
+  // Entonces creamos el ritmo
+  // de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4)
   // de los compases comienzo al fin:
   for (var compas = comienzo; compas < fin; compas++){
-    // Aquí colocaremos nuestro ritmo en "compas", 
-    // el cual, al principio, es igual a "comienzo", 
-    // el cual es un parámetro de la función.
-    makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
+    // Aquí colocaremos nuestro ritmo en "compas",
+    // el cual, al principio, es igual a "comienzo",
+    // el cual es un parámetro de la función. makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
     makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat);
   }
 }
@@ -820,24 +797,25 @@ setEffect(3, VOLUME, GAIN, -10);
 finish();
 ----
 
-En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
+En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for. Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
+
 
 [[chapter7summary]]
 === Resumen del capítulo 7
 
 * Las *secciones* son unidades musicales relacionadas que consisten de múltiples compases. Cada sección expresa una idea o sentimiento.
-* Las *transiciones* son pasajes de música que sirven para conectar secciones musicales consecutivas.
+* Las *transiciones* son segmentos de música que sirven para conectar secciones musicales consecutivas.
 * La estructura y variedad que se encuentran en una canción se llaman *forma*. Una forma musical común es A-B-A.
 * *Funciones personalizadas* son funciones únicas escritas por el/la programador/a para cumplir una tarea específica. Tienes que crear una función personalizada para poder llamarla. Puedes crear todos los parámetros que quieras.
 * Una *abstracción* es una agrupación de ideas con el fin de formar un solo concepto que generalmente es menos complejo. Las funciones son un ejemplo de la abstracción.
+
 
 [[chapter-questions]]
 === Preguntas
 
 [question]
 --
-¿Cuál de esas opciones NO es un ejemplo de una sección musical?
-
+¿Cuál de estas opciones NO es un ejemplo de una sección musical?
 [answers]
 * Batería
 * Intro
@@ -848,18 +826,17 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 [question]
 --
 ¿Qué es una abstracción?
-
 [answers]
 * Una agrupación de ideas con el fin de formar un solo concepto
 * Una variedad de sonidos a lo largo de las secciones
-* Las partes de una canción que están relacionadas unas a otras pero que también son distintas
+* Las partes de una canción que están relacionadas, pero que también son distintas entre sí
 * Una declaración que devuelve un valor a la llamada a función
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?
-
 [answers]
 * `def miFuncion(compasDeComienzo, ultimoCompas):`
 * `def miFuncion():`
@@ -867,10 +844,10 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * `miFuncion(2, 5)`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?
-
 [answers]
 * `function miFuncion(compasDeComienzo, ultimoCompas) {}`
 * `function miFuncion() {}`
@@ -881,10 +858,9 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 [question]
 --
 ¿Cuál de estas opciones NO es un ejemplo de una transición?
-
 [answers]
 * Consistencia Melódica
 * Platillo Crash
-* _Riser_
+* Riser
 * Silencios de Pista
 --
