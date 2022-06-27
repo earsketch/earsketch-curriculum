@@ -42,10 +42,10 @@ var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
 ----
 
 [role="curriculum-python"]
-If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
+If you have replaced variables with a list, how will you call the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
-If you have replaced variables with an array, how will you call the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[3]` is calling `OS_SNARE05`.
+If you have replaced variables with an array, how will you call the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 .PRACTICE
 ****
