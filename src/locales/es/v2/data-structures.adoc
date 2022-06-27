@@ -42,10 +42,10 @@ var bateria = [OS_KICK03, OS_OPENHAT01, OS_SNARE05];
 ----
 
 [role="curriculum-python"]
-Si has reemplazado las variables con una lista, ¿cómo vas a accesar el contenido de la lista? Usamos índices. Se asigna un índice (_index_ en inglés) a cada elemento de una lista, empezando con `0`. En el ejemplo anterior, `bateria[0]` llama a `OS_KICK03`, `bateria[1]` llama a `OS_OPENHAT01` y `bateria[3]` llama a `OS_SNARE05`.
+Si has reemplazado las variables con una lista, ¿cómo vas a accesar el contenido de la lista? Usamos índices. Se asigna un índice (_index_ en inglés) a cada elemento de una lista, empezando con `0`. En el ejemplo anterior, `bateria[0]` llama a `OS_KICK03`, `bateria[1]` llama a `OS_OPENHAT01` y `bateria[2]` llama a `OS_SNARE05`.
 
 [role="curriculum-javascript"]
-Si has reemplazado las variables con un arreglo, ¿cómo vas a accesar el contenido del arreglo? Usamos índices. Se asigna un índice (_index_ en inglés) a cada elemento de un arreglo, empezando con `0`. En el ejemplo anterior, `bateria[0]` llama a `OS_KICK03`, `bateria[1]` llama a `OS_OPENHAT01` y `bateria[3]` llama a `OS_SNARE05`.
+Si has reemplazado las variables con un arreglo, ¿cómo vas a accesar el contenido del arreglo? Usamos índices. Se asigna un índice (_index_ en inglés) a cada elemento de un arreglo, empezando con `0`. En el ejemplo anterior, `bateria[0]` llama a `OS_KICK03`, `bateria[1]` llama a `OS_OPENHAT01` y `bateria[2]` llama a `OS_SNARE05`.
 
 .PRÁCTICA
 ****
@@ -482,7 +482,7 @@ println(sonidosD);
 finish();
 ----
 
-Éste es un ejemplo de cómo se puede usar operaciones de cadenas con `makeBeat()`:
+Este es un ejemplo de cómo se puede usar operaciones de cadenas con `makeBeat()`:
 
 [role="curriculum-python curriculum-mp4"]
 [[video13py]]
@@ -759,7 +759,7 @@ Usando lo que has aprendido en este capítulo, crea ritmos que te gusten con `ma
 [[evaluatingcorrectness]]
 === Evalúa la exactitud
 
-¡Felicitaciones, ahora has adquirido habilidades musicales y para programar que permiten que seas creativo con EarSketch! Queremos asegurarnos, por último, que tu código sea lo más limpio posible. Estos son algunos elementos que puedes revisar:
+¡Felicitaciones, ahora has adquirido habilidades musicales y para programar que permiten que seas creativo con EarSketch! Por último, queremos asegurarnos que tu código esté lo más limpio posible. Estos son algunos elementos que puedes revisar:
 
 [role="curriculum-python"]
 * *Concisión* significa que el código es breve y cumple su objetivo eficazmente. Aquí están algunas preguntas que pueden ayudarte a escribir código más conciso:
@@ -807,7 +807,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * Siempre es recomendable pensar en un tema para tu canción y una estructura antes de comenzar. Tu estructura puede ser tan sencilla como ABA. 
 * Empieza a seleccionar sonidos y probar cosas. Crea sonidos y variables de cadenas de tiempos, y usa llamadas a `fitMedia()` y a `makeBeat()`. Puedes cargar tus propios sonidos.
 * Cuando sea útil, crea ciclos for y funciones personalizadas.
-* Añade algunos efectos con `setEffect()`. Puedes añadir un _fade in_, _fade out_, algún efecto de retardo, reverberación...  You can add a fade in, fade out, some delay, reverb...
+* Añade algunos efectos con `setEffect()`. Puedes añadir un _fade in_, _fade out_, algún efecto de retardo, reverberación...
 * Puedes usar una declaración condicional para mezclar tu canción (adaptar el volumen de cada pista).
 * Puedes pedir respuestas del usuario para modificar parte de tu canción.
 * Si es necesario, coloca algunos elementos dentro de una lista.
@@ -960,7 +960,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 [[conclusion]]
 === Conclusión
 
-¡Muchísimas gracias por participar en la aventura de EarSketch! Ojalá que te hayas divertido y aprendido muchas cosas usando esta herramienta :) ¡Hay más cosas que descubrir en los <<optional, optional chapters>>!
+¡Muchísimas gracias por participar en la aventura de EarSketch! Esperamos que te hayas divertido y aprendido muchas cosas usando esta herramienta :) ¡Hay más cosas que descubrir en los <<optional, capítulos opcionales>>!
 
 ////
 Thank you video

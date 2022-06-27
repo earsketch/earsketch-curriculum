@@ -303,7 +303,7 @@ finish();
 [[userinput]]
 === Consigue respuestas del usuario
 
-Vamos a ver cómo pedir sugerencias de los usuarios cuando se oprima el botón de "ejecutar". Esto es posible usando la función `readInput()`. Esta función requiere una cadena (_string_) como parámetro (como "que tempo te gustaria tener en tu musica?"). Cuando el usuario ejecute el código, verá una nueva ventana con la cadena de caracteres (o _string_ en inglés) y se le pedirá que escriba una respuesta. La función `readInput()` devuelve lo que el usuario haya escrito allí.
+Vamos a ver cómo pedir sugerencias de los usuarios cuando se oprima el botón de "ejecutar". Esto es posible usando la función `readInput()`. Esta función requiere como parámetro una cadena (_string_), tal como ("¿qué tempo te gustaría tener en tu música?"). Cuando el usuario ejecute el código, verá una nueva ventana con la cadena de caracteres (o _string_ en inglés) y se le pedirá que escriba una respuesta. La función `readInput()` devuelve lo que el usuario haya escrito allí.
 
 Por ejemplo, copia el siguiente código en un nuevo script y ejecútalo:
 
@@ -709,7 +709,7 @@ finish();
 
 .DESAFÍO
 ****
-Este es el desafío de la rocola: escribe un script que pedirá que el usuario escoja el género, dándole 3 opciones (por ejemplo, "latino", "trap" y "dubstep"). Basándote en la respuesta del usuario, crea una canción que vaya bien con el género.
+Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario escoja el género, dándole 3 opciones (por ejemplo, "latino", "trap" y "dubstep"). Basándote en la respuesta del usuario, crea una canción que vaya bien con el género.
 ****
 
 {nbsp} +
