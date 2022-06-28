@@ -150,7 +150,7 @@ Toma en cuenta que es importante nombrar tus variables de manera entendible y de
 Una *constante* es similar a una variable porque almacena valores. Sin embargo, el valor de una constante nunca cambia. Por ejemplo, en EarSketch, `TECHNO_SYNTHPLUCK_001` es una constante. Se refiere al archivo de audio correspondiente. Convencionalmente, se escriben los nombres de las constantes en mayúscula y se usan barras bajas en vez de espacios.
 
 [[drumbeatstrings]]
-=== Cadenas (<em>strings</em>) de tiempos
+=== Cadenas (_strings_) de tiempos
 
 Primero vamos a aprender algunos conceptos básicos sobre el ritmo:
 

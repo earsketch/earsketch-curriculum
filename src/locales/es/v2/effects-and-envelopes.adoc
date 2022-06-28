@@ -308,7 +308,7 @@ Para cambiar un envelope, sólo se necesita la función `setEffect()` con 7 argu
 
 Los últimos 3 de los 7 parámetros son *parámetros opcionales*. Si no se especifican, como fue el caso cuando sólo asignamos 4 parámetros a `setEffect()`, el efecto se aplicará a la pista entera.
 
-Aquí hay un ejemplo de un <em>fade in</em>:
+Aquí hay un ejemplo de un _fade in_:
 
 [role="curriculum-python"]
 [source, python]
@@ -668,7 +668,7 @@ finish()
 
 [question]
 --
-¿Cómo asignarías un tiempo de retardo (<em>delay</em>) de 50 milisegundos a un efecto de retardo en la pista musical 3?
+¿Cómo asignarías un tiempo de retardo (_delay_) de 50 milisegundos a un efecto de retardo en la pista musical 3?
 
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
