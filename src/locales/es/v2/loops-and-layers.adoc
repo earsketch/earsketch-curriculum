@@ -673,7 +673,7 @@ Recuerda que puedes probar cosas y quedarte sólo con los sonidos/ideas que más
 * Los comentarios sobre el código
 * Las cadenas
 * Las expresiones matemáticas
-* Variables
+* Las variables
 --
 
 [question]

@@ -199,7 +199,7 @@ setTempo(120)
 def seccionA(compasDeComienzo, ultimoCompas):
 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas) # Principal
 	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas) # Tambores
-	fitMedia(RD_UK_HOUSE_EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas) # Línea de bajo
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas) # Línea de bajo
 	setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas) # Aumentar el volumen de la línea de bajo
 
 # Crea una función para la sección B.
@@ -280,15 +280,15 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Estrategias de transición
 
-Ahora que sabes cómo crear funciones personalizadas para estructurar tu canción, vamos a considerar las transiciones. Las *transiciones* ayudan a crear un cambio natural de una sección a otra. Pueden conectar el verso y el coro, subir progresivamente la intensidad sonora (<em>build-up</em>) antes de cambiar repentinamente el ritmo (<em>drop</em>), remezclar pistas (<em>DJing</em>) o cambiar la tonalidad. El objetivo de una transición es captar la atención del oyente e indicarle que la canción está a punto de cambiar.
+Ahora que sabes cómo crear funciones personalizadas para estructurar tu canción, vamos a considerar las transiciones. Las *transiciones* ayudan a crear un cambio natural de una sección a otra. Pueden conectar el verso y el coro, subir progresivamente la intensidad sonora (_build-up_) antes de cambiar repentinamente el ritmo (_drop_), remezclar pistas (_DJing_) o cambiar la tonalidad. El objetivo de una transición es captar la atención del oyente e indicarle que la canción está a punto de cambiar.
 
 A continuación, hay unas estrategias populares para crear transiciones musicales:
 
 . *Platillo Crash*: Colocar un platillo crash en el primer tiempo de una nueva sección. Ve a este https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[ejemplo^].
 . *Drum Fill*: Una variación rítmica que llena el espacio antes de la nueva sección. Ve a estos https://www.youtube.com/watch?v=YMskGG39Y0Y[ejemplos^] de drum fills.
 . *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
-. *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (<em>riff</em> en inglés).
-. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un <em>drop</em>. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un <em>riser</em>, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
+. *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (_riff_ en inglés).
+. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
 . *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
 . *Looping* (*Ciclos* en español): Repetir un corto segmento de una melodía antes de una nueva sección. Aquí está un https://www.youtube.com/watch?v=AQg4wnbBjiQ[ejemplo^] de looping en DJ'ing.
 . *Crossfading*: Reducir el volumen de una sección mientras aumentas el volumen de una nueva sección.
@@ -882,6 +882,6 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 [answers]
 * Consistencia Melódica
 * Platillo Crash
-* Riser
+* _Riser_
 * Silencios de Pista
 --
