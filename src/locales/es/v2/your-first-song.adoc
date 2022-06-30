@@ -193,7 +193,7 @@ Puedes cargar tu propio archivo de audio a través del Navegador de Sonidos. Abr
 
 . *Cargar sonido* permite que elijas archivos de audio (.mp3, .aiff, etcétera) que ya están en tu computadora. Modifica el nombre del archivo si es necesario ("(se requiere) un valor constante"), y haz clic en "CARGAR".
 . *Grabación Rápida* permite que se grabe un clip corto directamente a la biblioteca EarSketch. Mira el video a continuación para más información.
-. *Freesound* permite que se importen sonidos directamente de Freesound.org, una base de datos de código abierto. En la barra de búsqueda, puedes buscar ciertos tipos de sonidos (por ejemplo, los cantos de pájaro, la lluvia, una calle ocupada...). Bajo "Results", una lista de sonidos aparecerá. Si haces clic en el botón de <em>play</em>, puedes escuchar los sonidos preliminarmente, y, si te gusta uno, selecciona el botón de "toggle" en frente del nombre del archivo y luego haz clic en "UPLOAD" al final de la pantalla.
+. *Freesound* permite que se importen sonidos directamente de Freesound.org, una base de datos de código abierto. En la barra de búsqueda, puedes buscar ciertos tipos de sonidos (por ejemplo, los cantos de pájaro, la lluvia, una calle ocupada...). Bajo "Results", una lista de sonidos aparecerá. Si haces clic en el botón de _play_, puedes escuchar los sonidos preliminarmente, y, si te gusta uno, selecciona el botón de "toggle" en frente del nombre del archivo y luego haz clic en "UPLOAD" al final de la pantalla.
 
 Para encontrar el sonido que acabas de cargar o grabar, escribe su nombre en la barra de búsqueda en la pestaña de Sonidos del Administrador de Contenido.
 
@@ -217,13 +217,13 @@ La música, y el arte en general, muchas veces sirve para comunicar un mensaje. 
 
 *Procesos*, o tareas, son programas que se ejecutan en tu computadora. El CPU, o *Unidad Central de Procesamiento*, de la computadora los ejecuta.
 
-La *memoria* de una computadora mantiene los datos y las instrucciones de procesamiento para que el CPU los use. La memoria, también llamada almacenamiento primario o RAM (memoria de acceso aleatorio, o <em>Random Access Memory</em> en inglés), almacena sus datos temporalmente. Sólo se almacena en el RAM la información para los procesos que se están ejecutando activamente. Esto permite que el CPU tenga acceso rápido a instrucciones y datos.
+La *memoria* de una computadora mantiene los datos y las instrucciones de procesamiento para que el CPU los use. La memoria, también llamada almacenamiento primario o RAM (memoria de acceso aleatorio, o _Random Access Memory_ en inglés), almacena sus datos temporalmente. Sólo se almacena en el RAM la información para los procesos que se están ejecutando activamente. Esto permite que el CPU tenga acceso rápido a instrucciones y datos.
 
 Hay una diferencia entre la memoria (o almacenamiento a corto plazo) y el almacenamiento a largo plazo. El almacenamiento a largo plazo, como un disco duro o una nube (cloud), se conoce como almacenamiento secundario. El *almacenamiento secundario* contiene grandes volúmenes de datos por largos periodos de tiempo, incluso cuando la computadora está apagada. El CPU no interactúa directamente con el almacenamiento secundario. Cuando el CPU ejecuta un proceso, los datos del almacenamiento secundario se tienen que transferir primero a la memoria para que el CPU pueda accederlos rápidamente.
 
 A veces los datos de la memoria disponibles en el CPU vienen de un dispositivo de entrada en vez de un almacenamiento secundario. Las *entradas* son las señales o datos recibidos por la computadora, como el audio de un micrófono. Asimismo, las *salidas* son las señales o los datos enviados desde la computadora, como el audio que se escucha a través de un altavoz. La Entrada/Salida, o E/S, es cómo la computadora se comunica con el mundo exterior, ¡incluso con los humanos!
 
-Vamos a considerar la grabación de un sonido a EarSketch como un proceso de ejemplo. Primero, grabamos datos a la computadora con el dispositivo de entrada, el micrófono. El CPU almacena esos datos de audio en su memoria. Si haces clic en el botón de <em>play</em> para escuchar tu grabación, el CPU accede los datos y los envía a una salida, los altavoces o los audífonos. Cuando se hace clic en el botón de cargar, el CPU ejecuta un proceso que convierte los datos de audio a un formato estándar de archivo de sonido (un archivo WAV, o .wav) y lo envía al servidor de EarSketch. El servidor es un sistema externo que proporciona servicios a todos los usuarios de EarSketch, incluso a tu propia computadora. El servidor de EarSketch graba el archivo de sonido de la memoria al almacenamiento secundario del servidor para que lo puedas acceder en el futuro.
+Vamos a considerar la grabación de un sonido a EarSketch como un proceso de ejemplo. Primero, grabamos datos a la computadora con el dispositivo de entrada, el micrófono. El CPU almacena esos datos de audio en su memoria. Si haces clic en el botón de _play_ para escuchar tu grabación, el CPU accede los datos y los envía a una salida, los altavoces o los audífonos. Cuando se hace clic en el botón de cargar, el CPU ejecuta un proceso que convierte los datos de audio a un formato estándar de archivo de sonido (un archivo WAV, o .wav) y lo envía al servidor de EarSketch. El servidor es un sistema externo que proporciona servicios a todos los usuarios de EarSketch, incluso a tu propia computadora. El servidor de EarSketch graba el archivo de sonido de la memoria al almacenamiento secundario del servidor para que lo puedas acceder en el futuro.
 
 Mira el siguiente video suplementario:
 
@@ -238,7 +238,7 @@ END OF OPTIONAL
 [[copyright]]
 === Usa los derechos de autor sabiamente
 
-Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música. Cuando usas <em>samples</em> (breves fragmentos de música) o remezclas música que ya existe, tienes que dar crédito a los autores, y puedes hacerlo en los comentarios de tu código. Antes de usar sonidos de otros músicos y compartir tu propia música, ¡aprende más sobre los derechos de autor!
+Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música. Cuando usas _samples_ (breves fragmentos de música) o remezclas música que ya existe, tienes que dar crédito a los autores, y puedes hacerlo en los comentarios de tu código. Antes de usar sonidos de otros músicos y compartir tu propia música, ¡aprende más sobre los derechos de autor!
 
 Los *derechos de autor* son la parte de la ley que cubre la *propiedad intelectual*, o la posesión del trabajo creativo, como la música.
 
@@ -252,10 +252,10 @@ Aparte del uso leal, hay una manera de usar y compartir la música abiertamente.
 
 Las licencias *Creative Commons* (o CC) permiten que los creadores especifiquen cuáles son los derechos que mantienen y cuáles son los derechos que renuncian. Aquí hay las posibles partes de una licencia CC: "Puedes usar este trabajo como quieras, CON EXCEPCIÓN DE QUE...
 
-* "... tienes que poner mi nombre en tu obra." Reconocimiento (siglas <em>BY</em> en inglés)
-* "...no puedes modificarlo en absoluto." – Sin Derivados (siglas <em>ND</em> en inglés)
-* "...no puedes usarlo para ganar dinero." – No Comercial (siglas <em>NC</em> en inglés)
-* "...tienes que compartir cualquier nueva creación tuya bajo la misma licencia." - CompartirIgual (siglas <em>SA</em> en inglés)
+* "... tienes que poner mi nombre en tu obra." Reconocimiento (siglas _BY_ en inglés)
+* "...no puedes modificarlo en absoluto." – Sin Derivados (siglas _ND_ en inglés)
+* "...no puedes usarlo para ganar dinero." – No Comercial (siglas _NC_ en inglés)
+* "...tienes que compartir cualquier nueva creación tuya bajo la misma licencia." - CompartirIgual (siglas _SA_ en inglés)
 
 Para especificar cuál licencia de Creative Commons vas a emplear, lo único que tienes que hacer es elegir un tipo y ponerlo en tu trabajo. En EarSketch, cuando compartas un script, se te va a pedir que especifiques cuál tipo de licencia quieres para tu canción.
 
