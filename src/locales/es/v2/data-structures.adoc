@@ -12,10 +12,10 @@ Ahora tienes numerosas herramientas disponibles para crear canciones en EarSketc
 === ¿Qué es la estructura de datos?
 
 [role="curriculum-python"]
-Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Un *arreglo* (_array_), también llamado lista en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
+Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Una *lista*, también llamada arreglo (_array_) en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
 
 [role="curriculum-javascript"]
-Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Una *lista*, también llamada arreglo (_array_) en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
+Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Un *arreglo*, también llamado lista en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
 
 [role="curriculum-python"]
 [source, python]
@@ -253,7 +253,10 @@ setTempo(120)
 sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
 
 for compas in range (1, len(sonidosIntroductorios)+1):
-	# Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo. indice = compas - 1 # El índice de lista comienza en cero. pista = compas # Cambia la pista con el compás. fitMedia(sonidosIntroductorios[indice], pista, compas, 5)
+	# Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo.
+	indice = compas - 1 # El índice de lista comienza en cero.
+	pista = compas # Cambia la pista con el compás.
+	fitMedia(sonidosIntroductorios[indice], pista, compas, 5)
 
 #Fin
 finish()
@@ -282,7 +285,14 @@ var sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE
 
 
 for (var compas = 1; compas < sonidosIntroductorios.length + 1; compas++) {
-	// Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length. var indice = compas - 1; // El índice de lista comienza en cero.
+	// Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length.
+	var indice = compas - 1; // El índice de lista comienza en cero.
+	var pista = compas; // Cambia la pista con compas.
+	fitMedia(sonidosIntroductorios[indice], pista, compas, 5);
+}
+
+//Fin
+finish();
 ----
 
 {nbsp} +
@@ -335,7 +345,7 @@ Se ven los índices de la cadena `"EarSketch"` en la siguiente tabla.
 
 
 [role="curriculum-python"]
-* Se puede concatenar listas de la misma manera que se concatenan cadenas. Se accede a los elementos de lista usando la notación de corchetes, como en `miLista[1]`. 
+* Se puede concatenar listas de la misma manera que se concatenan cadenas. Usa el operador de concatenación (`+`): la sintaxis es `nuevaLista = listaA + listaB`. 
 
 [role="curriculum-javascript"]
 * Se puede concatenar arreglos de la misma manera que se concatenan cadenas. Se usa el *método* `concat`. Un método se parece a una función en el sentido de que tiene paréntesis que contienen parámetros. Para usarlo, colócalo después del nombre del arreglo, con un punto: la sintaxis es `nuevoArreglo = arregloA.concat(arregloB)`. Esto se llama *notación de puntos* (o _dot-notation_ en inglés).
@@ -501,34 +511,35 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 #
 # autor: El Equipo de EarSketch
 #
-# descripción:
-Expandir una cadena de tiempos a una cadena de tiempos más larga
+# descripción: Expandir una cadena de tiempos a una cadena de tiempos más larga
+#
 #
 #
 
-# Configuración
+#Configuración
 from earsketch import *
 init()
 setTempo(120)
 
-# Música
+#Música
 ritmoInicial = "0+0+00-00+++-0++"
 instrBateria = RD_UK_HOUSE_MAINBEAT_10
 
-def expansor(cadenaDeTiempos):
+def expansor(candenaDeTiempos):
   nuevoRitmo = ""
   for i in range(0, len(cadenaDeTiempos)):
     porcionDelRitmo = cadenaDeTiempos[0: i]
     nuevoRitmo = nuevoRitmo + porcionDelRitmo
-  # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función. return nuevoRitmo
+  # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
+  return nuevoRitmo
 
 ritmoFinal = expansor(ritmoInicial)
 print ritmoFinal
 
-# makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
+#makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
 makeBeat(instrBateria, 1, 1, ritmoFinal)
 
-# Fin
+#Fin
 finish()
 ----
 
@@ -542,14 +553,6 @@ finish()
 // autor: El Equipo de EarSketch
 //
 // descripción: Expandir una cadena de tiempos en una cadena de tiempos más larga
-// código javascript
-//
-// nombre_del_script: Operaciones de cadenas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Expandir una cadena de tiempos en una cadena de tiempos más larga
-
 //
 //
 //
@@ -568,7 +571,8 @@ function expansor(cadenaDeTiempos){
     porcionDelRitmo = cadenaDeTiempos.substring(0, i);
     nuevoRitmo = nuevoRitmo + porcionDelRitmo;
   }
-  // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función. return nuevoRitmo;
+  // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
+  return nuevoRitmo;
 }
 
 var ritmoFinal = expansor(ritmoInicial);
@@ -764,8 +768,8 @@ Usando lo que has aprendido en este capítulo, crea ritmos que te gusten con `ma
 [role="curriculum-python"]
 * *Concisión* significa que el código es breve y cumple su objetivo eficazmente. Aquí están algunas preguntas que pueden ayudarte a escribir código más conciso:
 ** ¿Copié y pegué llamadas a función múltiples veces seguidas? Si la respuesta es sí, ¡simplifícalas con un ciclo!
-** ¿Estoy volviendo a usar algunos bloques de código? Si la respuesta es sí, ¡ponlos en una función! (Si la respuesta es sí, ¡ponlos en una función!)
-** ¿Hay constantes de sonido o expresiones matemáticas que uso repetidamente en mi código? Si la respuesta es sí, ¡asigna variables a las constantes o expresiones! (Si la respuesta es sí, ¡asigna variables a las constantes o expresiones! Una lista también podría ser útil.
+** ¿Estoy volviendo a usar algunos bloques de código? Si la respuesta es sí, ¡ponlos en una función!
+** ¿Hay constantes de sonido o expresiones matemáticas que uso repetidamente en mi código? Si la respuesta es sí, ¡asigna variables a las constantes o expresiones! Una lista también podría ser útil.
 * La *claridad* tiene que ver con cuán bien el código comunica su función y la intención del programador. Si tus compañeros se pierden en o se confunden con tu código, probablemente no es claro. Éstas son algunas preguntas para ayudarte a clarificar tu código:
 ** ¿Completé los comentarios introductorios con mi título de script, autor y descripción? 
 ** ¿Son descriptivos los nombres de mis variables y funciones? Si no son, cámbialos.
@@ -834,7 +838,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 [role="curriculum-python"]
 * Una *lista* es una colección de valores combinados en una sola entidad que almacena datos eficientemente. Lo que se almacena dentro de una lista se llaman elementos y pueden ser de cualquier tipo de dato.
 * Como en las cadenas, se asigna un índice a los elementos de la lista. Los índices de lista empiezan en 0.
-* Se accede a los elementos de arreglo usando la notación de corchetes, como en `miArreglo[1]`. Se puede acceder a los caracteres de una cadena de la misma manera: `miCadena[1]`.
+* Se accede a los elementos de lista usando la notación de corchetes, como en `miLista[1]`. Se puede acceder a los caracteres de una cadena de la misma manera: `miCadena[1]`.
 * La función `len()` devuelve el número de elementos en una lista, o el número de caracteres en una cadena. La sintaxis es `len(lista)`.
 * Las listas y los arreglos pueden ser concatenados y divididos en porciones usando *operaciones de listas*, un conjunto de herramientas para modificar una lista.
 * La sintaxis para crear un subgrupo de una lista existente más larga es `nuevaLista = viejaLista[indiceDeComienzo: ultimoIndice]`.

@@ -111,7 +111,8 @@ También puedes usar los comentarios para describir lo que hacen las diferentes 
 #
 # author: El Equipo de EarSketch
 #
-# descripción: Aquí hay un breve ejemplo de un script que usa comentarios para describir lo que hace el código. #
+# descripción: Aquí hay un breve ejemplo de un script que usa comentarios para describir lo que hace el código. 
+#
 #
 #
 
@@ -149,7 +150,8 @@ finish()
 //
 // autor: El Equipo de EarSketch
 //
-// descripción: Aquí hay un breve ejemplo de un script que usa comentarios para describir lo que hace el código. //
+// descripción: Aquí hay un breve ejemplo de un script que usa comentarios para describir lo que hace el código. 
+//
 //
 
 //Configuración

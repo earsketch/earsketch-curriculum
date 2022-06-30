@@ -38,15 +38,30 @@ setTempo(120)
 
 # Música
 
-# Crea una sección A. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
+# Crea una sección A.
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) # Aumentar el volumen de la línea de bajo
 
-# Crea una sección B con 4 compases entre el compás 5 y el 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # La melodía principal es diferente. fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # Los tambores son diferentes. fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # Aumentar el volumen de la línea de bajo
+# Crea una sección B con 4 compases entre el compás 5 y el 9.
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # La melodía principal es diferente.
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # Los tambores son diferentes.
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # Aumentar el volumen de la línea de bajo
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # El traqueteo: añadir un nuevo elemento
 
 # Entonces se regresa a la sección A en el compás 9.
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13) # Principal
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13) # Tambores
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13) # Línea de bajo
+setEffect(3, VOLUME, GAIN, 0, 9, -20, 13) # Aumentar el volumen de la línea de bajo
+
+# Fin
+finish()
 ----
 
 
@@ -70,15 +85,21 @@ setTempo(120);
 
 // Música
 
-// Crea una sección A. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
+// Crea una sección A. 
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
 
-// Crea una sección B con 4 compases entre el compás 5 y el 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente. fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes. fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de bajo
+// Crea una sección B con 4 compases entre el compás 5 y el 9. 
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente. 
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes. 
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. 
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de bajo
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // El traqueteo: añadir un nuevo elemento
 
-// Entonces se regresa a la sección A en el compás 9. fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
+// Entonces se regresa a la sección A en el compás 9. 
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 9, 0, 13); // Aumentar el volumen de la línea de bajo
@@ -99,7 +120,7 @@ Ten en cuenta que una frase musical suena más natural cuando se arreglan los cl
 [[creatingyourcustomfunctions]]
 === Crea tus funciones personalizadas
 
-En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. ¡Hay una manera más eficiente de hacerlo usando *funciones personalizadas*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces. Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.  
+En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. ¡Hay una manera más eficiente de hacerlo usando *funciones personalizadas*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.  
 
 La diferencia con las funciones que has utilizado como `fitMedia()`, es que `fitMedia()` ya está predefinida por nuestro equipo para reproducir una canción. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
 
@@ -270,7 +291,7 @@ A continuación, hay unas estrategias populares para crear transiciones musicale
 . *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
 . *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (_riff_ en inglés).
 . *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
-. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^]. Aquí hay un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
+. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat()`. Aquí hay un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
 . *Looping* (*Ciclos* en español): Repetir un corto segmento de una melodía antes de una nueva sección. Aquí está un https://www.youtube.com/watch?v=AQg4wnbBjiQ[ejemplo^] de looping en DJ'ing.
 . *Crossfading*: Reducir el volumen de una sección mientras aumentas el volumen de una nueva sección. 
 . *Anacrusa* (*_Anacrusis_* en inglés): Cuando la melodía de una nueva sección empieza unos tiempos antes del comienzo de la sección.
@@ -746,7 +767,8 @@ function anadirBateria(comienzo, fin, patron) {
   for (var compas = comienzo; compas < fin; compas++){
     // Aquí colocaremos nuestro ritmo en "compas",
     // el cual, al principio, es igual a "comienzo",
-    // el cual es un parámetro de la función. makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
+    // el cual es un parámetro de la función. 
+    makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
     makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat);
   }
 }
@@ -797,7 +819,7 @@ setEffect(3, VOLUME, GAIN, -10);
 finish();
 ----
 
-En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for. Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
+En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
 
 
 [[chapter7summary]]
