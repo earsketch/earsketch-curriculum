@@ -436,61 +436,61 @@ A continuación, hay un ejemplo de una mezcla automatizada. Podemos decir que es
 [role="curriculum-python"]
 [source, python]
 ----
-# python code
-# script_name: Mixing
+# código python
+# nombre_del_script: Mezclar
 #
-# author: the EarSketch team
-# description: Creating a short song and using conditional statements to mix the tracks
+# autor: El Equipo de EarSketch
+# descripción: Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
 #
-# Setup
+# Configuarción
 from earsketch import *
 init()
 setTempo(120)
 
-# Adding a melody and bass
-melody1 = YG_ALT_POP_GUITAR_3
-melody2 = YG_ALT_POP_GUITAR_1
-bass1 = YG_ALT_POP_BASS_1
-bass2 = DUBSTEP_SUBBASS_008
-strings = YG_HIP_HOP_STRINGS_4
-fitMedia(melody1, 1, 1, 9)
-fitMedia(melody2, 1, 9, 17)
-fitMedia(bass1, 2, 1, 9)
-fitMedia(bass2, 2, 9, 17)
-fitMedia(strings, 3, 9, 17)
+# Añadir una melodía y un bajo
+melodia1 = YG_ALT_POP_GUITAR_3
+melodia2 = YG_ALT_POP_GUITAR_1
+bajo1 = YG_ALT_POP_BASS_1
+bajo2 = DUBSTEP_SUBBASS_008
+cuerdas = YG_HIP_HOP_STRINGS_4
+fitMedia(melodia1, 1, 1, 9)
+fitMedia(melodia2, 1, 9, 17)
+fitMedia(bajo1, 2, 1, 9)
+fitMedia(bajo2, 2, 9, 17)
+fitMedia(cuerdas, 3, 9, 17)
 
-# Adding percussions using makeBeat()
-beatKick = '0---0-----0-0---'
-beatSnare = '--0-0------000-'
-soundKick = OS_KICK02
-soundSnare = OS_SNARE06
-for measure in range(5,17):
-  makeBeat(soundKick, 4, measure, beatKick)
-  makeBeat(soundSnare, 5, measure, beatSnare)
+# Añadir percusiones usando makeBeat()
+ritmoBombo = '0---0-----0-0---'
+ritmoRedoblante = '--0-0------000-'
+sonidoBombo = OS_KICK02
+sonidoRedoblante = OS_SNARE06
+for compas in range (5, 17):
+  makeBeat(ritmoBombo, 4, compas, ritmoBombo)
+  makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante)
 
-# Mixing my tracks
-# First, we analyze the tracks for loudness
-loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
-print('The loudness of track 1 is' + str(loudnessTrack1))
-loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
-print('The loudness of track 2 is' + str(loudnessTrack2))
-loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
-print('The loudness of track 3 is' + str(loudnessTrack3))
+# Mezclar mis pistas
+# Primero, analizamos el volumen de las pistas.
+volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
+print('El volumen de la pista 1 es'+str(volumenPista1))
+volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
+print('El volumen de la pista 2 es'+str(volumenPista2))
+volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
+print('El volumen de la pista 3 es'+str(volumenPista3))
 
-if (loudnessTrack1 < loudnessTrack2):
-  # if track 1 is quieter than track 2 then we increase the volume of track 1
+if (volumenPista1 < volumenPista2):
+  #Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
   setEffect(1, VOLUME, GAIN, +5)
-  print ('track 1 was quieter than track 2')
-elif (loudnessTrack1 < loudnessTrack3):
-  # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+  print ('la pista 1 tuvo menos volumen que la pista 2')
+elif (volumenPista1 < volumenPista3):
+  #Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
   setEffect(1, VOLUME, GAIN, +5)
-  print ('track 1 was quieter than track 3')
-else:
-  # if track 1 is louder than tracks 2 and 3, then we change nothing
-  print('track 1 was the loudest track already')
+  print ('la pista 1 tuvo menos volumen que la pista 3')
+else: 
+  #Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
+  print('la pista 1 ya tenía el volumen más alto')
 
 
-# Finish
+# Fin
 finish()
 ----
 
@@ -499,63 +499,63 @@ finish()
 ----
 "use strict";
 
-// javascript code
-// script_name: Mixing
+// código javascript 
+// nombre_del_script: Mezclar
 //
-// author: The EarSketch team
-// description: Creating a short song and using conditional statements to mix the tracks
+// autor: El Equipo de EarSketch
+// descripción: Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
 //
 
-// Setup
+// Configuración
 init();
 setTempo(120);
 
-// Adding a melody and bass
-var melody1 = YG_ALT_POP_GUITAR_3;
-var melody2 = YG_ALT_POP_GUITAR_1;
-var bass1 = YG_ALT_POP_BASS_1;
-var bass2 = DUBSTEP_SUBBASS_008;
-var strings = YG_HIP_HOP_STRINGS_4;
-fitMedia(melody1, 1, 1, 9);
-fitMedia(melody2, 1, 9, 17);
-fitMedia(bass1, 2, 1, 9);
-fitMedia(bass2, 2, 9, 17);
-fitMedia(strings, 3, 9, 17);
+// Añadir una melodía y un bajo
+var melodia1 = YG_ALT_POP_GUITAR_3;
+var melodia2 = YG_ALT_POP_GUITAR_1;
+var bajo1 = YG_ALT_POP_BASS_1;
+var bajo2 = DUBSTEP_SUBBASS_008;
+var cuerdas = YG_HIP_HOP_STRINGS_4;
+fitMedia(melodia1, 1, 1, 9);
+fitMedia(melodia2, 1, 9, 17);
+fitMedia(bajo1, 2, 1, 9);
+fitMedia(bajo2, 2, 9, 17);
+fitMedia(cuerdas, 3, 9, 17);
 
-// Adding percussions using makeBeat()
-var beatKick = '0---0-----0-0---';
-var beatSnare = '--0-0------000-';
-var soundKick = OS_KICK02;
-var soundSnare = OS_SNARE06;
-for (var measure = 5; measure > 17; measure++){
-  makeBeat(soundKick, 4, measure, beatKick);
-  makeBeat(soundSnare, 5, measure, beatSnare);
+// Añadir percusiones usando makeBeat()
+var ritmoBombo = '0---0-----0-0---';
+var ritmoRedoblante = '--0-0------000-';
+var sonidoBombo = OS_KICK02;
+var sonidoRedoblante = OS_SNARE06;
+for (var compas=5; compas>17; compas ++){
+  makeBeat(sonidoBombo, 4, compas, ritmoBombo);
+  makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante);
 }
 
 
-// Mixing my tracks
-// First, we analyze the tracks for loudness
-var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
-println('The loudness of track 1 is' + loudnessTrack1);
-var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
-println('The loudness of track 2 is' + loudnessTrack2);
-var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
-println('The loudness of track 3 is' + loudnessTrack3);
+// Mezclar mis pistas
+// Primero, analizamos el volumen de las pistas.
+var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
+println('El volumen de la pista 1 es'+volumenPista1)
+var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
+println('El volumen de la pista 2 es'+volumenPista2)
+var volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
+println('El volumen de la pista 3 es'+volumenPista3)
 
-if (loudnessTrack1 < loudnessTrack2){
-  // if track 1 is quieter than track 2 then we increase the volume of track 1
+if (volumenPista1 < volumenPista2){
+  //Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
   setEffect(1, VOLUME, GAIN, +5);
-  println ('track 1 was quieter than track 2');
-} else if (loudnessTrack1 < loudnessTrack3){
-  // if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+  println ('la pista 1 tuvo menos volumen que la pista 2');
+} else if (volumenPista1 < volumenPista3){
+  // Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
   setEffect(1, VOLUME, GAIN, +5);
-  println ('track 1 was quieter than track 3');
-} else {
-  // if track 1 is louder than tracks 2 and 3, then we change nothing
-  println('track 1 was the loudest track already');
+  println ('la pista 1 tuvo menos volumen que la pista 3');
+} else { 
+  // Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
+  println('la pista 1 ya tenía el volumen más alto');
 }
 
-// Finish
+// Fin
 finish();
 ----
 
@@ -650,8 +650,8 @@ if (n * 3 == 15) {
 [answers]
 * adaptar el volumen de cada pista para que suenen equilibradas
 * adaptar el registro de cada pista para suenen equilibradas
-* añadir un <em>fade in</em>
-* añadir un <em>fade out</em>
+* añadir un _fade in_
+* añadir un _fade out_
 --
 
 [question]
