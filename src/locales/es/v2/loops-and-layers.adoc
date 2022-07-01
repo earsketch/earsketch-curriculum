@@ -23,7 +23,7 @@ _UN VIDEO SOBRE LOS CICLOS VIENE PRONTO_
 [role="curriculum-python"]
 [source,python]
 ----
-# código python 
+# código python
 # nombre_del_script: Poner mis ritmos en un ciclo
 #
 # autor: El Equipo de EarSketch
@@ -56,7 +56,7 @@ finish()
 // nombre_del_script: Poner mis ritmos en un ciclo
 //
 // autor: El Equipo de EarSketch
-// descripción: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for El contador es "compas"
+// descripción: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for. El contador es "compas"
 //
 
 // Configuración:
@@ -520,7 +520,7 @@ Programar no sólo es el acto de escribir código. También hay que depurarlo y 
 .. Usa el método "_comment out_" (comentar). Puedes encontrar un error al insertar la sintaxis que se usa para los comentarios en un bloque de código, o *_commenting it out_*, y ejecutar el código. Si no hay ningún error, el error se encuentra en alguna parte del bloque de código que tenga esa sintaxis de comentario.
 .. También se puede usar *_Print debugging_* (depuración de impresión) para encontrar un error. Lee la sección problemática de tu código y trata de seguir la lógica. Inserta declaraciones `print` donde no estés seguro/a de la lógica; consigue los valores de las variables y revisa el estado del programa. Esto te ayuda a comparar tu entendimiento del programa con lo que pasa en realidad en ese programa.
 . *Aplasta el error* (_squash the bug_): Verifica si hay errores y edita el código erróneo, entonces ejecútalo para verificar si es correcto.
-. *Pide ayuda*: Si notas que has pasado demasiado tiempo con un error (_bug_), ¡entonces pídele ayuda a alguien! Una nueva perspectiva puede hacer maravillas para encontrar errores.
+. *Pide ayuda:* Si notas que has pasado demasiado tiempo con un error (_bug_), ¡entonces pídele ayuda a alguien! Una nueva perspectiva puede hacer maravillas para encontrar errores.
 
 [role="curriculum-javascript"]
 . *Lee la consola para encontrar pistas*.
@@ -529,7 +529,7 @@ Programar no sólo es el acto de escribir código. También hay que depurarlo y 
 .. Usa el método "_comment out_" (comentar). Puedes encontrar un error al insertar la sintaxis que se usa para los comentarios en un bloque de código, o *_commenting it out_*, y ejecutar el código. Si no hay ningún error, el error se encuentra en alguna parte del bloque de código que tenga esa sintaxis de comentario.
 .. También se puede usar *_Print debugging_* (depuración de impresión) para encontrar un error. Lee la sección problemática de tu código y trata de seguir la lógica. Inserta declaraciones `println` donde no estés seguro/a de la lógica; consigue los valores de las variables y revisa el estado del programa. Esto te ayuda a comparar tu entendimiento del programa con lo que pasa en realidad en ese programa.
 . *Aplasta el error* (_squash the bug_): Verifica si hay errores y edita el código erróneo, entonces ejecútalo para verificar si es correcto.
-. *Pide ayuda*: Si notas que has pasado demasiado tiempo con un error (_bug_), ¡entonces pídele ayuda a alguien! Una nueva perspectiva puede hacer maravillas para encontrar errores.
+. *Pide ayuda:* Si notas que has pasado demasiado tiempo con un error (_bug_), ¡entonces pídele ayuda a alguien! Una nueva perspectiva puede hacer maravillas para encontrar errores.
 
 A continuación, te presentamos un ejemplo de impresión de variables para ayudar a depurar un script:
 

@@ -45,7 +45,7 @@ Aquí hay un ejemplo:
 #   descripción: Cómo modificar el volumen de 2 pistas musicales (tracks)
 #
 
-# Configuración 
+# Configuración
 from earsketch import *
 
 init()
@@ -333,7 +333,7 @@ setTempo(120)
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Hace un _effect ramp_ (rampa del efecto) entre los compases 1 y 3, yendo desde -60dB hasta 0dB.
-# Esto es un _fade in_.
+# Esto es un _fade in_. 
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 
 #Fin
@@ -363,7 +363,7 @@ fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Hace un _effect ramp_ (rampa del efecto) entre los compases 1 y 3, yendo desde -60dB hasta 0dB.
 
-// Esto es un _fade in_.
+// Esto es un _fade in_. 
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
 
 //Fin
@@ -379,7 +379,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source, python]
 ----
-# código python 
+# código python
 #
 # nombre_del_script: Envelopes complejos
 #
@@ -410,7 +410,7 @@ setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB) # Primer efecto, ba
 
 # segundo efecto, cambios de volumen
 setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC)  # Crescendo
-setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE)  # Empieza el desvanecimiento del volumen (_fade out_).
+setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE)  # Empieza el desvanecimiento del volumen (_fade out_). 
 setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF) # Fin del _fade out_
 
 #Fin
@@ -453,7 +453,7 @@ setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB); // Primer efecto, 
 
 // segundo efecto, cambios de volumen
 setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC);  // Crescendo
-setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE);  // Empieza el desvanecimiento del volumen (_fade out_).
+setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE);  // Empieza el desvanecimiento del volumen (_fade out_). 
 setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF); // Fin del _fade out_
 
 //Fin
@@ -608,7 +608,7 @@ var ritmoDeHihat = '---0---0--00----';
 fitMedia(melodia1, 1, 1, 5);
 fitMedia(melodia2, 1, 5, 9);
 
-// Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo for en compas 
+// Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo for en compas
 for (var compas = 1; compas < 9; compas++){
   makeBeat(bombo, 2, compas, ritmoDeBombo);
   makeBeat(hihat, 3, compas, ritmoDeHihat);

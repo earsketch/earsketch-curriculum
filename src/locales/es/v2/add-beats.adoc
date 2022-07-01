@@ -158,8 +158,8 @@ Primero vamos a aprender algunos conceptos básicos sobre el ritmo:
 * El *tempo* es la velocidad de la música en PPM (pulsaciones por minuto).
 * El *pulso* de una canción es una sucesión constante de pulsaciones (o latidos). Cuando los miembros de una audiencia dan palmas en un concierto, siguen este pulso.
 * Un *compás* es una unidad de medida musical que agrupa una cantidad predeterminada de tiempos. En EarSketch, 1 *compás* dura 4 tiempos. Debido a que hay 4 tiempos en 1 compás, los tiempos también se llaman *negras (1/4s de nota)*.
-* Cada tiempo se puede dividir en *subdivisiones*. Por ejemplo, una negra (1/4 de nota) se puede dividir en 2 *corcheas (1/8s de nota)*. Cuando cuentas negras (1/4s de nota), dices, "1, 2, 3, 4...". Cuando cuentas corcheas (1/8s de nota), usas "y": "1 y 2 y 3 y 4 y...".
-* Se puede dividir una corchea (1/8 de nota) en 2 *semicorcheas (1/16s de nota)*. Cuando cuentas semicorcheas (1/16s de nota), usas "ta ta ta ta  ta ta ta ta  ta ta ta ta  ta ta ta ta...".
+* Cada tiempo se puede dividir en *subdivisiones*. Por ejemplo, una negra (1/4 de nota) se puede dividir en 2 *corcheas (1/8s de nota)*. Cuando cuentas negras (1/4s de nota), dices, "1, 2, 3, 4...." Cuando cuentas corcheas (1/8s de nota), usas "y": "1 y 2 y 3 y 4 y...."
+* Se puede dividir una corchea (1/8 de nota) en 2 *semicorcheas (1/16s de nota)*. Cuando cuentas semicorcheas (1/16s de nota), usas "ta ta ta ta  ta ta ta ta  ta ta ta ta  ta ta ta ta...."
 * 1 compás contiene 4 negras (1/4s de nota), 8 corcheas (1/8s de nota) o 16 semicorcheas (1/16s de nota). Toma en cuenta que la suma de todas las notas en un compás tiene que ser 1. Se pueden mezclar y combinar las notas, por ejemplo 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
 * Al marcar cada pulsación, el *metrónomo* ayuda al músico a organizar el ritmo en su pieza musical. En la EAD de EarSketch, puedes abrir o cerrar el metrónomo usando el icono "abrir/cerrar el metrónomo" a la izquierda del nivel de sonido.
 
@@ -190,7 +190,7 @@ Una cadena de golpes de tambor es una cadena que usa los caracteres "0", "+" o "
 * `+` extiende el clip de audio hasta la siguiente subdivisión. Siempre se coloca después de un `0` o `+`.
 * `-` se usa para crear un silencio.
 
-Recuerda que una cadena es un tipo de dato Se consiste en una serie de caracteres (como `0` o `+`) dentro de comillas.
+Recuerda que una cadena es un tipo de dato. Se consiste en una serie de caracteres (como `0` o `+`) dentro de comillas.
 
 .PRÁCTICA
 ****

@@ -25,17 +25,17 @@ Vamos a ver cómo detectar la intensidad sonora, o volumen, de la pista. Asegúr
 from earsketch import *
 init()
 setTempo(120)
- 
+
 # Colocar un sonido en la pista 1
 sonido = COMMON_LOVE_VOX_COMMON_1
 fitMedia(sonido, 1, 1, 9)
- 
+
 # Crear una variable para almacenar el volumen de la pista 1
 volumen1 = analyzeTrack(1, RMS_AMPLITUDE)
- 
+
 # Mostrar el volumen en la consola
 print(volumen1)
- 
+
 # Fin
 finish()
 ----
@@ -54,17 +54,17 @@ finish()
 // Configuración
 init();
 setTempo(120);
- 
+
 // Colocar un sonido en la pista 1
 sonido = COMMON_LOVE_VOX_COMMON_1;
 fitMedia(sonido, 1, 1, 9);
- 
+
 // Crear una variable para almacenar el volumen de la pista 1
 volumen1 = analyzeTrack(1, RMS_AMPLITUDE);
- 
+
 // Mostrar el volumen en la consola
 println(volumen1);
- 
+
 // Fin
 finish();
 ----
@@ -289,7 +289,6 @@ A continuación, hay un ejemplo de una declaración condicional. Observa sus sim
 ----
 if (condicion):
     # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es True.
-    # Toma en cuenta que las instrucciones tienen sangría, igual que los ciclos for.
 ----
 
 [role="curriculum-javascript"]
@@ -297,7 +296,6 @@ if (condicion):
 ----
 if (condicion){
     // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es true.
-    // Toma en cuenta que las instrucciones tienen sangría, igual que los ciclos for.
 ----
 
 .PRÁCTICA
@@ -383,12 +381,9 @@ Tal vez nos gustaría revisar varias condiciones y ejecutar otra serie de declar
 [source, python]
 ----
 if (condicion1):
-    # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es True. Si es False, prosigue a la siguiente línea.
-elif (condicion2):
-	# Escribe aquí las instrucciones si la condicion2 es True. Si la condicion2 es False, prosigue a la siguiente línea.
-elif (condicion3):
-	# Escribe aquí las instrucciones si la condicion3 es True. Si la condicion3 es False, prosigue a la siguiente línea.
-else:
+    # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es True. Si es False, prosigue a la siguiente línea. elif (condicion2):
+	# Escribe aquí las instrucciones si la condicion2 es True. Si la condicion2 es False, prosigue a la siguiente línea. elif (condicion3):
+	# Escribe aquí las instrucciones si la condicion3 es True. Si la condicion3 es False, prosigue a la siguiente línea. else:
 	# Escribe aquí las instrucciones si todas las 3 condiciones son False.
 ----
 
@@ -396,15 +391,11 @@ else:
 [source, javascript]
 ----
 if (condicion1) {
-    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true.
-} else if (condicion2) {
-	// # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea.
-	// elif es una abreviatura de "else if" ("de lo contrario, si" en español)
+    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true. } else if (condicion2) {
+	// # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea. // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
 } else if (condicion3) {
-	// Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea.  
-} else {
+	// Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea. } else {
 	// Escribe aquí las instrucciones si todas las 3 condiciones son false.
-}
 ----
 
 [[mixingyourtracks]]
@@ -576,7 +567,7 @@ finish();
 [role="curriculum-python"]
 * La función `analyzeTrack()` requiere dos argumentos: el número de pista y un parámetro. Cuando el parámetro es `RMS_AMPLITUDE`, la función calculará el volumen de la pista (un número entre 0 y 1). Cuando el parámetro es `SPECTRAL_CENTROID`, la función calculará el brillo de la pista.
 * El tipo de dato *booleano* sólo tiene dos posibles valores, `True` y `False` (Cierto y Falso).
-* Los valores booleanos son generados por operadores de comparación: `==`, `!=`, `>`, `\>=`, `<`, `<=`.
+* Los valores booleanos son generados por operadores de comparación: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
 * `==` calcula si 2 valores son iguales, mientras que `=` asigna un valor a una variable.
 * Un *operador* es un carácter que representa una acción.
 * La computadora evalúa las *expresiones* para producir un valor.
@@ -613,7 +604,7 @@ finish();
 
 [question]
 --
-¿Qué resultado generaría este bloque de código (qué se imprimiría en la consola)?
+¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
 
 [source,python]
 ----
@@ -633,7 +624,7 @@ else:
 
 [question]
 --
-¿Qué resultado generaría este bloque de código (qué se imprimiría en la consola)?
+¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
 
 [source,javascript]
 ----

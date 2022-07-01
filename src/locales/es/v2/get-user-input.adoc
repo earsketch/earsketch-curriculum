@@ -19,7 +19,7 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
 * Además de requerir ciertos argumentos (parámetros), las funciones pueden generar un valor. En programación, le llamamos a ésto devolver un valor.
-* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: A. pide que la función devuelva un valor cuando se llama. B. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
+* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: 1. pide que la función devuelva un valor cuando se llama. 2. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
 * Para usar el valor que la función devuelve, crea una variable y asígnala a la llamada a función. Recuerda que las variables no llevan acento.
 * No es obligatorio tener una declaración de retorno. Sin una declaración de retorno una función no genera ningún valor. `fitMedia()` y `setEffect()` son ejemplos de funciones que no devuelven nada.
 
@@ -34,7 +34,7 @@ Aquí hay un ejemplo usando código:
 #
 # autor: El Equipo de EarSketch
 #
-# descripción: Vincular dos ritmos usando declaraciones de retorno 
+# descripción: Vincular dos ritmos usando declaraciones de retorno
 #
 #
 #
@@ -307,7 +307,7 @@ finish();
 [[userinput]]
 === Consigue respuestas del usuario
 
-Vamos a ver cómo pedir sugerencias de los usuarios cuando se oprima el botón de "ejecutar". Esto es posible usando la función `readInput()`. Esta función requiere una cadena (_string_) como parámetro (como "que tempo te gustaria tener en tu musica?"). Cuando el usuario ejecute el código, verá una nueva ventana con la cadena de caracteres (o _string_ en inglés) y se le pedirá que escriba una respuesta. La función `readInput()` devuelve lo que el usuario haya escrito allí.
+Vamos a ver cómo pedir sugerencias de los usuarios cuando se oprima el botón de "ejecutar". Esto es posible usando la función `readInput()`. Esta función requiere como parámetro una cadena (_string_), tal como ("¿qué tempo te gustaría tener en tu música?"). Cuando el usuario ejecute el código, verá una nueva ventana con la cadena de caracteres (o _string_ en inglés) y se le pedirá que escriba una respuesta. La función `readInput()` devuelve lo que el usuario haya escrito allí.
 
 Por ejemplo, copia el siguiente código en un nuevo script y ejecútalo:
 
@@ -380,13 +380,13 @@ finish()
 // nombre_del_script: Respuesta del usuario 1
 //
 // autor: El Equipo de EarSketch
-//	
+//
 // descripción: Cómo pedir que el usuario escoja el tempo
 
 // Configuración
 init();
 
-// Pedir que escoja el tempo 
+// Pedir que escoja el tempo
 var pregunta = "Que tempo te gustaria tener en tu musica? Elije un número entre 45 y 220.";
 var respuesta = readInput(pregunta);
 
@@ -540,7 +540,7 @@ Usa el siguiente programa para imprimir las respuestas:
 ----
 # código python
 #
-# nombre_del_script: Expresiones booleanas 
+# nombre_del_script: Expresiones booleanas
 #
 # autor: El Equipo de EarSketch
 #
@@ -614,18 +614,18 @@ Aquí hay un ejemplo:
 ----
 # código python
 #
-# nombre_del_script: Operaciones booleanas 
+# nombre_del_script: Operaciones booleanas
 #
 # autor: El Equipo de EarSketch
 #
-# descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección 
+# descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
 #
 
 from earsketch import *
 init()
 setTempo(120)
 
-# Variables de sonido 
+# Variables de sonido
 bombo = OS_KICK02
 hihat = OS_CLOSEDHAT04
 palmada = OS_CLAP03
@@ -711,7 +711,7 @@ finish();
 
 .DESAFÍO
 ****
-Este es el desafío de la rocola: escribe un script que pedirá que el usuario escoja el género, dándole 3 opciones (por ejemplo, "latino", "trap" y "dubstep"). Basándote en la respuesta del usuario, crea una canción que vaya bien con el género.
+Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario escoja el género, dándole 3 opciones (por ejemplo, "latino", "trap" y "dubstep"). Basándote en la respuesta del usuario, crea una canción que vaya bien con el género.
 ****
 
 {nbsp} +
