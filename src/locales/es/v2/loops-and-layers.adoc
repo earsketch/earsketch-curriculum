@@ -56,7 +56,7 @@ finish()
 // nombre_del_script: Poner mis ritmos en un ciclo
 //
 // autor: El Equipo de EarSketch
-// descripción: El contador es "compas"
+// descripción: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for. El contador es "compas"
 //
 
 // Configuración:

@@ -519,7 +519,6 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 # descripción: Expandir una cadena de tiempos a una cadena de tiempos más larga
 #
 #
-#
 
 # Configuración
 from earsketch import *
@@ -541,7 +540,7 @@ def expansor(cadenaDeTiempos):
 ritmoFinal = expansor(ritmoInicial)
 print ritmoFinal
 
-#makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
+# makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
 makeBeat(instrBateria, 1, 1, ritmoFinal)
 
 # Fin
@@ -781,7 +780,7 @@ Usando lo que has aprendido en este capítulo, crea ritmos que te gusten con `ma
 ** ¿Son descriptivos los nombres de mis variables y funciones? Si no son, cámbialos.
 ** ¿He usado comentarios para explicar cada bloque de código y cualquier línea de código que sea potencialmente confusa?
 ** ¿He usado estructuras computacionales como funciones personalizadas y ciclos para ayudar a organizar mi código?
-** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien. Esto ayuda a que la lectura fluya bien.
+** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien.
 
 [role="curriculum-javascript"]
 * *Concisión* significa que el código es breve y cumple su objetivo eficazmente. Aquí están algunas preguntas que pueden ayudarte a escribir código más conciso:
@@ -793,7 +792,7 @@ Usando lo que has aprendido en este capítulo, crea ritmos que te gusten con `ma
 ** ¿Son descriptivos los nombres de mis variables y funciones? Si no son, cámbialos.
 ** ¿He usado comentarios para explicar cada bloque de código y cualquier línea de código que sea potencialmente confusa?
 ** ¿He usado estructuras computacionales como funciones personalizadas y ciclos para ayudar a organizar mi código?
-** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien. Esto ayuda a que la lectura fluya bien.
+** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien.
 
 En la programación, es común escuchar las *opiniones de tus compañeros*. Te ayudan a mejorar tu programa y música. Las opiniones tienen que ser *constructivas*, lo cual quiere decir que ayudan al compañero con su desempeño en vez de desanimarlo. Cuando des tus opiniones:
 
