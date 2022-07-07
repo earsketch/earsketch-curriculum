@@ -1,5 +1,5 @@
 [[getorganizedwithdatastructures]]
-== Las estructuras de datos
+== Estructuras de datos
 
 :nofooter:
 
@@ -10,7 +10,7 @@ Ahora tienes numerosas herramientas disponibles para crear canciones en EarSketc
 Ahora tienes numerosas herramientas disponibles para crear canciones en EarSketch. Los scripts que escribas pueden llegar a ser muy diversificados y largos. Este capítulo te va a ayudar a organizar mejor tu código usando una abstracción especial en particular que se llama arrelgos y una nueva funcionalidad de `makeBeat()`.
 
 [[datastructures]]
-=== ¿Qué es la estructura de datos?
+=== ¿Qué es una estructura de datos?
 
 [role="curriculum-python"]
 Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Una *lista*, también llamada arreglo (_array_) en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
