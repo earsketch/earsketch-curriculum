@@ -853,6 +853,7 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * Una declaración que devuelve un valor a la llamada a función
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?
@@ -864,6 +865,7 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * `miFuncion(2, 5)`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?
