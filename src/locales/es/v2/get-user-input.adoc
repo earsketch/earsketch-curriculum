@@ -756,6 +756,7 @@ Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario 
 * Producir un Booleano a través de un operador de comparación.
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
@@ -772,6 +773,7 @@ not(True and (4>5))
 * `False`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál sería el resultado de este bloque de código (qué se imprimiría en la consola)?
@@ -799,6 +801,7 @@ not(True and (4>5))
 * `x = cadenadetiempos1[cadenadetiempos2]`
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cómo obtendrías el booleano True con los booleanos True y False?
@@ -810,6 +813,7 @@ not(True and (4>5))
 * `true or false`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cómo obtendrías el booleano true con los booleanos true y false?

@@ -286,7 +286,7 @@ A continuación, hay unas estrategias populares para crear transiciones musicale
 
 . *Platillo Crash*: Colocar un platillo crash en el primer tiempo de una nueva sección. Ve a este https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[ejemplo^].
 . *Drum Fill*: Una variación rítmica que llena el espacio antes de la nueva sección. Ve a estos https://www.youtube.com/watch?v=YMskGG39Y0Y[ejemplos^] de drum fills.
-. *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love].
+. *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love^].
 . *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (_riff_ en inglés).
 . *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
 . *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
@@ -853,6 +853,7 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * Una declaración que devuelve un valor a la llamada a función
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?
@@ -864,6 +865,7 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * `miFuncion(2, 5)`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál de estas opciones define correctamente la función `miFuncion()` con los parámetros `compasDeComienzo` y `ultimoCompas`?

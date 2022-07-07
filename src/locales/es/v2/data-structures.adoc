@@ -1,5 +1,5 @@
 [[getorganizedwithdatastructures]]
-== Las estructuras de datos
+== Estructuras de datos
 
 :nofooter:
 
@@ -10,7 +10,7 @@ Ahora tienes numerosas herramientas disponibles para crear canciones en EarSketc
 Ahora tienes numerosas herramientas disponibles para crear canciones en EarSketch. Los scripts que escribas pueden llegar a ser muy diversificados y largos. Este capítulo te va a ayudar a organizar mejor tu código usando una abstracción especial en particular que se llama arrelgos y una nueva funcionalidad de `makeBeat()`.
 
 [[datastructures]]
-=== ¿Qué es la estructura de datos?
+=== ¿Qué es una estructura de datos?
 
 [role="curriculum-python"]
 Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Una *lista*, también llamada arreglo (_array_) en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
@@ -876,6 +876,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * La adición
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál es el número de índice del primer elemento de una lista en Python?
@@ -887,6 +888,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * `-1`
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Qué devuelve `len(miLista)`?
@@ -898,6 +900,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * La anchura de `miLista`
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cuál es la sintaxis que se usa para concatenar dos listas (`listaA` y `listaB`)?
@@ -909,6 +912,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * `listaB + listaA`
 --
 
+[role="curriculum-python"]
 [question]
 --
 ¿Cómo se saca una lista de viejaLista que no incluya ni el primer ni el último elemento?
@@ -920,6 +924,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * `viejaLista[2:len(viejaLista) - 1]`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál es el número de índice del primer elemento de un arreglo en Javascript?
@@ -931,6 +936,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * `-1`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Qué devuelve `miArreglo.length`?
@@ -942,6 +948,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * La anchura de `miArreglo`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cuál es la sintaxis para concatenar dos arreglos (`arregloA` y `arregloB`)?
@@ -953,6 +960,7 @@ Crea una canción completa y pide que tu compañero dé sus opiniones para mejor
 * `arregloA.concatenate(arregloB)`
 --
 
+[role="curriculum-javascript"]
 [question]
 --
 ¿Cómo se saca un arreglo de `viejoArreglo` que no incluya ni el primer ni el último elemento?
