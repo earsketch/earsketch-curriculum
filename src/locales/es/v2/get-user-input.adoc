@@ -92,8 +92,8 @@ var ritmo2 = "0+0-00++0-000+++";
 //Música
 
 function crearRitmo(compasDeComienzo, clipDeSonido, cadenaDeTiempos){
-  ultimoCompas = compasDeComienzo + 3;
-  for (compas = compasDeComienzo; compas < ultimoCompas; compas++){
+  var ultimoCompas = compasDeComienzo + 3;
+  for (var compas = compasDeComienzo; compas < ultimoCompas; compas++){
     makeBeat(clipDeSonido, 1, compas, cadenaDeTiempos);
   }
 

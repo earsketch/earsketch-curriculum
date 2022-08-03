@@ -517,7 +517,7 @@ setTempo(120);
 var clap = RD_TRAP_ARCADEFIRESFX_1;
 var beatString = "00+-0-00+0+-0+++";
 
-for (measure = 1; measure < 32; measure++){
+for (var measure = 1; measure < 32; measure++){
   if (measure % 4 = 0)
     //Use EarSketch API function to shuffle beat string
     beatString = shuffleString(beatString);
@@ -587,7 +587,7 @@ setTempo(120);
 var clap = RD_TRAP_ARCADEFIRESFX_1;
 var beatString = "00+-0-00+0+-0+++";
 
-for (measure = 1; measure < 32; measure++){
+for (var measure = 1; measure < 32; measure++){
   if (measure % 4 === 0){
     //Use EarSketch API function to shuffle beat string
     beatString = shuffleString(beatString);

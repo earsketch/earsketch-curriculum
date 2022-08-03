@@ -311,10 +311,10 @@ def placeSoundsOnTrack(soundlist, tracknum, start, cliplength):
 	placeSoundsOnTrack(soundlist[1:len(soundlist)], tracknum, start+cliplength, cliplength)
 
 # set up new variables to access specific folders of audio clips
-DRUMFOLDER  = TMAINLOOP
-BASSFOLDER  = EABASS
-SYNTHFOLDER = ELEAD
-BLIPFOLDER  = EIGHTATARISFX
+DRUMFOLDER  = TECHNO_125_BPM__TMAINLOOP
+BASSFOLDER  = ELECTRO_128_BPM__EABASS
+SYNTHFOLDER = ELECTRO_128_BPM__ELEAD
+BLIPFOLDER  = EIGHTBIT_115_BPM__EIGHTATARISFX
 
 # set up lists to hold the audio clips that will be randomly selected from the folders
 drumclips  = []
@@ -376,10 +376,10 @@ function placeSoundsOnTrack(soundlist, tracknum, start, cliplength) {
 	placeSoundsOnTrack(soundlist.slice(1, soundlist.length), tracknum, start+cliplength, cliplength);
 }
 // set up new variables to access specific folders of audio clips
-var DRUMFOLDER  = TMAINLOOP;
-var BASSFOLDER  = EABASS;
-var SYNTHFOLDER = ELEAD;
-var BLIPFOLDER  = EIGHTATARISFX;
+var DRUMFOLDER  = TECHNO_125_BPM__TMAINLOOP
+var BASSFOLDER  = ELECTRO_128_BPM__EABASS
+var SYNTHFOLDER = ELECTRO_128_BPM__ELEAD
+var BLIPFOLDER  = EIGHTBIT_115_BPM__EIGHTATARISFX
 
 // set up arrays to hold the audio clips that will be randomly selected from the folders
 var drumclips  = [];

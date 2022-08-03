@@ -56,11 +56,11 @@ init();
 setTempo(120);
 
 // Colocar un sonido en la pista 1
-sonido = COMMON_LOVE_VOX_COMMON_1;
+var sonido = COMMON_LOVE_VOX_COMMON_1;
 fitMedia(sonido, 1, 1, 9);
 
 // Crear una variable para almacenar el volumen de la pista 1
-volumen1 = analyzeTrack(1, RMS_AMPLITUDE);
+var volumen1 = analyzeTrack(1, RMS_AMPLITUDE);
 
 // Mostrar el volumen en la consola
 println(volumen1);

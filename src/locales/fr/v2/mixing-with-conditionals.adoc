@@ -56,11 +56,11 @@ init();
 setTempo(120);
 
 // Placement d'un son sur une piste
-sound = COMMON_LOVE_VOX_COMMON_1;
+var sound = COMMON_LOVE_VOX_COMMON_1;
 fitMedia(sound,1,1,9);
 
 // Création d'une variable pour stocker l'intensité sonore de la piste 1
-loudness1 = analyzeTrack(1,RMS_AMPLITUDE);
+var loudness1 = analyzeTrack(1,RMS_AMPLITUDE);
 
 // Affichage de l'intensité sonore dans la console
 println(loudness1);
