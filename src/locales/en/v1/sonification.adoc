@@ -202,6 +202,10 @@ AW: 07/15/16: It seems that all of the content below this point (except the exer
 [role="curriculum-python"]
 [source,python]
 ----
+from earsketch import *
+myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
+drumBeats = ["", "", "", "", "", "", "", ""]
+
 for outerCounter in range(len(myImage)):
 	for innerCounter in range(len(myImage[0])):
 		# print "row:"
@@ -219,6 +223,9 @@ for outerCounter in range(len(myImage)):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
+var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
+var drumBeats = ["", "", "", "", "", "", "", ""]
+
 for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
 	for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
 		// println("row:");
