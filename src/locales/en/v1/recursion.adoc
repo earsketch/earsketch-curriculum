@@ -53,69 +53,43 @@ In computer science, one of the main ways that self-similarity is shown is throu
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Simple Recursion
-#
-# author: The EarSketch Team
-#
-# description: Counting down from 3 with recursion
-#
-#
-#
+# Counting down from 3 with recursion
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Body
+# Body
 def countdown(n):
-	if n == 0:
-		print "GO!"
-		return
-	print n
-	countdown(n-1)
+    if n == 0:
+        print("GO!")
+        return
+    print n
+    countdown(n - 1)
 
 countdown(3)
-
-#Finish
-finish()
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Simple Recursion
-//
-// author: The EarSketch Team
-//
-// description: Counting down from 3 with recursion
-//
-//
-//
+// Counting down from 3 with recursion
 
-//Setup
-init();
+// Setup
 setTempo(140);
 
-//Body
-function countdown(n){
-	if(n == 0) {
-	    println("GO!");
-	    return;
+// Body
+function countdown(n) {
+    if (n == 0) {
+        println("GO!");
+        return;
     }
     println(n);
-    countdown(n-1);
+    countdown(n - 1);
 }
 
 countdown(3);
-
-//Finish
-finish();
 ----
 
 
@@ -223,21 +197,20 @@ Now, since an empty list has been provided for the `soundlist` parameter, the te
 [source,python]
 ----
 from earsketch import *
-init()
 setTempo(128)
 
 # a recursive function
 def placeSounds(soundlist, start):
+    # if the soundlist parameter contains an empty list...
+    if soundlist == []:
+        # ...then return without doing anything
+        return
 
-	# if the soundlist parameter contains an empty list...
-	if soundlist == []:
-		# ...then return without doing anything
-		return
-	# else, place the first sound from the list on track 1 at the measure given by start, and end it at the beginning of the next measure
-	fitMedia(soundlist[0], 1, start, start+1)
-	placeSounds(soundlist[1:len(soundlist)], start+1)  # now it calls itself with updated parameters.
-	# updated parameter 1 : the rest of the soundlist (all remaining sounds, except the first sound which was already used)
-	# updated parameter 2 : start+1 (as the new start measure for the recursive call)
+    # else, place the first sound from the list on track 1 at the measure given by start, and end it at the beginning of the next measure
+    fitMedia(soundlist[0], 1, start, start + 1)
+    placeSounds(soundlist[1:len(soundlist)], start + 1)  # now it calls itself with updated parameters.
+    # updated parameter 1 : the rest of the soundlist (all remaining sounds, except the first sound which was already used)
+    # updated parameter 2 : start+1 (as the new start measure for the recursive call)
 
 # assign sounds
 clipA = Y45_SYNTHHARP_1
@@ -246,28 +219,24 @@ clipC = Y45_SYNTHHARP_2
 clipD = Y45_WHITEBUILD_1
 
 # create song
-
-placeSounds( [clipA, clipB, clipC, clipD],  1)
-
-finish()
+placeSounds([clipA, clipB, clipC, clipD], 1)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-init();
 setTempo(128);
 
 // a recursive function
-function placeSounds(soundlist, start){
-	// if the soundlist parameter contains an empty array... then return without doing anything
-	if(soundlist.length == 0) return;
+function placeSounds(soundlist, start) {
+    // if the soundlist parameter contains an empty array... then return without doing anything
+    if (soundlist.length == 0) return;
 
-	// otherwise, place the first sound from the list on track 1 at the measure given by start, and end it at the beginning of the next measure
-	fitMedia(soundlist[0], 1, start, start+1);
-	placeSounds(soundlist.slice(1, soundlist.length), start+1);  // now it calls itself with updated parameters.
-	// updated parameter 1 : the rest of the soundlist (all remaining sounds, except the first sound which was already used)
-	// updated parameter 2 : start+1 (as the new start measure for the recursive call)
+    // otherwise, place the first sound from the list on track 1 at the measure given by start, and end it at the beginning of the next measure
+    fitMedia(soundlist[0], 1, start, start + 1);
+    placeSounds(soundlist.slice(1, soundlist.length), start + 1); // now it calls itself with updated parameters.
+    // updated parameter 1 : the rest of the soundlist (all remaining sounds, except the first sound which was already used)
+    // updated parameter 2 : start+1 (as the new start measure for the recursive call)
 }
 // assign sounds
 var clipA = Y45_SYNTHHARP_1;
@@ -276,10 +245,7 @@ var clipC = Y45_SYNTHHARP_2;
 var clipD = Y45_WHITEBUILD_1;
 
 // create song
-
-placeSounds( [clipA, clipB, clipC, clipD],  1);
-
-finish();
+placeSounds([clipA, clipB, clipC, clipD], 1);
 ----
 
 In general, a recursive function works something like this:
@@ -298,62 +264,58 @@ Here’s a more complete musical example to run in EarSketch:
 [source,python]
 ----
 from earsketch import *
-
-init()
 setTempo(124)
 
 # similar recursive function to placeSounds() in last example
 # two extra parameters have been added here, tracknum and clip length
 def placeSoundsOnTrack(soundlist, tracknum, start, cliplength):
-	if soundlist == []:
-		return
-	fitMedia(soundlist[0], tracknum, start, start+cliplength)
-	placeSoundsOnTrack(soundlist[1:len(soundlist)], tracknum, start+cliplength, cliplength)
+    if soundlist == []:
+        return
+    fitMedia(soundlist[0], tracknum, start, start + cliplength)
+    placeSoundsOnTrack(soundlist[1:len(soundlist)], tracknum, start + cliplength, cliplength)
 
 # set up new variables to access specific folders of audio clips
-DRUMFOLDER  = TECHNO_125_BPM__TMAINLOOP
-BASSFOLDER  = ELECTRO_128_BPM__EABASS
+DRUMFOLDER = TECHNO_125_BPM__TMAINLOOP
+BASSFOLDER = ELECTRO_128_BPM__EABASS
 SYNTHFOLDER = ELECTRO_128_BPM__ELEAD
-BLIPFOLDER  = EIGHTBIT_115_BPM__EIGHTATARISFX
+BLIPFOLDER = EIGHTBIT_115_BPM__EIGHTATARISFX
 
 # set up lists to hold the audio clips that will be randomly selected from the folders
-drumclips  = []
-bassclips  = []
+drumclips = []
+bassclips = []
 synthclips = []
-blipclips  = []
+blipclips = []
 
 # fill up the lists with random audio clip selections from specified folders:
 
 # these audio clips will be placed every two measures, so 4 audio clips will fill up 8 measures
 for i in range(4):
-	drumclips = drumclips + [ selectRandomFile(DRUMFOLDER) ]
+    drumclips = drumclips + [selectRandomFile(DRUMFOLDER)]
 
 # these audio clips will be placed every two beats (0.5 measures each), so 16 audio clips will fill up 8 measures
 for i in range(16):
-	bassclips = bassclips + [ selectRandomFile(BASSFOLDER) ]
+    bassclips = bassclips + [selectRandomFile(BASSFOLDER)]
 
 # these audio clips will be placed every three 8th-notes (0.375 measures each), so there needs to be more than 16 of them to fill up 8 measures.
 # since 8 measures / 0.375 = 21.333..., we can set this to use 21 audio clips, which will make the clips fill up close to the entire 8 measures.
 for i in range(21):
-	synthclips = synthclips + [ selectRandomFile(SYNTHFOLDER) ]
-	blipclips  = blipclips  + [ selectRandomFile(BLIPFOLDER)  ]
+    synthclips = synthclips + [selectRandomFile(SYNTHFOLDER)]
+    blipclips = blipclips + [selectRandomFile(BLIPFOLDER)]
 
 # place a new audio clip every 2 measures
-placeSoundsOnTrack(drumclips,  1, 1, 2)
+placeSoundsOnTrack(drumclips, 1, 1, 2)
 # place a new audio clip every 0.5 measures (every two beats)
-placeSoundsOnTrack(bassclips,  2, 1, 0.5)
+placeSoundsOnTrack(bassclips, 2, 1, 0.5)
 # place a new audio clip every 0.375 measures (every three eighth-notes)
 placeSoundsOnTrack(synthclips, 3, 1, 0.375)
 # start the audio clips on this track one eighth-note later than the others
-placeSoundsOnTrack(blipclips,  4, 1.125, 0.375)
+placeSoundsOnTrack(blipclips, 4, 1.125, 0.375)
 
 # use volume effects to set up a balanced mix of the four tracks
 setEffect(1, VOLUME, GAIN, 0)
 setEffect(2, VOLUME, GAIN, -6)
 setEffect(3, VOLUME, GAIN, -12)
 setEffect(4, VOLUME, GAIN, -9)
-
-finish()
 
 # INTERESTING TIP:
 #  since this script uses randomness, each time you run this it should produce a different-sounding piece!
@@ -363,52 +325,51 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-init();
 setTempo(124);
 
 // similar recursive function to placeSounds() in last example
 // two extra parameters have been added here, tracknum and clip length
 function placeSoundsOnTrack(soundlist, tracknum, start, cliplength) {
-	if(soundlist.length == 0) return;
-	println(start);
+    if (soundlist.length == 0) return;
+    println(start);
 
-	fitMedia(soundlist[0], tracknum, start, start+cliplength);
-	placeSoundsOnTrack(soundlist.slice(1, soundlist.length), tracknum, start+cliplength, cliplength);
+    fitMedia(soundlist[0], tracknum, start, start + cliplength);
+    placeSoundsOnTrack(soundlist.slice(1, soundlist.length), tracknum, start + cliplength, cliplength);
 }
 // set up new variables to access specific folders of audio clips
-var DRUMFOLDER  = TECHNO_125_BPM__TMAINLOOP
-var BASSFOLDER  = ELECTRO_128_BPM__EABASS
-var SYNTHFOLDER = ELECTRO_128_BPM__ELEAD
-var BLIPFOLDER  = EIGHTBIT_115_BPM__EIGHTATARISFX
+var DRUMFOLDER = TECHNO_125_BPM__TMAINLOOP;
+var BASSFOLDER = ELECTRO_128_BPM__EABASS;
+var SYNTHFOLDER = ELECTRO_128_BPM__ELEAD;
+var BLIPFOLDER = EIGHTBIT_115_BPM__EIGHTATARISFX;
 
 // set up arrays to hold the audio clips that will be randomly selected from the folders
-var drumclips  = [];
-var bassclips  = [];
+var drumclips = [];
+var bassclips = [];
 var synthclips = [];
-var blipclips  = [];
+var blipclips = [];
 
 // fill up the arrays with random audio clip selections from specified folders:
 
 // these audio clips will be placed every two measures, so 4 audio clips will fill up 8 measures
-for(var i = 0; i < 4; i++) {
-	drumclips = drumclips.concat(selectRandomFile(DRUMFOLDER));
+for (var i = 0; i < 4; i++) {
+    drumclips = drumclips.concat(selectRandomFile(DRUMFOLDER));
 }
 // these audio clips will be placed every two beats (0.5 measures each), so 16 audio clips will fill up 8 measures
-for(var i = 0; i < 16; i++) {
-	bassclips = bassclips.concat(selectRandomFile(BASSFOLDER));
+for (var i = 0; i < 16; i++) {
+    bassclips = bassclips.concat(selectRandomFile(BASSFOLDER));
 }
 // these audio clips will be placed every three 8th-notes (0.375 measures each), so there needs to be more than 16 of them to fill up 8 measures.
 // since 8 measures / 0.375 = 21.333..., we can set this to use 21 audio clips, which will make the clips fill up close to the entire 8 measures.
-for(var i = 0; i < 21; i++) {
-	synthclips = synthclips.concat(selectRandomFile(SYNTHFOLDER));
-	blipclips  = blipclips.concat(selectRandomFile(BLIPFOLDER));
+for (var i = 0; i < 21; i++) {
+    synthclips = synthclips.concat(selectRandomFile(SYNTHFOLDER));
+    blipclips = blipclips.concat(selectRandomFile(BLIPFOLDER));
 }
 
 // place a new audio clip every 2 measures
 placeSoundsOnTrack(drumclips, 1, 1, 2);
 // place a new audio clip every 0.5 measures (every two beats)
 placeSoundsOnTrack(bassclips, 2, 1, 0.5);
- // place a new audio clip every 0.375 measures (every three eighth-notes)
+// place a new audio clip every 0.375 measures (every three eighth-notes)
 placeSoundsOnTrack(synthclips, 3, 1, 0.375);
 // start the audio clips on this track one eighth-note later than the others
 placeSoundsOnTrack(blipclips, 4, 1.125, 0.375);
@@ -418,8 +379,6 @@ setEffect(1, VOLUME, GAIN, 0);
 setEffect(2, VOLUME, GAIN, -6);
 setEffect(3, VOLUME, GAIN, -12);
 setEffect(4, VOLUME, GAIN, -9);
-
-finish();
 
 // INTERESTING TIP:
 //  since this script uses randomness, each time you run this it should produce a different sounding piece!
@@ -432,8 +391,8 @@ finish();
 ----
 # an alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
 def placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength):
-	for i in range(len(soundlist)):
-		fitMedia(soundlist[i], tracknum, start+(cliplength*i), start+(cliplength*(i+1)))
+    for i in range(len(soundlist)):
+        fitMedia(soundlist[i], tracknum, start + (cliplength * i), start + (cliplength * (i + 1)))
 # notice that the above code is not nearly as elegant as the recursive version shown earlier.
 ----
 
@@ -442,10 +401,10 @@ def placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength):
 [source,javascript]
 ----
 // an alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
-function placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength){
-	for(var i = 0; i < soundlist.length; i++){
-		fitMedia(soundlist[i], tracknum, start+(cliplength*i), start+(cliplength*(i+1)));
-	}
+function placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength) {
+    for (var i = 0; i < soundlist.length; i++) {
+        fitMedia(soundlist[i], tracknum, start + (cliplength * i), start + (cliplength * (i + 1)));
+    }
 }
 // notice that the above code is not nearly as elegant as the recursive version shown earlier.
 ----
@@ -509,39 +468,35 @@ The last parameter *depth amount* specifies the total number of tracks we want t
 [source,python]
 ----
 from earsketch import *
-
-init()
 setTempo(135)
 
 def makeCantorSet(audioclips, tracknum, start, length, depth):
-	# parameters: list of audio clips, starting track number, starting measure, total length of section (in measures), depth of recursion (number of tracks to create)
-	# when depth reaches zero, exit the function
-	if depth == 0:
-		return
-	# place the first audioclip of the list on the current track, starting at start and ending at start+length
-	fitMedia(audioclips[0], tracknum, start, start+length)
-	# calculate a new length value, for use for the two sound sections on the next track
-	smallerLength = length / 4.0
-	# calculate the start of the second audio section on the next track
-	secondSectionStart = start + (smallerLength * 3.0)
-	# to make each of the two smaller sections on the next track, recursively call the function with updated tracknum, length, and depth parameter values
-	# create the first section on the next track
-	makeCantorSet(audioclips[1:len(audioclips)], tracknum+1, start, smallerLength, depth-1)
-	# create the second section on the next track
-	makeCantorSet(audioclips[1:len(audioclips)], tracknum+1, secondSectionStart, smallerLength, depth-1)
+    # parameters: list of audio clips, starting track number, starting measure, total length of section (in measures), depth of recursion (number of tracks to create)
+    # when depth reaches zero, exit the function
+    if depth == 0:
+        return
+    # place the first audioclip of the list on the current track, starting at start and ending at start+length
+    fitMedia(audioclips[0], tracknum, start, start + length)
+    # calculate a new length value, for use for the two sound sections on the next track
+    smallerLength = length / 4.0
+    # calculate the start of the second audio section on the next track
+    secondSectionStart = start + (smallerLength * 3.0)
+    # to make each of the two smaller sections on the next track, recursively call the function with updated tracknum, length, and depth parameter values
+    # create the first section on the next track
+    makeCantorSet(audioclips[1:len(audioclips)], tracknum + 1, start, smallerLength, depth - 1)
+    # create the second section on the next track
+    makeCantorSet(audioclips[1:len(audioclips)], tracknum + 1, secondSectionStart, smallerLength, depth - 1)
 
 soundList1 = [DUBSTEP_DRUMLOOP_MAIN_001, Y36_ELECTRO_1, DUBSTEP_BASS_WOBBLE_025, ELECTRO_ANALOGUE_LEAD_001, DUBSTEP_BASS_WOBBLE_025, ELECTRO_ANALOGUE_LEAD_001]
 soundList2 = [DUBSTEP_DRUMLOOP_MAIN_007, Y43_SYNTH_HARP_1, Y36_ELECTRO_1, Y35_ELECTRO_2, Y36_ELECTRO_1, Y35_ELECTRO_2]
 
-makeCantorSet(soundList1, 1, 1,  4, 4)
-makeCantorSet(soundList1, 1, 5,  4, 4)
-makeCantorSet(soundList2, 1, 9,  4, 4)
+makeCantorSet(soundList1, 1, 1, 4, 4)
+makeCantorSet(soundList1, 1, 5, 4, 4)
+makeCantorSet(soundList2, 1, 9, 4, 4)
 makeCantorSet(soundList2, 1, 13, 4, 4)
 
 fitMedia(Y35_ELECTRO_2, 5, 1, 9)
 fitMedia(Y35_ELECTRO_3, 5, 9, 17)
-
-finish()
 ----
 
 
@@ -549,41 +504,37 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-init();
 setTempo(135);
 
 function makeCantorSet(audioclips, tracknum, start, length, depth) {
-	// parameters: list of audio clips, starting track number, starting measure, total length of section (in measures), depth of recursion (number of tracks to create)
-	// when depth reaches zero, exit the function
-	if (depth == 0) return;
+    // parameters: list of audio clips, starting track number, starting measure, total length of section (in measures), depth of recursion (number of tracks to create)
+    // when depth reaches zero, exit the function
+    if (depth == 0) return;
 
-	// place the first audioclip of the list on the current track, starting at start and ending at start+length
-	fitMedia(audioclips[0], tracknum, start, start+length);
-	// calculate a new length value, for use for the two sound sections on the next track
-	var smallerLength = length / 4.0;
-	// calculate the start of the second audio section on the next track
-	var secondSectionStart = start + (smallerLength * 3.0);
-	// to make each of the two smaller sections on the next track, recursively call the function with updated tracknum, length, and depth parameter values
+    // place the first audioclip of the list on the current track, starting at start and ending at start+length
+    fitMedia(audioclips[0], tracknum, start, start + length);
+    // calculate a new length value, for use for the two sound sections on the next track
+    var smallerLength = length / 4.0;
+    // calculate the start of the second audio section on the next track
+    var secondSectionStart = start + (smallerLength * 3.0);
+    // to make each of the two smaller sections on the next track, recursively call the function with updated tracknum, length, and depth parameter values
 
-	// create the first section on the next track
-	makeCantorSet(audioclips.slice(1, audioclips.length), tracknum+1, start, smallerLength, depth-1);
-	// create the second section on the next track
-	makeCantorSet(audioclips.slice(1, audioclips.length), tracknum+1, secondSectionStart, smallerLength, depth-1);
+    // create the first section on the next track
+    makeCantorSet(audioclips.slice(1, audioclips.length), tracknum + 1, start, smallerLength, depth - 1);
+    // create the second section on the next track
+    makeCantorSet(audioclips.slice(1, audioclips.length), tracknum + 1, secondSectionStart, smallerLength, depth - 1);
 }
 
 var soundList1 = [DUBSTEP_DRUMLOOP_MAIN_001, Y36_ELECTRO_1, DUBSTEP_BASS_WOBBLE_025, ELECTRO_ANALOGUE_LEAD_001, DUBSTEP_BASS_WOBBLE_025, ELECTRO_ANALOGUE_LEAD_001];
 var soundList2 = [DUBSTEP_DRUMLOOP_MAIN_007, Y43_SYNTH_HARP_1, Y36_ELECTRO_1, Y35_ELECTRO_2, Y36_ELECTRO_1, Y35_ELECTRO_2];
 
-
-makeCantorSet(soundList1, 1, 1,  4, 4);
-makeCantorSet(soundList1, 1, 5,  4, 4);
-makeCantorSet(soundList2, 1, 9,  4, 4);
+makeCantorSet(soundList1, 1, 1, 4, 4);
+makeCantorSet(soundList1, 1, 5, 4, 4);
+makeCantorSet(soundList2, 1, 9, 4, 4);
 makeCantorSet(soundList2, 1, 13, 4, 4);
 
 fitMedia(Y35_ELECTRO_2, 5, 1, 9);
 fitMedia(Y35_ELECTRO_3, 5, 9, 17);
-
-finish();
 ----
 [role="curriculum-python"]
 We see that on lines 19 and 21,`makeCantorSet()` calls itself twice from within itself. Thus `makeCantorSet()` is a *recursive function*, and its calls to itself on lines 19 and 21 are *recursive calls*.

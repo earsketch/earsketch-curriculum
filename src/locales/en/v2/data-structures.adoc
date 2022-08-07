@@ -672,19 +672,10 @@ Here is the solution:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Examples of beats
-#
-# author: The EarSketch Team
-#
-# description: Creating beats with different genre examples
-#
-#
+# Creating beats in different genres
 
 # Setup
 from earsketch import *
-init()
 setTempo(110)
 
 # Sound clips
@@ -703,28 +694,14 @@ makeBeat(drums, 2, 5, "2++2+22++2+22++2")
 
 # Dembow (latin, caribbean) beat on measure 7
 makeBeat(drums, 1, 7, "0++10+1+0++10+1+")
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-
-// javascript code
-//
-// script_name: Examples of beats
-//
-// author: The EarSketch Team
-//
-// description: Creating beats with different genre examples
-//
-//
+// Creating beats in different genres
 
 // Setup
-init();
 setTempo(110);
 
 // Sound clips
@@ -743,9 +720,6 @@ makeBeat(drums, 2, 5, "2++2+22++2+22++2");
 
 // Dembow (latin, caribbean) beat on measure 7
 makeBeat(drums, 1, 7, "0++10+1+0++10+1+");
-
-// Finish
-finish();
 ----
 
 {nbsp} +

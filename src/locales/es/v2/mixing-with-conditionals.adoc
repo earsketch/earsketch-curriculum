@@ -13,17 +13,10 @@ Vamos a ver cómo detectar la intensidad sonora, o volumen, de la pista. Asegúr
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: La función analyseTrack()
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo usar la función analyseTrack() para desplegar (o imprimir) el volumen de una pista
-#
+# Cómo usar la función analyseTrack() para desplegar (o imprimir) el volumen de una pista
+
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Colocar un sonido en la pista 1
@@ -35,24 +28,14 @@ volumen1 = analyzeTrack(1, RMS_AMPLITUDE)
 
 # Mostrar el volumen en la consola
 print(volumen1)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: La función analyzeTrack()
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo usar la función analyzeTrack() para desplegar (o imprimir) el volumen de una pista
-//
+// Cómo usar la función analyzeTrack() para desplegar (o imprimir) el volumen de una pista
+
 // Configuración
-init();
 setTempo(120);
 
 // Colocar un sonido en la pista 1
@@ -64,9 +47,6 @@ var volumen1 = analyzeTrack(1, RMS_AMPLITUDE);
 
 // Mostrar el volumen en la consola
 println(volumen1);
-
-// Fin
-finish();
 ----
 
 Puedes leer en tu consola que el volumen impreso es de 0.10306035109110138.

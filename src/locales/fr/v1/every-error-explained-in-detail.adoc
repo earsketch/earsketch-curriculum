@@ -63,9 +63,9 @@ Can't turn off pasting without this appearing in JS mode
 [source,python]
 ----
 for measure in range(1, 9, 2):
-  fitMedia(melody, 1, measure, measure + 2)
-  makeBeat(kick, 2, measure, beatString)
-  makeBeat(kick, 2, measure + 1, beatString)
+    fitMedia(melody, 1, measure, measure + 2)
+    makeBeat(kick, 2, measure, beatString)
+    makeBeat(kick, 2, measure + 1, beatString)
 
 fitMedia(beat, 3, 3, 9)
 ----
@@ -77,9 +77,9 @@ Un corps de code à l'indentation correcte devrait plutôt ressembler à l'extra
 [source,python]
 ----
 for measure in range(1, 9, 2):
-  fitMedia(melody, 1, measure, measure + 2)
-  makeBeat(kick, 2, measure, beatString)
-  makeBeat(kick, 2, measure + 1, beatString)
+    fitMedia(melody, 1, measure, measure + 2)
+    makeBeat(kick, 2, measure, beatString)
+    makeBeat(kick, 2, measure + 1, beatString)
 
 fitMedia(beat, 3, 3, 9)
 ----
@@ -114,18 +114,9 @@ Les erreurs relatives à l'indentation ne se produisent pas en JavaScript, bien 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Erreur de type « Index Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Un exemple de code qui renvoie une erreur de type « Index Error »
-#
+# Un code causant une erreur de type « Index Error »
 
 from earsketch import *
-
-init()
 setTempo(100)
 
 orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
@@ -133,23 +124,13 @@ orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
 fitMedia(orch[1], 1, 1, 17)
 fitMedia(orch[2], 2, 5, 17)
 fitMedia(orch[3], 3, 9, 17)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Erreur de type « Index Error »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Un exemple de code qui renvoie une erreur de type « Index Error »
-//
+// Erreur de type « Index Error »
 
-init();
 setTempo(120);
 
 var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
@@ -157,8 +138,6 @@ var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
 fitMedia(orch[1], 1, 1, 17);
 fitMedia(orch[2], 2, 5, 17);
 fitMedia(orch[3], 3, 9, 17);
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -170,18 +149,9 @@ Une erreur de type « Type Error » est renvoyée et la console indique qu'u
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'erreurs de type « Index Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Structure additive sans erreurs
-#
+# Correction d'erreur de type « Index Error »
 
 from earsketch import *
-
-init()
 setTempo(100)
 
 orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
@@ -189,23 +159,13 @@ orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
 fitMedia(orch[0], 1, 1, 17)
 fitMedia(orch[1], 2, 5, 17)
 fitMedia(orch[2], 3, 9, 17)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Correction d'erreurs de type « Type Error »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Structure additive sans erreurs
-//
+// Correction d'erreur de type « Type Error »
 
-init();
 setTempo(100);
 
 var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
@@ -213,8 +173,6 @@ var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
 fitMedia(orch[0], 1, 1, 17);
 fitMedia(orch[1], 2, 5, 17);
 fitMedia(orch[2], 3, 9, 17);
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -248,46 +206,24 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Name Error
-#
-# auteur : L'équipe EarSketch
-#
-# description : Un exemple de code causant une erreur de type « Name Error »
-#
+# Un code causant une erreur de type « Name Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 today = readInput("What day is it?")
-print "Today is " + Today
-
-finish()
+print("Today is " + Today)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Reference Error
-//
-// auteur : L'équipe EarSketch
-//
-// description : Un code qui cause une erreur de type « Reference Error »
-//
+// Un code causant une erreur de type « Reference Error »
 
-init();
 setTempo(120);
 
 var today = readInput("What day is it?");
 println("Today is " + Today);
-
-finish();
-
 ----
 
 Dans ce cas, la variable contenant la chaîne de caractères à concaténer n'a pas été référencée par le nom approprié ; un « t » en minuscule aurait dû être utilisé.
@@ -295,45 +231,24 @@ Dans ce cas, la variable contenant la chaîne de caractères à concaténer n'a 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'erreur de type « Name Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Affichage du jour sans erreurs
-#
+# Correction d'erreur de type « Name Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 today = readInput("What day is it?")
-print "Today is " + today
-
-finish()
+print("Today is " + today)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Correction d'erreur de type « Reference Code »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Affichage du jour sans erreur
-//
+// Correction d'erreur de type « Reference Error »
 
-init();
 setTempo(120);
 
 var today = readInput("What day is it?");
 println("Today is " + today);
-
-finish();
 ----
 
 *Solution :* Vérifiez l'orthographe et la casse de vos variables et de vos fonctions. Lorsque vous utilisez une variable ou que vous appelez une fonction, assurez-vous que chacune a été précédemment définie et veillez à bien définir une fonction avant de l'appeler. Bien que vous puissiez coller les noms directement, assurez-vous que vos noms de constantes de sons s'alignent sur les noms de clips dans le navigateur de sons.
@@ -353,18 +268,9 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : ParseError
-#
-# auteur : L'équipe EarSketch
-#
-# description : Un code causant une erreur de type « Parse Error »
-#
+# Un code causant une erreur de type « Parse Error »
 
 from earsketch import *
-
-init()
 setTempo(98)
 
 soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
@@ -375,12 +281,10 @@ chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
 fitMedia(chords1, 1, 1, 9)
 fitMedia(chords2, 1, 9, 17)
 
-for measure in range (1, 17, 2):
-  #sélectionnez un clip aléatoire à l'aide de la fonction API de EarSketch
+for measure in range(1, 17, 2):
+  # sélectionnez un clip aléatoire à l'aide de la fonction API de EarSketch
   beat = selectRandomFile(soundFolder
   fitMedia(beat, 2, measure, measure + 2)
-
-finish()
 ----
 
 ////
@@ -393,18 +297,9 @@ Lors de l'exécution du code, la console pointe vers la ligne 26. Cette ligne se
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'une erreur de type « Parse Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Lecture de beats aléatoire sans erreurs
-#
+# Correction d'erreur de type « Parse Error »
 
 from earsketch import *
-
-init()
 setTempo(98)
 
 soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
@@ -415,12 +310,10 @@ chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
 fitMedia(chords1, 1, 1, 9)
 fitMedia(chords2, 1, 9, 17)
 
-for measure in range (1, 17, 2):
-  #sélectionnez un clip aléatoire à l'aide de la fonction API de EarSketch
-  beat = selectRandomFile(soundFolder)
-  fitMedia(beat, 2, measure, measure + 2)
-
-finish()
+for measure in range(1, 17, 2):
+    # sélectionnez un clip aléatoire à l'aide de la fonction API de EarSketch
+    beat = selectRandomFile(soundFolder)
+    fitMedia(beat, 2, measure, measure + 2)
 ----
 
 [role="curriculum-python"]
@@ -441,45 +334,26 @@ Parse errors are interpreted broadly as syntax errors in JavaScript, which is co
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Syntax Error
-#
-# auteur : L'équipe EarSketch
-#
-# description : Un code qui cause une erreur de type « Syntax Error »
-#
+# Un code causant une erreur de type « Syntax Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 clap = RD_TRAP_ARCADEFIRESFX_1
 beatString = "00+-0-00+0+-0+++"
 
-for measure in range (1,32):
-  if measure % 4 = 0
-    #Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
+for measure in range(1, 32):
+    if measure % 4 = 0
+    # Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
     beatString = shuffleString(beatString)
-  makeBeat(clap, 1, measure, beatString)
-
-finish()
+    makeBeat(clap, 1, measure, beatString)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : SyntaxError
-//
-// auteur : L'équipe EarSketch
-//
-// description : Un code qui cause une erreur de type « Syntax Error »
-//
+// Un code causant une erreur de type « Syntax Error »
 
-init();
 setTempo(120);
 
 var clap = RD_TRAP_ARCADEFIRESFX_1;
@@ -492,8 +366,6 @@ for (var measure = 1; measure < 32; measure++){
   }
   makeBeat(clap, 1, measure, beatString);
 }
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -505,59 +377,38 @@ Pour ce script, l'éditeur de code nous signale la ligne fautive. Notez qu'il ma
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'erreur de type « Syntax Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Mélange d'une chaîne de caractères de beat sans erreurs
-#
+# Correction d'erreur de type « Syntax Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 clap = RD_TRAP_ARCADEFIRESFX_1
 beatString = "00+-0-00+0+-0+++"
 
-for measure in range (1,32):
-  if measure % 4 == 0:
-    #Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
-    beatString = shuffleString(beatString)
-  makeBeat(clap, 1, measure, beatString)
-
-finish()
+for measure in range(1, 32):
+    if measure % 4 == 0:
+        # Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
+        beatString = shuffleString(beatString)
+    makeBeat(clap, 1, measure, beatString)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Correction d'erreur de type « Syntax Error »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Mélange de chaîne de caractères de beat sans erreurs
-//
+// Correction d'erreur de type « Syntax Error »
 
-init();
 setTempo(120);
 
 var clap = RD_TRAP_ARCADEFIRESFX_1;
 var beatString = "00+-0-00+0+-0+++";
 
-for (var measure = 1; measure < 32; measure++){
-  if (measure % 4 === 0){
-    //Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
-    beatString = shuffleString(beatString);
-  }
-  makeBeat(clap, 1, measure, beatString);
+for (var measure = 1; measure < 32; measure++) {
+    if (measure % 4 === 0) {
+    // Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
+        beatString = shuffleString(beatString);
+    }
+    makeBeat(clap, 1, measure, beatString);
 }
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -587,46 +438,27 @@ Au-delà des erreurs courantes indiquées ci-dessus, vérifiez la présence des 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Type Error
-#
-# auteur : L'équipe EarSketch
-#
-# description : Une code qui cause une erreur de type « Type Error »
-#
+# Un code causant une erreur de type « Type Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 soundClip = DUBSTEP_DRUMLOOP_MAIN_006
 beatString = "0+000+++0--0-0--"
 measureTotal = 0
 
-for measure in range(1,9):
+for measure in range(1, 9):
     makeBeat(soundClip, 1, measure, beatString)
     measureTotal += 1
 
-print "Votre beat est composé de " + measureTotal + " mesures."
-
-finish()
+print("Votre beat est composé de " + measureTotal + " mesures.")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Type Error
-//
-// auteur : L'équipe EarSketch
-//
-// description : Un code qui cause une erreur de type « Type Error »
-//
+// Un code causant une erreur de type « Type Error »
 
-init();
 setTempo(120);
 
 var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
@@ -634,9 +466,7 @@ var measureTotal = readInput("Combien y a-t-il de mesures ?");
 
 println(measureTotal);
 
-fitMedia(soundClip, 1, 1 , measureTotal + 1 );
-
-finish();
+fitMedia(soundClip, 1, 1, measureTotal + 1);
 ----
 
 [role="curriculum-python"]
@@ -648,46 +478,27 @@ Une erreur de type « Type Error » est renvoyée, car nous avons accidentel
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'erreur de type « Type Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Assurer le suivi des mesures sans erreurs
-#
+# Correction d'erreur de type « Type Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 soundClips = DUBSTEP_DRUMLOOP_MAIN_006
 beatString = "0+000+++0--0-0--"
 measureTotal = 0
 
-for measure in range(1,9):
+for measure in range(1, 9):
     makeBeat(soundClips, 1, measure, beatString)
     measureTotal += 1
 
-print "Votre beat est composé de " + str(measureTotal) + " mesures."
-
-finish()
+print("Votre beat est composé de " + str(measureTotal) + " mesures.")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Correction d'erreur de type « Type Error »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Prise de l'entrée d'un utilisateur sans erreurs
-//
+// Correction d'erreur de type « Type Error »
 
-init();
 setTempo(120);
 
 var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
@@ -695,9 +506,7 @@ var measureTotal = readInput("Combien y a-t-il de mesures ?");
 
 println(measureTotal);
 
-fitMedia(soundClip, 1, 1, Number(measureTotal) + 1 );
-
-finish();
+fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
 ----
 
 *Solution :* La console de EarSketch donne le type de données fautif et pointe vers un numéro de ligne spécifique. Vérifiez les types de données cohérents dans les expressions arithmétiques, les opérations de structure de données et les arguments de fonctions. De plus, assurez-vous que vos appels de fonction ont le nombre d'arguments approprié.
@@ -730,49 +539,28 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Value Error
-#
-# auteur : L'équipe EarSketch
-#
-# description : Un code qui cause une erreur de type « Value Error »
-#
+# Un code causant une erreur de type « Value Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
 beatString = "1+3+1+221+2+1+24"
 
 makeBeat(drumKit, 1, 1, beatString)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Range Error
-//
-// auteur : L'équipe EarSketch
-//
-// description : Un code qui cause une erreur de type « Range Error »
-//
+// Un code causant une erreur de type « Range Error »
 
-init();
 setTempo(120);
 
 var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
 var beatString = "1+3+1+221+2+1+24";
 
 makeBeat(drumKit, 1, 1, beatString);
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -784,49 +572,28 @@ Le quatrième argument de la fonction `makeBeat()` est du type approprié, mais 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Correction d'erreur de type « Value Error »
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de makeBeat() sans erreurs
-#
+# Correction d'erreur de type « Value Error »
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
 beatString = "0+2+0+110+1+0+13"
 
 makeBeat(drumKit, 1, 1, beatString)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Correction d'erreur de type « Range Error »
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de makeBeat() sans erreurs
-//
+// Correction d'erreur de type « Range Error »
 
-init();
 setTempo(120);
 
 var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
 var beatString = "0+2+0+110+1+0+13";
 
 makeBeat(drumKit, 1, 1, beatString);
-
-finish();
 ----
 
 *Solution :* Vérifiez vos chaînes de caractères de beat pour vous assurer que les valeurs sont dans la plage appropriée. De plus, confirmez que tous les arguments fournis à la fonction `setEffect()` sont dans la plage requise pour l'effet.

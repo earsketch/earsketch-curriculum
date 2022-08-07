@@ -679,20 +679,10 @@ Aquí está la solución:
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Ejemplos de ritmos
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Crear ritmos con diferentes ejemplos de géneros
-#
-#
-#
+# Crear ritmos de diferentes géneros
 
 # Configuración
 from earsketch import *
-init()
 setTempo(110)
 
 # Clips de sonido
@@ -711,28 +701,14 @@ makeBeat(bateria, 2, 5, "2++2+22++2+22++2")
 
 # Ritmo de dembow (latino, caribeño) en el compás 7
 makeBeat(bateria, 1, 7, "0++10+1+0++10+1+")
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-
-// código javascript
-//
-// nombre_del_script: Ejemplos de ritmos
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Crear ritmos con diferentes ejemplos de género
-//
-//
+// Crear ritmos de diferentes géneros
 
 // Configuración
-init();
 setTempo(110);
 
 // Clips de sonido
@@ -751,9 +727,6 @@ makeBeat(bateria, 2, 5, "2++2+22++2+22++2");
 
 // Ritmo de dembow (latino, caribeño) en el compás 7
 makeBeat(bateria, 1, 7, "0++10+1+0++10+1+");
-
-// Fin
-finish();
 ----
 
 {nbsp} +

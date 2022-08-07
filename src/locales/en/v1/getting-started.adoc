@@ -84,54 +84,26 @@ Let's try running a code example in EarSketch! Take a look at the box of text be
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Intro Script
-#
-# author: The EarSketch Team
-#
-# description: This code adds one audio clip to the DAW
-#
-#
-#
+# This code adds one audio clip to the DAW
 
-#Setup Section
+# Setup Section
 from earsketch import *
-init()
 setTempo(120)
 
-#Music Section
+# Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
-
-#Finish Section
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Intro Script
-//
-// author: The EarSketch Team
-//
-// description: This code adds one audio clip to the DAW
-//
-//
-//
+// This code adds one audio clip to the DAW
 
-//Setup Section
-init();
+// Setup Section
 setTempo(120);
 
-//Music Section
+// Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
-
-//Finish Section
-finish();
-
 ----
 
 Python and Javascript are both *scripting languages*, so your code is called a *script*. To turn your code into music, press the _Run_ button (above the code editor). You should see some changes in the DAW and the Console. When you press run, all of the instructions in your code are carried out. In the DAW, press the _play_ button to hear the music.
@@ -317,56 +289,26 @@ You should now have something like this: `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5)`
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: EarSketch Demo
-#
-# author: The EarSketch Team
-#
-# description: Using fitMedia() to add a clip to the DAW.
-#
-#
-#
+# Using fitMedia() to add a clip to the DAW.
 
-#Setup
+# Setup
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Music
+# Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
-
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: EarSketch Demo
-//
-// author: The EarSketch Team
-//
-// description: Using fitMedia() to add a clip to the DAW.
-//
-//
-//
+// Using fitMedia() to add a clip to the DAW.
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
-
-//Finish
-finish();
-
 ----
 
 For an extra challenge, add more `fitMedia()` calls to your script like we do below. Notice that we use a different track number for each `fitMedia()` call:
@@ -374,65 +316,30 @@ For an extra challenge, add more `fitMedia()` calls to your script like we do be
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Opus 1
-#
-# author: The EarSketch Team
-#
-# description: Using multiple fitMedia() calls, on different tracks and with different clips.
-#
-#
-#
+# Using multiple fitMedia() calls, on different tracks and with different clips.
 
 # Setup Section
 from earsketch import *
-
-init()
 setTempo(100)
 
 # Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9)
 fitMedia(Y11_BASS_1, 2, 1, 9)
 fitMedia(Y11_GUITAR_1, 3, 1, 9)
-
-# Finish Section
-
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-// javascript code
-//
-// script_name: Opus 1
-//
-// author: The EarSketch Team
-//
-// description: Using multiple fitMedia() calls, on different tracks and with different clips.
-//
-//
-//
+// Using multiple fitMedia() calls, on different tracks and with different clips.
 
 // Setup Section
-
-init();
 setTempo(100);
 
 // Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
-
-// Finish Section
-
-finish();
-
 ----
 
 [role="curriculum-javascript"]

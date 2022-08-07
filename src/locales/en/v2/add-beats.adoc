@@ -73,25 +73,15 @@ In your previous scripts, use variables to store your sound clip names. Look at 
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Variables
-#
-# author: The EarSketch Team
-#
-# description: Using variables to store clips and simplify edits
-#
-#
-#
+# Using variables to store clips and simplify edits
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(100)
 
-#Music
-#Sound clips
-synth1 = HIPHOP_SYNTHPLUCKLEAD_005 
+# Music
+# Sound clips
+synth1 = HIPHOP_SYNTHPLUCKLEAD_005
 synth2 = HIPHOP_SOLOMOOGLEAD_001
 drums = HIPHOP_TRAPHOP_BEAT_008
 
@@ -101,32 +91,19 @@ fitMedia(synth2, 1, 2, 3)
 fitMedia(synth1, 1, 3, 4)
 fitMedia(synth2, 1, 4, 5)
 
-#fitMedia() adds the drums on track 2.
+# fitMedia() adds the drums on track 2.
 fitMedia(drums, 2, 1, 9)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Variables
-//
-// author: The EarSketch Team
-//
-// description: Using variables to store clips and simplify edits
-//
-//
-//
+// Using variables to store clips and simplify edits
 
-//Setup
-init();
+// Setup
 setTempo(100);
 
-//Music
+// Music
 var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Assigns a clip to the variable "synth1".
 var synth2 = HIPHOP_SOLOMOOGLEAD_001;
 var drums = HIPHOP_TRAPHOP_BEAT_008;
@@ -137,11 +114,8 @@ fitMedia(synth2, 1, 2, 3);
 fitMedia(synth1, 1, 3, 4);
 fitMedia(synth2, 1, 4, 5);
 
-//fitMedia() adds the drums on track 2.
+// fitMedia() adds the drums on track 2.
 fitMedia(drums, 2, 1, 9);
-
-//Finish
-finish();
 ----
 Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. This way, when you or someone else reads your code, they can see what you are referring to.
 
@@ -269,25 +243,13 @@ Here is the example shown in the video:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Multi Beat
-#
-# author: The EarSketch Team
-#
-# description: Using several makeBeat calls and overlapping rhythms
-#
-#
-#
+# Using several makeBeat calls with different rhythms
 
-#Setup
-
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
-
+# Music
 synth = DUBSTEP_FILTERCHORD_002
 cymbal = OS_CLOSEDHAT01
 beat1 = "-00-00+++00--0-0"
@@ -295,33 +257,17 @@ beat2 = "0--0--000--00-0-"
 
 makeBeat(synth, 1, 1, beat1)
 makeBeat(cymbal, 2, 1, beat2)
-
-#Finish
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Multi Beat
-//
-// author: The EarSketch Team
-//
-// description: Using several makeBeat calls and overlapping rhythms
-//
-//
-//
+// Using several makeBeat calls with different rhythms
 
-//Setup
-
-init();
+// Setup
 setTempo(120);
 
-//Music
-
+// Music
 var synth = DUBSTEP_FILTERCHORD_002;
 var cymbal = OS_CLOSEDHAT01;
 var beat1 = "-00-00+++00--0-0";
@@ -329,10 +275,6 @@ var beat2 = "0--0--000--00-0-";
 
 makeBeat(synth, 1, 1, beat1);
 makeBeat(cymbal, 2, 1, beat2);
-
-//Finish
-
-finish();
 ----
 
 {nbsp} +
@@ -375,25 +317,16 @@ Here is the corresponding code:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Examples of beats
-#
-# author: The EarSketch Team
-#
-# description: Creating beats in different genres
-#
-#
+# Creating beats in different genres
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Sound clips
-kick = OS_KICK05 # This is the "boom" sound.
-snare = OS_SNARE01 # This is the "cat" sound.
-hihat = OS_CLOSEDHAT01 # This is the "ts" sound.
+kick = OS_KICK05  # This is the "boom" sound.
+snare = OS_SNARE01  # This is the "cat" sound.
+hihat = OS_CLOSEDHAT01  # This is the "ts" sound.
 
 # Rock beat on measure 1
 makeBeat(kick, 1, 1, "0+++----0+++----")
@@ -411,28 +344,14 @@ makeBeat(hihat, 3, 5, "0++0+00++0+0")
 # Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick, 1, 7, "0+++0+++0+++0+++")
 makeBeat(snare, 2, 7, "---0++0+---0++0+")
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-
-// javascript code
-//
-// script_name: Examples of beats
-//
-// author: The EarSketch Team
-//
-// description: Creating beats in different genres
-//
-//
+// Creating beats in different genres
 
 // Setup
-init();
 setTempo(120);
 
 // Sound clips
@@ -456,9 +375,6 @@ makeBeat(hihat, 3, 5, "0++0+00++0+0");
 // Dembow (latin, caribbean) beat on measure 7
 makeBeat(kick, 1, 7, "0+++0+++0+++0+++");
 makeBeat(snare, 2, 7, "---0++0+---0++0+");
-
-//Finish
-finish();
 ----
 
 [[chapter3summary]]

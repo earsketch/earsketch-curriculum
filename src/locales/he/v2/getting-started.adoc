@@ -54,54 +54,26 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Intro Script
-#
-# author: The EarSketch Team
-#
-# description: This code adds one audio clip to the DAW
-#
-#
-#
+# This code adds one audio clip to the DAW
 
-#Setup Section
+# Setup Section
 from earsketch import *
-init()
 setTempo(120)
 
-#Music Section
+# Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
-
-#Finish Section
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Intro Script
-//
-// author: The EarSketch Team
-//
-// description: This code adds one audio clip to the DAW
-//
-//
-//
+// This code adds one audio clip to the DAW
 
-//Setup Section
-init();
+// Setup Section
 setTempo(120);
 
-//Music Section
+// Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
-
-//Finish Section
-finish();
-
 ----
 
 {nbsp} +
@@ -208,55 +180,26 @@ See some examples of code using `fitMedia()` (Remember you can click the blue cl
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: EarSketch Demo
-#
-# author: The EarSketch Team
-#
-# description: Using fitMedia() to add a clip to the DAW
-#
-#
-#
+# Using fitMedia() to add a clip to the DAW
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
-
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: EarSketch Demo
-//
-// author: The EarSketch Team
-//
-// description: Using fitMedia() to add a clip to the DAW
-//
-//
-//
+// Using fitMedia() to add a clip to the DAW
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
-
-//Finish
-finish();
-
 ----
 
 אתגר: הוסיפו עוד שורות`()fitMedia`לסקריפט, כמו שאנחנו עשינו. שימו לב לכך שהשתמשנו בערוץ נפרד לכל שורת`()fitMedia`:
@@ -264,65 +207,30 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Opus 1
-#
-# author: The EarSketch Team
-#
-# description: Using multiple fitMedia() calls, on different tracks and with different clips
-#
-#
-#
+# Using multiple fitMedia() calls, on different tracks and with different clips
 
 # Setup Section
 from earsketch import *
-
-init()
 setTempo(100)
 
 # Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9)
 fitMedia(Y11_BASS_1, 2, 1, 9)
 fitMedia(Y11_GUITAR_1, 3, 1, 9)
-
-# Finish Section
-
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-// javascript code
-//
-// script_name: Opus 1
-//
-// author: The EarSketch Team
-//
-// description: Using multiple fitMedia() calls, on different tracks and with different clips
-//
-//
-//
+// Using multiple fitMedia() calls, on different tracks and with different clips
 
 // Setup Section
-
-init();
 setTempo(100);
 
 // Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
-
-// Finish Section
-
-finish();
-
 ----
 
 {nbsp} +
@@ -395,47 +303,24 @@ END OF OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Find the 5 Errors
-#
-# author: The EarSketch Team
-#
-# description: Find and fix the errors in this script
-#
+# Find and fix the errors in this script
 
 from earsketch import *
-
-init)
-setTempo(88)
+setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Find the 5 Errors
-//
-// author: The EarSketch Team
-//
-// description: Find and fix the errors in this script
-//
+// Find and fix the errors in this script
 
-init);
-setTempo(88);
+setTempo(88;
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
-
-
-finish();
 ----
 ////
 OPTIONAL

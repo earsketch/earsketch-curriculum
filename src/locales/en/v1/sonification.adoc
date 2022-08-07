@@ -117,28 +117,21 @@ To convert the black-and-white grid image from above into a multidimensional arr
 [source,python]
 ----
 from earsketch import *
-
-init()
 setTempo(120)
 
 myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
 
 print myImage
-
-finish()
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-init();
 setTempo(120);
 var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8);
 
 println(myImage);
-
-finish();
 ----
 
 Take a look at what gets printed to the console. Was the data for that image what you expected? It should look something like this:
@@ -207,38 +200,29 @@ myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/
 drumBeats = ["", "", "", "", "", "", "", ""]
 
 for outerCounter in range(len(myImage)):
-	for innerCounter in range(len(myImage[0])):
-		# print "row:"
-		# print outerCounter
-		# print "column: "
-		# print innerCounter
+    for innerCounter in range(len(myImage[0])):
 
-		if (myImage[outerCounter][innerCounter]== 255):  # if the color is white
-			drumBeats[outerCounter] = drumBeats[outerCounter] + "-" # then rest
-		else:
-			drumBeats[outerCounter] = drumBeats[outerCounter] + "0" # otherwise, hit
+        if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
+            drumBeats[outerCounter] = drumBeats[outerCounter] + "-"  # then rest
+        else:
+            drumBeats[outerCounter] = drumBeats[outerCounter] + "0"  # otherwise, hit
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
-var drumBeats = ["", "", "", "", "", "", "", ""]
+var myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8);
+var drumBeats = ["", "", "", "", "", "", "", ""];
 
 for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
-	for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
-		// println("row:");
-		// println(outerCounter);
-		// println("column: ");
-		// println(innerCounter);
-
-		if (myImage[outerCounter][innerCounter]== 255) { // if the color is white
-			drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
-		} else {
-			drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
-		}
-	}
+    for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
+        if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
+            drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
+        } else {
+            drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
+        }
+    }
 }
 ----
 
@@ -278,14 +262,14 @@ Notice the `myImage[0].length`. This simply says the length of the `myImage[0]` 
 [role="curriculum-python"]
 [source,python]
 ----
-[0,255,0,255,0,255,0,255]
+[0, 255, 0, 255, 0, 255, 0, 255]
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-[0,255,0,255,0,255,0,255];
+[0, 255, 0, 255, 0, 255, 0, 255];
 ----
 
 [role="curriculum-python"]
@@ -311,14 +295,14 @@ Line 8 checks the value of the element in the 2-dimensional array, which (from t
 [role="curriculum-python"]
 [source,python]
 ----
-if (myImage[outerCounter][innerCounter]== 255):  # if the color is white
+if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-if (myImage[outerCounter][innerCounter]== 255) { // if the color is white
+if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
 ----
 
 [role="curriculum-python"]
@@ -331,7 +315,7 @@ Here, the if statement checks if the current array value has a luminosity of 255
 [source,python]
 ----
 else:
-	drumBeats[outerCounter] = drumBeats[outerCounter] + "0" # otherwise, hit
+    drumBeats[outerCounter] = drumBeats[outerCounter] + "0"  # otherwise, hit
 ----
 
 
@@ -339,8 +323,8 @@ else:
 [source,javascript]
 ----
 } else {
-	drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
-	}
+    drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
+}
 ----
 
 [role="curriculum-python"]
@@ -353,16 +337,17 @@ In that case, we add a “0″ (or a hit) to the drumBeats[outerCounter] array. 
 [source,python]
 ----
 drumBeats = [
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0']
+    '0-0-0-0-',
+    '-0-0-0-0',
+    '0-0-0-0-',
+    '-0-0-0-0',
+    '0-0-0-0-',
+    '-0-0-0-0',
+    '0-0-0-0-',
+    '-0-0-0-0',
+    '0-0-0-0-',
+    '-0-0-0-0'
+]
 ----
 
 
@@ -370,16 +355,17 @@ drumBeats = [
 [source,javascript]
 ----
 var drumBeats = [
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0',
-'0-0-0-0-',
-'-0-0-0-0'];
+    "0-0-0-0-",
+    "-0-0-0-0",
+    "0-0-0-0-",
+    "-0-0-0-0",
+    "0-0-0-0-",
+    "-0-0-0-0",
+    "0-0-0-0-",
+    "-0-0-0-0",
+    "0-0-0-0-",
+    "-0-0-0-0",
+];
 ----
 
 The code below does the rest of the work by using the drumBeats variable to create sound.
@@ -388,28 +374,23 @@ The code below does the rest of the work by using the drumBeats variable to crea
 [source,python]
 ----
 from earsketch import *
-
-init()
 setTempo(100)
 
 def createDrumbeats(myImage):
 
-	drumBeats = []
-	for size in range(len(myImage)):
-		drumBeats.append("")
+    drumBeats = []
+    for size in range(len(myImage)):
+        drumBeats.append("")
 
-	for outerCounter in range(len(myImage)):
-		for innerCounter in range(len(myImage[0])):
-			# println("row:")
-			# println(outerCounter)
-			# println("column: ")
-			# println(innerCounter)
-			if (myImage[outerCounter][innerCounter]== 255):  # if the color is white
-				drumBeats[outerCounter] = drumBeats[outerCounter] + "-" # then rest
-			else:
-				drumBeats[outerCounter] = drumBeats[outerCounter] + "0" # otherwise, hit
+    for outerCounter in range(len(myImage)):
+        for innerCounter in range(len(myImage[0])):
 
-	return drumBeats
+            if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
+                drumBeats[outerCounter] = drumBeats[outerCounter] + "-"  # then rest
+            else:
+                drumBeats[outerCounter] = drumBeats[outerCounter] + "0"  # otherwise, hit
+
+    return drumBeats
 
 # now, use the createDrumbeats function to create a list of drumbeats representing each row of the image
 
@@ -421,45 +402,34 @@ drumBeats = createDrumbeats(myImage)
 
 # use the first row to demonstrate making a beat using the first list in the myImage variable
 for counter in range(len(drumBeats)):
-	# build a beat with the contents of the current row
-	makeBeat(snare, 1, counter + 1, drumBeats[counter])
+    # build a beat with the contents of the current row
+    makeBeat(snare, 1, counter + 1, drumBeats[counter])
 
 setEffect(1, VOLUME, GAIN, 12)
-
-finish()
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-init();
 setTempo(100);
 
-println("here");
-
 function createDrumbeats(myImage) {
+    var drumBeats = [];
+    for (var size = 0; size < myImage.length; size++) {
+        drumBeats.push("");
+    }
 
-	var drumBeats = [];
-	for(var size = 0; size < myImage.length; size++) {
-		drumBeats.push("");
-	}
-
-	for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
-		for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
-			// println("row:");
-			// println(outerCounter);
-			// println("column: ");
-			// println(innerCounter);
-
-			if (myImage[outerCounter][innerCounter]== 255) { // if the color is white
-				drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
-			} else {
-			drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
-			}
-		}
-	}
-	return drumBeats;
+    for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
+        for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
+            if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
+                drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
+            } else {
+                drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
+            }
+        }
+    }
+    return drumBeats;
 }
 
 // now, use the createDrumbeats function to create a list of drumbeats representing each row of the image
@@ -470,14 +440,12 @@ var snare = Y01_SNARE_1;
 
 var drumBeats = createDrumbeats(myImage);
 
-//use the first row to demonstrate making a beat using the first list in the myImage variable
-for (var counter = 0; counter < drumBeats.length; counter++){
-	// build a beat with the contents of the current row
-	makeBeat(snare, 1, counter + 1, drumBeats[counter]);
+// use the first row to demonstrate making a beat using the first list in the myImage variable
+for (var counter = 0; counter < drumBeats.length; counter++) {
+    // build a beat with the contents of the current row
+    makeBeat(snare, 1, counter + 1, drumBeats[counter]);
 }
 setEffect(1, VOLUME, GAIN, 12);
-
-finish();
 ----
 
 [role="curriculum-python"]

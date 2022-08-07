@@ -23,59 +23,37 @@ Voyez ci-dessous le code final de la vidéo :
 [role="curriculum-python"]
 [source,python]
 ----
-#        code python
-#        script_name : Création de boucle de beats
-#
-#        auteur : L'équipe EarSketch
-#        description : Création d'une boucle d'une instruction makeBeat() grâce à une boucle for. Le compteur ici est "measure".
-#
-
-from earsketch import *
+# Création d'une boucle d'une instruction makeBeat() grâce à une boucle for
 
 # Paramétrage
-init()
+from earsketch import *
 setTempo(120)
 
 # Variables
-drum1=OS_SNARE03
-beat_string="0---0---0-0-0---"
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
 
-#Création de la boucle pour notre beat
-for measure in range(1,5):
-  makeBeat(drum1,1,measure,beat_string)
-
-finish()
-
+# Création de la boucle pour notre beat
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-"use strict";
-
-//    code javascript
-//    script_name : Création de boucle pour mes beats
-//
-//    auteur : L'équipe EarSketch
-//    description : Création d'une boucle d'instruction makeBeat() grâce à une boucle « for ». Le compteur ici est "measure".
-//
+// Création d'une boucle d'une instruction makeBeat() grâce à une boucle for
 
 // Paramétrage
-init();
 setTempo(120);
 
 // Variables
-var drum1=OS_SNARE03;
-var beat_string="0---0---0-0-0---";
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
 
 // Création d'une boucle pour notre beat
-for (var measure=1; measure<5; measure++) {
-  makeBeat(drum1,1,measure,beat_string);
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
 }
-
-finish();
-
 ----
 
 
@@ -102,77 +80,49 @@ Avant d'exécuter le code suivant, essayez de deviner ce que la console va affic
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Démonstration d'affichage
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de l'instruction « print » pour afficher des messages dans la console
-#
-#
-#
+# Utilisation de print() pour afficher les messages dans la console
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Variables
-drum1=OS_SNARE03
-beat_string="0---0---0-0-0---"
+# Variables
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
 
-#Première instruction « print »
-print(1+3)
+# Première instruction « print »
+print(1 + 3)
 
-#Création d'une boucle pour notre beat
-#Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
-for measure in range(1,5):
-  makeBeat(drum1,1,measure,beat_string)
-  print(measure)
-  print("ok")
-
-
-#Fin
-finish()
+# Création d'une boucle pour notre beat
+# Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Démonstration d'affichage
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de println() pour afficher des messages dans la console
-//
-//
-//
+// Utilisation de println() pour afficher des messages dans la console
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Variables
-var drum1=OS_SNARE03;
-var beat_string="0---0---0-0-0---";
+// Variables
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
 
-//Première instruction « print »
-println(1+3);
+// Première instruction « print »
+println(1 + 3);
 
-//Création d'une boucle pour notre beat
-//Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
-for (var measure=1; measure<5; measure++) {
-  makeBeat(drum1,1,measure,beat_string);
-  println(measure);
-  println("ok");
+// Création d'une boucle pour notre beat
+// Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
+    println(measure);
+    println("ok");
 }
-
-
-//Fin
-finish();
 ----
 
 Vous verrez apparaître dans votre console les lignes suivantes :
@@ -249,21 +199,13 @@ Nous pouvons créer des répétitions dans notre musique en saisissant la foncti
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Rythme percussif (sans boucle)
-#
-# auteur : L'équipe EarSketch
-#
-#	description : Répétition musicale créée sans boucle dans le code
-#
+# Répétition musicale créée sans boucle dans le code
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
@@ -285,31 +227,17 @@ fitMedia(drums1, 1, 7, 7.5)
 fitMedia(drums2, 1, 7.5, 8)
 fitMedia(drums1, 1, 8, 8.5)
 fitMedia(drums2, 1, 8.5, 9)
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Rythme percussif (sans boucle)
-//
-// auteur : L'équipe EarSketch
-//
-// description : Répétition musicale créée sans boucle dans le code
-//
-//
-//
+// Répétition musicale créée sans boucle dans le code
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
@@ -331,9 +259,6 @@ fitMedia(drums1, 1, 7, 7.5);
 fitMedia(drums2, 1, 7.5, 8);
 fitMedia(drums1, 1, 8, 8.5);
 fitMedia(drums2, 1, 8.5, 9);
-
-//Fin
-finish();
 ----
 
 Nous pouvons utiliser une boucle `for` pour créer exactement la même musique, mais de manière plus efficace. Notre compteur ici est "mesure". Notez que le corps de la boucle contient deux lignes de code, toutes deux utilisant le compteur "mesure".
@@ -341,65 +266,41 @@ Nous pouvons utiliser une boucle `for` pour créer exactement la même musique, 
 [role="curriculum-python"]
 [source,python]
 ----
-#	code python
-#
-#	script_name : Rythme percussif (avec boucles)
-#
-#	auteur : L'équipe EarSketch
-#
-#	description : Répétition musicale créée à partir de boucles dans le code.
-#
+# Répétition musicale créée à partir de boucles dans le code.
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-#Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
+# Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
 
 for measure in range(1, 9):
-  fitMedia(drums1, 1, measure, measure + 0.5)
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1)
-
-
-#Fin
-finish()
-
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 1, measure + 0.5, measure + 1)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Rythme percussif (avec boucles)
-//
-// auteur : L'équipe EarSketch
-//
-// description : Répétition musicale créée à partir de boucles dans le code
-//
+// Répétition musicale créée à partir de boucles dans le code
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
 // Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
 
 for (var measure = 1; measure < 9; measure = measure + 1) {
-  fitMedia(drums1, 1, measure, measure + 0.5);
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1);
+    fitMedia(drums1, 1, measure, measure + 0.5);
+    fitMedia(drums2, 1, measure + 0.5, measure + 1);
 }
-
-//Fin
-finish();
 ----
 
 L'*interpréteur* lit et exécute un script. L'ordre dans lequel il est exécuté est appelé le *flux de commande*. En général, il procède par ligne, de haut en bas. C'est pourquoi nous devons définir des variables avant de les appeler dans le code. 
@@ -469,27 +370,17 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Incrémentation
-//
-// auteur : L'équipe EarSketch
-//
-// description : Création d'un rythme percussif alternatif
-//
+// Création d'un rythme percussif alternatif
 
-init();
 setTempo(120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
 
-for (var measure = 1; measure < 9; measure = measure + 4 ){
-  fitMedia(groove1, 1, measure, measure + 2);
-  fitMedia(groove2, 2, measure + 2, measure + 4);
+for (var measure = 1; measure < 9; measure = measure + 4) {
+    fitMedia(groove1, 1, measure, measure + 2);
+    fitMedia(groove2, 2, measure + 2, measure + 4);
 }
-
-finish();
 ----
 
 

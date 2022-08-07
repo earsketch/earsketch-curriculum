@@ -105,77 +105,52 @@ Vous pouvez également utiliser des commentaires pour décrire ce que différent
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Ajout de commentaires dans les différentes sections
-#
-# auteur : L'équipe EarSketch
-#
-# description : Voici un exemple de script court qui utilise des commentaires pour décrire ce que fait le code
-#
-#
-#
+# Des commentaires pour décrire ce que fait le code
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(130)
 
-#Musique
-#Leads
+# Musique
+# Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9)
 
-#Beat
+# Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9)
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9)
 
-#Basse et bruit
+# Basse et bruit
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9)
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
-
-#Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Ajout de commentaires dans les différentes sections
-//
-// auteur : L'équipe EarSketch
-//
-// description : Voici un exemple de script court qui utilise des commentaires pour décrire ce que le code fait
-//
-//
+// Des commentaires pour décrire ce que le code fait
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(130);
 
-//Musique
-//Leads
+// Musique
+// Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9);
 
-//Beat
+// Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9);
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9);
 
-//Basse et bruit
+// Basse et bruit
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9);
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9);
-
-//Fin
-finish();
 ----
 
 

@@ -105,28 +105,18 @@ The Your Voice is Power sample code is not available for JavaScript. To view the
 
 [role="curriculum-python"]
 [source,python]
-
 ----
-#comments
-#author:
-#description:
-#
-#
+# setup
 from earsketch import *
-#setup
-init()
 setTempo(120)
 
-#music
+# music
 
-#soundbank
+# sounds
 
-#verse 1
+# verse 1
 
-#verse 2
-
-#finish
-finish()
+# verse 2
 ----
 
 

@@ -23,59 +23,37 @@ in the "revamping videos" tab (includes link to script)
 [role="curriculum-python"]
 [source,python]
 ----
-#        python code
-#        script_name: Looping my beats
-#
-#        author: The EarSketch Team
-#        description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure".
-#
+# Looping a makeBeat() instruction with a for loop
 
+# Setup
 from earsketch import *
-
-# Setup:
-init()
 setTempo(120)
 
 # Variables
-drum1=OS_SNARE03
-beat_string="0---0---0-0-0---"
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
 
-#Looping our beat
-for measure in range(1,5):
-  makeBeat(drum1,1,measure,beat_string)
-
-finish()
-
+# Looping our beat
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-"use strict";
-
-//    javascript code
-//    script_name: Looping my beats
-//
-//    author: The EarSketch Team
-//    description: Looping a makeBeat() instruction thanks to a for loop. The counter is "measure".
-//
+// Looping a makeBeat() instruction with a for loop
 
 // Setup:
-init();
 setTempo(120);
 
 // Variables
-var drum1=OS_SNARE03;
-var beat_string="0---0---0-0-0---";
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
 
 // Looping our beat
-for (var measure=1; measure<5; measure++) {
-  makeBeat(drum1,1,measure,beat_string);
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
 }
-
-finish();
-
 ----
 
 
@@ -102,77 +80,49 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Printing Demo
-#
-# author: The EarSketch Team
-#
-# description: Using the print statement to print messages in the console
-#
-#
-#
+# Using print() to print messages in the console
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Variables
-drum1=OS_SNARE03
-beat_string="0---0---0-0-0---"
+# Variables
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
 
-#First print statement
-print(1+3)
+# First print statement
+print(1 + 3)
 
-#Looping our beat
-#Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
-for measure in range(1,5):
-  makeBeat(drum1,1,measure,beat_string)
-  print(measure)
-  print("ok")
-
-
-#Finish
-finish()
+# Looping our beat
+# Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Printing Demo
-//
-// author: The EarSketch Team
-//
-// description: Using println() to print messages in the console
-//
-//
-//
+// Using println() to print messages in the console
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Variables
-var drum1=OS_SNARE03;
-var beat_string="0---0---0-0-0---";
+// Variables
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
 
-//First print statement
-println(1+3);
+// First print statement
+println(1 + 3);
 
-//Looping our beat
-//Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
-for (var measure=1; measure<5; measure++) {
-  makeBeat(drum1,1,measure,beat_string);
-  println(measure);
-  println("ok");
+// Looping our beat
+// Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
+    println(measure);
+    println("ok");
 }
-
-
-//Finish
-finish();
 ----
 
 הסבר למה שיוצג בקונסול:
@@ -249,21 +199,13 @@ video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Drum beat (no loops)
-#
-# author: The EarSketch Team
-#
-#	description: Musical repetition created without code loops
-#
+# Musical repetition created without code loops
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
@@ -285,31 +227,17 @@ fitMedia(drums1, 1, 7, 7.5)
 fitMedia(drums2, 1, 7.5, 8)
 fitMedia(drums1, 1, 8, 8.5)
 fitMedia(drums2, 1, 8.5, 9)
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Drum beat (no loops)
-//
-// author: The EarSketch Team
-//
-// description: Musical repetition created without code loops
-//
-//
-//
+// Musical repetition created without code loops
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
@@ -331,9 +259,6 @@ fitMedia(drums1, 1, 7, 7.5);
 fitMedia(drums2, 1, 7.5, 8);
 fitMedia(drums1, 1, 8, 8.5);
 fitMedia(drums2, 1, 8.5, 9);
-
-//Finish
-finish();
 ----
 
 אפשר להשתמש בלולאת`for`כדי ליצור את אותה המוסיקה בצורה יותר יעילה. מונה הלולאה הוא "measure". שימו לב לכך שגוף הלולאה כולל שתי שורות. בשתי השורות מופיע המשתנה "measure".
@@ -341,65 +266,40 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-#	python code
-#
-#	script_name: Drum beat (with loops)
-#
-#	author: The EarSketch Team
-#
-#	description: Musical repetition created with code loops
-#
+# Musical repetition created with code loops
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-#Using a loop instead of repeatedly writing similar lines of code
+# Using a loop instead of repeatedly writing similar lines of code
 
 for measure in range(1, 9):
-  fitMedia(drums1, 1, measure, measure + 0.5)
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1)
-
-
-#Finish
-finish()
-
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 1, measure + 0.5, measure + 1)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Drum beat (with loops)
-//
-// author: The EarSketch Team
-//
-// description: Musical repetition created with code loops
-//
+// Musical repetition created with code loops
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
 // Using a loop instead of repeatedly writing similar lines of code
-
 for (var measure = 1; measure < 9; measure = measure + 1) {
-  fitMedia(drums1, 1, measure, measure + 0.5);
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1);
+    fitMedia(drums1, 1, measure, measure + 0.5);
+    fitMedia(drums2, 1, measure + 0.5, measure + 1);
 }
-
-//Finish
-finish();
 ----
 
 *המתרגם (interpreter)*, קורא ומבצע את הסקריפט. הסדר בו המתרגם מבצע את ההוראות נקרא *בקרת זרימה - control flow*. בדרך כלל המתרגם עובר שורה שורה, מלמעלה למטה. לכן צריך להגדיר משתנים לפני שמשתמשים בהם בקוד. 
@@ -469,27 +369,17 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Incrementing
-//
-// author: The EarSketch Team
-//
-// description: Creating an alternating drum beat
-//
+// Creating an alternating drum beat
 
-init();
 setTempo(120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
 
-for (var measure = 1; measure < 9; measure = measure + 4 ){
-  fitMedia(groove1, 1, measure, measure + 2);
-  fitMedia(groove2, 2, measure + 2, measure + 4);
+for (var measure = 1; measure < 9; measure = measure + 4) {
+    fitMedia(groove1, 1, measure, measure + 2);
+    fitMedia(groove2, 2, measure + 2, measure + 4);
 }
-
-finish();
 ----
 
 

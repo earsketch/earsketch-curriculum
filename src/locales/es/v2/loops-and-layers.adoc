@@ -23,57 +23,37 @@ _UN VIDEO SOBRE LOS CICLOS VIENE PRONTO_
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-# nombre_del_script: Poner mis ritmos en un ciclo
-#
-# autor: El Equipo de EarSketch
-# descripción: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for. El contador es "compas"
-#
-
-from earsketch import *
+# Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
 
 # Configuración
-init()
+from earsketch import *
 setTempo(120)
 
 # Variables
-tambor1=OS_SNARE03
-cadena_de_tiempos="0---0---0-0-0---"
+tambor1 = OS_SNARE03
+cadena_de_tiempos = "0---0---0-0-0---"
 
-#Poner nuestro ritmo en un ciclo
+# Poner nuestro ritmo en un ciclo
 for compas in range(1, 5):
-  makeBeat(tambor1, 1, compas, cadena_de_tiempos)
-
-finish()
-
+    makeBeat(tambor1, 1, compas, cadena_de_tiempos)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict"
-// código javascript
-// nombre_del_script: Poner mis ritmos en un ciclo
-//
-// autor: El Equipo de EarSketch
-// descripción: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for. El contador es "compas"
-//
+// Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
 
 // Configuración:
-init();
 setTempo(120);
 
 // Variables:
-var tambor1=OS_SNARE03;
-var cadena_de_tiempos="0---0---0-0-0---";
+var tambor1 = OS_SNARE03;
+var cadena_de_tiempos = "0---0---0-0-0---";
 
 // Poner nuestro ritmo en un ciclo
 for (var compas = 1; compas < 5; compas++) {
-  makeBeat(tambor1, 1, compas, cadena_de_tiempos);
+    makeBeat(tambor1, 1, compas, cadena_de_tiempos);
 }
-
-finish();
-
 ----
 
 [role="curriculum-python"]
@@ -144,78 +124,50 @@ Antes de ejecutar el siguiente código, trata de adivinar qué es lo que se ver�
 [role="curriculum-python"]
 [source,python]
 ----
-# código python 
-#
-# nombre_del_script: Demostración de print
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo usar la declaración print para hacer aparecer (o "imprimir") mensajes en la consola
-#
-#
-#
+# Cómo usar print() para aparecer mensajes en la consola
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Variables
-tambor1=OS_SNARE03
-cadena_de_tiempos="0---0---0-0-0---"
+# Variables
+tambor1 = OS_SNARE03
+cadena_de_tiempos = "0---0---0-0-0---"
 
-#Primera declaración _print_
-print(1+3)
+# Primera declaración _print_
+print(1 + 3)
 
-#Poner nuestro ritmo en un ciclo
-#Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
-for compas in range(1,5):
-  makeBeat(tambor1, 1, compas, cadena_de_tiempos)
-  print(compas)
-  print("ok")
-
-
-#Fin
-finish()
+# Poner nuestro ritmo en un ciclo
+# Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
+for compas in range(1, 5):
+    makeBeat(tambor1, 1, compas, cadena_de_tiempos)
+    print(compas)
+    print("ok")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Demostración de println()
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
-//
-//
-//
+// Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Variables
-var tambor1=OS_SNARE03;
-var cadena_de_tiempos="0---0---0-0-0---";
+// Variables
+var tambor1 = OS_SNARE03;
+var cadena_de_tiempos = "0---0---0-0-0---";
 
-//Primera declaración println()
-println(1+3);
+// Primera declaración println()
+println(1 + 3);
 
-//Poner nuestro ritmo en un ciclo
-//Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
+// Poner nuestro ritmo en un ciclo
+// Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
 
-for (var compas=1; compas<5; compas++) {
-  makeBeat(drum1, 1, compas, beat_string);
-  println(compas);
-  println("ok");
+for (var compas = 1; compas < 5; compas++) {
+    makeBeat(drum1, 1, compas, beat_string);
+    println(compas);
+    println("ok");
 }
-
-
-//Fin
-finish();
 ----
 
 Aquí, verás las siguientes líneas en tu consola:
@@ -252,18 +204,10 @@ Podemos crear repetición en nuestra música al escribir `fitMedia()` una y otra
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Ritmo de batería (sin ciclos)
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Repetición musical creada sin ciclos de código
-#
+# Repetición musical creada sin ciclos de código
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
@@ -288,28 +232,14 @@ fitMedia(bateria1, 1, 7, 7.5)
 fitMedia(bateria2, 1, 7.5, 8)
 fitMedia(bateria1, 1, 8, 8.5)
 fitMedia(bateria2, 1, 8.5, 9)
-
-# Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Ritmo de batería (sin ciclos)
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Repetición musical creada sin ciclos de código
-//
-//
-//
+// Repetición musical creada sin ciclos de código
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
@@ -317,7 +247,6 @@ var bateria1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var bateria2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
 // Se podrían reemplazar todas estas llamadas a fitMedia() con dos llamadas en ciclos.
-
 
 fitMedia(bateria1, 1, 1, 1.5);
 fitMedia(bateria2, 1, 1.5, 2);
@@ -335,9 +264,6 @@ fitMedia(bateria1, 1, 7, 7.5);
 fitMedia(bateria2, 1, 7.5, 8);
 fitMedia(bateria1, 1, 8, 8.5);
 fitMedia(bateria2, 1, 8.5, 9);
-
-// Fin
-finish();
 ----
 
 Podemos usar un ciclo `for` para crear exactamente la misma música de manera más eficiente. Nuestro contador aquí es "compas". Toma en cuenta que el cuerpo del ciclo contiene 2 líneas de código. Las dos usan "compas" como contador.
@@ -345,50 +271,29 @@ Podemos usar un ciclo `for` para crear exactamente la misma música de manera m�
 [role="curriculum-python"]
 [source,python]
 ----
-#	código python
-#
-#	nombre_del_script_: Ritmo de batería (con ciclos)
-#
-#	autor: El Equipo de EarSketch
-#
-#	descripción: Repetición musical creada con ciclos de código
-#
+# Repetición musical creada con ciclos de código
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Música
+# Música
 bateria1 = ELECTRO_DRUM_MAIN_BEAT_008
 bateria2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-#Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
+# Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
 
-for compas in range (1, 9):
-  fitMedia(bateria1, 1, compas, compas + 0.5)
-  fitMedia(bateria2, 1, compas + 0.5 , compas + 1)
-
-
-#Fin
-finish()
-
+for compas in range(1, 9):
+    fitMedia(bateria1, 1, compas, compas + 0.5)
+    fitMedia(bateria2, 1, compas + 0.5, compas + 1)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Ritmo de batería (con ciclos)
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Repetición musical creada con ciclos de código
-//
+// Repetición musical creada con ciclos de código
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
@@ -398,12 +303,9 @@ var bateria2 = ELECTRO_DRUM_MAIN_BEAT_007;
 // Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
 
 for (var compas = 1; compas < 9; compas = compas + 1) {
-  fitMedia(bateria1, 1, compas, compas + 0.5);
-  fitMedia(bateria2, 1, compas + 0.5 , compas + 1);
+    fitMedia(bateria1, 1, compas, compas + 0.5);
+    fitMedia(bateria2, 1, compas + 0.5, compas + 1);
 }
-
-//Fin
-finish();
 ----
 
 El *intérprete* lee y ejecuta un script. El orden en que se ejecuta se llama el *flujo de control*. Usualmente va línea por línea, de arriba abajo. Por eso hay que definir las variables antes de llamarlas en el código.
@@ -475,27 +377,17 @@ finish()
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Incrementar
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear un ritmo de batería que se alterna
-//
+// Cómo crear un ritmo de batería que se alterna
 
-init();
 setTempo(120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
 
-for (var compas = 1; compas < 9; compas = compas + 4 ){
-  fitMedia(groove1, 1, compas, compas + 2);
-  fitMedia(groove2, 2, compas + 2, compas + 4);
+for (var compas = 1; compas < 9; compas = compas + 4) {
+    fitMedia(groove1, 1, compas, compas + 2);
+    fitMedia(groove2, 2, compas + 2, compas + 4);
 }
-
-finish();
 ----
 
 [role="curriculum-python"]

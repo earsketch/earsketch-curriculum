@@ -18,7 +18,7 @@ A *for-loop* tells the computer to execute a section of code repeatedly, a commo
 ----
 for i in range(2):
 
-	# Repeat indented code after the colon (:) several times.
+    # Repeat indented code after the colon (:) several times.
 ----
 
 [role="curriculum-javascript"]
@@ -26,7 +26,7 @@ for i in range(2):
 ----
 for (var i = 0; i < 2; i++) {
 
-    //Repeat code between the curly braces ({}) several times.
+    // Repeat code between the curly braces ({}) several times.
 
 }
 ----
@@ -91,76 +91,43 @@ Let's use a for-loop to repeat the makeBeat() pattern that we created in the pre
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Multi Beat
-#
-# author: The EarSketch Team
-#
-# description: Using a for-loop to create longer beats
-#
-#
-#
+# Using a for-loop to create longer beats
 
-#Setup
-
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
-
+# Music
 synth = DUBSTEP_FILTERCHORD_002
 cymbal = OS_CLOSEDHAT01
 beat1 = "-00-00+++00--0-0"
 beat2 = "0--0--000--00-0-"
 
 # By adding one extra line and indenting, we achieve repetition
-for measure in range(1,4):
-   makeBeat(synth, 1, measure, beat1)
-   makeBeat(cymbal, 2, measure, beat2)
-
-#Finish
-
-finish()
-
+for measure in range(1, 4):
+    makeBeat(synth, 1, measure, beat1)
+    makeBeat(cymbal, 2, measure, beat2)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Multi Beat (with for-loop)
-//
-// author: The EarSketch Team
-//
-// description: Using a for-loop to create longer beats
-//
-//
-//
+// Using a for-loop to create longer beats
 
-//Setup
-
-init();
+// Setup
 setTempo(120);
 
-//Music
-
+// Music
 var synth = DUBSTEP_FILTERCHORD_002;
 var cymbal = OS_CLOSEDHAT01;
 var beat1 = "-00-00+++00--0-0";
 var beat2 = "0--0--000--00-0-";
 
 // By adding one extra line and indentions, we achieve repetition
-for (var measure=1; measure < 5; measure++) {
-   makeBeat(synth, 1, measure, beat1);
-   makeBeat(cymbal, 2, measure, beat2);
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(synth, 1, measure, beat1);
+    makeBeat(cymbal, 2, measure, beat2);
 }
-
-//Finish
-
-finish();
 ----
 
 [[exampleloop]]
@@ -177,21 +144,13 @@ Previously, we have created repetition in our music by typing `fitMedia()` again
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Drum beat (no loops)
-#
-# author: The EarSketch Team
-#
-#	description: Musical repetition created without code loops
-#
+# Musical repetition created without code loops
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
@@ -213,31 +172,17 @@ fitMedia(drums1, 1, 7, 7.5)
 fitMedia(drums2, 1, 7.5, 8)
 fitMedia(drums1, 1, 8, 8.5)
 fitMedia(drums2, 1, 8.5, 9)
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Drum beat (no loops)
-//
-// author: The EarSketch Team
-//
-// description: Musical repetition created without code loops
-//
-//
-//
+// Musical repetition created without code loops
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
@@ -259,9 +204,6 @@ fitMedia(drums1, 1, 7, 7.5);
 fitMedia(drums2, 1, 7.5, 8);
 fitMedia(drums1, 1, 8, 8.5);
 fitMedia(drums2, 1, 8.5, 9);
-
-//Finish
-finish();
 ----
 
 We can use a for-loop to create the exact same music more efficiently.
@@ -269,65 +211,39 @@ We can use a for-loop to create the exact same music more efficiently.
 [role="curriculum-python"]
 [source,python]
 ----
-#	python code
-#
-#	script_name: Drum beat (with loops)
-#
-#	author: The EarSketch Team
-#
-#	description: Musical repetition created with code loops
-#
+# Musical repetition created with code loops
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-#Using a loop instead of repeatedly writing similar lines of code
-
-for measure in range (1, 9):
-  fitMedia(drums1, 1, measure, measure + 0.5)
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1)
-
-
-#Finish
-finish()
-
+# Using a loop instead of repeatedly writing similar lines of code
+for measure in range(1, 9):
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 1, measure + 0.5, measure + 1)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Drum beat (with loops)
-//
-// author: The EarSketch Team
-//
-// description: Musical repetition created with code loops
-//
+// Musical repetition created with code loops
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
 // Using a loop instead of repeatedly writing similar lines of code
-
 for (var measure = 1; measure < 9; measure = measure + 1) {
-  fitMedia(drums1, 1, measure, measure + 0.5);
-  fitMedia(drums2, 1, measure + 0.5 , measure + 1);
+    fitMedia(drums1, 1, measure, measure + 0.5);
+    fitMedia(drums2, 1, measure + 0.5, measure + 1);
 }
-
-//Finish
-finish();
 ----
 
 [role="curriculum-python"]
@@ -405,23 +321,12 @@ video::./videoMedia/012-05-AddingEffectswithLoops-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Panning Loop
-#
-# author: The EarSketch Team
-#
-# description: Adding music with loops; panning incrementally with loops
-#
-#
-#
+# Adding music and panning using loops
 
 from earsketch import *
-
-init()
 setTempo(130)
 
-#Music
+# Music
 drums1 = ELECTRO_DRUM_MAIN_BEAT_005
 drums2 = ELECTRO_DRUM_MAIN_BEAT_006
 synth = Y02_KEYS_1
@@ -429,8 +334,8 @@ guitar = Y09_WAH_GUITAR_1
 
 # for-loop to create alternating drum beat
 for measure in range(1, 9):
-  fitMedia(drums1, 1, measure, measure + 0.5)
-  fitMedia(drums2, 2, measure + 0.5 , measure + 1)
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 2, measure + 0.5, measure + 1)
 
 # additional fitMedia() calls for guitar and synth
 fitMedia(guitar, 3, 1, 9)
@@ -438,11 +343,8 @@ fitMedia(synth, 4, 5, 9)
 
 # panning effects for all tracks (1-4)
 for track in range(1, 5):
-	panAmount = 200 * (track - 1) / 3 - 100
-	setEffect(track, PAN, LEFT_RIGHT, panAmount)
-
-#Finish
-finish()
+    panAmount = 200 * (track - 1) / 3 - 100
+    setEffect(track, PAN, LEFT_RIGHT, panAmount)
 ----
 
 [role="curriculum-javascript"]
@@ -501,20 +403,10 @@ For-loops can be used to apply repeated effects envelopes to tracks. In the exam
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Rhythmic Ramps
-#
-# author: The EarSketch Team
-#
-# description: Automating effects with a for-loop
-#
-#
-#
+# Automating effects with a for-loop
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Music
@@ -522,10 +414,7 @@ fitMedia(Y33_CHOIR_1, 1, 1, 17)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 17)
 
 for measure in range(1, 17):
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
-
-# Finish
-finish()
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1)
 ----
 
 [role="curriculum-javascript"]

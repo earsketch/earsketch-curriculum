@@ -130,22 +130,16 @@ Import the code below to your code editor (if you would rather work with code fr
 
 [source,python]
 ----
-
-# Created for EarSketch Competition
-# Stems from song "SET" by Ciara
-# Authored by
+# A Remix of Ciara "Set" by the EarSketch Team
 
 from earsketch import *
-init()
 setTempo(120)
-
 
 # Variables
 groove = HIPHOP_DUSTYGROOVE_002
 melody = CIARA_SET_THEME_ATMOS_1
 adlib = CIARA_SET_TALK_ADLIB_LOFI_1
 Cbeat1 = CIARA_SET_THEME_ATMOS_2
-
 
 # Add Sounds
 # Introduction
@@ -166,7 +160,7 @@ makeBeat(HIPHOP_DUSTYGROOVE_007, 1, 9, "00+-00+-00+-00+-")
 # Section A
 fitMedia(CIARA_SET_BASSLINE_3, 1, 10, 18)
 fitMedia(CIARA_SET_PERC_CLAP_1, 2, 10, 18)
-fitMedia(HIPHOP_BASSSUB_001, 3, 10,17)
+fitMedia(HIPHOP_BASSSUB_001, 3, 10, 17)
 
 # Transitions
 makeBeat(HIPHOP_DUSTYGROOVE_007, 1, 18, "00+-00+-00+-00+-")
@@ -183,21 +177,17 @@ makeBeat(HIPHOP_DUSTYGROOVE_007, 1, 27, "00+-00+-00+-00+-")
 fitMedia(CIARA_SET_BASSLINE_3, 1, 28, 31)
 fitMedia(CIARA_SET_PERC_CLAP_1, 2, 28, 31)
 
-
 # Fills
 fillA = "0---0-0-00--0-00"
 fillB = "0--0--0--0--0-0-"
 fillC = "-000-00-00-0-00-"
 
-for measure in range (2, 4):
+for measure in range(2, 4):
     makeBeat(Cbeat1, 7, measure, fillA)
     makeBeat(Cbeat1, 8, measure, fillC)
 
-for measure in range (6, 8):
-    makeBeat(Cbeat1, 9,measure, fillB)
-
-finish()
-
+for measure in range(6, 8):
+    makeBeat(Cbeat1, 9, measure, fillB)
 ----
 
 
@@ -220,20 +210,16 @@ Let’s look at an example. We define and call a function named `myFunctionA()`.
 
 [source,python]
 ----
-
 # Function, inputs, and ":" (colon)
 def myFunctionA(startMeasure, endMeasure):
-
     # Function body, indented
-    fitMedia(CIARA_SET_BASSLINE_3,1, startMeasure,endMeasure)
-    fitMedia(CIARA_SET_PERC_CLAP_1,2,startMeasure,endMeasure)
-    fitMedia(HIPHOP_BASSSUB_001,3,startMeasure, endMeasure)
-
+    fitMedia(CIARA_SET_BASSLINE_3, 1, startMeasure, endMeasure)
+    fitMedia(CIARA_SET_PERC_CLAP_1, 2, startMeasure, endMeasure)
+    fitMedia(HIPHOP_BASSSUB_001, 3, startMeasure, endMeasure)
 
 # Calling My Function
-myFunctionA(10,18)
-myFunctionA(27,31)
-
+myFunctionA(10, 18)
+myFunctionA(27, 31)
 ----
 
 
@@ -267,39 +253,35 @@ simple repetition.
 # Script 1 – Without Functions
 
 from earsketch import *
-init()
 setTempo(120)
 
 # Section A
-fitMedia(CIARA_SET_BASSLINE_3,1, 1,4)
-fitMedia(CIARA_SET_PERC_CLAP_1,2,1,4)
-fitMedia(HIPHOP_BASSSUB_001,3,2,4)
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21,4,2,4)
+fitMedia(CIARA_SET_BASSLINE_3, 1, 1, 4)
+fitMedia(CIARA_SET_PERC_CLAP_1, 2, 1, 4)
+fitMedia(HIPHOP_BASSSUB_001, 3, 2, 4)
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21, 4, 2, 4)
 
 # Section B
-fitMedia(CIARA_SET_BASSLINE_3,1, 4,8)
-fitMedia(Y08_HI_HATS,2,5,8)
-fitMedia(HIPHOP_SYNTHBASS_004,3,4,8)
+fitMedia(CIARA_SET_BASSLINE_3, 1, 4, 8)
+fitMedia(Y08_HI_HATS, 2, 5, 8)
+fitMedia(HIPHOP_SYNTHBASS_004, 3, 4, 8)
 
 # Section A
-fitMedia(CIARA_SET_BASSLINE_3,1, 8,14)
-fitMedia(CIARA_SET_PERC_CLAP_1,2,8,14)
-fitMedia(HIPHOP_BASSSUB_001,3,9,14)
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21,4,9,14)
+fitMedia(CIARA_SET_BASSLINE_3, 1, 8, 14)
+fitMedia(CIARA_SET_PERC_CLAP_1, 2, 8, 14)
+fitMedia(HIPHOP_BASSSUB_001, 3, 9, 14)
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21, 4, 9, 14)
 
 # Section B
-fitMedia(CIARA_SET_BASSLINE_3,1, 14,18)
-fitMedia(Y08_HI_HATS,2,15,18)
-fitMedia(HIPHOP_SYNTHBASS_004,3,14,18)
+fitMedia(CIARA_SET_BASSLINE_3, 1, 14, 18)
+fitMedia(Y08_HI_HATS, 2, 15, 18)
+fitMedia(HIPHOP_SYNTHBASS_004, 3, 14, 18)
 
 # Section A
-fitMedia(CIARA_SET_BASSLINE_3,1, 18,24)
-fitMedia(CIARA_SET_PERC_CLAP_1,2,18,24)
-fitMedia(HIPHOP_BASSSUB_001,3,20,24)
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21,4,20,24)
-
-finish()
-
+fitMedia(CIARA_SET_BASSLINE_3, 1, 18, 24)
+fitMedia(CIARA_SET_PERC_CLAP_1, 2, 18, 24)
+fitMedia(HIPHOP_BASSSUB_001, 3, 20, 24)
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21, 4, 20, 24)
 ----
 
 
@@ -309,29 +291,26 @@ finish()
 # Script 2 - With Functions
 
 from earsketch import *
-init()
 setTempo(120)
 
 # Section A
 def myfunctionA(startMeasure, endMeasure):
-    fitMedia(CIARA_SET_BASSLINE_3,1,startMeasure ,endMeasure)
-    fitMedia(CIARA_SET_PERC_CLAP_1,2,startMeasure,endMeasure)
-    fitMedia(HIPHOP_BASSSUB_001,3,startMeasure+1,endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21,4,startMeasure+1,endMeasure)
+    fitMedia(CIARA_SET_BASSLINE_3, 1, startMeasure, endMeasure)
+    fitMedia(CIARA_SET_PERC_CLAP_1, 2, startMeasure, endMeasure)
+    fitMedia(HIPHOP_BASSSUB_001, 3, startMeasure + 1, endMeasure)
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_21, 4, startMeasure + 1, endMeasure)
 
 # Section B
 def myfunctionB(startMeasure, endMeasure):
-    fitMedia(CIARA_SET_BASSLINE_3,1,startMeasure,endMeasure)
-    fitMedia(Y08_HI_HATS,2,startMeasure+1,endMeasure)
-    fitMedia(HIPHOP_SYNTHBASS_004,3,startMeasure,endMeasure)
+    fitMedia(CIARA_SET_BASSLINE_3, 1, startMeasure, endMeasure)
+    fitMedia(Y08_HI_HATS, 2, startMeasure + 1, endMeasure)
+    fitMedia(HIPHOP_SYNTHBASS_004, 3, startMeasure, endMeasure)
 
-myfunctionA(1,4)
-myfunctionB(4,8)
-myfunctionA(8,14)
-myfunctionB(14,18)
-myfunctionA(18,24)
-
-finish()
+myfunctionA(1, 4)
+myfunctionB(4, 8)
+myfunctionA(8, 14)
+myfunctionB(14, 18)
+myfunctionA(18, 24)
 ----
 
 
@@ -354,7 +333,6 @@ For example, after you write your sections as functions, you can simply organize
 
 [source,python]
 ----
-
 myIntro(1, 4)
 
 mySectionA(4, 8)
@@ -370,8 +348,7 @@ transition1(21)
 myBridge(22, 28)
 mySectionA(28, 32)
 
-myOutro (32, 36)
-
+myOutro(32, 36)
 ----
 
 This organization will make changes in your song structure easier. You can reorganize and change section lengths without rewriting your code.
@@ -382,27 +359,23 @@ For example, you may have a 4 measure section (1-4), the sound `CIARA_SET_PERC_C
 
 [source,python]
 ----
-
 # Section A with hard-coded numbers (1-4)
 fitMedia(CIARA_SET_BASSLINE_3, 1, 1, 4)
 fitMedia(CIARA_SET_PERC_CLAP_1, 2, 2, 4)
 fitMedia(HIPHOP_BASSSUB_001, 3, 1, 3)
 fitMedia(Y03_KICK_1, 4, 3, 4)
-
 ----
 
 [source,python]
 ----
-
 # Section A adapted to non-specific start and end measures
-def sectionA(startMeasure,endMeasure):
+def sectionA(startMeasure, endMeasure):
     fitMedia(CIARA_SET_BASSLINE_3, 1, startMeasure, endMeasure)
-    fitMedia(CIARA_SET_PERC_CLAP_1, 2, startMeasure+1, endMeasure)
-    fitMedia(HIPHOP_BASSSUB_001, 3, startMeasure, endMeasure-1)
-    fitMedia(Y03_KICK_1, 4, startMeasure+2, endMeasure)
+    fitMedia(CIARA_SET_PERC_CLAP_1, 2, startMeasure + 1, endMeasure)
+    fitMedia(HIPHOP_BASSSUB_001, 3, startMeasure, endMeasure - 1)
+    fitMedia(Y03_KICK_1, 4, startMeasure + 2, endMeasure)
 
 sectionA(1, 4)
-
 ----
 
 
@@ -463,24 +436,18 @@ We are going to add a volume effect to our song.  This volume effect extends for
 
 [source,python]
 ----
-
-# python code
-# script_name:setEffect
+# Setting the track volume
 
 from earsketch import *
-init()
 setTempo(90)
 
-# Introduction 
+# Introduction
 fitMedia(CIARA_SET_PERC_SHAKER, 1, 1, 5)
 fitMedia(CIARA_SET_VOX_HOOK_1, 2, 2, 5)
 fitMedia(CIARA_SET_DRUMBEAT_1, 3, 1, 5)
 fitMedia(YG_RNB_TAMBOURINE_1, 4, 2, 5)
-#setEffect(2, VOLUME, GAIN, -12)
-#setEffect(1, VOLUME, GAIN, 12)
-
-finish()
-
+# setEffect(2, VOLUME, GAIN, -12)
+# setEffect(1, VOLUME, GAIN, 12)
 ----
 
 . Click run and play this script.  Listen carefully to tracks 1-4.
@@ -522,7 +489,6 @@ If I wanted Ciara’s vocals to fade in at the start of the song, I would write 
 
 [source,python]
 ----
-
 setEffect(2, VOLUME, GAIN, -30, 1, 12, 4)
 #         |    |       |    |   |   |  |
 #         |    |       |    |   |   |  |
@@ -539,7 +505,6 @@ setEffect(2, VOLUME, GAIN, -30, 1, 12, 4)
 #                       effectEndValue |
 #                                      |
 #                       effectEndLocation
-
 ----
 
 This function states that the sound clip on track 2 (which is a sound loop of Ciara’s vocals) will start at a volume value of -30 at Measure 1 and increase to a volume value of 12 at Measure 4.  In the student activity below, you will have the opportunity to listen to the `setEffect()` function with envelopes and also add your own to your song.
@@ -555,21 +520,18 @@ Import the script below:
 
 [source,python]
 ----
-#       python code
-#       script_name:setEffect
+# Setting the track volume
 
 from earsketch import *
-init()
 setTempo(90)
 
-# Introduction 
+# Introduction
 fitMedia(CIARA_SET_PERC_SHAKER, 1, 1, 5)
 fitMedia(CIARA_SET_VOX_HOOK_1, 2, 1, 5)
 fitMedia(CIARA_SET_DRUMBEAT_1, 3, 1, 5)
 fitMedia(YG_RNB_TAMBOURINE_1, 4, 2, 5)
 setEffect(2, VOLUME, GAIN, -30, 1, 12, 4)
 setEffect(1, VOLUME, GAIN, 12, 1, -20, 4)
-finish()
 ----
 
 . Import your script, click run and play. 

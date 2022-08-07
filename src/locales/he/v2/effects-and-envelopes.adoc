@@ -35,17 +35,10 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-#   python code
-#   script_name: Volume Effect
-#
-#   author: The EarSketch Team
-#   description: Modifying the volume of 2 tracks
-#
+# Modifying the volume of 2 tracks
 
 # Setup
 from earsketch import *
-
-init()
 setTempo(120)
 
 # Variables
@@ -53,37 +46,23 @@ piano1 = COMMON_LOVE_THEME_PIANO_2
 percussions1 = HOUSE_BREAK_FILL_002
 
 # Placing the sounds:
-fitMedia(piano1,1,1,5)
-fitMedia(percussions1,2,3,5)
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percussions1, 2, 3, 5)
 
 # Mixing: increase the piano track and reduce the percussion track volumes
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Volume Effect
-//
-// author: The EarSketch Team
-//
-// description: Modifying the volume of 2 tracks
-//
-//
-//
+// Modifying the volume of 2 tracks
 
-//Setup
-init()
-setTempo(120)
+// Setup
+setTempo(120);
 
-//Variables
+// Variables
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percussions1 = HOUSE_BREAK_FILL_002;
 
@@ -91,13 +70,9 @@ var percussions1 = HOUSE_BREAK_FILL_002;
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
-
 // Mixing: increase the piano track and reduce the percussion track volumes
 setEffect(1, VOLUME, GAIN, 2);
 setEffect(2, VOLUME, GAIN, -15);
-
-//Finish
-finish()
 ----
 
 דנו באפקט`VOLUME`. כעת נדון באפקט `DELAY`. האזינו לשני הקליפים הבאים. הראשון ללא האפקט, והשני עם האפקט *delay*.
@@ -127,24 +102,13 @@ finish()
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Delay Effect
-#
-# author: The EarSketch Team
-#
-# description: Adding delay to a track
-#
-#
-#
+# Adding delay to a track
 
-#Setup
+# Setup
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Music
+# Music
 lead1 = EIGHT_BIT_ATARI_SYNTH_001
 lead2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -163,34 +127,20 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(drums1, 3, 3, 5)
 fitMedia(drums2, 3, 5, 9)
 
-#Effects
-
-#setEffect(1, DELAY, DELAY_TIME, 500) #Adds a delay (echo) effect at intervals of 500ms.
-#setEffect(1, DELAY, DELAY_FEEDBACK, -20.0) #Lowers the relative amount of repeats (default is -3.0).
-
-#Finish
-finish()
+# Effects
+# setEffect(1, DELAY, DELAY_TIME, 500)  # Adds a delay (echo) effect at intervals of 500ms.
+# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # Lowers the relative amount of repeats (default is -3.0).
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Delay Effect
-//
-// author: The EarSketch Team
-//
-// description: Adding delay to a track
-//
-//
-//
+// Adding delay to a track
 
-//Setup
-init()
-setTempo(120)
+// Setup
+setTempo(120);
 
-//Music
+// Music
 var lead1 = EIGHT_BIT_ATARI_SYNTH_001;
 var lead2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
@@ -207,13 +157,9 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(drums1, 3, 3, 5);
 fitMedia(drums2, 3, 5, 9);
 
-//Effects
-
-//setEffect(1, DELAY, DELAY_TIME, 500); // Adds a delay (echo) effect at intervals of 500ms
-//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Lowers the relative amount of repeats (default is -3.0)
-
-//Finish
-finish()
+// Effects
+// setEffect(1, DELAY, DELAY_TIME, 500); // Adds a delay (echo) effect at intervals of 500ms
+// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Lowers the relative amount of repeats (default is -3.0)
 ----
 
 [[functionsandmoreeffects]]
@@ -458,20 +404,10 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Rhythmic Ramps
-#
-# author: The EarSketch Team
-#
-# description: Automating effects with a for-loop
-#
-#
-#
+# Automating effects with a for-loop
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Music
@@ -479,10 +415,7 @@ fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
 for measure in range(1, 9):
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
-
-# Finish
-finish()
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1)
 ----
 
 [role="curriculum-javascript"]
@@ -520,20 +453,10 @@ And here is an example of fade in and fade out on all the tracks:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Fade in and fade out
-#
-# author: The EarSketch Team
-#
-# description: Looping on all tracks to add a fade in and fade out
-#
-#
-#
+# Looping on all tracks to add a fade in and fade out
 
 # Setup
 from earsketch import*
-init()
 setTempo(100)
 
 # Variables
@@ -549,18 +472,14 @@ fitMedia(melody1, 1, 1, 5)
 fitMedia(melody2, 1, 5, 9)
 
 # Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
-for measure in range(1,9):
-  makeBeat(kick,2,measure,kickBeat)
-  makeBeat(hihat,3,measure,hihatBeat)
+for measure in range(1, 9):
+    makeBeat(kick, 2, measure, kickBeat)
+    makeBeat(hihat, 3, measure, hihatBeat)
 
 # Adding the fade in and fade out on tracks 1 through 3
-for track in range(1,4):
-  setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
-  setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
-
-# Finish
-finish()
-
+for track in range(1, 4):
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
 ----
 [role="curriculum-javascript"]
 [source, javascript]

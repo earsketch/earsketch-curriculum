@@ -46,26 +46,13 @@ Code Error in these examples breaks AsciiDoc syntax coloring.
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Finding Errors With Comments
-#
-# author: The EarSketch Team
-#
-# description: This script causes an error. Fix the error by
-#              commenting out blocks
-#
-#
-#
+# Fix the error by commenting out blocks
 
-#Setup
+# Setup
 from earsketch import *
-
-init()
 setTempo(130)
 
-#Music
-
+# Music
 claps = HOUSE_BREAKBEAT_006
 singleClap = OS_CLAP03
 hiHat = HOUSE_BREAKBEAT_012
@@ -78,7 +65,7 @@ bass1 = ELECTRO_ANALOGUE_BASS_013
 bass2 = ELECTRO_ANALOGUE_BASS_008
 noiseSweep = TECHNO_WHITENOISESFX_001
 
-#Leads
+# Leads
 # Try commenting out this block first
 fitMedia(lead1, 3, 17, 24)
 fitMedia(lead2, 8, 17, 25)
@@ -88,8 +75,8 @@ fitMedia(lead2, 8, 13, 14)
 fitMedia(lead2, 8, 15, 17)
 fitMedia(lead3, 4, 5, 24)
 
-#Beat
-#Try commenting out this block next
+# Beat
+# Try commenting out this block next
 fitMedia(kick, 1, 1, 24)
 fitMedia(claps, 2, 5, 16)
 fitMedia(claps, 2, 17, 24)
@@ -97,36 +84,22 @@ fitMedia(singleClap, 9, 16.75, 16.875)
 fitMedia(singleClap, 9, 16.875, 17)
 fitMedia(hiHat, 7, 17, 24
 
-#Auxiliary
+# Auxiliary
 fitMedia(chords, 3, 1, 17)
 fitMedia(noiseSweep, 6, 15, 17)
 fitMedia(bass2, 5, 9, 17)
 fitMedia(bass1, 5, 17, 24)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Finding Errors With Comments
-//
-// author: The EarSketch Team
-//
-// description: This script causes an error. Fix the error by
-//              commenting out blocks
-//
-//
+// Fix the error by commenting out blocks
 
-//Setup
-init()
+// Setup
 setTempo(130)
 
-//Music
-
+// Music
 var claps = HOUSE_BREAKBEAT_006;
 var singleClap = OS_CLAP03;
 var hiHat = HOUSE_BREAKBEAT_012;
@@ -139,8 +112,8 @@ var bass1 = ELECTRO_ANALOGUE_BASS_013;
 var bass2 = ELECTRO_ANALOGUE_BASS_008;
 var noiseSweep = TECHNO_WHITENOISESFX_001;
 
-//Leads
-//Try commenting out this block first
+// Leads
+// Try commenting out this block first
 fitMedia(lead1, 3, 17, 24);
 fitMedia(lead2, 8, 17, 25);
 fitMedia(lead2, 8, 9, 10);
@@ -149,8 +122,8 @@ fitMedia(lead2, 8, 13, 14);
 fitMedia(lead2, 8, 15, 17);
 fitMedia(lead3, 4, 5, 24);
 
-//Beat
-//Try commenting out this block next
+// Beat
+// Try commenting out this block next
 fitMedia(kick, 1, 1, 24);
 fitMedia(claps, 2, 5, 16);
 fitMedia(claps, 2, 17, 24);
@@ -158,14 +131,11 @@ fitMedia(singleClap, 9, 16.75, 16.875);
 fitMedia(singleClap, 9, 16.875, 17);
 fitMedia(hiHat, 7, 17, 24
 
-//Auxiliary
+// Auxiliary
 fitMedia(chords, 3, 1, 17);
 fitMedia(noiseSweep, 6, 15, 17);
 fitMedia(bass2, 5, 9, 17);
 fitMedia(bass1, 5, 17, 24);
-
-//Finish
-finish();
 ----
 
 Large, collaborative programming projects often involve large-scale distribution, and have specific standards and methods. For such projects, it is helpful to agree on how to comment. This will ensure that all team members know how to comment and maintain your program in the future. In <<evaluating-correctness-3#Chapter21,Chapter 21>>, we will discuss creative, collaborative work in detail.
@@ -204,18 +174,9 @@ Let's use knowledge of common errors to debug some example code. The two scripts
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Find The Error 1
-#
-# author: The EarSketch Team
-#
-# description: Find and fix the error in this script
-#
+# Find and fix the error in this script
 
 from earsketch import *
-
-init()
 setTempo(88)
 
 fitMedia(electroString, 1, 1, 9)
@@ -223,23 +184,13 @@ electroString = Y13_STRING_1
 
 fitMedia(drums, 2, 5, 9)
 drums = HIPHOP_DUSTYGROOVE_017
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Find The Error 1
-//
-// author: The EarSketch Team
-//
-// description: Find and fix the error in this script
-//
+// Find and fix the error in this script
 
-init();
 setTempo(88);
 
 fitMedia(electroString, 1, 1, 9);
@@ -247,25 +198,14 @@ var electroString = Y13_STRING_1;
 
 fitMedia(drums, 2, 5, 9);
 var drums = HIPHOP_DUSTYGROOVE_017;
-
-finish();
 ----
 
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Find The Error 2
-#
-# author: The EarSketch Team
-#
-# description: Find and fix the error in this script
-#
+# Find and fix the error in this script
 
 from earsketch import *
-
-init()
 setTempo(88)
 
 electroString = Y13_STRING_1
@@ -273,23 +213,13 @@ drums = HIPHOP_DUSTYGROOVE_017
 
 fitMedia(electrostring, 1, 1, 9)
 fitMedia(drum, 2, 5, 9)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Find The Error 2
-//
-// author: The EarSketch Team
-//
-// description: Find and fix the error in this script
-//
+// Find and fix the error in this script
 
-init();
 setTempo(88);
 
 var electroString = Y13_STRING_1;
@@ -297,8 +227,6 @@ var drums = HIPHOP_DUSTYGROOVE_017;
 
 fitMedia(electrostring, 1, 1, 9);
 fitMedia(drum, 2, 5, 9);
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -314,18 +242,9 @@ Corrected scripts are provided below for reference:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Fixed Error
-#
-# author: The EarSketch Team
-#
-# description: A script free of errors
-#
+# Errors fixed
 
 from earsketch import *
-
-init()
 setTempo(88)
 
 electroString = Y13_STRING_1
@@ -333,23 +252,13 @@ drums = HIPHOP_DUSTYGROOVE_017
 
 fitMedia(electroString, 1, 1, 9)
 fitMedia(drums, 2, 5, 9)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Fixed Error
-//
-// author: The EarSketch Team
-//
-// description: A script free from errors
-//
+// Errors fixed
 
-init();
 setTempo(88);
 
 var electroString = Y13_STRING_1;
@@ -357,8 +266,6 @@ var drums = HIPHOP_DUSTYGROOVE_017;
 
 fitMedia(electroString, 1, 1, 9);
 fitMedia(drums, 2, 5, 9);
-
-finish();
 ----
 
 EarSketch provides some additional resources to help you debug your scripts. Take a look at <<every-error-explained-in-detail#,Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.

@@ -154,12 +154,12 @@ Although 16 sub-beats make up a measure, your `makeBeat()` string does not have 
 fillA = "0---0-0-00--0-00"
 fillB = "0--0--0--0--0-0-"
 fillC = "-000-00-00-0-00-"
-#makeBeat(Cbeat1, 7, 2, fillA)
-#makeBeat(Cbeat1, 7, 3, fillA)
-#makeBeat(Cbeat1, 7, 4, fillA)
-#makeBeat(Cbeat1, 8, 2, fillC)
-#makeBeat(Cbeat1, 8, 3, fillC)
-#makeBeat(Cbeat1, 8, 4, fillC)
+# makeBeat(Cbeat1, 7, 2, fillA)
+# makeBeat(Cbeat1, 7, 3, fillA)
+# makeBeat(Cbeat1, 7, 4, fillA)
+# makeBeat(Cbeat1, 8, 2, fillC)
+# makeBeat(Cbeat1, 8, 3, fillC)
+# makeBeat(Cbeat1, 8, 4, fillC)
 ----
 
 . Look at `fillA = "0---0-0-00--0-00"`
@@ -343,7 +343,7 @@ You can also use the for-loop with fitMedia. See example below:
 [source,python]
 ----
 for measure in range(1, 9):
-    fitMedia(DUBSTEP_BASS_WOBBLE_002, 25, measure, measure+1)
+    fitMedia(DUBSTEP_BASS_WOBBLE_002, 25, measure, measure + 1)
 ----
 
 
@@ -358,8 +358,8 @@ You can also use a for-loop to create an alternating drum beat in your song. Bel
 ----
 # Each sound is played for 0.5 measure, across 8 measures
 for measure in range(1, 9):
-    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure+0.5)
-    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure+0.5, measure+1)
+    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure + 0.5)
+    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure + 0.5, measure + 1)
 ----
 
 
@@ -400,12 +400,10 @@ EarSketch will alert you of an error with a message in the console. Look at the 
 # Below, fitmedia should be fitMedia
 fitmedia(RD_ELECTRO_DRUM_PART_1, 10, 1, 4)
 
-
 # Console output:
-# 
 # Running script...
-# Error message >> NameError: There is an error with a variable or 
-# functio name that is not define, name 'fitmedia' is not defined on line
+# Error message >> NameError: There is an error with a variable or
+# function name that is not defined, name 'fitmedia' is not defined on line
 # 45. [Click here for more information].
 ----
 
@@ -488,8 +486,8 @@ fitMedia(RD_ELECTRO_DRUM_PART_4, 26, 4.5, 5)
 
 # You can simply write it as for-loop
 for measure in range(1, 9):
-    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure+0.5)
-    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure+0.5, measure+1)
+    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure + 0.5)
+    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure + 0.5, measure + 1)
 ----
 
 

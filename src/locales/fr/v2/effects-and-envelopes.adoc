@@ -35,17 +35,10 @@ Voyez l'exemple ci-dessous :
 [role="curriculum-python"]
 [source,python]
 ----
-#   code python
-#   script_name : Effet de volume
-#
-#   auteur : L'équipe EarSketch
-#   description : Modification du volume de deux pistes
-#
+# Modification du volume de deux pistes
 
 # Paramétrage
 from earsketch import *
-
-init()
 setTempo(120)
 
 # Variables
@@ -53,37 +46,23 @@ piano1 = COMMON_LOVE_THEME_PIANO_2
 percussions1 = HOUSE_BREAK_FILL_002
 
 # Placement des sons :
-fitMedia(piano1,1,1,5)
-fitMedia(percussions1,2,3,5)
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percussions1, 2, 3, 5)
 
 # Mixage : augmentation du volume de la piste de piano et réduction du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Effet de volume
-//
-// auteur : L'équipe EarSketch
-//
-// description : Modification du volume de deux pistes
-//
-//
-//
+// Modification du volume de deux pistes
 
-//Paramétrage
-init()
-setTempo(120)
+// Paramétrage
+setTempo(120);
 
-//Variables
+// Variables
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percussions1 = HOUSE_BREAK_FILL_002;
 
@@ -91,13 +70,9 @@ var percussions1 = HOUSE_BREAK_FILL_002;
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
-
 // Mixage : augmentation du volume de la piste du piano et baisse du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2);
 setEffect(2, VOLUME, GAIN, -15);
-
-//Fin
-finish()
 ----
 
 Nous avons vu l'effet `VOLUME`. Voyons maintenant l'effet `DELAY`. Écoutez les deux clips ci-dessous. Un des clips comprend l'effet *delay* appliqué et l'autre non.
@@ -127,24 +102,13 @@ Vous pouvez essayer de modifier le délai et d'évaluer si votre musique sonne m
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Effet de délai
-#
-# auteur : L'équipe EarSketch
-#
-# description : Ajout d'un délai à une piste
-#
-#
-#
+# Ajout d'un délai à une piste
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Musique
+# Musique
 lead1 = EIGHT_BIT_ATARI_SYNTH_001
 lead2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -163,34 +127,20 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(drums1, 3, 3, 5)
 fitMedia(drums2, 3, 5, 9)
 
-#Effets
-
-#setEffect(1, DELAY, DELAY_TIME, 500) #Ajout d'un effet de délai (écho) à des intervalles de 500 ms.
-#setEffect(1, DELAY, DELAY_FEEDBACK, -20.0) #Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0).
-
-#Fin
-finish()
+# Effets
+# setEffect(1, DELAY, DELAY_TIME, 500)  # Ajout d'un effet de délai (écho) à des intervalles de 500 ms.
+# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0).
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Effet de délai
-//
-// auteur : L'équipe EarSketch
-//
-// description : Ajout d'un délai à une piste
-//
-//
-//
+// Ajout d'un délai à une piste
 
-//Paramétrage
-init()
-setTempo(120)
+// Paramétrage
+setTempo(120);
 
-//Musique
+// Musique
 var lead1 = EIGHT_BIT_ATARI_SYNTH_001;
 var lead2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
@@ -207,13 +157,9 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(drums1, 3, 3, 5);
 fitMedia(drums2, 3, 5, 9);
 
-//Effets
-
-//setEffect(1, DELAY, DELAY_TIME, 500); // Ajout d'un effet de délai (écho) à des intervalles de 500 ms
-//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0)
-
-//Fin
-finish()
+// Effets
+// setEffect(1, DELAY, DELAY_TIME, 500); // Ajout d'un effet de délai (écho) à des intervalles de 500 ms
+// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0)
 ----
 
 [[functionsandmoreeffects]]
@@ -456,20 +402,10 @@ Voyez l'exemple ci-dessous. Chaque itération de la boucle ajoute un segment (du
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Rampes rythmiques
-#
-# auteur : L'équipe EarSketch
-#
-# description : Automatisation des effets avec une boucle « for »
-#
-#
-#
+# Automatisation des effets avec une boucle « for »
 
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Musique
@@ -477,10 +413,7 @@ fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
 for measure in range(1, 9):
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
-
-# Fin
-finish()
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1)
 ----
 
 [role="curriculum-javascript"]
@@ -518,20 +451,10 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Fondus d'ouverture et de fermeture
-#
-# auteur : L'équipe EarSketch
-#
-# description : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
-#
-#
-#
+# Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 # Paramétrage
 from earsketch import*
-init()
 setTempo(100)
 
 # Variables
@@ -547,18 +470,14 @@ fitMedia(melody1, 1, 1, 5)
 fitMedia(melody2, 1, 5, 9)
 
 # Placement de beats sur la piste 2 (grosse caisse) et sur piste 3 (charleston) grâce à une boucle for sur les mesures
-for measure in range(1,9):
-  makeBeat(kick,2,measure,kickBeat)
-  makeBeat(hihat,3,measure,hihatBeat)
+for measure in range(1, 9):
+    makeBeat(kick, 2, measure, kickBeat)
+    makeBeat(hihat, 3, measure, hihatBeat)
 
 # Ajout d'un fondu d'ouverture et d'un fondu de fermeture sur les pistes 1 à 3
-for track in range(1,4):
-  setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
-  setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
-
-# Fin
-finish()
-
+for track in range(1, 4):
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
 ----
 [role="curriculum-javascript"]
 [source, javascript]

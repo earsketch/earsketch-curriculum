@@ -14,65 +14,39 @@ In addition to taking some sort of input, functions can output a value. In progr
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Simple Return Statements
-#
-# author: The EarSketch Team
-#
-# description: Returning the result of a mathematical expression
-#
-#
-#
+# Returning the result of a mathematical expression
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Body
+# Body
 def addNumbers(numb1, numb2):
-  answer = numb1 + numb2
-  return answer
+    answer = numb1 + numb2
+    return answer
 
-result = addNumbers(2,2)
+result = addNumbers(2, 2)
 # Print result to the console
 print result
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Simple Return Statements
-//
-// author: The EarSketch Team
-//
-// description: Returning the result of a mathematical expression
-//
-//
-//
+// Returning the result of a mathematical expression
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Body
-function addNumbers(numb1, numb2){
-  var answer = numb1 + numb2;
-  return answer;
+// Body
+function addNumbers(numb1, numb2) {
+    var answer = numb1 + numb2;
+    return answer;
 }
 
-var result = addNumbers(2,2);
+var result = addNumbers(2, 2);
 // Print result to the console
 println(result);
-
-//Finsih
-finish();
 ----
 
 [role="curriculum-python"]
@@ -108,88 +82,60 @@ video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Return Statements
-#
-# author: The EarSketch Team
-#
-# description: Linking two beats together with return statements
-#
-#
-#
+# Linking two beats together with return statements
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(100)
 
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
-#Music
-
+# Music
 def createBeat(startMeasure, soundClip, beatString):
-  endMeasure = startMeasure + 3
-  for measure in range(startMeasure, endMeasure):
-    makeBeat(soundClip, 1, measure, beatString)
+    endMeasure = startMeasure + 3
+    for measure in range(startMeasure, endMeasure):
+        makeBeat(soundClip, 1, measure, beatString)
 
-  # Return ending measure so we can use it outside function
-  return endMeasure
+    # Return ending measure so we can use it outside function
+    return endMeasure
 
 # Function calls
-
 # Assigning the value we return to a variable
 newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
+
 # Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Return Statements
-//
-// author: The EarSketch Team
-//
-// description: Linking two beats together with return statements
-//
-//
-//
+// Linking two beats together with return statements
 
-//Setup
-init();
+// Setup
 setTempo(100);
 
 var rhythm1 = "0+++0+0+0+--0+00";
 var rhythm2 = "0+0-00++0-000+++";
 
-//Music
+// Music
+function createBeat(startMeasure, soundClip, beatString) {
+    var endMeasure = startMeasure + 3;
+    for (var measure = startMeasure; measure < endMeasure; measure++) {
+        makeBeat(soundClip, 1, measure, beatString);
+    }
 
-function createBeat(startMeasure, soundClip, beatString){
-  var endMeasure = startMeasure + 3;
-  for (var measure = startMeasure; measure < endMeasure; measure++){
-    makeBeat(soundClip, 1, measure, beatString);
-  }
-
-  // Return ending measure so we can use it outside function
-  return endMeasure;
+    // Return ending measure so we can use it outside function
+    return endMeasure;
 }
 
 // Function calls
-
 // Assigning the value we return to a variable
 var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
+
 // Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
-
-//Finish
-finish();
 ----
 
 [role="curriculum-python"]
