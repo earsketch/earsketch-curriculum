@@ -324,7 +324,7 @@ OPTIONAL
 
 Aquí está la respuesta
 
-. La función `init()` falta un paréntesis
+. La función `setTempo()` falta un paréntesis
 . Al primer `fitMedia()` le falta una 'e'
 . Al primer `fitMedia()` le falta una coma entre el tercer y cuarto parámetro
 . Al segundo `fitMedia()` le falta una 'M' en mayúscula

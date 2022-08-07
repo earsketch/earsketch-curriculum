@@ -338,7 +338,7 @@ OPTIONAL
 
 Voici la réponse
 
-. Il manque une parenthèse à la fonction `init()`.
+. Il manque une parenthèse à la fonction `setTempo()`.
 . Il manque un « e » à la première fonction `fitMedia()`.
 . Il manque une virgule entre le troisième et le quatrième paramètre de la première fonction `fitMedia()`.
 . Il manque un « M » (majuscule) à la deuxième fonction `fitMedia()`.

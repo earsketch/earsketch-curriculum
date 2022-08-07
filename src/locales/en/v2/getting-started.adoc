@@ -328,7 +328,7 @@ OPTIONAL
 
 Here is the answer
 
-. The `init()` function is missing a parentheses
+. The `setTempo()` function is missing a parentheses
 . The first `fitMedia()` is missing an 'e'
 . The first `fitMedia()` is missing a comma between the third and fourth parameters
 . The second `fitMedia()` is missing an uppercase 'M'
