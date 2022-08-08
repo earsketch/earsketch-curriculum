@@ -155,15 +155,11 @@ You can use comments anywhere in your code, but a block at the top is usually us
 
 *Setup Section*
 
-This code tells the DAW how to prepare to make music. init() initializes, or turns on, the DAW. setTempo() allows you to choose a tempo for the project, which can be anywhere from 45 to 220 beats per minute. from earsketch import * adds the EarSketch API to the project. Every project with music in it must have these parts in the setup section.
+This code tells the DAW how to prepare to make music. `setTempo()` allows you to choose a tempo for the project, which can be anywhere from 45 to 220 beats per minute. `from earsketch import *` adds the EarSketch API to the project. Every project with music in it must have these parts in the setup section.
 
 *Music Section*
 
 The most important section. All of the details of your composition go here.
-
-*Finish Section*
-
-Every project must have a finish() function at the end. It tells the DAW that you are done composing and are ready to play your music.
 
 image:../media/YVIP-RemixComp/Mod1-Image3-BuildingBlocks.png[]
 
