@@ -276,7 +276,7 @@ Algunos errores comunes son:
 . *Los errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()` o constantes sonoras.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
 . *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`.
+. *La configuración del script:* EarSketch agrega código de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`.
 . *Puntuación:* La falta de comas u otros errores de puntuación
 
 [role="curriculum-javascript"]

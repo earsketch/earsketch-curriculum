@@ -150,7 +150,7 @@ The following list of common errors can help you identify and prevent bugs in yo
 . *Case sensitivity:* Most words used in programming are case-sensitive. Pay attention to lowercase and uppercase letters used in variable names and EarSketch API functions.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <<every-error-explained-in-detail#syntaxerror,syntax error>>. When using functions like `fitMedia()` (or any other EarSketch API function), make sure your arguments are enclosed by parentheses on both ends.
 . *Initializing variables*: Do not forget to initialize, or assign values to, variables before you use them. You usually do this at the top of your script.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `from earsketch import *`, `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
+. *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
 . *Comments:* Improper commenting will cause a syntax error. Remember that Python comments must start with a `#` symbol.
 
 [role="curriculum-javascript"]
@@ -159,7 +159,6 @@ The following list of common errors can help you identify and prevent bugs in yo
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <<every-error-explained-in-detail#syntaxerror,syntax error>>. When using functions like `fitMedia()` (or any other EarSketch API function), make sure your arguments are enclosed by parentheses on both ends.
 . *Initializing variables*: Do not forget to initialize, or assign values to, variables before you use them. You usually do this at the top of your script.
 . *Initializing without var:* Forgetting to initialize a variable with `var` in JavaScript can cause some confusing errors. Remember, the correct way to initialize a variable looks like this: `var measure = 1`.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
 . *Comments:* Improper commenting will cause a syntax error. Remember that JavaScript comments must start with `//`.
 
 [[debuggingexercise]]
