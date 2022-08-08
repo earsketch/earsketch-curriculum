@@ -207,7 +207,7 @@ tell you about the script?
 [[BuildingBlocksNumbers]]
 === Numbers
 
-In the basic script provided, you will notice code such as `init()`, `setTempo()`, `fitMedia()`, and `finish()`. These are called functions. Functions tell the computer what to do based on information, known as arguments. The parentheses after a function provide space for arguments. The first function `init()` informs the computer of the start of the code.
+In the basic script provided, you will notice code such as `setTempo()` and `fitMedia()`. These are called functions. Functions tell the computer what to do based on information, known as arguments. The parentheses after a function provide space for arguments.
 
 As you begin coding in EarSketch, we will focus on arguments including numbers, variables, and constants. `setTempo()` is an example of a function with a number.
 
