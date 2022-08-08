@@ -314,7 +314,6 @@ Aquí está un ejemplo de una solución:
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Crear mis cadenas de tiempos y listas
@@ -346,9 +345,6 @@ print(cadenaD)
 # Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
 sonidosD = sonidosC[2:len(sonidosC)]
 print(sonidosD)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]

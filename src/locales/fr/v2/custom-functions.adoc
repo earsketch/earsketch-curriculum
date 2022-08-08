@@ -33,7 +33,6 @@ image::../media/U2/sections_052016.png[Alt Text]
 
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Musique
@@ -59,9 +58,6 @@ fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13)  # mélodie principale
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)  # percussions
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13)  # ligne de basse
 setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # augmentation du volume de la ligne de basse
-
-# Fin
-finish()
 ----
 
 
