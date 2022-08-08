@@ -168,12 +168,10 @@ fitMedia(drums2, 3, 5, 9);
 حتى الآن '، كنت تستخدم العديد من الدوال في EarSketch مثل ` fitMedia () ` أو ` setEffect () `. لاحظ أن أسماء الدوال تبدأ دائمًا بحرف صغير ، وغالبًا ما تكون فعل. تُرشد الأقواس الحاسوي أن * يستدعي * ، أو * ينفذ * ، الدالة. * العوامل * (تسمى أحيانًا الوسائط) ، داخل الأقواس ، مفصولة بفواصل.
 
 [role="curriculum-python"]
-* `init()`, `finish()`لا يوجد عوامل. هذه الوظائف المحددة هي وظائف Python القياسية.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` تستقبل عوامل. هم جزء من *Application Programming Interface*او, *API*. تضيف EarSketch أو EarSketch API ميزات موسيقية إلى لغة Python. مثال آخر على API هو Google Maps API: مجموعة من الأدوات لتضمين الخرائط في مواقع الويب أو التطبيقات.
 * في فصل لاحق ، ستتعلم' أيضًا كيفية إنشاء الدوال المخصصة الخاصة بك.
 
 [role="curriculum-javascript"]
-* `init()`, `finish()`لا تستقبل عوامل. هذه الوظائف المحددة هي دوال JavaScript القياسية.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` تستقبل عوامل. هم جزء من *Application Programming Interface*او, *API*. تضيف EarSketch أو EarSketch API ميزات موسيقية إلى لغة JavaScript. مثال آخر على API هو Google Maps API: مجموعة من الأدوات لتضمين الخرائط في مواقع الويب أو التطبيقات.
 * في فصل لاحق ، ستتعلم' أيضًا كيفية إنشاء الدوال المخصصة الخاصة بك.
 

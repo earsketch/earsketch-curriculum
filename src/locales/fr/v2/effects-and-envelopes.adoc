@@ -168,12 +168,10 @@ fitMedia(drums2, 3, 5, 9);
 Jusqu'à présent, vous avez utilisé plusieurs fonctions dans EarSketch comme `fitMedia()` ou `setEffect()`. Notez que les noms des fonctions commencent toujours par une lettre minuscule et sont souvent un verbe. Les parenthèses indiquent à l'ordinateur d’*appeler* ou d'*exécuter* la fonction. Les *arguments*, ou paramètres, entre les parenthèses sont séparés par des virgules.
 
 [role="curriculum-python"]
-* Les fonctions `init()` et `finish()` ne nécessitent aucun argument. Ces fonctions spécifiques sont des fonctions standard en Python.
 * Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API EarSketch, ajoute des fonctionnalités musicales à Python. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
 * Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
 
 [role="curriculum-javascript"]
-* Les fonctions `init()` et `finish()` ne nécessitent aucun argument. Ces fonctions spécifiques sont des fonctions standard en JavaScript.
 * Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API de EarSketch, ajoute des fonctionnalités musicales à JavaScript. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
 * Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
 

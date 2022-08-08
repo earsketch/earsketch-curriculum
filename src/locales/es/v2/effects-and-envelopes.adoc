@@ -178,12 +178,10 @@ fitMedia(bateria2, 3, 5, 9);
 Hasta ahora, has estado usando varias funciones en EarSketch como `fitMedia()` o `setEffect()`. Toma en cuenta que los nombres de función siempre empiezan con la letra en minúscula, y muchas veces son un verbo. Los paréntesis mandan que la computadora *llame*, o *ejecute*, la función. Los *argumentos*, o parámetros, entre paréntesis son separados por comas.
 
 [role="curriculum-python"]
-* `init()`, `finish()` no requieren argumentos. Estas funciones específicas son funciones estándares en Python.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, y ahora `setEffect()` requieren argumentos. Son parte de la *Interfaz de Programación de Aplicaciones* (_Application Programming Interface_), o *API*, de EarSketch. EarSketch, o el API de EarSketch, añade funcionalidad musical a Python. Otro ejemplo de un API es el API de Google Maps: una serie de herramientas para incorporar mapas en páginas web o aplicaciones.
 * En un capítulo más adelante, aprenderás también cómo crear tus propias funciones personalizadas.
 
 [role="curriculum-javascript"]
-* `init()`, `finish()` no requieren argumentos. Estas funciones específicas son funciones estándares en JavaScript.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, y ahora `setEffect()` requieren argumentos. Son parte de la *Interfaz de Programación de Aplicaciones* (_Application Programming Interface_), o *API*, de EarSketch. EarSketch, o el API de EarSketch, añade funcionalidad musical a JavaScript. Otro ejemplo de un API es el API de Google Maps: una serie de herramientas para incorporar mapas en páginas web o aplicaciones.
 * En un capítulo más adelante, aprenderás también cómo crear tus propias funciones personalizadas.
 
