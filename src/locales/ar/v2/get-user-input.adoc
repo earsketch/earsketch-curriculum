@@ -228,17 +228,17 @@ verse(7, false);
 على سبيل المثال ، انسخ المقطع البرمجي التالي في برنامج نصي جديد ، وقم بتشغيله:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 answer = readInput("What tempo would you like for your music?")
-print (answer)
+print(answer)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 var answer = readInput("What tempo would you like for your music?");
-print(answer)
+print(answer);
 ----
 
 في بعض الأحيان نريد تحويل قيمة من نوع بيانات إلى آخر. فيما يلي دوال مفيدة:
@@ -255,19 +255,12 @@ print(answer)
 في المثال أدناه ، يتم استخدام إدخال وحدة التحكم لتحديد إيقاع الأغنية. نتأكد من تحويل مدخلات المستخدم إلى عدد صحيح. 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: User input 1
-#
-# author: The EarSketch Team
-#
-# description: Asking the user for the tempo
+# Asking the user for the tempo
 
 # Setup
 from earsketch import *
-init()
 
 # asking for tempo
 question = "What tempo would you like for your music؟ Choose a number between 45 and 220"
@@ -280,26 +273,15 @@ tempo = int(answer)
 setTempo(tempo)
 
 # music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5)
-
-# finish
-finish()
-
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-//	javascript code
-//	script_name: User input 1
-//
-//	author: the EarSketch team
-//	description: Asking the user for the tempo
-
+// Asking the user for the tempo
 
 // Setup
-init();
 
 // asking for tempo
 var question = "What tempo would you like for your music؟ Choose a number between 45 and 220";
@@ -312,10 +294,7 @@ var tempo = Number(answer);
 setTempo(tempo);
 
 // music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1,1,1,5);
-
-// finish
-finish();
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
 ----
 
 فيما يلي مثال آخر لما يمكنك فعله بإدخال المستخدم. 
@@ -323,61 +302,38 @@ finish();
 *Concatenation*هي وسيلة لربط السلاسل معًا باستخدام الرمز `+`.  على سبيل المثال ، ربط السلاسل `"hello"`و`"world"`عائدات الى `"helloworld"`. في المثال التالي ، يُطلب من المستخدم تحديد رقم مقطع. الرقم متسلسل مع`DUBSTEP_BASS_WOBBLE_0` لإنشاء الاسم الكامل للمقطع مثل `DUBSTEP_BASS_WOBBLE_010`.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: User input 2
-#
-# author: The EarSketch Team
-#
-# description: Creating a dubstep song with user-specified parameters
-#
+# Creating a dubstep song with user-specified parameters
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 clipNumber = readInput("Type a clip number between 10 and 46: ")
 dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
 finalClip = dubStepClip + clipNumber
 
 # user selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: User input 2
-//
-// author: The EarSketch Team
-//
-// description: Creating a dubstep song with user-specified parameters
-//
+// Creating a dubstep song with user-specified parameters
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var clipNumber = readInput("Type a clip number between 10 and 46: ");
 var dubStepClip = "DUBSTEP_BASS_WOBBLE_0";
 var finalClip = dubStepClip + clipNumber;
 
 // user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5);
-
-//Finish
-finish();
 ----
 
 .تدريب
@@ -448,19 +404,11 @@ finish();
 استخدم المقطع البرمجي التالي لطباعة الإجابات:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Boolean expressions
-#
-# author: The EarSketch Team
-#
-# description: printing boolean expressions
-#
+# printing boolean expressions
 
 from earsketch import *
-init()
 
 print(not True)
 print(True and False)
@@ -469,25 +417,14 @@ print(True and True)
 print((True and False) or True)
 print(True and not False)
 print(not(False or False))
-
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Boolean expressions
-//
-// author: The EarSketch Team
-//
-// description: printing boolean expressions
-//
+// printing boolean expressions
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
 println(!true);
@@ -497,9 +434,6 @@ println(true && true);
 println((true && false) || true);
 println(true && !false);
 println(!(false || false);
-
-finish();
-
 ----
 
 إليك تذكير بإنشاء منطقي، وبعض الأمثلة على العمليات المنطقية:
@@ -521,19 +455,11 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 مثالا على ذلك:
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Boolean operations
-#
-# author: The EarSketch Team
-#
-# description: Asking user for genre and creating beat accordingly
-#
+# Asking user for genre and creating beat accordingly
 
 from earsketch import *
-init()
 setTempo(120)
 
 # Sound variables
@@ -547,42 +473,29 @@ hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
-
 # Requesting user input
 genre = readInput("What genre is your favourite؟ Hip Hop or EDM?")
 
 # Creating the appropriate rhythm
 if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
-	makeBeat(kick,1,1,hiphopKickBeat)
-	makeBeat(hihat,2,1,hiphopHihatBeat)
+    makeBeat(kick, 1, 1, hiphopKickBeat)
+    makeBeat(hihat, 2, 1, hiphopHihatBeat)
 elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
-	makeBeat(kick,1,1,edmKickBeat)
-	makeBeat(clap,2,1,edmClapBeat)
+    makeBeat(kick, 1, 1, edmKickBeat)
+    makeBeat(clap, 2, 1, edmClapBeat)
 else:
-	print("Sorry we couldn't read the genre you selected. Please run the code again")
+    print("Sorry we couldn't read the genre you selected. Please run the code again")
 
 # Adding some reverb on track 2
-setEffect(2,REVERB, MIX, 0.1)
-
-
-finish()
+setEffect(2, REVERB, MIX, 0.1)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Boolean operations
-//
-// author: The EarSketch Team
-//
-// description: Asking user for genre and creating beat accordingly
-//
+// Asking user for genre and creating beat accordingly
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
 // Sound variables
@@ -596,26 +509,22 @@ var hiphopHihatBeat = "----0---00---000";
 var edmKickBeat = "0+++----0+++----";
 var edmClapBeat = "----0-------0---";
 
-
 // Requesting user input
-var genre = readInput("What genre is your favourite؟ Hip Hop or EDM?")
+var genre = readInput("What genre is your favourite؟ Hip Hop or EDM?");
 
 // Creating the appropriate rhythm
-if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
-	makeBeat(kick,1,1,hiphopKickBeat);
-	makeBeat(hihat,2,1,hiphopHihatBeat);
-} else if((genre == "edm") || (genre == "Edm") || (genre == "EDM")){
-	makeBeat(kick,1,1,edmKickBeat);
-	makeBeat(clap,2,1,edmClapBeat);
+if ((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")) {
+    makeBeat(kick, 1, 1, hiphopKickBeat);
+    makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if ((genre == "edm") || (genre == "Edm") || (genre == "EDM")) {
+    makeBeat(kick, 1, 1, edmKickBeat);
+    makeBeat(clap, 2, 1, edmClapBeat);
 } else {
-	println("Sorry we couldn't read the genre you selected. Please run the code again");
+    println("Sorry we couldn't read the genre you selected. Please run the code again");
 }
 
 // Adding some reverb on track 2
-setEffect(2,REVERB, MIX, 0.1);
-
-finish();
-
+setEffect(2, REVERB, MIX, 0.1);
 ----
 
 .تحدّ

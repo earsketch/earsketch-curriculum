@@ -348,24 +348,14 @@ for track in range(1, 5):
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Panning Loop
-//
-// author: The EarSketch Team
-//
-// description: Adding music with loops; panning incrementally with loops
-//
-//
-//
+// Adding music with loops; panning incrementally with loops
 
-//Setup
-init();
+// Setup
 setTempo(130);
 
-//Music
+// Music
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_005;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_006;
 var synth = Y02_KEYS_1;
@@ -374,7 +364,7 @@ var guitar = Y09_WAH_GUITAR_1;
 // for-loop to create alternating drum beat
 for (var measure = 1; measure < 9; measure++) {
     fitMedia(drums1, 1, measure, measure + 0.5);
-    fitMedia(drums2, 2, measure + 0.5 , measure + 1);
+    fitMedia(drums2, 2, measure + 0.5, measure + 1);
 }
 
 // additional fitMedia() calls for guitar and synth
@@ -383,12 +373,9 @@ fitMedia(synth, 4, 5, 9);
 
 // panning effects for all tracks (1-4)
 for (var track = 1; track < 5; track++) {
-	panAmount = 200 * (track - 1) / 3 - 100;
-	setEffect(track, PAN, LEFT_RIGHT, panAmount);
+    panAmount = 200 * (track - 1) / 3 - 100;
+    setEffect(track, PAN, LEFT_RIGHT, panAmount);
 }
-
-//Finish
-finish();
 ----
 
 The first for-loop in the script above is used to create an alternating drum beat. This looping technique results in the first drum sound playing only over the first half of each measure on track one. The second drum sound follows over the second half of each measure on track two. This gives us independent control of panning for each track. Staggering sounds with a for-loop is also an excellent way to vary a beat.
@@ -418,33 +405,20 @@ for measure in range(1, 17):
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Rhythmic Ramps
-//
-// author: The EarSketch Team
-//
-// description: Automating effects with a for-loop
-//
-//
-//
+// Automating effects with a for-loop
 
 // Setup
-init()
-setTempo(120)
+setTempo(120);
 
 // Music
-fitMedia(Y33_CHOIR_1, 1, 1, 17)
-fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 17)
+fitMedia(Y33_CHOIR_1, 1, 1, 17);
+fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 17);
 
 for (var measure = 1; measure < 17; measure++) {
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1);
 }
-
-// Finish
-finish()
 ----
 
 [[chapter12summary]]

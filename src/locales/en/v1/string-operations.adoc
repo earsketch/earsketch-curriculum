@@ -162,25 +162,15 @@ Without a return statement a function does not return or output any value. This 
 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: String Concatenation
-#
-# author: The EarSketch Team
-#
-# description: Combining two strings into one string
-#
-#
-#
+# Combining two strings into one string
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Concatenation
+# Concatenation
 stringA = "Computer"
 stringB = "Science!"
 
@@ -188,30 +178,17 @@ stringB = "Science!"
 newString = stringA + " " + stringB
 
 print newString
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Concatenation
-//
-// author: The EarSketch Team
-//
-// description: Combining two strings into one string
-//
-//
-//
+// Combining two strings into one string
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Concatenation
+// Concatenation
 
 var stringA = "Computer";
 var stringB = "Science!";
@@ -220,34 +197,20 @@ var stringB = "Science!";
 var newString = stringA + " " + stringB;
 
 println(newString);
-
-//Finish
-finish();
 ----
 
 String concatenation can be used to form longer, more complex rhythms. In the example below, we define a set of shorter rhythms with beat strings. Then, these strings are concatenated together in different orders to form a series of final beat strings. The resulting rhythm can be easily modified by changing the concatenation order, or changing the individual beat strings at the top of the script.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Beat String Concatenation
-#
-# author: The EarSketch Team
-#
-# description: Combining beat strings to form a complex rhythm
-#
-#
-#
+# Combining beat strings to form a complex rhythm
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(100)
 
-
-#Music
+# Music
 beatString1 = "0++00-0+"
 beatString2 = "-00+0---"
 beatString3 = "0+++0-0+"
@@ -266,31 +229,17 @@ finalHat = beatString5 + beatString4 + beatString3 + beatString2 + beatString1 +
 makeBeat(kick, 1, 1, finalKick)
 makeBeat(snare, 2, 1, finalSnare)
 makeBeat(hat, 3, 1, finalHat)
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Beat String Concatenation
-//
-// author: The EarSketch Team
-//
-// description: Combining beat strings to form a complex rhythm
-//
-//
-//
+// Combining beat strings to form a complex rhythm
 
-//Setup
-init();
+// Setup
 setTempo(100);
 
-//Music
+// Music
 var beatString1 = "0++00-0+";
 var beatString2 = "-00+0---";
 var beatString3 = "0+++0-0+";
@@ -309,9 +258,6 @@ var finalHat = beatString5 + beatString4 + beatString3 + beatString2 + beatStrin
 makeBeat(kick, 1, 1, finalKick);
 makeBeat(snare, 2, 1, finalSnare);
 makeBeat(hat, 3, 1, finalHat);
-
-//Finish
-finish();
 ----
 
 [[substrings]]
@@ -397,22 +343,12 @@ An *index* represents the position of a particular character in a string. In Jav
 The following code shows an example of substring syntax and obtaining the length of a string. The data for each is printed to the console.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Substrings
-#
-# author: The EarSketch Team
-#
-# description: Using slice notation to make substrings
-#
-#
-#
+# Using slice notation to make substrings
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(100)
 
 # Extracting a substring
@@ -424,27 +360,14 @@ b = a[10: 16]
 print b
 # print the length of b to the console
 print len(b)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Substrings
-//
-// author: The EarSketch Team
-//
-// description: Getting a part of a string using .substring()
-//
-//
-//
+// Getting a part of a string using .substring()
 
-//Setup
-init();
+// Setup
 setTempo(100);
 
 // Extracting a substring
@@ -456,9 +379,6 @@ var b = a.substring(10, 16);
 println(b);
 // print the length of b to the console
 println(b.length);
-
-//Finish
-finish();
 ----
 
 ////
@@ -491,85 +411,60 @@ video::./videoMedia/013-03-Substrings-PY.mp4[]
 video::./videoMedia/013-03-Substrings-JS.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: String Operations
-#
-# author: The EarSketch Team
-#
-# description: Expand a beat string into a longer beat string.
-#
-#
+# Expand a beat string into a longer beat string.
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 initialBeat = "0+0+00-00+++-0++"
 drumInstr = RD_UK_HOUSE_MAINBEAT_10
 
 def expander(beatString):
-  newBeat = ""
-  for i in range(0, len(beatString)):
-    beatSlice = beatString[0:i]
-    newBeat = newBeat + beatSlice
-  # return the new beat string so it can be used outside the function
-  return newBeat
+    newBeat = ""
+    for i in range(0, len(beatString)):
+        beatSlice = beatString[0:i]
+        newBeat = newBeat + beatSlice
+    # return the new beat string so it can be used outside the function
+    return newBeat
 
 finalBeat = expander(initialBeat)
 print finalBeat
 
-#makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
+# makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: String Operations
-//
-// author: The EarSketch Team
-//
-// description: Expand a beat string into a longer beat string.
-//
-//
-//
+// Expand a beat string into a longer beat string.
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var initialBeat = "0+0+00-00+++-0++";
 var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
 
-function expander(beatString){
-  var newBeat = "";
-  for (var i = 0; i < beatString.length; i = i + 1){
-    beatSlice = beatString.substring(0, i);
-    newBeat = newBeat + beatSlice;
-  }
-  // return the new beat string so it can be used outside the function
-  return newBeat;
+function expander(beatString) {
+    var newBeat = "";
+    for (var i = 0; i < beatString.length; i = i + 1) {
+        beatSlice = beatString.substring(0, i);
+        newBeat = newBeat + beatSlice;
+    }
+    // return the new beat string so it can be used outside the function
+    return newBeat;
 }
 
 var finalBeat = expander(initialBeat);
 println(finalBeat);
 
-//makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
+// makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat);
-
-//Finish
-finish();
 ----
 
 [[chapter13summary]]

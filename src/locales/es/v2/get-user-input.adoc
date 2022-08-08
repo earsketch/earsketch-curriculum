@@ -234,17 +234,17 @@ Vamos a ver cómo pedir sugerencias de los usuarios cuando se oprima el botón d
 Por ejemplo, copia el siguiente código en un nuevo script y ejecútalo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 respuesta = readInput("¿Que tempo te gustaria tener en tu musica?")
-print (respuesta)
+print(respuesta)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 var respuesta = readInput("Que tempo te gustaria tener en tu musica?");
-print(respuesta)
+print(respuesta);
 ----
 
 Posiblemente tendremos que convertir el dato que ha dado el usuario en otro tipo de dato. Aquí están unas funciones útiles:
@@ -261,52 +261,39 @@ Posiblemente tendremos que convertir el dato que ha dado el usuario en otro tipo
 En el siguiente ejemplo, se usa el valor que el usuario escribió en la consola para determinar el tempo de la canción. Tenemos que asegurarnos de convertir en un número entero el valor escogido por el usuario.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Respuesta del usuario 1
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo pedir que el usuario escoja el tempo
+// Cómo usar un booleano para crear variaciones de una función
 
-# Configuración
-from earsketch import *
-init()
+// Configuración
+setTempo(120);
 
-# Pedir que escoja el tempo
-pregunta = "Que tempo te gustaria tener en tu musica? Elije un numero entre 45 y 220."
-respuesta = readInput(pregunta)
+var melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var melodia2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
+var bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
-# Convertirla en un número entero
-tempo = int(respuesta)
+// Definición de la función
+function verso(comienzo, variacion) {
+    // Variacion es igual a true o false.
+    if (variacion) {
+        fitMedia(melodia1, 1, comienzo, comienzo + 4);
+    } else {
+        fitMedia(melodia2, 1, comienzo, comienzo + 4);
+    }
+    fitMedia(bateria1, 2, comienzo, comienzo + 4); // Está fuera de la declaración condicional (no hay sangría).
+}
 
-# Poner el tempo
-setTempo(tempo)
-
-# Música
-fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
-
-# Fin
-finish()
-
+// Llamadas a función
+verso(1, true);
+verso(7, false);
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// código javascript
-//
-// nombre_del_script: Respuesta del usuario 1
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo pedir que el usuario escoja el tempo
+// Cómo pedir que el usuario escoja el tempo
 
 // Configuración
-init();
 
 // Pedir que escoja el tempo
 var pregunta = "Que tempo te gustaria tener en tu musica? Elije un número entre 45 y 220.";
@@ -320,9 +307,6 @@ setTempo(tempo);
 
 // Música
 fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
-
-// Fin
-finish();
 ----
 
 Aquí está otro ejemplo de lo que se puede hacer con las respuestas del usuario.
@@ -330,20 +314,12 @@ Aquí está otro ejemplo de lo que se puede hacer con las respuestas del usuario
 La *concatenación* es una manera de combinar las cadenas, usando el símbolo `+`.  Por ejemplo, concatenar las cadenas `"hola"` y `"mundo"` produce `"holamundo"`. En el siguiente ejemplo, se pide que el usuario elija un número de clip. El número se concatena con `DUBSTEP_BASS_WOBBLE_0` para formar un nombre completo de clip como `DUBSTEP_BASS_WOBBLE_010`.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Respuesta del usuario 2
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear una canción dubstep con parámetros escogidos por el usuario
-#
+# Cómo crear una canción dubstep con parámetros escogidos por el usuario
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
@@ -353,38 +329,23 @@ clipFinal = clipDeDubstep + numeroDeClip
 
 # Dubstep wobbles (líneas de bajo ondulantes de estilo dubstep) elegidos por el usuario
 fitMedia(clipFinal, 1, 1, 5)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// código javascript
-//
-// nombre_del_script: Respuesta del usuario 2
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear una canción dubstep con parámetros escogidos por el usuario
-//
+// Cómo crear una canción dubstep con parámetros escogidos por el usuario
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Música
+// Música
 var numeroDeClip = readInput("Escribe un numero de clip entre 10 y 46: ");
 var clipDeDubstep = "DUBSTEP_BASS_WOBBLE_0";
 var clipFinal = clipDeDubstep + numeroDeClip;
 
 // Dubstep wobbles (líneas de bajo ondulantes de estilo dubstep) elegidos por el usuario
 fitMedia(clipFinal, 1, 1, 5);
-
-//Fin
-finish();
 ----
 
 {nbsp} +
@@ -458,19 +419,11 @@ Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`true` o 
 Usa el siguiente programa para imprimir las respuestas:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Expresiones booleanas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Imprimir expresiones booleanas
-#
+# Imprimir expresiones booleanas
 
 from earsketch import *
-init()
 
 print(not True)
 print(True and False)
@@ -479,25 +432,14 @@ print(True and True)
 print((True and False) or True)
 print(True and not False)
 print(not(False or False))
-
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// código javascript
-//
-// nombre_del_script: Expresiones booleanas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Imprimir expresiones booleanas
-//
+// Imprimir expresiones booleanas
 
 // Configuración
-init();
 setTempo(120);
 
 println(!true);
@@ -507,9 +449,6 @@ println(true && true);
 println((true && false) || true);
 println(true && !false);
 println(!(false || false);
-
-finish();
-
 ----
 
 Aquí se presenta un repaso de la creación booleana y algunos ejemplos de las operaciones booleanas:
@@ -532,19 +471,11 @@ Escribe un script en que se pedirá que el usuario elija un género, dándole un
 Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Operaciones booleanas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
-#
+# Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
 
 from earsketch import *
-init()
 setTempo(120)
 
 # Variables de sonido
@@ -558,42 +489,29 @@ ritmoDeHihatDeHiphop = "----0---00---000"
 ritmoDeBomboDeEdm = "0+++----0+++----"
 ritmoDePalmadasEdm = "----0-------0---"
 
-
 # Pedir que el usuario dé su respuesta
 genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?")
 
 # Crear el ritmo adecuado
 if((genero == "Hip Hop") or (genero == "hip hop") or (genero == "HIP HOP")):
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop)
-	makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop)
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop)
+    makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop)
 elif((genero == "edm") or (genero == "Edm") or (genero == "EDM")):
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm)
-	makeBeat(palmada, 2, 1, ritmoDePalmadasEdm)
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm)
+    makeBeat(palmada, 2, 1, ritmoDePalmadasEdm)
 else:
-	print("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
+    print("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
 
 # Añadir alguna reverberación en la pista 2 (track 2)
 setEffect(2, REVERB, MIX, 0.1)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// código javascript
-//
-// nombre_del_script: Operaciones booleanas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Pedir que el usuario escoja un género y crear un ritmo basándose en su selección
-//
+// Pedir que el usuario escoja un género y crear un ritmo basándose en su selección
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
 // Variables de sonido
@@ -607,26 +525,22 @@ var ritmoDeHihatDeHiphop = "----0---00---000";
 var ritmoDeBomboDeEdm = "0+++----0+++----";
 var ritmoDePalmadasEdm = "----0-------0---";
 
-
 // Pedir que el usuario dé su respuesta
-var genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?")
+var genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?");
 
 // Crear el ritmo adecuado
-if((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")){
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop);
-	makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop);
-} else if((genero == "edm") || (genero == "Edm") || (genero == "EDM")){
-	makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm);
-	makeBeat(palmada, 2, 1, ritmoDePalmadasEdm);
+if ((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")) {
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop);
+    makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop);
+} else if ((genero == "edm") || (genero == "Edm") || (genero == "EDM")) {
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm);
+    makeBeat(palmada, 2, 1, ritmoDePalmadasEdm);
 } else {
-	println("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el codigo otra vez.");
+    println("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el codigo otra vez.");
 }
 
 // Añadir alguna reverberación en la pista 2 (track 2)
 setEffect(2, REVERB, MIX, 0.1);
-
-finish();
-
 ----
 
 {nbsp} +

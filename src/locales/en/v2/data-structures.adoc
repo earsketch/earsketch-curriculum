@@ -18,7 +18,7 @@ If you have very long lists of sound variables, it's possible to arrange them ef
 If you have very long lists of sound variables, it's possible to arrange them efficiently thanks to *arrays*. An *array*, also called list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 # Instead of wiriting this:
 kick = OS_KICK03
@@ -26,11 +26,11 @@ hihat = OS_OPENHAT01
 snare = OS_SNARE05
 
 # You can write this:
-drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05]
+drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 // Instead of wiriting this:
 var kick = OS_KICK03;
@@ -38,7 +38,7 @@ var hihat = OS_OPENHAT01;
 var snare = OS_SNARE05;
 
 // You can write this:
-var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
+var drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05];
 ----
 
 [role="curriculum-python"]
@@ -56,22 +56,12 @@ Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3 from mea
 Here is an example:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Lists
-#
-# author: The EarSketch Team
-#
-# description: Using a list to hold several audio clips
-#
-#
-#
+# Using a list to hold several audio clips
 
 # Setup
 from earsketch import *
-init()
 setTempo(130)
 
 # Music
@@ -80,30 +70,17 @@ setTempo(130)
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
 # Placing sounds from measure 1 to 5
-fitMedia(myEnsemble[0], 1, 1, 5) # accessing index 0
-fitMedia(myEnsemble[1], 2, 1, 5) # accessing index 1
-fitMedia(myEnsemble[2], 3, 1, 5) # accessing index 2
-
-# Finish
-finish()
+fitMedia(myEnsemble[0], 1, 1, 5)  # accessing index 0
+fitMedia(myEnsemble[1], 2, 1, 5)  # accessing index 1
+fitMedia(myEnsemble[2], 3, 1, 5)  # accessing index 2
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Arrays
-//
-// author: The EarSketch Team
-//
-// description: Using an array to hold several audio clips
-//
-//
-//
+// Using an array to hold several audio clips
 
 // Setup
-init();
 setTempo(130);
 
 // Music
@@ -115,9 +92,6 @@ var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD
 fitMedia(myEnsemble[0], 1, 1, 5); // accessing index 0
 fitMedia(myEnsemble[1], 2, 1, 5); // accessing index 1
 fitMedia(myEnsemble[2], 3, 1, 5); // accessing index 2
-
-// Finish
-finish();
 ----
 
 [[Graphic]]
@@ -140,21 +114,12 @@ The index number must start at `0` while your track starts at `1`. Inside your f
 Below is an example. You can have a look in the console to see what is printed when you run the code.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Iterating through Lists
-#
-# author: The EarSketch Team
-#
-# description: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
-#
-#
+# Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
 
 # Setup
 from earsketch import *
-init()
 setTempo(130)
 
 # Music
@@ -163,31 +128,18 @@ setTempo(130)
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
 # Going through the list
-for track in range(1,4):
-	index = track-1
-	fitMedia(myEnsemble[index], track, 1, 5) 
-	print ("this iteration, track = " + str(track) + " and index = "+ str(index))
-
-# Finish
-finish()
+for track in range(1, 4):
+    index = track - 1
+    fitMedia(myEnsemble[index], track, 1, 5)
+    print("this iteration, track = " + str(track) + " and index = " + str(index))
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Iterating through Arrays
-//
-// author: The EarSketch Team
-//
-// description: Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
-//
-//
+// Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
 
 // Setup
-init();
 setTempo(130);
 
 // Music
@@ -196,14 +148,11 @@ setTempo(130);
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
 // Going through the array
-for (var track = 1; track<4; track++){
-	var index = track-1;
-	fitMedia(myEnsemble[index], track, 1, 5);
-	println ("this iteration, track = " + track + " and index = "+ index);
+for (var track = 1; track < 4; track++) {
+    var index = track - 1;
+    fitMedia(myEnsemble[index], track, 1, 5);
+    println("this iteration, track = " + track + " and index = " + index);
 }
-
-// Finish
-finish();
 ----
 
 [role="curriculum-python"]
@@ -231,68 +180,41 @@ Using an array and a for loop, create such an introduction from measures 1 to 5.
 Here is an example:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Additive Introduction
-#
-# author: The EarSketch Team
-#
-# description: Creating an additive introduction with array iteration
-#
-#
-#
+# Creating an additive introduction with array iteration
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Music
 introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
 
-for measure in range(1, len(introSounds)+1):
-	# we add 1 to len(introSounds) since the second argument of range is exclusive
-	index = measure - 1 # zero-based list index
-	track = measure # change track with measure
-	fitMedia(introSounds[index], track, measure, 5)
-
-# Finish
-finish()
+for measure in range(1, len(introSounds) + 1):
+    # we add 1 to len(introSounds) since the second argument of range is exclusive
+    index = measure - 1  # zero-based list index
+    track = measure  # change track with measure
+    fitMedia(introSounds[index], track, measure, 5)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Additive Introduction
-//
-// author: The EarSketch Team
-//
-// description: Creating an additive introduction with array iteration
-//
-//
-//
+// Creating an additive introduction with array iteration
 
 // Setup
-init();
 setTempo(120);
 
 // Music
 var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
 
-
 for (var measure = 1; measure < introSounds.length + 1; measure++) {
-	// we add 1 to introSounds.length since we want measure to go up to introSounds.length
-	var index = measure - 1; // zero-based array index
-	var track = measure; // change track with measure
-	fitMedia(introSounds[index], track, measure, 5);
+    // we add 1 to introSounds.length since we want measure to go up to introSounds.length
+    var index = measure - 1; // zero-based array index
+    var track = measure; // change track with measure
+    fitMedia(introSounds[index], track, measure, 5);
 }
-
-// Finish
-finish();
 ----
 
 {nbsp} +
@@ -387,21 +309,12 @@ In a new script:
 Here is an example of a solution:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: String and Lists Operations
-#
-# author: The EarSketch Team
-#
-# description: Showing what we can do with lists and strings
-#
-#
+# Showing what we can do with lists and strings
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Creating my beat strings and arrays
@@ -433,29 +346,15 @@ print(stringD)
 # Create and print soundsD, the slice of stringC from the third to the last elements included.
 soundsD = soundsC[2:len(soundsC)]
 print(soundsD)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-// javascript code
-//
-// script_name: String and Arrays Operations
-//
-// author: The EarSketch Team
-//
-// description: Showing what we can do with strings and arrays
-//
-//
+// Showing what we can do with strings and arrays
 
 // Setup
-init()
-setTempo(120)
+setTempo(120);
 
 // Creating my beat strings and arrays
 var stringA = "0+++----0+++--0+";
@@ -472,23 +371,20 @@ println(soundsA[soundsA.length - 1]);
 println(soundsB[soundsB.length - 1]);
 
 // Create and print stringC, the concatenation of stringA and stringB.
-var stringC = stringA + stringB
+var stringC = stringA + stringB;
 println(stringC);
 
 // Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
-var soundsC = (soundsA.concat(soundsB)).concat(soundsA)
+var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
 println(soundsC);
 
 // Create and print stringD, the slice of stringC from the second to the fifth characters included.
-var stringD = stringC.substring(1, 5)
+var stringD = stringC.substring(1, 5);
 println(stringD);
 
 // Create and print soundsD, the slice of stringC from the third to the last elements included.
-var soundsD = soundsC.slice(2, soundsC.length)
+var soundsD = soundsC.slice(2, soundsC.length);
 println(soundsD);
-
-// Finish
-finish();
 ----
 
 This is an example of how you can use string operations with `makeBeat()`:
@@ -502,21 +398,12 @@ video::./videoMedia/013-03-Substrings-PY.mp4[]
 video::./videoMedia/013-03-Substrings-JS.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: String Operations
-#
-# author: The EarSketch Team
-#
-# description: Expand a beat string into a longer beat string.
-#
-#
+# Expand a beat string into a longer beat string.
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Music
@@ -524,53 +411,40 @@ initialBeat = "0+0+00-00+++-0++"
 drumInstr = RD_UK_HOUSE_MAINBEAT_10
 
 def expander(beatString):
-  newBeat = ""
-  for i in range(0, len(beatString)):
-    beatSlice = beatString[0:i]
-    newBeat = newBeat + beatSlice
-  # return the new beat string so it can be used outside the function
-  return newBeat
+    newBeat = ""
+    for i in range(0, len(beatString)):
+        beatSlice = beatString[0:i]
+        newBeat = newBeat + beatSlice
+    # return the new beat string so it can be used outside the function
+    return newBeat
 
 finalBeat = expander(initialBeat)
 print finalBeat
 
 # makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: String Operations
-//
-// author: The EarSketch Team
-//
-// description: Expand a beat string into a longer beat string.
-//
-//
-//
+// Expand a beat string into a longer beat string.
 
 // Setup
-init();
 setTempo(120);
 
 // Music
 var initialBeat = "0+0+00-00+++-0++";
 var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
 
-function expander(beatString){
-  var newBeat = "";
-  for (var i = 0; i < beatString.length; i = i + 1){
-    beatSlice = beatString.substring(0, i);
-    newBeat = newBeat + beatSlice;
-  }
-  // return the new beat string so it can be used outside the function
-  return newBeat;
+function expander(beatString) {
+    var newBeat = "";
+    for (var i = 0; i < beatString.length; i = i + 1) {
+        beatSlice = beatString.substring(0, i);
+        newBeat = newBeat + beatSlice;
+    }
+    // return the new beat string so it can be used outside the function
+    return newBeat;
 }
 
 var finalBeat = expander(initialBeat);
@@ -578,9 +452,6 @@ println(finalBeat);
 
 // makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat);
-
-// Finish
-finish();
 ----
 
 [role="curriculum-python"]
@@ -590,20 +461,12 @@ Finally, `makeBeat()` can handle multiple sound clips at once. This allows you t
 Finally, `makeBeat()` can handle multiple sound clips at once. This allows you to place all the percussive sounds on 1 track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a sound file array. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your sound array. Check out the "before and after" example below, with the "boot cat boot cat" rhythm.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Making a drum set
-#
-# author: The EarSketch Team
-#
-# description: Using lists with makeBeat()
-#
+# Using lists with makeBeat()
 
-# Setup 
+# Setup
 from earsketch import *
-init()
 setTempo(100)
 
 # Before, we had one track for every sound (measure 1):
@@ -618,28 +481,14 @@ makeBeat(snare, 2, 1, snareBeat)
 drums = [OS_KICK05, OS_SNARE01]
 beat = "0+++1+++0+++1+++"
 makeBeat(drums, 1, 3, beat)
-
-# Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Making a drum set
-//
-// author: The EarSketch Team
-//
-// description: Using arrays with makeBeat()
-//
-//
-//
+// Using arrays with makeBeat()
 
 // Setup
-init();
 setTempo(100);
 
 // Music
@@ -655,9 +504,6 @@ makeBeat(snare, 2, 1, snareBeat);
 var drums = [OS_KICK05, OS_SNARE01];
 var beat = "0+++1+++0+++1+++";
 makeBeat(drums, 1, 3, beat);
-
-// Finish
-finish();
 ----
 
 {nbsp} +

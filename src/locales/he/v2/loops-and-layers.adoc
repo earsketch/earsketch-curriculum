@@ -340,30 +340,19 @@ BMW
 *****
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Incrementing
-#
-# author: The EarSketch Team
-#
-# description: Creating an alternating drum beat
-#
+# Creating an alternating drum beat
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 groove1 = HIPHOP_DUSTYGROOVE_011
 groove2 = HIPHOP_DUSTYGROOVE_010
 
 for measure in range(1, 9, 4):
-  fitMedia(groove1, 1, measure, measure + 2)
-  fitMedia(groove2, 2, measure + 2, measure + 4)
-
-finish()
+    fitMedia(groove1, 1, measure, measure + 2)
+    fitMedia(groove2, 2, measure + 2, measure + 4)
 ----
 
 [role="curriculum-javascript"]

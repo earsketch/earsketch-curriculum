@@ -167,18 +167,12 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-# nombre_del_script: Ejemplo Booleano
-#
-# autor: El Equipo de EarSketch
-# descripción: Analizamos el volumen de nuestras pistas
-#
+# Analizamos el volumen de nuestras pistas
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Crear 2 pistas
@@ -198,29 +192,17 @@ print('Tiene la pista 1 mas volumen que la pista 2?')
 print(comparacion1)
 
 # Crear un ciclo for para comparar con 0.01 el volumen de cada pista
-for pista in range (1, 3):
-  volumen = analyzeTrack(pista, RMS_AMPLITUDE)
-  print('Es el número de pista' + str(pista) + 'mayor que 0.01?')
-  print(volumen > 0.01)
-
-# Fin
-finish()
+for pista in range(1, 3):
+    volumen = analyzeTrack(pista, RMS_AMPLITUDE)
+    print('Es el número de pista' + str(pista) + 'mayor que 0.01?')
+    print(volumen > 0.01)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Ejemplo Booleano
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Analizamos el volumen de nuestras pistas.
-//
-//
+// Analizamos el volumen de nuestras pistas.
 // Configuración
-init();
 setTempo(120);
 
 // Crear 2 pistas
@@ -236,19 +218,15 @@ var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
 // Revisar si la pista 1 tiene más volumen que la pista 2
 // Creamos la comparacion1 booleana.
 var comparacion1 = (volumenPista1 > volumenPista2);
-println('Tiene la pista 1 más volumen que la pista 2?');
+println("Tiene la pista 1 más volumen que la pista 2?");
 println(comparacion1);
 
 // Crear un ciclo for para comparar con 0.01 el volumen de cada pista
 for (var pista = 1; pista < 3; pista++) {
-  var volumen = analyzeTrack(pista, RMS_AMPLITUDE);
-  println ('Es el número de pista ' + pista + ' mayor que 0.01?');
-  println (volumen > 0.01);
+    var volumen = analyzeTrack(pista, RMS_AMPLITUDE);
+    println("Es el número de pista " + pista + " mayor que 0.01?");
+    println(volumen > 0.01);
 }
-
-//Fin
-finish();
-
 ----
 
 [role="curriculum-python"]
@@ -265,14 +243,14 @@ Nota: en este ejemplo, usamos algunas declaraciones de impresión con cadenas de
 A continuación, hay un ejemplo de una declaración condicional. Observa sus similitudes con un ciclo for:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 if (condicion):
     # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es True.
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 if (condicion){
     // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es true.
@@ -288,19 +266,11 @@ if (condicion){
 Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python 
-#
-# nombre_del_script: Remezclar 1
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
-#
+# Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Crear 2 pistas
@@ -315,25 +285,15 @@ volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
 if (volumenPista1 > volumenPista2):
-	setEffect(1, VOLUME, GAIN, -10)
-
-# Fin
-finish()
+    setEffect(1, VOLUME, GAIN, -10)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Remezclar 1
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
 
 // Configuración
-init();
 setTempo(120);
 
 // Crear 2 pistas
@@ -346,36 +306,34 @@ fitMedia(melodia2, 2, 1, 9);
 var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
 var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
 
-// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen. 
-if (volumenPista1 > volumenPista2){
-	setEffect(1, VOLUME, GAIN, -10);
+// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+if (volumenPista1 > volumenPista2) {
+    setEffect(1, VOLUME, GAIN, -10);
 }
-
-//Fin
-finish();
 ----
 
 Tal vez nos gustaría revisar varias condiciones y ejecutar otra serie de declaraciones dependiendo de cada condición. Puedes agregar todas las condiciones que quieras. Usamos la siguiente sintaxis:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 if (condicion1):
     # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es True. Si es False, prosigue a la siguiente línea. elif (condicion2):
-	# Escribe aquí las instrucciones si la condicion2 es True. Si la condicion2 es False, prosigue a la siguiente línea. elif (condicion3):
-	# Escribe aquí las instrucciones si la condicion3 es True. Si la condicion3 es False, prosigue a la siguiente línea. else:
-	# Escribe aquí las instrucciones si todas las 3 condiciones son False.
+    # Escribe aquí las instrucciones si la condicion2 es True. Si la condicion2 es False, prosigue a la siguiente línea. elif (condicion3):
+    # Escribe aquí las instrucciones si la condicion3 es True. Si la condicion3 es False, prosigue a la siguiente línea. else:
+    # Escribe aquí las instrucciones si todas las 3 condiciones son False.
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 if (condicion1) {
     // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true. } else if (condicion2) {
-	// # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea. // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
+    // # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea. // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
 } else if (condicion3) {
-	// Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea. } else {
-	// Escribe aquí las instrucciones si todas las 3 condiciones son false.
+    // Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea. } else {
+    // Escribe aquí las instrucciones si todas las 3 condiciones son false.
+}
 ----
 
 [[mixingyourtracks]]
@@ -414,17 +372,12 @@ Vamos a repasar algún vocabulario:
 A continuación, hay un ejemplo de una mezcla automatizada. Podemos decir que está automatizada porque, si cambias un sonido o más, no tienes que revisar y modificar manualmente su volumen cada vez que lo hagas porque el proceso ya está incluido en el código.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-# nombre_del_script: Mezclar
-#
-# autor: El Equipo de EarSketch
-# descripción: Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
-#
+# Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
+
 # Configuarción
 from earsketch import *
-init()
 setTempo(120)
 
 # Añadir una melodía y un bajo
@@ -444,50 +397,38 @@ ritmoBombo = '0---0-----0-0---'
 ritmoRedoblante = '--0-0------000-'
 sonidoBombo = OS_KICK02
 sonidoRedoblante = OS_SNARE06
-for compas in range (5, 17):
-  makeBeat(ritmoBombo, 4, compas, ritmoBombo)
-  makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante)
+for compas in range(5, 17):
+    makeBeat(ritmoBombo, 4, compas, ritmoBombo)
+    makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante)
 
 # Mezclar mis pistas
 # Primero, analizamos el volumen de las pistas.
 volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-print('El volumen de la pista 1 es'+str(volumenPista1))
+print('El volumen de la pista 1 es' + str(volumenPista1))
 volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-print('El volumen de la pista 2 es'+str(volumenPista2))
+print('El volumen de la pista 2 es' + str(volumenPista2))
 volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
-print('El volumen de la pista 3 es'+str(volumenPista3))
+print('El volumen de la pista 3 es' + str(volumenPista3))
 
 if (volumenPista1 < volumenPista2):
-  #Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
-  setEffect(1, VOLUME, GAIN, +5)
-  print ('la pista 1 tuvo menos volumen que la pista 2')
+    # Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5)
+    print('la pista 1 tuvo menos volumen que la pista 2')
 elif (volumenPista1 < volumenPista3):
-  #Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
-  setEffect(1, VOLUME, GAIN, +5)
-  print ('la pista 1 tuvo menos volumen que la pista 3')
-else: 
-  #Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
-  print('la pista 1 ya tenía el volumen más alto')
-
-
-# Fin
-finish()
+    # Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5)
+    print('la pista 1 tuvo menos volumen que la pista 3')
+else:
+    # Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
+    print('la pista 1 ya tenía el volumen más alto')
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-// código javascript 
-// nombre_del_script: Mezclar
-//
-// autor: El Equipo de EarSketch
-// descripción: Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
-//
+// Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
 
 // Configuración
-init();
 setTempo(120);
 
 // Añadir una melodía y un bajo
@@ -503,40 +444,36 @@ fitMedia(bajo2, 2, 9, 17);
 fitMedia(cuerdas, 3, 9, 17);
 
 // Añadir percusiones usando makeBeat()
-var ritmoBombo = '0---0-----0-0---';
-var ritmoRedoblante = '--0-0------000-';
+var ritmoBombo = "0---0-----0-0---";
+var ritmoRedoblante = "--0-0------000-";
 var sonidoBombo = OS_KICK02;
 var sonidoRedoblante = OS_SNARE06;
-for (var compas=5; compas>17; compas ++){
-  makeBeat(sonidoBombo, 4, compas, ritmoBombo);
-  makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante);
+for (var compas = 5; compas > 17; compas++) {
+    makeBeat(sonidoBombo, 4, compas, ritmoBombo);
+    makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante);
 }
-
 
 // Mezclar mis pistas
 // Primero, analizamos el volumen de las pistas.
-var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-println('El volumen de la pista 1 es'+volumenPista1)
-var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-println('El volumen de la pista 2 es'+volumenPista2)
-var volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
-println('El volumen de la pista 3 es'+volumenPista3)
+var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
+println("El volumen de la pista 1 es" + volumenPista1);
+var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
+println("El volumen de la pista 2 es" + volumenPista2);
+var volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE);
+println("El volumen de la pista 3 es" + volumenPista3);
 
-if (volumenPista1 < volumenPista2){
-  //Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
-  setEffect(1, VOLUME, GAIN, +5);
-  println ('la pista 1 tuvo menos volumen que la pista 2');
-} else if (volumenPista1 < volumenPista3){
-  // Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
-  setEffect(1, VOLUME, GAIN, +5);
-  println ('la pista 1 tuvo menos volumen que la pista 3');
-} else { 
-  // Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
-  println('la pista 1 ya tenía el volumen más alto');
+if (volumenPista1 < volumenPista2) {
+    // Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5);
+    println("la pista 1 tuvo menos volumen que la pista 2");
+} else if (volumenPista1 < volumenPista3) {
+    // Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5);
+    println("la pista 1 tuvo menos volumen que la pista 3");
+} else {
+    // Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
+    println("la pista 1 ya tenía el volumen más alto");
 }
-
-// Fin
-finish();
 ----
 
 {nbsp} +

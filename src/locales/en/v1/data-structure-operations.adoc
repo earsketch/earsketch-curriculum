@@ -36,75 +36,50 @@ The example below creates a beat that dynamically changes. Notice `makeBeat()` '
 The example below creates a beat that dynamically changes. Notice `makeBeat()`'s beat string contains numbers other than 0; it is accessing different indices of the `drumSounds` array. Every four measures, the last element of `drumSounds` is moved to the beginning of the array, so `makeBeat()`'s output changes. This is achieved by slicing two arrays from `drumSounds`, `lastSound` and `allButLastSound`. The last element of the `drumSounds` array is sliced by using a starting index of `drumSounds.length - 1` and an ending index of `drumSounds.length`. The `lastSound` array is then concatenated to the front of the `allButLastSound` array, to make a new version of `drumSounds`. The _if_ statement condition `measure % 4 === 0` means this switch will only happen every 4 measures (when the value of `measure` divided by 4 has no remainder).
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: List Operations
-#
-# author: The EarSketch Team
-#
-# description: Using list operations to change our drum sounds every four measures
-#
-#
+# Using list operations to change our drum sounds every four measures
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 drumSounds = [OS_CLAP01, OS_CLOSEDHAT01, OS_COWBELL01, OS_KICK01, OS_LOWTOM01, OS_SNARE01]
 beatString = "5-5132-034550011"
 
 for measure in range(1, 33):
-	makeBeat(drumSounds, 1, measure, beatString)
-	if (measure % 4 == 0): # Only True at every fourth measure
-		# rotate list items so last item moves to first slot
-		listLength = len(drumSounds)
-		lastSound = drumSounds[listLength-1:listLength]
-		allButLastSound = drumSounds[0:listLength-1]
-		drumSounds = lastSound + allButLastSound
-
-#Finish
-finish()
+    makeBeat(drumSounds, 1, measure, beatString)
+    if (measure % 4 == 0):  # Only True at every fourth measure
+        # rotate list items so last item moves to first slot
+        listLength = len(drumSounds)
+        lastSound = drumSounds[listLength - 1:listLength]
+        allButLastSound = drumSounds[0:listLength - 1]
+        drumSounds = lastSound + allButLastSound
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Array Operations
-//
-// author: The EarSketch Team
-//
-// description: Using array operations to change our drum sounds every four measures
-//
-//
-//
+// Using array operations to change our drum sounds every four measures
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var drumSounds = [OS_CLAP01, OS_CLOSEDHAT01, OS_COWBELL01, OS_KICK01, OS_LOWTOM01, OS_SNARE01];
 var beatString = "5-5132-034550011";
 
 for (var measure = 1; measure < 33; measure++) {
-	makeBeat(drumSounds, 1, measure, beatString);
-	if (measure % 4 == 0) { // Only true at every 4th measure
-		// rotate array items so last item moves to first slot
-		var arrLength = drumSounds.length;
-		var lastSound = drumSounds.slice(arrLength - 1, arrLength);
-		var allButLastSound = drumSounds.slice(0, arrLength - 1);
-		drumSounds = lastSound.concat(allButLastSound);
-	}
+    makeBeat(drumSounds, 1, measure, beatString);
+    if (measure % 4 == 0) { // Only true at every 4th measure
+        // rotate array items so last item moves to first slot
+        var arrLength = drumSounds.length;
+        var lastSound = drumSounds.slice(arrLength - 1, arrLength);
+        var allButLastSound = drumSounds.slice(0, arrLength - 1);
+        drumSounds = lastSound.concat(allButLastSound);
+    }
 }
-
-//Finish
-finish();
 ----
 
 [[chapter19summary]]

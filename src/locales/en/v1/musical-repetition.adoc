@@ -44,25 +44,15 @@ video::./videoMedia/014-03-AdvancedTransitionTechniques-PY.mp4[]
 video::./videoMedia/014-03-AdvancedTransitionTechniques-JS.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Advanced Transition Techniques - Looping
-#
-# author: The EarSketch Team
-#
-# description: Transitioning between sections by looping the lead line
-#
-#
-#
+# Transitioning between sections by looping the lead line
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(140)
 
-#Music
+# Music
 beat1 = "0---0+0---0-0+++"
 drum = RD_FUTURE_DUBSTEP_MAINBEAT_11
 lead = RD_FUTURE_DUBSTEP_LEADSYNTH_10
@@ -75,84 +65,71 @@ subBass = RD_FUTURE_DUBSTEP_SUBBASS_4
 
 # define a custom function to use for looping with different step sizes
 def easyLoops(startMeasure, numSteps, startString):
-  endString = ""
-  for i in range(numSteps):
-    endString += startString
-  makeBeat(lead, 1, startMeasure, endString)
+    endString = ""
+    for i in range(numSteps):
+        endString += startString
+    makeBeat(lead, 1, startMeasure, endString)
 
 # define function for first section of music
 def section1(startMeasure, endMeasure):
-  # drums
-  fitMedia(drum, 2, startMeasure, endMeasure)
-  # lead
-  for measure in range (2, 9, 2):
-    fitMedia(lead, 1, measure, measure + 1)
-  fitMedia(lead, 1, 9, 13)
+    # drums
+    fitMedia(drum, 2, startMeasure, endMeasure)
+    # lead
+    for measure in range(2, 9, 2):
+        fitMedia(lead, 1, measure, measure + 1)
+    fitMedia(lead, 1, 9, 13)
 
 # define a function for four-measure transition
 def transition(startMeasure):
-  easyLoops(startMeasure, 4, "0+++++++")
-  easyLoops(startMeasure+2, 4, "0+++")
-  easyLoops(startMeasure+3, 4, "0+")
-  easyLoops(startMeasure+3.5, 8, "0")
-  fitMedia(swoosh, 3, startMeasure+2, startMeasure+4)
+    easyLoops(startMeasure, 4, "0+++++++")
+    easyLoops(startMeasure + 2, 4, "0+++")
+    easyLoops(startMeasure + 3, 4, "0+")
+    easyLoops(startMeasure + 3.5, 8, "0")
+    fitMedia(swoosh, 3, startMeasure + 2, startMeasure + 4)
 
 # define a function for second section of music
 def section2(startMeasure, endMeasure):
-  # drums
-  for measure in range (startMeasure, endMeasure):
-	  makeBeat(drum, 2, measure, beat1)
-  # bass
-  fitMedia(subBass, 4, startMeasure, endMeasure)
-  # lead
-  fitMedia(lead2, 1, startMeasure, 21)
-  for measure in range(21, 23):
-	  makeBeat(lead2, 1, measure, "0-000+++++++++++")
-  makeBeat(lead2, 1, 23, "0-000+++++++++++++++++++++++++++")
-  fitMedia(lead2, 1, 25, 29)
-  for measure in range(29, endMeasure):
-  	makeBeat(lead2, 1, measure, beat1) # switch with drum beat for last phrase
-  # placing dubstep wobbles
-  fitMedia(wobble1, 5, 20.5, 21)
-  fitMedia(wobble1, 5, 24.5, 25)
-  fitMedia(wobble1, 5, 28.5, 29)
-  makeBeat(wobble1, 5, 26.5, "0+--0+")
-  makeBeat(wobble1, 5, 30.5, "0+--0+")
+    # drums
+    for measure in range(startMeasure, endMeasure):
+        makeBeat(drum, 2, measure, beat1)
+    # bass
+    fitMedia(subBass, 4, startMeasure, endMeasure)
+    # lead
+    fitMedia(lead2, 1, startMeasure, 21)
+    for measure in range(21, 23):
+        makeBeat(lead2, 1, measure, "0-000+++++++++++")
+    makeBeat(lead2, 1, 23, "0-000+++++++++++++++++++++++++++")
+    fitMedia(lead2, 1, 25, 29)
+    for measure in range(29, endMeasure):
+        makeBeat(lead2, 1, measure, beat1)  # switch with drum beat for last phrase
+    # placing dubstep wobbles
+    fitMedia(wobble1, 5, 20.5, 21)
+    fitMedia(wobble1, 5, 24.5, 25)
+    fitMedia(wobble1, 5, 28.5, 29)
+    makeBeat(wobble1, 5, 26.5, "0+--0+")
+    makeBeat(wobble1, 5, 30.5, "0+--0+")
 
 # Function calls
-section1(1,17)
+section1(1, 17)
 transition(13)
 section2(17, 32)
-fitMedia(wobble1, 5, 32, 33) # End with longer a dubstep wobble
+fitMedia(wobble1, 5, 32, 33)  # End with longer a dubstep wobble
 
-#Effects
-setEffect(3, VOLUME, GAIN, -9) # dropping swoosh volume
-setEffect(2, VOLUME, GAIN, -6) # drop drum volume slightly
-setEffect(2, FILTER, FILTER_FREQ, 750, 1, 10000, 5) # filter envelope to bring drums in subtly
-
-#Finish
-finish()
+# Effects
+setEffect(3, VOLUME, GAIN, -9)  # dropping swoosh volume
+setEffect(2, VOLUME, GAIN, -6)  # drop drum volume slightly
+setEffect(2, FILTER, FILTER_FREQ, 750, 1, 10000, 5)  # filter envelope to bring drums in subtly
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Advanced Transition Techniques - Looping
-//
-// author: The EarSketch Team
-//
-// description: Transitioning between sections by looping the lead line
-//
-//
-//
+// Transitioning between sections by looping the lead line
 
-//Setup
-init();
+// Setup
 setTempo(140);
 
-//Music
+// Music
 var beat1 = "0---0+0---0-0+++";
 var drum = RD_FUTURE_DUBSTEP_MAINBEAT_11;
 var lead = RD_FUTURE_DUBSTEP_LEADSYNTH_10;
@@ -164,60 +141,60 @@ var subBass = RD_FUTURE_DUBSTEP_SUBBASS_4;
 // Custom Functions
 
 // define a custom function to use for looping with different step sizes
-function easyLoops(startMeasure, endMeasure, step){
-  for (var measure = startMeasure; measure < endMeasure; measure += step){
-   fitMedia(lead, 1, measure, measure + step);
-  }
+function easyLoops(startMeasure, endMeasure, step) {
+    for (var measure = startMeasure; measure < endMeasure; measure += step) {
+        fitMedia(lead, 1, measure, measure + step);
+    }
 }
 // define function for first section of music
-function section1(startMeasure, endMeasure){
-  // drums
-  fitMedia(drum, 2, startMeasure, endMeasure);
-  // lead
-  for (var measure = 2; measure < 9; measure += 2){
-    fitMedia(lead, 1, measure, measure + 1);
-  }
-  fitMedia(lead, 1, 9, 13);
+function section1(startMeasure, endMeasure) {
+    // drums
+    fitMedia(drum, 2, startMeasure, endMeasure);
+    // lead
+    for (var measure = 2; measure < 9; measure += 2) {
+        fitMedia(lead, 1, measure, measure + 1);
+    }
+    fitMedia(lead, 1, 9, 13);
 }
 
 // define a function for four-measure transition
-function transition(startMeasure){
-  easyLoops(startMeasure, startMeasure+2, 0.5);
-  easyLoops(startMeasure+2, startMeasure+3, 0.25);
-  easyLoops(startMeasure+3, startMeasure+3.5, 0.125);
-  easyLoops(startMeasure+3.5, startMeasure+4, 0.0625);
-  fitMedia(swoosh, 3, startMeasure+2, startMeasure+4);
+function transition(startMeasure) {
+    easyLoops(startMeasure, startMeasure + 2, 0.5);
+    easyLoops(startMeasure + 2, startMeasure + 3, 0.25);
+    easyLoops(startMeasure + 3, startMeasure + 3.5, 0.125);
+    easyLoops(startMeasure + 3.5, startMeasure + 4, 0.0625);
+    fitMedia(swoosh, 3, startMeasure + 2, startMeasure + 4);
 }
 
 // define a function for second set of music
-function section2(startMeasure, endMeasure){
-  // drums
-  for (var measure = startMeasure; measure < endMeasure; measure++){
-	  makeBeat(drum, 2, measure, beat1);
-  }
-  // bass
-  fitMedia(subBass, 4, startMeasure, endMeasure);
-  // lead
-  fitMedia(lead2, 1, startMeasure, 21);
-  for (var measure = 21; measure < 23; measure++){
-	  makeBeat(lead2, 1, measure, "0-000+++++++++++");
-  }
-  makeBeat(lead2, 1, 23, "0-000+++++++++++++++++++++++++++");
-  fitMedia(lead2, 1, 25, 29);
-  for (var measure = 29; measure < endMeasure; measure++){
-  	makeBeat(lead2, 1, measure, beat1); // switch with drum beat for last phrase
-  }
-  // wobbles
-  for (var measure = 20.5; measure < 29; measure += 4){
-    fitMedia(wobble1, 5, measure, measure + 0.5);
-  }
-  for (var measure = 26.5; measure <= 30.5; measure += 4){
-    makeBeat(wobble1, 5, measure, "0+--0+");
-  }
+function section2(startMeasure, endMeasure) {
+    // drums
+    for (var measure = startMeasure; measure < endMeasure; measure++) {
+        makeBeat(drum, 2, measure, beat1);
+    }
+    // bass
+    fitMedia(subBass, 4, startMeasure, endMeasure);
+    // lead
+    fitMedia(lead2, 1, startMeasure, 21);
+    for (var measure = 21; measure < 23; measure++) {
+        makeBeat(lead2, 1, measure, "0-000+++++++++++");
+    }
+    makeBeat(lead2, 1, 23, "0-000+++++++++++++++++++++++++++");
+    fitMedia(lead2, 1, 25, 29);
+    for (var measure = 29; measure < endMeasure; measure++) {
+        makeBeat(lead2, 1, measure, beat1); // switch with drum beat for last phrase
+    }
+    // wobbles
+    for (var measure = 20.5; measure < 29; measure += 4) {
+        fitMedia(wobble1, 5, measure, measure + 0.5);
+    }
+    for (var measure = 26.5; measure <= 30.5; measure += 4) {
+        makeBeat(wobble1, 5, measure, "0+--0+");
+    }
 }
 
-//Function calls
-section1(1,17);
+// Function calls
+section1(1, 17);
 transition(13);
 section2(17, 32);
 fitMedia(wobble1, 5, 32, 33); // End with longer a dubstep wobble
@@ -226,9 +203,6 @@ fitMedia(wobble1, 5, 32, 33); // End with longer a dubstep wobble
 setEffect(3, VOLUME, GAIN, -9); // dropping swoosh volume
 setEffect(2, VOLUME, GAIN, -6); // drop drum volume slightly
 setEffect(2, FILTER, FILTER_FREQ, 750, 1, 10000, 5); // filter envelope to bring drums in subtly
-
-//Finish
-finish();
 ----
 
 To implement an anacrusis, we need to use a new EarSketch API function, `insertMediaSection()`. This function is similar to `fitMedia()`, but allows us to place partial segments of a sound clip. The five arguments for `insertMediaSection()` are listed below, in order:
@@ -242,25 +216,15 @@ To implement an anacrusis, we need to use a new EarSketch API function, `insertM
 In the example below, we create an anacrusis by bringing in the main melody a measure early. However, using the first 4 beats of the clip would sound strange; we want to use the last 4 beats. RD_TRAP_ARPBLEEPLEAD_5 is a 4-measure clip, spanning measures 1 to 5 if placed at the beginning of a song. To specify the last 4 beats (or last measure) of the clip for `insertMediaSection()`, 4 and 5 are used for the start location and end location, respectively.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Advanced Transition Techniques - Anacrusis
-#
-# author: The EarSketch Team
-#
-# description: Transitioning between sections using an anacrusis
-#
-#
-#
+# Transitioning between sections using an anacrusis
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 chords1 = HOUSE_DEEP_CRYSTALCHORD_001
 chords2 = HOUSE_DEEP_CRYSTALCHORD_002
 chords3 = HOUSE_DEEP_CRYSTALCHORD_003
@@ -276,8 +240,8 @@ riser = HOUSE_SFX_WHOOSH_007
 
 # Custom Functions
 def chordProg(clip, startMeasure):
-  for measure in range (startMeasure, 8, 4):
-    fitMedia(clip, 1, measure, measure + 1)
+    for measure in range(startMeasure, 8, 4):
+        fitMedia(clip, 1, measure, measure + 1)
 
 # Section 1
 # chords
@@ -288,16 +252,16 @@ chordProg(chords4, 4)
 # beat
 fitMedia(beat1, 2, 1, 8)
 # bass
-for measure in range (1, 8):
-  makeBeat(bass, 3, measure, "0+++++++0++0++0+")
+for measure in range(1, 8):
+    makeBeat(bass, 3, measure, "0+++++++0++0++0+")
 # lead
 fitMedia(lead1, 4, 1, 8)
 
 # Transition
-insertMediaSection(lead2, 5, 8, 4, 5) # placing the last measure (4 beats) of this clip
-fitMedia(riser, 5, 7, 8) # partial riser
+insertMediaSection(lead2, 5, 8, 4, 5)  # placing the last measure (4 beats) of this clip
+fitMedia(riser, 5, 7, 8)  # partial riser
 
-#Section 2
+# Section 2
 # lead
 fitMedia(lead2, 1, 9, 17)
 fitMedia(lead3, 6, 9, 17)
@@ -305,35 +269,22 @@ fitMedia(lead3, 6, 9, 17)
 fitMedia(beat2, 2, 9, 17)
 # bass on off-beat
 for measure in range(9, 17):
-  makeBeat(bass2, 3, measure, "--0+--0+--0+--0+")
+    makeBeat(bass2, 3, measure, "--0+--0+--0+--0+")
 
-#Effects
+# Effects
 setEffect(4, VOLUME, GAIN, -18)
 setEffect(6, VOLUME, GAIN, -10)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Advanced Transition Techniques - Anacrusis
-//
-// author: The EarSketch Team
-//
-// description: Transition between sections using an anacrusis
-//
-//
-//
+// Transition between sections using an anacrusis
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 var chords1 = HOUSE_DEEP_CRYSTALCHORD_001;
 var chords2 = HOUSE_DEEP_CRYSTALCHORD_002;
 var chords3 = HOUSE_DEEP_CRYSTALCHORD_003;
@@ -348,10 +299,10 @@ var beat2 = HOUSE_MAIN_BEAT_009;
 var riser = HOUSE_SFX_WHOOSH_007;
 
 // Custom Functions
-function chordProg(clip, startMeasure){
-  for (var measure = startMeasure; measure < 8; measure += 4){
-    fitMedia(clip, 1, measure, measure + 1);
-  }
+function chordProg(clip, startMeasure) {
+    for (var measure = startMeasure; measure < 8; measure += 4) {
+        fitMedia(clip, 1, measure, measure + 1);
+    }
 }
 
 // Section 1
@@ -363,8 +314,8 @@ chordProg(chords4, 4);
 // beat
 fitMedia(beat1, 2, 1, 8);
 // bass
-for(var measure = 1; measure < 8; measure++){
-  makeBeat(bass, 3, measure, "0+++++++0++0++0+");
+for (var measure = 1; measure < 8; measure++) {
+    makeBeat(bass, 3, measure, "0+++++++0++0++0+");
 }
 // lead
 fitMedia(lead1, 4, 1, 8);
@@ -373,23 +324,20 @@ fitMedia(lead1, 4, 1, 8);
 insertMediaSection(lead2, 5, 8, 4, 5); // placing the last measure (4 beats) of this clip
 fitMedia(riser, 5, 7, 8); // partial riser
 
-//Section 2
-//lead
-fitMedia(lead2, 1, 9, 17)
-fitMedia(lead3, 6, 9, 17)
-//beat
-fitMedia(beat2, 2, 9, 17)
-//bass on off-beat
-for(var measure = 9; measure < 17; measure++){
-  makeBeat(bass2, 3, measure, "--0+--0+--0+--0+");
+// Section 2
+// lead
+fitMedia(lead2, 1, 9, 17);
+fitMedia(lead3, 6, 9, 17);
+// beat
+fitMedia(beat2, 2, 9, 17);
+// bass on off-beat
+for (var measure = 9; measure < 17; measure++) {
+    makeBeat(bass2, 3, measure, "--0+--0+--0+--0+");
 }
 
-//Effects
+// Effects
 setEffect(4, VOLUME, GAIN, -18);
 setEffect(6, VOLUME, GAIN, -10);
-
-//Finish
-finish();
 ----
 
 [role="curriculum-javascript"]

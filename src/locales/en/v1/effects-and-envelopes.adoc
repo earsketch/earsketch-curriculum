@@ -31,58 +31,32 @@ The `setEffect()` function takes a variable number of arguments. Its full set of
 The last five parameters are *optional parameters*; if left unspecified, they are set to the default value. In the previous chapter we used `setEffect()` 's first four parameters (the remaining set to the default value) to apply an effect to an entire track. We will need to use all of `setEffect()` 's parameters to create envelopes. Each `setEffect()` call takes two value-time pairs: {effectStartValue, effectStartLocation}; {effectEndValue, effectEndLocation}. The following example creates a volume ramp by calling `setEffect()` with all seven arguments.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Envelopes
-#
-# author: The EarSketch Team
-#
-# description: Making envelopes with 7 parameter setEffect()
-#
-#
-#
+# Making envelopes with 7 parameter setEffect()
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 # Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Envelopes
-//
-// author: The EarSketch Team
-//
-// description: Making envelopes with 7 parameter setEffect()
-//
-//
-//
+// Making envelopes with 7 parameter setEffect()
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 // Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
-
-//Finish
-finish();
 ----
 
 [[moreeffects]]
@@ -103,25 +77,15 @@ In the next example, we use `VOLUME` and `FILTER` with a series of time points t
 video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Complex Envelopes
-#
-# author: The EarSketch Team
-#
-# description: Using multiple setEffect calls on a track to make changes in the effect envelope.
-#
-#
-#
+# Using multiple setEffect calls on a track to make changes in the effect envelope.
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Envelope time points (in measures)
@@ -132,39 +96,26 @@ pointD = 7
 pointE = 8.5
 pointF = 9
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB) # first effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB)  # first effect, filter sweep
 
 # second effect, volume changes
 setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC)  # crescendo
 setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF) # end of fade out
-
-#Finish
-finish()
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF)  # end of fade out
 ----
 
 [role="curriculum-javascript curriculum-mp4"]
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Complex Envelopes
-//
-// author: The EarSketch Team
-//
-// description: Using multiple setEffect calls on a track to make changes in the effect envelope.
-//
-//
-//
+// Using multiple setEffect calls on a track to make changes in the effect envelope.
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Envelope time points
@@ -178,12 +129,9 @@ var pointF = 9;
 setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // first effect, filter sweep
 
 // second effect, volume changes
-setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC);  // crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE);  // begin fade out
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // crescendo
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // begin fade out
 setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // end of fade out
-
-//Finish
-finish();
 ----
 
 *Reverb* is an effect in which a sound persists after it is initially played. Similar to delay, reverb creates a slowly decaying ambiance. It typically gives a sound a sense of space. The `REVERB` effect has parameters to control the decay time and amount of the effect present, `REVERB_DECAY` and `MIX`, respectively.

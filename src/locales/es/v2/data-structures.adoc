@@ -19,7 +19,7 @@ Si tienes listas muy largas de variables de sonido, puedes organizarlas eficient
 Si tienes listas muy largas de variables de sonido, puedes organizarlas eficientemente usando *listas*. Un *arreglo* (_array_), también llamado lista en algunos lenguajes de programación, es una colección de valores, o *elementos*, entre corchetes (`[]`) y separada por comas. Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 # En vez de escribir esto:
 bombo = OS_KICK03
@@ -31,7 +31,7 @@ bateria = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 // En vez de escribir esto:
 var bombo = OS_KICK03;
@@ -57,22 +57,12 @@ Entonces, usando 3 llamadas a `fitMedia()`, coloca los 3 clips en las pistas (tr
 Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Listas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear una lista que contiene varios clips de audio
-#
-#
-#
+# Cómo crear una lista que contiene varios clips de audio
 
 # Configuración
 from earsketch import *
-init()
 setTempo(130)
 
 # Música
@@ -81,30 +71,17 @@ setTempo(130)
 miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
 # Colocar los sonidos en los compases 1 al 5
-fitMedia(miConjunto[0], 1, 1, 5) # Acceder al índice 0
-fitMedia(miConjunto[1], 2, 1, 5) # Acceder al índice 1
-fitMedia(miConjunto[2], 3, 1, 5) # Acceder al índice 2
-
-# Fin
-finish()
+fitMedia(miConjunto[0], 1, 1, 5)  # Acceder al índice 0
+fitMedia(miConjunto[1], 2, 1, 5)  # Acceder al índice 1
+fitMedia(miConjunto[2], 3, 1, 5)  # Acceder al índice 2
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Arreglos
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear un arreglo que contiene varios clips de audio
-//
-//
-//
+// Cómo crear un arreglo que contiene varios clips de audio
 
 // Configuración
-init();
 setTempo(130);
 
 // Música
@@ -116,9 +93,6 @@ var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD
 fitMedia(miConjunto[0], 1, 1, 5); // Acceder al índice 0
 fitMedia(miConjunto[1], 2, 1, 5); // Acceder al índice 1
 fitMedia(miConjunto[2], 3, 1, 5); // Acceder al índice 2
-
-// Fin
-finish();
 ----
 
 //.The EarSketch Share window for collaboration (Let Others Edit)
@@ -142,21 +116,12 @@ El número de índice tiene que empezar en `0` mientras tu número de pista empi
 A continuación, hay un ejemplo. Puedes mirar la consola para ver qué se imprime cuando ejecutes el código.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Iterar a través de las listas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
-#
-#
+# Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
 
 # Configuración
 from earsketch import *
-init()
 setTempo(130)
 
 # Música
@@ -165,47 +130,31 @@ setTempo(130)
 miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
 # Recorrer los elementos de la lista
-for pista in range (1,4):
-	indice = pista-1
-	fitMedia(miConjunto[indice], pista, 1, 5)
-	print ("en esta iteracion, pista = " + str(pista) + " e indice = "+ str(indice))
-
-# Fin
-finish()
+for pista in range(1, 4):
+    indice = pista - 1
+    fitMedia(miConjunto[indice], pista, 1, 5)
+    print("en esta iteracion, pista = " + str(pista) + " e indice = " + str(indice))
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// código javascript
-//
-// nombre_del_script: Iterar a través de arreglos
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
-//
-//
+// Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
 
 // Configuración
-init();
 setTempo(130);
 
-//Música
+// Música
 
 // Crear un arreglo de clips
 var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
 // Recorrer los elementos del arreglo
-for (var pista = 1; pista<4; pista++){
-	var indice = pista-1;
-	fitMedia(miConjunto[indice], pista, 1, 5);
-	println ("en esta iteracion, pista = " + pista + " y indice = "+ indice);
+for (var pista = 1; pista < 4; pista++) {
+    var indice = pista - 1;
+    fitMedia(miConjunto[indice], pista, 1, 5);
+    println("en esta iteracion, pista = " + pista + " y indice = " + indice);
 }
-
-//Fin
-finish();
 ----
 
 [role="curriculum-python"]
@@ -233,68 +182,41 @@ Usando un arreglo y un ciclo for, crea este tipo de introducción de los compase
 Aquí hay un ejemplo:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Introducción aditiva
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear una introducción aditiva usando la iteración de arreglo
-#
-#
-#
+# Cómo crear una introducción aditiva usando la iteración de arreglo
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Música
+# Música
 sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
 
-for compas in range (1, len(sonidosIntroductorios)+1):
-	# Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo.
-	indice = compas - 1 # El índice de lista comienza en cero.
-	pista = compas # Cambia la pista con el compás.
-	fitMedia(sonidosIntroductorios[indice], pista, compas, 5)
-
-#Fin
-finish()
+for compas in range(1, len(sonidosIntroductorios) + 1):
+    # Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo.
+    indice = compas - 1  # El índice de lista comienza en cero.
+    pista = compas  # Cambia la pista con el compás.
+    fitMedia(sonidosIntroductorios[indice], pista, compas, 5)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Introducción aditiva
-//
-// autor: El Equipo de Earsketch
-//
-// descripción: Cómo crear una introducción aditiva usando la iteración de arreglo
-//
-//
-//
+// Cómo crear una introducción aditiva usando la iteración de arreglo
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Música
+// Música
 var sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
 
-
 for (var compas = 1; compas < sonidosIntroductorios.length + 1; compas++) {
-	// Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length.
-	var indice = compas - 1; // El índice de lista comienza en cero.
-	var pista = compas; // Cambia la pista con compas.
-	fitMedia(sonidosIntroductorios[indice], pista, compas, 5);
+    // Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length.
+    var indice = compas - 1; // El índice de lista comienza en cero.
+    var pista = compas; // Cambia la pista con compas.
+    fitMedia(sonidosIntroductorios[indice], pista, compas, 5);
 }
-
-//Fin
-finish();
 ----
 
 {nbsp} +
@@ -386,20 +308,11 @@ En un nuevo script:
 Aquí está un ejemplo de una solución:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Operaciones de cadenas y listas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Mostrar lo que podemos hacer con listas y cadenas
-#
-#
-#
+# Mostrar lo que podemos hacer con listas y cadenas
 
-#Configuración
+# Configuración
 from earsketch import *
 init()
 setTempo(120)
@@ -434,28 +347,17 @@ print(cadenaD)
 sonidosD = sonidosC[2:len(sonidosC)]
 print(sonidosD)
 
-#Fin
+# Fin
 finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-// código javascript
-//
-// nombre_del_script: Operaciones de cadenas y arreglos
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Mostrar lo que podemos hacer con listas y arreglos
-//
-//
+// Mostrar lo que podemos hacer con listas y arreglos
 
 // Configuración
-init()
-setTempo(120)
+setTempo(120);
 
 // Crear mis cadenas de tiempos y arreglos
 var cadenaA = "0+++----0+++--0+";
@@ -475,26 +377,23 @@ println(sonidosB[sonidosB.length - 1]);
 
 // Crea e imprime cadenaC, la concatenación de cadenaA y cadenaB.
 
-var cadenaC = cadenaA + cadenaB
+var cadenaC = cadenaA + cadenaB;
 println(cadenaC);
 
 // Crea e imprime sonidosC, la concatenación de tus sonidosA, sonidosB y sonidosA otra vez.
 
-var sonidosC = (sonidosA.concat(sonidosB)).concat(sonidosA)
+var sonidosC = (sonidosA.concat(sonidosB)).concat(sonidosA);
 println(sonidosC);
 
 // Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
 
-var cadenaD = cadenaC.substring(1, 5)
+var cadenaD = cadenaC.substring(1, 5);
 println(cadenaD);
 
 // Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
 
-var sonidosD = sonidosC.slice(2, sonidosC.length)
+var sonidosD = sonidosC.slice(2, sonidosC.length);
 println(sonidosD);
-
-// Fin
-finish();
 ----
 
 Éste es un ejemplo de cómo se puede usar operaciones de cadenas con `makeBeat()`:
@@ -508,21 +407,12 @@ video::./videoMedia/013-03-Substrings-PY.mp4[]
 video::./videoMedia/013-03-Substrings-JS.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Operaciones de cadenas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Expandir una cadena de tiempos a una cadena de tiempos más larga
-#
-#
+# Expandir una cadena de tiempos a una cadena de tiempos más larga
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
@@ -530,54 +420,40 @@ ritmoInicial = "0+0+00-00+++-0++"
 instrBateria = RD_UK_HOUSE_MAINBEAT_10
 
 def expansor(cadenaDeTiempos):
-  nuevoRitmo = ""
-  for i in range(0, len(cadenaDeTiempos)):
-    porcionDelRitmo = cadenaDeTiempos[0: i]
-    nuevoRitmo = nuevoRitmo + porcionDelRitmo
-  # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
-  return nuevoRitmo
+    nuevoRitmo = ""
+    for i in range(0, len(cadenaDeTiempos)):
+        porcionDelRitmo = cadenaDeTiempos[0: i]
+        nuevoRitmo = nuevoRitmo + porcionDelRitmo
+    # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
+    return nuevoRitmo
 
 ritmoFinal = expansor(ritmoInicial)
 print ritmoFinal
 
 # makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
 makeBeat(instrBateria, 1, 1, ritmoFinal)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Operaciones de cadenas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Expandir una cadena de tiempos en una cadena de tiempos más larga
-
-//
-//
-//
+// Expandir una cadena de tiempos en una cadena de tiempos más larga
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
 var ritmoInicial = "0+0+00-00+++-0++";
 var instrBateria = RD_UK_HOUSE_MAINBEAT_10;
 
-function expansor(cadenaDeTiempos){
-  var nuevoRitmo = "";
-  for (var i = 0; i < cadenaDeTiempos.length; i = i + 1){
-    porcionDelRitmo = cadenaDeTiempos.substring(0, i);
-    nuevoRitmo = nuevoRitmo + porcionDelRitmo;
-  }
-  // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
-  return nuevoRitmo;
+function expansor(cadenaDeTiempos) {
+    var nuevoRitmo = "";
+    for (var i = 0; i < cadenaDeTiempos.length; i = i + 1) {
+        porcionDelRitmo = cadenaDeTiempos.substring(0, i);
+        nuevoRitmo = nuevoRitmo + porcionDelRitmo;
+    }
+    // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
+    return nuevoRitmo;
 }
 
 var ritmoFinal = expansor(ritmoInicial);
@@ -585,9 +461,6 @@ println(ritmoFinal);
 
 // makeBeat(instrBateria, 1, 1, ritmoInicial); // Cadena de tiempos inicial
 makeBeat(instrBateria, 1, 1, ritmoFinal);
-
-// Fin
-finish();
 ----
 
 [role="curriculum-python"]
@@ -597,20 +470,12 @@ Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto 
 Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto permite que se coloquen todos los sonidos percusivos en 1 pista usando sólo una línea de `makeBeat()`. En vez de colocar tu archivo de sonido como primer argumento, vas a crear un arreglo de archivos de sonido. En tu cadena de tiempos, en vez de sólo usar `0` para indicar que se toque un sonido, puedes usar los números de `0` a `9`. Estos números se refieren a un índice en tu arreglo de sonidos. Mira el siguiente ejemplo de sintaxis de un programa antes y después de combinar sus argumentos en una sola pista, usando un ritmo típico de beatbox que alterna entre dos sonidos.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Hacer una batería
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Usar listas con makeBeat()
-#
+# Usar listas con makeBeat()
 
 # Configuración
 from earsketch import *
-init()
 setTempo(100)
 
 # Antes, había una pista por cada sonido (compás 1):
@@ -625,28 +490,14 @@ makeBeat(redoblante, 2, 1, ritmoDeRedoblante)
 bateria = [OS_KICK05, OS_SNARE01]
 ritmo = "0+++1+++0+++1+++"
 makeBeat(bateria, 1, 3, ritmo)
-
-# Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Hacer una batería
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Usar arreglos con makeBeat()
-//
-//
-//
+// Usar arreglos con makeBeat()
 
 // Configuración
-init();
 setTempo(100);
 
 // Música
@@ -662,9 +513,6 @@ makeBeat(redoblante, 2, 1, ritmoDeRedoblante);
 var bateria = [OS_KICK05, OS_SNARE01];
 var ritmo = "0+++1+++0+++1+++";
 makeBeat(bateria, 1, 3, ritmo);
-
-//Fin
-finish();
 ----
 
 {nbsp} +

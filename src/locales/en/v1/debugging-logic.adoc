@@ -182,30 +182,19 @@ We end up placing a clip on every measure as we iterate through the for-loop, bu
 We end up placing a clip on every measure as we iterate through the for-loop, but each clip is two measures long. This causes the second half (right side) of each clip to overlap with the previous half. Our code ran, but this was not the intended result; we have encountered a logic error. Following the control flow of the for-loop helps to debug this script. When `measure` is equal to 2, the `fitMedia()` calls attempt to place clips on measures that already contain music. We can solve this issue by incrementing our iteration statement by four on each iteration instead of one, like `measure += 4`. That way, we jump ahead four measures before placing clips again. The following code corrects the logic error:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Overlap Correction
-#
-# author: The EarSketch Team
-#
-# description: Creating an alternating drum beat
-#
+# Creating an alternating drum beat
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 groove1 = HIPHOP_DUSTYGROOVE_011
 groove2 = HIPHOP_DUSTYGROOVE_010
 
 for measure in range(1, 9, 4):
-  fitMedia(groove1, 1, measure, measure + 2)
-  fitMedia(groove2, 2, measure + 2, measure + 4)
-
-finish()
+    fitMedia(groove1, 1, measure, measure + 2)
+    fitMedia(groove2, 2, measure + 2, measure + 4)
 ----
 
 [role="curriculum-javascript"]

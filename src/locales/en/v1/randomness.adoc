@@ -26,87 +26,63 @@ In the example below, random numbers are used to pick random clips from a list. 
 In the example below, random numbers are used to pick random clips from an array. The range of random numbers generated is identical to the array indices. Using these clips in functions calls produces musical variety each time the script runs.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Random Clip
-#
-# author: The EarSketch Team
-#
-# description: Randomly selecting clips from a list
-#
-#
-#
+# Randomly selecting clips from a list
 
-#Setup
+# Setup
 from earsketch import *
 from random import *  # need to import the random library to use randint()
-init()
 setTempo(100)
 
-#Music
+# Music
 sampleBank = [YG_TRAP_SYNTH_BELL_1,
-			  YG_TRAP_STRINGS_1,
-			  YG_TRAP_SHORT_SYNTH_1,
-			  YG_TRAP_HIT_1,
-			  YG_TRAP_SYNTH_LEAD_6,
-			  YG_TRAP_BELLS_1]
+              YG_TRAP_STRINGS_1,
+              YG_TRAP_SHORT_SYNTH_1,
+              YG_TRAP_HIT_1,
+              YG_TRAP_SYNTH_LEAD_6,
+              YG_TRAP_BELLS_1]
 
 for i in range(1, 9):
 
-	# Generates a random index number between 0 and 5 because the length of sampleBank list is 6 (total number of samples)
-	index = randint(0, len(sampleBank) - 1)
-	fitMedia(sampleBank[index], 1, i, i+1) # Use the random index to get a list element
+    # Generates a random index number between 0 and 5 because the length of sampleBank list is 6 (total number of samples)
+    index = randint(0, len(sampleBank) - 1)
+    fitMedia(sampleBank[index], 1, i, i + 1)  # Use the random index to get a list element
 
 fitMedia(YG_TRAP_KICK_4, 2, 1, 9)
 fitMedia(YG_TRAP_BASS_1, 3, 1, 9)
 fitMedia(YG_TRAP_SNARE_5, 4, 1, 9)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Random Clip
-//
-// author: The EarSketch Team
-//
-// description: Randomly selecting clips from a list
-//
-//
-//
+// Randomly selecting clips from a list
 
-//Setup
-init();
+// Setup
 setTempo(100);
 
-//Music
-var sampleBank = [YG_TRAP_SYNTH_BELL_1,
-			  YG_TRAP_STRINGS_1,
-			  YG_TRAP_SHORT_SYNTH_1,
-			  YG_TRAP_HIT_1,
-			  YG_TRAP_SYNTH_LEAD_6,
-			  YG_TRAP_BELLS_1];
+// Music
+var sampleBank = [
+    YG_TRAP_SYNTH_BELL_1,
+    YG_TRAP_STRINGS_1,
+    YG_TRAP_SHORT_SYNTH_1,
+    YG_TRAP_HIT_1,
+    YG_TRAP_SYNTH_LEAD_6,
+    YG_TRAP_BELLS_1,
+];
 
-for(var i = 1; i < 9; i++) {
-  // Generates a random index number between 0 and 5 because the length of sampleBank array is 6 (total number of samples)
-  var index = Math.floor(Math.random() * sampleBank.length);
+for (var i = 1; i < 9; i++) {
+    // Generates a random index number between 0 and 5 because the length of sampleBank array is 6 (total number of samples)
+    var index = Math.floor(Math.random() * sampleBank.length);
 
-	// Use the random index to pick a sample
-	fitMedia(sampleBank[index], 1, i, i+1);
+    // Use the random index to pick a sample
+    fitMedia(sampleBank[index], 1, i, i + 1);
 }
 
 fitMedia(YG_TRAP_KICK_4, 2, 1, 9);
 fitMedia(YG_TRAP_BASS_1, 3, 1, 9);
 fitMedia(YG_TRAP_SNARE_5, 4, 1, 9);
-
-//Finish
-finish();
 ----
 
 [[remixingarhythm]]
@@ -121,25 +97,15 @@ video::./videoMedia/020-02-RemixingaRhythm-PY.mp4[]
 video::./videoMedia/020-02-RemixingaRhythm-JS.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Amen Break
-#
-# author: The EarSketch Team
-#
-# description: Constructing the amen break with string concatenation
-#
-#
-#
+# Constructing the amen break with string concatenation
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(140)
 
-#Music
+# Music
 drums = [OS_KICK05, OS_SNARE06, Y24_HI_HATS_1, Y58_HI_HATS_1, OS_OPENHAT01]
 
 a = "0+0-1+-1+1001+-1"
@@ -154,31 +120,18 @@ amenCymbals = cym1 + cym1 + cym2 + cym3
 
 makeBeat(drums, 1, 1, amenBreak)
 makeBeat(drums, 2, 1, amenCymbals)
-
-#Finish
-finish()
 ----
 
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Amen Break
-//
-// author: The EarSketch Team
-//
-// description: Constructing the amen break with string concatenation
-//
-//
-//
+// Constructing the amen break with string concatenation
 
-//Setup
-init();
+// Setup
 setTempo(140);
 
-//Music
+// Music
 var drums = [OS_KICK05, OS_SNARE06, Y24_HI_HATS_1, Y58_HI_HATS_1, OS_OPENHAT01];
 
 var a = "0+0-1+-1+1001+-1";
@@ -193,28 +146,25 @@ var amenCymbals = cym1 + cym1 + cym2 + cym3;
 
 makeBeat(drums, 1, 1, amenBreak);
 makeBeat(drums, 2, 1, amenCymbals);
-
-//Finish
-finish();
 ----
 
 Next, a random drum pattern is added to the amen break. A for-loop is used to generate a random beat string. On each loop iteration, a random number is generated, converted to a string type, and concatenated with the new beat string. The range of the random numbers is set to match the indices of our drum samples. Check out the code snippet for this process below.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 insertSection = ""
 
 for i in range(8):
-    insertSection = insertSection + str( randint(0, 4) )
+    insertSection = insertSection + str(randint(0, 4))
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 var insertSection = "";
 
-for(var i = 0; i < 8; i++) {
+for (var i = 0; i < 8; i++) {
     insertSection = insertSection + Math.floor(Math.random() * 5);
 }
 ----
@@ -222,42 +172,32 @@ for(var i = 0; i < 8; i++) {
 We want to introduce the random beat string without changing the total length of the amen break. Thus, substrings are required. The snippet below shows code to concatenate the randomly-generated string (which is 8 characters long) with the last 8 characters of the `a` beatString to create a new 16-character string. We then create the new amen break by concatenating `a`, `newA`, `b`, and `c` together.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 newA = insertSection + a[8:16]
 newBeat = a + newA + b + c
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-var newA = insertSection + a.substring(8,16);
+var newA = insertSection + a.substring(8, 16);
 var newBeat = a + newA + b + c;
 ----
 
 Adding the two code snippets above into the amen break script results in the following code. We have remixed the amen break!
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Amen Remix
-#
-# author: The EarSketch Team
-#
-# description: Replacing part of the amen break string with a random beat string
-#
-#
-#
+# Replacing part of the amen break string with a random beat string
 
-#Setup
+# Setup
 from earsketch import *
 from random import *
-init()
 setTempo(140)
 
-#Music
+# Music
 drums = [OS_KICK05, OS_SNARE06, Y24_HI_HATS_1, Y58_HI_HATS_1, OS_OPENHAT01]
 
 a = "0+0-1+-1+1001+-1"
@@ -273,38 +213,25 @@ amenCymbals = cym1 + cym1 + cym2 + cym3
 insertSection = ""
 
 for i in range(8):
-	# building the random beat string, 8 characters long
-	insertSection += str( randint(0, 4) )
+    # building the random beat string, 8 characters long
+    insertSection += str(randint(0, 4))
 
 newA = insertSection + a[8:16]
 newBeat = a + newA + b + c
 
 makeBeat(drums, 1, 1, newBeat)
 makeBeat(drums, 2, 1, amenCymbals)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Amen Remix
-//
-// author: The EarSketch Team
-//
-// description: Replacing part of the amen break string with a random beat string
-//
-//
-//
+// Replacing part of the amen break string with a random beat string
 
-//Setup
-init();
+// Setup
 setTempo(140);
 
-//Music
+// Music
 var drums = [OS_KICK05, OS_SNARE06, Y24_HI_HATS_1, Y58_HI_HATS_1, OS_OPENHAT01];
 
 var a = "0+0-1+-1+1001+-1";
@@ -317,22 +244,18 @@ var cym3 = "2+2+2+2+2+4+2+2+";
 var amenBreak = a + a + b + c;
 var amenCymbals = cym1 + cym1 + cym2 + cym3;
 
-
 var insertSection = "";
 
-for(var i = 0; i < 8; i++) {
-	// building the random beat string, 8 characters long
-	insertSection += Math.floor(Math.random() * 5);
+for (var i = 0; i < 8; i++) {
+    // building the random beat string, 8 characters long
+    insertSection += Math.floor(Math.random() * 5);
 }
 
-var newA = insertSection + a.substring(8,16);
+var newA = insertSection + a.substring(8, 16);
 var newBeat = a + newA + b + c;
 
 makeBeat(drums, 1, 1, newBeat);
 makeBeat(drums, 2, 1, amenCymbals);
-
-//Finish
-finish();
 ----
 
 [[chapter20summary]]
