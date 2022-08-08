@@ -12,10 +12,8 @@ In this chapter you will learn how to change the tempo of your song, add comment
 By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
 
 . Some comments starting with `#` in grey: we'll cover that in next section
-. the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project 
-. the `init()` function, which initializes, or turns on, the DAW
+. the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project
 . the `setTempo(120)` function, which we will see in detail below
-. the `finish()` function: it tells the DAW that you are done composing and are ready to play your music.
 --
 
 [role="curriculum-javascript"]
@@ -23,12 +21,8 @@ By now you've noticed that when you create a new script, there are preexisting e
 By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
 
 . Some comments starting with `//` in grey: we'll cover that in next section
-. the `init()` function, which initializes, or turns on, the DAW
 . the `setTempo(120)` function, which we will see in detail below
-. the `finish()` function: it tells the DAW that you are done composing and are ready to play your music.
 --
-
-Note: Your code goes after `setTempo()` and before `finish()`.
 
 The `setTempo()` function will determine the speed of your song. The *tempo* is a number of beats per minute (bpm) in Western music. In EarSketch, the default tempo (i.e. the initial value of the tempo) is set to 120bpm, which corresponds to a fast walk or march speed. To change the tempo, just change the number between the parentheses of the `setTempo()` function. The higher the tempo, the faster your music. You can select a tempo between _45bpm and 220bpm_.
 
@@ -238,9 +232,7 @@ To specify a Creative Commons license, all you have to do is choose a type and p
 * The clips in the EarSketch Sounds Library are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
 * Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
 * `from earsketch import *` adds the EarSketch API to your project. It must be included at the top of every script.
-* `init()` prepares the DAW to accept and display music. It must be present in every EarSketch script.
 * `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* `finish()` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
 * You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
 * A *process* is a task running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
 * *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
@@ -253,9 +245,7 @@ To specify a Creative Commons license, all you have to do is choose a type and p
 * *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
 * The clips in the EarSketch Sounds Library are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
 * Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
-* `init();` prepares the DAW to accept and display music. It must be present in every EarSketch script.
 * `setTempo();` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* `finish();` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
 * You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
 * A *process* is a task running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
 * *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
