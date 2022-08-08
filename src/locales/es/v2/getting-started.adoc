@@ -125,12 +125,6 @@ En su nivel más profundo, las computadoras operan en combinaciones de 1s y 0s: 
 
 Ahora que has creado tu primer script, ¡empecemos a trabajar en tu música!
 
-[role="curriculum-python"]
-Empieza a escribir tu código entre las líneas `setTempo(120)` y `finish()`.
-
-[role="curriculum-javascript"]
-Empieza a escribir tu código entre las líneas `setTempo(120);` y `finish();`.
-
 Mira este video para ver cómo agregar un clip de audio a tu canción:
 
 [role="curriculum-python curriculum-mp4"]
@@ -282,14 +276,13 @@ Algunos errores comunes son:
 . *Los errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()` o constantes sonoras.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
 . *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`, `init()`, `setTempo()` o `finish()`. Asegúrate de que estas funciones aparezcan en cada script.
+. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`.
 . *Puntuación:* La falta de comas u otros errores de puntuación
 
 [role="curriculum-javascript"]
 . *Los errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()` o constantes sonoras.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
 . *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `init()`, `setTempo()` o `finish()`. Asegúrate de que estas funciones aparezcan en cada script.
 . *Puntuación:* La falta de comas u otros errores de puntuación
 
 ¡Es hora de practicar!
@@ -350,7 +343,7 @@ TODO: when options are ready, modify the link
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
+* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
@@ -369,7 +362,7 @@ TODO: when options are ready, modify the link
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
+* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.

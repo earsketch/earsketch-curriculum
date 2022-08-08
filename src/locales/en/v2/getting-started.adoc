@@ -130,11 +130,6 @@ At the deepest level, computers operate in combinations of 1s and 0s: binary num
 
 Now that you have created your first script, let's start working on your music!
 
-[role="curriculum-python"]
-Start writing your code between the `setTempo(120)` and `finish()` lines.
-[role="curriculum-javascript"]
-Start writing your code between the `setTempo(120);` and `finish();` lines.
-
 Watch this video to see how to add an audio clip to your song:
 
 [role="curriculum-python curriculum-mp4"]
@@ -287,14 +282,13 @@ Here are some common errors:
 . *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
 . *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. Most items in a script follow a rule called *camel-caps*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `from earsketch import *`, `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
+. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `from earsketch import *`.
 . *Punctuation:* Missing commas or other punctuation errors
 
 [role="curriculum-javascript"]
 . *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
 . *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. Most items in a script follow a rule called *camel-caps*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `init()`, `setTempo()`, or `finish()`. Make sure these functions appear in every script.
 . *Punctuation:* Missing commas or other punctuation errors
 
 Time to practice!
@@ -360,7 +354,7 @@ TODO: when options are ready, modify the link
 * Sound clips can be found in the Sound Browser. They are referred to by typing or pasting their name in all caps.
 * A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
+* An EarSketch script consists of a comments section, setup section, and music section.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
 * `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
@@ -379,7 +373,7 @@ TODO: when options are ready, modify the link
 * Sound clips can be found in the Sound Browser. They are referred to be typing or pasting their name in all caps.
 * A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
+* An EarSketch script consists of a comments section, setup section, and music section.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
 * `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
