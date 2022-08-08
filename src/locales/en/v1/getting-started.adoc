@@ -185,21 +185,17 @@ image::../media/U1P1/U1L1_JS_BuildingBlocks.png[Alt Text]
 . *Comments Section*
 **   You can use comments anywhere in your code, but a block at the top is usually used to describe the whole project.
 . *Setup Section*
-**   This code tells the DAW how to prepare to make music. `init()` initializes, or turns on, the DAW. `setTempo()` allows you to choose a tempo for the project, which can be anywhere from 45 to 220 beats per minute. `from earsketch import *` adds the EarSketch API to the project. Every project with music in it _must have_ these parts in the setup section.
+**   This code tells the DAW how to prepare to make music. `setTempo()` allows you to choose a tempo for the project, which can be anywhere from 45 to 220 beats per minute. `from earsketch import *` adds the EarSketch API to the project. Every project with music in it _must have_ these parts in the setup section.
 . *Music Section*
 **   The most important section. All of the details of your composition go here.
-. *Finish Section*
-**   Every project _must have_ a `finish()` function at the end. It tells the DAW that you are done composing and are ready to play your music.
 
 [role="curriculum-javascript"]
 . *Comments Section*
 ** You can use comments anywhere in your code, but a block at the top is usually used to describe the whole project.
 . *Setup Section*
-**   This code tells the DAW how to prepare to make music. `init()` initializes, or turns on, the DAW. `setTempo()` allows you to choose a tempo for the project. Every project with music in it _must have_ these parts in the setup section.
+**   This code tells the DAW how to prepare to make music. `setTempo()` allows you to choose a tempo for the project. Every project with music in it _must have_ these parts in the setup section.
 . *Music Section*
 **   The most important section. All of the details of your composition go here.
-. *Finish Section*
-**   Every project _must have_ a `finish()` function at the end. It tells the DAW that you are done composing and are ready to play your music.
 
 [[creatinganewscript]]
 === Creating a New Script
@@ -259,7 +255,7 @@ image::../media/U1P1/newScriptPromptJS.png[Alt Text]
 Let’s make some music with the script we just created. If you missed how to make a new script, <<getting-started#creatinganewscript,jump back a section>>. Otherwise, follow these steps:
 
 [role="curriculum-python"]
-. *Add fitMedia():* To add a sound clip to the DAW, we start by typing `fitMedia()` anywhere between `setTempo()` and `finish()`.
+. *Add fitMedia():* To add a sound clip to the DAW, we start by typing `fitMedia()`.
 +
 By itself, `fitMedia()` doesn’t do anything; we also need to specify the _clip name_ to add to our DAW, the _track number_ to place the clip on, and the _starting_ and _ending_ points of our clip. We will now specify these details between the parentheses of `fitMedia()`.
 . *Choose a clip and paste it into fitMedia():* Open the sound browser. Listen to a few clips using the play button and pick one you like. We want to paste this clip’s name into `fitMedia()`. Click so that your cursor is inside of `fitMedia()`’s parentheses. Back in the sound browser, click the paste button (clipboard) next to your chosen clip. You should now have something like `fitMedia(Y18_DRUM_SAMPLES_2)` in your script.
@@ -273,7 +269,7 @@ You should now have something like this: `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5)`
 . *Press Run and Play:* Press _Run_ to execute the script. Your chosen clip should be added to the DAW. Press play in the DAW and have a listen! If something isn't working, take a look at our example below and compare with your code:
 
 [role="curriculum-javascript"]
-. *Add fitMedia():* To add a sound clip to the DAW, we start by typing `fitMedia()` anywhere between `setTempo()` and `finish()`.
+. *Add fitMedia():* To add a sound clip to the DAW, we start by typing `fitMedia()`.
 +
 By itself, `fitMedia()` doesn’t do anything; we also need to specify the _clip name_ to add to our DAW, the _track number_ to place the clip on, and the _starting_ and _ending_ points of our clip. We will now specify these details between the parentheses of `fitMedia()`.
 . *Choose a clip and paste it into fitMedia():* Open the sound browser. Listen to a few clips using the play button and pick one you like. We want to paste this clip’s name into `fitMedia()`. Click so that your cursor is inside of `fitMedia()`’s parentheses. Back in the sound browser, click the paste button (clipboard) next to your chosen clip. You should now have something like `fitMedia(Y18_DRUM_SAMPLES_2)` in your script.
@@ -386,11 +382,9 @@ video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
 * Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
 * A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. Furthermore, *programming* is the process of designing, writing, testing, debugging, and maintaining code within a program.
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
+* An EarSketch script consists of a comments section, setup section, and music section.
 * `from earsketch import *` adds the EarSketch API to your project. It must be included at the top of every script.
-* `init()` prepares the DAW to accept and display music. It must be present in every EarSketch script.
 * `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* `finish()` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
 * `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
@@ -407,10 +401,8 @@ video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
 * Comments are lines of code that are not executed by the computer. However, they are useful for making notes within a script.
 * A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. Furthermore, *programming* is the process of designing, writing, testing, debugging, and maintaining code within a program.
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, music section, and finish section.
-* `init()` prepares the DAW to accept and display music. It must be present in every EarSketch script.
+* An EarSketch script consists of a comments section, setup section, and music section.
 * `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* `finish()` notifies the DAW that your code is complete. It must be included at the end of every EarSketch script.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
 * `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
