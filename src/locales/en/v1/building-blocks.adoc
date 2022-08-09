@@ -149,7 +149,7 @@ video::./videoMedia/002-05-Variables-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Using variables to store clips and simplify edits
+# Variables: Using variables to store clips and simplify edits
 
 # Setup
 from earsketch import *
@@ -179,7 +179,7 @@ fitMedia(drums, 2, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using variables to store clips and simplify edits
+// Variables: Using variables to store clips and simplify edits
 
 // Setup
 setTempo(100);

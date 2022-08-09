@@ -518,7 +518,7 @@ Here is the solution:
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating beats in different genres
+# Examples of beats: Creating beats in different genres
 
 # Setup
 from earsketch import *
@@ -545,7 +545,7 @@ makeBeat(drums, 1, 7, "0++10+1+0++10+1+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating beats in different genres
+// Examples of beats: Creating beats in different genres
 
 // Setup
 setTempo(110);

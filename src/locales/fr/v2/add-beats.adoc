@@ -70,7 +70,7 @@ Dans vos scripts précédents, utilisez des variables pour stocker vos noms de c
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de variables pour stocker des clips et simplifier les modifications
+# Variables : Utilisation de variables pour stocker des clips et simplifier les modifications
 
 # Paramétrage
 from earsketch import *
@@ -95,7 +95,7 @@ fitMedia(drums, 2, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de variables pour stocker des clips et simplifier les modifications
+// Variables : Utilisation de variables pour stocker des clips et simplifier les modifications
 
 // Paramétrage
 setTempo(100);
@@ -237,7 +237,7 @@ Voici l'exemple montré dans la vidéo :
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de plusieurs appels makeBeat et chevauchement de rythmes (beats)
+# Multi Beat : Utilisation de plusieurs appels makeBeat et chevauchement de rythmes
 
 # Paramétrage
 from earsketch import *
@@ -256,7 +256,7 @@ makeBeat(cymbal, 2, 1, beat2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de plusieurs appels makeBeat et chevauchement de rythmes (beats)
+// Multi Beat : Utilisation de plusieurs appels makeBeat et chevauchement de rythmes
 
 // Paramétrage
 setTempo(120);
@@ -307,7 +307,7 @@ Voici le code correspondant :
 [role="curriculum-python"]
 [source,python]
 ----
-# Création de beats pour différents genres
+# Exemples de beats : Création de beats pour différents genres
 
 # Paramétrage
 from earsketch import *
@@ -339,7 +339,7 @@ makeBeat(snare, 2, 7, "---0++0+---0++0+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Création de beats pour différents genres
+// Exemples de beats : Création de beats pour différents genres
 
 // Paramétrage
 setTempo(120);

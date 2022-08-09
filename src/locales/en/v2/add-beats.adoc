@@ -73,7 +73,7 @@ In your previous scripts, use variables to store your sound clip names. Look at 
 [role="curriculum-python"]
 [source,python]
 ----
-# Using variables to store clips and simplify edits
+# Variables: Using variables to store clips and simplify edits
 
 # Setup
 from earsketch import *
@@ -98,7 +98,7 @@ fitMedia(drums, 2, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using variables to store clips and simplify edits
+// Variables: Using variables to store clips and simplify edits
 
 // Setup
 setTempo(100);
@@ -243,7 +243,7 @@ Here is the example shown in the video:
 [role="curriculum-python"]
 [source,python]
 ----
-# Using several makeBeat calls with different rhythms
+# Multi Beat: Using several makeBeat calls with different rhythms
 
 # Setup
 from earsketch import *
@@ -262,7 +262,7 @@ makeBeat(cymbal, 2, 1, beat2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using several makeBeat calls with different rhythms
+// Multi Beat: Using several makeBeat calls with different rhythms
 
 // Setup
 setTempo(120);
@@ -317,7 +317,7 @@ Here is the corresponding code:
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating beats in different genres
+# Examples of beats: Creating beats in different genres
 
 # Setup
 from earsketch import *
@@ -349,7 +349,7 @@ makeBeat(snare, 2, 7, "---0++0+---0++0+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating beats in different genres
+// Examples of beats: Creating beats in different genres
 
 // Setup
 setTempo(120);

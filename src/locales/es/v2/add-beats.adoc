@@ -72,7 +72,7 @@ En tus previos scripts, usa variables para almacenar tus nombres de clips de son
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar variables para almacenar clips y simplificar la edición
+# Variables: Cómo usar variables para almacenar clips y simplificar la edición
 
 # Configuración
 from earsketch import *
@@ -97,7 +97,7 @@ fitMedia(bateria, 2, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar variables para almacenar clips y simplificar la edición
+// Variables: Cómo usar variables para almacenar clips y simplificar la edición
 
 // Configuración
 setTempo(100);
@@ -250,7 +250,7 @@ Aquí está el ejemplo que se ve en el video:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar varias llamadas a makeBeat y ritmos superpuestos
+# Múltiples ritmos: Cómo usar varias llamadas a makeBeat y ritmos superpuestos
 
 # Configuración
 from earsketch import *
@@ -270,7 +270,7 @@ makeBeat(platillo, 2, 1, ritmo2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar varias llamadas a makeBeat y ritmos superpuestos
+// Múltiples ritmos: Cómo usar varias llamadas a makeBeat y ritmos superpuestos
 
 // Configuración
 setTempo(120);
@@ -325,7 +325,7 @@ Aquí está el código correspondiente:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear ritmos en géneros diferentes
+# Ejemplos de ritmos: Cómo crear ritmos en géneros diferentes
 
 # Configuración
 from earsketch import *
@@ -357,7 +357,7 @@ makeBeat(redoblante, 2, 7, "---0++0+---0++0+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear ritmos en géneros diferentes
+// Ejemplos de ritmos: Cómo crear ritmos en géneros diferentes
 
 // Configuración
 setTempo(120);
