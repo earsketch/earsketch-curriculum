@@ -20,16 +20,7 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Forme A-B-A
-#
-# auteur : L'équipe EarSketch
-#
-# description : Une chanson composée de parties A et B
-#
-#
-#
+# Forme A-B-A : Une chanson composée de parties A et B
 
 # Paramétrage
 from earsketch import *
@@ -64,7 +55,7 @@ setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # augmentation du volume de la ligne 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Une chanson composée de parties A et B
+// Forme A-B-A : Une chanson composée de parties A et B
 
 // Paramétrage
 setTempo(120);
@@ -161,7 +152,7 @@ Voici à quoi devrait ressembler votre code :
 [role="curriculum-python"]
 [source,python]
 ----
-# Une chanson composée de parties A et B à l'aide de fonctions personnalisées
+# Forme A-B-A-B et fonctions personnalisées : Une chanson composée de parties A et B à l'aide des fonctions personnalisées
 
 # Paramétrage
 from earsketch import *
@@ -194,7 +185,8 @@ sectionB(13, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Une chanson composée de parties A et B à l'aide des fonctions personnalisées
+
+// Forme A-B-A-B et fonctions personnalisées : Une chanson composée de parties A et B à l'aide des fonctions personnalisées
 
 // Paramétrage
 setTempo(120);
@@ -266,7 +258,7 @@ Remplissages de batterie :
 [role="curriculum-python"]
 [source,python]
 ----
-# Transition entre parties à l'aide d'un remplissage de batterie
+# Techniques de transition - Remplissage de batterie : Transition entre parties à l'aide d'un remplissage de batterie
 
 # Paramétrage
 from earsketch import *
@@ -298,7 +290,7 @@ fitMedia(drums2, 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transition entre parties à l'aide d'un remplissage de batterie
+// Techniques de transition - Remplissage de batterie : Transition entre parties à l'aide d'un remplissage de batterie
 
 // Paramétrage
 setTempo(130);
@@ -331,7 +323,7 @@ La technique de pistes en sourdine (track dropout) nécessite la modification de
 [role="curriculum-python"]
 [source,python]
 ----
-# Transition entre des parties avec pertes de niveau audio sélectives
+# Techniques de transition - Pertes de niveau audio de piste : Transition entre des parties avec pertes de niveau audio sélectives
 
 # Paramétrage
 from earsketch import *
@@ -363,7 +355,7 @@ fitMedia(bass, 4, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transition entre parties avec pertes de niveau audio de piste
+// Techniques de transition - Pertes de niveau audio de piste : Transition entre des parties avec pertes de niveau audio sélectives
 
 // Paramétrage
 setTempo(120);
@@ -396,7 +388,7 @@ L'exemple suivant utilise plusieurs risers et une cymbale à main pendant la tra
 [role="curriculum-python"]
 [source,python]
 ----
-# Transition entre parties à l'aide de risers et d'une cymbale à main.
+# Techniques de transition - Risers : Transition entre parties à l'aide de risers et d'une cymbale à main
 
 # Paramétrage
 from earsketch import *
@@ -438,7 +430,7 @@ setEffect(8, VOLUME, GAIN, -20)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transition entre parties à l'aide de risers et d'une cymbale à main.
+// Techniques de transition - Risers : Transition entre parties à l'aide de risers et d'une cymbale à main
 
 // Paramétrage
 setTempo(128);
@@ -506,7 +498,7 @@ Voici un exemple de chanson complète :
 [role="curriculum-python"]
 [source,python]
 ----
-# création d'une chanson complète avec des abstractions.
+# Total Atlanta Song of Summer : création d'une chanson complète avec des abstractions
 
 from earsketch import *
 setTempo(110)
@@ -587,7 +579,7 @@ setEffect(3, VOLUME, GAIN, -10)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// création d'une chanson complète avec des abstractions.
+// Total Atlanta Song of Summer : création d'une chanson complète avec des abstractions
 
 setTempo(110);
 

@@ -22,7 +22,7 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# descripción: Una canción con las secciones A y B
+# La forma A-B-A: Una canción con las secciones A y B
 
 # Configuración
 from earsketch import *
@@ -56,7 +56,7 @@ setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # Aumentar el volumen de la línea de
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Una canción con las secciones A y B
+// La forma A-B-A: Una canción con las secciones A y B
 
 // Configuración
 setTempo(120);
@@ -151,7 +151,7 @@ Aquí está un ejemplo del código que podrías escribir:
 [role="curriculum-python"]
 [source,python]
 ----
-# Una canción con las secciones A y B, usando funciones personalizadas
+# La forma A-B-A-B y las funciones personalizadas: Una canción con las secciones A y B, usando funciones personalizadas
 
 # Configuración
 from earsketch import *
@@ -184,7 +184,7 @@ seccionB(13, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Una canción con las secciones A y B, usando funciones personalizadas
+// La forma A-B-A-B y las funciones personalizadas: Una canción con las secciones A y B, usando funciones personalizadas
 
 // Configuración
 setTempo(120);
@@ -254,7 +254,7 @@ Drum fills:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una transición entre secciones usando un drum fill
+# Técnicas de transición - drum fill: Cómo crear una transición entre secciones usando un drum fill
 
 # Configuración
 from earsketch import *
@@ -286,7 +286,7 @@ fitMedia(bateria2, 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear una transición entre secciones usando un drum fill
+// # Técnicas de transición - drum fill: Cómo crear una transición entre secciones usando un drum fill
 
 // Configuración
 setTempo(130);
@@ -319,7 +319,7 @@ La técnica de silencio de pista (_track dropout_) sólo requiere la modificaci�
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear transiciones entre secciones usando silencios de pista
+# Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
 
 # Configuración
 from earsketch import *
@@ -351,7 +351,7 @@ fitMedia(lineaDeBajo, 4, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear transiciones entre secciones usando silencios de pista
+// Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
 
 // Configuración
 setTempo(120);
@@ -384,7 +384,7 @@ El próximo ejemplo usa múltiples _risers_ y un platillo crash durante la trans
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
+# Técnicas de transición - risers: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
 
 # Configuración
 from earsketch import *
@@ -426,7 +426,7 @@ setEffect(8, VOLUME, GAIN, -20)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
+// Técnicas de transición - risers: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
 
 // Configuración
 setTempo(128);
@@ -496,7 +496,7 @@ Aquí está un ejemplo de una canción completa:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una canción completa usando abstracciones
+# Canción completa de verano en Atlanta: Cómo crear una canción completa usando abstracciones
 # la estructura de la canción: Intro-A-B-A-B
 
 from earsketch import *

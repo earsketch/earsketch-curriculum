@@ -20,7 +20,7 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# A song with A and B sections
+# A-B-A Form: A song with A and B sections
 
 # Setup
 from earsketch import *
@@ -55,7 +55,7 @@ setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # increasing volume of bass line
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// A song with A and B sections
+// A-B-A Form: A song with A and B sections
 
 // Setup
 setTempo(120);
@@ -153,7 +153,7 @@ Here is what your code could look like:
 [role="curriculum-python"]
 [source,python]
 ----
-# A song with A and B sections, using custom functions
+# A-B-A-B Form and custom functions: A song with A and B sections, using custom functions
 
 # Setup
 from earsketch import *
@@ -186,7 +186,7 @@ sectionB(13, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// A song with A and B sections, using custom functions
+// A-B-A-B Form and custom functions: A song with A and B sections, using custom functions
 
 // Setup
 setTempo(120);
@@ -260,7 +260,7 @@ Drum fills:
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections with a drum fill
+# Transition Techniques - Drum Fill: Transitioning between sections with a drum fill
 
 # Setup
 from earsketch import *
@@ -292,7 +292,7 @@ fitMedia(drums2, 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections with a drum fill
+// Transition Techniques - Drum Fill: Transitioning between sections with a drum fill
 
 // Setup
 setTempo(130);
@@ -325,7 +325,7 @@ The track dropout technique only requires the modification of a couple `fitMedia
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections with track dropouts
+# Transition Techniques - Track Droupouts: Transitioning between sections with track dropouts
 
 # Setup
 from earsketch import *
@@ -357,7 +357,7 @@ fitMedia(bass, 4, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections with track dropouts
+// Transition Techniques - Track Droupouts: Transitioning between sections with track dropouts
 
 // Setup
 setTempo(120);
@@ -390,7 +390,7 @@ The next example uses multiple risers and a crash cymbal during the transition.
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections using risers and a crash cymbal
+# Transition Techniques - Risers: Transitioning between sections using risers and a crash cymbal
 
 # Setup
 from earsketch import *
@@ -432,7 +432,7 @@ setEffect(8, VOLUME, GAIN, -20)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections using risers and a crash cymbal
+// Transition Techniques - Risers: Transitioning between sections using risers and a crash cymbal
 
 // Setup
 setTempo(128);
@@ -502,7 +502,7 @@ Here is an example of a full song:
 [role="curriculum-python"]
 [source,python]
 ----
-# creating a complete song with abstractions
+# Total Atlanta Song of Summer: creating a complete song with abstractions
 # structure of the song: intro-A-B-A-B
 
 from earsketch import *
@@ -584,7 +584,7 @@ setEffect(3, VOLUME, GAIN, -10)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// creating a complete song with abstractions
+// Total Atlanta Song of Summer: creating a complete song with abstractions
 
 setTempo(110);
 
