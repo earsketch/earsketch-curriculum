@@ -35,7 +35,7 @@ Voyez l'exemple ci-dessous :
 [role="curriculum-python"]
 [source,python]
 ----
-# Modification du volume de deux pistes
+# Effet de volume : Modification du volume de deux pistes
 
 # Paramétrage
 from earsketch import *
@@ -57,7 +57,7 @@ setEffect(2, VOLUME, GAIN, -15)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Modification du volume de deux pistes
+// Effet de volume : Modification du volume de deux pistes
 
 // Paramétrage
 setTempo(120);
@@ -102,7 +102,7 @@ Vous pouvez essayer de modifier le délai et d'évaluer si votre musique sonne m
 [role="curriculum-python"]
 [source,python]
 ----
-# Ajout d'un délai à une piste
+# Effet de délai : Ajout d'un délai à une piste
 
 # Paramétrage
 from earsketch import *
@@ -135,7 +135,7 @@ fitMedia(drums2, 3, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ajout d'un délai à une piste
+// Effet de délai : Ajout d'un délai à une piste
 
 // Paramétrage
 setTempo(120);
@@ -240,7 +240,7 @@ Voici un exemple de fondu d'ouverture :
 [role="curriculum-python"]
 [source,python]
 ----
-# Création d'enveloppes avec la fonction setEffect() à sept paramètres
+# Enveloppes : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 
 # Paramétrage
 from earsketch import *
@@ -257,7 +257,7 @@ setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Création d'enveloppes avec la fonction setEffect() à sept paramètres
+// Enveloppes : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 
 // Paramétrage
 setTempo(120);
@@ -282,7 +282,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
+# Enveloppes complexes : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 
 # Paramétrage
 from earsketch import *
@@ -314,7 +314,7 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
+// Enveloppes complexes : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 
 // Paramétrage
 setTempo(120);
@@ -350,7 +350,7 @@ Voyez l'exemple ci-dessous. Chaque itération de la boucle ajoute un segment (du
 [role="curriculum-python"]
 [source,python]
 ----
-# Automatisation des effets avec une boucle « for »
+# Rampes rythmiques : Automatisation des effets avec une boucle « for »
 
 # Paramétrage
 from earsketch import *
@@ -367,7 +367,7 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Automatisation des effets avec une boucle  « for »
+// Rampes rythmiques : Automatisation des effets avec une boucle  « for »
 
 // Paramétrage
 setTempo(120);
@@ -386,7 +386,7 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 [role="curriculum-python"]
 [source,python]
 ----
-# Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
+# Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 # Paramétrage
 from earsketch import*
@@ -417,7 +417,7 @@ for track in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
+// Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 // Paramétrage
 setTempo(100);

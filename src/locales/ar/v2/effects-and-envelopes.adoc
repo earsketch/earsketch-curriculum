@@ -35,7 +35,7 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Modifying the volume of 2 tracks
+# Volume Effect: Modifying the volume of 2 tracks
 
 # Setup
 from earsketch import *
@@ -57,7 +57,7 @@ setEffect(2, VOLUME, GAIN, -15)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Modifying the volume of 2 tracks
+// Volume Effect: Modifying the volume of 2 tracks
 
 // Setup
 setTempo(120);
@@ -102,7 +102,7 @@ setEffect(2, VOLUME, GAIN, -15);
 [role="curriculum-python"]
 [source,python]
 ----
-# Adding delay to a track
+# Delay Effect: Adding delay to a track
 
 # Setup
 from earsketch import *
@@ -135,7 +135,7 @@ fitMedia(drums2, 3, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Adding delay to a track
+// Delay Effect: Adding delay to a track
 
 // Setup
 setTempo(120);
@@ -241,7 +241,7 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# Making envelopes with 7-parameter setEffect()
+# Envelopes: Making envelopes with 7-parameter setEffect()
 
 # Setup
 from earsketch import *
@@ -258,7 +258,7 @@ setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Making envelopes with 7-parameter setEffect()
+// Envelopes: Making envelopes with 7-parameter setEffect()
 
 // Setup
 setTempo(120);
@@ -281,7 +281,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Using multiple setEffect() calls on a track to make changes in the effect envelope
+# Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
 
 # Setup
 from earsketch import *
@@ -313,7 +313,7 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using multiple setEffect() calls on a track to make changes in the effect envelope
+// Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
 
 // Setup
 setTempo(120);
@@ -349,7 +349,7 @@ setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // End of fade out
 [role="curriculum-python"]
 [source,python]
 ----
-# Automating effects with a for-loop
+# Rhythmic Ramps: Automating effects with a for-loop
 
 # Setup
 from earsketch import *
@@ -366,6 +366,15 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
+// Rhythmic Ramps: Automating effects with a for-loop
+
+// Setup
+setTempo(120);
+
+// Music
+fitMedia(Y33_CHOIR_1, 1, 1, 9);
+fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9);
+
 for (var measure = 1; measure < 9; measure++) {
     setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1);
 }
@@ -376,7 +385,7 @@ for (var measure = 1; measure < 9; measure++) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Looping on all tracks to add a fade in and fade out
+# Fade in and fade out: Looping on all tracks to add a fade in and fade out
 
 # Setup
 from earsketch import*
@@ -407,7 +416,7 @@ for track in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Looping on all tracks to add a fade in and fade out
+// Fade in and fade out: Looping on all tracks to add a fade in and fade out
 
 // Setup
 setTempo(100);

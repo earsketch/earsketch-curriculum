@@ -38,7 +38,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo modificar el volumen de 2 pistas musicales (tracks)
+# El efecto de volumen: Cómo modificar el volumen de 2 pistas musicales (tracks)
 
 # Configuración
 from earsketch import *
@@ -60,7 +60,7 @@ setEffect(2, VOLUME, GAIN, -15)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo modificar el volumen de 2 pistas musicales (tracks)
+// El efecto de volumen: Cómo modificar el volumen de 2 pistas musicales (tracks)
 
 // Configuración
 setTempo(120);
@@ -110,7 +110,7 @@ Puedes tratar de modificar la duración del efecto de retardo y observar si tu m
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo añadir el efecto de retardo a una pista musical (track)
+# El efecto de retardo: Cómo añadir el efecto de retardo a una pista musical
 
 # Configuración
 from earsketch import *
@@ -143,7 +143,7 @@ fitMedia(bateria2, 3, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo añadir el efecto de retardo a una pista musical (track)
+// El efecto de retardo: Cómo añadir el efecto de retardo a una pista musical
 
 // Configuración
 setTempo(120);
@@ -257,7 +257,7 @@ Aquí hay un ejemplo de un _fade in_:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
+# Envelopes: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
 
 # Configuración
 from earsketch import *
@@ -274,7 +274,7 @@ setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
+// Envelopes: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
 
 // Configuración
 setTempo(120);
@@ -297,7 +297,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
+# Envelopes complejos: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
 
 # Configuración
 from earsketch import *
@@ -328,7 +328,7 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
+// Envelopes complejos: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
 
 // Configuración
 setTempo(120);
@@ -365,7 +365,7 @@ A continuación, hay un ejemplo de la práctica anterior. Cada iteración del ci
 [role="curriculum-python"]
 [source,python]
 ----
-# Automatizar los efectos usando un ciclo _for_
+# Rampas ritmicas: Automatizar los efectos usando un ciclo for
 
 # Configuración
 from earsketch import *
@@ -382,7 +382,7 @@ for compas in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Automatizar los efectos usando un ciclo for
+// Rampas ritmicas: Automatizar los efectos usando un ciclo for
 
 // Configuración
 setTempo(120);
@@ -401,7 +401,7 @@ Y aquí hay un ejemplo de _fade in_ y _fade out_ en todas las pistas:
 [role="curriculum-python"]
 [source,python]
 ----
-# Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
+# Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
 
 # Configuración
 from earsketch import*
@@ -433,7 +433,7 @@ for pista in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
+// Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
 
 // Configuración
 setTempo(100);
