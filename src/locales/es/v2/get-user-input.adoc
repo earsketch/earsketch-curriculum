@@ -28,7 +28,7 @@ Aquí hay un ejemplo usando código:
 [role="curriculum-python"]
 [source,python]
 ----
-# Vincular dos ritmos usando declaraciones de retorno
+# Declaraciones de retorno: Vincular dos ritmos usando declaraciones de retorno
 
 # Configuración
 from earsketch import *
@@ -58,7 +58,7 @@ crearRitmo(nuevoComienzo, HIPHOP_DUSTYGROOVE_010, ritmo2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Vincular dos ritmos usando declaraciones de retorno
+// Declaraciones de retorno: Vincular dos ritmos usando declaraciones de retorno
 
 // Configuración
 setTempo(100);
@@ -110,7 +110,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# nombre_de_script: Declaraciones de retorno 2; Devolver el último compás de una función de sección
+# Declaraciones de retorno 2: Devolver el último compás de una función de sección
 
 # Configuración
 from earsketch import *
@@ -134,7 +134,7 @@ print(ultimoCompas)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Devolver el último compás de una función de sección
+// Declaraciones de retorno 2: Devolver el último compás de una función de sección
 
 // Configuración
 setTempo(120);
@@ -172,7 +172,7 @@ Aquí hay un ejemplo usando código:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar un booleano para crear variaciones de una función
+# Declaración condicional: Cómo usar un booleano para crear variaciones de una función
 
 # Configuración
 from earsketch import *
@@ -199,7 +199,7 @@ verso(7, False)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar un booleano para crear variaciones de una función
+// Declaración condicional: Cómo usar un booleano para crear variaciones de una función
 
 // Configuración
 setTempo(120);
@@ -263,35 +263,29 @@ En el siguiente ejemplo, se usa el valor que el usuario escribió en la consola 
 [role="curriculum-python"]
 [source,python]
 ----
-// Cómo usar un booleano para crear variaciones de una función
+# Respuesta del usuario 1: Cómo pedir que el usuario escoja el tempo
 
-// Configuración
-setTempo(120);
+# Configuración
+from earsketch import *
 
-var melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
-var melodia2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
-var bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+# Pedir que escoja el tempo
+pregunta = "What tempo would you like for your music? Choose a number between 45 and 220"
+respuesta = readInput(pregunta)
 
-// Definición de la función
-function verso(comienzo, variacion) {
-    // Variacion es igual a true o false.
-    if (variacion) {
-        fitMedia(melodia1, 1, comienzo, comienzo + 4);
-    } else {
-        fitMedia(melodia2, 1, comienzo, comienzo + 4);
-    }
-    fitMedia(bateria1, 2, comienzo, comienzo + 4); // Está fuera de la declaración condicional (no hay sangría).
-}
+# Convertirla en un número entero
+tempo = int(respuesta)
 
-// Llamadas a función
-verso(1, true);
-verso(7, false);
+# Poner el tempo
+setTempo(tempo)
+
+# Música
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo pedir que el usuario escoja el tempo
+// Respuesta del usuario 1: Cómo pedir que el usuario escoja el tempo
 
 // Configuración
 
@@ -316,7 +310,7 @@ La *concatenación* es una manera de combinar las cadenas, usando el símbolo `+
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una canción dubstep con parámetros escogidos por el usuario
+# Respuesta del usuario 2: Cómo crear una canción dubstep con parámetros escogidos por el usuario
 
 # Configuración
 from earsketch import *
@@ -334,7 +328,7 @@ fitMedia(clipFinal, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear una canción dubstep con parámetros escogidos por el usuario
+// Respuesta del usuario 2: Cómo crear una canción dubstep con parámetros escogidos por el usuario
 
 // Configuración
 setTempo(120);
@@ -421,7 +415,7 @@ Usa el siguiente programa para imprimir las respuestas:
 [role="curriculum-python"]
 [source,python]
 ----
-# Imprimir expresiones booleanas
+# Expresiones booleanas: Imprimir expresiones booleanas
 
 from earsketch import *
 
@@ -437,7 +431,7 @@ print(not(False or False))
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Imprimir expresiones booleanas
+// Expresiones booleanas: Imprimir expresiones booleanas
 
 // Configuración
 setTempo(120);
@@ -473,7 +467,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
+# Operaciones booleanas: Pedir que el usuario escoja un género y crear un ritmo basándose en su elección
 
 from earsketch import *
 setTempo(120)
@@ -509,7 +503,7 @@ setEffect(2, REVERB, MIX, 0.1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Pedir que el usuario escoja un género y crear un ritmo basándose en su selección
+// Operaciones booleanas: Pedir que el usuario escoja un género y crear un ritmo basándose en su selección
 
 // Configuración
 setTempo(120);

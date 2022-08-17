@@ -27,7 +27,7 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# Liaison de deux beats (rythmes) à l'aide d'instructions de retour
+# Instructions de retour : Liaison de deux rythmes à l'aide d'instructions de retour
 
 # Paramétrage
 from earsketch import *
@@ -55,7 +55,7 @@ createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Liaison de deux beats (rythmes) à l'aide d'instructions de retour
+// Instructions de retour : Liaison de deux rythmes à l'aide d'instructions de retour
 
 // Paramétrage
 setTempo(100);
@@ -105,7 +105,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Renvoi de la mesure de fin d'une fonction de partie
+# Instructions de retour 2 : Renvoi de la mesure de fin d'une fonction de partie
 
 # Paramétrage
 from earsketch import *
@@ -129,7 +129,7 @@ print(endMeasure)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Renvoi de la mesure de fin d'une fonction de partie
+// Instructions de retour 2 : Renvoi de la mesure de fin d'une fonction de partie
 
 // Paramétrage
 setTempo(120);
@@ -165,7 +165,7 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation d'une booléenne pour créer une variation dans une fonction
+# Instruction conditionnelle : Utilisation d'une booléenne pour créer une variation dans une fonction
 
 # Paramétrage
 from earsketch import *
@@ -192,7 +192,7 @@ verse(7, False)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation d'une booléenne pour créer une variation dans une fonction
+// Instruction conditionnelle : Utilisation d'une booléenne pour créer une variation dans une fonction
 
 // Paramétrage
 setTempo(120);
@@ -254,7 +254,7 @@ Dans l'exemple ci-dessous, l'entrée de la console est utilisée pour détermine
 [role="curriculum-python"]
 [source,python]
 ----
-# Demande de saisie du tempo à l'utilisateur
+# Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
 
 # Paramétrage
 from earsketch import *
@@ -276,7 +276,7 @@ fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Demande de saisie de tempo à l'utilisateur
+// Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
 
 // Paramétrage
 
@@ -301,7 +301,7 @@ La *concaténation* est un moyen de lier des chaînes de caractères ensemble, �
 [role="curriculum-python"]
 [source,python]
 ----
-# Création d'une chanson de dubstep à l'aide de paramètres spécifiés par l'utilisateur
+# Entrée d'utilisateur 2 : Création d'une chanson de dubstep à l'aide de paramètres spécifiés par l'utilisateur
 
 # Paramétrage
 from earsketch import *
@@ -319,7 +319,7 @@ fitMedia(finalClip, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Création d'une chanson de dubstep avec des paramètres spécifiés par l'utilisateur
+// Entrée d'utilisateur 2 : Création d'une chanson de dubstep avec des paramètres spécifiés par l'utilisateur
 
 // Paramétrage
 setTempo(120);
@@ -403,7 +403,7 @@ Utilisez le code suivant pour afficher les réponses :
 [role="curriculum-python"]
 [source,python]
 ----
-# Affichage d'expressions booléennes
+# Expressions booléennes : Affichage d'expressions booléennes
 
 from earsketch import *
 
@@ -419,7 +419,7 @@ print(not(False or False))
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Affichage d'expressions booléennes
+// Expressions booléennes : Affichage d'expressions booléennes
 
 // Paramétrage
 setTempo(120);
@@ -454,7 +454,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Demande à l'utilisateur d'entrer un genre musical et création d'un beat en conséquence
+# Opérations booléennes : Demande à l'utilisateur d'entrer un genre musical et création d'un beat en conséquence
 
 from earsketch import *
 setTempo(120)
@@ -470,7 +470,7 @@ hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
-# Demande à l'utilisateur de faire une entrée
+# Opérations booléennes : Demande à l'utilisateur de faire une entrée
 genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
 
 # Création du rythme approprié

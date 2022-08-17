@@ -27,7 +27,7 @@ Here is a code example:
 [role="curriculum-python"]
 [source,python]
 ----
-# Linking two beats together with return statements
+# Return Statements: Linking two beats together with return statements
 
 # Setup
 from earsketch import *
@@ -56,7 +56,7 @@ createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Linking two beats together with return statements
+// Return Statements: Linking two beats together with return statements
 
 // Setup
 setTempo(100);
@@ -107,7 +107,7 @@ Here is an example:
 [role="curriculum-python"]
 [source,python]
 ----
-# Returning the end measure of a section function
+# Return Statements 2: Returning the end measure of a section function
 
 # Setup
 from earsketch import *
@@ -131,7 +131,7 @@ print(endMeasure)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Returning the end measure of a section function
+// Return Statements 2: Returning the end measure of a section function
 
 // Setup
 setTempo(120);
@@ -169,7 +169,7 @@ Here is an example code:
 [role="curriculum-python"]
 [source,python]
 ----
-# Using a boolean to create variation in a function
+# Conditional statement: Using a boolean to create variation in a function
 
 # Setup
 from earsketch import *
@@ -196,7 +196,7 @@ verse(7, False)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using a boolean to create variation in a function
+// Conditional statement: Using a boolean to create variation in a function
 
 // Setup
 setTempo(120);
@@ -260,7 +260,7 @@ In the example below, console input is used to determine the tempo of the song. 
 [role="curriculum-python"]
 [source,python]
 ----
-# Asking the user for the tempo
+# User input 1: Asking the user for the tempo
 
 # Setup
 from earsketch import *
@@ -282,7 +282,7 @@ fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Asking the user for the tempo
+// User input 1: Asking the user for the tempo
 
 // Setup
 
@@ -307,7 +307,7 @@ Here is another example of what you can do with user input.
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating a dubstep song with user-specified parameters
+# User input 2: Creating a dubstep song with user-specified parameters
 
 # Setup
 from earsketch import *
@@ -325,7 +325,7 @@ fitMedia(finalClip, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating a dubstep song with user-specified parameters
+// User input 2: Creating a dubstep song with user-specified parameters
 
 // Setup
 setTempo(120);
@@ -412,7 +412,7 @@ Use the following code to print the answers:
 [role="curriculum-python"]
 [source,python]
 ----
-# printing boolean expressions
+# Boolean expressions: printing boolean expressions
 
 from earsketch import *
 
@@ -428,7 +428,7 @@ print(not(False or False))
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// printing boolean expressions
+// Boolean expressions: printing boolean expressions
 
 // Setup
 setTempo(120);
@@ -464,7 +464,7 @@ Here is an example:
 [role="curriculum-python"]
 [source,python]
 ----
-# Asking user for genre and creating beat accordingly
+# Boolean operations: Asking user for genre and creating beat accordingly
 
 from earsketch import *
 setTempo(120)
@@ -500,7 +500,7 @@ setEffect(2, REVERB, MIX, 0.1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Asking user for genre and creating beat accordingly
+// Boolean operations: Asking user for genre and creating beat accordingly
 
 // Setup
 setTempo(120);
