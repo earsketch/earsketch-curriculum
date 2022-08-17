@@ -20,7 +20,7 @@
 [role="curriculum-python"]
 [source,python]
 ----
-# Instead of wiriting this:
+# Instead of writing this:
 kick = OS_KICK03
 hihat = OS_OPENHAT01
 snare = OS_SNARE05
@@ -32,7 +32,7 @@ drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-/ Instead of wiriting this:
+// Instead of writing this:
 var kick = OS_KICK03;
 var hihat = OS_OPENHAT01;
 var snare = OS_SNARE05;
@@ -137,7 +137,7 @@ for track in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Iterating through Arrays: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+// Iterating through Arrays: Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
 
 // Setup
 setTempo(130);
@@ -181,7 +181,7 @@ for (var track = 1; track < 4; track++) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Additive Introduction: Creating an additive introduction with array iteration
+# Additive Introduction: Creating an additive introduction with list iteration
 
 # Setup
 from earsketch import *
@@ -373,7 +373,7 @@ print(soundsD)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// String and Lists Operations: Showing what we can do with lists and arrays
+// String and Lists Operations: Showing what we can do with arrays and strings
 // Setup
 setTempo(120);
 
@@ -484,7 +484,7 @@ makeBeat(drumInstr, 1, 1, finalBeat);
 [role="curriculum-python"]
 [source,python]
 ----
-# Making a drum set: Using arrays with makeBeat()
+# Making a drum set: Using lists with makeBeat()
 
 # Setup
 from earsketch import *

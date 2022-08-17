@@ -184,7 +184,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de arreglo
+# Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de lista
 
 # Configuración
 from earsketch import *
@@ -350,7 +350,7 @@ print(sonidosD)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Operaciones de cadenas y arreglos: Mostrar lo que podemos hacer con listas y arreglos
+// Operaciones de cadenas y arreglos: Mostrar lo que podemos hacer con arreglo y cadenas
 
 // Configuración
 setTempo(120);
