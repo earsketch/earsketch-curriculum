@@ -58,7 +58,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation d'une liste pour contenir plusieurs clips audio
+# Listes : Utilisation d'une liste pour contenir plusieurs clips audio
 
 # Paramétrage
 from earsketch import *
@@ -78,7 +78,7 @@ fitMedia(myEnsemble[2], 3, 1, 5)  # accès à l'index 2
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation d'un tableau pour contenir plusieurs clips audio
+// Tableaux : Utilisation d'un tableau pour contenir plusieurs clips audio
 
 // Paramétrage
 setTempo(130);
@@ -116,7 +116,7 @@ Voyez l'exemple ci-dessous. Vous pouvez jeter un coup d'œil dans la console pou
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation d'une liste pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
+# Itération à l'aide de listes : Utilisation d'une liste pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
 
 # Paramétrage
 from earsketch import *
@@ -137,7 +137,7 @@ for track in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation d'un tableau pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
+// Itération à l'aide de tableaux : Utilisation d'un tableau pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
 
 // Paramétrage
 setTempo(130);
@@ -181,7 +181,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Création d'une introduction additive avec itération de liste
+# Introduction additive : Création d'une introduction additive avec itération de liste
 
 # Paramétrage
 from earsketch import *
@@ -200,7 +200,7 @@ for measure in range(1, len(introSounds) + 1):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Création d'une introduction additive avec une itération de tableau
+// Introduction additive : Création d'une introduction additive avec une itération de tableau
 
 // Paramétrage
 setTempo(120);
@@ -333,7 +333,7 @@ Voici un exemple de solution :
 [role="curriculum-python"]
 [source,python]
 ----
-# Ce qui peut être réalisé avec des listes et des chaînes de caractères
+# Opérations de chaînes de caractères et de listes : Ce qui peut être réalisé avec des listes et des chaînes de caractères
 
 # Paramétrage
 from earsketch import *
@@ -373,7 +373,7 @@ print(soundsD)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
+// Opérations de chaînes de caractères et de tableaux : Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
 // Paramétrage
 setTempo(120);
 
@@ -421,7 +421,7 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Prolonger une chaîne de caractères de beat pour en obtenir une plus longue.
+# Opérations de chaînes de caractères : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue
 
 # Paramétrage
 from earsketch import *
@@ -449,7 +449,7 @@ makeBeat(drumInstr, 1, 1, finalBeat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Prolonger une chaîne de caractères de beat pour en obtenir une plus longue.
+// Opérations de chaînes de caractères : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue
 
 // Paramétrage
 setTempo(120);
@@ -484,7 +484,7 @@ Enfin, `makeBeat()` vous permet de gérer plusieurs clips de sons à la fois. Ce
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de listes avec la fonction makeBeat()
+# Création d'un enchaînement de rythmes percussifs : Utilisation de listes avec la fonction makeBeat()
 
 # Paramétrage
 from earsketch import *
@@ -507,7 +507,7 @@ makeBeat(drums, 1, 3, beat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de tableaux avec la fonction makeBeat()
+// Création d'un enchaînement de rythmes percussifs : Utilisation de tableaux avec la fonction makeBeat()
 
 // Paramétrage
 setTempo(100);
@@ -537,7 +537,7 @@ Voici la solution :
 [role="curriculum-python"]
 [source,python]
 ----
-# Créez des rythmes de divers genres
+# Exemples de beats ou rythmes : Créez des rythmes de divers genres
 
 # Paramétrage
 from earsketch import *
@@ -564,7 +564,7 @@ makeBeat(drums, 1, 7, "0++10+1+0++10+1+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Créez des rythmes de divers genres
+// Exemples de beats ou rythmes : Créez des rythmes de divers genres
 
 // Paramétrage
 setTempo(110);

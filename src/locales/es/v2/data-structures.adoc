@@ -59,7 +59,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una lista que contiene varios clips de audio
+# Listas: Cómo crear una lista que contiene varios clips de audio
 
 # Configuración
 from earsketch import *
@@ -79,7 +79,7 @@ fitMedia(miConjunto[2], 3, 1, 5)  # Acceder al índice 2
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear un arreglo que contiene varios clips de audio
+// Arreglos: Cómo crear un arreglo que contiene varios clips de audio
 
 // Configuración
 setTempo(130);
@@ -118,7 +118,7 @@ A continuación, hay un ejemplo. Puedes mirar la consola para ver qué se imprim
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
+# Iterar a través de las listas: Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
 
 # Configuración
 from earsketch import *
@@ -139,7 +139,7 @@ for pista in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
+// Iterar a través de arreglos: Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
 
 // Configuración
 setTempo(130);
@@ -184,7 +184,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una introducción aditiva usando la iteración de arreglo
+# Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de arreglo
 
 # Configuración
 from earsketch import *
@@ -203,7 +203,7 @@ for compas in range(1, len(sonidosIntroductorios) + 1):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear una introducción aditiva usando la iteración de arreglo
+// Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de arreglo
 
 // Configuración
 setTempo(120);
@@ -310,7 +310,7 @@ Aquí está un ejemplo de una solución:
 [role="curriculum-python"]
 [source,python]
 ----
-# Mostrar lo que podemos hacer con listas y cadenas
+# Operaciones de cadenas y listas: Mostrar lo que podemos hacer con listas y cadenas
 
 # Configuración
 from earsketch import *
@@ -350,7 +350,7 @@ print(sonidosD)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Mostrar lo que podemos hacer con listas y arreglos
+// Operaciones de cadenas y arreglos: Mostrar lo que podemos hacer con listas y arreglos
 
 // Configuración
 setTempo(120);
@@ -405,7 +405,7 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Expandir una cadena de tiempos a una cadena de tiempos más larga
+# Operaciones de cadenas: Expandir una cadena de tiempos a una cadena de tiempos más larga
 
 # Configuración
 from earsketch import *
@@ -433,7 +433,7 @@ makeBeat(instrBateria, 1, 1, ritmoFinal)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Expandir una cadena de tiempos en una cadena de tiempos más larga
+// Operaciones de cadenas: Expandir una cadena de tiempos en una cadena de tiempos más larga
 
 // Configuración
 setTempo(120);
@@ -468,7 +468,7 @@ Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto 
 [role="curriculum-python"]
 [source,python]
 ----
-# Usar listas con makeBeat()
+# Hacer una batería: Usar listas con makeBeat()
 
 # Configuración
 from earsketch import *
@@ -491,7 +491,7 @@ makeBeat(bateria, 1, 3, ritmo)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Usar arreglos con makeBeat()
+// Hacer una batería: Usar arreglos con makeBeat()
 
 // Configuración
 setTempo(100);
@@ -523,7 +523,7 @@ Aquí está la solución:
 [role="curriculum-python"]
 [source,python]
 ----
-# Crear ritmos de diferentes géneros
+# Ejemplos de ritmos: Crear ritmos de diferentes géneros
 
 # Configuración
 from earsketch import *
@@ -550,7 +550,7 @@ makeBeat(bateria, 1, 7, "0++10+1+0++10+1+")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Crear ritmos de diferentes géneros
+// Ejemplos de ritmos: Crear ritmos de diferentes géneros
 
 // Configuración
 setTempo(110);

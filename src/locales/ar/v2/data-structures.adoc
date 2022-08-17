@@ -58,7 +58,7 @@ var drums = [OS_KICK03,OS_OPENHAT01,OS_SNARE05];
 [role="curriculum-python"]
 [source,python]
 ----
-# Using a list to hold several audio clips
+# Lists: Using a list to hold several audio clips
 
 # Setup
 from earsketch import *
@@ -78,7 +78,7 @@ fitMedia(myEnsemble[2], 3, 1, 5)  # accessing index 2
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using an array to hold several audio clips
+// Arrays: Using an array to hold several audio clips
 
 // Setup
 setTempo(130);
@@ -116,7 +116,7 @@ image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+# Iterating through Lists: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
 
 # Setup
 from earsketch import *
@@ -137,7 +137,7 @@ for track in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+// Iterating through Arrays: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
 
 // Setup
 setTempo(130);
@@ -181,7 +181,7 @@ for (var track = 1; track < 4; track++) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating an additive introduction with array iteration
+# Additive Introduction: Creating an additive introduction with array iteration
 
 # Setup
 from earsketch import *
@@ -200,7 +200,7 @@ for measure in range(1, len(introSounds) + 1):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating an additive introduction with array iteration
+// Additive Introduction: Creating an additive introduction with array iteration
 
 // Setup
 setTempo(120);
@@ -333,7 +333,7 @@ for (var measure = 1; measure < introSounds.length + 1; measure++) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Showing what we can do with lists and strings
+# String and Lists Operations: Showing what we can do with lists and strings
 
 # Setup
 from earsketch import *
@@ -373,7 +373,7 @@ print(soundsD)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Showing what we can do with lists and arrays
+// String and Lists Operations: Showing what we can do with lists and arrays
 // Setup
 setTempo(120);
 
@@ -421,7 +421,7 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Expand a beat string into a longer beat string.
+# String Operations: Expand a beat string into a longer beat string
 
 # Setup
 from earsketch import *
@@ -449,7 +449,7 @@ makeBeat(drumInstr, 1, 1, finalBeat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Expand a beat string into a longer beat string.
+// String Operations: Expand a beat string into a longer beat string
 
 // Setup
 setTempo(120);
@@ -484,7 +484,7 @@ makeBeat(drumInstr, 1, 1, finalBeat);
 [role="curriculum-python"]
 [source,python]
 ----
-# Using arrays with makeBeat()
+# Making a drum set: Using arrays with makeBeat()
 
 # Setup
 from earsketch import *
@@ -507,7 +507,7 @@ makeBeat(drums, 1, 3, beat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using arrays with makeBeat()
+// Making a drum set: Using arrays with makeBeat()
 
 // Setup
 setTempo(100);
