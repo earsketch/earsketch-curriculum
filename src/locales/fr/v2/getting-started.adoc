@@ -61,7 +61,7 @@ Essayons d'exécuter un exemple de code dans EarSketch ! Dans la case ci-dessous
 [role="curriculum-python"]
 [source,python]
 ----
-# Ce code a pour but d'ajouter un clip audio dans le DAW
+# Intro Script : Ce code a pour but d'ajouter un clip audio dans le DAW
 
 # Paramétrage
 from earsketch import *
@@ -74,7 +74,7 @@ fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ce clip a pour but d'ajouter un clip audio dans le DAW
+// Intro Script : Ce code a pour but d'ajouter un clip audio dans le DAW
 
 // Paramétrage
 setTempo(120);
@@ -189,7 +189,7 @@ Retrouvez ci-dessous quelques exemples de code utilisant la fonction `fitMedia()
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de la fonction fitMedia() pour ajouter un clip dans le DAW
+# Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
 
 # Paramétrage
 from earsketch import *
@@ -202,7 +202,7 @@ fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de la fonction fitMedia() pour ajouter un clip dans le DAW
+// Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
 
 // Paramétrage
 setTempo(120);
@@ -216,7 +216,7 @@ Pour plus de défi, ajoutez plus d'appels de fonction `fitMedia()` dans votre sc
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de plusieurs appels de fonction fitMedia(), sur différentes pistes et avec différents clips
+# Utilisation de la fonction fitMedia() 2 : Plusieurs appels de fonction fitMedia() sur différentes pistes
 
 # Paramétrage
 from earsketch import *
@@ -231,7 +231,7 @@ fitMedia(Y11_GUITAR_1, 3, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de plusieurs appels de fonction fitMedia(), sur différentes pistes et avec différents clips
+// Utilisation de la fonction fitMedia() 2 : Plusieurs appels de fonction fitMedia() sur différentes pistes
 
 // Paramétrage
 setTempo(100);
@@ -308,7 +308,7 @@ Trouvez les cinq erreurs dans le code suivant :
 [role="curriculum-python"]
 [source,python]
 ----
-# Trouvez et corrigez les erreurs dans ce script
+# Trouvez les erreurs : Corrigez cinq erreurs
 
 from earsketch import *
 setTempo(88
@@ -320,7 +320,7 @@ fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Trouvez et corriger les erreurs dans ce script
+// Trouvez les erreurs : Corrigez cinq erreurs
 
 setTempo(88;
 

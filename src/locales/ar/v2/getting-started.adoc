@@ -55,7 +55,7 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# This code adds one audio clip to the DAW
+# Intro Script: This code adds one audio clip to the DAW
 
 # Setup Section
 from earsketch import *
@@ -68,7 +68,7 @@ fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// This code adds one audio clip to the DAW
+// Intro Script: This code adds one audio clip to the DAW
 
 // Setup Section
 setTempo(120);
@@ -176,7 +176,7 @@ OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# Using fitMedia() to add a clip to the DAW
+# Using fitMedia(): Adding a clip to the DAW
 
 # Setup
 from earsketch import *
@@ -189,7 +189,7 @@ fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using fitMedia() to add a clip to the DAW
+// Using fitMedia(): Adding a clip to the DAW
 
 // Setup
 setTempo(120);
@@ -203,7 +203,7 @@ fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
 [role="curriculum-python"]
 [source,python]
 ----
-# Using multiple fitMedia() calls, on different tracks and with different clips
+# Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 # Setup Section
 from earsketch import *
@@ -218,7 +218,7 @@ fitMedia(Y11_GUITAR_1, 3, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using multiple fitMedia() calls, on different tracks and with different clips
+// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 // Setup Section
 setTempo(100);
@@ -298,7 +298,7 @@ END OF OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# Find and fix the errors in this script
+# Finding errors: Five errors below must be fixed
 
 from earsketch import *
 setTempo(88
@@ -310,7 +310,7 @@ fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Find and fix the errors in this script
+// Finding errors: Five errors below must be fixed
 
 setTempo(88;
 
