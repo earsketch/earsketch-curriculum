@@ -109,16 +109,16 @@ fitMedia(YG_RNB_TAMBOURINE_1, 4, 1, 5)
 fitMedia(bass, 5, 1, 3)
 fitMedia(bass, 5, 4, 6)
 
-# verse1
 def verse(start, end):
     fitMedia(drums, 1, start, end)
     fitMedia(bass, 2, start, end)
     fitMedia(vox, 3, start, end)
     fitMedia(vox1, 4, start, end + 1)
 
+# Verse 1
 verse(5, 9)
 
-# outro
+# Outro
 fitMedia(HIPHOP_BASSSUB_001, 6, 9, 13)
 fitMedia(HIPHOP_DUSTYGROOVE_001, 7, 9, 13)
 fitMedia(keys, 8, 11, 15)

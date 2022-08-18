@@ -109,7 +109,7 @@ myList = ["Get", "thee", "to", "the", "console!"]
 
 # Stopping condition determined by list length
 for i in range(0, len(myList)):
-    print myList[i]
+    print(myList[i])
 ----
 
 [role="curriculum-javascript"]
@@ -210,10 +210,13 @@ from earsketch import *
 setTempo(100)
 
 # Music
-drums = [ELECTRO_DRUM_MAIN_BEAT_001,  # an list of drum clips
-         ELECTRO_DRUM_MAIN_BEAT_002,
-         ELECTRO_DRUM_MAIN_BEAT_003,
-         ELECTRO_DRUM_MAIN_BEAT_004]
+# a list of drum clips
+drums = [
+    ELECTRO_DRUM_MAIN_BEAT_001,
+    ELECTRO_DRUM_MAIN_BEAT_002,
+    ELECTRO_DRUM_MAIN_BEAT_003,
+    ELECTRO_DRUM_MAIN_BEAT_004
+]
 
 # each number is actually an index into the drums list
 drumPattern = '0+0+11112+2+3+++'
@@ -230,7 +233,8 @@ makeBeat(drums, 1, 1, drumPattern)
 setTempo(100);
 
 // Music
-var drums = [ // an array of drum clips
+// an array of drum clips
+var drums = [
     ELECTRO_DRUM_MAIN_BEAT_001,
     ELECTRO_DRUM_MAIN_BEAT_002,
     ELECTRO_DRUM_MAIN_BEAT_003,

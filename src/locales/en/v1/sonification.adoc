@@ -202,7 +202,7 @@ drumBeats = ["", "", "", "", "", "", "", ""]
 for outerCounter in range(len(myImage)):
     for innerCounter in range(len(myImage[0])):
 
-        if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
+        if myImage[outerCounter][innerCounter] == 255:  # if the color is white
             drumBeats[outerCounter] = drumBeats[outerCounter] + "-"  # then rest
         else:
             drumBeats[outerCounter] = drumBeats[outerCounter] + "0"  # otherwise, hit
@@ -295,7 +295,7 @@ Line 8 checks the value of the element in the 2-dimensional array, which (from t
 [role="curriculum-python"]
 [source,python]
 ----
-if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
+if myImage[outerCounter][innerCounter] == 255:  # if the color is white
 ----
 
 
@@ -385,7 +385,7 @@ def createDrumbeats(myImage):
     for outerCounter in range(len(myImage)):
         for innerCounter in range(len(myImage[0])):
 
-            if (myImage[outerCounter][innerCounter] == 255):  # if the color is white
+            if myImage[outerCounter][innerCounter] == 255:  # if the color is white
                 drumBeats[outerCounter] = drumBeats[outerCounter] + "-"  # then rest
             else:
                 drumBeats[outerCounter] = drumBeats[outerCounter] + "0"  # otherwise, hit

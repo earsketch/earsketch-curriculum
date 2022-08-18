@@ -520,10 +520,10 @@ hihat = OS_CLOSEDHAT03
 # Añadir batería:
 def anadirBateria(comienzo, fin, patron):
     # Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
-    if (patron == "heavy"):
+    if patron == "heavy":
         cadenaDeTiemposDeBombo = "0---0---0---00--"
         cadenaDeTiemposDeHihat = "-----000----0-00"
-    elif(patron == "ligero"):
+    elif patron == "ligero":
         cadenaDeTiemposDeBombo = "0-------0---0---"
         cadenaDeTiemposDeHihat = "--0----0---0---"
     # Entonces creamos el ritmo

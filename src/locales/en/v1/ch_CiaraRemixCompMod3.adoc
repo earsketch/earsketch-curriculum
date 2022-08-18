@@ -210,7 +210,7 @@ Let’s look at an example. We define and call a function named `myFunctionA()`.
 
 [source,python]
 ----
-# Function, inputs, and ":" (colon)
+# A function with input arguments
 def myFunctionA(startMeasure, endMeasure):
     # Function body, indented
     fitMedia(CIARA_SET_BASSLINE_3, 1, startMeasure, endMeasure)

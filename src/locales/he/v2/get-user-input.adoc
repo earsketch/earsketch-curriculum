@@ -237,7 +237,7 @@ print(answer)
 [source,javascript]
 ----
 var answer = readInput("What tempo would you like for your music?");
-print(answer);
+println(answer);
 ----
 
 לעיתים נרצה להמיר ערך מטיפוס נתונים אחד לאחר. הנה מספר פונקציות שימושיות:
@@ -382,7 +382,7 @@ fitMedia(finalClip, 1, 1, 5);
 * `True and True`
 * `True and False or True`
 * `True and not False`
-* `not(False or False)`
+* `not (False or False)`
 ****
 
 [role="curriculum-javascript"]
@@ -414,7 +414,7 @@ print(True or False)
 print(True and True)
 print((True and False) or True)
 print(True and not False)
-print(not(False or False))
+print(not (False or False))
 ----
 
 [role="curriculum-javascript"]
@@ -474,10 +474,10 @@ edmClapBeat = "----0-------0---"
 genre = readInput("What genre is your favourite? Hip Hop or EDM?")
 
 # Creating the appropriate rhythm
-if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
+if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
     makeBeat(kick, 1, 1, hiphopKickBeat)
     makeBeat(hihat, 2, 1, hiphopHihatBeat)
-elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
+elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
     makeBeat(kick, 1, 1, edmKickBeat)
     makeBeat(clap, 2, 1, edmClapBeat)
 else:
@@ -578,7 +578,7 @@ setEffect(2, REVERB, MIX, 0.1);
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     m = 5 + n
     print(m)
 ----

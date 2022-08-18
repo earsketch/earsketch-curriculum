@@ -223,7 +223,7 @@ setTempo(120)
 
 # Music
 # A section
-def sectionA(startMeasure, endMeasure):  # create an A section
+def sectionA(startMeasure, endMeasure):
     fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure)
     fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure)
     fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, startMeasure, endMeasure)

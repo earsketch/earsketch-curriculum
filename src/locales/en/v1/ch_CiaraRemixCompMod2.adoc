@@ -314,7 +314,7 @@ Now it’s time to write our for-Loops and add the same type of repetition to ou
 
 For-loops in Python consist of 3 basic parts:
 
-* *Loop Body:* The body of a loop contains statements that will execute repeatedly. It includes everything that is "indented" directly after the colon. In our example, the loop body was our two makeBeat functions.
+* *Loop Body:* The body of a loop contains statements that will execute repeatedly. It includes everything that is indented directly after the colon. In our example, the loop body was our two makeBeat functions.
 
 * *Loop Counter:* Creates a variable to be used as a loop counter. In our example, the loop counter was a measure.
 
@@ -417,7 +417,7 @@ If you have an error in your code, follow these instructions:
 
 . *Locate the error in your code:* If the console provided a line number, take a look at that line and the previous line in your code. Check any arguments carefully. You can also comment out the lines of code one at a time to identify where a possible error could be.
 
-. *Print debugging can also be used to locate an error:* Insert `print()` throughout your code `fitmedia(RD_EDM_DRUM BEATPART_1, 10, 1, 4)` , to obtain the value of variables and check your logic.
+. *Print debugging can also be used to locate an error:* Insert `print()` throughout your code  to obtain the value of variables and check your logic.
 
 . *Squash the bug:* Check for syntax errors, like unclosed parentheses, quotations, or brackets. Edit the code, and run it to verify its correctness.
 
@@ -435,7 +435,7 @@ Some Common Errors in your code may be
 
 . *Initializing variables:* A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
 
-. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes `from earsketch import *`, `setTempo()`, can be deleted by accident. Make sure that these functions appear in every script.
+. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes `from earsketch import *` can be deleted by accident.
 
 . *Comments:* Improper commenting will cause a syntax error. Remember that Python comments must start with a `#` symbol.
 

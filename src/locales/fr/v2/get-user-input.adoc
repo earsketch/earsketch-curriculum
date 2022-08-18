@@ -235,7 +235,7 @@ print(answer)
 [source,javascript]
 ----
 var answer = readInput("Quel tempo désirez-vous appliquer pour votre musique ?");
-print(answer);
+println(answer);
 ----
 
 Nous pourrions avoir besoin de convertir une information en un autre type de données. Voici quelques fonctions utiles :
@@ -381,7 +381,7 @@ Selon vous, à quoi correspondent les expressions suivantes ? True ou False ?
 * `True and True`
 * `(True and False) or True`
 * `True and not False`
-* `not(False or False)`
+* `not (False or False)`
 ****
 
 [role="curriculum-javascript"]
@@ -413,7 +413,7 @@ print(True or False)
 print(True and True)
 print((True and False) or True)
 print(True and not False)
-print(not(False or False))
+print(not (False or False))
 ----
 
 [role="curriculum-javascript"]
@@ -474,10 +474,10 @@ edmClapBeat = "----0-------0---"
 genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
 
 # Création du rythme approprié
-if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
+if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
     makeBeat(kick, 1, 1, hiphopKickBeat)
     makeBeat(hihat, 2, 1, hiphopHihatBeat)
-elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
+elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
     makeBeat(kick, 1, 1, edmKickBeat)
     makeBeat(clap, 2, 1, edmClapBeat)
 else:
@@ -578,7 +578,7 @@ Quelle serait la valeur de retour du bloc de code suivant (qu'est-ce qui affiche
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     m = 5 + n
     print(m)
 ----

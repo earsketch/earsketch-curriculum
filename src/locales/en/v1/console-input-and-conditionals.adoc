@@ -323,7 +323,7 @@ Boolean logic allows a program to make a decision based on a condition. A *condi
 [role="curriculum-python"]
 [source,python]
 ----
-if (condition):
+if condition:
     statement to execute if condition evaluates to True
 ----
 
@@ -358,10 +358,10 @@ setTempo(120)
 
 # Example 1: What is 1 + 1?  Take a guess as to what will be printed out.
 answer = 1 + 1
-if (answer == 2):
+if answer == 2:
     print('The answer is 2')
 
-if (answer == 3):
+if answer == 3:
     print('The answer is 3')
 ----
 
@@ -400,7 +400,7 @@ a = 'energetic'
 b = 'rock'
 
 # Did you want to listen to energetic hip hop?
-if (a == 'energetic' and b == 'hip hop'):
+if (a == 'energetic') and (b == 'hip hop'):
     print('Here is an energetic hiphop song!')
     fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9)
     fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9)
@@ -453,7 +453,7 @@ setTempo(120)
 
 a = readInput("Do you like hip-hop music? Type yes or no.")
 # using logical OR, in case user capitalizes their response.
-if (a == "yes" or a == "Yes" or a == "YES"):
+if (a == "yes") or (a == "Yes") or (a == "YES"):
     print("Hip-hop it is!")
     fitMedia(YG_NEW_HIP_HOP_ARP_1, 1, 1, 9)
     fitMedia(RD_TRAP_MAIN808_BEAT_1, 2, 1, 9)
@@ -728,7 +728,7 @@ What would the output of this block of code be (what would print to the console)
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     n = 5 + n
     print(n)
 ----

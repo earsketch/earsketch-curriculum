@@ -244,7 +244,7 @@ print(respuesta)
 [source,javascript]
 ----
 var respuesta = readInput("Que tempo te gustaria tener en tu musica?");
-print(respuesta);
+println(respuesta);
 ----
 
 Posiblemente tendremos que convertir el dato que ha dado el usuario en otro tipo de dato. Aquí están unas funciones útiles:
@@ -393,7 +393,7 @@ Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`True` o 
 * `True and True`
 * `(True and False) or True`
 * `True and not False`
-* `not(False or False)`
+* `not (False or False)`
 ****
 
 [role="curriculum-javascript"]
@@ -425,7 +425,7 @@ print(True or False)
 print(True and True)
 print((True and False) or True)
 print(True and not False)
-print(not(False or False))
+print(not (False or False))
 ----
 
 [role="curriculum-javascript"]
@@ -487,10 +487,10 @@ ritmoDePalmadasEdm = "----0-------0---"
 genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?")
 
 # Crear el ritmo adecuado
-if((genero == "Hip Hop") or (genero == "hip hop") or (genero == "HIP HOP")):
+if (genero == "Hip Hop") or (genero == "hip hop") or (genero == "HIP HOP"):
     makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop)
     makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop)
-elif((genero == "edm") or (genero == "Edm") or (genero == "EDM")):
+elif (genero == "edm") or (genero == "Edm") or (genero == "EDM"):
     makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm)
     makeBeat(palmada, 2, 1, ritmoDePalmadasEdm)
 else:
@@ -593,7 +593,7 @@ Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario 
 
 [source,python]
 ----
-not(True and (4 > 5))
+not (True and (4 > 5))
 ----
 
 [answers]

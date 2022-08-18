@@ -235,7 +235,7 @@ Below is an example of conditional statement, note the similarity with a for loo
 [role="curriculum-python"]
 [source,python]
 ----
-if (condition):
+if condition:
     # Here write the instructions the computer needs to execute if the condition evaluates to True
     # Note that the instructions are indented, just like in for loops
 ----
@@ -277,7 +277,7 @@ loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # If track 1 is louder than track 2, we reduce its volume
-if (loudnessTrack1 > loudnessTrack2):
+if loudnessTrack1 > loudnessTrack2:
     setEffect(1, VOLUME, GAIN, -10)
 ----
 
@@ -309,11 +309,11 @@ We might want to check several conditions and execute a different set of stateme
 [role="curriculum-python"]
 [source,python]
 ----
-if (condition1):
+if condition1:
     # Here write the instructions the computer needs to execute if the condition1 evaluates to True. If it's False, move to the next line
-elif (condition2):
+elif condition2:
     # Here write the instructions if condition2 is True. If condition2 is False, move to the next line
-elif (condition3):
+elif condition3:
     # Here write the instructions if condition3 is True. If condition3 is False, move to the next line
 else:
     # Here write the instructions in case all 3 conditions are False
@@ -410,11 +410,11 @@ print('The loudness of track 2 is' + str(loudnessTrack2))
 loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
 print('The loudness of track 3 is' + str(loudnessTrack3))
 
-if (loudnessTrack1 < loudnessTrack2):
+if loudnessTrack1 < loudnessTrack2:
     # if track 1 is quieter than track 2 then we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print('track 1 was quieter than track 2')
-elif (loudnessTrack1 < loudnessTrack3):
+elif loudnessTrack1 < loudnessTrack3:
     # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print('track 1 was quieter than track 3')
@@ -527,7 +527,7 @@ What would the output of this block of code be (what would print to the console)
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     print(n + 5)
 else:
     print(n)
@@ -549,7 +549,7 @@ var n = 5;
 if (n * 3 == 15) {
     println(5 + n);
 } else {
-    print(n);
+    println(n);
 }
 ----
 [answers]

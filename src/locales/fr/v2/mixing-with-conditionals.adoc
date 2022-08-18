@@ -232,7 +232,7 @@ Voyez ci-dessous un exemple d'instruction conditionnelle. Notez la similitude av
 [role="curriculum-python"]
 [source,python]
 ----
-if (condition):
+if condition:
     # Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est True (vraie)
     # Notez que les instructions sont indentées, tout comme pour les boucles
 ----
@@ -273,7 +273,7 @@ loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
-if (loudnessTrack1 > loudnessTrack2):
+if loudnessTrack1 > loudnessTrack2:
     setEffect(1, VOLUME, GAIN, -10)
 ----
 
@@ -305,11 +305,11 @@ Il est possible de vérifier plusieurs conditions et d'exécuter des instruction
 [role="curriculum-python"]
 [source,python]
 ----
-if (condition1):
+if condition1:
     # Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est True (vraie). Si la condition est False (n'est pas respectée), passez à la ligne suivante
-elif (condition2):
+elif condition2:
     # Ici, écrivez les instructions si condition2 est True. Si la condition2 est False, passez à la ligne suivante
-elif (condition3):
+elif condition3:
     # Ici, écrivez ici les instructions si condition3 est True. Si la condition3 est False, passez à la ligne suivante
 else:
     # Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
@@ -405,11 +405,11 @@ print('The loudness of track 2 is' + str(loudnessTrack2))
 loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
 print('The loudness of track 3 is' + str(loudnessTrack3))
 
-if (loudnessTrack1 < loudnessTrack2):
+if loudnessTrack1 < loudnessTrack2:
     # if track 1 is quieter than track 2 then we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print('track 1 was quieter than track 2')
-elif (loudnessTrack1 < loudnessTrack3):
+elif loudnessTrack1 < loudnessTrack3:
     # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print('track 1 was quieter than track 3')
@@ -522,7 +522,7 @@ Quelle serait la valeur de retour du bloc de code suivant (qu'est-ce qui s'affic
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     print(n + 5)
 else:
     print(n)
@@ -544,7 +544,7 @@ var n = 5;
 if (n * 3 == 15) {
     println(5 + n);
 } else {
-    print(n);
+    println(n);
 }
 ----
 [answers]
