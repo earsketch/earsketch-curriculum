@@ -65,8 +65,7 @@ Can't turn off pasting without this appearing in JS mode
 for measure in range(1, 9, 2):
     fitMedia(melody, 1, measure, measure + 2)
     makeBeat(kick, 2, measure, beatString)
-    makeBeat(kick, 2, measure + 1, beatString)
-
+  makeBeat(kick, 2, measure + 1, beatString)
 fitMedia(beat, 3, 3, 9)
 ----
 
@@ -114,7 +113,7 @@ Les erreurs relatives à l'indentation ne se produisent pas en JavaScript, bien 
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Index Error »
+# Index Error : Exemple
 
 from earsketch import *
 setTempo(100)
@@ -129,7 +128,7 @@ fitMedia(orch[3], 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Erreur de type « Index Error »
+// Index Error : Exemple
 
 setTempo(120);
 
@@ -149,7 +148,7 @@ Une erreur de type « Type Error » est renvoyée et la console indique qu'u
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Index Error »
+# Index Error : Correction
 
 from earsketch import *
 setTempo(100)
@@ -164,9 +163,9 @@ fitMedia(orch[2], 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Correction d'erreur de type « Type Error »
+// Index Error : Correction
 
-setTempo(100);
+setTempo(120);
 
 var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
 
@@ -206,7 +205,7 @@ fitMedia(orch[2], 3, 9, 17);
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Name Error »
+# Name Error : Exemple
 
 from earsketch import *
 setTempo(120)
@@ -218,7 +217,7 @@ print("Today is " + Today)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Un code causant une erreur de type « Reference Error »
+// Reference Error : Exemple
 
 setTempo(120);
 
@@ -231,7 +230,7 @@ Dans ce cas, la variable contenant la chaîne de caractères à concaténer n'a 
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Name Error »
+# Name Error : Correction
 
 from earsketch import *
 setTempo(120)
@@ -243,7 +242,7 @@ print("Today is " + today)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Correction d'erreur de type « Reference Error »
+// Reference Error : Correction
 
 setTempo(120);
 
@@ -268,7 +267,7 @@ println("Today is " + today);
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Parse Error »
+# Parse Error : Exemple
 
 from earsketch import *
 setTempo(98)
@@ -297,7 +296,7 @@ Lors de l'exécution du code, la console pointe vers la ligne 26. Cette ligne se
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Parse Error »
+# Parse Error : Correction
 
 from earsketch import *
 setTempo(98)
@@ -334,7 +333,7 @@ Parse errors are interpreted broadly as syntax errors in JavaScript, which is co
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Syntax Error »
+# Syntax Error : Exemple
 
 from earsketch import *
 setTempo(120)
@@ -352,7 +351,7 @@ for measure in range(1, 32):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Un code causant une erreur de type « Syntax Error »
+// Syntax Error : Exemple
 
 setTempo(120);
 
@@ -377,7 +376,7 @@ Pour ce script, l'éditeur de code nous signale la ligne fautive. Notez qu'il ma
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Syntax Error »
+# Syntax Error : Correction
 
 from earsketch import *
 setTempo(120)
@@ -395,7 +394,7 @@ for measure in range(1, 32):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Correction d'erreur de type « Syntax Error »
+// Syntax Error : Correction
 
 setTempo(120);
 
@@ -438,7 +437,7 @@ Au-delà des erreurs courantes indiquées ci-dessus, vérifiez la présence des 
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Type Error »
+# Type Error : Exemple
 
 from earsketch import *
 setTempo(120)
@@ -457,7 +456,7 @@ print("Votre beat est composé de " + measureTotal + " mesures.")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Un code causant une erreur de type « Type Error »
+// Type Error : Exemple
 
 setTempo(120);
 
@@ -478,7 +477,7 @@ Une erreur de type « Type Error » est renvoyée, car nous avons accidentel
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Type Error »
+# Type Error : Correction
 
 from earsketch import *
 setTempo(120)
@@ -497,7 +496,7 @@ print("Votre beat est composé de " + str(measureTotal) + " mesures.")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Correction d'erreur de type « Type Error »
+// Type Error : Correction
 
 setTempo(120);
 
@@ -539,7 +538,7 @@ fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
 [role="curriculum-python"]
 [source,python]
 ----
-# Un code causant une erreur de type « Value Error »
+# Value Error: Exemple
 
 from earsketch import *
 setTempo(120)
@@ -553,7 +552,7 @@ makeBeat(drumKit, 1, 1, beatString)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Un code causant une erreur de type « Range Error »
+// Range Error: Exemple
 
 setTempo(120);
 
@@ -572,7 +571,7 @@ Le quatrième argument de la fonction `makeBeat()` est du type approprié, mais 
 [role="curriculum-python"]
 [source,python]
 ----
-# Correction d'erreur de type « Value Error »
+# Value Error : Correction
 
 from earsketch import *
 setTempo(120)
@@ -586,7 +585,7 @@ makeBeat(drumKit, 1, 1, beatString)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Correction d'erreur de type « Range Error »
+// Range error : Correction
 
 setTempo(120);
 

@@ -113,7 +113,7 @@ fitMedia(beat, 3, 3, 9)
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes an Index Error
+# Index Error: Example
 
 from earsketch import *
 setTempo(100)
@@ -128,7 +128,7 @@ fitMedia(orch[3], 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes an Index Error
+// Index Error: Example
 
 setTempo(120);
 
@@ -148,7 +148,7 @@ fitMedia(orch[3], 3, 9, 17);
 [role="curriculum-python"]
 [source,python]
 ----
-# Index Error fixed
+# Index Error: Correction
 
 from earsketch import *
 setTempo(100)
@@ -163,7 +163,7 @@ fitMedia(orch[2], 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Index Error fixed
+// Index Error: Correction
 
 setTempo(100);
 
@@ -205,7 +205,7 @@ fitMedia(orch[2], 3, 9, 17);
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes a Name Error
+# Name Error: Example
 
 from earsketch import *
 setTempo(120)
@@ -217,7 +217,7 @@ print("Today is " + Today)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes a Reference Error
+// Reference Error: Example
 
 setTempo(120);
 
@@ -230,7 +230,7 @@ println("Today is " + Today);
 [role="curriculum-python"]
 [source,python]
 ----
-# Name Error fixed
+# Name Error: Correction
 
 from earsketch import *
 setTempo(120)
@@ -242,7 +242,7 @@ print("Today is " + today)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Reference Error fixed
+// Reference Error: Correction
 
 setTempo(120);
 
@@ -267,7 +267,7 @@ println("Today is " + today);
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes a Parse Error
+# Parse Error : Example
 
 from earsketch import *
 setTempo(98)
@@ -296,7 +296,7 @@ The parse error included in the example above breaks AsciiDoc syntax highlightin
 [role="curriculum-python"]
 [source,python]
 ----
-# Parse Error fixed
+# Parse Error : Correction
 
 from earsketch import *
 setTempo(98)
@@ -333,7 +333,7 @@ Parse errors are interpreted broadly as syntax errors in JavaScript, which is co
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes a Syntax Error
+# Syntax Error: Example
 
 from earsketch import *
 setTempo(120)
@@ -351,7 +351,7 @@ for measure in range(1, 32):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes a Syntax Error
+// Syntax Error: Example
 
 setTempo(120);
 
@@ -376,7 +376,7 @@ for (var measure = 1; measure < 32; measure++){
 [role="curriculum-python"]
 [source,python]
 ----
-# Syntax Error fixed
+# Syntax Error: Correction
 
 from earsketch import *
 setTempo(120)
@@ -394,7 +394,7 @@ for measure in range(1, 32):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Syntax Error fixed
+// Syntax Error: Correction
 
 setTempo(120);
 
@@ -437,7 +437,7 @@ Added solution from parse error to JS version below.
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes a Type Error
+# Type Error: Example
 
 from earsketch import *
 setTempo(120)
@@ -456,7 +456,7 @@ print("Your beat is " + measureTotal + " measures long.")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes a Type Error
+// Type Error: Example
 
 setTempo(120);
 
@@ -477,7 +477,7 @@ fitMedia(soundClip, 1, 1, measureTotal + 1);
 [role="curriculum-python"]
 [source,python]
 ----
-# Type Error fixed
+# Type Error: Correction
 
 from earsketch import *
 setTempo(120)
@@ -496,7 +496,7 @@ print("Your beat is " + str(measureTotal) + " measures long.")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Type Error fixed
+// Type Error: Correction
 
 setTempo(120);
 
@@ -538,7 +538,7 @@ fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes a value error
+# Value Error: Example
 
 from earsketch import *
 setTempo(120)
@@ -552,7 +552,7 @@ makeBeat(drumKit, 1, 1, beatString)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes a value error
+// Range Error: Example
 
 setTempo(120);
 
@@ -571,7 +571,7 @@ makeBeat(drumKit, 1, 1, beatString);
 [role="curriculum-python"]
 [source,python]
 ----
-# Value error fixed
+# Value error: Correction
 
 from earsketch import *
 setTempo(120)
@@ -585,7 +585,7 @@ makeBeat(drumKit, 1, 1, beatString)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Value error fixed
+// Range error : Correction
 
 setTempo(120);
 
