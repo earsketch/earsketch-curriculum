@@ -13,7 +13,7 @@ Vamos a ver cómo detectar la intensidad sonora, o volumen, de la pista. Asegúr
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar la función analyseTrack() para desplegar (o imprimir) el volumen de una pista
+# AnalyzeTrack(): Cómo usar la función analyzeTrack() para desplegar el volumen de una pista
 
 # Configuración
 from earsketch import *
@@ -33,7 +33,7 @@ print(volumen1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar la función analyzeTrack() para desplegar (o imprimir) el volumen de una pista
+// AnalyzeTrack(): Cómo usar la función analyzeTrack() para desplegar el volumen de una pista
 
 // Configuración
 setTempo(120);
@@ -169,7 +169,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Analizamos el volumen de nuestras pistas
+# Ejemplo Booleano: Analizamos el volumen de nuestras pistas
 
 # Configuración
 from earsketch import *
@@ -201,7 +201,7 @@ for pista in range(1, 3):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Analizamos el volumen de nuestras pistas.
+// Ejemplo Booleano: Analizamos el volumen de nuestras pistas.
 // Configuración
 setTempo(120);
 
@@ -268,7 +268,7 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+# Mezcla Automática 1: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
 # Configuración
 from earsketch import *
 setTempo(120)
@@ -283,7 +283,7 @@ fitMedia(melodia2, 2, 1, 9)
 volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
 volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
 
-# Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+# Mezcla Automática 1: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
 if (volumenPista1 > volumenPista2):
     setEffect(1, VOLUME, GAIN, -10)
 ----
@@ -374,7 +374,7 @@ A continuación, hay un ejemplo de una mezcla automatizada. Podemos decir que es
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
+# Mezcla Automática 2: Usar declaraciones condicionales para mezclar las pistas
 
 # Configuarción
 from earsketch import *
@@ -426,7 +426,7 @@ else:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear una breve canción y usar declaraciones condicionales para mezclar las pistas
+// Mezcla Automática 2: Usar declaraciones condicionales para mezclar las pistas
 
 // Configuración
 setTempo(120);

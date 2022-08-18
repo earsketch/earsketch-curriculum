@@ -13,7 +13,7 @@ Nous allons maintenant voir comment détecter l'intensité sonore ou le volume d
 [role="curriculum-python"]
 [source,python]
 ----
-# Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
+# AnalyzeTrack() : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
 # Paramétrage
 from earsketch import *
 setTempo(120)
@@ -32,7 +32,7 @@ print(loudness1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
+// AnalyzeTrack() : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
 
 // Paramétrage
 setTempo(120);
@@ -156,7 +156,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Analyse de l'intensité sonore de pistes.
+# Exemple de booléen : Analyse de l'intensité sonore de pistes.
 
 # Paramétrage
 from earsketch import *
@@ -188,7 +188,7 @@ for track in range(1, 3):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Analyse de l'intensité sonore de pistes
+// Exemple de booléen : Analyse de l'intensité sonore de pistes
 // Paramétrage
 setTempo(120);
 
@@ -256,7 +256,7 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
+# Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 
 # Paramétrage
 from earsketch import *
@@ -272,7 +272,7 @@ fitMedia(melody2, 2, 1, 9)
 loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
-# Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
+# Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
 if (loudnessTrack1 > loudnessTrack2):
     setEffect(1, VOLUME, GAIN, -10)
 ----
@@ -280,7 +280,7 @@ if (loudnessTrack1 > loudnessTrack2):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
+// Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 
 // Paramétrage
 setTempo(120);
@@ -369,7 +369,7 @@ Below is an example of automated mixing. We can say it's automated because if yo
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating a short song and using conditional statements to mix the tracks
+# Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
 
 # Setup
 from earsketch import *
@@ -421,7 +421,7 @@ else:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating a short song and using conditional statements to mix the tracks
+// Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
 
 // Setup
 setTempo(120);

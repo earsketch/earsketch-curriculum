@@ -13,7 +13,7 @@
 [role="curriculum-python"]
 [source,python]
 ----
-# Using the analyzeTrack() function to print the loudness of a track
+# AnalyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
 # Setup
 from earsketch import *
@@ -33,7 +33,7 @@ print(loudness1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using the analyzeTrack() function to print the loudness of a track
+// AnalyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
 // Setup
 setTempo(120);
@@ -157,7 +157,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# We analyze the loudness of our tracks
+# Boolean Example: We analyze the loudness of our tracks
 
 # Setup
 from earsketch import *
@@ -189,7 +189,7 @@ for track in range(1, 3):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// We analyze the loudness of our tracks
+// Boolean Example: We analyze the loudness of our tracks
 // Setup
 setTempo(120);
 
@@ -258,7 +258,7 @@ if (condition) {
 [role="curriculum-python"]
 [source,python]
 ----
-# If track 1 is louder than track 2, we'll reduce its volume
+# Automatic mixing 1: If track 1 is louder than track 2, we'll reduce its volume
 
 # Setup
 from earsketch import *
@@ -282,7 +282,7 @@ if (loudnessTrack1 > loudnessTrack2):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// If track 1 is louder than track 2, we'll reduce its volume
+// Automatic mixing 1: If track 1 is louder than track 2, we'll reduce its volume
 
 // Setup
 setTempo(120);
@@ -370,7 +370,7 @@ if (condition1) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating a short song and using conditional statements to mix the tracks
+# Automatic Mixing 2: Using conditional statements to mix the tracks
 
 # Setup
 from earsketch import *
@@ -422,7 +422,7 @@ else:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating a short song and using conditional statements to mix the tracks
+// Automatic Mixing 2: Using conditional statements to mix the tracks
 
 // Setup
 setTempo(120);
