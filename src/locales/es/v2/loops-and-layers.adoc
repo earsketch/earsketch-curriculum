@@ -23,7 +23,7 @@ _UN VIDEO SOBRE LOS CICLOS VIENE PRONTO_
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
+# Poner mis ritmos en un ciclo: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
 
 # Configuración
 from earsketch import *
@@ -41,7 +41,7 @@ for compas in range(1, 5):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
+// Poner mis ritmos en un ciclo: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
 
 // Configuración:
 setTempo(120);
@@ -124,7 +124,7 @@ Antes de ejecutar el siguiente código, trata de adivinar qué es lo que se ver�
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar print() para aparecer mensajes en la consola
+# aAarecer mensajes: Cómo usar print() para aparecer mensajes en la consola
 
 # Configuración
 from earsketch import *
@@ -148,7 +148,7 @@ for compas in range(1, 5):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
+// Aparecer mensajes: Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
 
 // Configuración
 setTempo(120);
@@ -204,7 +204,7 @@ Podemos crear repetición en nuestra música al escribir `fitMedia()` una y otra
 [role="curriculum-python"]
 [source,python]
 ----
-# Repetición musical creada sin ciclos de código
+# Sin ciclos: Repetición musical creada sin ciclos de código
 
 # Configuración
 from earsketch import *
@@ -237,7 +237,7 @@ fitMedia(bateria2, 1, 8.5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Repetición musical creada sin ciclos de código
+// Sin ciclos: Repetición musical creada sin ciclos de código
 
 // Configuración
 setTempo(120);
@@ -271,7 +271,7 @@ Podemos usar un ciclo `for` para crear exactamente la misma música de manera m�
 [role="curriculum-python"]
 [source,python]
 ----
-# Repetición musical creada con ciclos de código
+# Ciclos: Repetición musical creada con ciclos de código
 
 # Configuración
 from earsketch import *
@@ -291,7 +291,7 @@ for compas in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Repetición musical creada con ciclos de código
+// Ciclos: Repetición musical creada con ciclos de código
 
 // Configuración
 setTempo(120);
@@ -350,7 +350,7 @@ Antes de ejecutar el siguiente código, trata de adivinar lo que va a hacer.
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo crear un ritmo de batería que se alterna
+# Incrementar: Cómo crear un ritmo de batería que se alterna
 
 from earsketch import *
 setTempo(120)
@@ -366,7 +366,7 @@ for compas in range(1, 9, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo crear un ritmo de batería que se alterna
+// Incrementar: Cómo crear un ritmo de batería que se alterna
 
 setTempo(120);
 
