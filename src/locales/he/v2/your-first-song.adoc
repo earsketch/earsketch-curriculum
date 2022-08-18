@@ -99,7 +99,7 @@
 [role="curriculum-python"]
 [source,python]
 ----
-# Using comments to describe what the code does
+# Comments: Using comments to describe what the code does
 
 # Setup
 from earsketch import *
@@ -125,7 +125,7 @@ fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using comments to describe what the code does
+// Comments: Using comments to describe what the code does
 
 // Setup
 setTempo(130);

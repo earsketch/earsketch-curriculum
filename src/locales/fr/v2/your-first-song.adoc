@@ -99,7 +99,7 @@ Vous pouvez également utiliser des commentaires pour décrire ce que différent
 [role="curriculum-python"]
 [source,python]
 ----
-# Des commentaires pour décrire ce que fait le code
+# Commentaires : Des commentaires pour décrire ce que fait le code
 
 # Paramétrage
 from earsketch import *
@@ -125,7 +125,7 @@ fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Des commentaires pour décrire ce que le code fait
+// Commentaires : Des commentaires pour décrire ce que le code fait
 
 // Paramétrage
 setTempo(130);

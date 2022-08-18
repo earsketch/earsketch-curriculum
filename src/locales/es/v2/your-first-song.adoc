@@ -105,7 +105,7 @@ También puedes usar los comentarios para describir lo que hacen las diferentes 
 [role="curriculum-python"]
 [source,python]
 ----
-# Unos comentarios para describir lo que hace el código
+# Comentarios: Unos comentarios para describir lo que hace el código
 
 # Configuración
 from earsketch import *
@@ -131,7 +131,7 @@ fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Unos comentarios para describir lo que hace el código
+// Comentarios: Unos comentarios para describir lo que hace el código
 
 // Configuración
 setTempo(130);
