@@ -57,7 +57,7 @@ Drum fills are used throughout all genres of music, but are used notoriously in 
 [role="curriculum-python"]
 [source,python]
 ----
-# Transiting between sections with a drum fill
+# Drum Fill: Transitioning with a drum fill
 
 # Setup
 from earsketch import *
@@ -89,7 +89,7 @@ fitMedia(drums2, 3, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections with a drum fill
+// Drum Fill: Transitioning with a drum fill
 
 // Setup
 setTempo(130);
@@ -122,7 +122,7 @@ The track dropout technique only requires the modification of a couple `fitMedia
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections with selective muting
+# Dropouts: Transitioning between sections with selective muting
 
 # Setup
 from earsketch import *
@@ -154,7 +154,7 @@ fitMedia(bass, 4, 9, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections with track dropouts
+// Dropouts: Transitioning between sections with selective muting
 
 // Setup
 setTempo(120);
@@ -189,7 +189,7 @@ An effective transition is not limited to a single technique. The next example u
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections using risers and a crash cymbal.
+# Risers: Transitioning between sections using risers and a crash cymbal
 
 # Setup
 from earsketch import *
@@ -231,7 +231,7 @@ setEffect(8, VOLUME, GAIN, -20)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections using risers and a crash cymbal.
+// Risers: Transitioning between sections using risers and a crash cymbal.
 
 // Setup
 setTempo(128);

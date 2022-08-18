@@ -14,7 +14,7 @@ In addition to taking some sort of input, functions can output a value. In progr
 [role="curriculum-python"]
 [source,python]
 ----
-# Returning the result of a mathematical expression
+# Simple Return Statements: Returning the result of a mathematical expression
 
 # Setup
 from earsketch import *
@@ -33,7 +33,7 @@ print result
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Returning the result of a mathematical expression
+// Simple Return Statements: Returning the result of a mathematical expression
 
 // Setup
 setTempo(120);
@@ -82,7 +82,7 @@ video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Linking two beats together with return statements
+# Return Statements: Linking two beats together with return statements
 
 # Setup
 from earsketch import *
@@ -111,7 +111,7 @@ createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Linking two beats together with return statements
+// Return Statements: Linking two beats together with return statements
 
 // Setup
 setTempo(100);
@@ -164,7 +164,7 @@ Without a return statement a function does not return or output any value. This 
 [role="curriculum-python"]
 [source,python]
 ----
-# Combining two strings into one string
+# Concatenation: Combining two strings into one string
 
 # Setup
 from earsketch import *
@@ -183,7 +183,7 @@ print newString
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Combining two strings into one string
+// Concatenation: Combining two strings into one string
 
 // Setup
 setTempo(120);
@@ -204,7 +204,7 @@ String concatenation can be used to form longer, more complex rhythms. In the ex
 [role="curriculum-python"]
 [source,python]
 ----
-# Combining beat strings to form a complex rhythm
+# Beat String Concatenation: Combining beat strings to form a complex rhythm
 
 # Setup
 from earsketch import *
@@ -234,7 +234,7 @@ makeBeat(hat, 3, 1, finalHat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Combining beat strings to form a complex rhythm
+// Beat String Concatenation: Combining beat strings to form a complex rhythm
 
 // Setup
 setTempo(100);
@@ -345,7 +345,7 @@ The following code shows an example of substring syntax and obtaining the length
 [role="curriculum-python"]
 [source,python]
 ----
-# Using slice notation to make substrings
+# Substrings: Using slice notation to make substrings
 
 # Setup
 from earsketch import *
@@ -365,7 +365,7 @@ print len(b)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Getting a part of a string using .substring()
+// Substrings: Getting a part of a string using .substring()
 
 // Setup
 setTempo(100);
@@ -413,7 +413,7 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Expand a beat string into a longer beat string.
+# String Operations: Expand a beat string into a longer beat string.
 
 # Setup
 from earsketch import *
@@ -441,7 +441,7 @@ makeBeat(drumInstr, 1, 1, finalBeat)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Expand a beat string into a longer beat string.
+// String Operations: Expand a beat string into a longer beat string.
 
 // Setup
 setTempo(120);

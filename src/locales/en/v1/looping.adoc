@@ -91,7 +91,7 @@ Let's use a for-loop to repeat the makeBeat() pattern that we created in the pre
 [role="curriculum-python"]
 [source,python]
 ----
-# Using a for-loop to create longer beats
+# Using Loops: Using a for-loop to create longer beats
 
 # Setup
 from earsketch import *
@@ -112,7 +112,7 @@ for measure in range(1, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using a for-loop to create longer beats
+// Using Loops: Using a for-loop to create longer beats
 
 // Setup
 setTempo(120);
@@ -144,7 +144,7 @@ Previously, we have created repetition in our music by typing `fitMedia()` again
 [role="curriculum-python"]
 [source,python]
 ----
-# Musical repetition created without code loops
+# No loops: Musical repetition created without code loops
 
 # Setup
 from earsketch import *
@@ -177,7 +177,7 @@ fitMedia(drums2, 1, 8.5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Musical repetition created without code loops
+// No loops: Musical repetition created without code loops
 
 // Setup
 setTempo(120);
@@ -211,7 +211,7 @@ We can use a for-loop to create the exact same music more efficiently.
 [role="curriculum-python"]
 [source,python]
 ----
-# Musical repetition created with code loops
+# Loops: Musical repetition created with code loops
 
 # Setup
 from earsketch import *
@@ -230,7 +230,7 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Musical repetition created with code loops
+// Loops: Musical repetition created with code loops
 
 // Setup
 setTempo(120);
@@ -321,7 +321,7 @@ video::./videoMedia/012-05-AddingEffectswithLoops-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Adding music and panning using loops
+# Panning Loop: Adding music and panning using loops
 
 from earsketch import *
 setTempo(130)
@@ -350,7 +350,7 @@ for track in range(1, 5):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Adding music with loops; panning incrementally with loops
+// Panning Loop: Adding music and panning using loops
 
 // Setup
 setTempo(130);
@@ -390,7 +390,7 @@ For-loops can be used to apply repeated effects envelopes to tracks. In the exam
 [role="curriculum-python"]
 [source,python]
 ----
-# Automating effects with a for-loop
+# Rhythmic Ramps: Automating effects with a for-loop
 
 # Setup
 from earsketch import *
@@ -407,7 +407,7 @@ for measure in range(1, 17):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Automating effects with a for-loop
+// Rhythmic Ramps: Automating effects with a for-loop
 
 // Setup
 setTempo(120);

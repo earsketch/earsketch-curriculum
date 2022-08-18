@@ -62,7 +62,7 @@ video::./videoMedia/011-03-makeBeat()-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Using several makeBeat() calls with different rhythms
+# Rhythms: Using several makeBeat() calls with different rhythms
 
 # Setup
 from earsketch import *
@@ -81,7 +81,7 @@ makeBeat(cymbal, 2, 1, beat2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using several makeBeat() calls with different rhythms
+// Rhythms: Using several makeBeat() calls with different rhythms
 
 // Setup
 setTempo(120);

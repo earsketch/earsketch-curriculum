@@ -37,7 +37,7 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# A song with A and B sections
+# A-B-A Form: A song with A and B sections
 
 # Setup
 from earsketch import *
@@ -72,7 +72,7 @@ fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 11, 12)  # backing repeated
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// A song with A and B sections
+// A-B-A Form: A song with A and B sections
 
 // Setup
 setTempo(120);
@@ -127,7 +127,7 @@ image::../media/U2/Function_9_3_Graphics_JS.jpg[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-# Defining our own function that makes a section of music
+# Custom Functions: Defining our own function that makes a section of music
 
 # Setup
 from earsketch import *
@@ -147,7 +147,7 @@ myFunction(1, 17)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Defining our own function that makes a section of music
+// Custom Functions: Defining our own function that makes a section of music
 
 // Setup
 setTempo(100);
@@ -169,7 +169,7 @@ Let's apply this new construct to the previous ABA example to make the code more
 [role="curriculum-python"]
 [source,python]
 ----
-# Making form with custom functions
+# Improved A-B-A: Creating form with custom functions
 
 # Setup
 from earsketch import *
@@ -202,7 +202,7 @@ sectionA(9, 13)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Making form with custom functions
+// Improved A-B-A: Creating form with custom functions
 
 // Setup
 setTempo(120);
@@ -241,7 +241,7 @@ A-B-A-B form WITHOUT functions
 [role="curriculum-python"]
 [source,python]
 ----
-# A song with A and B sections
+# A-B-A-B Form WITHOUT functions: A song with A and B sections
 
 # Setup
 from earsketch import *
@@ -283,7 +283,7 @@ A-B-A-B form WITH functions
 [role="curriculum-python"]
 [source,python]
 ----
-# Making form with custom functions
+# A-B-A-B Form WITH functions: Creating form with custom functions
 
 # Setup
 from earsketch import *
@@ -317,7 +317,7 @@ sectionB(13, 17)  # adding another section B only requires one more line of code
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// A song with A and B sections
+// A-B-A-B Form WITHOUT functions: A song with A and B sections
 
 // Setup
 setTempo(120);
@@ -357,7 +357,7 @@ fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 13, 14); // backing
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Making form with custom functions
+// A-B-A-B Form WITH functions: Creating form with custom functions
 
 // Setup
 setTempo(120);

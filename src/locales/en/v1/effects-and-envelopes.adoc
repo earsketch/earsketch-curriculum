@@ -33,7 +33,7 @@ The last five parameters are *optional parameters*; if left unspecified, they ar
 [role="curriculum-python"]
 [source,python]
 ----
-# Making envelopes with 7 parameter setEffect()
+# Envelopes: Making envelopes with 7 parameter setEffect()
 
 # Setup
 from earsketch import *
@@ -48,7 +48,7 @@ setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Making envelopes with 7 parameter setEffect()
+// Envelopes: Making envelopes with 7 parameter setEffect()
 
 // Setup
 setTempo(120);
@@ -79,7 +79,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Using multiple setEffect calls on a track to make changes in the effect envelope.
+# Complex Envelopes: Using multiple setEffect calls on a track to make changes in the effect envelope
 
 # Setup
 from earsketch import *
@@ -110,7 +110,7 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using multiple setEffect calls on a track to make changes in the effect envelope.
+// Complex Envelopes: Using multiple setEffect calls on a track to make changes in the effect envelope
 
 // Setup
 setTempo(120);

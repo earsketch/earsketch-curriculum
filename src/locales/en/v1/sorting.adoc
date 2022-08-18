@@ -15,7 +15,6 @@ In this section, we’ll learn more about what we can do with analysis features 
 [source,python]
 ----
 from earsketch import *
-# Initialize EarSketch
 setTempo(120)
 
 # Create a list of audio clips that you want to sort according to a particular analysis feature (spectral centroid in this example)
@@ -55,7 +54,6 @@ for index in range(len(clipsList)):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Initialize EarSketch
 setTempo(120);
 
 // Create an array of audio clips that you want to sort according to a particular analysis feature (spectral centroid in this example)
@@ -111,7 +109,6 @@ The method we will be using to sort arrays is called a *selection sort*. This na
 [source,python]
 ----
 from earsketch import *
-# Initialize EarSketch
 setTempo(120)
 
 # Create a list of audio clips that you want to sort according to a particular analysis feature (RMS amplitude, in this example)
@@ -151,7 +148,6 @@ for index in range(len(clipsList)):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Initialize EarSketch
 setTempo(120);
 
 // Create a list of audio clips that you want to sort according to a particular analysis feature (RMS amplitude, in this example)

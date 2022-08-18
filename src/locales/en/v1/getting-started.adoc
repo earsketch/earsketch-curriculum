@@ -84,7 +84,7 @@ Let's try running a code example in EarSketch! Take a look at the box of text be
 [role="curriculum-python"]
 [source,python]
 ----
-# This code adds one audio clip to the DAW
+# Intro Script: This code adds one audio clip to the DAW
 
 # Setup Section
 from earsketch import *
@@ -97,7 +97,7 @@ fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// This code adds one audio clip to the DAW
+// Intro Script: This code adds one audio clip to the DAW
 
 // Setup Section
 setTempo(120);
@@ -285,7 +285,7 @@ You should now have something like this: `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5)`
 [role="curriculum-python"]
 [source,python]
 ----
-# Using fitMedia() to add a clip to the DAW.
+# Using fitMedia(): Adding a clip to the DAW
 
 # Setup
 from earsketch import *
@@ -298,7 +298,7 @@ fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using fitMedia() to add a clip to the DAW.
+// Using fitMedia(): Adding a clip to the DAW
 
 // Setup
 setTempo(120);
@@ -312,7 +312,7 @@ For an extra challenge, add more `fitMedia()` calls to your script like we do be
 [role="curriculum-python"]
 [source,python]
 ----
-# Using multiple fitMedia() calls, on different tracks and with different clips.
+# Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 # Setup Section
 from earsketch import *
@@ -327,7 +327,7 @@ fitMedia(Y11_GUITAR_1, 3, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using multiple fitMedia() calls, on different tracks and with different clips.
+// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 // Setup Section
 setTempo(100);

@@ -44,7 +44,7 @@ In the code below, we assign several audio clips (constants) to variables. These
 [role="curriculum-python"]
 [source,python]
 ----
-# Adding delay to a track
+# Delay Effect: Adding delay to a track
 
 # Setup
 from earsketch import *
@@ -77,7 +77,7 @@ fitMedia(drums2, 3, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Adding delay to a track
+// Delay Effect: Adding delay to a track
 
 // Setup
 setTempo(120);

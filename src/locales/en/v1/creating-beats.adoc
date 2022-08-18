@@ -76,8 +76,8 @@ bassBeat02 = "0 + + + – – 0 + 0 + + + – – – –"
 [role="curriculum-python"]
 [source,python]
 ----
-# 4/4 Time General Pattern with Fill
-# Tempo Best between 110 and 132
+# Rock Beat: Example
+# Tempo best between 110 and 132 bpm
 
 from earsketch import *
 setTempo(120)
@@ -106,8 +106,8 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// 4/4 Time General Pattern with Fill
-// Tempo Best between 110 and 132
+// Rock Beat: Example
+// Tempo best between 110 and 132 bpm
 
 setTempo(120);
 
@@ -181,8 +181,8 @@ sixteenthHLFill = "0000100101011111"
 [role="curriculum-python"]
 [source,python]
 ----
-# Funk Beat Example
-# Best Played at 92 to 100 Beats per minute
+# Funk Beat: Example
+# Tempo best between 92 and 100 bpm
 
 from earsketch import *
 setTempo(92)
@@ -214,8 +214,8 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Funk Beat Example
-// Best Played at 92 to 100 Beats per minute
+// Funk Beat: Example
+// Tempo best between 92 and 100 bpm
 
 setTempo(92);
 
@@ -252,8 +252,8 @@ for (var measure = 1; measure < 9; measure++) {
 [role="curriculum-python"]
 [source,python]
 ----
-# Amen Beat Example
-# Best played at 82 to 92 Beats per minute
+# Amen Break: Example
+# Tempo best between 82 to 92 bpm
 
 from earsketch import *
 setTempo(88)
@@ -284,8 +284,8 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Amen Beat Example
-// Best played at 82 to 92 Beats per minute
+// Amen Break: Example
+// Tempo best between 82 to 92 bpm
 
 setTempo(88);
 
@@ -356,8 +356,8 @@ dubHats4 = "– – 0 + + 0 + + 1 + + 0 + + 0 +"
 [role="curriculum-python"]
 [source,python]
 ----
-# Dubstep Example
-# Best played faster than 136 beats per minute
+# Dubstep Beat: Example
+# Tempo best if faster than 136 bpm
 
 from earsketch import *
 setTempo(140)
@@ -403,8 +403,8 @@ for measure in range(1, 9, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Dubstep Example
-// Best played faster than 136 beats per minute
+// Dubstep Beat: Example
+// Tempo best if faster than 136 bpm
 
 setTempo(140);
 
@@ -514,8 +514,8 @@ bottleBeat = "0 – 0 – – – – – 0 0 – 1 – – – 0"
 [role="curriculum-python"]
 [source,python]
 ----
-# Example of Unifix Patterns
-# Best played between 92 and 110 (but can be faster)
+# Unifix-style Beat: Example
+# Tempo best between 92 and 110 bpm, but can be faster
 from earsketch import *
 setTempo(100)
 
@@ -547,8 +547,8 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Example of Unifix Patterns
-// Best played between 92 and 110 (but can be faster)
+// Unifix-style Beat: Example
+// Tempo best between 92 and 110 bpm, but can be faster
 
 setTempo(100);
 

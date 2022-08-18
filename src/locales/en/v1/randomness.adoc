@@ -28,7 +28,7 @@ In the example below, random numbers are used to pick random clips from an array
 [role="curriculum-python"]
 [source,python]
 ----
-# Randomly selecting clips from a list
+# Random Clip: Randomly selecting clips from a list
 
 # Setup
 from earsketch import *
@@ -57,7 +57,7 @@ fitMedia(YG_TRAP_SNARE_5, 4, 1, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Randomly selecting clips from a list
+// Random Clip: Randomly selecting clips from an array
 
 // Setup
 setTempo(100);
@@ -99,7 +99,7 @@ video::./videoMedia/020-02-RemixingaRhythm-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Constructing the amen break with string concatenation
+# Amen Break: Constructing the amen break with string concatenation
 
 # Setup
 from earsketch import *
@@ -126,7 +126,7 @@ makeBeat(drums, 2, 1, amenCymbals)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Constructing the amen break with string concatenation
+// Amen Break: Constructing the amen break with string concatenation
 
 // Setup
 setTempo(140);
@@ -190,7 +190,7 @@ Adding the two code snippets above into the amen break script results in the fol
 [role="curriculum-python"]
 [source,python]
 ----
-# Replacing part of the amen break string with a random beat string
+# Amen Remix: Replacing part of the amen break string with a random beat string
 
 # Setup
 from earsketch import *
@@ -226,7 +226,7 @@ makeBeat(drums, 2, 1, amenCymbals)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Replacing part of the amen break string with a random beat string
+// Amen Remix: Replacing part of the amen break string with a random beat string
 
 // Setup
 setTempo(140);

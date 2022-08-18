@@ -21,7 +21,7 @@ Before running the following code, try to guess what the  console will display f
 [role="curriculum-python"]
 [source,python]
 ----
-# Using print() to print messages in the console
+# Printing: Using print() to print messages in the console
 
 # Setup
 from earsketch import *
@@ -46,7 +46,7 @@ print("De" + "bug")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using println() to print messages in the console
+// Printing: Using println() to print messages in the console
 
 // Setup
 setTempo(120);
@@ -145,7 +145,7 @@ Suppose we want to create an alternating drum beat, with each beat switching off
 [role="curriculum-python"]
 [source,python]
 ----
-# Code that causes an Overlapping Clips Warning
+# Overlap Logic: Code that causes an Overlapping Clips Warning
 
 from earsketch import *
 setTempo(120)
@@ -161,7 +161,7 @@ for measure in range(1, 9):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Code that causes an Overlapping Clips Warning
+// Overlap Logic: Code that causes an Overlapping Clips Warning
 
 setTempo(120);
 
@@ -183,7 +183,7 @@ We end up placing a clip on every measure as we iterate through the for-loop, bu
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating an alternating drum beat
+# Overlap Correction: Errors fixed
 
 from earsketch import *
 setTempo(120)
@@ -199,7 +199,7 @@ for measure in range(1, 9, 4):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Overlap correction
+// Overlap Correction: Errors fixed
 
 setTempo(120);
 
@@ -217,7 +217,7 @@ Let's take a look at another example. The script below takes advantage of all of
 [role="curriculum-python"]
 [source,python]
 ----
-# Argument Order Error using 7-parameter setEffect()
+# Argument Order: Error caused by argument order using 7-parameter setEffect()
 
 from earsketch import *
 setTempo(128)
@@ -240,7 +240,7 @@ setEffect(1, FILTER, FILTER_FREQ, 1, 10000, 5, 100)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Argument Order Error using 7-parameter setEffect()
+// Argument Order: Error caused by argument order using 7-parameter setEffect()
 
 setTempo(128);
 
@@ -268,7 +268,7 @@ The console points us to line 25, where we have called `setEffect()` with a FILT
 [role="curriculum-python"]
 [source,python]
 ----
-# Argument order correction using 7-parameter setEffect()
+# Argument Order Correction: Errors fixed
 
 from earsketch import *
 setTempo(128)
@@ -291,7 +291,7 @@ setEffect(1, FILTER, FILTER_FREQ, 10000, 1, 100, 5)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Argument order correction using 7-parameter setEffect()
+// Argument Order Correction: Errors fixed
 
 setTempo(128);
 

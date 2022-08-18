@@ -53,7 +53,7 @@ In computer science, one of the main ways that self-similarity is shown is throu
 [role="curriculum-python"]
 [source,python]
 ----
-# Counting down from 3 with recursion
+# Simple Recursion: Counting down from 3 with recursion
 
 # Setup
 from earsketch import *
@@ -74,7 +74,7 @@ countdown(3)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Counting down from 3 with recursion
+// Simple Recursion: Counting down from 3 with recursion
 
 // Setup
 setTempo(140);
@@ -389,7 +389,7 @@ setEffect(4, VOLUME, GAIN, -9);
 [role="curriculum-python"]
 [source,python]
 ----
-# an alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
+# Iteration vs Recursion: An alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
 def placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength):
     for i in range(len(soundlist)):
         fitMedia(soundlist[i], tracknum, start + (cliplength * i), start + (cliplength * (i + 1)))
@@ -400,7 +400,7 @@ def placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// an alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
+// Iteration vs Recursion: an alternate version of placeSoundsOnTrack() that uses iteration instead of recursion
 function placeSoundsOnTrack_iter(soundlist, tracknum, start, cliplength) {
     for (var i = 0; i < soundlist.length; i++) {
         fitMedia(soundlist[i], tracknum, start + (cliplength * i), start + (cliplength * (i + 1)));

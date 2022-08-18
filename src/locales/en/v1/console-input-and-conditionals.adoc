@@ -14,7 +14,7 @@ In EarSketch, the `readInput()` function is used for console input. This opens a
 [role="curriculum-python"]
 [source,python]
 ----
-# Interacting with a prompt via console input
+# Simple Input: Interacting with a prompt
 
 # Setup
 from earsketch import *
@@ -29,7 +29,7 @@ print("Hi " + n + "! It is nice to meet you.")
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Interacting with a prompt via console input
+// Simple Input: Interacting with a prompt
 
 setTempo(120);
 
@@ -63,7 +63,7 @@ In the example below, console input is used to determine some characteristics of
 [role="curriculum-python"]
 [source,python]
 ----
-# Creating a dubstep song with user-specified parameters
+# Musical Input: Creating a dubstep song with user-specified parameters
 
 # Setup
 from earsketch import *
@@ -94,7 +94,7 @@ for measure in range(2, 6):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Creating a dubstep song with user-specified parameters
+// Musical Input: Creating a dubstep song with user-specified parameters
 
 // Setup
 var t = readInput("Set a valid tempo for this song (120 - 160): ");
@@ -223,7 +223,7 @@ Here are some simple boolean expressions.  Before running the code, try to deter
 [role="curriculum-python"]
 [source,python]
 ----
-# Before running the code, determine if each of the expression is true or false
+# Booleans: Before running the code, determine if each of the expression is true or false
 
 from earsketch import *
 setTempo(120)
@@ -242,7 +242,7 @@ print(b)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Before running the code, determine if each of the expression is true or false
+// Booleans: Before running the code, determine if each of the expression is true or false
 
 setTempo(120);
 
@@ -262,7 +262,7 @@ Here is a compound Boolean example.  Do you see the difference between the last 
 [role="curriculum-python"]
 [source,python]
 ----
-# Before running the code, determine if each of the expression is true or false
+# Compound Booleans: Before running the code, determine if each of the expression is true or false
 
 from earsketch import *
 setTempo(120)
@@ -284,7 +284,7 @@ print(b)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Before running the code, determine if each of the expression is true or false
+// Compound Booleans: Before running the code, determine if each of the expression is true or false
 
 setTempo(120);
 
@@ -350,7 +350,7 @@ Let’s start off very simple.  Before running this code, take a guess as to wha
 [role="curriculum-python"]
 [source,python]
 ----
-# Using Simple Conditionals
+# Conditionals 1: Using Simple Conditionals
 
 # Setup
 from earsketch import *
@@ -368,7 +368,7 @@ if (answer == 3):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using Simple Conditionals
+// Conditionals 1: Using Simple Conditionals
 
 // Setup
 setTempo(120);
@@ -389,7 +389,7 @@ Now let’s do something that relates to music.
 [role="curriculum-python"]
 [source,python]
 ----
-# Musical example of Conditionals.
+# Conditionals 2: Musical example of conditionals
 
 # Setup
 from earsketch import *
@@ -415,7 +415,7 @@ else:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Musical example of Conditionals.
+// Conditionals 2: Musical example of conditionals
 
 // Setup
 setTempo(140);
@@ -443,7 +443,7 @@ Let’s now use the Console Input along with Conditional Statements to create an
 [role="curriculum-python"]
 [source,python]
 ----
-# Change your answer to see how it affects the conditional statement
+# Conditionals 3: Change your answer to see how it affects the conditional statement
 
 # Setup
 from earsketch import *
@@ -467,7 +467,7 @@ else:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Change your answer to see how it affects the conditional statement
+// Conditionals 3: Change your answer to see how it affects the conditional statement
 
 // Setup
 setTempo(120);
@@ -503,7 +503,7 @@ _if_, _else if_, and _else_ statements can be used create interesting musical va
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Let the user choose which instrument plays first.
+// Which Comes First: Let the user choose which instrument plays first
 
 // Setup
 setTempo(120);
@@ -536,7 +536,7 @@ if (first_inst == "guitar" || first_inst == "Guitar" || first_inst == "GUITAR") 
 [role="curriculum-python"]
 [source,python]
 ----
-# Let the user choose which instrument plays first.
+# Which Comes First: Let the user choose which instrument plays first
 
 # Setup
 from earsketch import *

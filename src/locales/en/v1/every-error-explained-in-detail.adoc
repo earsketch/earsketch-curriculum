@@ -267,7 +267,7 @@ println("Today is " + today);
 [role="curriculum-python"]
 [source,python]
 ----
-# Parse Error : Example
+# Parse Error: Example
 
 from earsketch import *
 setTempo(98)
@@ -296,7 +296,7 @@ Upon running the code, the console points us to line 26. This line looks fine, b
 [role="curriculum-python"]
 [source,python]
 ----
-# Parse Error : Correction
+# Parse Error: Correction
 
 from earsketch import *
 setTempo(98)
@@ -585,7 +585,7 @@ makeBeat(drumKit, 1, 1, beatString)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Range error : Correction
+// Range error: Correction
 
 setTempo(120);
 

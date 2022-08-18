@@ -16,7 +16,7 @@ Copy the following code example into your code editor, press run, and press play
 [role="curriculum-python"]
 [source,python]
 ----
-# Counting beats and sub-beats in a measure
+# Beats: Counting beats and sub-beats in a measure
 
 # Setup
 from earsketch import *
@@ -33,7 +33,7 @@ fitMedia(TECHNO_LOOP_PART_002, 1, 1, 2)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Counting beats and sub-beats in a measure
+// Beats: Counting beats and sub-beats in a measure
 
 // Setup
 setTempo(120);

@@ -46,7 +46,7 @@ Code Error in these examples breaks AsciiDoc syntax coloring.
 [role="curriculum-python"]
 [source,python]
 ----
-# Fix the error by commenting out blocks
+# Finding Errors 1: Fix the error by commenting out blocks
 
 # Setup
 from earsketch import *
@@ -94,7 +94,7 @@ fitMedia(bass1, 5, 17, 24)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Fix the error by commenting out blocks
+// Finding Errors 1: Fix the error by commenting out blocks
 
 // Setup
 setTempo(130)
@@ -173,7 +173,7 @@ Let's use knowledge of common errors to debug some example code. The two scripts
 [role="curriculum-python"]
 [source,python]
 ----
-# Find and fix the error in this script
+# Finding Errors 2: Find and fix the error in this script
 
 from earsketch import *
 setTempo(88)
@@ -188,7 +188,7 @@ drums = HIPHOP_DUSTYGROOVE_017
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Find and fix the error in this script
+// Finding Errors 2: Find and fix the error in this script
 
 setTempo(88);
 
@@ -202,7 +202,7 @@ var drums = HIPHOP_DUSTYGROOVE_017;
 [role="curriculum-python"]
 [source,python]
 ----
-# Find and fix the error in this script
+# Finding Errors 3: Find and fix the error in this script
 
 from earsketch import *
 setTempo(88)
@@ -217,7 +217,7 @@ fitMedia(drum, 2, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Find and fix the error in this script
+// Finding Errors 3: Find and fix the error in this script
 
 setTempo(88);
 
@@ -241,7 +241,7 @@ Corrected scripts are provided below for reference:
 [role="curriculum-python"]
 [source,python]
 ----
-# Errors fixed
+# Debugged: Errors fixed
 
 from earsketch import *
 setTempo(88)
@@ -256,7 +256,7 @@ fitMedia(drums, 2, 5, 9)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Errors fixed
+// Debugged: Errors fixed
 
 setTempo(88);
 

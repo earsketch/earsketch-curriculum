@@ -46,7 +46,7 @@ video::./videoMedia/014-03-AdvancedTransitionTechniques-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections by looping the lead line
+# Looping Transition: Transitioning between sections by looping the lead line
 
 # Setup
 from earsketch import *
@@ -124,7 +124,7 @@ setEffect(2, FILTER, FILTER_FREQ, 750, 1, 10000, 5)  # filter envelope to bring 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transitioning between sections by looping the lead line
+// Looping Transition: Transitioning between sections by looping the lead line
 
 // Setup
 setTempo(140);
@@ -218,7 +218,7 @@ In the example below, we create an anacrusis by bringing in the main melody a me
 [role="curriculum-python"]
 [source,python]
 ----
-# Transitioning between sections using an anacrusis
+# Anacrusis: Transitioning between sections using an anacrusis
 
 # Setup
 from earsketch import *
@@ -279,7 +279,7 @@ setEffect(6, VOLUME, GAIN, -10)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Transition between sections using an anacrusis
+// Anacrusis: Transitioning between sections using an anacrusis
 
 // Setup
 setTempo(120);

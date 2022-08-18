@@ -20,7 +20,7 @@ Let's start by using `analyze()` with RMS_AMPLITUDE. If we want to analyze a cli
 [role="curriculum-python"]
 [source,python]
 ----
-# Using analyze() to get the RMS_Amplitude of a clip
+# Analyze: Using analyze() to get the RMS_Amplitude of a clip
 
 # Setup
 from earsketch import *
@@ -37,7 +37,7 @@ print analysisValue
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using analyze() to get the RMS_Amplitude of a clip
+// Analyze: Using analyze() to get the RMS_Amplitude of a clip
 
 // Setup
 setTempo(120);
@@ -57,7 +57,7 @@ The `if` statement tests to see if the volume of the audio clip is larger than t
 [role="curriculum-python"]
 [source,python]
 ----
-# This script adds media to the DAW only if it has an RMS amplitude value above a certain amount.
+# RMS Threshold: Adds media to the DAW for large values of RMS amplitude
 # By default, nothing is added: you have to change the rmsThreshold.
 
 # Setup
@@ -91,7 +91,7 @@ if rmsAmplitude >= rmsThreshold:
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// This script adds media to the DAW only if it has an RMS amplitude value above a certain amount.
+// RMS Threshold: Adds media to the DAW for large values of RMS amplitude
 // By default, nothing is added: you have to change the rmsThreshold.
 
 // Setup
@@ -130,7 +130,7 @@ This code uses a method called `analyzeTrackForTime()` to analyze the audio clip
 [role="curriculum-python"]
 [source,python]
 ----
-# Auto-Volume
+# Auto-Volume: Comparing RMS amplitudes
 # We compare the RMS amplitude of two samples at different points in time, and adjust their respective volumes based on this.
 
 # Setup
@@ -168,7 +168,7 @@ while (position < end):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Auto-Volume
+// Auto-Volume: Comparing RMS amplitudes
 // We compare the RMS amplitude of two samples at different points in time, and adjust their respective volumes based on this.
 
 // Setup
@@ -224,7 +224,7 @@ You'll remember we learned about *Boolean operators* (a.k.a. logical operators) 
 [role="curriculum-python"]
 [source,python]
 ----
-# Using "and" to make a condition out of two conditions
+# Boolean AND: Using "and" to make a condition out of two conditions
 
 # Setup
 from earsketch import *
@@ -249,7 +249,7 @@ if (spectralCentroid > threshold) and (rms > threshold):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using "and" to make a condition out of two conditions
+// Boolean AND: Using "and" to make a condition out of two conditions
 
 // Setup
 setTempo(120);
@@ -314,7 +314,7 @@ The Boolean operator lets us combine conditions to choose a clip that has both t
 [role="curriculum-python"]
 [source,python]
 ----
-# Using Boolean operators to pick clips to use.
+# Boolean Operators: Using Boolean operators to pick clips to use.
 
 # Setup
 from earsketch import *
@@ -412,7 +412,7 @@ sectionA(41, 57)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using Boolean operators to pick clips to use
+// Boolean Operators: Using Boolean operators to pick clips to use
 
 // Setup
 setTempo(120);

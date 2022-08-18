@@ -38,7 +38,7 @@ The example below creates a beat that dynamically changes. Notice `makeBeat()`'s
 [role="curriculum-python"]
 [source,python]
 ----
-# Using list operations to change our drum sounds every four measures
+# List Operations: Using list operations to change our drum sounds every four measures
 
 # Setup
 from earsketch import *
@@ -61,7 +61,7 @@ for measure in range(1, 33):
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using array operations to change our drum sounds every four measures
+// Array operations: Using array operations to change our drum sounds every four measures
 
 // Setup
 setTempo(120);
