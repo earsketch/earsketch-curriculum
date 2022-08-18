@@ -88,7 +88,7 @@ The Your Voice is Power sample code is not available for JavaScript. To view the
 [role="curriculum-python"]
 [source,python]
 ----
-# Remixing Entrepreneur STEMS
+# Your Voice is Power Script: Remixing Entrepreneur STEMS
 
 from earsketch import *
 setTempo(90)
