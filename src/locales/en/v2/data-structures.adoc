@@ -344,7 +344,7 @@ stringD = stringC[1:5]
 print(stringD)
 
 # Create and print soundsD, the slice of stringC from the third to the last elements included.
-soundsD = soundsC[2:len(soundsC)]
+soundsD = soundsC[2 : len(soundsC)]
 print(soundsD)
 ----
 

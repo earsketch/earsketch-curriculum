@@ -175,14 +175,14 @@ loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # Checking if track 1 is louder than track 2
 # We create the boolean comparison1
-comparison1 = (loudnessTrack1 > loudnessTrack2)
-print('Is Track 1 louder than track 2?')
+comparison1 = loudnessTrack1 > loudnessTrack2
+print("Is Track 1 louder than track 2?")
 print(comparison1)
 
 # Creating a for loop to compare each track's loudness to 0.5
 for track in range(1, 3):
     loudness = analyzeTrack(track, RMS_AMPLITUDE)
-    print('Is track number ' + str(track) + ' greater than 0.01?')
+    print("Is track number " + str(track) + " greater than 0.01?")
     print(loudness > 0.01)
 ----
 
@@ -389,8 +389,8 @@ fitMedia(bass2, 2, 9, 17)
 fitMedia(strings, 3, 9, 17)
 
 # Adding percussion using makeBeat()
-beatKick = '0---0-----0-0---'
-beatSnare = '--0-0------000-'
+beatKick = "0---0-----0-0---"
+beatSnare = "--0-0------000-"
 soundKick = OS_KICK02
 soundSnare = OS_SNARE06
 for measure in range(5, 17):
@@ -400,23 +400,23 @@ for measure in range(5, 17):
 # Mixing my tracks
 # First, we analyze the tracks for loudness
 loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
-print('The loudness of track 1 is' + str(loudnessTrack1))
+print("The loudness of track 1 is" + str(loudnessTrack1))
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
-print('The loudness of track 2 is' + str(loudnessTrack2))
+print("The loudness of track 2 is" + str(loudnessTrack2))
 loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
-print('The loudness of track 3 is' + str(loudnessTrack3))
+print("The loudness of track 3 is" + str(loudnessTrack3))
 
 if loudnessTrack1 < loudnessTrack2:
     # if track 1 is quieter than track 2 then we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
-    print('track 1 was quieter than track 2')
+    print("track 1 was quieter than track 2")
 elif loudnessTrack1 < loudnessTrack3:
     # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
-    print('track 1 was quieter than track 3')
+    print("track 1 was quieter than track 3")
 else:
     # if track 1 is louder than tracks 2 and 3, then we change nothing
-    print('track 1 was the loudest track already')
+    print("track 1 was the loudest track already")
 ----
 
 [role="curriculum-javascript"]

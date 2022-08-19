@@ -219,7 +219,7 @@ drums = [
 ]
 
 # each number is actually an index into the drums list
-drumPattern = '0+0+11112+2+3+++'
+drumPattern = "0+0+11112+2+3+++"
 
 makeBeat(drums, 1, 1, drumPattern)
 ----

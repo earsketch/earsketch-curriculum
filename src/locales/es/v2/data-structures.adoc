@@ -339,11 +339,11 @@ sonidosC = sonidosA + sonidosB + sonidosA
 print(sonidosC)
 
 # Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
-cadenaD = cadenaC[1: 5]
+cadenaD = cadenaC[1:5]
 print(cadenaD)
 
 # Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
-sonidosD = sonidosC[2:len(sonidosC)]
+sonidosD = sonidosC[2 : len(sonidosC)]
 print(sonidosD)
 ----
 
@@ -418,7 +418,7 @@ instrBateria = RD_UK_HOUSE_MAINBEAT_10
 def expansor(cadenaDeTiempos):
     nuevoRitmo = ""
     for i in range(0, len(cadenaDeTiempos)):
-        porcionDelRitmo = cadenaDeTiempos[0: i]
+        porcionDelRitmo = cadenaDeTiempos[0:i]
         nuevoRitmo = nuevoRitmo + porcionDelRitmo
     # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
     return nuevoRitmo

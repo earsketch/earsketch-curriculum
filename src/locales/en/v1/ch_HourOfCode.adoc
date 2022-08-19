@@ -694,7 +694,7 @@ clips1 = [RD_EDM_RAZORBASS_2, RD_EDM_ANALOGLEAD_4, RD_EDM_ANALOGPLUCK_2]
 
 clips2 = [RD_EDM_CHORDPART_5, RD_EDM_PERCSYNTHLEAD_1, YG_EDM_FX_12]
 
-clips3 = [RD_EDM_CHORDPART_5, RD_EDM_PERCSYNTHLEAD_1, YG_EDM_FX_12, RD_EDM_SFX_RISER_1, ]
+clips3 = [RD_EDM_CHORDPART_5, RD_EDM_PERCSYNTHLEAD_1, YG_EDM_FX_12, RD_EDM_SFX_RISER_1]
 
 drums = [OS_KICK02, OS_SNARE04, Y24_FX_2, Y24_ELECTRO_2, OS_OPENHAT05]
 
@@ -704,8 +704,8 @@ beat3 = "0+++0+++0+++0+++"
 
 addSection(clips2, drums, beat3, False, 1, 1, 4)
 addSection(clips3, drums, beat2, True, 2, 5, 4)
-addSection(clips1, drums, beat1, True, .5, 9, 4)
-addSection(clips1, drums, beat1, True, .25, 13, 4)
+addSection(clips1, drums, beat1, True, 0.5, 9, 4)
+addSection(clips1, drums, beat1, True, 0.25, 13, 4)
 addSection(clips2, drums, beat3, True, 1, 17, 4)
 addSection(clips2, drums, "", False, 1, 21, 4)
 

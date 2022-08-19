@@ -53,8 +53,8 @@ for measure in range(1, 33):
     if (measure % 4) == 0:  # Only True at every fourth measure
         # rotate list items so last item moves to first slot
         listLength = len(drumSounds)
-        lastSound = drumSounds[listLength - 1:listLength]
-        allButLastSound = drumSounds[0:listLength - 1]
+        lastSound = drumSounds[listLength - 1 : listLength]
+        allButLastSound = drumSounds[0 : listLength - 1]
         drumSounds = lastSound + allButLastSound
 ----
 

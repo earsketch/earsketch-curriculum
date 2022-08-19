@@ -324,7 +324,7 @@ For-loops in Python consist of 3 basic parts:
 
 [source,python]
 ----
-for measure in range(2, 4):              # loop counter, and range
+for measure in range(2, 4):  # loop counter, and range
     makeBeat(Cbeat1, 7, measure, fillA)  # loop body
     makeBeat(Cbeat1, 8, measure, fillC)  # loop body
 makeBeat(Cbeat1, 9, 2, fillB)

@@ -389,7 +389,7 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 # Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 # Paramétrage
-from earsketch import*
+from earsketch import *
 setTempo(100)
 
 # Variables
@@ -397,8 +397,8 @@ melody1 = MILKNSIZZ_ADIOS_BRASS
 melody2 = MILKNSIZZ_ADIOS_STRINGS
 kick = OS_KICK04
 hihat = OS_OPENHAT03
-kickBeat = '0-------0-0-0---'
-hihatBeat = '---0---0--00----'
+kickBeat = "0-------0-0-0---"
+hihatBeat = "---0---0--00----"
 
 # Placement de mélodies sur la piste 1
 fitMedia(melody1, 1, 1, 5)

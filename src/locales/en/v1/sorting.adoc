@@ -18,8 +18,18 @@ from earsketch import *
 setTempo(120)
 
 # Create a list of audio clips that you want to sort according to a particular analysis feature (spectral centroid in this example)
-clipsList = [HIPHOP_MUTED_GUITAR_001, HIPHOP_MUTED_GUITAR_002, HIPHOP_MUTED_GUITAR_003, HIPHOP_MUTED_GUITAR_004, HIPHOP_MUTED_GUITAR_005, HIPHOP_MUTED_GUITAR_006,
-             HIPHOP_MUTED_GUITAR_007, HIPHOP_MUTED_GUITAR_008, HIPHOP_MUTED_GUITAR_009, HIPHOP_MUTED_GUITAR_010]
+clipsList = [
+    HIPHOP_MUTED_GUITAR_001,
+    HIPHOP_MUTED_GUITAR_002,
+    HIPHOP_MUTED_GUITAR_003,
+    HIPHOP_MUTED_GUITAR_004,
+    HIPHOP_MUTED_GUITAR_005,
+    HIPHOP_MUTED_GUITAR_006,
+    HIPHOP_MUTED_GUITAR_007,
+    HIPHOP_MUTED_GUITAR_008,
+    HIPHOP_MUTED_GUITAR_009,
+    HIPHOP_MUTED_GUITAR_010
+]
 
 # Declare what feature you'll be analyzing
 feature = SPECTRAL_CENTROID

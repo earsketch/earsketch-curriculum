@@ -187,14 +187,14 @@ volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # Revisar si la pista 1 tiene más volumen que la pista 2
 # Creamos la comparacion1 booleana.
-comparacion1 = (volumenPista1 > volumenPista2)
-print('Tiene la pista 1 mas volumen que la pista 2?')
+comparacion1 = volumenPista1 > volumenPista2
+print("Tiene la pista 1 mas volumen que la pista 2?")
 print(comparacion1)
 
 # Crear un ciclo for para comparar con 0.01 el volumen de cada pista
 for pista in range(1, 3):
     volumen = analyzeTrack(pista, RMS_AMPLITUDE)
-    print('Es el número de pista' + str(pista) + 'mayor que 0.01?')
+    print("Es el número de pista" + str(pista) + "mayor que 0.01?")
     print(volumen > 0.01)
 ----
 
@@ -396,8 +396,8 @@ fitMedia(bajo2, 2, 9, 17)
 fitMedia(cuerdas, 3, 9, 17)
 
 # Añadir percusiones usando makeBeat()
-ritmoBombo = '0---0-----0-0---'
-ritmoRedoblante = '--0-0------000-'
+ritmoBombo = "0---0-----0-0---"
+ritmoRedoblante = "--0-0------000-"
 sonidoBombo = OS_KICK02
 sonidoRedoblante = OS_SNARE06
 for compas in range(5, 17):
@@ -407,23 +407,23 @@ for compas in range(5, 17):
 # Mezclar mis pistas
 # Primero, analizamos el volumen de las pistas.
 volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-print('El volumen de la pista 1 es' + str(volumenPista1))
+print("El volumen de la pista 1 es" + str(volumenPista1))
 volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-print('El volumen de la pista 2 es' + str(volumenPista2))
+print("El volumen de la pista 2 es" + str(volumenPista2))
 volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
-print('El volumen de la pista 3 es' + str(volumenPista3))
+print("El volumen de la pista 3 es" + str(volumenPista3))
 
 if volumenPista1 < volumenPista2:
     # Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
     setEffect(1, VOLUME, GAIN, +5)
-    print('la pista 1 tuvo menos volumen que la pista 2')
+    print("la pista 1 tuvo menos volumen que la pista 2")
 elif volumenPista1 < volumenPista3:
     # Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
     setEffect(1, VOLUME, GAIN, +5)
-    print('la pista 1 tuvo menos volumen que la pista 3')
+    print("la pista 1 tuvo menos volumen que la pista 3")
 else:
     # Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
-    print('la pista 1 ya tenía el volumen más alto')
+    print("la pista 1 ya tenía el volumen más alto")
 ----
 
 [role="curriculum-javascript"]

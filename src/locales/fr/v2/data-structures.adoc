@@ -366,7 +366,7 @@ stringD = stringC[1:5]
 print(stringD)
 
 # Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
-soundsD = soundsC[2:len(soundsC)]
+soundsD = soundsC[2 : len(soundsC)]
 print(soundsD)
 ----
 

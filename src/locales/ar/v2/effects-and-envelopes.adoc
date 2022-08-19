@@ -388,7 +388,7 @@ for (var measure = 1; measure < 9; measure++) {
 # Fade in and fade out: Looping on all tracks to add a fade in and fade out
 
 # Setup
-from earsketch import*
+from earsketch import *
 setTempo(100)
 
 # Variables
@@ -396,8 +396,8 @@ melody1 = MILKNSIZZ_ADIOS_BRASS
 melody2 = MILKNSIZZ_ADIOS_STRINGS
 kick = OS_KICK04
 hihat = OS_OPENHAT03
-kickBeat = '0-------0-0-0---'
-hihatBeat = '---0---0--00----'
+kickBeat = "0-------0-0-0---"
+hihatBeat = "---0---0--00----"
 
 # Placing melodies on track 1
 fitMedia(melody1, 1, 1, 5)

@@ -242,10 +242,10 @@ There are many different types of programming languages that consist of particul
 ----
 # This is a comment
 
-'''
+"""
 this is a multi-line comment
 it extends across multiple lines
-'''
+"""
 ----
 [role="curriculum-python"]
 *Conditional*:: A type of statement that checks to see if an argument is True or False before executing some amount of code. Types of conditionals are if-statements, elif-statements, and else-statements. For example: 
@@ -268,7 +268,7 @@ This code reads as: if the variable x (defined elsewhere in code) is less than z
 [role="curriculum-python"]
 [source,python]
 ----
-{'hello': 'hola', 'goodbye': 'adios'}
+{"hello": "hola", "goodbye": "adios"}
 ----
 [role="curriculum-python"]
 `hello` and`goodbye` are keys whereas `hola` and `adios` are values.

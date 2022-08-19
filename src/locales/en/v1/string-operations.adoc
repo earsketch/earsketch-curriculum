@@ -354,7 +354,7 @@ setTempo(100)
 # Extracting a substring
 a = "Pulling a rabbit out of a string"
 # Makes a new string from indices 10, 11, 12, 13 ,14 ,and 15
-b = a[10: 16]
+b = a[10:16]
 
 # print the contents of b to the console
 print(b)

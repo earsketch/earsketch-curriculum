@@ -70,7 +70,7 @@ clipToAnalyze = HIPHOP_TRAPHOP_BEAT_001
 # Define the feature to analyze
 analysisMethod = RMS_AMPLITUDE
 # Define the minimum RMS amplitude necessary for the clip to be added to track 1
-rmsThreshold = .5
+rmsThreshold = 0.5
 
 # Define the starting and ending measures
 start = 1
@@ -331,7 +331,7 @@ def fillClipList(folder):
 
 def chooseClip(clipList, chooseHigher):
 
-    clip = clipList[0]    # Assign a first clip for comparison
+    clip = clipList[0]  # Assign a first clip for comparison
 
     # Decide if we are looking for highest or lowest value (True picks higher, False picks lower)
     if chooseHigher:

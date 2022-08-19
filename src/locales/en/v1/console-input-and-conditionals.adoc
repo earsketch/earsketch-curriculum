@@ -230,12 +230,12 @@ setTempo(120)
 
 # Expression 1
 # Is it true that 1 + 1 equals to 2?
-a = (1 + 1 == 2)
+a = (1 + 1) == 2
 print(a)
 
 # Expression 2
 # Is it true that 2 + 2 does not equal to 5?
-b = (2 + 2 != 5)
+b = (2 + 2) != 5
 print(b)
 ----
 
@@ -272,12 +272,12 @@ startMeasure = 1
 endMeasure = 9
 
 # Is it true that startMeasure equals to 1 AND endMeasure is greater than 10?
-a = (startMeasure == 1 and endMeasure > 10)
+a = (startMeasure == 1) and (endMeasure > 10)
 print(a)
 
 # Expression 2
 # Is it true that startMeasure equals to 1 OR endMeasure is greater than 10?
-b = (startMeasure == 1 or endMeasure > 10)
+b = (startMeasure == 1) or (endMeasure > 10)
 print(b)
 ----
 
@@ -359,10 +359,10 @@ setTempo(120)
 # Example 1: What is 1 + 1?  Take a guess as to what will be printed out.
 answer = 1 + 1
 if answer == 2:
-    print('The answer is 2')
+    print("The answer is 2")
 
 if answer == 3:
-    print('The answer is 3')
+    print("The answer is 3")
 ----
 
 [role="curriculum-javascript"]
@@ -396,18 +396,18 @@ from earsketch import *
 setTempo(140)
 
 # What music do you want to listen to?
-a = 'energetic'
-b = 'rock'
+a = "energetic"
+b = "rock"
 
 # Did you want to listen to energetic hip hop?
-if (a == 'energetic') and (b == 'hip hop'):
-    print('Here is an energetic hiphop song!')
+if (a == "energetic") and (b == "hip hop"):
+    print("Here is an energetic hiphop song!")
     fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9)
     fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9)
 
 # Energetic hip hop isn't what you were looking for?
 else:
-    print('Here is an energetic rock song!')
+    print("Here is an energetic rock song!")
     fitMedia(RD_ROCK_POPRHYTHM_MAINDRUMS_6, 1, 1, 9)
     fitMedia(RD_ROCK_POPRHYTHM_GUITAR_12, 2, 1, 9)
 ----
