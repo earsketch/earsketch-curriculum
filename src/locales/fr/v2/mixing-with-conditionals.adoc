@@ -181,7 +181,7 @@ print(comparison1)
 # Création d'une boucle pour comparer l'intensité sonore de chaque piste à la valeur 0.5
 for track in range(1, 3):
     loudness = analyzeTrack(track, RMS_AMPLITUDE)
-    print('Est-ce que l'intensité sonore de la piste ' + str(track) + ' est plus élevée que 0.01 ?')
+    print('Est-ce que l'intensité sonore de la piste ' + str(track) + ' est plus élevée que 0.01?')
     print(loudness > 0.01)
 ----
 

@@ -411,7 +411,7 @@ if loudnessTrack1 < loudnessTrack2:
     # if track 1 is quieter than track 2 then we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print ('track 1 was quieter than track 2')
-elif loudnessTrack1 < loudnessTrack3
+elif loudnessTrack1 < loudnessTrack3:
     # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
     setEffect(1, VOLUME, GAIN, +5)
     print ('track 1 was quieter than track 3')

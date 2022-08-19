@@ -27,7 +27,7 @@ def addNumbers(numb1, numb2):
 
 result = addNumbers(2, 2)
 # Print result to the console
-print result
+print(result)
 ----
 
 [role="curriculum-javascript"]
@@ -177,7 +177,7 @@ stringB = "Science!"
 # concatenating stringA and stringB with a space in between
 newString = stringA + " " + stringB
 
-print newString
+print(newString)
 ----
 
 [role="curriculum-javascript"]
@@ -357,9 +357,9 @@ a = "Pulling a rabbit out of a string"
 b = a[10: 16]
 
 # print the contents of b to the console
-print b
+print(b)
 # print the length of b to the console
-print len(b)
+print(len(b))
 ----
 
 [role="curriculum-javascript"]
@@ -432,7 +432,7 @@ def expander(beatString):
     return newBeat
 
 finalBeat = expander(initialBeat)
-print finalBeat
+print(finalBeat)
 
 # makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
 makeBeat(drumInstr, 1, 1, finalBeat)

@@ -121,7 +121,7 @@ setTempo(120)
 
 myImage = importImage("https://earsketch.gatech.edu/curriculum/curriculum/media/OptionalLessons/grid_zoomed.png", 8, 8)
 
-print myImage
+print(myImage)
 ----
 
 

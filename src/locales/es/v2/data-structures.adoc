@@ -424,7 +424,7 @@ def expansor(cadenaDeTiempos):
     return nuevoRitmo
 
 ritmoFinal = expansor(ritmoInicial)
-print ritmoFinal
+print(ritmoFinal)
 
 # makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
 makeBeat(instrBateria, 1, 1, ritmoFinal)

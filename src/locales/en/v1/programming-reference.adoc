@@ -374,7 +374,7 @@ The above code prints “Hello” once for each number in the range between 1 an
 n = 5
 
 while n > 0:
-    print n
+    print(n)
     n = n - 1
 ----
 [role="curriculum-python"]
@@ -387,11 +387,11 @@ The above code first checks to see if n is greater than zero. If this is True, n
 [role="curriculum-python"]
 [source,python]
 ----
-range(10) will be[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+range(10)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-range(10, 15) will be[10, 11, 12, 13, 14]
+range(10, 15)  # [10, 11, 12, 13, 14]
 
-range(0, 10, 2) will be[0, 2, 4, 6, 8]
+range(0, 10, 2)  # [0, 2, 4, 6, 8]
 ----
 [role="curriculum-python"]
 *Return*:: The return keyword signals to the program that the end of a function has been reached. When a return statement is executed, the currently running function will terminate. The function can simply return with no output, or it can return a value. For example:
