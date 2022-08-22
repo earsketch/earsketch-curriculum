@@ -425,7 +425,7 @@ We will look at adding an effect to the entire track in the DAW using the functi
 
 . *Effect Value:* The value of the parameter: a number in a specific range.
 
-For example, if we wanted to increase our volume on Track 1, our function call would look like this:  `setEffect(1, VOLUME, GAIN, 10)`.   The volume parameter _gain_ specifies the output volume of the original sound.  Every sound clip has a default gain of zero.  You can adjust the gain to increase or decrease your volume.   The minimum value for gain in EarSketch is -60 and the maximum value is 12.  Therefore, if you wanted to decrease volume on Track 1 – you can write almost the same function call with a negative number `setEffect(1, VOLUME, GAIN, -20)`.
+For example, if we wanted to increase our volume on Track 1, our function call would look like this: `setEffect(1, VOLUME, GAIN, 10)`. The volume parameter _gain_ specifies the output volume of the original sound. Every sound clip has a default gain of zero. You can adjust the gain to increase or decrease your volume. The minimum value for gain in EarSketch is -60 and the maximum value is 12. Therefore, if you wanted to decrease volume on Track 1 – you can write almost the same function call with a negative number `setEffect(1, VOLUME, GAIN, -20)`.
 
 
 

@@ -13,7 +13,7 @@
 [role="curriculum-python"]
 [source,python]
 ----
-# AnalyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
+# analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
 # Setup
 from earsketch import *
@@ -33,7 +33,7 @@ print(loudness1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// AnalyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
+// analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
 // Setup
 setTempo(120);

@@ -475,7 +475,7 @@ setTempo(120);
 // Body
 var a = readInput("Do you like hip-hop music? Type yes or no.");
 // using logical OR, in case user capitalizes their response.
-if (a == "yes" || a == "Yes" || a == "YES") {
+if ((a == "yes") || (a == "Yes") || (a == "YES")) {
     println("Hip-hop it is!");
     fitMedia(YG_NEW_HIP_HOP_ARP_1, 1, 1, 9);
     fitMedia(RD_TRAP_MAIN808_BEAT_1, 2, 1, 9);
