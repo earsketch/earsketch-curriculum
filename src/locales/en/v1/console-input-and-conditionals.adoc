@@ -12,57 +12,31 @@ Printing to the console allows information to be displayed to the user. *Console
 In EarSketch, the `readInput()` function is used for console input. This opens a dialog box asking for input and returns the string typed into the dialog box. It has one parameter, a string that is displayed in the dialog box as a prompt. Try interacting with the following example. Remember to check the console!
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Simple Console Input
-#
-# author: The EarSketch Team
-#
-# description: Interacting with a prompt via console input
-#
-#
-#
+# Simple Input: Interacting with a prompt
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Body
-print "Hello."
+# Body
+print("Hello.")
 n = readInput("What is your name? ")
-print "Hi " + n + "! It is nice to meet you."
-
-#Finish
-finish()
+print("Hi " + n + "! It is nice to meet you.")
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Simple Console Input
-//
-// author: The EarSketch Team
-//
-// description: Interacting with a prompt via console input
-//
-//
-//
+// Simple Input: Interacting with a prompt
 
-init();
 setTempo(120);
 
-//Body
+// Body
 println("Hello.");
 var n = readInput("What is your name? ");
-println ("Hi " + n + "! It is nice to meet you.");
-
-//Finish
-finish();
+println("Hi " + n + "! It is nice to meet you.");
 ----
 
 [role="curriculum-python"]
@@ -87,28 +61,18 @@ Sometimes we want to take a string input from the user and convert it to another
 In the example below, console input is used to determine some characteristics of the song. First, the user is prompted to select a tempo from a recommended range. The returned string is converted to an integer and used as the `setTempo()` argument. The user is also prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Musical Console Input
-#
-# author: The EarSketch Team
-#
-# description: Creating a dubstep song with user-specified parameters
-#
-#
-#
+# Musical Input: Creating a dubstep song with user-specified parameters
 
-#Setup
+# Setup
 from earsketch import *
-init()
 t = readInput("Set a valid tempo for this song (120 - 160): ")
-print "You set a tempo of " + t + "bpm"
+print("You set a tempo of " + t + "bpm")
 tempo = int(t)
 setTempo(tempo)
 
-#Music
+# Music
 kick = OS_KICK02
 clap = OS_CLAP04
 beatString1 = "0+++++--------00"
@@ -121,35 +85,24 @@ finalClip = dubStepClip + clipNum
 fitMedia(finalClip, 1, 1, 5)
 # kick
 for measure in range(1, 5, 2):
-  makeBeat(kick, 2, measure, (beatString1 + beatString2))
+    makeBeat(kick, 2, measure, (beatString1 + beatString2))
 # clap
 for measure in range(2, 6):
-  fitMedia(clap, 3, measure - 0.5, measure - 0.25)
-
-#Finish
-finish()
+    fitMedia(clap, 3, measure - 0.5, measure - 0.25)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Musical Console Input
-//
-// author: The EarSketch Team
-//
-// description: Creating a dubstep song with user-specified parameters
-//
+// Musical Input: Creating a dubstep song with user-specified parameters
 
-//Setup
-init();
+// Setup
 var t = readInput("Set a valid tempo for this song (120 - 160): ");
 println("You set a tempo of " + t + "bpm");
 var tempo = Number(t);
 setTempo(tempo);
 
-//Music
+// Music
 var kick = OS_KICK02;
 var clap = OS_CLAP04;
 var beatString1 = "0+++++--------00";
@@ -161,16 +114,13 @@ var finalClip = dubStepClip + clipNum;
 // user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5);
 // kick
-for (var measure = 1; measure < 5; measure += 2){
-  makeBeat(kick, 2, measure, (beatString1 + beatString2)); // concatenating beat strings
+for (var measure = 1; measure < 5; measure += 2) {
+    makeBeat(kick, 2, measure, (beatString1 + beatString2)); // concatenating beat strings
 }
 // clap
-for (measure = 1.5; measure < 5; measure++){
-  fitMedia(clap, 3, measure, measure + 0.25);
+for (measure = 1.5; measure < 5; measure++) {
+    fitMedia(clap, 3, measure, measure + 0.25);
 }
-
-//Finish
-finish();
 ----
 
 [[booleans]]
@@ -271,132 +221,85 @@ The following is a review of terminology used throughout the curriculum, listed 
 Here are some simple boolean expressions.  Before running the code, try to determine if each of the expression is TRUE or FALSE.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-#        python code
-#        script_name: Boolean Example
-#
-#        author: The EarSketch Team
-#        description: Before running the code, determine if each of the expression is true or false
-#
+# Booleans: Before running the code, determine if each of the expression is true or false
 
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Expression 1
-#Is it true that 1 + 1 equals to 2?
-a = (1 + 1 == 2)
-print (a)
+# Expression 1
+# Is it true that 1 + 1 equals to 2?
+a = (1 + 1) == 2
+print(a)
 
-#Expression 2
-#Is it true that 2 + 2 does not equal to 5?
-b = (2 + 2 != 5)
-print (b)
-
-#finish
-finish()
+# Expression 2
+# Is it true that 2 + 2 does not equal to 5?
+b = (2 + 2) != 5
+print(b)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Simple Boolean Example
-//
-// author: The EarSketch Team
-//
-// description: Before running the code, determine if each of the expression is true or false
-//
-//
+// Booleans: Before running the code, determine if each of the expression is true or false
 
-init();
 setTempo(120);
 
-//Expression 1
-//Is it true that 1 + 1 equals to 2?
+// Expression 1
+// Is it true that 1 + 1 equals to 2?
 var a = (1 + 1 == 2);
 println(a);
 
-//Expression 2
-//Is it true that 2 + 2 does not equal to 5?
+// Expression 2
+// Is it true that 2 + 2 does not equal to 5?
 var b = (2 + 2 != 5);
 println(b);
-
-//Finish
-finish();
-
 ----
 
 Here is a compound Boolean example.  Do you see the difference between the last two expressions?
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-#        python code
-#        script_name: Compound Boolean Example
-#
-#        author: The EarSketch Team
-#        description: Before running the code, determine if each of the expression is true or false
-#
-#
+# Compound Booleans: Before running the code, determine if each of the expression is true or false
 
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Expression 1
+# Expression 1
 startMeasure = 1
 endMeasure = 9
 
-#Is it true that startMeasure equals to 1 AND endMeasure is greater than 10?
-a = (startMeasure == 1 and endMeasure > 10)
-print (a)
+# Is it true that startMeasure equals to 1 AND endMeasure is greater than 10?
+a = (startMeasure == 1) and (endMeasure > 10)
+print(a)
 
-#Expression 2
-#Is it true that startMeasure equals to 1 OR endMeasure is greater than 10?
-b = (startMeasure == 1 or endMeasure > 10)
-print (b)
-
-#finish
-finish()
+# Expression 2
+# Is it true that startMeasure equals to 1 OR endMeasure is greater than 10?
+b = (startMeasure == 1) or (endMeasure > 10)
+print(b)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Compound Boolean Example
-//
-// author: The EarSketch Team
-//
-// description: Before running the code, determine if each of the expression is true or false
-//
-//
+// Compound Booleans: Before running the code, determine if each of the expression is true or false
 
-init();
 setTempo(120);
 
-//Expression 1
+// Expression 1
 var startMeasure = 1;
 var endMeasure = 9;
 
-//Is it true that startMeasure equals to 1 AND endMeasure is greater than 10?
+// Is it true that startMeasure equals to 1 AND endMeasure is greater than 10?
 var a = (startMeasure == 1 && endMeasure > 10);
 println(a);
 
-//Expression 2
-//Is it true that startMeasure equals to 1 OR endMeasure is greater than 10?
+// Expression 2
+// Is it true that startMeasure equals to 1 OR endMeasure is greater than 10?
 var b = (startMeasure == 1 || endMeasure > 10);
 println(b);
-
-//Finish
-finish();
-
 ----
 
 [role="curriculum-python curriculum-mp4"]
@@ -418,14 +321,14 @@ Boolean logic allows a program to make a decision based on a condition. A *condi
 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-if (condition):
+if condition:
     statement to execute if condition evaluates to True
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 if (condition){
     statement to execute if condition evaluates to true
@@ -445,219 +348,143 @@ video::./videoMedia/Screencast-Ch17-3-JS.mp4[]
 Let’s start off very simple.  Before running this code, take a guess as to what the code will print out.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Conditionals Basic #1
-#
-# author: The EarSketch Team
-#
-# description: Using Simple Conditionals
-#
-#
-#
+# Conditionals 1: Using Simple Conditionals
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Example 1: What is 1 + 1?  Take a guess as to what will be printed out.
 answer = 1 + 1
-if (answer == 2):
-  print 'The answer is 2'
+if answer == 2:
+    print("The answer is 2")
 
-if (answer == 3):
-  print 'The answer is 3'
-
-# Finish
-finish()
-
+if answer == 3:
+    print("The answer is 3")
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Conditionals Basic #1
-//
-// author: The EarSketch Team
-//
-// description: Using Simple Conditionals
-//
+// Conditionals 1: Using Simple Conditionals
 
 // Setup
-init();
 setTempo(120);
 
 // Example 1: What is 1 + 1?  Take a guess as to what will be printed out.
 var answer = 1 + 1;
-if (answer == 2){
-  println("The answer is 2");
+if (answer == 2) {
+    println("The answer is 2");
 }
 
-if (answer == 3){
-  println("The answer is 3");
+if (answer == 3) {
+    println("The answer is 3");
 }
-
-// Finish
-finish();
-
 ----
 
 Now let’s do something that relates to music.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Conditionals Basic #2
-#
-# author: The EarSketch Team
-#
-# description: Musical example of Conditionals.
-#
-#
-#
+# Conditionals 2: Musical example of conditionals
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(140)
 
 # What music do you want to listen to?
-a = 'energetic'
-b = 'rock'
+a = "energetic"
+b = "rock"
 
 # Did you want to listen to energetic hip hop?
-if (a == 'energetic' and b == 'hip hop'):
-  print 'Here is an energetic hiphop song!'
-  fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9)
-  fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9)
+if (a == "energetic") and (b == "hip hop"):
+    print("Here is an energetic hiphop song!")
+    fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9)
+    fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9)
 
 # Energetic hip hop isn't what you were looking for?
 else:
-  print 'Here is an energetic rock song!'
-  fitMedia(RD_ROCK_POPRHYTHM_MAINDRUMS_6, 1, 1, 9)
-  fitMedia(RD_ROCK_POPRHYTHM_GUITAR_12, 2, 1, 9)
-
-# Finish
-finish()
-
+    print("Here is an energetic rock song!")
+    fitMedia(RD_ROCK_POPRHYTHM_MAINDRUMS_6, 1, 1, 9)
+    fitMedia(RD_ROCK_POPRHYTHM_GUITAR_12, 2, 1, 9)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Conditionals Basic #2
-//
-// author: The EarSketch Team
-//
-// description: Musical example of Conditionals.
-//
+// Conditionals 2: Musical example of conditionals
 
-//Setup
-init();
+// Setup
 setTempo(140);
 
 // What music do you want to listen to?
-var a = 'energetic';
-var b = 'rock';
+var a = "energetic";
+var b = "rock";
 
 // Did you want to listen to energetic hip hop?
-if (a == 'energetic' && b == 'hip hop'){
-     println('Here is an energetic hiphop song!');
-     fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9);
-     fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9);
+if (a == "energetic" && b == "hip hop") {
+    println("Here is an energetic hiphop song!");
+    fitMedia(RD_TRAP_MAIN808_BEAT_6, 1, 1, 9);
+    fitMedia(RD_TRAP_ANALOGSINELEAD_1, 2, 1, 9);
 
 // Energetic hip hop isn't what you were looking for?
-}else{
-     println('Here is an energetic rock song!');
-     fitMedia(RD_ROCK_POPRHYTHM_MAINDRUMS_6, 1, 1, 9);
-     fitMedia(RD_ROCK_POPRHYTHM_GUITAR_12, 2, 1, 9);
- }
-
-// Finish
-finish();
-
+} else {
+    println("Here is an energetic rock song!");
+    fitMedia(RD_ROCK_POPRHYTHM_MAINDRUMS_6, 1, 1, 9);
+    fitMedia(RD_ROCK_POPRHYTHM_GUITAR_12, 2, 1, 9);
+}
 ----
 
 Let’s now use the Console Input along with Conditional Statements to create an interactive program.  In the following examples, your input will determine what music will be played.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Conditionals
-#
-# author: The EarSketch Team
-#
-# description: Change your answer to see how it affects the conditional statement
-#
-#
-#
+# Conditionals 3: Change your answer to see how it affects the conditional statement
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Body
 
 a = readInput("Do you like hip-hop music? Type yes or no.")
 # using logical OR, in case user capitalizes their response.
-if (a == "yes" or a == "Yes" or a == "YES"):
-    print "Hip-hop it is!"
+if (a == "yes") or (a == "Yes") or (a == "YES"):
+    print("Hip-hop it is!")
     fitMedia(YG_NEW_HIP_HOP_ARP_1, 1, 1, 9)
     fitMedia(RD_TRAP_MAIN808_BEAT_1, 2, 1, 9)
 # an answer other than "Yes" or "yes" was entered
 else:
-    print "Ok, here is some funk."
+    print("Ok, here is some funk.")
     fitMedia(YG_NEW_FUNK_ELECTRIC_PIANO_4, 1, 1, 9)
     fitMedia(YG_NEW_FUNK_DRUMS_4, 2, 1, 9)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Conditionals
-//
-// author: The EarSketch Team
-//
-// description: Change your answer to see how it affects the conditional statement
-//
+// Conditionals 3: Change your answer to see how it affects the conditional statement
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Body
+// Body
 var a = readInput("Do you like hip-hop music? Type yes or no.");
 // using logical OR, in case user capitalizes their response.
-if (a == "yes" || a == "Yes" || a == "YES" ){
+if ((a == "yes") || (a == "Yes") || (a == "YES")) {
     println("Hip-hop it is!");
     fitMedia(YG_NEW_HIP_HOP_ARP_1, 1, 1, 9);
     fitMedia(RD_TRAP_MAIN808_BEAT_1, 2, 1, 9);
 // anything other than "yes" or "Yes" was typed
-} else{
+} else {
     println("Ok, here is some funk.");
     fitMedia(YG_NEW_FUNK_ELECTRIC_PIANO_4, 1, 1, 9);
     fitMedia(YG_NEW_FUNK_DRUMS_4, 2, 1, 9);
 }
-
-// Finish
-finish();
 ----
 
 [role="curriculum-python"]
@@ -674,102 +501,72 @@ _if_, _elif_, and _else_ statements can be used create interesting musical varia
 _if_, _else if_, and _else_ statements can be used create interesting musical variations by making changes based on the status of variables. The following example lets the user choose the instrumentation. User input is taken as a string and assigned to a variable. Then, conditions are checked in a series of statements to determine which instrument plays first.
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Which Comes First
-//
-// author: The EarSketch Team
-//
-// description: Let the user choose which instrument plays first.
-//
-//
-//
+// Which Comes First: Let the user choose which instrument plays first
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Body
+// Body
 
 var first_inst = readInput("Which instrument comes first? Type Guitar, Bass, or Drums.");
 
-if (first_inst == "guitar" || first_inst == "Guitar" || first_inst == "GUITAR"){
-  println("Guitar comes first");
-	fitMedia(Y02_GUITAR_1, 1, 1, 9);
-	fitMedia(Y01_BASS_1, 2, 3, 9);
-	fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9);
+if (first_inst == "guitar" || first_inst == "Guitar" || first_inst == "GUITAR") {
+    println("Guitar comes first");
+    fitMedia(Y02_GUITAR_1, 1, 1, 9);
+    fitMedia(Y01_BASS_1, 2, 3, 9);
+    fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9);
+} else if (first_inst == "bass" || first_inst == "Bass" || first_inst == "BASS") {
+    println("Bass comes first");
+    fitMedia(Y01_BASS_1, 1, 1, 9);
+    fitMedia(Y02_GUITAR_1, 2, 3, 9);
+    fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9);
+} else if (first_inst == "drums" || first_inst == "Drums" || first_inst == "DRUMS") {
+    println("Drums come first");
+    fitMedia(Y02_DRUM_SAMPLES_1, 1, 1, 9);
+    fitMedia(Y02_GUITAR_1, 2, 3, 9);
+    fitMedia(Y01_BASS_1, 3, 3, 9);
+} else {
+    println("Please select Guitar, Bass, or Drums.");
 }
-
-else if (first_inst == "bass" || first_inst == "Bass" || first_inst == "BASS"){
-  println("Bass comes first");
-	fitMedia(Y01_BASS_1, 1, 1, 9);
-	fitMedia(Y02_GUITAR_1, 2, 3, 9);
-	fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9);
-}
-
-else if (first_inst == "drums" || first_inst == "Drums" || first_inst == "DRUMS"){
-  println("Drums come first");
-	fitMedia(Y02_DRUM_SAMPLES_1, 1, 1, 9);
-	fitMedia(Y02_GUITAR_1, 2, 3, 9);
-	fitMedia(Y01_BASS_1, 3, 3, 9);
-}
-else {
-  println("Please select Guitar, Bass, or Drums.");
-}
-
-//Finish
-finish();
 ----
 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Which Comes First
-#
-# author: The EarSketch Team
-#
-# description: Let the user choose which instrument plays first.
-#
-#
+# Which Comes First: Let the user choose which instrument plays first
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Body
+# Body
 
 input = readInput("Which instrument comes first? Type Guitar, Bass, or Drums.")
 first_inst = str(input)
 
 if (first_inst == "guitar") or (first_inst == "Guitar") or (first_inst == "GUITAR"):
-	print "Guitar comes first"
-	fitMedia(Y02_GUITAR_1, 1, 1, 9)
-	fitMedia(Y01_BASS_1, 2, 3, 9)
-	fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9)
+    print("Guitar comes first")
+    fitMedia(Y02_GUITAR_1, 1, 1, 9)
+    fitMedia(Y01_BASS_1, 2, 3, 9)
+    fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9)
 
 elif (first_inst == "bass") or (first_inst == "Bass") or (first_inst == "BASS"):
-  print "Bass comes first"
-  fitMedia(Y01_BASS_1, 1, 1, 9)
-  fitMedia(Y02_GUITAR_1, 2, 3, 9)
-  fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9)
+    print("Bass comes first")
+    fitMedia(Y01_BASS_1, 1, 1, 9)
+    fitMedia(Y02_GUITAR_1, 2, 3, 9)
+    fitMedia(Y02_DRUM_SAMPLES_1, 3, 3, 9)
 
 elif (first_inst == "drums") or (first_inst == "Drums") or (first_inst == "DRUMS"):
-  print "Drums come first"
-  fitMedia(Y02_DRUM_SAMPLES_1, 1, 1, 9)
-  fitMedia(Y02_GUITAR_1, 2, 3, 9)
-  fitMedia(Y01_BASS_1, 3, 3, 9)
+    print("Drums come first")
+    fitMedia(Y02_DRUM_SAMPLES_1, 1, 1, 9)
+    fitMedia(Y02_GUITAR_1, 2, 3, 9)
+    fitMedia(Y01_BASS_1, 3, 3, 9)
 
 else:
-  print "Please select Guitar, Bass, or Drums."
-
-#Finish
-finish()
+    print("Please select Guitar, Bass, or Drums.")
 ----
 
 ////
@@ -786,82 +583,55 @@ BMW - 9/20/16
 Boolean values can change as a result of a program running. For example, a boolean can be used to execute a conditional statement based off the value of a loop counter. Placing a statement inside another statement is known as *nesting*. Indentation increases for each level of nesting.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Looped Conditionals
-#
-# author: The EarSketch Team
-#
-# description: Additive structure with nested statements
-#
-#
-#
+# Additive structure with nested statements
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(125)
 
-#Music
+# Music
 drums = TECHNO_MAINLOOP_003
 bass = ELECTRO_ANALOGUE_BASS_003
 lead = TECHNO_POLYLEAD_004
 
 for measure in range(1, 9):
 
-  if measure != 4: # Place clip on all measures except for measure 4
-    fitMedia(drums, 1, measure, measure + 1)
+    if measure != 4:  # Place clip on all measures except for measure 4
+        fitMedia(drums, 1, measure, measure + 1)
 
-  if measure >= 3: # Start placing lead clip at measure 3
-    fitMedia(lead, 2, measure, measure + 1)
+    if measure >= 3:  # Start placing lead clip at measure 3
+        fitMedia(lead, 2, measure, measure + 1)
 
-  if measure >= 5: # Start placing bass clip at measure 5
-    fitMedia(bass, 3, measure, measure + 1)
-
-#Finish
-finish()
+    if measure >= 5:  # Start placing bass clip at measure 5
+        fitMedia(bass, 3, measure, measure + 1)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: Looped Conditionals
-//
-// author: The EarSketch Team
-//
-// description: Additive structure with nested statements
-//
-//
-//
+// Additive structure with nested statements
 
-//Setup
-init();
+// Setup
 setTempo(130);
 
-//Music
+// Music
 var drums = TECHNO_MAINLOOP_003;
 var bass = ELECTRO_ANALOGUE_BASS_003;
 var lead = TECHNO_POLYLEAD_004;
 
-for (var measure = 1; measure < 9; measure++){
-
-    if (measure != 4){ // Place clip on all measures except for measure 4
+for (var measure = 1; measure < 9; measure++) {
+    if (measure != 4) { // Place clip on all measures except for measure 4
         fitMedia(drums, 1, measure, measure + 1);
     }
-    if (measure >= 3){ // Start placing lead clip at measure 3
+    if (measure >= 3) { // Start placing lead clip at measure 3
         fitMedia(lead, 2, measure, measure + 1);
     }
-    if (measure >= 5){ //Start placing bass clip at measure 5
+    if (measure >= 5) { // Start placing bass clip at measure 5
         fitMedia(bass, 3, measure, measure + 1);
     }
 }
-
-//Finish
-finish();
 ----
 
 JAF: Big picture suggestions and questions:
@@ -958,7 +728,7 @@ What would the output of this block of code be (what would print to the console)
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     n = 5 + n
     print(n)
 ----

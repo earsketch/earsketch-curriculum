@@ -35,17 +35,10 @@ Voyez l'exemple ci-dessous :
 [role="curriculum-python"]
 [source,python]
 ----
-#   code python
-#   script_name : Effet de volume
-#
-#   auteur : L'équipe EarSketch
-#   description : Modification du volume de deux pistes
-#
+# Effet de volume : Modification du volume de deux pistes
 
 # Paramétrage
 from earsketch import *
-
-init()
 setTempo(120)
 
 # Variables
@@ -53,37 +46,23 @@ piano1 = COMMON_LOVE_THEME_PIANO_2
 percussions1 = HOUSE_BREAK_FILL_002
 
 # Placement des sons :
-fitMedia(piano1,1,1,5)
-fitMedia(percussions1,2,3,5)
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percussions1, 2, 3, 5)
 
 # Mixage : augmentation du volume de la piste de piano et réduction du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Effet de volume
-//
-// auteur : L'équipe EarSketch
-//
-// description : Modification du volume de deux pistes
-//
-//
-//
+// Effet de volume : Modification du volume de deux pistes
 
-//Paramétrage
-init()
-setTempo(120)
+// Paramétrage
+setTempo(120);
 
-//Variables
+// Variables
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percussions1 = HOUSE_BREAK_FILL_002;
 
@@ -91,13 +70,9 @@ var percussions1 = HOUSE_BREAK_FILL_002;
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
-
 // Mixage : augmentation du volume de la piste du piano et baisse du volume de la piste des percussions
 setEffect(1, VOLUME, GAIN, 2);
 setEffect(2, VOLUME, GAIN, -15);
-
-//Fin
-finish()
 ----
 
 Nous avons vu l'effet `VOLUME`. Voyons maintenant l'effet `DELAY`. Écoutez les deux clips ci-dessous. Un des clips comprend l'effet *delay* appliqué et l'autre non.
@@ -127,24 +102,13 @@ Vous pouvez essayer de modifier le délai et d'évaluer si votre musique sonne m
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Effet de délai
-#
-# auteur : L'équipe EarSketch
-#
-# description : Ajout d'un délai à une piste
-#
-#
-#
+# Effet de délai : Ajout d'un délai à une piste
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Musique
+# Musique
 lead1 = EIGHT_BIT_ATARI_SYNTH_001
 lead2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -163,34 +127,20 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(drums1, 3, 3, 5)
 fitMedia(drums2, 3, 5, 9)
 
-#Effets
-
-#setEffect(1, DELAY, DELAY_TIME, 500) #Ajout d'un effet de délai (écho) à des intervalles de 500 ms.
-#setEffect(1, DELAY, DELAY_FEEDBACK, -20.0) #Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0).
-
-#Fin
-finish()
+# Effets
+# setEffect(1, DELAY, DELAY_TIME, 500)  # Ajout d'un effet de délai (écho) à des intervalles de 500 ms.
+# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0).
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Effet de délai
-//
-// auteur : L'équipe EarSketch
-//
-// description : Ajout d'un délai à une piste
-//
-//
-//
+// Effet de délai : Ajout d'un délai à une piste
 
-//Paramétrage
-init()
-setTempo(120)
+// Paramétrage
+setTempo(120);
 
-//Musique
+// Musique
 var lead1 = EIGHT_BIT_ATARI_SYNTH_001;
 var lead2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
@@ -207,13 +157,9 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(drums1, 3, 3, 5);
 fitMedia(drums2, 3, 5, 9);
 
-//Effets
-
-//setEffect(1, DELAY, DELAY_TIME, 500); // Ajout d'un effet de délai (écho) à des intervalles de 500 ms
-//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0)
-
-//Fin
-finish()
+// Effets
+// setEffect(1, DELAY, DELAY_TIME, 500); // Ajout d'un effet de délai (écho) à des intervalles de 500 ms
+// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Réduit le nombre relatif de répétitions (la valeur par défaut est -3.0)
 ----
 
 [[functionsandmoreeffects]]
@@ -222,12 +168,10 @@ finish()
 Jusqu'à présent, vous avez utilisé plusieurs fonctions dans EarSketch comme `fitMedia()` ou `setEffect()`. Notez que les noms des fonctions commencent toujours par une lettre minuscule et sont souvent un verbe. Les parenthèses indiquent à l'ordinateur d’*appeler* ou d'*exécuter* la fonction. Les *arguments*, ou paramètres, entre les parenthèses sont séparés par des virgules.
 
 [role="curriculum-python"]
-* Les fonctions `init()` et `finish()` ne nécessitent aucun argument. Ces fonctions spécifiques sont des fonctions standard en Python.
 * Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API EarSketch, ajoute des fonctionnalités musicales à Python. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
 * Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
 
 [role="curriculum-javascript"]
-* Les fonctions `init()` et `finish()` ne nécessitent aucun argument. Ces fonctions spécifiques sont des fonctions standard en JavaScript.
 * Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API de EarSketch, ajoute des fonctionnalités musicales à JavaScript. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
 * Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
 
@@ -294,62 +238,38 @@ Les trois derniers paramètres sur sept sont des *paramètres facultatifs*. S'il
 Voici un exemple de fondu d'ouverture :
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# code python
-#
-# script_name : Enveloppes
-#
-# auteur : L'équipe EarSketch
-#
-# description : Création d'enveloppes avec la fonction setEffect() à sept paramètres
-#
-#
-#
+# Enveloppes : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Établissement d'une rampe d'effet entre les mesures 1 et 3, allant de -60 dB à 0 dB.
 # Ceci est un fondu d'ouverture
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
-
-#Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Enveloppes
-//
-// auteur : L'équipe EarSketch
-//
-// description : Création d'enveloppes avec la fonction setEffect() à sept paramètres
-//
-//
-//
+// Enveloppes : Création d'enveloppes avec la fonction setEffect() à sept paramètres
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Établissement d'une rampe d'effet entre les mesures 1 et 3, allant de -60 dB à 0 dB.
 # Ceci est un fondu d'ouverture
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
 
-#Fin
-finish();
+#Fin:
 ----
 
 Maintenant, visualisez la vidéo suivante pour voir d'autres exemples d'enveloppes
@@ -360,25 +280,15 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# code python
-#
-# script_name: Enveloppes complexes
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
-#
-#
-#
+# Enveloppes complexes : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Points de temps de l'enveloppe (en mesure)
@@ -389,15 +299,12 @@ pointD = 7
 pointE = 8.5
 pointF = 9
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB) # Premier effet, modulation de filtre
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB)  # Premier effet, modulation de filtre
 
 # Deuxième effet, changement de volume
 setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC)  # Crescendo
 setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # Commencement du fondu de fermeture
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF) # Fin du fondu de fermeture
-
-#Fin
-finish()
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF)  # Fin du fondu de fermeture
 ----
 
 
@@ -405,24 +312,14 @@ finish()
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Enveloppes complexes
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
-//
-//
-//
+// Enveloppes complexes : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Points de temps de l'enveloppe (en mesures)
@@ -436,12 +333,9 @@ var pointF = 9;
 setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Premier effet, modulation de filtre
 
 // Deuxième effet, changements de volume
-setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC);  // Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE);  // Commencement du fondu de fermeture
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Crescendo
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Commencement du fondu de fermeture
 setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Fin du fondu de fermeture
-
-//Fin
-finish();
 ----
 
 .ENTRAÎNEZ-VOUS
@@ -456,20 +350,10 @@ Voyez l'exemple ci-dessous. Chaque itération de la boucle ajoute un segment (du
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Rampes rythmiques
-#
-# auteur : L'équipe EarSketch
-#
-# description : Automatisation des effets avec une boucle « for »
-#
-#
-#
+# Rampes rythmiques : Automatisation des effets avec une boucle « for »
 
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Musique
@@ -477,40 +361,24 @@ fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
 for measure in range(1, 9):
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
-
-# Fin
-finish()
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Rampes rythmiques
-//
-// auteur : L'équipe EarSketch
-//
-// description : Automatisation des effets avec une boucle  « for »
-//
-//
-//
+// Rampes rythmiques : Automatisation des effets avec une boucle  « for »
 
 // Paramétrage
-init()
-setTempo(120)
+setTempo(120);
 
 // Musique
-fitMedia(Y33_CHOIR_1, 1, 1, 9)
-fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
+fitMedia(Y33_CHOIR_1, 1, 1, 9);
+fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9);
 
 for (var measure = 1; measure < 9; measure++) {
-  setEffect(1, VOLUME, GAIN, -60, measure, 0, measure+1)
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1);
 }
-
-// Fin
-finish()
 ----
 
 Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes :
@@ -518,20 +386,10 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Fondus d'ouverture et de fermeture
-#
-# auteur : L'équipe EarSketch
-#
-# description : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
-#
-#
-#
+# Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 # Paramétrage
-from earsketch import*
-init()
+from earsketch import *
 setTempo(100)
 
 # Variables
@@ -539,71 +397,54 @@ melody1 = MILKNSIZZ_ADIOS_BRASS
 melody2 = MILKNSIZZ_ADIOS_STRINGS
 kick = OS_KICK04
 hihat = OS_OPENHAT03
-kickBeat = '0-------0-0-0---'
-hihatBeat = '---0---0--00----'
+kickBeat = "0-------0-0-0---"
+hihatBeat = "---0---0--00----"
 
 # Placement de mélodies sur la piste 1
 fitMedia(melody1, 1, 1, 5)
 fitMedia(melody2, 1, 5, 9)
 
 # Placement de beats sur la piste 2 (grosse caisse) et sur piste 3 (charleston) grâce à une boucle for sur les mesures
-for measure in range(1,9):
-  makeBeat(kick,2,measure,kickBeat)
-  makeBeat(hihat,3,measure,hihatBeat)
+for measure in range(1, 9):
+    makeBeat(kick, 2, measure, kickBeat)
+    makeBeat(hihat, 3, measure, hihatBeat)
 
 # Ajout d'un fondu d'ouverture et d'un fondu de fermeture sur les pistes 1 à 3
-for track in range(1,4):
-  setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
-  setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
-
-# Fin
-finish()
-
+for track in range(1, 4):
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
 ----
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Fondu d'ouverture et fondu de fermeture
-//
-// auteur : L'équipe EarSketch
-//
-// description : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
-//
-//
-//
+// Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 // Paramétrage
-init()
-setTempo(100)
+setTempo(100);
 
 // Variables
 var melody1 = MILKNSIZZ_ADIOS_BRASS;
 var melody2 = MILKNSIZZ_ADIOS_STRINGS;
 var kick = OS_KICK04;
 var hihat = OS_OPENHAT03;
-var kickBeat = '0-------0-0-0---';
-var hihatBeat = '---0---0--00----';
+var kickBeat = "0-------0-0-0---";
+var hihatBeat = "---0---0--00----";
 
 // Ajout de mélodies sur la piste 1
 fitMedia(melody1, 1, 1, 5);
 fitMedia(melody2, 1, 5, 9);
 
 // Placement de beats sur la piste 2 (grosse caisse) et sur la piste 3 (charleston) grâce à une boucle « for » sur les mesures
-for (var measure = 1; measure<9; measure++){
-  makeBeat(kick,2,measure,kickBeat);
-  makeBeat(hihat,3,measure,hihatBeat);
+for (var measure = 1; measure < 9; measure++) {
+    makeBeat(kick, 2, measure, kickBeat);
+    makeBeat(hihat, 3, measure, hihatBeat);
 }
 
 // Ajout d'un fondu d'ouverture et d'un fondu de fermeture sur les pistes 1 à 3
 for (var track = 1; track < 4; track++) {
-  setEffect(track, VOLUME, GAIN, -60, 1, 0, 3);
-  setEffect(track, VOLUME, GAIN, 0,7,-60,9);
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3);
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9);
 }
-
-// Fin
-finish()
 ----
 
 

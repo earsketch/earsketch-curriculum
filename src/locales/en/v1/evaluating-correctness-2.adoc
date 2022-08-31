@@ -37,31 +37,19 @@ The *script header* is an important part of every EarSketch script. It is broken
 Follow this template when writing your own script headers:
 
 [role="curriculum-python"]
+[source,python]
 ----
-# python code
-#
-# script_name: [A meaningful title for your script]
-#
+# title: [A meaningful title for your script]
 # author: [Your name, or your team's name]
-#
-# description: [A brief, but detailed description of your program. What does it do? How does it do this?]
-#
-#
-#
+# description: [A brief, but detailed description of your program]
 ----
 
 [role="curriculum-javascript"]
+[source,javascript]
 ----
-// javascript code
-//
-// script_name: [A meaningful title for your script]
-//
+// title: [A meaningful title for your script]
 // author: [Your name, or your team's name]
-//
-// description: [A brief, but detailed description of your program. What does it do? How does it do this?]
-//
-//
-//
+// description: [A brief, but detailed description of your program]
 ----
 
 [[chapter16summary]]

@@ -76,11 +76,10 @@ bassBeat02 = "0 + + + – – 0 + 0 + + + – – – –"
 [role="curriculum-python"]
 [source,python]
 ----
-# 4/4 Time General Pattern with Fill
-# Tempo Best between 110 and 132
+# Rock Beat: Example
+# Tempo best between 110 and 132 bpm
 
 from earsketch import *
-init()
 setTempo(120)
 
 bass = OS_LOWTOM01
@@ -94,24 +93,22 @@ fillBass = "0+++0+++0+0+0+0+"
 fillSnare = "0+++0+++0+0+0000"
 
 for measure in range(1, 9):
- if measure % 4 != 0:
-  makeBeat(hiClosed, 1, measure, running)
-  makeBeat(snare, 2, measure, snareBeat)
-  makeBeat(bass, 3, measure, bassBeat)
- else:
-  makeBeat(hiClosed, 1, measure, running)
-  makeBeat(snare, 2, measure, fillSnare)
-  makeBeat(bass, 3, measure, fillBass)
-finish()
+    if measure % 4 != 0:
+        makeBeat(hiClosed, 1, measure, running)
+        makeBeat(snare, 2, measure, snareBeat)
+        makeBeat(bass, 3, measure, bassBeat)
+    else:
+        makeBeat(hiClosed, 1, measure, running)
+        makeBeat(snare, 2, measure, fillSnare)
+        makeBeat(bass, 3, measure, fillBass)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// 4/4 Time General Pattern with Fill
-// Tempo Best between 110 and 132
+// Rock Beat: Example
+// Tempo best between 110 and 132 bpm
 
-init();
 setTempo(120);
 
 var bass = OS_LOWTOM01;
@@ -124,21 +121,17 @@ var running = "0+0+0+0+0+0+0+0+";
 var fillBass = "0+++0+++0+0+0+0+";
 var fillSnare = "0+++0+++0+0+0000";
 
-for(var measure = 1; measure < 9; measure++) {
-
-	if(measure % 4 != 0) {
-		makeBeat(hiClosed, 1, measure, running);
-		makeBeat(snare, 2, measure, snareBeat);
-		makeBeat(bass, 3, measure, bassBeat);
-	}
-	else {
- 		makeBeat(hiClosed, 1, measure, running);
- 		makeBeat(snare, 2, measure, fillSnare);
- 		makeBeat(bass, 3, measure, fillBass);
-	}
+for (var measure = 1; measure < 9; measure++) {
+    if (measure % 4 != 0) {
+        makeBeat(hiClosed, 1, measure, running);
+        makeBeat(snare, 2, measure, snareBeat);
+        makeBeat(bass, 3, measure, bassBeat);
+    } else {
+        makeBeat(hiClosed, 1, measure, running);
+        makeBeat(snare, 2, measure, fillSnare);
+        makeBeat(bass, 3, measure, fillBass);
+    }
 }
-
-finish();
 ----
 
 
@@ -188,12 +181,10 @@ sixteenthHLFill = "0000100101011111"
 [role="curriculum-python"]
 [source,python]
 ----
-# Funk Beat Example
-# Best Played at 92 to 100 Beats per minute
+# Funk Beat: Example
+# Tempo best between 92 and 100 bpm
 
 from earsketch import *
-
-init()
 setTempo(92)
 
 funkbassbeat1 = "0+0+----0+0+-0++"
@@ -210,30 +201,28 @@ hiClosed = OS_CLOSEDHAT01
 hats = [hiClosed, hiOpen]
 
 for measure in range(1, 9):
- if (measure % 4 != 0):
-  makeBeat(hats, 1, measure, sixteenthHL2)
-  makeBeat(snare, 2, measure, funkbackbeat1)
-  makeBeat(bass, 3, measure, funkbassbeat1)
- else:
-  makeBeat(hats, 1, measure, sixteenthHLFill)
-  makeBeat(snare, 2, measure, funkbackbeat2)
-  makeBeat(bass, 3, measure, funkbassbeat2)
-finish()
+    if (measure % 4) != 0:
+        makeBeat(hats, 1, measure, sixteenthHL2)
+        makeBeat(snare, 2, measure, funkbackbeat1)
+        makeBeat(bass, 3, measure, funkbassbeat1)
+    else:
+        makeBeat(hats, 1, measure, sixteenthHLFill)
+        makeBeat(snare, 2, measure, funkbackbeat2)
+        makeBeat(bass, 3, measure, funkbassbeat2)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Funk Beat Example
-// Best Played at 92 to 100 Beats per minute
+// Funk Beat: Example
+// Tempo best between 92 and 100 bpm
 
-init();
 setTempo(92);
 
 var funkbassbeat1 = "0+0+----0+0+-0++";
-var funkbassbeat2 = "0-0-------0--0--" ;
+var funkbassbeat2 = "0-0-------0--0--";
 var funkbackbeat1 = "----0--0-0-00---";
-var funkbackbeat2 = "----0--0-0-00--0" ;
+var funkbackbeat2 = "----0--0-0-00--0";
 var sixteenthHL2 = "0000100101011000";
 var sixteenthHLFill = "0000100101011111";
 
@@ -243,20 +232,17 @@ var hiOpen = OS_OPENHAT01;
 var hiClosed = OS_CLOSEDHAT01;
 var hats = [hiClosed, hiOpen];
 
-for(var measure = 1; measure < 9; measure++) {
- if(measure % 4 != 0) {
-  makeBeat(hats, 1, measure, sixteenthHL2);
-  makeBeat(snare, 2, measure, funkbackbeat1);
-  makeBeat(bass, 3, measure, funkbassbeat1);
- }
- else {
-  makeBeat(hats, 1, measure, sixteenthHLFill);
-  makeBeat(snare, 2, measure, funkbackbeat2);
-  makeBeat(bass, 3, measure, funkbassbeat2);
- }
+for (var measure = 1; measure < 9; measure++) {
+    if (measure % 4 != 0) {
+        makeBeat(hats, 1, measure, sixteenthHL2);
+        makeBeat(snare, 2, measure, funkbackbeat1);
+        makeBeat(bass, 3, measure, funkbassbeat1);
+    } else {
+        makeBeat(hats, 1, measure, sixteenthHLFill);
+        makeBeat(snare, 2, measure, funkbackbeat2);
+        makeBeat(bass, 3, measure, funkbassbeat2);
+    }
 }
-
-finish();
 ----
 
 
@@ -266,12 +252,10 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# Amen Beat Example
-# Best played at 82 to 92 Beats per minute
+# Amen Break: Example
+# Tempo best between 82 to 92 bpm
 
 from earsketch import *
-
-init()
 setTempo(88)
 
 bass = OS_LOWTOM01
@@ -288,24 +272,21 @@ sixteenth = "0000100000001000"
 sixteenthHL2 = "0000100101011000"
 
 for measure in range(1, 9, 4):
- makeBeat(bassSnare, 2, measure, amenbeat1)
- makeBeat(bassSnare, 2, measure+1, amenbeat2)
- makeBeat(bassSnare, 2, measure+2, amenbeat2)
- makeBeat(bassSnare, 2, measure+3, amenbeat3)
+    makeBeat(bassSnare, 2, measure, amenbeat1)
+    makeBeat(bassSnare, 2, measure + 1, amenbeat2)
+    makeBeat(bassSnare, 2, measure + 2, amenbeat2)
+    makeBeat(bassSnare, 2, measure + 3, amenbeat3)
 
 for measure in range(1, 9):
- makeBeat(hats, 1, measure, sixteenthHL2)
-
-finish()
+    makeBeat(hats, 1, measure, sixteenthHL2)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Amen Beat Example
-// Best played at 82 to 92 Beats per minute
+// Amen Break: Example
+// Tempo best between 82 to 92 bpm
 
-init();
 setTempo(88);
 
 var bass = OS_LOWTOM01;
@@ -318,21 +299,18 @@ var bassSnare = [bass, snare];
 var amenbeat1 = "0+0+1++1-1001++1";
 var amenbeat2 = "0+0+1++1-100--1+";
 var amenbeat3 = "-1001++1-10+--1+";
-var sixteenth = "0000100000001000";
-var sixteenthHL2 = "0000100101011000";
+var sixteenth = "0000100101011000";
 
-for(var measure = 1; measure < 9; measure += 4) {
- makeBeat(bassSnare, 2, measure, amenbeat1);
- makeBeat(bassSnare, 2, measure+1, amenbeat2);
- makeBeat(bassSnare, 2, measure+2, amenbeat2);
- makeBeat(bassSnare, 2, measure+3, amenbeat3);
+for (var measure = 1; measure < 9; measure += 4) {
+    makeBeat(bassSnare, 2, measure, amenbeat1);
+    makeBeat(bassSnare, 2, measure + 1, amenbeat2);
+    makeBeat(bassSnare, 2, measure + 2, amenbeat2);
+    makeBeat(bassSnare, 2, measure + 3, amenbeat3);
 }
 
-for(var measure = 1; measure < 9; measure++) {
- makeBeat(hats, 1, measure, sixteenthHL2);
+for (var measure = 1; measure < 9; measure++) {
+    makeBeat(hats, 1, measure, sixteenth);
 }
-
-finish();
 ----
 
 
@@ -378,12 +356,10 @@ dubHats4 = "– – 0 + + 0 + + 1 + + 0 + + 0 +"
 [role="curriculum-python"]
 [source,python]
 ----
-# Dubstep Example
-# Best played faster than 136 beats per minute
+# Dubstep Beat: Example
+# Tempo best if faster than 136 bpm
 
 from earsketch import *
-
-init()
 setTempo(140)
 
 dubBass1 = "0+++++++------0+"
@@ -408,31 +384,28 @@ hiOpen = OS_OPENHAT01
 hiClosed = OS_CLOSEDHAT01
 hats = [hiClosed, hiOpen]
 
-for measure in range (1, 9, 4):
- makeBeat(hats, 1, measure, dubHats1)
- makeBeat(hats, 1, measure+1, dubHats2)
- makeBeat(hats, 1, measure+2, dubHats3)
- makeBeat(hats, 1, measure+3, dubHats4)
- makeBeat(snare, 2, measure, dubClap)
- makeBeat(snare, 2, measure+1, dubClap)
- makeBeat(snare, 2, measure+2, dubClap)
- makeBeat(snare, 2, measure+3, dubClap1)
- makeBeat(snare, 3, measure+3, dubSnare)
- makeBeat(bass, 4, measure, dubBass1)
- makeBeat(bass, 4, measure+1, dubBass2)
- makeBeat(bass, 4, measure+2, dubBass3)
- makeBeat(bass, 4, measure+3, dubBass4)
-
-finish()
+for measure in range(1, 9, 4):
+    makeBeat(hats, 1, measure, dubHats1)
+    makeBeat(hats, 1, measure + 1, dubHats2)
+    makeBeat(hats, 1, measure + 2, dubHats3)
+    makeBeat(hats, 1, measure + 3, dubHats4)
+    makeBeat(snare, 2, measure, dubClap)
+    makeBeat(snare, 2, measure + 1, dubClap)
+    makeBeat(snare, 2, measure + 2, dubClap)
+    makeBeat(snare, 2, measure + 3, dubClap1)
+    makeBeat(snare, 3, measure + 3, dubSnare)
+    makeBeat(bass, 4, measure, dubBass1)
+    makeBeat(bass, 4, measure + 1, dubBass2)
+    makeBeat(bass, 4, measure + 2, dubBass3)
+    makeBeat(bass, 4, measure + 3, dubBass4)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Dubstep Example
-// Best played faster than 136 beats per minute
+// Dubstep Beat: Example
+// Tempo best if faster than 136 bpm
 
-init();
 setTempo(140);
 
 var dubBass1 = "0+++++++------0+";
@@ -457,23 +430,21 @@ var hiOpen = OS_OPENHAT01;
 var hiClosed = OS_CLOSEDHAT01;
 var hats = [hiClosed, hiOpen];
 
-for(var measure = 1; measure < 9; measure += 4) {
- makeBeat(hats, 1, measure, dubHats1);
- makeBeat(hats, 1, measure+1, dubHats2);
- makeBeat(hats, 1, measure+2, dubHats3);
- makeBeat(hats, 1, measure+3, dubHats4);
- makeBeat(snare, 2, measure, dubClap);
- makeBeat(snare, 2, measure+1, dubClap);
- makeBeat(snare, 2, measure+2, dubClap);
- makeBeat(snare, 2, measure+3, dubClap1);
- makeBeat(snare, 3, measure+3, dubSnare);
- makeBeat(bass, 4, measure, dubBass1);
- makeBeat(bass, 4, measure+1, dubBass2);
- makeBeat(bass, 4, measure+2, dubBass3);
- makeBeat(bass, 4, measure+3, dubBass4);
+for (var measure = 1; measure < 9; measure += 4) {
+    makeBeat(hats, 1, measure, dubHats1);
+    makeBeat(hats, 1, measure + 1, dubHats2);
+    makeBeat(hats, 1, measure + 2, dubHats3);
+    makeBeat(hats, 1, measure + 3, dubHats4);
+    makeBeat(snare, 2, measure, dubClap);
+    makeBeat(snare, 2, measure + 1, dubClap);
+    makeBeat(snare, 2, measure + 2, dubClap);
+    makeBeat(snare, 2, measure + 3, dubClap1);
+    makeBeat(snare, 3, measure + 3, dubSnare);
+    makeBeat(bass, 4, measure, dubBass1);
+    makeBeat(bass, 4, measure + 1, dubBass2);
+    makeBeat(bass, 4, measure + 2, dubBass3);
+    makeBeat(bass, 4, measure + 3, dubBass4);
 }
-
-finish();
 ----
 
 
@@ -543,12 +514,9 @@ bottleBeat = "0 – 0 – – – – – 0 0 – 1 – – – 0"
 [role="curriculum-python"]
 [source,python]
 ----
-# Example of Unifix Patterns
-# Best played between 92 and 110 (but can be faster)
+# Unifix-style Beat: Example
+# Tempo best between 92 and 110 bpm, but can be faster
 from earsketch import *
-
-init()
-
 setTempo(100)
 
 fractionTubes = [HOUSE_BREAKBEAT_020, HIPHOP_TRAPHOP_BEAT_007]
@@ -561,7 +529,6 @@ waterBottles = [OS_SNARE01, OS_OPENHAT06]
 uniList = [fractionTubes, tinCanDrum, guiro, shaker, tubeDrums, waterBottles]
 
 # From Ghana
-
 ftBeat = "0001-10-0001-10-"
 tcBeat = "0--1-10-0--1-10-"
 guiroBeat = "0--10-1--1-10-1-"
@@ -575,17 +542,13 @@ for measure in range(1, 9):
     for i in range(len(ghanaList)):
         track = i + 1
         makeBeat(uniList[i], track, measure, ghanaList[i])
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Example of Unifix Patterns
-// Best played between 92 and 110 (but can be faster)
-
-init();
+// Unifix-style Beat: Example
+// Tempo best between 92 and 110 bpm, but can be faster
 
 setTempo(100);
 
@@ -599,7 +562,6 @@ var waterBottles = [OS_SNARE01, OS_OPENHAT06];
 var uniList = [fractionTubes, tinCanDrum, guiro, shaker, tubeDrums, waterBottles];
 
 // From Ghana
-
 var ftBeat = "0001-10-0001-10-";
 var tcBeat = "0--1-10-0--1-10-";
 var guiroBeat = "0--10-1--1-10-1-";
@@ -609,12 +571,10 @@ var bottleBeat = "0-0-----00-1---0";
 
 var ghanaList = [ftBeat, tcBeat, guiroBeat, shakerBeat, tubeBeat, bottleBeat];
 
-for(var measure = 1; measure < 9; measure++) {
-    for(var i = 0; i < ghanaList.length; i++) {
+for (var measure = 1; measure < 9; measure++) {
+    for (var i = 0; i < ghanaList.length; i++) {
         var track = i + 1;
         makeBeat(uniList[i], track, measure, ghanaList[i]);
     }
 }
-
-finish();
 ----

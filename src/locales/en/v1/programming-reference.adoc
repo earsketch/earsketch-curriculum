@@ -75,12 +75,12 @@ it extends across multiple lines
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-if(x < 0) {
- println("Negative.");
+if (x < 0) {
+    println("Negative.");
 } else if (x == 0) {
- println("Neither positive nor negative");
+    println("Neither positive nor negative");
 } else {
- println("Positive.");
+    println("Positive.");
 }
 ----
 [role="curriculum-javascript"]
@@ -92,10 +92,9 @@ This code reads as: if the variable x (defined elsewhere in code) is less than z
 [source,javascript]
 ----
 var greetings = {
-     "hello":["hola"],
-     "goodbye":["adios"]
+    hello: ["hola"],
+    goodbye: ["adios"],
 };
-
 
 println(greetings.hello);
 println(greetings.goodbye);
@@ -108,15 +107,15 @@ println(greetings.goodbye);
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-//defining a function
+// defining a function
 function myFunction(string) {
-	println(string);
+    println(string);
 }
 
-//calling a function
+// calling a function
 myFunction("hello world");
 
-//the result is that 'hello world' gets printed to the EarSketch console
+// the result is that 'hello world' gets printed to the EarSketch console
 ----
 [role="curriculum-javascript"]
 *Index*:: An integer variable or value that indicates an element of an array. The first element of an array has an index of zero.
@@ -127,18 +126,16 @@ myFunction("hello world");
 // an example array of colors
 var list = ["red", "blue", "green", "yellow"];
 
-//call the value at index 2
-println( list[2] );
+// call the value at index 2
+println(list[2]);
+// expect: 'green'
 
-//'green'
-
-//assign a new value to index 2
+// assign a new value to index 2
 list[2] = "orange";
 
-//print index 2 again
-println( list[2] );
-
-//'orange'
+// print index 2 again
+println(list[2]);
+// expect: 'orange'
 ----
 [role="curriculum-javascript"]
 *Keyword*:: A reserved word that is used by JavaScript to parse the program; you cannot use keywords as variable names. (A list of JavaScript keywords are available after this section).
@@ -148,8 +145,8 @@ println( list[2] );
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-for(var i = 0; i < 10; i++) {
-	println("Hello");
+for (var i = 0; i < 10; i++) {
+    println("Hello");
 }
 ----
 [role="curriculum-javascript"]
@@ -160,9 +157,9 @@ The above code prints “Hello” once for each number in the range between 1 an
 ----
 var n = 5;
 
-while(n > 0) {
- println(n);
- n = n-1;
+while (n > 0) {
+    println(n);
+    n = n - 1;
 }
 ----
 [role="curriculum-javascript"]
@@ -173,10 +170,10 @@ The above code first checks to see if n is greater than zero. If this is true, n
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-//Floating point numbers
+// Floating point numbers
 var a = 0.5;
 var b = -2.0;
-var c = 6.67
+var c = 6.67;
 
 // Integers
 var d = 50;
@@ -191,9 +188,9 @@ var f = -12;
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-function add(x,y) {
-	var result = x+y;
-	return result;
+function add(x, y) {
+    var result = x + y;
+    return result;
 }
 ----
 [role="curriculum-javascript"]
@@ -205,8 +202,8 @@ The above code will return the sum of x and y.
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-var myString = "This is a string!"
-var myOtherString = "$tring..."
+var myString = "This is a string!";
+var myOtherString = "$tring...";
 ----
 
 
@@ -245,10 +242,10 @@ There are many different types of programming languages that consist of particul
 ----
 # This is a comment
 
-'''
+"""
 this is a multi-line comment
 it extends across multiple lines
-'''
+"""
 ----
 [role="curriculum-python"]
 *Conditional*:: A type of statement that checks to see if an argument is True or False before executing some amount of code. Types of conditionals are if-statements, elif-statements, and else-statements. For example: 
@@ -257,11 +254,11 @@ it extends across multiple lines
 [source,python]
 ----
 if x < 0:
-	print "Negative."
+    print("Negative.")
 elif x == 0:
-	print  "Neither positive nor negative"
+    print("Neither positive nor negative")
 else:
-	print "Positive."
+    print("Positive.")
 ----
 [role="curriculum-python"]
 This code reads as: if the variable x (defined elsewhere in code) is less than zero, print negative. However, if the parameter x equals zero, it is neither positive nor negative. Otherwise, x is positive.
@@ -271,7 +268,7 @@ This code reads as: if the variable x (defined elsewhere in code) is less than z
 [role="curriculum-python"]
 [source,python]
 ----
-{'hello' : 'hola', 'goodbye' : 'adios'}
+{"hello": "hola", "goodbye": "adios"}
 ----
 [role="curriculum-python"]
 `hello` and`goodbye` are keys whereas `hola` and `adios` are values.
@@ -289,14 +286,14 @@ This code reads as: if the variable x (defined elsewhere in code) is less than z
 [role="curriculum-python"]
 [source,python]
 ----
-#defining a function
+# defining a function
 def myFunction(string):
-	print string
+    print(string)
 
-#calling a function
+# calling a function
 myFunction("hello world")
 
-#the result is that 'hello world' gets printed to the EarSketch console
+# the result is that 'hello world' gets printed to the EarSketch console
 ----
 [role="curriculum-python"]
 *Import*:: A statement which permits functions and variable defined in a Python script to be brought into the environment of another script. For instance, we use the EarSketch API, so we must import that script into each project in the following way:
@@ -315,18 +312,16 @@ from earsketch import *
 # an example list of colors
 list = ["red", "blue", "green", "yellow"]
 
-#call the value at index 2
-list[2]
+# call the value at index 2
+print(list[2])
+# expect: 'green'
 
-'green'
-
-#assign a new value to index 2
+# assign a new value to index 2
 list[2] = "orange"
 
-#print index 2 again
+# print index 2 again
 list[2]
-
-'orange'
+# expect: 'orange'
 ----
 [role="curriculum-python"]
 *int*:: A Python data type that holds positive and negative whole numbers. Examples:
@@ -367,8 +362,8 @@ Now the first element is no longer 1. It is 5.
 [role="curriculum-python"]
 [source,python]
 ----
-for i in range(1,10):
-	print "Hello"
+for i in range(1, 10):
+    print("Hello")
 ----
 [role="curriculum-python"]
 The above code prints “Hello” once for each number in the range between 1 and 9. For-loops are useful if there is a specific number of items that you wish to iterate over. While-loop:
@@ -379,8 +374,8 @@ The above code prints “Hello” once for each number in the range between 1 an
 n = 5
 
 while n > 0:
-    print n
-    n = n-1
+    print(n)
+    n = n - 1
 ----
 [role="curriculum-python"]
 The above code first checks to see if n is greater than zero. If this is True, n is printed and then decremented by 1. The loop continues to execute until the condition that n is greater than zero is False. While-loops are useful if you do not have a specific set of items to iterate through. In any situation, a for loop can be written as a while-loop and vice versa. It is ultimately up to the programmer to choose which will work best for any given situation.
@@ -392,11 +387,11 @@ The above code first checks to see if n is greater than zero. If this is True, n
 [role="curriculum-python"]
 [source,python]
 ----
-range(10) will be [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+range(10)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-range(10,15) will be [10, 11, 12, 13, 14]
+range(10, 15)  # [10, 11, 12, 13, 14]
 
-range(0,10,2) will be [0, 2, 4, 6, 8]
+range(0, 10, 2)  # [0, 2, 4, 6, 8]
 ----
 [role="curriculum-python"]
 *Return*:: The return keyword signals to the program that the end of a function has been reached. When a return statement is executed, the currently running function will terminate. The function can simply return with no output, or it can return a value. For example:
@@ -404,9 +399,9 @@ range(0,10,2) will be [0, 2, 4, 6, 8]
 [role="curriculum-python"]
 [source,python]
 ----
-def add(x,y):
-	result = x+y
-	return result
+def add(x, y):
+    result = x + y
+    return result
 ----
 
 [role="curriculum-python"]

@@ -12,10 +12,8 @@ Dans ce chapitre, vous apprendrez à modifier le tempo de votre chanson, à ajou
 Vous avez certainement remarqué que lorsque vous créez un nouveau script, il y a des éléments prédéfinis que vous devez absolument garder pour que votre code puisse s'exécuter :
 
 . Quelques commentaires commençant par le symbole `#` en gris : nous couvrirons cela plus largement à la prochaine section.
-. La ligne `from earsketch import*` qui permet d'ajouter les fonctions de EarSketch (comme `fitMedia()`) au projet. 
-. La fonction `init()` qui permet d'initialiser ou d'activer la station de travail audionumérique ou DAW
+. La ligne `from earsketch import*` qui permet d'ajouter les fonctions de EarSketch (comme `fitMedia()`) au projet.
 . La fonction `setTempo(120)` que nous allons voir plus en détail ci-dessous.
-. La fonction `finish()` qui permet d'indiquer au DAW que vous avez terminé de composer et que vous êtes prêt à jouer votre musique.
 --
 
 [role="curriculum-javascript"]
@@ -23,12 +21,8 @@ Vous avez certainement remarqué que lorsque vous créez un nouveau script, il y
 Vous avez certainement remarqué que lorsque vous créez un nouveau script, il y a des éléments prédéfinis que vous devez absolument garder pour que votre code puisse s'exécuter :
 
 . Quelques commentaires commençant par le symbole `//` en gris : nous couvrirons cela plus largement à la prochaine section.
-. La fonction `init()` qui permet d'initialiser ou d'activer la station de travail audionumérique ou DAW.
 . La fonction `setTempo(120)` que nous allons voir plus en détail ci-dessous.
-. La fonction `finish()` qui permet d'indiquer au DAW que vous avez terminé de composer et que vous êtes prêt à jouer votre musique.
 --
-
-Remarque : votre code doit être inscrit après la fonction `setTempo()` et avant la fonction `finish()`.
 
 La fonction `setTempo()` déterminera la vitesse de votre chanson. Le *tempo* correspond à un certain nombre de battements ou beats par minute (bpm) pour la musique occidentale. Dans EarSketch, le tempo par défaut (c'est-à-dire la valeur initiale du tempo) est fixé à 120 bpm, ce qui correspond à une vitesse de marche ou de marche rapide. Pour modifier le tempo, il suffit de changer le nombre entre les parenthèses de la fonction `setTempo()`. Plus le tempo est élevé, plus votre musique sera rapide. Vous pouvez choisir un tempo entre 45 bpm et 220 bpm.
 
@@ -105,77 +99,52 @@ Vous pouvez également utiliser des commentaires pour décrire ce que différent
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Ajout de commentaires dans les différentes sections
-#
-# auteur : L'équipe EarSketch
-#
-# description : Voici un exemple de script court qui utilise des commentaires pour décrire ce que fait le code
-#
-#
-#
+# Commentaires : Des commentaires pour décrire ce que fait le code
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(130)
 
-#Musique
-#Leads
+# Musique
+# Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9)
 
-#Beat
+# Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9)
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9)
 
-#Basse et bruit
+# Basse et bruit
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9)
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
-
-#Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Ajout de commentaires dans les différentes sections
-//
-// auteur : L'équipe EarSketch
-//
-// description : Voici un exemple de script court qui utilise des commentaires pour décrire ce que le code fait
-//
-//
+// Commentaires : Des commentaires pour décrire ce que le code fait
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(130);
 
-//Musique
-//Leads
+// Musique
+// Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9);
 
-//Beat
+// Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9);
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9);
 
-//Basse et bruit
+// Basse et bruit
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9);
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9);
-
-//Fin
-finish();
 ----
 
 
@@ -264,9 +233,7 @@ Pour désigner une licence Creative Commons, il vous suffit de sélectionner un 
 * Les clips de la bibliothèque de sons EarSketch sont regroupés dans des dossiers de sons apparentés. Pour connaître le tempo exact de l'extrait, survolez le nom du clip dans la bibliothèque de sons.
 * Les commentaires sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Elles sont cependant utiles pour créer des notes dans un script.
 * La fonction `from earsketch import *` permet d'ajouter l'API de EarSketch à votre projet. Elle doit être incluse au début de chaque script.
-* La fonction `init()` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
 * La fonction `setTempo()` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `finish()` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
 * Vous pouvez charger vos propres clips audio dans EarSketch à travers la bibliothèque de sons. Cliquez simplement sur « Ajouter un son ».
 * Un *processus* est une tâche exécutée sur un ordinateur. Le traitement est effectué par le *CPU* d'un ordinateur, qui est responsable de l'exécution des instructions du programme.
 * La *mémoire* (mémoire de stockage primaire ou RAM) contient temporairement des instructions de traitement et de données afin que le CPU puisse les utiliser.
@@ -279,9 +246,7 @@ Pour désigner une licence Creative Commons, il vous suffit de sélectionner un 
 * Le *tempo* est la vitesse à laquelle un morceau de musique est joué, exprimé en battements ou beats par minute (bpm). Le tempo est lié au genre musical.
 * Les clips de la bibliothèque de sons EarSketch sont regroupés dans des dossiers de sons apparentés. Pour connaître le tempo exact de l'extrait, survolez le nom du clip dans la bibliothèque de sons.
 * Les commentaires sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Elles sont cependant utiles pour créer des notes dans un script.
-* La fonction `init();` permet de préparer le DAW à accepter et à afficher de la musique. Elle doit être incluse dans chaque script EarSketch.
 * La fonction `setTempo();` vous permet de spécifier le tempo de votre chanson. Elle doit être incluse dans chaque script EarSketch.
-* La fonction `finish();` permet d'informer le DAW que votre code est terminé. Elle doit être incluse à la fin de chaque script EarSketch.
 * Vous pouvez charger vos propres clips audio dans EarSketch à travers la bibliothèque de sons. Cliquez simplement sur « Ajouter un son ».
 * Un *processus* est une tâche exécutée sur un ordinateur. Le traitement est effectué par le *CPU* d'un ordinateur, qui est responsable de l'exécution des instructions du programme.
 * La *mémoire* (mémoire de stockage primaire ou RAM) contient temporairement des instructions de traitement et de données afin que le CPU puisse les utiliser.

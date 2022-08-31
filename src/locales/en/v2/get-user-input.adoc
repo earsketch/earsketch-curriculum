@@ -27,88 +27,60 @@ Here is a code example:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Return Statements
-#
-# author: The EarSketch Team
-#
-# description: Linking two beats together with return statements
-#
-#
-#
+# Return Statements: Linking two beats together with return statements
 
 # Setup
 from earsketch import *
-init()
 setTempo(100)
 
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
 # Music
-
 def createBeat(startMeasure, soundClip, beatString):
-  endMeasure = startMeasure + 3
-  for measure in range(startMeasure, endMeasure):
-    makeBeat(soundClip, 1, measure, beatString)
+    endMeasure = startMeasure + 3
+    for measure in range(startMeasure, endMeasure):
+        makeBeat(soundClip, 1, measure, beatString)
 
-  # Return ending measure so we can use it outside function
-  return endMeasure
+    # Return ending measure so we can use it outside function
+    return endMeasure
 
 # Function calls
-
 # Assigning the value we return to a variable
 newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
+
 # Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Return Statements
-//
-// author: The EarSketch Team
-//
-// description: Linking two beats together with return statements
-//
-//
-//
+// Return Statements: Linking two beats together with return statements
 
 // Setup
-init();
 setTempo(100);
 
 var rhythm1 = "0+++0+0+0+--0+00";
 var rhythm2 = "0+0-00++0-000+++";
 
 // Music
+function createBeat(startMeasure, soundClip, beatString) {
+    var endMeasure = startMeasure + 3;
+    for (var measure = startMeasure; measure < endMeasure; measure++) {
+        makeBeat(soundClip, 1, measure, beatString);
+    }
 
-function createBeat(startMeasure, soundClip, beatString){
-  var endMeasure = startMeasure + 3;
-  for (var measure = startMeasure; measure < endMeasure; measure++){
-    makeBeat(soundClip, 1, measure, beatString);
-  }
-
-  // Return ending measure so we can use it outside function
-  return endMeasure;
+    // Return ending measure so we can use it outside function
+    return endMeasure;
 }
 
 // Function calls
-
 // Assigning the value we return to a variable
 var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
+
 // Passing the returned value into another function
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
-
-// Finish
-finish();
 ----
 
 With the return statement, the complete control flow for a function looks like this:
@@ -135,19 +107,10 @@ Here is an example:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Return Statements 2
-#
-# author: The EarSketch Team
-#
-# description: returning the end measure of a section function
-#
-#
+# Return Statements 2: Returning the end measure of a section function
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
@@ -155,36 +118,22 @@ drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
 # Function definition
 def verse(start):
-  end = start + 4
-  fitMedia(melody1 , 1, start, end)
-  fitMedia(drums1, 2, start, end)
-  return end
+    end = start + 4
+    fitMedia(melody1, 1, start, end)
+    fitMedia(drums1, 2, start, end)
+    return end
 
 # Function calls
-endMeasure = verse(1) # calling verse function and start is measure 1
+endMeasure = verse(1)  # calling verse function and start is measure 1
 print(endMeasure)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Return Statements 2
-//
-// author: The EarSketch Team
-//
-// description: returning the end measure of a section function
-//
-//
-//
+// Return Statements 2: Returning the end measure of a section function
 
 // Setup
-init();
 setTempo(120);
 
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
@@ -192,17 +141,14 @@ var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
 // Function definition
 function verse(start) {
-  var end = start + 4;
-  fitMedia(melody1, 1, start, end);
-  fitMedia(drums1, 2, start, end);
-  return end;
+    var end = start + 4;
+    fitMedia(melody1, 1, start, end);
+    fitMedia(drums1, 2, start, end);
+    return end;
 }
 // Function calls
 var endMeasure = verse(1); // calling verse function and start is measure 1
- println(endMeasure);
-
-// Finish
-finish();
+println(endMeasure);
 ----
 
 {nbsp} +
@@ -223,19 +169,10 @@ Here is an example code:
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Conditional statement in function
-#
-# author: The EarSketch Team
-#
-# description: using a boolean to create variation in a function
-#
-#
+# Conditional statement: Using a boolean to create variation in a function
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
@@ -244,38 +181,24 @@ drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
 # Function definition
 def verse(start, variation):
-  # variation is either equal to True or False
-  if variation:
-    fitMedia(melody1, 1, start, start+4)
-  else:
-  	fitMedia(melody2, 1, start, start+4)
-  fitMedia(drums1, 2, start, start+4) # this is outside the conditional statement (no indentation)
+    # variation is either equal to True or False
+    if variation:
+        fitMedia(melody1, 1, start, start + 4)
+    else:
+        fitMedia(melody2, 1, start, start + 4)
+    fitMedia(drums1, 2, start, start + 4)  # this is outside the conditional statement (no indentation)
 
 # Function calls
 verse(1, True)
 verse(7, False)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Conditional statement in function
-//
-// author: The EarSketch Team
-//
-// description: using a boolean to create variation in a function
-//
-//
-//
+// Conditional statement: Using a boolean to create variation in a function
 
 // Setup
-init();
 setTempo(120);
 
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
@@ -283,22 +206,19 @@ var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
 // Function definition
-function verse(start, variation){
-  // variation is either equal to true or false
-  if(variation){
-    fitMedia(melody1, 1, start, start+4);
-  } else {
-  	fitMedia(melody2, 1, start, start+4);
-  }
-  fitMedia(drums1, 2, start, start+4); // this is outside the conditional statement (no indentation)
+function verse(start, variation) {
+    // variation is either equal to true or false
+    if (variation) {
+        fitMedia(melody1, 1, start, start + 4);
+    } else {
+        fitMedia(melody2, 1, start, start + 4);
+    }
+    fitMedia(drums1, 2, start, start + 4); // this is outside the conditional statement (no indentation)
 }
 
 // Function calls
 verse(1, true);
 verse(7, false);
-
-// Finish
-finish();
 ----
 
 {nbsp} +
@@ -311,17 +231,17 @@ We'll see how to ask for user input when the "run" button is pressed. This is po
 For example, copy the following code in a new script, and run it:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 answer = readInput("What tempo would you like for your music?")
-print (answer)
+print(answer)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 var answer = readInput("What tempo would you like for your music?");
-print(answer)
+println(answer);
 ----
 
 We might need to convert the returned user input into a different data type. Here are useful functions:
@@ -338,19 +258,12 @@ We might need to convert the returned user input into a different data type. Her
 In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer. 
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: User input 1
-#
-# author: The EarSketch Team
-#
-# description: Asking the user for the tempo
+# User input 1: Asking the user for the tempo
 
 # Setup
 from earsketch import *
-init()
 
 # asking for tempo
 question = "What tempo would you like for your music? Choose a number between 45 and 220"
@@ -364,25 +277,14 @@ setTempo(tempo)
 
 # music
 fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
-
-# finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-// script_name: User input 1
-//
-// author: the EarSketch team
-// description: Asking the user for the tempo
-
+// User input 1: Asking the user for the tempo
 
 // Setup
-init();
 
 // asking for tempo
 var question = "What tempo would you like for your music? Choose a number between 45 and 220";
@@ -396,9 +298,6 @@ setTempo(tempo);
 
 // music
 fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
-
-// finish
-finish();
 ----
 
 Here is another example of what you can do with user input. 
@@ -406,20 +305,12 @@ Here is another example of what you can do with user input.
 *Concatenation* is a means to link strings together, using the `+` symbol.  For example, concatenating the strings `"hello"` and `"world"` yields `"helloworld"`. In the following example, the user is prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name like `DUBSTEP_BASS_WOBBLE_010`.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: User input 2
-#
-# author: The EarSketch Team
-#
-# description: Creating a dubstep song with user-specified parameters
-#
+# User input 2: Creating a dubstep song with user-specified parameters
 
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Music
@@ -429,26 +320,14 @@ finalClip = dubstepClip + clipNumber
 
 # user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5)
-
-# Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: User input 2
-//
-// author: The EarSketch Team
-//
-// description: Creating a dubstep song with user-specified parameters
-//
+// User input 2: Creating a dubstep song with user-specified parameters
 
 // Setup
-init();
 setTempo(120);
 
 // Music
@@ -458,9 +337,6 @@ var finalClip = dubstepClip + clipNumber;
 
 // user-selected dubstep wobbles
 fitMedia(finalClip, 1, 1, 5);
-
-// Finish
-finish();
 ----
 
 {nbsp} +
@@ -514,7 +390,7 @@ What do you think the following expressions evaluate to? `True` or `False`?
 * `True and True`
 * `(True and False) or True`
 * `True and not False`
-* `not(False or False)`
+* `not (False or False)`
 ****
 
 [role="curriculum-javascript"]
@@ -534,19 +410,11 @@ What do you think the following expressions evaluate to? `true` or `false`?
 Use the following code to print the answers:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Boolean expressions 
-#
-# author: The EarSketch Team
-#
-# description: printing boolean expressions
-#
+# Boolean expressions: printing boolean expressions
 
 from earsketch import *
-init()
 
 print(not True)
 print(True and False)
@@ -554,26 +422,15 @@ print(True or False)
 print(True and True)
 print((True and False) or True)
 print(True and not False)
-print(not(False or False))
-
-finish()
+print(not (False or False))
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Boolean expressions
-//
-// author: The EarSketch Team
-//
-// description: printing boolean expressions
-//
+// Boolean expressions: printing boolean expressions
 
 // Setup
-init();
 setTempo(120);
 
 println(!true);
@@ -583,9 +440,6 @@ println(true && true);
 println((true && false) || true);
 println(true && !false);
 println(!(false || false));
-
-finish();
-
 ----
 
 Here is a reminder of boolean creation, and some examples of boolean operations:
@@ -608,19 +462,11 @@ Write a script that will ask for the user to choose a genre, with a limited numb
 
 Here is an example:
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Boolean operations 
-#
-# author: The EarSketch Team
-#
-# description: Asking user for genre and creating beat accordingly
-#
+# Boolean operations: Asking user for genre and creating beat accordingly
 
 from earsketch import *
-init()
 setTempo(120)
 
 # Sound variables
@@ -634,42 +480,29 @@ hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
-
 # Requesting user input
 genre = readInput("What genre is your favorite? Hip Hop or EDM?")
 
 # Creating the appropriate rhythm
-if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
-	makeBeat(kick, 1, 1, hiphopKickBeat)
-	makeBeat(hihat, 2, 1, hiphopHihatBeat)
-elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
-	makeBeat(kick, 1, 1, edmKickBeat)
-	makeBeat(clap, 2, 1, edmClapBeat)
+if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
+    makeBeat(kick, 1, 1, hiphopKickBeat)
+    makeBeat(hihat, 2, 1, hiphopHihatBeat)
+elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
+    makeBeat(kick, 1, 1, edmKickBeat)
+    makeBeat(clap, 2, 1, edmClapBeat)
 else:
-	print("Sorry we couldn't read the genre you selected. Please run the code again.")
+    print("Sorry we couldn't read the genre you selected. Please run the code again.")
 
 # Adding some reverb on track 2
 setEffect(2, REVERB, MIX, 0.1)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-// javascript code
-//
-// script_name: Boolean operations
-//
-// author: The EarSketch Team
-//
-// description: Asking user for genre and creating beat accordingly
-//
+// Boolean operations: Asking user for genre and creating beat accordingly
 
 // Setup
-init();
 setTempo(120);
 
 // Sound variables
@@ -683,26 +516,22 @@ var hiphopHihatBeat = "----0---00---000";
 var edmKickBeat = "0+++----0+++----";
 var edmClapBeat = "----0-------0---";
 
-
 // Requesting user input
-var genre = readInput("What genre is your favorite? Hip Hop or EDM?")
+var genre = readInput("What genre is your favorite? Hip Hop or EDM?");
 
 // Creating the appropriate rhythm
-if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
-	makeBeat(kick, 1, 1, hiphopKickBeat);
-	makeBeat(hihat, 2, 1, hiphopHihatBeat);
-} else if((genre == "edm") || (genre == "Edm") || (genre == "EDM")){
-	makeBeat(kick, 1, 1, edmKickBeat);
-	makeBeat(clap, 2, 1, edmClapBeat);
+if ((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")) {
+    makeBeat(kick, 1, 1, hiphopKickBeat);
+    makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if ((genre == "edm") || (genre == "Edm") || (genre == "EDM")) {
+    makeBeat(kick, 1, 1, edmKickBeat);
+    makeBeat(clap, 2, 1, edmClapBeat);
 } else {
-	println("Sorry we couldn't read the genre you selected. Please run the code again.");
+    println("Sorry we couldn't read the genre you selected. Please run the code again.");
 }
 
 // Adding some reverb on track 2
 setEffect(2, REVERB, MIX, 0.1);
-
-finish();
-
 ----
 
 {nbsp} +
@@ -762,7 +591,7 @@ Which of the following would be considered an example of data type conversion?
 What would the output of this block of code be (what would print to the console)?
 [source,python]
 ----
-not(True and (4>5))
+not (True and (4 > 5))
 ----
 [answers]
 * `True`
@@ -777,7 +606,7 @@ not(True and (4>5))
 What would the output of this block of code be (what would print to the console)?
 [source,javascript]
 ----
-!(true && (4>5))
+!(true && (4 > 5));
 ----
 [answers]
 * `true`

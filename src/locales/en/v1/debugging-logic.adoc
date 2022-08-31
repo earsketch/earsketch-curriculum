@@ -21,60 +21,37 @@ Before running the following code, try to guess what the  console will display f
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Printing Demo
-#
-# author: The EarSketch Team
-#
-# description: Using the print statement to print messages in the console
-#
-#
-#
+# Printing: Using print() to print messages in the console
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Printing
+# Printing
 # prints the result of 3*4
-print 3 * 4
+print(3 * 4)
 
 # prints the value of x
 x = 3 * 4
-print x
+print(x)
 
 # evaluates x/y, then prints the result
 y = 2
-print x / y
+print(x / y)
 
 # prints the result of the concatenation
-print "De" + "bug"
-
-#Finish
-finish()
+print("De" + "bug")
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Printing Demo
-//
-// author: The EarSketch Team
-//
-// description: Using println() to print messages in the console
-//
-//
-//
+// Printing: Using println() to print messages in the console
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Printing
+// Printing
 // prints the result of 3*4
 println(3 * 4);
 
@@ -88,9 +65,6 @@ println(x / y);
 
 // prints the result of the concatenation
 println("De" + "bug");
-
-//Finish
-finish();
 ----
 
 [[thedebuggingprocess]]
@@ -132,7 +106,7 @@ The following list expands on some common errors covered previously and details 
 . *Case sensitivity:* Most constructs used in programming are case sensitive, meaning you must pay attention to lowercase and uppercase letters used in variable names, functions, arguments, and sound constants.
 . *Parentheses:* Forgetting an opening or closing parentheses where needed will cause a <<every-error-explained-in-detail#syntaxerror,syntax error>>. Make sure your arguments are enclosed by parentheses on both ends when defining and calling functions.
 . *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
-. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes `from earsketch import *`, `init()`, `setTempo()`, or `finish()` can be deleted by accident. Make sure that these functions appear in every script.
+. *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
 . *Comments:* Improper commenting will cause a syntax error. Remember that Python comments must start with a `#` symbol.
 . *Colons:* Colons are used to declare the start of an indented block in Python. Check that your function definitions, for-loops, and conditional statements end with a colon `:`.
 . *Assignment and equality:* The assignment operator (`=`) and equality operator (`==`) perform very different tasks. They cannot be used interchangeably, so ensure you are using the correct operator. We will learn more about the equality operator in <<console-input-and-conditionals#booleans,Chapter 17>>.
@@ -150,7 +124,6 @@ The following list expands on some common errors covered previously and details 
 . *Parentheses:* Forgetting an opening or closing parentheses where needed will cause a syntax error. Make sure your arguments are enclosed by parentheses on both ends when defining and calling functions.
 . *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
 . *Initializing without var:* Forgetting to initialize a variable with `var` in JavaScript can cause some confusing errors. Remember, the correct way to initialize a variable looks like this: `var measure = 1`.
-. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes `init()`, `setTempo()`, or `finish()` can be deleted by accident. Make sure that these functions appear in every script.
 . *Comments:* Improper commenting will cause a syntax error. Remember that JavaScript comments must start with `//`.
 . *Semicolons:* Including semicolons after every statement is highly recommended in JavaScript. JavaScript may interpret your code differently in their absence, leading to confusing logic errors. The EarSketch Code Editor will alert you if you are missing a semicolon.
 . *Assignment and equality:* The assignment operator (`=`), the equality operator (`==`), and the strict equality operator (`===`) perform very different tasks. They cannot be used interchangeably, so ensure you are using the correct operator. We will learn more about the equality operators in <<console-input-and-conditionals#booleans,Chapter 17>>.
@@ -172,54 +145,33 @@ Suppose we want to create an alternating drum beat, with each beat switching off
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Overlap Logic Error
-#
-# author: The EarSketch Team
-#
-# description: Code that causes a logic error
-#
+# Overlap Logic: Code that causes an Overlapping Clips Warning
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 groove1 = HIPHOP_DUSTYGROOVE_011
 groove2 = HIPHOP_DUSTYGROOVE_010
 
 for measure in range(1, 9):
-  fitMedia(groove1, 1, measure, measure + 2)
-  fitMedia(groove2, 2, measure + 2, measure + 4)
-
-finish()
+    fitMedia(groove1, 1, measure, measure + 2)
+    fitMedia(groove2, 2, measure + 2, measure + 4)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Overlap Logic Error
-//
-// author: The EarSketch Team
-//
-// description: Code that causes a logic error
-//
+// Overlap Logic: Code that causes an Overlapping Clips Warning
 
-init();
 setTempo(120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
 
-for (var measure = 1; measure < 9; measure ++ ){
-  fitMedia(groove1, 1, measure, measure + 2);
-  fitMedia(groove2, 2, measure + 2, measure + 4);
+for (var measure = 1; measure < 9; measure++) {
+    fitMedia(groove1, 1, measure, measure + 2);
+    fitMedia(groove2, 2, measure + 2, measure + 4);
 }
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -229,56 +181,35 @@ We end up placing a clip on every measure as we iterate through the for-loop, bu
 We end up placing a clip on every measure as we iterate through the for-loop, but each clip is two measures long. This causes the second half (right side) of each clip to overlap with the previous half. Our code ran, but this was not the intended result; we have encountered a logic error. Following the control flow of the for-loop helps to debug this script. When `measure` is equal to 2, the `fitMedia()` calls attempt to place clips on measures that already contain music. We can solve this issue by incrementing our iteration statement by four on each iteration instead of one, like `measure += 4`. That way, we jump ahead four measures before placing clips again. The following code corrects the logic error:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# python code
-#
-# script_name: Overlap Correction
-#
-# author: The EarSketch Team
-#
-# description: Creating an alternating drum beat
-#
+# Overlap Correction: Errors fixed
 
 from earsketch import *
-
-init()
 setTempo(120)
 
 groove1 = HIPHOP_DUSTYGROOVE_011
 groove2 = HIPHOP_DUSTYGROOVE_010
 
 for measure in range(1, 9, 4):
-  fitMedia(groove1, 1, measure, measure + 2)
-  fitMedia(groove2, 2, measure + 2, measure + 4)
-
-finish()
+    fitMedia(groove1, 1, measure, measure + 2)
+    fitMedia(groove2, 2, measure + 2, measure + 4)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Overlap Correction
-//
-// author: The EarSketch Team
-//
-// description: Creating an alternating drum beat
-//
+// Overlap Correction: Errors fixed
 
-init();
 setTempo(120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
 
-for (var measure = 1; measure < 9; measure += 4 ){
-  fitMedia(groove1, 1, measure, measure + 2);
-  fitMedia(groove2, 2, measure + 2, measure + 4);
+for (var measure = 1; measure < 9; measure += 4) {
+    fitMedia(groove1, 1, measure, measure + 2);
+    fitMedia(groove2, 2, measure + 2, measure + 4);
 }
-
-finish();
 ----
 
 Let's take a look at another example. The script below takes advantage of all of `setEffect()` 's parameters to spice up a transition with an envelope. As the drop approaches, we attempt to slowly filter out the clap sounds for a more dramatic effect. Even though everything appears to be correct, the code doesn't run. See if you can use the console to figure out what is wrong.
@@ -286,18 +217,9 @@ Let's take a look at another example. The script below takes advantage of all of
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Argument Order Error
-#
-# author: The EarSketch Team
-#
-# description: Error using using 7-parameter setEffect()
-#
+# Argument Order: Error caused by argument order using 7-parameter setEffect()
 
 from earsketch import *
-
-init()
 setTempo(128)
 
 lead = YG_EDM_LEAD_BIG_1
@@ -313,23 +235,13 @@ fitMedia(lead, 4, 5, 9)
 
 setEffect(2, VOLUME, GAIN, -10)
 setEffect(1, FILTER, FILTER_FREQ, 1, 10000, 5, 100)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Argument Order Error
-//
-// author: The EarSketch Team
-//
-// description: Error using 7-parameter setEffect()
-//
+// Argument Order: Error caused by argument order using 7-parameter setEffect()
 
-init();
 setTempo(128);
 
 var lead = YG_EDM_LEAD_BIG_1;
@@ -345,8 +257,6 @@ fitMedia(lead, 4, 5, 9);
 
 setEffect(2, VOLUME, GAIN, -10);
 setEffect(1, FILTER, FILTER_FREQ, 1, 10000, 5, 100);
-
-finish();
 ----
 
 [role="curriculum-python"]
@@ -358,18 +268,9 @@ The console points us to line 25, where we have called `setEffect()` with a FILT
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Argument Order Correction
-#
-# author: The EarSketch Team
-#
-# description: Using 7-parameter setEffect() effectively
-#
+# Argument Order Correction: Errors fixed
 
 from earsketch import *
-
-init()
 setTempo(128)
 
 lead = YG_EDM_LEAD_BIG_1
@@ -384,24 +285,14 @@ fitMedia(kick, 3, 5, 9)
 fitMedia(lead, 4, 5, 9)
 
 setEffect(2, VOLUME, GAIN, -10)
-setEffect(1, FILTER, FILTER_FREQ, 10000, 1, 100 , 5)
-
-finish()
+setEffect(1, FILTER, FILTER_FREQ, 10000, 1, 100, 5)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Argument Order Correction
-//
-// author: The EarSketch Team
-//
-// description: Using 7-parameter setEffect() effectively
-//
+// Argument Order Correction: Errors fixed
 
-init();
 setTempo(128);
 
 var lead = YG_EDM_LEAD_BIG_1;
@@ -417,8 +308,6 @@ fitMedia(lead, 4, 5, 9);
 
 setEffect(2, VOLUME, GAIN, -10);
 setEffect(1, FILTER, FILTER_FREQ, 10000, 1, 100, 5);
-
-finish();
 ----
 
 EarSketch provides some additional resources to help you debug your scripts. Take a look at <<every-error-explained-in-detail#,Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.

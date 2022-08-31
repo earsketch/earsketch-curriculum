@@ -142,26 +142,19 @@ The Your Voice is Power sample code is not available for JavaScript. To view the
 [role="curriculum-python"]
 [source,python]
 ----
-#comments
-#	author:
-#	description: Staggered Start and End Measures
-#
+# Staggered Start and End Measures
 
+# setup
 from earsketch import *
-#setup
-init()
 setTempo(120)
 
-#music
+# music
 fitMedia(RD_UK_HOUSE_MAINBEAT_8, 1, 1, 5)
 fitMedia(RD_POP_SYNTHBASS_6, 2, 2, 5)
 fitMedia(YG_FUNK_CONGAS_3, 3, 3, 7)
 fitMedia(ENTREP_BEAT_DRUMBEAT, 4, 5, 9)
 fitMedia(CIARA_SET_BASSLINE_1, 5, 5, 9)
 fitMedia(ENTREP_THEME_ORCH, 6, 6, 10)
-
-#finish
-finish()
 ----
 
 Look at your DAW, do you see the sound clips staggered over nine measures? How did the position of your soundclips along your timeline change from your code in module 2.  When you listen to the song, do you hear how sounds fade in and out and overlap?  Staggering start and end times of sound clips is very common in Entrepreneur or another one of your favorite songs. In fact, Mike points out to Chalece, that the first measure of Entrepreneur is silent. The first soundclip starts on measure 2.

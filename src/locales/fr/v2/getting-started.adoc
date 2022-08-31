@@ -61,54 +61,26 @@ Essayons d'exécuter un exemple de code dans EarSketch ! Dans la case ci-dessous
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Intro Script
-#
-# auteur : L'équipe EarSketch
-#
-# description : Ce code a pour but d'ajouter un clip audio dans le DAW
-#
-#
-#
+# Intro Script : Ce code a pour but d'ajouter un clip audio dans le DAW
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Intro Script
-//
-// auteur : L'équipe EarSketch
-//
-// description : Ce clip a pour but d'ajouter un clip audio dans le DAW
-//
-//
-//
+// Intro Script : Ce code a pour but d'ajouter un clip audio dans le DAW
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
-
-//Fin
-finish();
-
 ----
 
 
@@ -173,11 +145,6 @@ END OF OPTIONAL
 
 Maintenant que vous avez créé votre premier script, commençons à travailler sur votre musique !
 
-[role="curriculum-python"]
-Commencez à écrire votre code entre les lignes `setTempo(120)` et `finish()`.
-[role="curriculum-javascript"]
-Commencez à écrire votre code entre les lignes `setTempo(120);` et `finish();`.
-
 Regardez la vidéo suivante pour voir comment ajouter un clip audio à votre chanson :
 
 [role="curriculum-python curriculum-mp4"]
@@ -222,55 +189,26 @@ Retrouvez ci-dessous quelques exemples de code utilisant la fonction `fitMedia()
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Démo EarSketch
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de la fonction fitMedia() pour ajouter un clip dans le DAW
-#
-#
-#
+# Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
 
-#Paramétrage
+# Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
-#Musique
+# Musique
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
-
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Démo EarSketch
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de la fonction fitMedia() pour ajouter un clip dans le DAW
-//
-//
-//
+// Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
 
-//Paramétrage
-init();
+// Paramétrage
 setTempo(120);
 
-//Musique
+// Musique
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
-
-//Fin
-finish();
-
 ----
 
 Pour plus de défi, ajoutez plus d'appels de fonction `fitMedia()` dans votre script, comme dans l'exemple ci-dessous. Notez que nous utilisons un numéro de piste différent pour chaque appel de fonction `fitMedia()` :
@@ -278,65 +216,30 @@ Pour plus de défi, ajoutez plus d'appels de fonction `fitMedia()` dans votre sc
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Opus 1
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de plusieurs appels de fonction fitMedia(), sur différentes pistes et avec différents clips
-#
-#
-#
+# Utilisation de la fonction fitMedia() 2 : Plusieurs appels de fonction fitMedia() sur différentes pistes
 
 # Paramétrage
 from earsketch import *
-
-init()
 setTempo(100)
 
 # Musique
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9)
 fitMedia(Y11_BASS_1, 2, 1, 9)
 fitMedia(Y11_GUITAR_1, 3, 1, 9)
-
-# Fin
-
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-// code javascript
-//
-// script_name : Opus 1
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de plusieurs appels de fonction fitMedia(), sur différentes pistes et avec différents clips
-//
-//
-//
+// Utilisation de la fonction fitMedia() 2 : Plusieurs appels de fonction fitMedia() sur différentes pistes
 
 // Paramétrage
-
-init();
 setTempo(100);
 
 // Musique
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
-
-// Fin
-
-finish();
-
 ----
 
 
@@ -396,7 +299,7 @@ Voici quelques erreurs courantes :
 . *Erreur d'orthographe :* Vérifiez l'orthographe lors de l'utilisation d'une fonction comme `fitMedia()` ou des constantes de son.
 . *Sensibilité à la casse :* La plupart des mots utilisés en programmation sont sensibles à la casse (l'ordinateur reconnaît la différence entre les lettres majuscules et minuscules). Faites attention aux lettres minuscules et majuscules. Par exemple, vous devez écrire `fitMedia()` et non `FitMedia()` ou `fitmedia()`. La plupart des éléments d'un script suivent une règle appelée la *notation "Camel Case"* : c'est-à-dire que le premier mot est en minuscule et que la première lettre des mots suivants sera en majuscule, comme dans `exempleNomFonction()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *Paramétrage du script :* EarSketch ajoute automatiquement des fonctions de paramétrage à un nouveau script, mais vous pourriez accidentellement supprimer `from earsketch import *`, `init()`, `setTempo()` ou `finish()`. Assurez-vous que ces fonctions apparaissent dans chaque script.
+. *Paramétrage du script :* EarSketch ajoute automatiquement des code de paramétrage à un nouveau script, mais vous pourriez accidentellement supprimer `from earsketch import *`.
 . *Ponctuation :* Virgules manquantes ou autres erreurs de ponctuation
 
 C'est le moment de mettre en pratique tout ce que vous avez appris !
@@ -405,47 +308,24 @@ Trouvez les cinq erreurs dans le code suivant :
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : Trouvez les cinq erreurs
-#
-# auteur : L'équipe EarSketch
-#
-# description : Trouvez et corrigez les erreurs dans ce script
-#
+# Trouvez les erreurs : Corrigez cinq erreurs
 
 from earsketch import *
-
-init)
-setTempo(88)
+setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : Trouvez les cinq erreurs
-//
-// auteur : L'équipe EarSketch
-//
-// description : Trouvez et corriger les erreurs dans ce script
-//
+// Trouvez les erreurs : Corrigez cinq erreurs
 
-init;
-setTempo(88);
+setTempo(88;
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
-
-
-finish();
 ----
 ////
 OPTIONAL
@@ -453,7 +333,7 @@ OPTIONAL
 
 Voici la réponse
 
-. Il manque une parenthèse à la fonction `init()`.
+. Il manque une parenthèse à la fonction `setTempo()`.
 . Il manque un « e » à la première fonction `fitMedia()`.
 . Il manque une virgule entre le troisième et le quatrième paramètre de la première fonction `fitMedia()`.
 . Il manque un « M » (majuscule) à la deuxième fonction `fitMedia()`.
@@ -485,7 +365,7 @@ TODO: when options are ready, modify the link
 * Les clips de sons peuvent être trouvés dans la bibliothèque de sons. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule.
 * Un *programme* d'ordinateur est une séquence d'instructions que l'ordinateur exécute pour accomplir une tâche spécifique. 
 * Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Un langage de programmation suit une syntaxe spécifique afin d'organiser le code.
-* Un script EarSketch comprend une section de commentaires, une section de paramétrage, une section dédiée à la musique et une section de fin.
+* Un script EarSketch comprend une section de commentaires, une section de paramétrage, et une section dédiée à la musique.
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + » si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. Elle comprend quatre arguments, soient les informations dont elle a besoin pour faire de la musique :
 ** *Nom de clip :* Le clip de son qui est placé dans le DAW.
@@ -504,7 +384,7 @@ TODO: when options are ready, modify the link
 * Les clips de sons peuvent être trouvés dans la bibliothèque de sons. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule.
 * Un *programme* d'ordinateur est une séquence d'instructions que l'ordinateur exécute pour accomplir une tâche spécifique. 
 * Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Un langage de programmation suit une syntaxe spécifique afin d'organiser le code.
-* Un script EarSketch comprend une section de commentaires, une section de paramétrage, une section dédiée à la musique et une section de fin.
+* Un script EarSketch comprend une section de commentaires, une section de paramétrage, et une section dédiée à la musique.
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + » si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. Elle comprend quatre arguments, soient les informations dont elle a besoin pour faire de la musique :
 ** *Nom de clip :* Le clip de son qui est placé dans le DAW.

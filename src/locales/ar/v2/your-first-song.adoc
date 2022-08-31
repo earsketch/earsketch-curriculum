@@ -17,10 +17,8 @@
 from Earsketch import*
 الذي يضيف دوال Earsketch  مثل 
   ()fitMedia  
-للمشروع  
-. الدالة ()init التي تعطي قيم اولية او تشغل ال DAW.
+للمشروع
 . الدالة `setTempo(120)` التي سنشرحها بالتفصيل أدناه
-. الدالة ()finish: وهي التي تخبر ال DAW بانكم انهيتم التلحين، وانكم جاهزون لسماع الموسيقى التي من انتاجكم.
 --
 
 [role="curriculum-javascript"]
@@ -28,12 +26,8 @@ from Earsketch import*
 لقد لاحظت الآن أنه عند إنشاء سكريبت، هناك عناصر موجودة مسبقًا يجب عليك الاحتفاظ بها تمامًا حتى يعمل الكود الخاصة بك:
 
 . هناك ملاحظات التي تبدأ بـ`//` باللون الرمادي: سوف نغطي شرح ذلك في القسم التالي.
-. الدالة ()init التي تعطي قيم اولية او تشغل ال DAW.
 . الدالة `setTempo(120)` التي سنشرحها بالتفصيل أدناه.
-. الدالة ()finish: وهي التي تخبر ال DAW بانكم انهيتم التلحين، وانكم جاهزون لسماع الموسيقى التي من انتاجكم.
 --
-
-ملاحظة: كتابة الكود الخاصة بك سيكون بعد دالة ()setTempo وقبل `دالة ()finish`.
 
 ستحدد دالة ()setTempo سرعة أغنيتك. tempo (إيقاع بالعربية) في الموسيقى الغربية. هو عدد النبضات (beats) في الدقيقة (bpm). في EarSketch ، يتم تعيين الإيقاع الافتراضي (أي القيمة الأولية لtempo) إلى 120 جزء من المليون، وهو ما يقابل للمشي السريع في حياتنا. لتغيير الايقاع tempo، فقط قم بتغيير الرقم بين قوسين لوظيفة `setTempo()`. كلما ارتفع الايقاع tempo كلما زادت سرعة موسيقاك. يمكنك تحديد الإيقاع بين    45 bpm  و  220 bpm.
 
@@ -122,77 +116,52 @@ from Earsketch import*
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Commenting Sections
-#
-# author: The EarSketch Team
-#
-# description: Here is a short example of a script that uses comments to describe what the code does
-#
-#
-#
+# Comments: Using comments to describe what the code does
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(130)
 
-#Music
-#Leads
+# Music
+# Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9)
 
-#Beat
+# Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9)
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9)
 
-#Bass and noise
+# Bass and noise
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9)
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Commenting Sections
-//
-// author: The EarSketch Team
-//
-// description: Here is a short example of a script that uses comments to describe what the code does
-//
-//
+// Comments: Using comments to describe what the code does
 
-//Setup
-init();
+// Setup
 setTempo(130);
 
-//Music
-//Leads
+// Music
+// Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9);
 
-//Beat
+// Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9);
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9);
 
-//Bass and noise
+// Bass and noise
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9);
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9);
-
-//Finish
-finish();
 ----
 
 
@@ -283,9 +252,7 @@ END OF OPTIONAL
 * يتم تنظيم المقاطع الموجودة في مكتبة اصوات EarSketch في مجلدات من الأصوات ذات الصلة. لمعرفة الإيقاع الدقيق للمقطع ، مرر مؤشر الماوس فوق الاسم في متصفح الصوت.
 * التعليقات هي أسطر من التعليمات البرمجية لا يتم تنفيذها بواسطة الحاسوب. ومع ذلك ، فهي مفيدة لادخال الملاحظات داخل البرنامج النصي.
 * `من مستورد earsketch*` يضيف EarSketch API إلى مشروعك. يجب أن يتم تضمينه في الجزء العلوي من كل نص.
-* ` init () ` تجهز منصة العمل الصوتية (DAW) لقبول الموسيقى وعرضها. يجب أن يكون موجودًا في كل برنامج نصي من EarSketch.
 * `setTempo()`يتيح لك تحديد إيقاع أغنيتك. يجب تضمينه في كل برنامج نصي من EarSketch.
-* يقوم ` finish () ` بإعلام DAW بأن التعليمات البرمجية الخاصة بك كاملة. يجب تضمينه في نهاية كل برنامج نصي من EarSketch.
 * يمكنك تحميل الأصوات الخاصة بك إلى EarSketch من خلال مكتبة الاصوات. فقط انقر فوق "إضافة صوت".
 * <strong>المعالجة/0> هي مهمة تعمل على الحاسوب. تتم المعالجة بواسطة جهاز الحاسوب' * وحدة المعالجة المركزية CPU * ، وهو المسؤول عن تنفيذ تعليمات البرنامج.
 * * الذاكرة * (المعروفة أيضًا باسم ذاكرة الوصول العشوائي أو التخزين الأساسي) تحتفظ بالبيانات وتعليمات المعالجة مؤقتًا لاستخدام وحدة المعالجة المركزية.
@@ -298,9 +265,7 @@ END OF OPTIONAL
 * * الإيقاع * هو السرعة التي يتم بها تشغيل مقطوعة موسيقية ، محددة بعدد الدقات في الدقيقة (دقة في الدقيقة). الإيقاع مرتبط بالنوع الموسيقي.
 * يتم تنظيم المقاطع الموجودة في مكتبة EarSketch Sounds في مجلدات من الأصوات ذات الصلة. لمعرفة الإيقاع الدقيق للمقطع ، مرر مؤشر الماوس فوق الاسم في متصفح الصوت.
 * التعليقات هي أسطر من التعليمات البرمجية لا يتم تنفيذها بواسطة الحاسوب. ومع ذلك ، فهي مفيدة لتدوين الملاحظات داخل البرنامج النصي.
-* ` init(); ` تجهز منصة العمل الصوتية (DAW) لقبول الموسيقى وعرضها. يجب أن يكون موجودًا في كل برنامج نصي من EarSketch.
 * `setTempo();`يتيح لك تحديد إيقاع أغنيتك. يجب تضمينه في كل برنامج نصي من EarSketch.
-* يقوم ` finish(); ` بإعلام DAW بأن التعليمات البرمجية الخاصة بك كاملة. يجب تضمينه في نهاية كل برنامج نصي من EarSketch.
 * يمكنك تحميل الأصوات الخاصة بك إلى EarSketch من خلال متصفح الصوت. فقط انقر فوق "إضافة صوت".
 * *عملية  * هي مهمة تعمل على الكمبيوتر. تتم المعالجة بواسطة وحدة المعالجة المركزية CPU ، وهي المسؤولة عن تنفيذ تعليمات البرنامج.
 * * الذاكرة * (المعروفة أيضًا باسم ذاكرة الوصول العشوائي أو التخزين الأساسي RAM) تحتفظ بالبيانات وتعليمات المعالجة مؤقتًا لاستخدام وحدة المعالجة المركزية.

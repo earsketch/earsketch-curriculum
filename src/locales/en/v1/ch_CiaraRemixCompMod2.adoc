@@ -154,12 +154,12 @@ Although 16 sub-beats make up a measure, your `makeBeat()` string does not have 
 fillA = "0---0-0-00--0-00"
 fillB = "0--0--0--0--0-0-"
 fillC = "-000-00-00-0-00-"
-#makeBeat(Cbeat1, 7, 2, fillA)
-#makeBeat(Cbeat1, 7, 3, fillA)
-#makeBeat(Cbeat1, 7, 4, fillA)
-#makeBeat(Cbeat1, 8, 2, fillC)
-#makeBeat(Cbeat1, 8, 3, fillC)
-#makeBeat(Cbeat1, 8, 4, fillC)
+# makeBeat(Cbeat1, 7, 2, fillA)
+# makeBeat(Cbeat1, 7, 3, fillA)
+# makeBeat(Cbeat1, 7, 4, fillA)
+# makeBeat(Cbeat1, 8, 2, fillC)
+# makeBeat(Cbeat1, 8, 3, fillC)
+# makeBeat(Cbeat1, 8, 4, fillC)
 ----
 
 . Look at `fillA = "0---0-0-00--0-00"`
@@ -314,17 +314,17 @@ Now it’s time to write our for-Loops and add the same type of repetition to ou
 
 For-loops in Python consist of 3 basic parts:
 
-* *Loop Body:* The body of a loop contains statements that will execute repeatedly. It includes everything that is indented (using the tab key) directly after the colon., In our example, the loop body was our two makeBeat functions.
+* *Loop Body:* The body of a loop contains statements that will execute repeatedly. It includes everything that is indented directly after the colon. In our example, the loop body was our two makeBeat functions.
 
 * *Loop Counter:* Creates a variable to be used as a loop counter. In our example, the loop counter was a measure.
 
-* *Range:* A function that makes a list of numbers for the loop counter to count through. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): range(startingNumber, endingNumber). In our example, the range is 2-4, where the starting number is 2 and ending number is 4.
+* *Range:* A function that makes a list of numbers for the loop counter to count through. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`. In our example, the range is 2-4, where the starting number is 2 and ending number is 4.
 
 
 
 [source,python]
 ----
-for measure in range(2, 4):              # loop counter, and range
+for measure in range(2, 4):  # loop counter, and range
     makeBeat(Cbeat1, 7, measure, fillA)  # loop body
     makeBeat(Cbeat1, 8, measure, fillC)  # loop body
 makeBeat(Cbeat1, 9, 2, fillB)
@@ -343,7 +343,7 @@ You can also use the for-loop with fitMedia. See example below:
 [source,python]
 ----
 for measure in range(1, 9):
-    fitMedia(DUBSTEP_BASS_WOBBLE_002, 25, measure, measure+1)
+    fitMedia(DUBSTEP_BASS_WOBBLE_002, 25, measure, measure + 1)
 ----
 
 
@@ -358,8 +358,8 @@ You can also use a for-loop to create an alternating drum beat in your song. Bel
 ----
 # Each sound is played for 0.5 measure, across 8 measures
 for measure in range(1, 9):
-    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure+0.5)
-    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure+0.5, measure+1)
+    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure + 0.5)
+    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure + 0.5, measure + 1)
 ----
 
 
@@ -400,12 +400,10 @@ EarSketch will alert you of an error with a message in the console. Look at the 
 # Below, fitmedia should be fitMedia
 fitmedia(RD_ELECTRO_DRUM_PART_1, 10, 1, 4)
 
-
 # Console output:
-# 
 # Running script...
-# Error message >> NameError: There is an error with a variable or 
-# functio name that is not define, name 'fitmedia' is not defined on line
+# Error message >> NameError: There is an error with a variable or
+# function name that is not defined, name 'fitmedia' is not defined on line
 # 45. [Click here for more information].
 ----
 
@@ -417,11 +415,11 @@ If you have an error in your code, follow these instructions:
 
 . *Read the console for clues:* Such as line number or type of errors
 
-. *Locate the error in your code:* If the console provided a line number, take a look at that line and the previous line in your code. Check any arguments carefully. You can also comment out the lines of code one at a time to identify where a possible error could be.
+. *Locate the error in your code:* If the console provided a line number, take a look at that line and the previous line in your code. Check any arguments carefully. You can also comment out the lines of code one at a time to identify where a possible error could be.
 
-. *Print debugging can also be used to locate an error:* Insert print statements throughout your code `fitmedia(RD_EDM_DRUM BEATPART_1, 10, 1, 4)` , to obtain the value of variables and check your logic.
+. *Print debugging can also be used to locate an error:* Insert `print()` throughout your code  to obtain the value of variables and check your logic.
 
-. *Squash the bug:* Check for syntax errors, like unclosed parentheses, quotations, or brackets. Edit the code, and run it to verify its correctness.
+. *Squash the bug:* Check for syntax errors, like unclosed parentheses, quotations, or brackets. Edit the code, and run it to verify its correctness.
 
 . *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
@@ -431,25 +429,25 @@ Some Common Errors in your code may be
 
 . *Misspelling*
 
-. *Case sensitivity:* Most constructs used in programming are case sensitive, meaning you must pay attention to lowercase and uppercase letters .
+. *Case sensitivity:* Most constructs used in programming are case sensitive, meaning you must pay attention to lowercase and uppercase letters .
 
-. *Parentheses:* Forgetting an opening or closing parentheses where needed will cause a _syntax error_.
+. *Parentheses:* Forgetting an opening or closing parentheses where needed will cause a _syntax error_.
 
 . *Initializing variables:* A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
 
-. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes from `earsketch import *`, `init()`, `setTempo()`, or `finish()` can be deleted by accident. Make sure that these functions appear in every script.
+. *Script setup:* Although EarSketch adds setup functions to a new script automatically, sometimes `from earsketch import *` can be deleted by accident.
 
-. *Comments:* Improper commenting will cause a syntax error. Remember that Python comments must start with a `#` symbol.
+. *Comments:* Improper commenting will cause a syntax error. Remember that Python comments must start with a `#` symbol.
 
-. *Colons:* Colons are used to declare the start of an indented block in Python. (such as for-loops).
+. *Colons:* Colons are used to declare the start of an indented block in Python. (such as for-loops).
 
-. *Indentation:* Indentation is critical in Python. Lack of indentation in functions, for-loops, and conditional statement bodies will cause an _indentation error_.
+. *Indentation:* Indentation is critical in Python. Lack of indentation in functions, for-loops, and conditional statement bodies will cause an _indentation error_.
 
 . *Quotations:* Don’t forget an opening or closing quotation mark for strings.
 
-. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
+. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
 
-. *Punctuation:* Extra or lacking punctuation can lead to _parse errors_ and _syntax errors_.
+. *Punctuation:* Extra or lacking punctuation can lead to _parse errors_ and _syntax errors_.
 
 Click here for more information on possible errors and debugging:
 
@@ -488,8 +486,8 @@ fitMedia(RD_ELECTRO_DRUM_PART_4, 26, 4.5, 5)
 
 # You can simply write it as for-loop
 for measure in range(1, 9):
-    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure+0.5)
-    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure+0.5, measure+1)
+    fitMedia(RD_ELECTRO_DRUM_PART_1, 25, measure, measure + 0.5)
+    fitMedia(RD_ELECTRO_DRUM_PART_4, 26, measure + 0.5, measure + 1)
 ----
 
 

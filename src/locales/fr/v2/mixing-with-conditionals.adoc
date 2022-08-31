@@ -13,60 +13,39 @@ Nous allons maintenant voir comment détecter l'intensité sonore ou le volume d
 [role="curriculum-python"]
 [source,python]
 ----
-# code python
-#
-# script_name : La fonction analyzeTrack()
-#
-# auteur : L'équipe EarSketch
-#
-# description : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
-#
+# AnalyzeTrack() : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Placement d'un son sur la piste 1
 sound = COMMON_LOVE_VOX_COMMON_1
-fitMedia(sound,1,1,9)
+fitMedia(sound, 1, 1, 9)
 
 # Création d'une variable pour stocker l'intensité sonore de la piste 1
-loudness1 = analyzeTrack(1,RMS_AMPLITUDE)
+loudness1 = analyzeTrack(1, RMS_AMPLITUDE)
 
 # Affichage de l'intensité sonore dans la console
 print(loudness1)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// code javascript
-//
-// script_name : La fonction analyzeTrack()
-//
-// auteur : L'équipe EarSketch
-//
-// description : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
-//
+// AnalyzeTrack() : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
+
 // Paramétrage
-init();
 setTempo(120);
 
 // Placement d'un son sur une piste
 var sound = COMMON_LOVE_VOX_COMMON_1;
-fitMedia(sound,1,1,9);
+fitMedia(sound, 1, 1, 9);
 
 // Création d'une variable pour stocker l'intensité sonore de la piste 1
-var loudness1 = analyzeTrack(1,RMS_AMPLITUDE);
+var loudness1 = analyzeTrack(1, RMS_AMPLITUDE);
 
 // Affichage de l'intensité sonore dans la console
 println(loudness1);
-
-// Fin
-finish();
 ----
 
 
@@ -175,60 +154,42 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 Voici un exemple :
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-#        code python
-#        script_name : Exemple de booléen
-#
-#        auteur : L'équipe EarSketch
-#        description : Analyse de l'intensité sonore de pistes.
-#
+# Exemple de booléen : Analyse de l'intensité sonore de pistes.
 
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Création de deux pistes
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
-fitMedia(melody1,1,1,9)
-fitMedia(melody2,2,1,9)
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 2, 1, 9)
 
 # Évaluation de l'intensité sonore des pistes
-loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
-loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
 # Vérification si la piste 1 est plus forte que la piste 2
 # Nous créons la comparaison booléenne 1
-comparison1 = (loudnessTrack1 > loudnessTrack2)
-print('La piste 1 est-elle plus forte que la piste 2 ?')
+comparison1 = loudnessTrack1 > loudnessTrack2
+print("La piste 1 est-elle plus forte que la piste 2 ?")
 print(comparison1)
 
 # Création d'une boucle pour comparer l'intensité sonore de chaque piste à la valeur 0.5
-for track in range(1,3) :
-  loudness = analyzeTrack(track,RMS_AMPLITUDE)
-  print('Est-ce que l'intensité sonore de la piste ' + str(track) + ' est plus élevée que 0.01 ?')
-  print(loudness > 0.01)
-
-# Fin
-finish()
+for track in range(1, 3):
+    loudness = analyzeTrack(track, RMS_AMPLITUDE)
+    print("Est-ce que l'intensité sonore de la piste " + str(track) + " est plus élevée que 0.01?")
+    print(loudness > 0.01)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Exemple de booléen simple
-//
-// auteur : L'équipe EarSketch
-//
-// description : Analyse de l'intensité sonore de pistes
-//
-//
+// Exemple de booléen : Analyse de l'intensité sonore de pistes
 // Paramétrage
-init();
 setTempo(120);
 
 // Création de deux pistes
@@ -244,19 +205,15 @@ var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
 // Vérification si la piste 1 est plus forte que la piste 2
 // Nous créons la comparaison booléenne 1
 var comparison1 = (loudnessTrack1 > loudnessTrack2);
-println('La piste 1 est-elle plus forte que la piste 2 ?');
+println('La piste 1 est-elle plus forte que la piste 2 ?');
 println(comparison1);
 
 // Création d'une boucle for pour comparer l'intensité sonore de chaque piste à la valeur 0.5
 for (var track = 1; track < 3; track++) {
   var loudness = analyzeTrack(track,RMS_AMPLITUDE);
-  println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
+  println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
   println (loudness > 0.01);
 }
-
-//Fin
-finish();
-
 ----
 
 [role="curriculum-python"]
@@ -273,15 +230,15 @@ Qu'est-ce qu'une instruction conditionnelle ? Une *instruction* correspond à un
 Voyez ci-dessous un exemple d'instruction conditionnelle. Notez la similitude avec une boucle « for » :
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-if (condition):
+if condition:
     # Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est True (vraie)
     # Notez que les instructions sont indentées, tout comme pour les boucles
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 if (condition){
     // Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est true (vraie)
@@ -297,99 +254,79 @@ if (condition){
 
 Voici un exemple :
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# code python
-#
-# script_name : Remixage 1
-#
-# auteur : L'équipe EarSketch
-#
-# description : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
-#
+# Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
+
 # Paramétrage
 from earsketch import *
-init()
 setTempo(120)
 
 # Création de deux pistes
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
-fitMedia(melody1,1,1,9)
-fitMedia(melody2,2,1,9)
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 2, 1, 9)
 
 # Évaluation de l'intensité sonore des pistes
-loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
-loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
-# Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
-if (loudnessTrack1 > loudnessTrack2):
-	setEffect(1,VOLUME,GAIN,-10)
-
-# Fin
-finish()
+# Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons son volume
+if loudnessTrack1 > loudnessTrack2:
+    setEffect(1, VOLUME, GAIN, -10)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// code javascript
-//
-// script_name : Remixage 1
-//
-// auteur : L'équipe EarSketch
-//
-// description : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
+// Mélange automatique 1 : Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 
 // Paramétrage
-init();
 setTempo(120);
 
 // Création de deux pistes
 var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
 var melody2 = RD_UK_HOUSE__5THCHORD_1;
-fitMedia(melody1,1,1,9);
-fitMedia(melody2,2,1,9);
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
 
 // Évaluation de l'intensité sonore des pistes
-var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
-var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
 
 // Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
-if (loudnessTrack1 > loudnessTrack2){
-	setEffect(1,VOLUME,GAIN,-10);
+if (loudnessTrack1 > loudnessTrack2) {
+    setEffect(1, VOLUME, GAIN, -10);
 }
-
-//Fin
-finish();
 ----
 Il est possible de vérifier plusieurs conditions et d'exécuter des instructions différente selon chaque condition. Vous pouvez ajouter autant de conditions que vous le souhaitez. Nous utiliserons la syntaxe suivante :
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-if (condition1):
+if condition1:
     # Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est True (vraie). Si la condition est False (n'est pas respectée), passez à la ligne suivante
-elif (condition2):
-	# Ici, écrivez les instructions si condition2 est True. Si la condition2 est False, passez à la ligne suivante
-elif (condition3):
-	# Ici, écrivez ici les instructions si condition3 est True. Si la condition3 est False, passez à la ligne suivante
+elif condition2:
+    # Ici, écrivez les instructions si condition2 est True. Si la condition2 est False, passez à la ligne suivante
+elif condition3:
+    # Ici, écrivez ici les instructions si condition3 est True. Si la condition3 est False, passez à la ligne suivante
 else:
-	# Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
+    # Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 if (condition1) {
     // Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est true (vraie)
 } else if (condition2) {
-	// Ici, écrivez les instructions si la condition2 est True. Si la condition2 est False, passez à la prochaine ligne
-	// elif est l'abbréviation de else if
+    // Ici, écrivez les instructions si la condition2 est True. Si la condition2 est False, passez à la prochaine ligne
+    // elif est l'abbréviation de else if
 } else if (condition3) {
-	// Ici, écrivez les instructions si la condition3 est True. Si la condition3 est False, passez à la ligne suivante
+    // Ici, écrivez les instructions si la condition3 est True. Si la condition3 est False, passez à la ligne suivante
 } else {
-	// Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
+    // Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
 }
 ----
 
@@ -430,17 +367,12 @@ Let's review some vocabulary:
 Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-#		python code
-#		script_name: Mixing
-#
-#		author: the EarSketch team
-#		description: Creating a short song and using conditional statements to mix the tracks
-#
+# Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
+
 # Setup
 from earsketch import *
-init()
 setTempo(120)
 
 # Adding a melody and bass
@@ -449,61 +381,49 @@ melody2 = YG_ALT_POP_GUITAR_1
 bass1 = YG_ALT_POP_BASS_1
 bass2 = DUBSTEP_SUBBASS_008
 strings = YG_HIP_HOP_STRINGS_4
-fitMedia(melody1,1,1,9)
-fitMedia(melody2,1,9,17)
-fitMedia(bass1,2,1,9)
-fitMedia(bass2,2,9,17)
-fitMedia(strings,3,9,17)
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 1, 9, 17)
+fitMedia(bass1, 2, 1, 9)
+fitMedia(bass2, 2, 9, 17)
+fitMedia(strings, 3, 9, 17)
 
-# Adding percussions using makeBeat()
-beatKick = '0---0-----0-0---'
-beatSnare = '--0-0------000-'
+# Adding percussion using makeBeat()
+beatKick = "0---0-----0-0---"
+beatSnare = "--0-0------000-"
 soundKick = OS_KICK02
 soundSnare = OS_SNARE06
-for measure in range(5,17):
-  makeBeat(soundKick,4,measure,beatKick)
-  makeBeat(soundSnare,5,measure,beatSnare)
+for measure in range(5, 17):
+    makeBeat(soundKick, 4, measure, beatKick)
+    makeBeat(soundSnare, 5, measure, beatSnare)
 
 # Mixing my tracks
 # First, we analyze the tracks for loudness
-loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
-print('The loudness of track 1 is'+str(loudnessTrack1))
-loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
-print('The loudness of track 2 is'+str(loudnessTrack2))
-loudnessTrack3 = analyzeTrack(3,RMS_AMPLITUDE)
-print('The loudness of track 3 is'+str(loudnessTrack3))
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+print("The loudness of track 1 is" + str(loudnessTrack1))
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+print("The loudness of track 2 is" + str(loudnessTrack2))
+loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
+print("The loudness of track 3 is" + str(loudnessTrack3))
 
-if (loudnessTrack1 < loudnessTrack2):
-  #if track 1 is quieter than track 2 then we increase the volume of track 1
-  setEffect(1,VOLUME,GAIN,+5)
-  print ('track 1 was quieter than track 2')
-elif (loudnessTrack1 < loudnessTrack3):
-  #if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
-  setEffect(1,VOLUME,GAIN,+5)
-  print ('track 1 was quieter than track 3')
-else: 
-  #if track 1 is louder than tracks 2 and 3, then we change nothing
-  print('track 1 was the loudest track already')
-
-
-# Finish
-finish()
+if loudnessTrack1 < loudnessTrack2:
+    # if track 1 is quieter than track 2 then we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5)
+    print("track 1 was quieter than track 2")
+elif loudnessTrack1 < loudnessTrack3:
+    # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5)
+    print("track 1 was quieter than track 3")
+else:
+    # if track 1 is louder than tracks 2 and 3, then we change nothing
+    print("track 1 was the loudest track already")
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-//		javascript code
-//		script_name: Mixing
-//
-//		author: Te EarSketch team
-//		description: Creating a short song and using conditional statements to mix the tracks
-//
+// Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
 
 // Setup
-init();
 setTempo(120);
 
 // Adding a melody and bass
@@ -512,47 +432,43 @@ var melody2 = YG_ALT_POP_GUITAR_1;
 var bass1 = YG_ALT_POP_BASS_1;
 var bass2 = DUBSTEP_SUBBASS_008;
 var strings = YG_HIP_HOP_STRINGS_4;
-fitMedia(melody1,1,1,9);
-fitMedia(melody2,1,9,17);
-fitMedia(bass1,2,1,9);
-fitMedia(bass2,2,9,17);
-fitMedia(strings,3,9,17);
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 1, 9, 17);
+fitMedia(bass1, 2, 1, 9);
+fitMedia(bass2, 2, 9, 17);
+fitMedia(strings, 3, 9, 17);
 
-// Adding percussions using makeBeat()
-var beatKick = '0---0-----0-0---';
-var beatSnare = '--0-0------000-';
+//  Adding percussion using makeBeat()
+var beatKick = "0---0-----0-0---";
+var beatSnare = "--0-0------000-";
 var soundKick = OS_KICK02;
 var soundSnare = OS_SNARE06;
-for (var measure=5; measure>17; measure ++){
-  makeBeat(soundKick,4,measure,beatKick);
-  makeBeat(soundSnare,5,measure,beatSnare);
+for (var measure = 5; measure > 17; measure++) {
+    makeBeat(soundKick, 4, measure, beatKick);
+    makeBeat(soundSnare, 5, measure, beatSnare);
 }
-
 
 // Mixing my tracks
 // First, we analyze the tracks for loudness
-var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE)
-println('The loudness of track 1 is'+loudnessTrack1)
-var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE)
-println('The loudness of track 2 is'+loudnessTrack2)
-var loudnessTrack3 = analyzeTrack(3,RMS_AMPLITUDE)
-println('The loudness of track 3 is'+loudnessTrack3)
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+println("The loudness of track 1 is" + loudnessTrack1);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+println("The loudness of track 2 is" + loudnessTrack2);
+var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
+println("The loudness of track 3 is" + loudnessTrack3);
 
-if (loudnessTrack1 < loudnessTrack2){
-  //if track 1 is quieter than track 2 then we increase the volume of track 1
-  setEffect(1,VOLUME,GAIN,+5);
-  println ('track 1 was quieter than track 2');
-} else if (loudnessTrack1 < loudnessTrack3){
-  //if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
-  setEffect(1,VOLUME,GAIN,+5);
-  println ('track 1 was quieter than track 3');
-} else { 
-  //if track 1 is louder than tracks 2 and 3, then we change nothing
-  println('track 1 was the loudest track already');
+if (loudnessTrack1 < loudnessTrack2) {
+    // if track 1 is quieter than track 2 then we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5);
+    println("track 1 was quieter than track 2");
+} else if (loudnessTrack1 < loudnessTrack3) {
+    // if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5);
+    println("track 1 was quieter than track 3");
+} else {
+    // if track 1 is louder than tracks 2 and 3, then we change nothing
+    println("track 1 was the loudest track already");
 }
-
-// Finish
-finish();
 ----
 
 
@@ -606,7 +522,7 @@ Quelle serait la valeur de retour du bloc de code suivant (qu'est-ce qui s'affic
 [source,python]
 ----
 n = 5
-if (n * 3 == 15):
+if (n * 3) == 15:
     print(n + 5)
 else:
     print(n)
@@ -628,7 +544,7 @@ var n = 5;
 if (n * 3 == 15) {
     println(5 + n);
 } else {
-    print(n);
+    println(n);
 }
 ----
 [answers]

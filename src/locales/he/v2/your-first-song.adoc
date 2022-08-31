@@ -12,10 +12,8 @@
 בוודאי כבר שמתם לב לכך, שכאשר אתם יוצרים סקריפט חדש, יש אלמנטים עליהם עליכם לשמור כדי שהקוד שלכם ירוץ:
 
 . יש הערות שמתחילות ב-`#` באפור: נדון בהן בסעיף הבא
-. השורה `*from earsketch import`, שמוסיפה פונקציות (כמו `()fitMedia`) לפרויקט 
-. הפונקציה `()init` שמאתחלת, או מפעילה, את ה-DAW
+. השורה `*from earsketch import`, שמוסיפה פונקציות (כמו `()fitMedia`) לפרויקט
 . הפונקציה `setTempo(120)` בה נדון בפירוט בהמשך
-. הפונקציה `()finish`: היא מורה ל-DAW שסיימתם להלחין, ואתם מוכנים להשמיע את המוסיקה שיצרתם.
 --
 
 [role="curriculum-javascript"]
@@ -23,12 +21,8 @@
 בוודאי כבר שמתם לב לכך, שכאשר אתם יוצרים סקריפט חדש, יש אלמנטים עליהם עליכם לשמור כדי שהקוד שלכם ירוץ:
 
 . יש הערות שמתחילות ב-`//` באפור: נדון בהן בסעיף הבא
-. הפונקציה `()init` שמאתחלת, או מפעילה, את ה-DAW
 . הפונקציה `setTempo(120)` בה נדון בפירוט בהמשך
-. הפונקציה `()finish`: היא מורה ל-DAW שסיימתם להלחין, ואתם מוכנים להשמיע את המוסיקה שיצרתם.
 --
-
-שימו לב: הקוד שתכתבו מתחיל אחרי `()setTempo` ומסתיים לפני `()finish`.
 
 הפונקציה `()setTempo` קובעת את המהירות של השיר. *tempo* (בעברית: מפעם) מציין במוזיקה המערבית, את מספר הפעימות לדקה (bpm). ב-EarSketch ערך ברירת המחדל של הטמפו (כלומר, הערך הראשוני של המפעם) הוא 120bpm, שמתואם להליכה מהירה או מהירות צעידה. כדי לשנות את הטמפו, שנו את הערך שבסוגריים של הפונקציה `()setTempo`. ככל שהטמפו יותר גבוה, המוסיקה יותר מהירה. מותר להציב בפונקציה ערכים בין 45 ל-220.
 
@@ -105,77 +99,52 @@
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Commenting Sections
-#
-# author: The EarSketch Team
-#
-# description: Here is a short example of a script that uses comments to describe what the code does
-#
-#
-#
+# Comments: Using comments to describe what the code does
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(130)
 
-#Music
-#Leads
+# Music
+# Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5)
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9)
 
-#Beat
+# Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9)
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5)
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9)
 
-#Bass and noise
+# Bass and noise
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9)
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9)
-
-#Finish
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Commenting Sections
-//
-// author: The EarSketch Team
-//
-// description: Here is a short example of a script that uses comments to describe what the code does
-//
-//
+// Comments: Using comments to describe what the code does
 
-//Setup
-init();
+// Setup
 setTempo(130);
 
-//Music
-//Leads
+// Music
+// Leads
 fitMedia(RD_EDM_ANALOGPLUCK_1, 1, 1, 9);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_5, 2, 1, 5);
 fitMedia(RD_TRAP_ARPBLEEPLEAD_3, 2, 5, 9);
 
-//Beat
+// Beat
 fitMedia(HOUSE_BREAKBEAT_023, 3, 1, 9);
 fitMedia(HOUSE_BREAKBEAT_006, 4, 1, 3);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 3, 5);
 fitMedia(HOUSE_BREAKBEAT_012, 4, 7, 9);
 
-//Bass and noise
+// Bass and noise
 fitMedia(ELECTRO_ANALOGUE_BASS_008, 5, 1, 9);
 fitMedia(TECHNO_WHITENOISESFX_001, 6, 7, 9);
-
-//Finish
-finish();
 ----
 
 
@@ -264,9 +233,7 @@ END OF OPTIONAL
 * הקליפים בספריית הצלילים של EarSketch מאורגנים בתיקיות של צלילים דומים. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
 * הערות הן שורות קוד שלא מבוצעות על-ידי המחשב. למרות שהן לא מבוצעות, הן מועילות לכתיבת הערות, הארות ותזכורות בתוך הסקריפט.
 * `*from earsketch import ` מוסיפה את ה-API של EarSketch לפרויקט שלך. השורה הזו חייבת להימצא בראש כל סקריפט.
-* `()init` מכינה את ה-DAW לקבל ולהציג מוסיקה. שורה זו חייבת להיכלל בכל סקריפט.
 * `()setTempo` מאפשרת לקבוע את הטמפו (מפעם) של השיר. יש לכלול שורה כזו בכל סקריפט.
-* `()finish` מודיעה ל-DAW שהקוד הסתיים. שורה זו חייבת להיכלל בכל סקריפט.
 * אתם יכולים להעלות צלילים משלכם ל-EarSketch בעזרת דפדפן הצלילים. פשוט הקליקו על "Add sound".
 * *process או תהליך* הוא משימה שרצה במחשב. העיבוד מתבצע על-ידי ה-*CPU*, שאחראי לביצוע הוראות התכנית.
 * *זיכרון* (הנקרא גם RAM ואחסון ראשי) מאחסן, באופן זמני, נתונים והוראות לשימוש ה-CPU.
@@ -279,9 +246,7 @@ END OF OPTIONAL
 * *טמפו* הוא המהירות בה קטע מוסיקה מנוגן. הטמפו נתון בביטים לדקה (bpm). טמפו קשור לסוגה (ז'אנר).
 * הקליפים בספריית הצלילים של EarSketch מאורגנים בתיקיות של צלילים דומים. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
 * הערות הן שורות קוד שלא מבוצעות על-ידי המחשב. הן משמשות לכתיבת הערות, הארות ותזכורות בקוד.
-* `;()init` מכינה את ה-DAW לקבל ולהציג מוסיקה. שורה זו חייבת להיכלל בכל סקריפט.
 * `;()setTempo` מאפשרת לקבוע את הטמפו (מפעם) של השיר. יש לכלול שורה כזו בכל סקריפט.
-* `finish();` מודיעה ל-DAW שהקוד הסתיים. שורה זו חייבת להיכלל בכל סקריפט.
 * אתם יכולים להעלות צלילים משלכם ל-EarSketch בעזרת דפדפן הצלילים. פשוט הקליקו על "Add sound".
 * *process או תהליך* הוא משימה שרצה במחשב. העיבוד מתבצע על-ידי ה-*CPU*, שאחראי לביצוע הוראות התכנית.
 * *זיכרון* (הנקרא גם RAM ואחסון ראשי) מאחסן, באופן זמני, נתונים והוראות לשימוש ה-CPU.

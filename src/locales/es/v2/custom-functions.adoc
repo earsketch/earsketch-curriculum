@@ -20,93 +20,67 @@ Una *forma*, o estructura de canción, común y sencilla es ABA. A y B son dos s
 image::../media/U2/sections_052016.png[Alt Text]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: La forma A-B-A
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Una canción con las secciones A y B
-#
-#
-#
+# La forma A-B-A: Una canción con las secciones A y B
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
 
 # Crea una sección A.
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # Tambores
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # Línea de bajo
-setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) # Aumentar el volumen de la línea de bajo
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # Principal
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # Tambores
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # Línea de bajo
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5)  # Aumentar el volumen de la línea de bajo
 
 # Crea una sección B con 4 compases entre el compás 5 y el 9.
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # La melodía principal es diferente.
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # Los tambores son diferentes.
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
-setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # Aumentar el volumen de la línea de bajo
-fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # El traqueteo: añadir un nuevo elemento
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9)  # La melodía principal es diferente.
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9)  # Los tambores son diferentes.
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9)  # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9)  # Aumentar el volumen de la línea de bajo
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9)  # El traqueteo: añadir un nuevo elemento
 
 # Entonces se regresa a la sección A en el compás 9.
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13) # Principal
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13) # Tambores
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13) # Línea de bajo
-setEffect(3, VOLUME, GAIN, 0, 9, -20, 13) # Aumentar el volumen de la línea de bajo
-
-# Fin
-finish()
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13)  # Principal
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)  # Tambores
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13)  # Línea de bajo
+setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # Aumentar el volumen de la línea de bajo
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-// código javascript
-//
-// nombre_del_script: La forma A-B-A
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Una canción con las secciones A y B
-//
+// La forma A-B-A: Una canción con las secciones A y B
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
 
-// Crea una sección A. 
+// Crea una sección A.
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
 
-// Crea una sección B con 4 compases entre el compás 5 y el 9. 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente. 
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes. 
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen. 
+// Crea una sección B con 4 compases entre el compás 5 y el 9.
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente.
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes.
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
 setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de bajo
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // El traqueteo: añadir un nuevo elemento
 
-// Entonces se regresa a la sección A en el compás 9. 
+// Entonces se regresa a la sección A en el compás 9.
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 9, 0, 13); // Aumentar el volumen de la línea de bajo
-
-// Fin
-finish();
 ----
 
 {nbsp} +
@@ -126,26 +100,26 @@ En el ejemplo previo de la canción ABA, el código es largo y se repite en la s
 La diferencia con las funciones que has utilizado como `fitMedia()`, es que `fitMedia()` ya está predefinida por nuestro equipo para reproducir una canción. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
 def seccionA():
-	# Escribe aquí tus instrucciones. Este es el cuerpo de la función.
-	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # Principal
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # Tambores
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # Línea de bajo
-	setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) # Aumentar el volumen de la línea de bajo
-	# Este código tiene sangría. Cuando escribas el resto de tu script, asegúrate de dejar de usar sangría.
+    # Escribe aquí tus instrucciones. Este es el cuerpo de la función.
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # Principal
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # Tambores
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # Línea de bajo
+    setEffect(3, VOLUME, GAIN, -20, 1, 0, 5)  # Aumentar el volumen de la línea de bajo
+    # Este código tiene sangría. Cuando escribas el resto de tu script, asegúrate de dejar de usar sangría.
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
 function seccionA() {
-	// Escribe tus instrucciones aquí. Este es el cuerpo de la función.
- 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
-	setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
+    // Escribe tus instrucciones aquí. Este es el cuerpo de la función.
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
+    setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
 }
 ----
 
@@ -175,86 +149,63 @@ En tu script actual que creaste para el problema previo de práctica:
 Aquí está un ejemplo del código que podrías escribir:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: La forma A-B-A-B y las funciones personalizadas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Una canción con las secciones A y B, usando funciones personalizadas
-#
-#
-#
+# La forma A-B-A-B y las funciones personalizadas: Una canción con las secciones A y B, usando funciones personalizadas
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
 
 # Crea una función para la sección A.
 def seccionA(compasDeComienzo, ultimoCompas):
-	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas) # Principal
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas) # Tambores
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas) # Línea de bajo
-	setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas) # Aumentar el volumen de la línea de bajo
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas)  # Principal
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas)  # Tambores
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas)  # Línea de bajo
+    setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas)  # Aumentar el volumen de la línea de bajo
 
 # Crea una función para la sección B.
 def seccionB(compasDeComienzo, ultimoCompas):
-	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, compasDeComienzo, ultimoCompas) # La melodía principal es diferente.
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, compasDeComienzo, ultimoCompas) # Los tambores son diferentes.
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, compasDeComienzo, ultimoCompas) # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
-	setEffect(3, VOLUME, GAIN, 5, compasDeComienzo, 5, ultimoCompas) # Aumentar el volumen de la línea de bajo
-	fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, compasDeComienzo, ultimoCompas) # Traqueteo: añadir un nuevo elemento
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, compasDeComienzo, ultimoCompas)  # La melodía principal es diferente.
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, compasDeComienzo, ultimoCompas)  # Los tambores son diferentes.
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, compasDeComienzo, ultimoCompas)  # Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
+    setEffect(3, VOLUME, GAIN, 5, compasDeComienzo, 5, ultimoCompas)  # Aumentar el volumen de la línea de bajo
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, compasDeComienzo, ultimoCompas)  # Traqueteo: añadir un nuevo elemento
 
 # Llamar a mis funciones
 seccionA(1, 5)
 seccionB(5, 9)
 seccionA(9, 13)
 seccionB(13, 17)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
-
-// código javascript
-//
-// nombre_del_script: La forma A-B-A-B y las funciones personalizadas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Una canción con las secciones A y B, usando funciones personalizadas
-//
+// La forma A-B-A-B y las funciones personalizadas: Una canción con las secciones A y B, usando funciones personalizadas
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
 
 // Crea una función para la sección A.
-function seccionA(compasDeComienzo, ultimoCompas){
-	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas); // Principal
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas); // Tambores
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas); // Línea de bajo
-	setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas); // Aumentar el volumen de la línea de bajo
+function seccionA(compasDeComienzo, ultimoCompas) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas); // Principal
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas); // Tambores
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas); // Línea de bajo
+    setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas); // Aumentar el volumen de la línea de bajo
 }
 
 // Crea una función para la sección B.
-function seccionB(compasDeComienzo, ultimoCompas){
-	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, compasDeComienzo, ultimoCompas); // La melodía principal es diferente.
-	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, compasDeComienzo, ultimoCompas); // Los tambores son diferentes.
-	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, compasDeComienzo, ultimoCompas); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
-	setEffect(3, VOLUME, GAIN, 5, compasDeComienzo, 5, ultimoCompas); // Aumentar el volumen de la línea de bajo
-	fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, compasDeComienzo, ultimoCompas); // Traqueteo: añadir un nuevo elemento
+function seccionB(compasDeComienzo, ultimoCompas) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, compasDeComienzo, ultimoCompas); // La melodía principal es diferente.
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, compasDeComienzo, ultimoCompas); // Los tambores son diferentes.
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, compasDeComienzo, ultimoCompas); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
+    setEffect(3, VOLUME, GAIN, 5, compasDeComienzo, 5, ultimoCompas); // Aumentar el volumen de la línea de bajo
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, compasDeComienzo, ultimoCompas); // Traqueteo: añadir un nuevo elemento
 }
 
 // Llamar a mis funciones
@@ -262,9 +213,6 @@ seccionA(1, 5);
 seccionB(5, 9);
 seccionA(9, 13);
 seccionB(13, 17);
-
-// Fin
-finish();
 ----
 
 //The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
@@ -304,22 +252,12 @@ Se debe colocar la transición 1 o 2 compases antes de la nueva sección. Puedes
 Drum fills:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Técnicas de transición - drum fill
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear una transición entre secciones usando un drum fill
-#
-#
-#
+# Técnicas de transición - drum fill: Cómo crear una transición entre secciones usando un drum fill
 
 # Configuración
 from earsketch import *
-init()
 setTempo(130)
 
 # Música
@@ -343,25 +281,14 @@ fitMedia(drumFill, 3, 8, 9)
 fitMedia(guitarraSolista2, 1, 9, 17)
 fitMedia(lineaDeBajo2, 2, 9, 17)
 fitMedia(bateria2, 3, 9, 17)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Técnicas de transición - drum fill
-//
-// autor: El equipo de EarSketch
-//
-// descripción: Cómo crear una transición entre secciones usando un drum fill
-//
+// # Técnicas de transición - drum fill: Cómo crear una transición entre secciones usando un drum fill
 
 // Configuración
-init();
 setTempo(130);
 
 // Música
@@ -385,31 +312,17 @@ fitMedia(drumFill, 3, 8, 9);
 fitMedia(guitarraSolista2, 1, 9, 17);
 fitMedia(lineaDeBajo2, 2, 9, 17);
 fitMedia(bateria2, 3, 9, 17);
-
-// Fin
-finish();
 ----
 
 La técnica de silencio de pista (_track dropout_) sólo requiere la modificación de unas llamadas a `fitMedia()`. Aquí hay un ejemplo.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Técnicas de transición – silencios de pista
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear transiciones entre secciones usando silencios de pista 
-#
-#
-#
+# Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
 
 # Configuración
 from earsketch import *
-
-init()
 setTempo(120)
 
 # Música
@@ -425,35 +338,22 @@ lineaDeBajo = TECHNO_SUBBASS_002
 fitMedia(introSolista, 1, 1, 5)
 fitMedia(solistaPrincipal1, 1, 5, 9)
 fitMedia(bateriaAdicional1, 2, 3, 5)
-fitMedia(bateriaAdicional2, 2, 5, 8) # Los tambores paran.
+fitMedia(bateriaAdicional2, 2, 5, 8)  # Los tambores paran.
 fitMedia(bateriaPrincipal, 3, 5, 8)
 
 # Sección 2
 fitMedia(solistaPrincipal2, 1, 9, 17)
-fitMedia(bateriaAdicional2, 2, 9, 17) # Se vuelve a tocar la batería.
+fitMedia(bateriaAdicional2, 2, 9, 17)  # Se vuelve a tocar la batería.
 fitMedia(bateriaPrincipal, 3, 9, 17)
 fitMedia(lineaDeBajo, 4, 9, 17)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Técnicas de transición – silencios de pista
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear transiciones entre secciones usando silencios de pista
-//
-//
-//
+// Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
 
 // Configuración
-init();
 setTempo(120);
 
 // Música
@@ -477,30 +377,17 @@ fitMedia(solistaPrincipal2, 1, 9, 17);
 fitMedia(bateriaAdicional2, 2, 9, 17); // La batería comienza otra vez.
 fitMedia(bateriaPrincipal, 3, 9, 17);
 fitMedia(lineaDeBajo, 4, 9, 17);
-
-// Fin
-finish();
 ----
 
 El próximo ejemplo usa múltiples _risers_ y un platillo crash durante la transición.
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Técnicas de transición - risers
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
-#
-#
-#
+# Técnicas de transición - risers: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
 
 # Configuración
 from earsketch import *
-init()
 setTempo(128)
 
 # Música
@@ -530,29 +417,18 @@ fitMedia(bombo2, 7, 25, 33)
 fitMedia(redoblante, 8, 29, 33)
 
 # Efectos
-setEffect(1, VOLUME, GAIN, 0, 16, 1, 17) #Ajustar los volúmenes para que encajen mejor
+setEffect(1, VOLUME, GAIN, 0, 16, 1, 17)  # Ajustar los volúmenes para que encajen mejor
 setEffect(4, VOLUME, GAIN, -10)
 setEffect(7, VOLUME, GAIN, -20)
 setEffect(8, VOLUME, GAIN, -20)
-
-# Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Técnicas de transición - risers
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
-//
+// Técnicas de transición - risers: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
 
 // Configuración
-init();
 setTempo(128);
 
 // Música
@@ -586,9 +462,6 @@ setEffect(1, VOLUME, GAIN, 0, 16, 1, 17); // Ajustar los volúmenes para que enc
 setEffect(4, VOLUME, GAIN, -10);
 setEffect(7, VOLUME, GAIN, -20);
 setEffect(8, VOLUME, GAIN, -20);
-
-// Fin
-finish();
 ----
 
 {nbsp} +
@@ -621,21 +494,12 @@ En la programación, se puede crear *abstracciones*: la agrupación de ideas con
 Aquí está un ejemplo de una canción completa:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-# 
-# nombre_del_script: Canción completa de verano en Atlanta 
-# 
-# autor: El Equipo de EarSketch
-# 
-# descripción: Cómo crear una canción completa usando abstracciones 
-# 
+# Canción completa de verano en Atlanta: Cómo crear una canción completa usando abstracciones
 # la estructura de la canción: Intro-A-B-A-B
 
 from earsketch import *
-
-init()
 setTempo(110)
 
 # Variables de sonido
@@ -651,52 +515,52 @@ piano = YG_RNB_PIANO_4
 bombo = OS_KICK02
 hihat = OS_CLOSEDHAT03
 
-#DEFINICIONES DE FUNCIONES
+# DEFINICIONES DE FUNCIONES
 
 # Añadir batería:
 def anadirBateria(comienzo, fin, patron):
-  #Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
-  if (patron == "heavy"):
-    cadenaDeTiemposDeBombo = "0---0---0---00--"
-    cadenaDeTiemposDeHihat = "-----000----0-00"
-  elif(patron == "ligero"):
-    cadenaDeTiemposDeBombo = "0-------0---0---"
-    cadenaDeTiemposDeHihat ="--0----0---0---"
-  # Entonces creamos el ritmo 
-  # de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4) 
-  # de los compases comienzo al fin:
-  for compas in range(comienzo, fin):
-    # Aquí colocaremos nuestro ritmo en "compas", 
-    # el cual, al principio, es igual a "comienzo", 
-    # el cual es un parámetro de la función.
-    makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo)
-    makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat)
+    # Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
+    if patron == "heavy":
+        cadenaDeTiemposDeBombo = "0---0---0---00--"
+        cadenaDeTiemposDeHihat = "-----000----0-00"
+    elif patron == "ligero":
+        cadenaDeTiemposDeBombo = "0-------0---0---"
+        cadenaDeTiemposDeHihat = "--0----0---0---"
+    # Entonces creamos el ritmo
+    # de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4)
+    # de los compases comienzo al fin:
+    for compas in range(comienzo, fin):
+        # Aquí colocaremos nuestro ritmo en "compas",
+        # el cual, al principio, es igual a "comienzo",
+        # el cual es un parámetro de la función.
+        makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo)
+        makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat)
 
 # Intro:
 def intro(comienzo, fin):
-  fitMedia(melodia1, 1, comienzo, comienzo+1)
-  fitMedia(melodia1, 1, comienzo+2, comienzo+3)
-  fitMedia(lineaDeBajo1, 2, comienzo, comienzo+3)
-  #transición:
-  fitMedia(lineaDeBajo2, 2, comienzo+3, fin)
-  fitMedia(grito, 3, comienzo+3.75, fin)
+    fitMedia(melodia1, 1, comienzo, comienzo + 1)
+    fitMedia(melodia1, 1, comienzo + 2, comienzo + 3)
+    fitMedia(lineaDeBajo1, 2, comienzo, comienzo + 3)
+    # transición:
+    fitMedia(lineaDeBajo2, 2, comienzo + 3, fin)
+    fitMedia(grito, 3, comienzo + 3.75, fin)
 
 # SeccionA:
 def seccionA(comienzo, fin):
-  fitMedia(melodia2, 1, comienzo, fin)
-  fitMedia(metales1, 2, comienzo, fin)
-  setEffect(2, VOLUME, GAIN, -20, comienzo, -10, fin)
-  anadirBateria(comienzo, fin, "heavy")
-  # Modulación del registro para la transición:
-  setEffect(1, BANDPASS, BANDPASS_FREQ, 200, fin-2, 1000, fin)
+    fitMedia(melodia2, 1, comienzo, fin)
+    fitMedia(metales1, 2, comienzo, fin)
+    setEffect(2, VOLUME, GAIN, -20, comienzo, -10, fin)
+    anadirBateria(comienzo, fin, "heavy")
+    # Modulación del registro para la transición:
+    setEffect(1, BANDPASS, BANDPASS_FREQ, 200, fin - 2, 1000, fin)
 
 # SeccionB:
 def seccionB(comienzo, fin):
-  fitMedia(melodia3, 1, comienzo, comienzo+2)
-  fitMedia(melodia4, 1, comienzo+2, fin)
-  fitMedia(piano, 2, comienzo, fin)
-  anadirBateria(comienzo, fin, "ligero")
-  
+    fitMedia(melodia3, 1, comienzo, comienzo + 2)
+    fitMedia(melodia4, 1, comienzo + 2, fin)
+    fitMedia(piano, 2, comienzo, fin)
+    anadirBateria(comienzo, fin, "ligero")
+
 # LLAMADAS A FUNCIÓN
 intro(1, 5)
 seccionA(5, 9)
@@ -706,32 +570,17 @@ seccionB(17, 21)
 
 # _Fade out_:
 for pista in range(1, 5):
-  setEffect(pista, VOLUME, GAIN, 0, 19, -60, 21)
+    setEffect(pista, VOLUME, GAIN, 0, 19, -60, 21)
 # Reducir el volumen del hihat y del bombo:
 setEffect(4, VOLUME, GAIN, -15)
 setEffect(3, VOLUME, GAIN, -10)
-
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-"use strict";
+// Cómo crear una canción completa usando abstracciones
 
-// código javascript
-// 
-// nombre_del_script: Canción completa de verano en Atlanta 
-//
-// autor: El Equipo de EarSketch
-// 
-// descripción: Cómo crear una canción completa usando abstracciones 
-// 
-// la estructura de la canción: Intro-A-B-A-B
-//
-
-
-init();
 setTempo(110);
 
 // Variables de sonido
@@ -747,55 +596,55 @@ var piano = YG_RNB_PIANO_4;
 var bombo = OS_KICK02;
 var hihat = OS_CLOSEDHAT03;
 
-//DEFINICIONES DE FUNCIONES
+// DEFINICIONES DE FUNCIONES
 
 // Añadir batería:
 function anadirBateria(comienzo, fin, patron) {
-  // Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
-  if (patron == "heavy") {
-    var cadenaDeTiemposDeBombo = "0---0---0---00--";
-    var cadenaDeTiemposDeHihat = "-----000----0-00";
-  } else if(patron == "ligero") {
-    cadenaDeTiemposDeBombo = "0-------0---0---";
-    cadenaDeTiemposDeHihat = "--0----0---0---";
-  }
-  // Entonces creamos el ritmo 
-  // de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4) 
-  // de los compases comienzo al fin:
-  for (var compas = comienzo; compas < fin; compas++){
-    // Aquí colocaremos nuestro ritmo en "compas", 
-    // el cual, al principio, es igual a "comienzo", 
+    // Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
+    if (patron == "heavy") {
+        var cadenaDeTiemposDeBombo = "0---0---0---00--";
+        var cadenaDeTiemposDeHihat = "-----000----0-00";
+    } else if (patron == "ligero") {
+        cadenaDeTiemposDeBombo = "0-------0---0---";
+        cadenaDeTiemposDeHihat = "--0----0---0---";
+    }
+    // Entonces creamos el ritmo
+    // de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4)
+    // de los compases comienzo al fin:
+    for (var compas = comienzo; compas < fin; compas++) {
+    // Aquí colocaremos nuestro ritmo en "compas",
+    // el cual, al principio, es igual a "comienzo",
     // el cual es un parámetro de la función.
-    makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
-    makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat);
-  }
+        makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo);
+        makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat);
+    }
 }
 
 // Intro:
-function intro(comienzo, fin){
-  fitMedia(melodia1, 1, comienzo, comienzo+1);
-  fitMedia(melodia1, 1, comienzo+2, comienzo+3);
-  fitMedia(lineaDeBajo1, 2, comienzo, comienzo+3);
-  // transición:
-  fitMedia(lineaDeBajo2, 2, comienzo+3, fin);
-  fitMedia(grito, 3, comienzo+3.75, fin);
+function intro(comienzo, fin) {
+    fitMedia(melodia1, 1, comienzo, comienzo + 1);
+    fitMedia(melodia1, 1, comienzo + 2, comienzo + 3);
+    fitMedia(lineaDeBajo1, 2, comienzo, comienzo + 3);
+    // transición:
+    fitMedia(lineaDeBajo2, 2, comienzo + 3, fin);
+    fitMedia(grito, 3, comienzo + 3.75, fin);
 }
 // SeccionA:
-function seccionA(comienzo, fin){
-  fitMedia(melodia2, 1, comienzo, fin);
-  fitMedia(metales1, 2, comienzo, fin);
-  setEffect(2, VOLUME, GAIN, -20, comienzo, -10, fin);
-  anadirBateria(comienzo, fin, "heavy");
-  // Modulación del registro para la transición:
-  setEffect(1, BANDPASS, BANDPASS_FREQ, 200, fin-2, 1000, fin);
+function seccionA(comienzo, fin) {
+    fitMedia(melodia2, 1, comienzo, fin);
+    fitMedia(metales1, 2, comienzo, fin);
+    setEffect(2, VOLUME, GAIN, -20, comienzo, -10, fin);
+    anadirBateria(comienzo, fin, "heavy");
+    // Modulación del registro para la transición:
+    setEffect(1, BANDPASS, BANDPASS_FREQ, 200, fin - 2, 1000, fin);
 }
 
 // SeccionB:
-function seccionB(comienzo, fin){
-  fitMedia(melodia3, 1, comienzo, comienzo+2);
-  fitMedia(melodia4, 1, comienzo+2, fin);
-  fitMedia(piano, 2, comienzo, fin);
-  anadirBateria(comienzo, fin, "ligero");
+function seccionB(comienzo, fin) {
+    fitMedia(melodia3, 1, comienzo, comienzo + 2);
+    fitMedia(melodia4, 1, comienzo + 2, fin);
+    fitMedia(piano, 2, comienzo, fin);
+    anadirBateria(comienzo, fin, "ligero");
 }
 
 // LLAMADAS A FUNCIÓN
@@ -806,15 +655,13 @@ seccionA(13, 17);
 seccionB(17, 21);
 
 // _Fade out_:
-for (var pista = 1; pista<5; pista++){
-  setEffect(pista, VOLUME, GAIN, 0, 19, -60, 21);
+for (var pista = 1; pista < 5; pista++) {
+    setEffect(pista, VOLUME, GAIN, 0, 19, -60, 21);
 }
 
 // Reducir el volumen del hihat y del bombo:
 setEffect(4, VOLUME, GAIN, -15);
 setEffect(3, VOLUME, GAIN, -10);
-
-finish();
 ----
 
 En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.

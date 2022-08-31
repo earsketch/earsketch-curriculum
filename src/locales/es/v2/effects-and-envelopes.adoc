@@ -38,17 +38,10 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-#   código python
-#   nombre_del_script: El efecto de volumen
-#
-#   autor: El Equipo de EarSketch
-#   descripción: Cómo modificar el volumen de 2 pistas musicales (tracks)
-#
+# El efecto de volumen: Cómo modificar el volumen de 2 pistas musicales (tracks)
 
 # Configuración
 from earsketch import *
-
-init()
 setTempo(120)
 
 # Variables
@@ -56,37 +49,23 @@ piano1 = COMMON_LOVE_THEME_PIANO_2
 percusiones1 = HOUSE_BREAK_FILL_002
 
 # Colocar los sonidos
-fitMedia(piano1,1,1,5)
-fitMedia(percusiones1,2,3,5)
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percusiones1, 2, 3, 5)
 
 # Mezclar: aumentar el volumen de la pista de piano y reducir el volumen de la pista de percusión
 setEffect(1, VOLUME, GAIN, 2)
-setEffect(2, VOLUME, GAIN,-15)
-
-# Fin
-finish()
-
+setEffect(2, VOLUME, GAIN, -15)
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: El efecto de volumen
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo modificar el volumen de 2 pistas musicales (tracks)
-//
-//
-//
+// El efecto de volumen: Cómo modificar el volumen de 2 pistas musicales (tracks)
 
-//Configuración
-init()
-setTempo(120)
+// Configuración
+setTempo(120);
 
-//Variables
+// Variables
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percusiones1 = HOUSE_BREAK_FILL_002;
 
@@ -94,13 +73,9 @@ var percusiones1 = HOUSE_BREAK_FILL_002;
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percusiones1, 2, 3, 5);
 
-
 // Mezclar: aumentar el volumen de la pista de piano y reducir el volumen de la pista de percusión
 setEffect(1, VOLUME, GAIN, 2);
-setEffect(2, VOLUME, GAIN,-15);
-
-//Fin
-finish()
+setEffect(2, VOLUME, GAIN, -15);
 ----
 
 Hemos visto el efecto de `VOLUME`. Ahora vamos a considerar el `DELAY` (efecto de retardo). Escucha los 2 clips a continuación. En uno no se ha aplicado el *efecto de retardo* y en el otro sí.
@@ -135,24 +110,13 @@ Puedes tratar de modificar la duración del efecto de retardo y observar si tu m
 [role="curriculum-python"]
 [source,python]
 ----
-# código python 
-#
-# nombre_del_script: El efecto de retardo (_delay_)
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo añadir el efecto de retardo a una pista musical (track)
-#
-#
-#
+# El efecto de retardo: Cómo añadir el efecto de retardo a una pista musical
 
-#Configuración
+# Configuración
 from earsketch import *
-
-init()
 setTempo(120)
 
-#Música
+# Música
 principal1 = EIGHT_BIT_ATARI_SYNTH_001
 principal2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -171,34 +135,20 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(bateria1, 3, 3, 5)
 fitMedia(bateria2, 3, 5, 9)
 
-#Efectos
-
-#setEffect(1, DELAY, DELAY_TIME, 500) #Añade un efecto de retardo (eco) a intervalos de 500ms.
-#setEffect(1, DELAY, DELAY_FEEDBACK, -20.0) #Reduce la cantidad relativa de repeticiones (el número predeterminado es -3.0).
-
-#Fin
-finish()
+# Efectos
+# setEffect(1, DELAY, DELAY_TIME, 500)  # Añade un efecto de retardo (eco) a intervalos de 500ms.
+# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # Reduce la cantidad relativa de repeticiones (el número predeterminado es -3.0).
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: El efecto de retardo (_delay_)
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo añadir el efecto de retardo a una pista musical (track)
-//
-//
-//
+// El efecto de retardo: Cómo añadir el efecto de retardo a una pista musical
 
-//Configuración
-init()
-setTempo(120)
+// Configuración
+setTempo(120);
 
-//Música
+// Música
 var principal1 = EIGHT_BIT_ATARI_SYNTH_001;
 var principal2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
@@ -215,13 +165,9 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(bateria1, 3, 3, 5);
 fitMedia(bateria2, 3, 5, 9);
 
-//Efectos
-
-//setEffect(1, DELAY, DELAY_TIME, 500); // Añade un efecto de retardo (eco) a intervalos de 500ms.
-//setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Reduce la cantidad relativa de repeticiones (el número predeterminado es -3.0).
-
-//Fin
-finish()
+// Efectos
+// setEffect(1, DELAY, DELAY_TIME, 500); // Añade un efecto de retardo (eco) a intervalos de 500ms.
+// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Reduce la cantidad relativa de repeticiones (el número predeterminado es -3.0).
 ----
 
 {nbsp} +
@@ -232,12 +178,10 @@ finish()
 Hasta ahora, has estado usando varias funciones en EarSketch como `fitMedia()` o `setEffect()`. Toma en cuenta que los nombres de función siempre empiezan con la letra en minúscula, y muchas veces son un verbo. Los paréntesis mandan que la computadora *llame*, o *ejecute*, la función. Los *argumentos*, o parámetros, entre paréntesis son separados por comas.
 
 [role="curriculum-python"]
-* `init()`, `finish()` no requieren argumentos. Estas funciones específicas son funciones estándares en Python.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, y ahora `setEffect()` requieren argumentos. Son parte de la *Interfaz de Programación de Aplicaciones* (_Application Programming Interface_), o *API*, de EarSketch. EarSketch, o el API de EarSketch, añade funcionalidad musical a Python. Otro ejemplo de un API es el API de Google Maps: una serie de herramientas para incorporar mapas en páginas web o aplicaciones.
 * En un capítulo más adelante, aprenderás también cómo crear tus propias funciones personalizadas.
 
 [role="curriculum-javascript"]
-* `init()`, `finish()` no requieren argumentos. Estas funciones específicas son funciones estándares en JavaScript.
 * `setTempo()`, `fitMedia()`, `makeBeat()`, y ahora `setEffect()` requieren argumentos. Son parte de la *Interfaz de Programación de Aplicaciones* (_Application Programming Interface_), o *API*, de EarSketch. EarSketch, o el API de EarSketch, añade funcionalidad musical a JavaScript. Otro ejemplo de un API es el API de Google Maps: una serie de herramientas para incorporar mapas en páginas web o aplicaciones.
 * En un capítulo más adelante, aprenderás también cómo crear tus propias funciones personalizadas.
 
@@ -311,63 +255,37 @@ Los últimos 3 de los 7 parámetros son *parámetros opcionales*. Si no se espec
 Aquí hay un ejemplo de un _fade in_:
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Envelopes
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
-#
-#
-#
+# Envelopes: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Música
+# Música
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Hace un _effect ramp_ (rampa del efecto) entre los compases 1 y 3, yendo desde -60dB hasta 0dB.
-# Esto es un _fade in_. 
+# Esto es un _fade in_.
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
-
-#Fin
-finish()
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Envelopes
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
-//
-//
-//
+// Envelopes: Cómo hacer envelopes con una función setEffect() que tiene 7 parámetros
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Música
+// Música
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Hace un _effect ramp_ (rampa del efecto) entre los compases 1 y 3, yendo desde -60dB hasta 0dB.
 
-// Esto es un _fade in_. 
+// Esto es un _fade in_.
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
-
-//Fin
-finish();
 ----
 
 Ahora mira este video para ver otros ejemplos de envelopes
@@ -377,25 +295,15 @@ Ahora mira este video para ver otros ejemplos de envelopes
 video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
 [role="curriculum-python"]
-[source, python]
+[source,python]
 ----
-# código python
-#
-# nombre_del_script: Envelopes complejos
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
-#
-#
-#
+# Envelopes complejos: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Música
+# Música
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
 # Puntos de tiempo de envelope (en compases)
@@ -406,39 +314,26 @@ puntoD = 7
 puntoE = 8.5
 puntoF = 9
 
-setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB) # Primer efecto, barrido de filtro (_filter sweep_)
+setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB)  # Primer efecto, barrido de filtro (_filter sweep_)
 
 # segundo efecto, cambios de volumen
 setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC)  # Crescendo
-setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE)  # Empieza el desvanecimiento del volumen (_fade out_). 
-setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF) # Fin del _fade out_
-
-#Fin
-finish()
+setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE)  # Empieza el desvanecimiento del volumen (_fade out_).
+setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF)  # Fin del _fade out_
 ----
 
 [role="curriculum-javascript curriculum-mp4"]
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Envelopes complejos
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
-//
-//
-//
+// Envelopes complejos: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Música
+// Música
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Puntos de tiempo de envelope (en compases)
@@ -452,12 +347,9 @@ var puntoF = 9;
 setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB); // Primer efecto, barrido de filtro (_filter sweep_)
 
 // segundo efecto, cambios de volumen
-setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC);  // Crescendo
-setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE);  // Empieza el desvanecimiento del volumen (_fade out_). 
+setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC); // Crescendo
+setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE); // Empieza el desvanecimiento del volumen (_fade out_).
 setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF); // Fin del _fade out_
-
-//Fin
-finish();
 ----
 
 {nbsp} +
@@ -473,20 +365,10 @@ A continuación, hay un ejemplo de la práctica anterior. Cada iteración del ci
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Rampas ritmicas
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Automatizar los efectos usando un ciclo _for_
-#
-#
-#
+# Rampas ritmicas: Automatizar los efectos usando un ciclo for
 
 # Configuración
 from earsketch import *
-init()
 setTempo(120)
 
 # Música
@@ -494,40 +376,24 @@ fitMedia(Y33_CHOIR_1, 1, 1, 9)
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
 
 for compas in range(1, 9):
-  setEffect(1, VOLUME, GAIN, -60, compas, 0, compas+1)
-
-# Fin
-finish()
+    setEffect(1, VOLUME, GAIN, -60, compas, 0, compas + 1)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Rampas ritmicas
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Automatizar los efectos usando un ciclo for
-//
-//
-//
+// Rampas ritmicas: Automatizar los efectos usando un ciclo for
 
 // Configuración
-init()
-setTempo(120)
+setTempo(120);
 
 // Música
-fitMedia(Y33_CHOIR_1, 1, 1, 9)
-fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9)
+fitMedia(Y33_CHOIR_1, 1, 1, 9);
+fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9);
 
 for (var compas = 1; compas < 9; compas++) {
-  setEffect(1, VOLUME, GAIN, -60, compas, 0, compas+1)
+    setEffect(1, VOLUME, GAIN, -60, compas, 0, compas + 1);
 }
-
-// Fin
-finish()
 ----
 
 Y aquí hay un ejemplo de _fade in_ y _fade out_ en todas las pistas:
@@ -535,20 +401,10 @@ Y aquí hay un ejemplo de _fade in_ y _fade out_ en todas las pistas:
 [role="curriculum-python"]
 [source,python]
 ----
-# código python 
-#
-# nombre_del_script: _Fade in_ y _fade out_
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
-#
-#
-#
+# Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
 
 # Configuración
-from earsketch import*
-init()
+from earsketch import *
 setTempo(100)
 
 # Variables
@@ -556,8 +412,8 @@ melodia1 = MILKNSIZZ_ADIOS_BRASS
 melodia2 = MILKNSIZZ_ADIOS_STRINGS
 bombo = OS_KICK04
 hihat = OS_OPENHAT03
-ritmoDeBombo = '0-------0-0-0---'
-ritmoDeHihat = '---0---0--00----'
+ritmoDeBombo = "0-------0-0-0---"
+ritmoDeHihat = "---0---0--00----"
 
 # Colocar melodías a la pista 1
 fitMedia(melodia1, 1, 1, 5)
@@ -565,63 +421,46 @@ fitMedia(melodia2, 1, 5, 9)
 
 # Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo _for_ en compas
 for compas in range(1, 9):
-  makeBeat(bombo, 2, compas, ritmoDeBombo)
-  makeBeat(hihat, 3, compas, ritmoDeHihat)
+    makeBeat(bombo, 2, compas, ritmoDeBombo)
+    makeBeat(hihat, 3, compas, ritmoDeHihat)
 
 # Añadir el _fade in_ y el _fade out_ de pistas 1 a 3
 for pista in range(1, 4):
-  setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3)
-  setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9)
-
-# Fin
-finish()
-
+    setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9)
 ----
 
 [role="curriculum-javascript"]
-[source, javascript]
+[source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: _Fade in_ y _fade out_
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
-//
-//
-//
+// Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
 
 // Configuración
-init()
-setTempo(100)
+setTempo(100);
 
 // Variables
 var melodia1 = MILKNSIZZ_ADIOS_BRASS;
 var melodia2 = MILKNSIZZ_ADIOS_STRINGS;
 var bombo = OS_KICK04;
 var hihat = OS_OPENHAT03;
-var ritmoDeBombo = '0-------0-0-0---';
-var ritmoDeHihat = '---0---0--00----';
+var ritmoDeBombo = "0-------0-0-0---";
+var ritmoDeHihat = "---0---0--00----";
 
 // Colocar melodías a la pista 1
 fitMedia(melodia1, 1, 1, 5);
 fitMedia(melodia2, 1, 5, 9);
 
 // Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo for en compas
-for (var compas = 1; compas < 9; compas++){
-  makeBeat(bombo, 2, compas, ritmoDeBombo);
-  makeBeat(hihat, 3, compas, ritmoDeHihat);
+for (var compas = 1; compas < 9; compas++) {
+    makeBeat(bombo, 2, compas, ritmoDeBombo);
+    makeBeat(hihat, 3, compas, ritmoDeHihat);
 }
 
 // Añadir el _fade in_ y el _fade out_ de pistas 1 a 3
 for (var pista = 1; pista < 4; pista++) {
-  setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3);
-  setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9);
+    setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3);
+    setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9);
 }
-
-// Fin
-finish()
 ----
 
 {nbsp} +

@@ -54,54 +54,26 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Script de introducción
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Este código agrega un clip de audio a la EAD
-#
-#
-#
+# Script de introducción: Este código agrega un clip de audio a la EAD
 
-#Sección de configuración
+# Sección de configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Sección de música
+# Sección de música
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
-
-#Sección donde se termina
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Script de introducción
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Este código agrega un clip de audio a la EAD
-//
-//
-//
+// Script de introducción: Este código agrega un clip de audio a la EAD
 
-//Sección de configuración
-init();
+// Sección de configuración
 setTempo(120);
 
-//Sección de música
+// Sección de música
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
-
-//Sección donde se termina
-finish();
-
 ----
 
 {nbsp} +
@@ -153,12 +125,6 @@ En su nivel más profundo, las computadoras operan en combinaciones de 1s y 0s: 
 
 Ahora que has creado tu primer script, ¡empecemos a trabajar en tu música!
 
-[role="curriculum-python"]
-Empieza a escribir tu código entre las líneas `setTempo(120)` y `finish()`.
-
-[role="curriculum-javascript"]
-Empieza a escribir tu código entre las líneas `setTempo(120);` y `finish();`.
-
 Mira este video para ver cómo agregar un clip de audio a tu canción:
 
 [role="curriculum-python curriculum-mp4"]
@@ -202,55 +168,26 @@ Mira algunos ejemplos de código usando `fitMedia()` (Recuerda que puedes hacer 
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Demostración de EarSketch
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Cómo usar fitMedia() para agregar un clip a la EAD
-#
-#
-#
+# Cómo usar fitMedia(): Agregar un clip a la EAD
 
-#Configuración
+# Configuración
 from earsketch import *
-init()
 setTempo(120)
 
-#Música
+# Música
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
-
-
-#Fin
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Demostración de EarSketch
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Cómo usar fitMedia() para agregar un clip a la EAD
-//
-//
-//
+// Cómo usar fitMedia(): Agregar un clip a la EAD
 
-//Configuración
-init();
+// Configuración
 setTempo(120);
 
-//Música
+// Música
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
-
-//Fin
-finish();
-
 ----
 
 Para un desafío extra, agrega más llamadas a `fitMedia()` a tu script tal como lo hacemos a continuación. Toma en cuenta que usamos otro número de pista musical para cada llamada a `fitMedia()`:
@@ -258,21 +195,10 @@ Para un desafío extra, agrega más llamadas a `fitMedia()` a tu script tal como
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Opus 1
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Uso de múltiples llamadas a fitMedia(), en pistas musicales diferentes y con clips diferentes
-#
-#
-#
+# Cómo usar fitMedia() 2: Múltiples llamadas a fitMedia() en pistas musicales diferentes
 
 # Sección de configuración
 from earsketch import *
-
-init()
 setTempo(100)
 
 # Sección de música
@@ -280,31 +206,15 @@ setTempo(100)
 fitMedia(Y01_DRUMS_1, 1, 1, 9)
 fitMedia(Y11_BASS_1, 2, 1, 9)
 fitMedia(Y11_GUITAR_1, 3, 1, 9)
-
-# Sección donde se termina
-
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-// código javascript
-//
-// nombre_del_script: Opus 1
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Uso de múltiples llamadas a fitMedia(), en pistas musicales diferentes y con clips diferentes
-//
-//
-//
+// Cómo usar fitMedia() 2: Múltiples llamadas a fitMedia() en pistas musicales diferentes
 
 // Sección de configuración
 
-init();
 setTempo(100);
 
 // Sección de música
@@ -312,11 +222,6 @@ setTempo(100);
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
-
-// Sección donde se termina
-
-finish();
-
 ----
 
 {nbsp} +
@@ -371,14 +276,13 @@ Algunos errores comunes son:
 . *Los errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()` o constantes sonoras.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
 . *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`, `init()`, `setTempo()` o `finish()`. Asegúrate de que estas funciones aparezcan en cada script.
+. *La configuración del script:* EarSketch agrega código de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `from earsketch import *`.
 . *Puntuación:* La falta de comas u otros errores de puntuación
 
 [role="curriculum-javascript"]
 . *Los errores ortográficos:* Revisa la ortografía cuando uses una función como `fitMedia()` o constantes sonoras.
 . *Mayúscula o minúscula:* Para la mayoría de las palabras usadas en la programación, hay que fijarse si cada letra debe ser en mayúscula o minúscula (la computadora reconoce la diferencia entre ambas). Presta atención a las minúsculas y mayúsculas. Por ejemplo, escribe `fitMedia()` y no `FitMedia()` o `fitmedia()`. La mayoría de los caracteres en un script siguen una regla llamada *_camel-caps_*: se escribe la primera palabra en minúscula, y se escribe la primera letra de las siguientes palabras en mayúscula, igual que en el ejemplo `ejemploNombreDeLaFuncion()`.
 . *Paréntesis:* Si se te olvida poner un paréntesis inicial o un segundo paréntesis donde es necesario causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *La configuración del script:* EarSketch agrega funciones de configuración a un nuevo script automáticamente, pero tal vez borraste sin querer `init()`, `setTempo()` o `finish()`. Asegúrate de que estas funciones aparezcan en cada script.
 . *Puntuación:* La falta de comas u otros errores de puntuación
 
 ¡Es hora de practicar!
@@ -387,47 +291,24 @@ Encuentra los 5 errores en el siguiente código:
 [role="curriculum-python"]
 [source,python]
 ----
-# código python
-#
-# nombre_del_script: Encuentra los 5 errores
-#
-# autor: El Equipo de EarSketch
-#
-# descripción: Busca y arregla los errores en este script
-#
+# Busca los errores: Arregla cinco errores
 
 from earsketch import *
-
-init)
-setTempo(88)
+setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// código javascript
-//
-// nombre_del_script: Encuentra los 5 errores
-//
-// autor: El Equipo de EarSketch
-//
-// descripción: Busca y arregla los errores en este script
-//
+// Busca los errores: Arregla cinco errores
 
-init);
-setTempo(88);
+setTempo(88;
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
-
-
-finish();
 ----
 
 ////
@@ -436,7 +317,7 @@ OPTIONAL
 
 Aquí está la respuesta
 
-. La función `init()` falta un paréntesis
+. La función `setTempo()` falta un paréntesis
 . Al primer `fitMedia()` le falta una 'e'
 . Al primer `fitMedia()` le falta una coma entre el tercer y cuarto parámetro
 . Al segundo `fitMedia()` le falta una 'M' en mayúscula
@@ -462,7 +343,7 @@ TODO: when options are ready, modify the link
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
+* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
@@ -481,7 +362,7 @@ TODO: when options are ready, modify the link
 * Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
 * *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, música y una sección donde termina (_finish_ en inglés).
+* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
 ** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.

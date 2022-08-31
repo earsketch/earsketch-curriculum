@@ -54,54 +54,26 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Intro Script
-#
-# author: The EarSketch Team
-#
-# description: This code adds one audio clip to the DAW
-#
-#
-#
+# Intro Script: This code adds one audio clip to the DAW
 
-#Setup Section
+# Setup Section
 from earsketch import *
-init()
 setTempo(120)
 
-#Music Section
+# Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
-
-#Finish Section
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Intro Script
-//
-// author: The EarSketch Team
-//
-// description: This code adds one audio clip to the DAW
-//
-//
-//
+// Intro Script: This code adds one audio clip to the DAW
 
-//Setup Section
-init();
+// Setup Section
 setTempo(120);
 
-//Music Section
+// Music Section
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
-
-//Finish Section
-finish();
-
 ----
 
 {nbsp} +
@@ -158,11 +130,6 @@ _את/ה בחרת לתכנת ב-JavaScript. JavaScrupt היא אחת מעשר ש
 
 עכשיו, אחרי שיצרת את הסקריפט הראשון שלך, נעבוד על המוסיקה שלך!
 
-[role="curriculum-python"]
-את הקוד יש לכתוב בין השורות `setTempo(120)` ו-`()finish`.
-[role="curriculum-javascript"]
-את הקוד יש לכתוב בין השורות `;setTempo(120)` ו-`;()finish`.
-
 הווידאו הבא מתאר כיצד להוסיף קליפ לשיר שלך:
 
 [role="curriculum-python curriculum-mp4"]
@@ -208,55 +175,26 @@ See some examples of code using `fitMedia()` (Remember you can click the blue cl
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: EarSketch Demo
-#
-# author: The EarSketch Team
-#
-# description: Using fitMedia() to add a clip to the DAW
-#
-#
-#
+# Using fitMedia(): Adding a clip to the DAW
 
-#Setup
+# Setup
 from earsketch import *
-init()
 setTempo(120)
 
-#Music
+# Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
-
-
-#Finish
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: EarSketch Demo
-//
-// author: The EarSketch Team
-//
-// description: Using fitMedia() to add a clip to the DAW
-//
-//
-//
+// Using fitMedia(): Adding a clip to the DAW
 
-//Setup
-init();
+// Setup
 setTempo(120);
 
-//Music
+// Music
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
-
-//Finish
-finish();
-
 ----
 
 אתגר: הוסיפו עוד שורות`()fitMedia`לסקריפט, כמו שאנחנו עשינו. שימו לב לכך שהשתמשנו בערוץ נפרד לכל שורת`()fitMedia`:
@@ -264,65 +202,30 @@ finish();
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Opus 1
-#
-# author: The EarSketch Team
-#
-# description: Using multiple fitMedia() calls, on different tracks and with different clips
-#
-#
-#
+# Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 # Setup Section
 from earsketch import *
-
-init()
 setTempo(100)
 
 # Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9)
 fitMedia(Y11_BASS_1, 2, 1, 9)
 fitMedia(Y11_GUITAR_1, 3, 1, 9)
-
-# Finish Section
-
-finish()
-
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-
-// javascript code
-//
-// script_name: Opus 1
-//
-// author: The EarSketch Team
-//
-// description: Using multiple fitMedia() calls, on different tracks and with different clips
-//
-//
-//
+// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
 
 // Setup Section
-
-init();
 setTempo(100);
 
 // Music Section
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
-
-// Finish Section
-
-finish();
-
 ----
 
 {nbsp} +
@@ -379,14 +282,13 @@ END OF OPTIONAL
 . *טעות באיות:* יש לבדוק את האיות כשמשתמשים בפונקציות כמו `()fitMedia` או בשמות של קבועים (כמו שמות קליפים).
 . *Case sensitivity:* רוב המילים שמשתמשים בהן בתכנות הן case-sensitive (כלומר, המחשב מקפיד להבדיל בין אותיות גדולות ואותיות קטנות). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. לדוגמה, יש לכתוב `()fitMedia` ולא `()FitMedia` או `()fitmedia`. רוב השמות בסקריפט מאויתים לפי כלל שנקרא *camel-caps*: המילה הראשונה באותיות קטנות וכל שאר המילים מתחילות באות גדולה, למשל: `()exampleFunctionName`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *אתחול הסקריפט:* EarSketch מוסיפה, אוטומטית, פונקציות אתחול לסקריפט. מחיקה של ()`import *`, `init()`, `setTempo`, או `()finish` עלולה לגרום לשגיאה. על פונקציות אלה להופיע בכל סקריפט.
+. *אתחול הסקריפט:* EarSketch מוסיפה, אוטומטית, פונקציות אתחול לסקריפט. מחיקה של `from earsketch import *`.
 . *סימני פיסוק:* פסיקים, או סימני פיסוק אחרים, חסרים.
 
 [role="curriculum-javascript"]
 . *טעות באיות:* יש לבדוק את האיות כשמשתמשים בפונקציות כמו `()fitMedia` או בשמות של קבועים (כמו שמות קליפים).
 . *Case sensitivity:* רוב המילים שמשתמשים בהן בתכנות הן case-sensitive (כלומר, המחשב מקפיד להבדיל בין אותיות גדולות ואותיות קטנות). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. לדוגמה, יש לכתוב `()fitMedia` ולא `()FitMedia` או `()fitmedia`. רוב השמות בסקריפט מאויתים לפי כלל שנקרא *camel-caps*: המילה הראשונה באותיות קטנות וכל שאר המילים מתחילות באות גדולה, למשל: `()exampleFunctionName`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *Script setup:* EarSketch adds setup functions to a new script automatically, but you might accidentally delete `init()`, `setTempo()`, or `finish()`. על פונקציות אלה להופיע בכל סקריפט.
 . *סימני פיסוק:* פסיקים, או סימני פיסוק אחרים, חסרים.
 
 זמן לתרגל!
@@ -395,47 +297,24 @@ END OF OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# python code
-#
-# script_name: Find the 5 Errors
-#
-# author: The EarSketch Team
-#
-# description: Find and fix the errors in this script
-#
+# Finding errors: Five errors below must be fixed
 
 from earsketch import *
-
-init)
-setTempo(88)
+setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
-
-
-finish()
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// javascript code
-//
-// script_name: Find the 5 Errors
-//
-// author: The EarSketch Team
-//
-// description: Find and fix the errors in this script
-//
+// Finding errors: Five errors below must be fixed
 
-init);
-setTempo(88);
+setTempo(88;
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
 fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
-
-
-finish();
 ----
 ////
 OPTIONAL
@@ -443,7 +322,7 @@ OPTIONAL
 
 אלה השגיאות בקטע:
 
-. בפונקציה `()init` חסרים סוגריים
+. בפונקציה `()setTempo` חסרים סוגריים
 . בפונקציה`()fitMedia`הראשונה חסרה האות 'e'
 . בפונקציה `()fitMedia` הראשונה חסר פסיק בין הפרמטר השלישי והפרמטר הרביעי
 . בפונקציה`()fitMedia` השנייה, ה-M צריכה להיות גדולה
@@ -475,7 +354,7 @@ TODO: when options are ready, modify the link
 * קליפים של צלילים אפשר למצוא בדפדפן הצלילים. אפשר להקליד או להדביק את שמותיהם בקוד. כל האותיות בשמות הקליפים הן אותיות גדולות.
 * *תכנית מחשב* היא רצף של הוראות שהמחשב מבצע כדי להשלים משימה כלשהי. 
 * *שפות תכנות* הן אוסף של מילים וסמלים שהמחשב מבין. לשפת תכנות יש תחביר (syntax) לפיו הקוד נכתב.
-* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה וקטע סיום.
+* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה.
 * כדי ליצור סקריפט חדש יש ללחוץ על הקישור הכחול הגדול או על ה-"+" (אם כבר יש סקריפט פתוח בעורך הקוד).
 * `()fitMedia` היא הדרך העיקרית להוספת צלילים ל-DAW. יש לה ארבעה פרמטרים (או ארגומנטים), המידע שהיא צריכה כדי ליצור מוסיקה:
 ** *fileName:* שם הקליפ שימוקם ב-DAW.
@@ -494,7 +373,7 @@ TODO: when options are ready, modify the link
 * קליפים של צלילים אפשר למצוא בדפדפן הצלילים. אפשר להקליד או להדביק את שמותיהם בקוד. כל האותיות בשמות הקליפים הן אותיות גדולות.
 * *תכנית מחשב* היא רצף של הוראות שהמחשב מבצע כדי להשלים משימה כלשהי. 
 * *שפות תכנות* הן אוסף של מילים וסמלים שהמחשב מבין. לשפת תכנות יש תחביר (syntax) לפיו הקוד נכתב.
-* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה וקטע סיום.
+* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה.
 * כדי ליצור סקריפט חדש יש ללחוץ על הקישור הכחול הגדול או על ה-"+" (אם כבר יש סקריפט פתוח בעורך הקוד).
 * `()fitMedia` היא הדרך העיקרית להוספת צלילים ל-DAW. יש לה ארבעה פרמטרים (או ארגומנטים), המידע שהיא צריכה כדי ליצור מוסיקה:
 ** *fileName:* שם הקליפ שימוקם ב-DAW.
