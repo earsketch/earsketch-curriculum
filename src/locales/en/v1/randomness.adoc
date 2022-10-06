@@ -277,10 +277,10 @@ makeBeat(drums, 2, 1, amenCymbals);
 --
 What set of numbers will `randint(1,5)` choose a random number from?
 [answers]
-* `1, 2, 3, 4, 5`
-* `1, 2, 3, 4`
-* `2, 3, 4, 5`
-* `1, 5`
+* `{1, 2, 3, 4, 5}`
+* `{1, 2, 3, 4}`
+* `{2, 3, 4, 5}`
+* `{1, 5}`
 --
 
 [role="curriculum-python"]
@@ -299,9 +299,9 @@ In order to use EarSketch functions, we must include the EarSketch API by includ
 --
 What set of numbers will (Math.floor(Math.random() * 5)) choose a random number from?
 [answers]
-* `0, 1, 2, 3, 4`
-* `0, 1, 2, 3`
-* `1, 2, 3, 4`
-* `0, 4`
+* `{0, 1, 2, 3, 4}`
+* `{0, 1, 2, 3}`
+* `{1, 2, 3, 4}`
+* `{0, 4}`
 --
 

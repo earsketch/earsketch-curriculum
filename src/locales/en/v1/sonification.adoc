@@ -494,7 +494,6 @@ Select the statement below that is not true:
 * Sonification can be used to assist the visually impaired
 * Any data can be used for sonification
 --
-Question(3, "",  " ", "", "", "");
 [question]
 --
 Nested loops are useful to:

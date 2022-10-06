@@ -579,7 +579,7 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 --
 Which of the following would be considered an example of data type conversion?
 [answers]
-* Turning a string into a number.
+* Turning a string into an integer.
 * Storing a user-defined tempo in a variable.
 * Using `readInput()` to ask a user for a genre.
 * Producing a Boolean through a comparison operator.
@@ -617,7 +617,7 @@ What would the output of this block of code be (what would print to the console)
 
 [question]
 --
-Which of the following is an example of concatenation?
+Given that `beatstring1` and `beatstring2` are both strings, which of the following is an example of concatenation?
 [answers]
 * `x = beatstring1 + beatstring2`
 * `x = beatstring1.beatstring2`
@@ -628,12 +628,12 @@ Which of the following is an example of concatenation?
 [role="curriculum-python"]
 [question]
 --
-How would you obtain the boolean True with the booleans True and False?
+Which of the following evaluates to True?
 [answers]
 * `True or False`
 * `not True`
 * `True and False`
-* `true or false`
+* `True and not True`
 --
 
 [role="curriculum-javascript"]

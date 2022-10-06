@@ -559,26 +559,26 @@ Notice that in this example, there is more than one recursive call used within t
 --
 A function can:
 [answers]
-* Be called an unlimited amount of times
+* Be called multiple times
 * Have multiple definitions
 * Never call itself
 --
 
 [question]
 --
-Recursion is used:
+Recursion is a programming technique in which a function:
 [answers]
-* When a function calls itself
-* When a function has multiple names
-* When a function calls another function
+* Calls itself
+* Has multiple names
+* Calls another function
 --
 
 [question]
 --
-With a recursive function a working stopping condition:
+When using recursion, a working stopping condition:
 [answers]
-* Always needed
-* Needed sometimes
-* Useful, but not needed
+* Is lways needed
+* Is ometimes needed
+* Is useful, but not needed
 * Causes an error message
 --

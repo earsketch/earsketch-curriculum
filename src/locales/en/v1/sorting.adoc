@@ -251,7 +251,6 @@ Select the statement below that is not true:
 * A selection sort passes through a list multiple times
 * Lists can be used to organize music by an analyzed feature
 --
-Question(1, "", "", "", "", "", "javascript");
 [role="curriculum-javascript"]
 [question]
 --

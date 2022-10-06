@@ -402,8 +402,8 @@ Which of these options is a string?
 [answers]
 * "Five"
 * 5
-* FIVE
-* Five
+* five()
+* 0.5
 --
 
 [question]

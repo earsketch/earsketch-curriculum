@@ -282,9 +282,9 @@ What is the unit for tempo?
 
 [question]
 --
-What can you use comments for?
+Which of the following is NOT a good use for comments?
 [answers]
-* All of the above
+* Explaining self-evident lines of code
 * Organizing your code
 * Writing a description of your script at the beginning of your script
 * Making your code easy to read for other programmers
