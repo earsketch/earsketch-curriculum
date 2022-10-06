@@ -216,7 +216,7 @@ var drumBeats = ["", "", "", "", "", "", "", ""];
 
 for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
     for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
-        if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
+        if (myImage[outerCounter][innerCounter] === 255) { // if the color is white
             drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
         } else {
             drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
@@ -301,7 +301,7 @@ if myImage[outerCounter][innerCounter] == 255:  # if the color is white
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
+if (myImage[outerCounter][innerCounter] === 255) { // if the color is white
 ----
 
 [role="curriculum-python"]
@@ -421,7 +421,7 @@ function createDrumbeats(myImage) {
 
     for (var outerCounter = 0; outerCounter < myImage.length; outerCounter++) {
         for (var innerCounter = 0; innerCounter < myImage[0].length; innerCounter++) {
-            if (myImage[outerCounter][innerCounter] == 255) { // if the color is white
+            if (myImage[outerCounter][innerCounter] === 255) { // if the color is white
                 drumBeats[outerCounter] = drumBeats[outerCounter] + "-"; // then rest
             } else {
                 drumBeats[outerCounter] = drumBeats[outerCounter] + "0"; // otherwise, hit
