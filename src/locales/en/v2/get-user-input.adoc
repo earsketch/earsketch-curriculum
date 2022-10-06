@@ -363,7 +363,7 @@ We will now combine boolean logic and user input for another example of user int
 Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if 2 values are equal, and if so the boolean is set to `True`.
 
 [role="curriculum-javascript"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if 2 values are equal, and if so the boolean is set to `true`. 
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if 2 values are equal, and if so the boolean is set to `true`. 
 
 Now let's look at *boolean operators*: these help combine several booleans. There are 3 boolean operators:
 
@@ -520,10 +520,10 @@ var edmClapBeat = "----0-------0---";
 var genre = readInput("What genre is your favorite? Hip Hop or EDM?");
 
 // Creating the appropriate rhythm
-if ((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")) {
+if ((genre === "Hip Hop") || (genre === "hip hop") || (genre === "HIP HOP")) {
     makeBeat(kick, 1, 1, hiphopKickBeat);
     makeBeat(hihat, 2, 1, hiphopHihatBeat);
-} else if ((genre == "edm") || (genre == "Edm") || (genre == "EDM")) {
+} else if ((genre === "edm") || (genre === "Edm") || (genre === "EDM")) {
     makeBeat(kick, 1, 1, edmKickBeat);
     makeBeat(clap, 2, 1, edmClapBeat);
 } else {
