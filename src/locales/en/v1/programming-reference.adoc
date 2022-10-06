@@ -77,7 +77,7 @@ it extends across multiple lines
 ----
 if (x < 0) {
     println("Negative.");
-} else if (x == 0) {
+} else if (x === 0) {
     println("Neither positive nor negative");
 } else {
     println("Positive.");
