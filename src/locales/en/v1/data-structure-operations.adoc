@@ -72,7 +72,7 @@ var beatString = "5-5132-034550011";
 
 for (var measure = 1; measure < 33; measure++) {
     makeBeat(drumSounds, 1, measure, beatString);
-    if (measure % 4 == 0) { // Only true at every 4th measure
+    if (measure % 4 === 0) { // Only true at every 4th measure
         // rotate array items so last item moves to first slot
         var arrLength = drumSounds.length;
         var lastSound = drumSounds.slice(arrLength - 1, arrLength);
@@ -110,6 +110,7 @@ Which of the following operations is used to join lists/arrays?
 * Addition
 --
 
+[role="curriculum-python"]
 [question]
 --
 Which of the following evaluates to True?
@@ -118,4 +119,15 @@ Which of the following evaluates to True?
 * `10 % 10 == 1`
 * `10 % 1 == 10`
 * `100 % 10 == 1`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Which of the following evaluates to True?
+[answers]
+* `100 % 10 === 0`
+* `10 % 10 === 1`
+* `10 % 1 === 10`
+* `100 % 10 === 1`
 --
