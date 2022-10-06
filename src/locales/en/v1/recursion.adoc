@@ -81,7 +81,7 @@ setTempo(140);
 
 // Body
 function countdown(n) {
-    if (n == 0) {
+    if (n === 0) {
         println("GO!");
         return;
     }
@@ -230,7 +230,7 @@ setTempo(128);
 // a recursive function
 function placeSounds(soundlist, start) {
     // if the soundlist parameter contains an empty array... then return without doing anything
-    if (soundlist.length == 0) return;
+    if (soundlist.length === 0) return;
 
     // otherwise, place the first sound from the list on track 1 at the measure given by start, and end it at the beginning of the next measure
     fitMedia(soundlist[0], 1, start, start + 1);
@@ -330,7 +330,7 @@ setTempo(124);
 // similar recursive function to placeSounds() in last example
 // two extra parameters have been added here, tracknum and clip length
 function placeSoundsOnTrack(soundlist, tracknum, start, cliplength) {
-    if (soundlist.length == 0) return;
+    if (soundlist.length === 0) return;
     println(start);
 
     fitMedia(soundlist[0], tracknum, start, start + cliplength);
@@ -509,7 +509,7 @@ setTempo(135);
 function makeCantorSet(audioclips, tracknum, start, length, depth) {
     // parameters: list of audio clips, starting track number, starting measure, total length of section (in measures), depth of recursion (number of tracks to create)
     // when depth reaches zero, exit the function
-    if (depth == 0) return;
+    if (depth === 0) return;
 
     // place the first audioclip of the list on the current track, starting at start and ending at start+length
     fitMedia(audioclips[0], tracknum, start, start + length);
