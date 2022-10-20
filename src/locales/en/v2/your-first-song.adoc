@@ -294,10 +294,10 @@ Which of the following is NOT a good use for comments?
 --
 Which of the following statements is true?
 [answers]
-* A hard drive is an example of secondary storage
+* The CPU runs processes using data stored in memory (RAM)
 * Audio data is saved to a computer’s CPU
 * The CPU holds instructional data for programs
-* Secondary storage stores data for short periods of time
+* The CPU can access data directly from secondary storage sources such as the hard drive
 --
 
 [question]

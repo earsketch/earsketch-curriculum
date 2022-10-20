@@ -589,15 +589,15 @@ What is mixing?
 [answers]
 * adapting the volume of each track so they sound well balanced
 * adapting the pitch of each track so they sound well balanced
-* adding a fade in
-* adding a fade out
+* choosing which instruments you want to include in your track
+* choosing the rhythm of your drum beats
 --
 
 [question]
 --
-How many conditions can you check in a conditional statement?
+What is the maximum number of conditions you can include in a conditional statement?
 [answers]
-* any number of conditions
+* None, you can chain together as many as you'd like
 * 1 condition
 * 2 conditions
 * 3 conditions

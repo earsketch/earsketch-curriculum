@@ -729,10 +729,10 @@ Which of these options correctly defines the function `myFunction()` with the pa
 
 [question]
 --
-Which of these is NOT an example of a transition?
+Which of the following is NOT an example of a musical transition?
 [answers]
-* Melody Consistency
-* Crash Cymbal
-* Riser
-* Track Dropouts
+* Repeating the same melody for 16 measures
+* Adding a riser at the end of a prechorus
+* Removing a track to create a pause
+* Crossfading between two different tracks
 --

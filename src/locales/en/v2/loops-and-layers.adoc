@@ -527,6 +527,33 @@ Which of the following is NOT a component of a `for` loop?
 
 [question]
 --
+Consider the following loop:
+
+[role="curriculum-python"]
+[source,python]
+----
+for i in range(4, 14, 2):
+    print(i)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+for (var i = 4; i < 14; i += 2) {
+    console.log(i);
+}
+----
+
+How many times will the progam iterate through the loop?
+[answers]
+* 5
+* 4
+* 6
+* 10
+--
+
+[question]
+--
 Which of the following is NOT a good use of loops in a musical composition?
 [answers]
 * Creating a beat pattern than never repeats
@@ -539,7 +566,7 @@ Which of the following is NOT a good use of loops in a musical composition?
 --
 Which of the following is NOT a recommended technique for debugging?
 [answers]
-* Copying and pasting code into Google
+* Calling an exterminator
 * Printing variable values to the console
 * Looking at error lines identified in the console
 * Asking others for help
@@ -549,7 +576,7 @@ Which of the following is NOT a recommended technique for debugging?
 --
 Which of the following is NOT something that can be printed to the console?
 [answers]
-* Code Comments
+* Information written in code comments
 * Strings
 * Mathematical Expressions
 * Variables

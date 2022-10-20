@@ -401,12 +401,13 @@ Which of the following is NOT a panel in the EarSketch workspace?
 
 [question]
 --
-How many parameters do you need for your `fitMedia()` function?
+Which of the following is not an  argument of the `fitMedia()` function?
 [answers]
-* 4
-* 6
-* 2
-* 3
+* A tempo/speed
+* A clip name
+* A track number
+* A starting measure
+* An ending measure
 --
 
 [question]
@@ -433,7 +434,7 @@ What is a measure?
 --
 Which of the following is NOT a common type of error found in code?
 [answers]
-* Grammatical Errors
+* Optimization Errors
 * Runtime Errors
 * Logic Errors
 * Syntax Errors
@@ -441,7 +442,7 @@ Which of the following is NOT a common type of error found in code?
 
 [question]
 --
-Where in the EarSketch workspace can you get information about your bugs?
+When debugging your code, error messages will print to:
 [answers]
 * The console
 * The sound browser

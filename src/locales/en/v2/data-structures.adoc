@@ -709,13 +709,13 @@ What does `len(myList)` return?
 * The number of elements in `myList`
 * The data types of `myList`
 * The elements of `myList`
-* The width of `myList`
+* The amount of memory `myList` uses
 --
 
 [role="curriculum-python"]
 [question]
 --
-What is the syntax to concatenate two lists (`listA` and `listB`)?
+What is the syntax to concatenate two lists `listA` and `listB`, i.e. put the elements of `listB` at the end of `listA`?
 [answers]
 * `listA + listB`
 * `listA ++ listB`
@@ -726,12 +726,12 @@ What is the syntax to concatenate two lists (`listA` and `listB`)?
 [role="curriculum-python"]
 [question]
 --
-How can you get a list from oldList without the first and last elements?
+How can you get a list from oldList without the first element?
 [answers]
-* `oldList[1:len(oldList) - 1]`
-* `oldList[1:len(oldList)]`
-* `oldList[0:len(oldList)]`
-* `oldList[2:len(oldList - 1)]`
+* `oldList[1:]`
+* `oldList[2:]`
+* `oldList[1:-1]`
+* `oldList[2:-1]`
 --
 
 [role="curriculum-javascript"]
@@ -753,13 +753,13 @@ What does `myArray.length` return?
 * The number of elements in `myArray`
 * The data types of `myArray`
 * The elements of `myArray`
-* The width of `myArray`
+* The amount of memory `myArray` uses
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+What is the syntax to concatenate two arrays `arrayA` and `arrayB`, i.e. put the elements in `arrayB` at the end of `arrayA`?
 [answers]
 * `arrayA.concat(arrayB)`
 * `arrayA.concatenate(arrayB)`
@@ -770,12 +770,12 @@ What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
 [role="curriculum-javascript"]
 [question]
 --
-How can you get an array from `oldArray` without the first and last elements?
+How can you get an array from `oldArray` without the first element?
 [answers]
-* `oldArray.slice(1, oldArray.length - 1)`
-* `oldArray.slice(1, oldArray.length)`
-* `oldArray.slice(0, oldArray.length)`
-* `oldArray.slice(2:oldArray.length - 1)`
+* `oldArray.slice(1)`
+* `oldArray.slice(1, -1)`
+* `oldArray.slice(2, -1)`
+* `oldArray.slice(2)`
 --
 
 [[conclusion]]
