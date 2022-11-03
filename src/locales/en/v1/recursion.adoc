@@ -577,8 +577,8 @@ Recursion is a programming technique in which a function:
 --
 When using recursion, a working stopping condition:
 [answers]
-* Is lways needed
-* Is ometimes needed
+* Is always needed
+* Is oftentimes needed
 * Is useful, but not needed
 * Causes an error message
 --

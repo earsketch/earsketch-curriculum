@@ -541,7 +541,7 @@ Which of the following elements is a boolean?
 * `5+4 === 5`
 * `measure = 1`
 * `"true"`
-* `False()`
+* `setTempo(120)`
 --
 
 [role="curriculum-python"]
