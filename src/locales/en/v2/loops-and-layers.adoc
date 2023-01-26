@@ -517,16 +517,6 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 
 [question]
 --
-Which of the following is NOT a component of a `for` loop?
-[answers]
-* Loop interpreter
-* Loop Counter
-* Loop Body
-* Loop Range
---
-
-[question]
---
 Consider the following loop:
 
 [role="curriculum-python"]
