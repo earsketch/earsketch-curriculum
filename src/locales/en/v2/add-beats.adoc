@@ -438,10 +438,10 @@ One sixteenth note is...
 
 [question]
 --
-Which of the following is a valid "Beat String" argument for the `makeBeat()` function?
+Which of the following is a valid "beat" string for the `makeBeat()` function?
 [answers]
 * `"0-0-0"`
-* `0`
+* `"SNAP!"`
 * `DUBSTEP_FILTERCHORD_002`
-* `0-0-0`
+* `42`
 --

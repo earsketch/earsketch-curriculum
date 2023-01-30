@@ -517,29 +517,12 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 
 [question]
 --
-Consider the following loop:
-
-[role="curriculum-python"]
-[source,python]
-----
-for i in range(4, 14, 2):
-    print(i)
-----
-
-[role="curriculum-javascript"]
-[source,javascript]
-----
-for (var i = 4; i < 14; i += 2) {
-    console.log(i);
-}
-----
-
-How many times will the progam iterate through the loop?
+What is a `for` loop?
 [answers]
-* 5
-* 4
-* 6
-* 10
+* A technique to repeat code
+* Saves a variable for you
+* Checks for errors
+* Prints information for the console
 --
 
 [question]
@@ -564,9 +547,9 @@ Which of the following is NOT a recommended technique for debugging?
 
 [question]
 --
-Which of the following is NOT something that can be printed to the console?
+Which of the following is something that can be printed to the console?
 [answers]
-* Information written in code comments
+* All the other options
 * Strings
 * Mathematical Expressions
 * Variables

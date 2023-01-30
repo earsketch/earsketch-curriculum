@@ -295,9 +295,9 @@ Which of the following is NOT a good use for comments?
 Which of the following statements is true?
 [answers]
 * The CPU runs processes using data stored in memory (RAM)
-* Audio data is saved to a computer’s CPU
-* The CPU holds instructional data for programs
-* The CPU can access data directly from secondary storage sources such as the hard drive
+* Instructions are not used by the CPU
+* Long term data store happens in the CPU
+* Most computers do not contain a CPU
 --
 
 [question]

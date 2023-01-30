@@ -732,7 +732,7 @@ Which of these options correctly defines the function `myFunction()` with the pa
 Which of the following is NOT an example of a musical transition?
 [answers]
 * Repeating the same melody for 16 measures
-* Adding a riser at the end of a prechorus
-* Removing a track to create a pause
+* Adding a riser at the end of a section
+* Silencing a track to create drama
 * Crossfading between two different tracks
 --

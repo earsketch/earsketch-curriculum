@@ -356,7 +356,7 @@ TODO: when options are ready, modify the link
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
 * An EarSketch script consists of a comments section, setup section, and music section.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
+* `fitMedia()` is the primary way of adding sound to the DAW. It has four parameters, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
 ** *trackNumber:* The track on which music is placed.
 ** *startLocation:* The measure at which the sound clip will start.
@@ -375,7 +375,7 @@ TODO: when options are ready, modify the link
 * *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
 * An EarSketch script consists of a comments section, setup section, and music section.
 * Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
+* `fitMedia()` is the primary way of adding sound to the DAW. It has four parameters, the information it needs to make music:
 ** *fileName:* The sound clip that is placed in the DAW.
 ** *trackNumber:* The track on which music is placed.
 ** *startLocation:* The measure at which the sound clip will start.
@@ -401,13 +401,12 @@ Which of the following is NOT a panel in the EarSketch workspace?
 
 [question]
 --
-Which of the following is not an  argument of the `fitMedia()` function?
+Which of the following is NOT a parameter of `fitMedia()`?
 [answers]
-* A tempo/speed
-* A clip name
-* A track number
-* A starting measure
-* An ending measure
+* Tempo
+* Sound constant
+* Track number
+* Starting measure
 --
 
 [question]

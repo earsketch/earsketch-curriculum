@@ -579,8 +579,8 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 --
 Which of the following would be considered an example of data type conversion?
 [answers]
-* Turning a string into an integer.
-* Storing a user-defined tempo in a variable.
+* Turning `12` into `"12"`.
+* Storing text from a prompt in a variable.
 * Using `readInput()` to ask a user for a genre.
 * Producing a Boolean through a comparison operator.
 --
@@ -588,7 +588,7 @@ Which of the following would be considered an example of data type conversion?
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+What is final value of this statement?
 [source,python]
 ----
 not (True and (4 > 5))
@@ -603,7 +603,7 @@ not (True and (4 > 5))
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+What is final value of this statement?
 [source,javascript]
 ----
 !(true && (4 > 5));
@@ -617,12 +617,12 @@ What would the output of this block of code be (what would print to the console)
 
 [question]
 --
-Given that `beatstring1` and `beatstring2` are both strings, which of the following is an example of concatenation?
+For strings `a` and `b`, which of the following is an example of concatenation?
 [answers]
-* `x = beatstring1 + beatstring2`
-* `x = beatstring1.beatstring2`
-* `x = (beatstring1, beatstring2)`
-* `x = beatstring1[beatstring2]`
+* `a + b`
+* `a.b`
+* `(a, b)`
+* `a[b]`
 --
 
 [role="curriculum-python"]
@@ -639,10 +639,10 @@ Which of the following evaluates to True?
 [role="curriculum-javascript"]
 [question]
 --
-How would you obtain the boolean true with the booleans true and false?
+Which of the following evaluates to True?
 [answers]
-* `true||false`
+* `true || false`
 * `!true`
-* `true&&false`
-* `True||False`
+* `true && false`
+* `false || false`
 --
