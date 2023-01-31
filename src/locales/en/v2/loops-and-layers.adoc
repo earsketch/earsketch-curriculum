@@ -379,13 +379,17 @@ for (var measure = 1; measure < 9; measure = measure + 4) {
 [role="curriculum-python"]
 Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` to increment or `-=` to decrement. Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
 
+[role="curriculum-python"]
+* `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
+* `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
+
 [role="curriculum-javascript"]
 Here we wrote `measure = measure + 4`, which means measure is now equal to its former value plus four. You can use some shorthands:
  `+=` (or `-=` to decrement). The following is a shorthand method for incrementing (or decrementing) a counter:
 
+[role="curriculum-javascript"]
 * `measure++`, or `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
 * `measure--`, or `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
-
 
 [[debuggingtips]]
 === Debugging Tips
