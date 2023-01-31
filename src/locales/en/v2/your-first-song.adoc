@@ -276,17 +276,17 @@ What is the unit for tempo?
 [answers]
 * Beats Per Minute (BPM)
 * Measures
-* Decibels(dB)
-* Seconds
+* Decibels (dB)
+* Inches
 --
 
 [question]
 --
-Which of the following is NOT a good use for comments?
+Which of the following is NOT a good use of comments?
 [answers]
 * Explaining self-evident lines of code
 * Organizing your code
-* Writing a description of your script at the beginning of your script
+* Writing a description of your script
 * Making your code easy to read for other programmers
 --
 
@@ -317,5 +317,5 @@ What is Creative Commons?
 * A license to share your work openly under certain restrictions
 * A composing process
 * The right to sue anyone who uses your music
-* A license that allows you to collect royalties
+* An online store for music
 --

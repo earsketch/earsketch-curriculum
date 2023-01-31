@@ -408,12 +408,12 @@ Which of these options is a string?
 
 [question]
 --
-What does "0" represent in a beat pattern string?
+What does `0` represent in a beat pattern string?
 [answers]
-* Start playing the clip
+* Play the sound
 * Rest
-* Extend the clip
-* End the clip
+* Extend the sound
+* End the sound
 --
 
 [question]
@@ -441,7 +441,7 @@ One sixteenth note is...
 Which of the following is a valid "beat" string for the `makeBeat()` function?
 [answers]
 * `"0-0-0"`
-* `"SNAP!"`
+* `"TAP!"`
 * `DUBSTEP_FILTERCHORD_002`
-* `42`
+* `$42`
 --

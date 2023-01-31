@@ -701,7 +701,7 @@ What is an abstraction?
 [answers]
 * A bundling of ideas to form a single concept
 * A variety of sounds throughout sections
-* Parts of a song that are related, but also are distinct from each other
+* An ancient rhythm
 * A statement that returns a value to the function call
 --
 
@@ -723,7 +723,7 @@ Which of these options correctly defines the function `myFunction()` with the pa
 [answers]
 * `function myFunction(startMeasure, endMeasure) {}`
 * `function myFunction() {}`
-* `myFunction(startMeasure, endMeasure){}`
+* `myFunction(startMeasure, endMeasure) {}`
 * `myFunction(2, 5)`
 --
 

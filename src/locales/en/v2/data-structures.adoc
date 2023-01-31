@@ -687,7 +687,7 @@ Which of the following operations is used to join lists/arrays?
 * Concatenation
 * Slicing
 * Combination
-* Addition
+* Multiplication
 --
 
 [role="curriculum-python"]

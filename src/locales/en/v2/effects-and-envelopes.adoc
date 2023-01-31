@@ -486,17 +486,17 @@ for (var track = 1; track < 4; track++) {
 --
 What does an effect allow you to do in EarSketch?
 [answers]
-* Change the qualities of sound within a project
+* Change the qualities of sound
 * Add a sound to a track
 * Create a drum beat
-* Change the tempo of a song
+* Automatically fix bugs
 --
 
 [question]
 --
 Which of these is NOT a `setEffect()` argument?
 [answers]
-* Clip Name
+* Sound constant
 * Effect Name
 * Effect Value
 * Track Number
@@ -516,18 +516,34 @@ How would you set the delay time of a delay effect on track 3 to 50 milliseconds
 --
 Which of the following is not a parameter used with `setEffect()` envelopes?
 [answers]
-* Clip Length
-* Start Value
-* Track Number
-* Effect
+* Sound constant
+* Track number
+* End value
+* End measure
 --
 
+[role="curriculum-python"]
 [question]
 --
-What would the following `setEffect()` function do?
+What does this code print to the console?
 [source,python]
 ----
 setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
+----
+[answers]
+* Increase the amount of distortion on track 1 over 10 measures.
+* Decrease the amount of distortion on track 1 over 50 measures.
+* Increase the volume of track 1 over 10 measures.
+* Decrease the volume on track 1 over 50 measures.
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What does this code print to the console?
+[source,javascript]
+----
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11);
 ----
 [answers]
 * Increase the amount of distortion on track 1 over 10 measures.

@@ -415,8 +415,8 @@ One script corresponds to...
 [answers]
 * One EarSketch song
 * One line of code
-* One programming language
-* One programmer
+* One mathematical result
+* One variable
 --
 
 [question]
@@ -425,7 +425,7 @@ What is a measure?
 [answers]
 * A musical time unit
 * An audio volume unit
-* A line in the DAW
+* A loud sound
 * A pitch unit
 --
 
@@ -433,7 +433,7 @@ What is a measure?
 --
 Which of the following is NOT a common type of error found in code?
 [answers]
-* Optimization Errors
+* Growth Errors
 * Runtime Errors
 * Logic Errors
 * Syntax Errors

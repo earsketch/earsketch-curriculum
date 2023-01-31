@@ -520,19 +520,19 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 What is a `for` loop?
 [answers]
 * A technique to repeat code
-* Saves a variable for you
-* Checks for errors
-* Prints information for the console
+* A computerized hula-hoop
+* An error checker
+* A way to print to the console
 --
 
 [question]
 --
 Which of the following is NOT a good use of loops in a musical composition?
 [answers]
-* Creating a beat pattern than never repeats
-* Placing musical clips on every third measure
-* Repeating a beat on several consecutive measures
-* Placing musical clips on odd measures
+* Playing a sound one time
+* Repeating a sound on every third measure
+* Repeating a sound across several measures
+* Repeating a sound on every odd measure
 --
 
 [question]
@@ -547,9 +547,9 @@ Which of the following is NOT a recommended technique for debugging?
 
 [question]
 --
-Which of the following is something that can be printed to the console?
+Which of the following can NOT be printed to the console?
 [answers]
-* All the other options
+* Code suggestions
 * Strings
 * Mathematical Expressions
 * Variables
@@ -557,7 +557,7 @@ Which of the following is something that can be printed to the console?
 
 [question]
 --
-____ is a quality of sound that determines how high or low it sounds.
+This word describes how high or low a sound it.
 [answers]
 * Pitch
 * Tempo

@@ -547,7 +547,7 @@ Which of the following elements is a boolean?
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+What does this code print to the console?
 [source,python]
 ----
 n = 5
@@ -566,7 +566,7 @@ else:
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+What does this code print to the console?
 [source,javascript]
 ----
 var n = 5;
@@ -587,10 +587,10 @@ if (n * 3 === 15) {
 --
 What is mixing?
 [answers]
-* adjusting the volume of every track
-* adjusting the pitch of every track
-* choosing the instruments
-* choosing the rhythm of your drum beats
+* Adjusting the volume of every track
+* Adjusting the pitch of every track
+* Choosing the instruments
+* Choosing the rhythms of your drum beats
 --
 
 [question]
