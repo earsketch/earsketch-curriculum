@@ -589,7 +589,7 @@ Which of the following would be considered an example of data type conversion?
 [question]
 --
 What is final value of this statement?
-[source,python]
+[source,noicon]
 ----
 not (True and (4 > 5))
 ----
@@ -604,7 +604,7 @@ not (True and (4 > 5))
 [question]
 --
 What is final value of this statement?
-[source,javascript]
+[source,noicon]
 ----
 !(true && (4 > 5));
 ----

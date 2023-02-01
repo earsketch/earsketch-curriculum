@@ -548,7 +548,7 @@ Which of the following elements is a boolean?
 [question]
 --
 What does this code print to the console?
-[source,python]
+[source,noicon]
 ----
 n = 5
 if (n * 3) == 15:
@@ -567,7 +567,7 @@ else:
 [question]
 --
 What does this code print to the console?
-[source,javascript]
+[source,noicon]
 ----
 var n = 5;
 if (n * 3 === 15) {

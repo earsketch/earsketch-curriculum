@@ -522,26 +522,10 @@ Which of the following is not a parameter used with `setEffect()` envelopes?
 * End measure
 --
 
-[role="curriculum-python"]
 [question]
 --
 What does this code print to the console?
-[source,python]
-----
-setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
-----
-[answers]
-* Increase the amount of distortion on track 1 over 10 measures.
-* Decrease the amount of distortion on track 1 over 50 measures.
-* Increase the volume of track 1 over 10 measures.
-* Decrease the volume on track 1 over 50 measures.
---
-
-[role="curriculum-javascript"]
-[question]
---
-What does this code print to the console?
-[source,javascript]
+[source,noicon]
 ----
 setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11);
 ----
