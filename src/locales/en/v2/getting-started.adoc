@@ -118,10 +118,10 @@ Code is written in a *programming language*, which includes vocabulary and a syn
 In EarSketch, you can code in either Python or JavaScript.
 
 [role="curriculum-python"]
-_You are in Python mode. Python is used by companies like Google, Yahoo, NASA, Disney and to code games like Civilization 4, Battlefield 2 and Crystal Space._
+_You are in Python mode. Python is one of the most popular programming languages in the world. It is often used for data science, machine learning, and experimentation._
 
 [role="curriculum-javascript"]
-_You are in JavaScript mode. JavaScript is one of the ten most popular programming languages in the world. Almost every website uses JavaScript._
+_You are in JavaScript mode. JavaScript is one of the most popular programming languages in the world. Almost every website uses JavaScript._
 
 At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is then *executed* by the computer, and you can see your music appear in the DAW.
 
@@ -238,7 +238,7 @@ Using sounds that you like:
 . Place sounds from measures 2 to 12
 . Create a short song with 3 tracks that is 8 measures long or more
 
-For each exercise, you can have your neighbour listen to your song.
+For each exercise, you can have your neighbor listen to your song.
 
 If you have errors when running your code, check out the next chapter about debugging.
 ****
@@ -292,7 +292,7 @@ Here are some common errors:
 . *Punctuation:* Missing commas or other punctuation errors
 
 Time to practice!
-Find the 5 errors in the following code:
+Find the five errors in the following code:
 
 [role="curriculum-python"]
 [source,python]
