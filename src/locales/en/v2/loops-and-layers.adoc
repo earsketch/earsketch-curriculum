@@ -10,7 +10,7 @@ In this chapter you will learn about `for` loops and how you can create repetiti
 
 Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
 
-For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop. Here is how:
+For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop.
 
 ////
 add new video
@@ -18,7 +18,6 @@ more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPu
 in the "revamping videos" tab (includes link to script)
 ////
 
-_VIDEO ABOUT FOR LOOPS COMING SOON_
 
 [role="curriculum-python"]
 [source,python]
@@ -52,7 +51,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
 * *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
-* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` connects the loop counter to the range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
 * *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
