@@ -8,7 +8,7 @@ In this chapter you will learn about `for` loops and how you can create repetiti
 [[forloops]]
 === `for` loops
 
-Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more efficient: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
+Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
 
 For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop. Here is how:
 
