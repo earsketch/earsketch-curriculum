@@ -314,7 +314,7 @@ These are basic ideas that create the structure of your song's texture. However,
 
 Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
 
-Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used. A good example of contrast comes around 0:21 (second 21) and 1:01 (minute 1, second 1) of the song https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] by Son Lux.
+Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
 
 .PRACTICE
 ****
