@@ -153,7 +153,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-We can use a `for` loop to create the exact same music more efficiently. Our counter here is "measure". Note that the body of the loop contains 2 lines of code, both of which use the counter "measure".
+We can use a `for` loop to create the exact same music with less code. Our counter here is `measure`. Note that the body of the loop contains two lines of code, both of which use the counter `measure`.
 
 [role="curriculum-python"]
 [source,python]
