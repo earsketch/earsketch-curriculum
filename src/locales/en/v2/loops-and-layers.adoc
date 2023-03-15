@@ -279,7 +279,6 @@ You've seen a list of potential errors in Chapter 1. Here are some other errors 
 [role="curriculum-javascript"]
 . *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should create it with `var` before using it later.
 . *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript comments must start with `//`.
-. *Semicolons:* Including semicolons after every statement is highly recommended in JavaScript. 
 . *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call. 
 
