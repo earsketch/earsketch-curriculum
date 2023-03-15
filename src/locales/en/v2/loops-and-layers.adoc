@@ -62,9 +62,9 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 .PRACTICE
 ****
-. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4
-. Modify your code to go from measures 3 to 7
-. Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
+. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
+. Modify your code to go from measures `3` to `7`
+. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
 . Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
 . Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
 ****
