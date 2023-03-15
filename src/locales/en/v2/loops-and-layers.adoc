@@ -57,7 +57,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 [role="curriculum-javascript"]
 * *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
 * *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
-* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
+* *Iteration Statement*: A statement that updates the loop counter. It counts up each time the loop repeats.
 * *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
 
 .PRACTICE
