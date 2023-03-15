@@ -51,7 +51,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
 * *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
-* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` connects the loop counter to the range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
 * *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
