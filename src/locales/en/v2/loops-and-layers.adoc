@@ -340,7 +340,7 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 [role="curriculum-python"]
 * A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
-* The `print` statement evaluates its accompanying expression and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* `print()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
@@ -350,7 +350,7 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 [role="curriculum-javascript"]
 * A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
-* The `println()` function evaluates its argument and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* `println()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
