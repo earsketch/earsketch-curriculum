@@ -323,8 +323,8 @@ Create a complete song with:
 * A theme (please mention your chosen theme in your commented intro in the code)
 * The `fitMedia()` and `makeBeat()` functions
 * One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
-* At least 4 tracks
-* At least 16 measures
+* At least four tracks
+* At least sixteen measures
 * At least one uploaded sound
 * Comments and variables to organize your code
 
