@@ -241,7 +241,7 @@ Programming is not only writing code. It's also debugging and maintaining it. De
 
 [role="curriculum-python"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have 3 options here.
+. *Locate the error in your code:* You have three options here.
 .. If the console provided a line number, take a look at that line and the previous line in your code. 
 .. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
 .. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print` statements where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
