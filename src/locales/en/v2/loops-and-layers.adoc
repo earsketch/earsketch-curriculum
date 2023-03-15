@@ -355,7 +355,7 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
-* You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+* You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 
 [[chapter-questions]]
