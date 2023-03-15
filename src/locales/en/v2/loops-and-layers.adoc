@@ -194,10 +194,10 @@ BMW
 One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive, meaning the for loop stops when the counter becomes the endingNumber). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen two parameters for range: `startingNumber` and `endingNumber`. There is an optional third parameter: `increment`. By default, `increment` is equal to one, but you can use it to increment by more than one.
 
 [role="curriculum-javascript"]
-Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
+Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by `1` for on each repeat. It's possible to increment it by more than one, like `measure = measure + 4`.
 
 .PRACTICE
 *****
