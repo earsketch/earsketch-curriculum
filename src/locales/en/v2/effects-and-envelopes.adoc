@@ -210,7 +210,7 @@ Create a new song. Use one `for` loop to add an envelope to all the tracks (for 
 Have your neighbor listen to your song, with and without the effect (to hear your song without the effect, comment out the lines that create the effect). Your neighbor has to guess which effect you added.
 ****
 
-Below is an example of the above practice. Each iteration of the loop adds a one measure long segment of the envelope. Automating the GAIN parameter creates rhythmic volume fades, an effect popular in EDM exemplified in the song https://www.youtube.com/watch?v=Us_U-d2YN5Y[Rhythm] by Lvly. Try toggling the effect bypass in the DAW to hear the difference the effect makes (the "bypass" button to the left of the effect track in your DAW).
+Below is an example of the above practice. Each iteration of the loop adds a one measure long segment of the envelope. Automating the GAIN parameter creates rhythmic volume fades. Try toggling the effect bypass in the DAW to hear the difference the effect makes (the "bypass" button to the left of the effect track in your DAW).
 
 
 [role="curriculum-python"]
