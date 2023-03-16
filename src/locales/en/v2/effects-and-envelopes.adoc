@@ -28,8 +28,8 @@ We use the function `setEffect()`, which takes four arguments, similar to `fitMe
 
 .PRACTICE
 ****
-Write a new song with 2 tracks and modify the volume for both of the tracks using the `setEffect()` function. 
-In that case, the effect name (2nd argument) is VOLUME, and the effect parameter (3rd argument) is GAIN. The effect value (4th argument) is a number of decibels (dB), between -60 and +12. 
+Write a new song with two tracks and modify the volume for both of the tracks using the `setEffect()` function.
+In that case, the effect name (second argument) is `VOLUME`, and the effect parameter (third argument) is `GAIN`. The effect value (fourth argument) is a number of decibels (dB), between `-60` and `+12`.
 ****
 
 Here is an example below:
