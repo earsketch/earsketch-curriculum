@@ -19,7 +19,7 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-We use the function `setEffect()`, which takes 4 arguments, similarly to `fitMedia()`:
+We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
 
 . *trackNumber*: The track the effect is added to.
 . *effectName*: The specific effect being used.
