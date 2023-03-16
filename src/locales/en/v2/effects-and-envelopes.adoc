@@ -253,7 +253,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
 * A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
 * *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
-* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(trackNumber, effectName, effectParameter, startEffectValue, effectStartLocation, endEffectValue, effectEndLocation)`.
+* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 
 [[chapter-questions]]
