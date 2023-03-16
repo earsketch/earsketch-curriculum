@@ -245,11 +245,11 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 
 * *Effects* change the qualities of a sound to make them unique.
 * *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
-* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(trackNumber, effectName, effectParameter, effectValue)`.
-** *trackNumber:* The track the effect is added to.
-** *effectName:* The specific effect being used.
-** *effectParameter:* The setting used for the effect.
-** *effectValue:* The value of the parameter (a number in a specific range).
+* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(track, type, parameter, value)`.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 * *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
 * A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
 * *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
