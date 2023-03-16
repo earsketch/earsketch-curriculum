@@ -104,9 +104,9 @@ So far, you've been using several functions in EarSketch like `fitMedia()` or `s
 The arguments of the function can each have a specific data type. The order of the arguments is important. Here are some data type examples:
 
 * *Numbers*
-** *Integers* (or "int") are whole numbers, like 0, 5, or -26. 
-** *Floating point* numbers are rational numbers like 0.125 or -21.0. For example, the track number, start measure and end measure arguments of the `fitMedia()` function are all numbers.
-* *Strings*. A beat string such as `"0000----0000----"`, is used as an argument in the `makeBeat()` function.
+** *Integers* are whole numbers, like 0, 5, or -26. Example: track numbers
+** *Floating point* numbers are rational numbers like 0.125 or -21.0. Example: volume of -4.2dB
+* *Strings* represent text. Example: `"0000----0000----"`
 
 Now, let's play more with the `setEffect()` function. The following video shows how to use some effects:
 
