@@ -155,15 +155,15 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 
 To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
 
-. trackNumber
-. effectName
-. effectParameter
-. effectStartValue
-. effectStartMeasure
-. effectEndValue
-. effectEndMeasure
+. track
+. type
+. parameter
+. startValue
+. start
+. endValue
+. end
 
-The last 3 out of 7 parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only 4 parameters, the effect is applied to the entire track.
+The last three out of seven parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only four parameters, the effect is applied to the entire track.
 
 Here is an example of fade in:
 
