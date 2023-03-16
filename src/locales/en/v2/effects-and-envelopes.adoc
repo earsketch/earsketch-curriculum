@@ -243,7 +243,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 [[chapter5summary]]
 === Chapter 5 Summary
 
-* *Effects* change the qualities of a sound to make them more unique.
+* *Effects* change the qualities of a sound to make them unique.
 * *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
 * Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(trackNumber, effectName, effectParameter, effectValue)`.
 ** *trackNumber:* The track the effect is added to.
