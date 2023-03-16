@@ -146,7 +146,7 @@ You've started using effects, and maybe you'd like for one effect to change over
 
 *Envelopes* allow us to define how an effect changes over time. 
 
-We will use 2 value-time pairs. Each pair contains an effect value and a corresponding measure. For example, (-60, 1, 0, 3) means a point is placed at value -60 at measure 1, and another point is placed at value 0 at measure 3. The envelope creates a line between these points, called a *ramp*:
+We will use two value-time pairs. Each pair contains an effect value and a corresponding measure. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. The envelope creates a line between these points, called a *ramp*:
 
 [[envelopepoints]]
 .An annotated envelope in EarSketch
