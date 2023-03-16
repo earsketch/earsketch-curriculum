@@ -58,9 +58,9 @@ Delay effect:
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-In that case, the effect name (2nd argument) is `DELAY`, and the effect parameter (3rd argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between -120 and -1.
+In that case, the effect name (second argument) is `DELAY`, and the effect parameter (third argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between `-120` and `-1`.
 
-For example, 'setEffect(1, DELAY, DELAY_TIME, 500)' puts a delay onto track 1 with the delay/echo lasting for 500 ms.
+For example, `setEffect(1, DELAY, DELAY_TIME, 500)` puts a delay onto track 1 with the delay/echo lasting for 500 ms.
 
 .PRACTICE
 ****
