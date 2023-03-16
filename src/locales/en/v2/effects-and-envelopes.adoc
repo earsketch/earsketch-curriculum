@@ -21,10 +21,10 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
 We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
 
-. *trackNumber*: The track the effect is added to.
-. *effectName*: The specific effect being used.
-. *effectParameter*: The parameter, or setting, for the effect.
-. *effectValue*: The value of the parameter as a number in a specific range. The range depends on the effect parameter.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 
 .PRACTICE
 ****
