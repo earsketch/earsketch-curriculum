@@ -135,7 +135,7 @@ Reverb effect:
 .PRACTICE
 ****
 Go to <</en/v1/every-effect-explained-in-detail#,this chapter>> for a complete list of effects.
-Create a song with a volume effect and 2 other effects. Don't forget to write what you are doing in the comments and to create variables when necessary.
+Create a song with a volume effect and two other effects. Don't forget to write what you are doing in the comments and to create variables when necessary.
 ****
 
 
