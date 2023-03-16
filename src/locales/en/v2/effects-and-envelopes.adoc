@@ -153,7 +153,7 @@ We will use two value-time pairs. Each pair contains an effect value and a corre
 [caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-To change an envelope, you just need the `setEffect()` function with 7 arguments (the last 4 arguments are the 2 value-time pairs):
+To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
 
 . trackNumber
 . effectName
