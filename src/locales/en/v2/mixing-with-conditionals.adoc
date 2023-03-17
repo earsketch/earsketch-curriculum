@@ -155,7 +155,7 @@ In this example, we used `println()` with strings to help read the content of th
 [[conditionalstatements]]
 === Conditional Statements
 
-What is a conditional statement? A *statements* is an instruction for the computer. A *conditional statement* is an instruction that must be executed only if a certain *condition* is true. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. If no, don't do anything (keep going).
+What is a conditional statement? A *statement* is an instruction for the computer. A *conditional statement* is an instruction that must be executed only if a certain *condition* is true. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. If no, don't do anything (keep going).
 
 Below is an example of conditional statement, note the similarity with a for loop:
 
