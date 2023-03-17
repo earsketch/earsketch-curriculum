@@ -147,10 +147,10 @@ include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
-Note: in this example, we used some print statements with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings, and the function str() to convert numbers to strings.
+In this example, we used `print()` with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings, and the function str() to convert numbers to strings.
 
 [role="curriculum-javascript"]
-Note: in this example, we used some print statements with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings.
+In this example, we used `println()` with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings.
 
 [[conditionalstatements]]
 === Conditional Statements
