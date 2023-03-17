@@ -59,9 +59,9 @@ To create a boolean, you can either initialize a variable (`variable1 = True`), 
 [cols="^h,1"]
 |===
 |==
-| is identical to
+| is equal to
 |!=
-| is not identical to
+| is not equal to
 |>
 | is greater than
 |>=
@@ -84,9 +84,9 @@ To create a boolean, you can either initialize a variable (`var variable1 = true
 [cols="^h,1"]
 |===
 | ===
-| is identical to
+| is equal to
 |!==
-| is not identical to
+| is not equal to
 |>
 | is greater than
 |>=
@@ -99,7 +99,7 @@ To create a boolean, you can either initialize a variable (`var variable1 = true
 
 Note the difference between:
 
-1. Comparing two values to see if they are identical: `===`
+1. Comparing two values to see if they are equal: `===`
 2. Assigning a value to a variable: `=`
 --
 
