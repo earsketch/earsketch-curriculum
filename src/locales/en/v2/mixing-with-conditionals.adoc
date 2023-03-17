@@ -45,7 +45,7 @@ The parameter for `analyzeTrack()` can either be `RMS_AMPLITUDE`, to evaluate th
 [[booleansandcomparisons]]
 === Booleans and comparisons
 
-We will now see how *Boolean logic* works, this will help us automate some tasks.
+We will now see how *Boolean Logic* works. This will help us automate some tasks.
 
 [role="curriculum-python"]
 *Booleans* are a data type. The boolean data type only has 2 possible values, `True` and `False`. `True` and `False` start with a capital letter and do not have quotes.
