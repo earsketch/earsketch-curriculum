@@ -8,7 +8,7 @@ In coding, you can automate things. An example of automation is if you are progr
 [[analyzetrack]]
 === Use `analyzeTrack()`
 
-We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. We’ll use an EarSketch function called `analyzeTrack()`. Copy and run the following code:
+We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. We’ll use an EarSketch function called `analyzeTrack()`. Import and run the following code:
 
 [role="curriculum-python"]
 [source,python]
