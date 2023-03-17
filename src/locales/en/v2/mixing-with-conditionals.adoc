@@ -213,7 +213,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 .PRACTICE
 ****
 * Create a new script.
-* Add sounds on at least 3 tracks for at least 16 measures.
+* Add sounds on at least three tracks for at least sixteen measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or one track that you wish to highlight.
 * If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns a mean whereas percussions are bursts of sound, so a mean doesn't really evaluate the loudness.
