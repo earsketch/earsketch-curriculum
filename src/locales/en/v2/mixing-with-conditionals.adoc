@@ -173,9 +173,9 @@ include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 
 .PRACTICE
 ****
-* Create a new script with 2 tracks.
-* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an if statement.
-* You will need a negative gain (between -1 and -60dB) to reduce the volume. 
+* Create a new script with two tracks.
+* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
+* You will need a negative gain (between -1dB and -60dB) to reduce the volume.
 ****
 
 Here is an example:
