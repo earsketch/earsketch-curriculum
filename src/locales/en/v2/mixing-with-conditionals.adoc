@@ -31,8 +31,8 @@ You can read in your console that the printed loudness is 0.10306035109110138.
 
 The `analyzeTrack()` function takes 2 arguments:
 
-. the track number,
-. the parameter we want to analyze. For loudness it's: `RMS_AMPLITUDE`.
+. *track*: Track number
+. *feature*: Analysis constant, like `RMS_AMPLITUDE`
 
 .PRACTICE
 ****
