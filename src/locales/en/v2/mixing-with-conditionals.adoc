@@ -36,7 +36,7 @@ The `analyzeTrack()` function takes 2 arguments:
 
 .PRACTICE
 ****
-. Try using the code given above with different sounds (change the variable "sound") to see what the output is.
+. Try using the code given above with different sounds (change the variable `sound`) to see what the output is.
 . Add a second track and use the `analyzeTrack()` function to print its loudness in the console. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
 ****
 
