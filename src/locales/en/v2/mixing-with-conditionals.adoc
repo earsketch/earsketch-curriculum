@@ -2,7 +2,7 @@
 == Mix with Conditionals!
 :nofooter:
 
-In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (“if” statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (`if` statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
 
 
 [[analyzetrack]]
