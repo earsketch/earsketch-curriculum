@@ -268,8 +268,8 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * *Expressions* are evaluated by the computer to produce a value.
 * A *statement* is an instruction for the computer.
 * A *condition* is an expression that evaluates to `True` or `False`. 
-* The _if_ statement only executes its code block when its condition is `True`. 
-* In the event that an _if_ statement's condition is `False`, an optional _else_ statement allows an alternative code block to be executed.
+* The `if` statement only executes its code block when its condition is `True`.
+* In the event that an `if` statement's condition is `False`, an optional `else` statement allows an alternative code block to be executed.
 
 [role="curriculum-javascript"]
 * The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
@@ -280,8 +280,8 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * *Expressions* are evaluated by the computer to produce a value.
 * A *statement* is an instruction for the computer.
 * A *condition* is an expression that evaluates to `true` or `false`.
-* The _if_ statement only executes its code block when its condition is `true`.
-* In the event that an _if_ statement's condition is `false`, an optional _else_ statement allows an alternative code block to be executed.
+* The `if` statement only executes its code block when its condition is `true`.
+* In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
 
 
 [[chapter-questions]]
