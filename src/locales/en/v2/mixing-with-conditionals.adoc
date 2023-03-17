@@ -117,7 +117,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 [role="curriculum-python"]
 .PRACTICE
 ****
-* Create a new script, and add sounds on 2 tracks.
+* Create a new script, and add sounds on two tracks.
 * Print `True` if the first track is louder than the second track, and `False` otherwise.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `True`, if not, print `False`.
 * You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`. For example, you can first print the track number and then 'True' or 'False'.
@@ -126,7 +126,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 [role="curriculum-javascript"]
 .PRACTICE
 ****
-* Create a new script, and add sounds on 2 tracks.
+* Create a new script, and add sounds on two tracks.
 * Print `true` if the first track is louder than the second track, and `false` otherwise.
 * Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `true`, if not, print `false`.
 * You can use additional print statements before printing `true` or `false` so that when you read the console, you know what is `true` or `false`. For example, you can first print the track number and then 'true' or 'false'.
