@@ -190,7 +190,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 ----
 include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
-We might want to check several conditions and execute a different set of statements depending on each condition. You can add as many conditions as you like. We use the following syntax:
+We might want to check several conditions and execute a different set of statements depending on each condition. You can chain multiple conditions together. We use the following syntax:
 
 [role="curriculum-python"]
 [source,python]
