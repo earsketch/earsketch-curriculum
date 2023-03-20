@@ -196,7 +196,7 @@ Let's create a full song using all the tools you've discovered in EarSketch! Her
 . Add one or two meaningful transitions.
 . Add effects with `setEffect()`.
 . Add one or several conditional statements.
-. Make sure you use variables to store some information such as sound clip names.
+. Make sure you use variables to store some information such as sound constants.
 . Make sure you use comments to explain what you are doing.
 . Don't forget to regularly run your code and listen to your song. This will help you modify it until you like the sound of it.
 . Choose a name for your song.
