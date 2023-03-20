@@ -280,5 +280,5 @@ Which of these is NOT an example of a transition?
 * Melody Consistency
 * Crash Cymbal
 * Riser
-* Track Dropouts
+* Track Silencing
 --
