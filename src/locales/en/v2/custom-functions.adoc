@@ -147,7 +147,7 @@ include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-The track dropout technique only requires the modification of a couple `fitMedia()` calls. An example is shown below.
+The track silencing technique only requires the modification of a couple `fitMedia()` calls. An example is shown below.
 
 [role="curriculum-python"]
 [source,python]
