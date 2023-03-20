@@ -74,8 +74,8 @@ Now we want to add section A from measures nine to thirteen. However, when we ca
 ****
 In your current script you created for the previous practice problem:
 
-1. Add the parameters `startMeasure` and `endMeasure` separated by a coma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
 2. In the function's body, replace the start measures (1) and end measures (5) by `startMeasure` and `endMeasure` respectively.
+1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
 3. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
 4. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
 5. Define a function for section B, using the same process, and call section B from measures 5 to 9 and from measures 13 to 17.
