@@ -115,13 +115,13 @@ Now that you know how to create custom functions to structure your song, let's l
 
 Following are some popular strategies for creating musical transitions:
 
-. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section. See this https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[example^].
-. *Drum Fill*: A rhythmic variation to fill the gap before a new section. See these https://www.youtube.com/watch?v=YMskGG39Y0Y[examples^] of drum fills.
-. *Track Dropouts*: Making some tracks temporarily drop out to create pauses. Listen to https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love^].
+. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section.
+. *Drum Fill*: A rhythmic variation to fill the gap before a new section.
+. *Track Dropouts*: Making some tracks temporarily drop out to create drama.
 . *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
-. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1. Here is an example of a riser in https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[a techno set from Carl Cox^].
-. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a clip like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`. Here is an https://www.youtube.com/watch?v=c3HLuTAsbFE[example^].
-. *Looping*: Repeating a short segment of melody before a new section. Here is an https://www.youtube.com/watch?v=AQg4wnbBjiQ[example^] of looping in DJ'ing.
+. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
+. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a clip like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Looping*: Repeating a short segment of melody before a new section.
 . *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section. 
 . *Anacrusis*: When the melody of the new section starts a couple beats early.
 
