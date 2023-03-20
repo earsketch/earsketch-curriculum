@@ -127,9 +127,9 @@ Following are some popular strategies for creating musical transitions:
 
 .PRACTICE
 ****
-Looking at this list of possible transitions, select 2 of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
+Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
 
-The transition should be placed 1 or 2 measures before the new section. You can use several transition techniques at the same time.
+The transition should be placed one or two measures before the new section. You can use several transition techniques at the same time.
 ****
  
 
