@@ -8,7 +8,7 @@ The song structure is the song's organization over time. The goal is to create m
 === A song's structure
 :nofooter:
 
-A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intros, Verses, Choruses_, and _Outros_ are examples of sections.
+A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
 
 A common and simple *form*, or song structure, is ABA. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
 
