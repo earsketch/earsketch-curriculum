@@ -58,7 +58,7 @@ include::code-examples/custom-functions-untitled1.py.txt[]
 include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
-. sectionA() is the name we chose for our function. You can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
+. `sectionA()` is the name we chose for our function. You can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
 . The instructions are the *body* of the function. They are indented.
 
 .PRACTICE
