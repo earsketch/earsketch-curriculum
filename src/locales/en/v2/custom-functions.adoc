@@ -44,7 +44,7 @@ Keep in mind that a musical phrase sounds most natural when clips are arranged i
 
 In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more concise, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.
 
-The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a song. In a custom function, you get to define exactly what it does. Here is how you would define section A:
+The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a sound. In a custom function, you get to define exactly what it does. Here is how you would define section A:
 
 [role="curriculum-python"]
 [source,python]
