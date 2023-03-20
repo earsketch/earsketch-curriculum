@@ -194,7 +194,7 @@ Let's create a full song using all the tools you've discovered in EarSketch! Her
 . Use `for` loops to reduce repetition in your code.
 . Use custom functions to define your sections and create your song structure.
 . Add one or two meaningful transitions.
-. Add effects with setEffect().
+. Add effects with `setEffect()`.
 . Add one or several conditional statements.
 . Make sure you use variables to store some information such as sound clip names.
 . Make sure you use comments to explain what you are doing.
