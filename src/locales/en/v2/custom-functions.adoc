@@ -120,7 +120,7 @@ Following are some popular strategies for creating musical transitions:
 . *Track Silencing*: Silence some tracks temporarily for dramatic effect.
 . *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
 . *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
-. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a clip like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
 . *Looping*: Repeating a short segment of melody before a new section.
 . *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section. 
 . *Anacrusis*: When the melody of the new section starts a couple beats early.
