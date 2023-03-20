@@ -215,7 +215,7 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-In this example, we have used a for loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
+In this example, we have used a `for` loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
 
 
 [[chapter7summary]]
