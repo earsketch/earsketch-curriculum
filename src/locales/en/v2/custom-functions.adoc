@@ -180,7 +180,7 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 [[yourfullsong]]
 === Your full song
 
-In programming we can create *abstractions*, bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
+In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
 
 .PRACTICE
 ****
