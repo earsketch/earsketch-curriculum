@@ -37,7 +37,7 @@ include::code-examples/custom-functions-a-b-a-form.js.txt[]
 Select a song that you like. Listen to it and try to notice the different sections. Can you tell when the musicians change sections? How many times do you hear the chorus and verse? What kind of contrasts can you observe? Share your example with your neighbor.
 ****
 
-Keep in mind that a musical phrase sounds most natural when clips are arranged into groups of 2, 4, 8, 16, etc. So your sections should preferably have a size of 2, 4, 8, 16 measures.
+Keep in mind that a musical phrase sounds most natural when clips are arranged into groups of two, four, eight, sixteen, etc. So your sections should preferably have a size of two, four, eight, sixteen measures.
 
 [[creatingyourcustomfunctions]]
 === Create your custom functions
