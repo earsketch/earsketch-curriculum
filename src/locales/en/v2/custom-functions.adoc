@@ -68,7 +68,7 @@ That's because you need to *call* a function to use it.
 To call your function, add the line `sectionA()`, unindented, after your function definition. When running the code, you should see section A in your DAW
 ****
 
-Now we want to add section A from measures 9 to 13. However, when we call sectionA(), the sounds are placed from measures 1 to 5. To remedy this issue, we will create *parameters* for our function.
+Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. To remedy this issue, we will create *parameters* for our function.
 
 .PRACTICE
 ****
