@@ -37,7 +37,7 @@ If you have replaced variables with an array, how will you reference the content
 
 .PRACTICE
 ****
-Create a list/array with three sound clip names.
+Create a list/array with three sounds.
 Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
 ****
 
@@ -364,7 +364,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * Lists and arrays can be concatenated and sliced using *list operations*, a set of tools for modifying a list.
 * The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
 * Lists can be combined using the concatenation operator, `+`, like `newList = listA + listB`.
-* `makeBeat()` can construct rhythms from multiple clips at once by passing in a beat string that refers to different list indices. `makeBeat()` can access clips in indices 0 through 9, provided they are stored in the same list.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
 * Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 
@@ -377,7 +377,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 * The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
 * The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
 * Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` can construct rhythms from multiple clips at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access clips in indices 0 through 9, provided they are stored in the same array.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
 * Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 
