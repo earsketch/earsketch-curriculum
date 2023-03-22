@@ -77,7 +77,7 @@ Let's say you have a section A, but you want it to vary slightly when it's calle
 
 The function should take two parameters: `start` and a boolean parameter `variation` that will allow the user to choose a variation when calling the function.
 
-In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound clip used in one of your `fitMedia()` calls.
+In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound used in one of your `fitMedia()` calls.
 
 Then call the function at different measures with different variations. 
 ****
