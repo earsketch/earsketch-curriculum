@@ -37,8 +37,8 @@ If you have replaced variables with an array, how will you reference the content
 
 .PRACTICE
 ****
-Create an array with 3 sound clip names.
-Then using 3 `fitMedia()` calls, place the 3 clips on tracks 1, 2 and 3 from measures 1 to 5.
+Create a list/array with three sound clip names.
+Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
 ****
 
 Here is an example:
