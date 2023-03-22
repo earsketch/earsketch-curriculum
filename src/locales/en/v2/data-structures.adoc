@@ -357,7 +357,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 === Chapter 9 Summary
 
 [role="curriculum-python"]
-* A *list* is a collection of values combined into a single entity, an efficient way to store data. Items stored within a list, or elements, can be any data type.
+* A *list* is a collection of values combined into a single entity, a good way to organize data. Items stored within a list, or elements, can be any data type.
 * Like strings, list elements get assigned an index. List indices start at 0.
 * List elements are accessed with bracket notation, like `myList[1]`. Characters in a string can be accessed similarly: `myString[1]`.
 * The function `len()` returns the number of elements in a list, or the number of characters in a string. The syntax is `len(list)`.
@@ -369,7 +369,7 @@ Create a full song and have it peer-reviewed by your neighbor to improve it. Her
 
 
 [role="curriculum-javascript"]
-* An *array* is a collection of values combined into a single entity, an efficient way to store data. Items stored within a array, or elements, can be any data type.
+* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
 * Like strings, array elements get assigned an index. Array indices start at 0.
 * Array elements are accessed with bracket notation, like `myArray[1]`. Characters in a string can be accessed similarly: `myString[1]`.
 * The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
