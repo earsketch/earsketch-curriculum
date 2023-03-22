@@ -68,7 +68,7 @@ We've seen that `array[index]` will reference an element of the array. This can 
 
 .PRACTICE
 ****
-In the previous example, use a for loop to avoid calling `fitMedia()` three times. You can use the track number as the counter.
+In the previous example, use a `for` loop instead of calling `fitMedia()` three times. You can use the track number as the counter.
 The index number must start at `0` while your track starts at `1`. Inside your for loop, you'll need to create an `index` variable equal to the track number minus one.
 ****
 
