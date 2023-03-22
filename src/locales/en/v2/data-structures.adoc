@@ -95,17 +95,17 @@ A useful tip: the `length` property (`array.length`) returns the number of eleme
 [role="curriculum-python"]
 .PRACTICE
 ****
-We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure 1, then the second track starts at measure 2, and so on. This is commonly used for a song's introduction, check out https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West's "Power"^].
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
 
-Using a list and a for loop, create such an introduction from measures 1 to 5. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `len()` function.
+Using a list and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `len()` function.
 ****
 
 [role="curriculum-javascript"]
 .PRACTICE
 ****
-We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure 1, then the second track starts at measure 2, and so on. This is commonly used for a song's introduction, check out https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West's "Power"^].
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
 
-Using an array and a for loop, create such an introduction from measures 1 to 5. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `length` property.
+Using an array and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `length` property.
 ****
 
 Here is an example:
@@ -128,10 +128,10 @@ include::code-examples/data-structures-additive-introduction.js.txt[]
 === Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
-We will see 2 ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
 
 [role="curriculum-javascript"]
-We will see 2 ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
 
 [role="curriculum-python"]
 * Like lists, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
