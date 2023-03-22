@@ -20,7 +20,7 @@ video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 * In addition to taking inputs (parameters), functions can output a value. In programming, we call this returning a value.
 * The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
 * To use the value that is returned by the function, create a variable and assign it the function call.
-* A return statement is not compulsory. Without a return statement a function does not output any value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
+* A return statement is not compulsory. Without a return statement a function does not output a value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
 
 Here is a code example:
 
