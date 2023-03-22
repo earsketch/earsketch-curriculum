@@ -144,7 +144,7 @@ include::code-examples/get-user-input-user-input-1.js.txt[]
 
 Here is another example of what you can do with user input. 
 
-*Concatenation* is a means to link strings together, using the `+` symbol.  For example, concatenating the strings `"hello"` and `"world"` yields `"helloworld"`. In the following example, the user is prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name like `DUBSTEP_BASS_WOBBLE_010`.
+*Concatenation* is a means to link strings together, using the `+` symbol.  For example, concatenating the strings `"Hello"` and `"World"` yields `"HelloWorld"`. In the following example, the user is prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name like `DUBSTEP_BASS_WOBBLE_010`.
 
 [role="curriculum-python"]
 [source,python]
