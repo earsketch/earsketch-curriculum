@@ -290,10 +290,9 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 `int()` converts a string containing digits into an integer. `float()` converts a string containing digits with a decimal point into a float.
 * You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
 * *Boolean logic* includes boolean operations. Here are boolean operators:
-** `and`: takes 2 boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-** `or`: takes 2 boolean inputs and returns `True` when at least 1 input is `True`, otherwise returns `False`.
-** `not`: takes 1 boolean input and returns the opposite (negated) boolean.
-* You now have many tools to introduce variations in your music: user input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+** `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+** `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+** `not`: takes one boolean input and returns the opposite (negated) boolean.
 
 [role="curriculum-javascript"]
 * *Return statements* can be included in a function definition to output a result when the function is called.
@@ -301,10 +300,9 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 * Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.  `Number()` converts a string into a number.
 * You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
 * *Boolean logic* includes boolean operations. Here are boolean operators:
-** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
-** `!`: is called "not": it takes 1 boolean input and returns the opposite (negated) boolean.
-* You now have many tools to introduce variations in your music: user input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+** `&&`: is called "and", it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+** `||`: is called "or": it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+** `!`: is called "not": it takes one boolean input and returns the opposite (negated) boolean.
 
 
 
