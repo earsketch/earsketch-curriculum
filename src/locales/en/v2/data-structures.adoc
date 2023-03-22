@@ -12,10 +12,10 @@ You now have numerous tools at your disposal to create songs with EarSketch. The
 === What is a Data Structure
 
 [role="curriculum-python"]
-If you have very long lists of sound variables, it's possible to arrange them efficiently thanks to *lists*. A *list*, also called array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
+If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-javascript"]
-If you have very long lists of sound variables, it's possible to arrange them efficiently thanks to *arrays*. An *array*, also called list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
+If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-python"]
 [source,python]
