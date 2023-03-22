@@ -485,7 +485,7 @@ How can you get an array from `oldArray` without the first and last elements?
 [[conclusion]]
 === Conclusion
 
-Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :) There is more to discover in <<optional, optional chapters>>!
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
 
 ////
 Thank you video
