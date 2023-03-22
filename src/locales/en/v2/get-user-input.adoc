@@ -275,7 +275,7 @@ include::code-examples/get-user-input-boolean-operations.js.txt[]
 
 .CHALLENGE
 ****
-This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with 3 options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
+This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with three options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
 ****
 
 {nbsp} +
