@@ -82,7 +82,7 @@ In the function body, you should have a conditional statement which will evaluat
 Then call the function at different measures with different variations. 
 ****
 
-Here is an example code:
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
