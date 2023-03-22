@@ -300,7 +300,6 @@ Using what you have learned in this chapter, create rhythms that you like with `
 
 Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
-[role="curriculum-python"]
 * *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
 ** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
 ** Am I reusing any blocks of code? If so, put them in a function!
@@ -312,17 +311,6 @@ Congratulations, now you have acquired musical and coding skills that allow you 
 ** Have I used computational structures like custom functions and loops to help organize my code?
 ** Does the structure of my script mirror the structure of my song? This helps the flow of reading.
 
-[role="curriculum-javascript"]
-* *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
-** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
-** Am I reusing any blocks of code? If so, put them in a function!
-** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! An array might also be useful.
-* *Clarity* relates to how well code communicates its function and the programmer's intent. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
-** Did I complete the introduction comments with my script title, author and description? 
-** Are the names of my variables and functions descriptive? If not, rename them.
-** Have I used comments to explain each block of code and any potentially confusing lines of code?
-** Have I used computational structures like custom functions and loops to help organize my code?
-** Does the structure of my script mirror the structure of my song? This helps the flow of reading.
 
 *Peer Feedback* is common in programming and helps you improve your code and music thanks to comments from others. Feedback must be *constructive*, meaning it builds a peer up, rather them breaking them down. When giving feedback:
 
