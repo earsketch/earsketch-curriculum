@@ -248,10 +248,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Finally, `makeBeat()` can handle multiple sound clips at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a sound file list. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your sound list. Check out the example "before and after" below, with the "boot cat boot cat" rhythm.
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a list of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your list of sounds. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-javascript"]
-Finally, `makeBeat()` can handle multiple sound clips at once. This allows you to place all the percussive sounds on 1 track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a sound file array. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your sound array. Check out the "before and after" example below, with the "boot cat boot cat" rhythm.
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass an array of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your array of sounds. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-python"]
 [source,python]
