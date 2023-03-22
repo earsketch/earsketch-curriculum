@@ -179,24 +179,24 @@ Here are ideas of tools you can use:
 We will now combine boolean logic and user input for another example of user interaction.
 
 [role="curriculum-python"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if 2 values are equal, and if so the boolean is set to `True`.
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if two values are equal, and if so the boolean is set to `True`.
 
 [role="curriculum-javascript"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if 2 values are equal, and if so the boolean is set to `true`.
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if two values are equal, and if so the boolean is set to `true`.
 
-Now let's look at *boolean operators*: these help combine several booleans. There are 3 boolean operators:
+Now let's look at *boolean operators*: these help combine several booleans. There are three boolean operators:
 
 [role="curriculum-python"]
-* `and`: takes 2 boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-* `or`: takes 2 boolean inputs and returns `True` when at least 1 input is `True`, otherwise returns `False`.
-* `not`: takes 1 boolean input and returns the opposite (negated) boolean.
+* `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+* `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+* `not`: takes one boolean input and returns the opposite (negated) boolean.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and"; it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or"; it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
-* `!`: is called "not"; it takes 1 boolean input and returns the opposite (negated) boolean.
+* `&&`: is called "and"; it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+* `||`: is called "or"; it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+* `!`: is called "not"; it takes one boolean input and returns the opposite (negated) boolean.
 
-For example if you are 16, the sentence "I'm 16" is true and the sentence "I'm 17" is false. "I'm 16 and I'm 17" (true and false) is false because you are not both 16 and 17. But the sentence "I'm 16 or I'm 17" (true or false) is true.
+For example if you are sixteen, the sentence "I'm sixteen" is true and the sentence "I'm seventeen" is false. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
 
 [role="curriculum-python"]
 .PRACTICE
