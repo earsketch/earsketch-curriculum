@@ -188,7 +188,7 @@ The indices of the string `"EarSketch"` are shown in the table below.
 ****
 In a new script:
 
-. Create 4 variables: 2 beat strings (`stringA` and `stringB`) and 2 sound clip lists (`soundsA` and `soundsB`).
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound lists (`soundsA` and `soundsB`).
 . Print the second character of each string.
 . Print the last element of your lists.
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
@@ -202,7 +202,7 @@ In a new script:
 ****
 In a new script:
 
-. Create 4 variables: 2 beat strings (`stringA` and `stringB`) and 2 sound clip arrays (`soundsA` and `soundsB`).
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound arrays (`soundsA` and `soundsB`).
 . Print the second character of each string.
 . Print the last element of your arrays.
 . Create and print `stringC`, the concatenation of `stringA` and `stringB`.
