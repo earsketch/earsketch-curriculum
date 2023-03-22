@@ -300,7 +300,7 @@ Using what you have learned in this chapter, create rhythms that you like with `
 
 Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
-* *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
+* *Conciseness* means brief code that accomplishes its goal with fewer lines. Here are some questions that can help you make your code more concise:
 ** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
 ** Am I reusing any blocks of code? If so, put them in a function!
 ** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! A list might also be useful.
