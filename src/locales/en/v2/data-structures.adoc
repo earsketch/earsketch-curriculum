@@ -298,7 +298,7 @@ Using what you have learned in this chapter, create rhythms that you like with `
 [[evaluatingcorrectness]]
 === Evaluate Correctness
 
-Congratulations, now you have acquired musical and coding skills that allows you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
+Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
 [role="curriculum-python"]
 * *Conciseness* means brief code that accomplishes its goal efficiently. Here are some questions that can help you make your code more concise:
