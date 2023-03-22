@@ -48,7 +48,7 @@ image::../media/U2/Return.png[Alt Text]
 Create a function that will implement a musical section with:
 
 * Only one parameter, called `start`, which represents the start measure.
-* One return statement that returns the end measure.
+* One `return` statement that returns the end measure.
 * A body function with `fitMedia()` functions.
 
 Your section can last as many measures as you like.
