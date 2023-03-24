@@ -152,7 +152,7 @@ OPTIONAL
 
 *_The Sound Browser_*
 
-The *sound browser* provides over four thousand sounds to use in your music.
+The *sound browser* provides a library of sounds to use in your music.
 Contributors include celebrity musicians
 https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
 https://en.wikipedia.org/wiki/Ciara[Ciara^],
