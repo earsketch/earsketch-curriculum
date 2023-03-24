@@ -135,7 +135,11 @@ _Example:_
 
 `fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
-Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
+This code will place the sound `Y18_DRUM_SAMPLES_2` on track 2 from measures 1 to 5.
+
+Try adding `fitMedia()` to a script.
+
+When you've finished adding all your parameters, press _run_. You will see your sounds visualized in the DAW. Press _play_ to listen to your song.
 
 [role="curriculum-javascript"]
 Note: In JavaScript an optional semicolon `;` can be added to the end of each statement. Use of the semicolon is your personal choice.
