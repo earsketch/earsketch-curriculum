@@ -99,11 +99,11 @@ _Note: Your EarSketch account does not require any personal information or email
 
 *_What is a programming language?_*
 
-Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar of your programming language or the computer won't be able to execute your instructions.
+Code is written in a *programming language*. Like a spoken language it has vocabulary and syntax. You need to follow your programming language's grammar rules as you would with spoken language.
 
-In EarSketch, you can code in either Python or JavaScript.
+When you press the *run* button, a *compiler* translates the Python or JavaScript instructions into machine code which the computer can understand. Then the computer *executes* the code, which causes your music appear in the DAW.
 
-At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is then *executed* by the computer, and you can see your music appear in the DAW.
+At the deepest level, computers execute code using *binary*. This means that all computer code eventually becomes `1` 's and `0` 's as it is processed by electrical components in the computer.
 
 [[fitmedia]]
 === The `fitMedia()` function
