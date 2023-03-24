@@ -1,5 +1,5 @@
 [[getstartedwithearsketch]]
-== Get Started with EarSketch
+== Getting Started with EarSketch
 :nofooter:
 
 In this chapter you will learn how EarSketch works, you will place sounds into your music and see how to debug your code.
