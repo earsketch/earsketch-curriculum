@@ -34,7 +34,7 @@ A *Digital Audio Workstation*, or *DAW*, is a piece of software that produces or
 
 Some popular DAWs include https://www.ableton.com/[Ableton Live^], https://www.image-line.com/[FL Studio^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], https://www.avid.com/pro-tools[Pro Tools^], and http://www.reaper.fm/[Reaper^].
 
-EarSketch is DAW that allows you to create musical elements by writing code.
+EarSketch is DAW that allows you to create music by writing code.
 
 Here is how to make full use of the DAW:
 
