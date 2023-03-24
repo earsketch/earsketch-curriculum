@@ -68,13 +68,11 @@ include::code-examples/getting-started-intro-script.js.txt[]
 [[createanewscript]]
 === Create your first script!
 
-In EarSketch, each script that you write will correspond to one song. Let's see how to create a script:
+Let's see how to create a script from scratch.
 
-. *Sign in or create a new account* in the top right corner of your screen. If you click the white button that reads "Create / Reset Account", you can either recover a lost password, or create a new account ("Register a New Account"). _Caution:_ in general on the internet, don't use the same password for all your accounts & never share your passwords.
-
-. *Click to create.* If you don't have any scripts open, click on the large blue link in the code editor that states "Click here to create a new script!"
+. *Create.* In the editor tabs, click the white "+" icon.
 +
-If you have one or more scripts open already, then click on the white "+" icon next to the right most tab.
+If this is your first script, click the large blue text "Click here to create a new script!"
 +
 [[newscriptplus]]
 .Create a new script, open scripts
@@ -82,7 +80,7 @@ If you have one or more scripts open already, then click on the white "+" icon n
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
 
 
-. *Choose a name and language:* The "Create a new script" dialog box opens. Give your new script a name which will be name of your song. Then select the programming language (Python or Javascript). Finally, click the "Create" button.
+. *Choose a name and language.* Give your new script a name, and choose between Python and JavaScript programming languages.
 +
 [[newscriptpromptpy]]
 .The create a new script dialog box
@@ -95,6 +93,9 @@ image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
 
+. *(OPTIONAL) Sign in or create a new account.* To save your scripts for future editing and sharing, sign in with an EarSketch account.
++
+_Note: Your EarSketch account does not require any personal information or email._
 
 *_What is a programming language?_*
 
