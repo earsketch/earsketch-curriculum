@@ -173,8 +173,7 @@ END OF OPTIONAL
 ////
 OPTIONAL
 ////
- 
-See some examples of code using `fitMedia()` (Remember you can click the blue clip board in the top right corner of the box to paste the code into a new file):
+Below is an example scripts using `fitMedia()`. Remember, you can import and edit by clicking the blue clipboard icon.
 
 [role="curriculum-python"]
 [source,python]
