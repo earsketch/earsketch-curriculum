@@ -135,7 +135,7 @@ _Example:_
 
 `fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
-This code will place the sound `Y18_DRUM_SAMPLES_2` on track 2 from measures 1 to 5.
+The code above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`.
 
 Try adding `fitMedia()` to a script.
 
