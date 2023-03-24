@@ -103,12 +103,6 @@ Code is written in a *programming language*, which includes vocabulary and a syn
 
 In EarSketch, you can code in either Python or JavaScript.
 
-[role="curriculum-python"]
-_You are in Python mode. Python is used by companies like Google, Yahoo, NASA, Disney and to code games like Civilization 4, Battlefield 2 and Crystal Space._
-
-[role="curriculum-javascript"]
-_You are in JavaScript mode. JavaScript is one of the ten most popular programming languages in the world. Almost every website uses JavaScript._
-
 At the deepest level, computers operate in combinations of 1s and 0s: binary numbers. That's because the electronic components can react differently if there is electric current (1) or if there is no electric current (0). When you press the *run* button, the computer translates the Python or JavaScript instructions into binary code. The code is then *executed* by the computer, and you can see your music appear in the DAW.
 
 [[fitmedia]]
