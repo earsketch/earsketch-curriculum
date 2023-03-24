@@ -162,9 +162,9 @@ https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
 https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
 and https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
 
-* Sounds are covered by a creative commons license. Learn more in the <</en/v2/your-first-song#copyright,copyright chapter>>.
+You can explore the sound browser within the *Content Manager* (left) by clicking "sounds". Try using different sound constants inside `fitMedia()`.
 
-
+Note: The https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] covers fair use of stock sounds.
 
 ////
 END OF OPTIONAL
