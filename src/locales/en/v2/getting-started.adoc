@@ -120,14 +120,20 @@ video::./videoMedia/1_3_fitmedia_py.mp4[]
 [[video110js]]
 video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-To add a sound clip to the DAW, we start by typing `fitMedia()`. Between the parenthesis, we'll have 4 parameters, separated by commas:
+To add a sound with `fitMedia()`, use the following form.
 
-. *A clip name*: place your cursor between the parenthesis, go to the sound browser, select a clip, and paste it using the blue paste icon.
-. *The track number*: tracks are the rows that run across the DAW; they help you organize your sounds by instrument-type (vocals, lead guitar, rhythm guitar, bass, drums, etc.). You can start at track one for your first sound.
-. *Start measure*: the measure when your sound will start playing. Measures are musical time units. One measure is 4 beats. You can start at measure one with your first sound.
-. *End measure*: the measure when your sound will stop playing.
+`fitMedia(sound, track, start, end)`
 
-_Example:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.
+There are 4 *parameters*, separated by commas.
+
+. *Sound*: the sound constant from the sound browser
+. *Track*: the track number
+. *Start*: the starting measure
+. *End*: the ending measure
+
+_Example:_
+
+`fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
 Then, press _run_: you should visualize your sound in the DAW. When you press _play_ you can hear it.
 
