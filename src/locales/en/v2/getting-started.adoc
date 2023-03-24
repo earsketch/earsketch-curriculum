@@ -148,7 +148,22 @@ Note: In JavaScript an optional semicolon `;` can be added to the end of each st
 OPTIONAL
 ////
 
-The *Sound Browser*: Browse or search 4,000 audio clips to use in your music, made by musicians/producers https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, and https://www.sndbrd.com/[Milknsizz^].
+{nbsp} +
+
+*_The Sound Browser_*
+
+The *sound browser* provides over four thousand sounds to use in your music.
+Contributors include celebrity musicians
+https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
+https://en.wikipedia.org/wiki/Ciara[Ciara^],
+https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
+https://en.wikipedia.org/wiki/Khalid[Khalid^],
+https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
+https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
+and https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
+
+* Sounds are covered by a creative commons license. Learn more in the <</en/v2/your-first-song#copyright,copyright chapter>>.
+
 
 
 ////
