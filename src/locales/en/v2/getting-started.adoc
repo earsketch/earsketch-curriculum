@@ -9,7 +9,7 @@ In this chapter you will learn how EarSketch works, you will place sounds into y
 === Discover EarSketch
 :nofooter:
 
-In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. Where in the program does the code go? Find out in the video below!
+In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. How does it work? Find out in the video below!
 
 [role="curriculum-mp4"]
 [[video1a]]
