@@ -99,7 +99,7 @@ _Note: Your EarSketch account does not require any personal information or email
 
 *_What is a programming language?_*
 
-Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar rules of your programming language or the computer won't be able to execute your instructions. 
+Code is written in a *programming language*, which includes vocabulary and a syntax, just like a regular language. You need to know the grammar of your programming language or the computer won't be able to execute your instructions.
 
 In EarSketch, you can code in either Python or JavaScript.
 
