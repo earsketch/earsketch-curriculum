@@ -265,7 +265,7 @@ Here are some common errors:
 . *Punctuation:* Missing commas or other punctuation errors
 
 Time to practice!
-Find the 5 errors in the following code:
+Find the five errors in the following code:
 
 [role="curriculum-python"]
 [source,python]
