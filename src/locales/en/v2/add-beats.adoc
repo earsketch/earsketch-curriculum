@@ -240,7 +240,7 @@ Use the `makeBeat()` function to add at least two different beats. You can eithe
 Now that you've started working with `makeBeat()` and beat strings, let's explore some basic beat patterns that you can use.
 You've learned that a musical genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Similarly, some genres have signature beat patterns. Below are some examples:
 
-We will use 3 types of sounds: kick (track 1), snare (track 2), and hihat (track 3). We will use one `makeBeat()` function for each of these sounds, on 3 different tracks.
+We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
 
 [role="curriculum-mp4"]
 [[video1a]]
