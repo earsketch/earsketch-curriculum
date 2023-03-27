@@ -180,10 +180,10 @@ video revamping tab
 
 Now let's see how you can make your own beat. Here we use the term "beat" as a shorthand for drumbeat: a repeated rhythmic pattern of percussive sounds. We will use the `makeBeat()` function, with 4 arguments:
 
-. *Clip Name*: the sound clip you want. You can use the artist filter in the Sounds Browser and select "MAKEBEAT": these are short sound clips appropriate for beat patterns.
-. *Track Number*: the track your beat will be on.
-. *Measure Number*: starting measure for your beat.
-. *Beat String*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
+. *Track*: The track number
+. *Start*: The starting measure
+. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
 
 For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound clip `DUBSTEP_FILTERCHORD_002`.
 
