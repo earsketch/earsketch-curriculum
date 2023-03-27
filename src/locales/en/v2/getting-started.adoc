@@ -285,9 +285,9 @@ OPTIONAL
 Here is the answer
 
 . The `setTempo()` function is missing a parentheses
-. The first `fitMedia()` is missing an 'e'
+. The first `fitMedia()` is missing an `e`
 . The first `fitMedia()` is missing a comma between the third and fourth parameters
-. The second `fitMedia()` is missing an uppercase 'M'
+. The second `fitMedia()` is missing an uppercase `M`
 . In the second `fitMedia()`, the order of parameters is not correct: it should be sound clip name then track number
 
 ////
