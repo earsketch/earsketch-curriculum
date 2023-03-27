@@ -82,7 +82,7 @@ A *constant* is similar to a variable because it stores values. However, the val
 
 Let's first learn some basic concepts about rhythm:
 
-* The *rhythm* of a song is how sounds are arranged through time.
+* *Rhythm* is a pattern of sound, often repeated.
 * The *tempo* is the speed of the music in BPM (beats per minute).
 * A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
 * A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
