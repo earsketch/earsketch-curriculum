@@ -57,7 +57,7 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 .PRACTICE
 ****
-In your previous scripts, use variables to store your sound names. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`) that describe your sound.
+In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
 ****
 
 {nbsp} +
@@ -75,7 +75,7 @@ include::code-examples/add-beats-variables.js.txt[]
 ----
 Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. This way, when you or someone else reads your code, they can see what you are referring to.
 
-A *constant* is similar to a variable because it stores values. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding audio file. By convention, constant names are capitalized and use underscores instead of spaces.
+A *constant* is similar to a variable because it stores values. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. By convention, constant names are capitalized and use underscores instead of spaces.
 
 [[drumbeatstrings]]
 === Beat Strings
