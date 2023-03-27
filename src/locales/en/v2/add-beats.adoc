@@ -185,7 +185,7 @@ Now let's see how you can make your own beat. Here we use the term "beat" as a s
 . *Start*: The starting measure
 . *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
 
-For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound clip `DUBSTEP_FILTERCHORD_002`.
+For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
 
 Let's see more details with this video:
 
