@@ -29,9 +29,9 @@ The `setTempo()` function will determine the speed of your song. The *tempo* is 
 .PRACTICE
 ****
 . Create a new script. 
-. Place sounds on 2 different tracks.
+. Place sounds on two different tracks.
 . Modify your tempo and listen to the song.
-. Play your song at 3 different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
+. Play your song at three different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
 ****
 
 A genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Different genres have different tempo ranges. For instance:
