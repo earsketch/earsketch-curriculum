@@ -143,8 +143,8 @@ Music, and art in general, is often a way to convey a message. It can be either 
 . Then either:
 .. Write some lyrics and record yourself singing or reading them or
 .. Record or download some sounds that are related to your message
-. Add these recordings to your song using the `fitMedia()` function
-. Then add some additional EarSketch clips using the `fitMedia()` function
+. Add these recordings to your song using `fitMedia()`
+. Then add additional sounds using `fitMedia()`
 . Present your song to your friend
 . You can discuss your songs and the things you were trying to express
 ****
