@@ -119,15 +119,17 @@ include::code-examples/your-first-song-comments.js.txt[]
 {nbsp} +
 
 [[uploadingsounds]]
-=== Upload your own sounds
+=== Uploading your own sounds
 
-You can upload your own audio through the _Content Manager_. Open your _Content Manager_ on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button below the filters to open up the add a sound window (if the button doesn’t show, make sure you are logged in). Let's explore the first 3 options:
+You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
 
-. *Upload Sound* allows you to choose audio files (.mp3, .aiff, and so on) already on your computer. Modify the file name if needed ("constant value(required)"), and click on "UPLOAD".
-. *Quick Record* lets you record short clips directly into the EarSketch library. Check out the video below for more information.
-. *Freesound* allows you to directly import sounds from Freesound.org, an open-source audio database. In the search bar, you can look for a type of sound (ex: bird songs, rain, crowded street...). Under “Results”, a list of sounds will appear. You can preview sounds by clicking on the play button, and if you like it, select the toggle button in front of the file name and then click on “UPLOAD” at the very bottom.
+You must be logged in to upload sounds.
 
-To find the sound you have just uploaded or recorded, type its name in the search bar under the Content Manager's Sound tab.
+Let's explore the first three options.
+
+. *Upload Sound* allows you to choose audio files already on your computer.
+. *Quick Record* lets you record directly from your computer's microphone.
+. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
 
 [role="curriculum-mp4"]
 [[video101rec]]
