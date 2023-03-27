@@ -267,14 +267,14 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * *Variables* create a space in computer memory to store data. 
 * You first need to assign the value (data) to the variable name using the sign `=`. Then you can use the variable by writing its name in the code.
 * A *string* is a data type that consists of a series of characters encapsulated by single or double quotes. 
-* Percussive sound clips can be found using the ARTIST filter in the Sound Browser: select the artist MAKEBEAT.
-* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a clip, a `+` extends the note for the next sub-beat, and `-` creates a rest.
+* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
+* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
 * `makeBeat()` takes four arguments:
-** *clipName:* The clip a beat is constructed from.
-** *trackNumber:* The track on which music is placed.
-** *measureNumber:* The starting measure of the beat. The beat string determines the total length.
-** *beatString:* A string that specifies the rhythm created.
-* Different beat patterns correspond to different musical genres.
+** *Sound*: A sound constant
+** *Track*: The track number
+** *Start*: The starting measure
+** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+* Different beat patterns often correspond to different musical genres.
 
 [[chapter-questions]]
 === Questions
