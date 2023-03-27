@@ -78,8 +78,10 @@ A genre is a category of artistic composition (e.g. music), characterized by sim
 . Listen for similarities between the songs.
 . You can also research the genre on Wikipedia to get more information about it.
 ****
- 
-Note that sometimes one sound clip will sound very different when you preview it and when it's played in your song. That might be because the sound clip's tempo is different from your song's tempo. To know the exact tempo of the sample, hover over the clip's name in the Sound Browser. Then you can modify your song's tempo accordingly or choose a sound clip that better matches your song's tempo.
+
+Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+
+To find the original tempo of sound, hover over the sound constant Sound Browser.
 
 
 [[comments]]
