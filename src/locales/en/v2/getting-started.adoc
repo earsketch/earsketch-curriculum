@@ -309,43 +309,25 @@ TODO: when options are ready, modify the link
 [[chapter1summary]]
 === Chapter 1 Summary
 
-[role="curriculum-python"]
-* A line of code is an instruction to be carried out by the computer. All the instructions together make up the program.
-* *DAW's* are specialized computer software for recording, editing, and playing digital audio files, or *clips*. EarSketch is a DAW that allows audio clips to be placed on a timeline with code. 
-* To make music in EarSketch, code is first typed into the code editor panel. After pressing run, music is played in the DAW panel.
-* Sound clips can be found in the Sound Browser. They are referred to by typing or pasting their name in all caps.
-* A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
-* *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, and music section.
-* Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
-** *fileName:* The sound clip that is placed in the DAW.
-** *trackNumber:* The track on which music is placed.
-** *startLocation:* The measure at which the sound clip will start.
-** *endLocation:* The measure at which the sound clip will end.
-* *Debugging* is the process of finding and fixing *bugs*, errors made by the programmer.
-* The rules of *syntax* define how code must be written in a particular programming language.
-* The *console* shows information about the state of a program, making it useful for debugging syntax errors. 
-* Common beginner errors include typos, incorrect case, missing parentheses, improper script setup...
+[[chapter1summary]]
+=== Chapter 1 Summary
 
-[role="curriculum-javascript"]
-* A line of code is an instruction to be carried out by the computer. All the instructions together make up the program.
-* *DAW's* are specialized computer software for recording, editing, and playing digital audio files, or *clips*. EarSketch is a DAW that allows audio clips to be placed on a timeline with code. 
-* To make music in EarSketch, code is first typed into the code editor panel. After pressing run, music is played in the DAW panel.
-* Sound clips can be found in the Sound Browser. They are referred to be typing or pasting their name in all caps.
-* A computer *program* is a sequence of instructions that the computer executes to accomplish a specific task. 
-* *Programming languages* are a collection of words and symbols that are understood by the computer. A programming language follows a syntax in order to organize code.
-* An EarSketch script consists of a comments section, setup section, and music section.
-* Create a new script by clicking the large blue link or the "+" icon if another script is already open.
-* `fitMedia()` is the primary way of adding sound to the DAW. It has four arguments, the information it needs to make music:
-** *fileName:* The sound clip that is placed in the DAW.
-** *trackNumber:* The track on which music is placed.
-** *startLocation:* The measure at which the sound clip will start.
-** *endLocation:* The measure at which the sound clip will end.
-* *Debugging* is the process of finding and fixing *bugs*, errors made by the programmer.
-* The rules of *syntax* define how code must be written in a particular programming language.
-* The *console* shows information about the state of a program, making it useful for debugging syntax errors. 
-* Common beginner errors include typos, incorrect case, missing parentheses, improper script setup...
+* A computer *program* is a sequence of instructions the computer executes to accomplish a specific task.
+* A *script* is a nickname for a short program.
+* A *DAW*, or Digital Audio Workstation, is a type of computer software for recording and editing audio. EarSketch is a DAW that lets you make music with code.
+* To make music, type code into the *editor*, click "run", and click "play" to listen.
+* *Sounds* can be found in the *Sound Browser*. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
+* *Programming languages* are collections of words and symbols that are understood by the computer.
+* The rules of *syntax* define how code must be written and how punctuation (`.`, `,`) is used.
+* Create a new script by clicking the "+" icon on the editor tabs. If this is your first script, click the large blue link "Click here to create...".
+* `fitMedia()` is a way of adding sounds to the DAW. It has the following four parameters.
+** *Sound*: the sound constant from the sound browser
+** *Track*: the track number
+** *Start*: the starting measure
+** *End*: the ending measure
+* *Debugging* is the process of finding and fixing *bugs*, or errors, made by the programmer.
+* The *console* shows information about the state of a program, making it useful for debugging syntax errors.
+* Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
 
 
 [[chapter-questions]]
