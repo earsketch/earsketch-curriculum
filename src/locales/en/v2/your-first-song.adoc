@@ -176,11 +176,9 @@ END OF OPTIONAL
 
 *Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
-*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. 
-
 When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
 
-There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label. 
+There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
 
 *Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use is determined for each case by a judge on a case-by-case basis.
 
