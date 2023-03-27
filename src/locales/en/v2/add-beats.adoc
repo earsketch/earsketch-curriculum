@@ -16,14 +16,16 @@ video::./videoMedia/002-05-Variables-PY.mp4[]
 [[video2js]]
 video::./videoMedia/002-05-Variables-JS.mp4[]
 
-What is a variable? It's a name that will help the computer find a piece of information, or data. This works for all kinds of data. For example, a variable can point to:
+What is a variable? A *variable* is a name given to a piece of data that we plan to use later in our program.
 
-* A number (like a track number or a measure number),
-* A file (like an audio file), 
-* A string (like the name of a sound clip or some lyrics). A *character* is a number, letter or symbol, like `A`, `a`, `2`, or `=`. A string is a series of characters with quotation marks around it, like `"Hello World 123!"`.
+In EarSketch, the variables in your scripts may point to:
 
-We give the data a name so that it's easier to call it and change it. 
+* A *number*, like a track number or a measure number
+* A *file*, like an audio file
+* A *string*, like the name of a sound clip or some lyrics
+* A *character*, like `A`, `a`, `2`, or `=`
 
+A *character* can be any  number, letter or symbol. A *string* is a series of characters with quotation marks around it, like `"Hello World 123!"`.
 
 To use a variable,
 
