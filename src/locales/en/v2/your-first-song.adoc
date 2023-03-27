@@ -85,15 +85,17 @@ To find the original tempo of sound, hover over the sound constant Sound Browser
 
 
 [[comments]]
-=== Add comments to your code
+=== Adding comments to your code
+*Comments* are lines of code ignored by the computer. People use comments to make notes within the code.
+
+EarSketch scripts begin with comments that you can use to enter a description of your song. These details make it easier for other programmers to understand what your code is about.
 
 [role="curriculum-python"]
-*Comments* are lines of code not executed by the computer. They are only used by humans to make the code easier to understand, to help organize code or to make notes for future use. In Python, comments are indicated by a line starting with a pound `#` symbol. 
+In Python, comments are indicated by a line starting with a pound `#` symbol.
 
 [role="curriculum-javascript"]
-*Comments* are lines of code not executed by the computer. They are only used by humans to make the code easier to understand, to help organize code or to make notes for future use. In JavaScript, comments are indicated by a line starting with two forward slashes, `//`.
+In JavaScript, comments are indicated by a line starting with two forward slashes, `//`.
 
-Notice that the first lines of each script are comments that describe your script. For each new script, you will need to fill in this information. This makes it easier for other programmers to understand what your code is about.
 
 .PRACTICE
 ****
