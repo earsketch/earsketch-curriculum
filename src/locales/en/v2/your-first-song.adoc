@@ -99,11 +99,7 @@ In JavaScript, comments are indicated by a line starting with two forward slashe
 
 .PRACTICE
 ****
-On your current script, fill in the following information in the comments at the beginning of your code:
-
-. script name: the name of your song,
-. author : your name,
-. description: here write a short description of your project
+In your current script, write a comment with a description of your song on the first line.
 ****
 
 You can also use comments to describe what different sections of your code do. Here is an example below. You can paste and run the code. Note how the comments describe the different sections:
