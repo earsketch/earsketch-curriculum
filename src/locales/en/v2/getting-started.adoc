@@ -207,9 +207,9 @@ include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 ****
 Using sounds that you like:
 
-. Place sounds on 2 different tracks 
-. Place sounds from measures 2 to 12
-. Create a short song with 3 tracks that is 8 measures long or more
+. Place sounds on two different tracks
+. Place sounds from measure `2` to `12`
+. Create a short song with three tracks that is eight measures long or more
 
 For each exercise, you can have your neighbour listen to your song.
 
