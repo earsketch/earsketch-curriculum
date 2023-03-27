@@ -40,27 +40,35 @@ A genre is a category of artistic composition (e.g. music), characterized by sim
 |===
 |GENRE|BPM|EXAMPLE
 
-|Hip Hop
-|85-95
-|Coolio - Gangsta's Paradise (feat. L.V.)
 |Pop
 |110-130
-|Lizzo - Juice 
-|Techno
-|120-125
-|Boris Brejcha - Schleierwolken
-|Electro
-|100-130
-|Apashe - Behind My Eyes (feat. LIA)
-|House
-|115-130
-|DJ Breezy - Kimpinstik (feat. Dahlin Gage & Medikal)
-|Dubstep and Trap
+|"Thriller" - Michael Jackson
+
+"I Wanna Dance With Somebody" - Whitney Houston
+
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
+
+"Fight the Power" - Public Enemy
+
+|Country
+|90-110
+|"I Walk the Line" - Johnny Cash
+
+"Jolene" - Dolly Parton
+
+|House / EDM
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dubstep / Trap
 |140-150
-|Jessica Audiffred & Walshy Fire - Stupid Love (feat. Nia V)
-|Drum & Bass
-|160-180
-|Mollie Collins - Lost & Found
+|"Scary Monsters and Nice Sprites" - Skrillex
+
+"Turn Down for What" - Lil Jon
 |===
 
 .PRACTICE
