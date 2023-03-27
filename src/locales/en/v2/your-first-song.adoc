@@ -149,9 +149,11 @@ Music, and art in general, is often a way to convey a message. It can be either 
 . You can discuss your songs and the things you were trying to express
 ****
 
-*Processes*, or tasks, are programs that run on your computer. The computer's CPU, or *Central Processing Unit*, carries them out. 
+An active computer program is called a *process*.
 
-A computer's *memory* holds data and processing instructions for the CPU to use. Memory, also called primary storage or RAM (Random Access Memory), stores its data temporarily. Only the information for processes that are actively running is stored in the RAM. This allows fast access to instructions and data for the CPU.
+When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
+
+A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
 
 There is a difference between memory (or short-term storage) and long-term storage. Long-term storage, like a hard-drive or cloud, is referred to as secondary storage. *Secondary storage* holds high volumes of data for long periods of time, even after a computer is shut down. The CPU does not interact directly with secondary storage. When the CPU carries a process out, data from secondary storage must first be put into memory so that the CPU can access it quickly.
 
