@@ -216,7 +216,7 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 .PRACTICE
 ****
 Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
-Use the `makeBeat()` function to add your beat pattern to your song on track 1.
+Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
 Please note that:
 
 . You should assign your variables with the symbol `=` before using them.
