@@ -88,8 +88,8 @@ Let's first learn some basic concepts about rhythm:
 * A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
 * Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4...." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and...."
 * An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
-* 1 measure is 4 1/4 notes, 8 1/8 notes, or 16 1/16 notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
-* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon to the left of the sound level.
+* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
+* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
 
 [[imediameasurepng]]
 .A measure
