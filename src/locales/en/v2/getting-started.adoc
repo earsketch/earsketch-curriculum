@@ -19,14 +19,17 @@ video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 TODO: upload video
 ////
 
-To use EarSketch
+As you become familiar with EarSketch these are the main panels.
 
-. You can browse and select sounds in your *sound browser*.
-. You will write code in your *code editor* .
-. When you click the *run* button, your music will be shown in the *Digital Audio Workstation* (or *DAW*).
-. You can then click the *play* button to listen to your music.
-. Then change your code until you are satisfied with what you hear!
-. You can open and close this curriculum panel using the toggle button on the top of the panel.
+* *Content Manager* _(left)_: Your scripts and sounds
+
+* *DAW* _(top-center)_: The song timeline and "play" button
+
+* *Editor* _(mid-center)_: The code editor and "run" button
+
+* *Console* _(bottom-center)_: The script output and errors
+
+{nbsp} +
 
 _What is a DAW?_
 
