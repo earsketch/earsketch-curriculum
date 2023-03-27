@@ -9,7 +9,7 @@ In this chapter you will learn how to change the tempo of your song, add comment
 
 [role="curriculum-python"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
 . Some comments starting with `#` in grey: we'll cover that in next section
 . the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project
@@ -18,7 +18,7 @@ By now you've noticed that when you create a new script, there are preexisting e
 
 [role="curriculum-javascript"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements that you must absolutely keep for your code to work:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
 . Some comments starting with `//` in grey: we'll cover that in next section
 . the `setTempo(120)` function, which we will see in detail below
