@@ -111,8 +111,11 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
 ****
 
-We'll create a new type of variable: *drumbeat strings* for our percussive patterns.
-A drumbeat string is a string using the characters `"0"`, `"+"` or `"-"`. For example: `"0-00-00-0+++0+0+"`. It's usually 16 characters long but its length can vary. Each character corresponds to a 1/16 note, so 16-character beat strings will last one measure.
+We'll compose each of our rhythms in a *beat* string.
+
+A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
+
+For example: `"0-00-00-0+++0+0+"`
 
 * `0` starts playing the percussive sound clip (one hit of the drum, for example).
 * `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
