@@ -230,8 +230,8 @@ When you hear your music, if you don't like your first version, tweak your beat 
 
 .PRACTICE
 ****
-Create a new script and add 2 or 3 soundclips using `fitMedia()`. Use variables to store your clip names.
-Use the `makeBeat()` function to add at least 2 different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
+Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
+Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
 ****
 
 [[beatsandgenres]]
