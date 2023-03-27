@@ -240,7 +240,7 @@ OPTIONAL
 
 What are the different types of errors?
 
-. *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote fitMedia incorrectly).
+. *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote `fitMedia` incorrectly).
 . *Runtime errors*: Your program starts to run but halts due to an error.
 . *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place. 
 
