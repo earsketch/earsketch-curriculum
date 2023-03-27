@@ -176,13 +176,17 @@ END OF OPTIONAL
 
 *Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
-When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
+When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can make copies, make modifications, and share what you create.
 
 There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
 
-*Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use is determined for each case by a judge on a case-by-case basis.
+*Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use disputes are determined by a judge on a case-by-case basis.
 
-Besides fair use, there is a way to use and share music openly. Copyright should help us make and share more art, not less. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sounds Library. These artists have shared their samples under a *Creative Commons* license, which gives permission for others to use their work. In EarSketch, you therefore have an open access to these samples, and all the music you create in EarSketch is shareable, though you cannot sell it. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
+Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
+
+* See the https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] for more details regarding legal use of stock sounds.
+
+One option for artists to share their work is a *Creative Commons* license, which gives permission for others to use their work. In EarSketch, you have access to these samples, and all the music you create in EarSketch is shareable, although you cannot sell it. You can, however, share your music or let other students remix your code, helping to put new art into the world.
 
 *Creative Commons* (or CC) licenses let creators specify what rights they keep and what rights they give away. Here are the possible parts of a CC license: "You can use this work however you like, EXCEPT..."
 
