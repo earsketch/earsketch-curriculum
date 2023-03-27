@@ -57,7 +57,7 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 .PRACTICE
 ****
-In your previous scripts, use variables to store your sound clip names. Look at the examples below for help. Make sure that your variables have short and understandable names (like "bass", "voice_1",...) that describe your sound clip.
+In your previous scripts, use variables to store your sound names. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`) that describe your sound.
 ****
 
 {nbsp} +
