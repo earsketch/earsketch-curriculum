@@ -43,23 +43,13 @@ video::./videoMedia/002-05-Variables-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Instead of this:
-fitMedia(HIPHOP_SYNTHPLUCKLEAD_005, 1, 1, 2)
-
-# We write this:
-synth1 = HIPHOP_SYNTHPLUCKLEAD_005
-fitMedia(synth1, 1, 1, 2)
+include::../../en/code-examples/add-beats-instead-of-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Instead of this:
-fitMedia(HIPHOP_SYNTHPLUCKLEAD_005, 1, 1, 2);
-
-// We write this:
-var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;
-fitMedia(synth1, 1, 1, 2);
+include::../../en/code-examples/add-beats-instead-of-this.js.txt[]
 ----
 
 .تدريب
@@ -70,49 +60,13 @@ fitMedia(synth1, 1, 1, 2);
 [role="curriculum-python"]
 [source,python]
 ----
-# Variables: Using variables to store clips and simplify edits
-
-# Setup
-from earsketch import *
-setTempo(100)
-
-# Music
-# Sound clips
-synth1 = HIPHOP_SYNTHPLUCKLEAD_005
-synth2 = HIPHOP_SOLOMOOGLEAD_001
-drums = HIPHOP_TRAPHOP_BEAT_008
-
-# fitMedia() adds the clips synth1 and synth2 alternatively on track 1.
-fitMedia(synth1, 1, 1, 2)
-fitMedia(synth2, 1, 2, 3)
-fitMedia(synth1, 1, 3, 4)
-fitMedia(synth2, 1, 4, 5)
-
-# fitMedia() adds the drums on track 2.
-fitMedia(drums, 2, 1, 9)
+include::../../en/code-examples/add-beats-variables.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Variables: Using variables to store clips and simplify edits
-
-// Setup
-setTempo(100);
-
-// Music
-var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Assigns a clip to the variable "synth1".
-var synth2 = HIPHOP_SOLOMOOGLEAD_001;
-var drums = HIPHOP_TRAPHOP_BEAT_008;
-
-// fitMedia() adds the clips synth1 and synth2 alternatively on track 1.
-fitMedia(synth1, 1, 1, 2);
-fitMedia(synth2, 1, 2, 3);
-fitMedia(synth1, 1, 3, 4);
-fitMedia(synth2, 1, 4, 5);
-
-// fitMedia() adds the drums on track 2.
-fitMedia(drums, 2, 1, 9);
+include::../../en/code-examples/add-beats-variables.js.txt[]
 ----
 لاحظ أنه من المهم تسمية المتغير بطريقة وصفية ومفهومة. على سبيل المثال ، فضّل`synth1`بدلا من `music1`او `test`الذي لا يقديم أي معلومة.'. بهذه الطريقة ، عندما تقرأ أنت أو أي شخص آخر مقطعك البرمجي ، يمكنكم رؤية ما تشير إليه.
 
@@ -241,38 +195,13 @@ video::./videoMedia/011-03-makeBeat()-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Multi Beat: Using several makeBeat calls with different rhythms
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Music
-synth = DUBSTEP_FILTERCHORD_002
-cymbal = OS_CLOSEDHAT01
-beat1 = "-00-00+++00--0-0"
-beat2 = "0--0--000--00-0-"
-
-makeBeat(synth, 1, 1, beat1)
-makeBeat(cymbal, 2, 1, beat2)
+include::../../en/code-examples/add-beats-multi-beat.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Multi Beat: Using several makeBeat calls with different rhythms
-
-// Setup
-setTempo(120);
-
-// Music
-var synth = DUBSTEP_FILTERCHORD_002;
-var cymbal = OS_CLOSEDHAT01;
-var beat1 = "-00-00+++00--0-0";
-var beat2 = "0--0--000--00-0-";
-
-makeBeat(synth, 1, 1, beat1);
-makeBeat(cymbal, 2, 1, beat2);
+include::../../en/code-examples/add-beats-multi-beat.js.txt[]
 ----
 
 .تدريب
@@ -311,64 +240,13 @@ video is currently being edited
 [role="curriculum-python"]
 [source,python]
 ----
-# Examples of beats: Creating beats in different genres
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Sound clips
-kick = OS_KICK05  # This is the "boom" sound.
-snare = OS_SNARE01  # This is the "cat" sound.
-hihat = OS_CLOSEDHAT01  # This is the "ts" sound.
-
-# Rock beat on measure 1
-makeBeat(kick, 1, 1, "0+++----0+++----")
-makeBeat(snare, 2, 1, "----0+++----0+++")
-makeBeat(hihat, 3, 1, "0+0+0+0+0+0+0+0+")
-
-# Hip hop beat on measure 3
-makeBeat(kick, 1, 3, "0+++------0+++--")
-makeBeat(snare, 2, 3, "----0++0+0++0+++")
-makeBeat(hihat, 3, 3, "0+0+0+0+0+0+0+0+")
-
-# Jazz beat on measure 5
-makeBeat(hihat, 3, 5, "0++0+00++0+00++0")
-
-# Dembow (latin, caribbean) beat on measure 7
-makeBeat(kick, 1, 7, "0+++0+++0+++0+++")
-makeBeat(snare, 2, 7, "---0++0+---0++0+")
+include::../../en/code-examples/add-beats-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Examples of beats: Creating beats in different genres
-
-// Setup
-setTempo(120);
-
-// Sound clips
-var kick = OS_KICK05; // This is the "boom" sound.
-var snare = OS_SNARE01; // This is the "cat" sound.
-var hihat = OS_CLOSEDHAT01; // This is the "ts" sound.
-
-// Rock beat on measure 1
-makeBeat(kick, 1, 1, "0+++----0+++----");
-makeBeat(snare, 2, 1, "----0+++----0+++");
-makeBeat(hihat, 3, 1, "0+0+0+0+0+0+0+0+");
-
-// Hip hop beat on measure 3
-makeBeat(kick, 1, 3, "0+++------0+++--");
-makeBeat(snare, 2, 3, "----0++0+0++0+++");
-makeBeat(hihat, 3, 3, "0+0+0+0+0+0+0+0+");
-
-// Jazz beat on measure 5
-makeBeat(hihat, 3, 5, "0++0+00++0+00++0");
-
-// Dembow (latin, caribbean) beat on measure 7
-makeBeat(kick, 1, 7, "0+++0+++0+++0+++");
-makeBeat(snare, 2, 7, "---0++0+---0++0+");
+include::../../en/code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
