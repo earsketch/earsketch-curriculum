@@ -1,0 +1,16 @@
+// El efecto de volumen: Cómo modificar el volumen de 2 pistas musicales (tracks)
+
+// Configuración
+setTempo(120);
+
+// Variables
+var piano1 = COMMON_LOVE_THEME_PIANO_2;
+var percusiones1 = HOUSE_BREAK_FILL_002;
+
+// Colocar los sonidos
+fitMedia(piano1, 1, 1, 5);
+fitMedia(percusiones1, 2, 3, 5);
+
+// Mezclar: aumentar el volumen de la pista de piano y reducir el volumen de la pista de percusión
+setEffect(1, VOLUME, GAIN, 2);
+setEffect(2, VOLUME, GAIN, -15);

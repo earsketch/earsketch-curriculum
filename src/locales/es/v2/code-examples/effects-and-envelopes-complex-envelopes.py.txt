@@ -1,0 +1,23 @@
+# Envelopes complejos: Cómo usar múltiples llamadas setEffect() en una pista para hacer cambios en el envelope del efecto
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+# Música
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
+
+# Puntos de tiempo de envelope (en compases)
+puntoA = 1
+puntoB = 4
+puntoC = 6.5
+puntoD = 7
+puntoE = 8.5
+puntoF = 9
+
+setEffect(1, FILTER, FILTER_FREQ, 20, puntoA, 10000, puntoB)  # Primer efecto, barrido de filtro (_filter sweep_)
+
+# segundo efecto, cambios de volumen
+setEffect(1, VOLUME, GAIN, -10, puntoB, 0, puntoC)  # Crescendo
+setEffect(1, VOLUME, GAIN, 0, puntoD, -10, puntoE)  # Empieza el desvanecimiento del volumen (_fade out_).
+setEffect(1, VOLUME, GAIN, -10, puntoE, -60, puntoF)  # Fin del _fade out_

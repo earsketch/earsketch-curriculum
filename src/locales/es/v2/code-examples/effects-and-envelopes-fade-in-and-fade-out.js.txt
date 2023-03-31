@@ -1,0 +1,28 @@
+// Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
+
+// Configuración
+setTempo(100);
+
+// Variables
+var melodia1 = MILKNSIZZ_ADIOS_BRASS;
+var melodia2 = MILKNSIZZ_ADIOS_STRINGS;
+var bombo = OS_KICK04;
+var hihat = OS_OPENHAT03;
+var ritmoDeBombo = "0-------0-0-0---";
+var ritmoDeHihat = "---0---0--00----";
+
+// Colocar melodías a la pista 1
+fitMedia(melodia1, 1, 1, 5);
+fitMedia(melodia2, 1, 5, 9);
+
+// Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo for en compas
+for (var compas = 1; compas < 9; compas++) {
+    makeBeat(bombo, 2, compas, ritmoDeBombo);
+    makeBeat(hihat, 3, compas, ritmoDeHihat);
+}
+
+// Añadir el _fade in_ y el _fade out_ de pistas 1 a 3
+for (var pista = 1; pista < 4; pista++) {
+    setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3);
+    setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9);
+}
