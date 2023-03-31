@@ -1,0 +1,31 @@
+# Opérations booléennes : Demande à l'utilisateur d'entrer un genre musical et création d'un beat en conséquence
+
+from earsketch import *
+setTempo(120)
+
+# Variables de sons
+kick = OS_KICK02
+hihat = OS_CLOSEDHAT04
+clap = OS_CLAP03
+
+# Variables de chaînes de caractères de beats
+hiphopKickBeat = "0++++---0+++0+++"
+hiphopHihatBeat = "----0---00---000"
+edmKickBeat = "0+++----0+++----"
+edmClapBeat = "----0-------0---"
+
+# Opérations booléennes : Demande à l'utilisateur de faire une entrée
+genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
+
+# Création du rythme approprié
+if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
+    makeBeat(kick, 1, 1, hiphopKickBeat)
+    makeBeat(hihat, 2, 1, hiphopHihatBeat)
+elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
+    makeBeat(kick, 1, 1, edmKickBeat)
+    makeBeat(clap, 2, 1, edmClapBeat)
+else:
+    print("Désolé, nous n'avons pas pu lire le genre que vous avez sélectionné. Veuillez exécuter le code à nouveau.")
+
+# Ajout de réverbération sur la piste 2
+setEffect(2, REVERB, MIX, 0.1)

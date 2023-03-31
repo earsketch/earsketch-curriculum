@@ -1,0 +1,18 @@
+// Declaraciones de retorno 2: Devolver el último compás de una función de sección
+
+// Configuración
+setTempo(120);
+
+var melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+
+// Definición de la función
+function verso(comienzo) {
+    var fin = comienzo + 4;
+    fitMedia(melodia1, 1, comienzo, fin);
+    fitMedia(bateria1, 2, comienzo, fin);
+    return fin;
+}
+// Llamadas a función
+var ultimoCompas = verso(1); // Llamar a la función verso, donde comienzo es el compás 1
+println(ultimoCompas);

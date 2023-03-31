@@ -1,0 +1,13 @@
+# Entrée d'utilisateur 2 : Création d'une chanson de dubstep à l'aide de paramètres spécifiés par l'utilisateur
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+clipNumber = readInput("Entrez un numéro de clip entre 10 et 46 : ")
+dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
+finalClip = dubStepClip + clipNumber
+
+# « wobbles » de dubstep sélectionnés par l'utilisateur
+fitMedia(finalClip, 1, 1, 5)

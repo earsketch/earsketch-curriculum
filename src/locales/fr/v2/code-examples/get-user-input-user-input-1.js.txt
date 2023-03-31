@@ -1,0 +1,16 @@
+// Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
+
+// Paramétrage
+
+// Demande de saisie de tempo
+var question = "Quel tempo désirez-vous appliquer pour votre musique ? Sélectionnez un chiffre entre 45 et 220.";
+var answer = readInput(question);
+
+// Conversion à un nombre
+var tempo = Number(answer);
+
+// Définition du tempo
+setTempo(tempo);
+
+// Musique
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);

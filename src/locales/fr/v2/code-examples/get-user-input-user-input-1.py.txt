@@ -1,0 +1,17 @@
+# Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
+
+# Paramétrage
+from earsketch import *
+
+# Demande de saisie du tempo
+question = "Quel tempo désirez-vous appliquer pour votre chanson ? Sélectionnez un chiffre entre 45 et 220."
+answer = readInput(question)
+
+# Conversion à un entier
+tempo = int(answer)
+
+# Définition du tempo
+setTempo(tempo)
+
+# Musique
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)

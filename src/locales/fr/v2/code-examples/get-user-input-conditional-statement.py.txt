@@ -1,0 +1,22 @@
+# Instruction conditionnelle : Utilisation d'une booléenne pour créer une variation dans une fonction
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Définition de fonction
+def verse(start, variation):
+    # la variation est soit égale à True ou False
+    if variation:
+        fitMedia(melody1, 1, start, start + 4)
+    else:
+        fitMedia(melody2, 1, start, start + 4)
+    fitMedia(drums1, 2, start, start + 4)  # ceci est à l'extérieur de l'instruction conditionnelle (sans indentation)
+
+# Appels de fonction
+verse(1, True)
+verse(7, False)

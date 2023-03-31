@@ -1,0 +1,23 @@
+// Declaración condicional: Cómo usar un booleano para crear variaciones de una función
+
+// Configuración
+setTempo(120);
+
+var melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var melodia2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
+var bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+
+// Definición de la función
+function verso(comienzo, variacion) {
+    // Variacion es igual a true o false.
+    if (variacion) {
+        fitMedia(melodia1, 1, comienzo, comienzo + 4);
+    } else {
+        fitMedia(melodia2, 1, comienzo, comienzo + 4);
+    }
+    fitMedia(bateria1, 2, comienzo, comienzo + 4); // Está fuera de la declaración condicional (no hay sangría).
+}
+
+// Llamadas a función
+verso(1, true);
+verso(7, false);

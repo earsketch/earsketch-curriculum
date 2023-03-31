@@ -1,0 +1,12 @@
+// Respuesta del usuario 2: Cómo crear una canción dubstep con parámetros escogidos por el usuario
+
+// Configuración
+setTempo(120);
+
+// Música
+var numeroDeClip = readInput("Escribe un numero de clip entre 10 y 46: ");
+var clipDeDubstep = "DUBSTEP_BASS_WOBBLE_0";
+var clipFinal = clipDeDubstep + numeroDeClip;
+
+// Dubstep wobbles (líneas de bajo ondulantes de estilo dubstep) elegidos por el usuario
+fitMedia(clipFinal, 1, 1, 5);

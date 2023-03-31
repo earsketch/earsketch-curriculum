@@ -1,0 +1,2 @@
+respuesta = readInput("¿Que tempo te gustaria tener en tu musica?")
+print(respuesta)
