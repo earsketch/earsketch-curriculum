@@ -1,0 +1,35 @@
+# Opérations de chaînes de caractères et de listes : Ce qui peut être réalisé avec des listes et des chaînes de caractères
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Création de chaînes de caractères et listes de beats
+stringA = "0+++----0+++--0+"
+stringB = "0-0-0-0-----0-0-"
+soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
+soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
+
+# Affichage du deuxième caractère de chaque chaîne de caractères.
+print(stringA[1])
+print(stringB[1])
+
+# Affichage du dernier élément de vos listes.
+print(soundsA[len(soundsA) - 1])
+print(soundsB[len(soundsB) - 1])
+
+# Création et affichage de stringC, la concaténation de stringA et stringB.
+stringC = stringA + stringB
+print(stringC)
+
+# Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
+soundsC = soundsA + soundsB + soundsA
+print(soundsC)
+
+# Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
+stringD = stringC[1:5]
+print(stringD)
+
+# Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
+soundsD = soundsC[2 : len(soundsC)]
+print(soundsD)

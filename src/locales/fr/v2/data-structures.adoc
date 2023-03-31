@@ -20,25 +20,13 @@ Si vous avez de très longues listes de variables de sons, il est possible de le
 [role="curriculum-python"]
 [source,python]
 ----
-# Au lieu d'écrire ceci :
-kick = OS_KICK03
-hihat = OS_OPENHAT01
-snare = OS_SNARE05
-
-# Vous pouvez écrire ceci :
-drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Au lieu d'écrire ceci :
-var kick = OS_KICK03;
-var hihat = OS_OPENHAT01;
-var snare = OS_SNARE05;
-
-// Vous pouvez écrire ceci :
-var drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05];
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -58,40 +46,13 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Listes : Utilisation d'une liste pour contenir plusieurs clips audio
-
-# Paramétrage
-from earsketch import *
-setTempo(130)
-
-# Musique
-
-# Création d'une liste de clips
-myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
-
-# Placement de sons de la mesure 1 à 5
-fitMedia(myEnsemble[0], 1, 1, 5)  # accès à l'index 0
-fitMedia(myEnsemble[1], 2, 1, 5)  # accès à l'index 1
-fitMedia(myEnsemble[2], 3, 1, 5)  # accès à l'index 2
+include::code-examples/data-structures-list.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Tableaux : Utilisation d'un tableau pour contenir plusieurs clips audio
-
-// Paramétrage
-setTempo(130);
-
-// Musique
-
-// Création d'un tableau de clips
-var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
-
-// Placement de sons de la mesure 1 à 5
-fitMedia(myEnsemble[0], 1, 1, 5); // accès à l'index 0
-fitMedia(myEnsemble[1], 2, 1, 5); // accès à l'index 1
-fitMedia(myEnsemble[2], 3, 1, 5); // accès à l'index 2
+include::code-examples/data-structures-arrays.js.txt[]
 ----
 
 [[Graphic]]
@@ -116,42 +77,13 @@ Voyez l'exemple ci-dessous. Vous pouvez jeter un coup d'œil dans la console pou
 [role="curriculum-python"]
 [source,python]
 ----
-# Itération à l'aide de listes : Utilisation d'une liste pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
-
-# Paramétrage
-from earsketch import *
-setTempo(130)
-
-# Musique
-
-# Création d'une liste de clips
-myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
-
-# Parcours de la liste
-for track in range(1, 4):
-    index = track - 1
-    fitMedia(myEnsemble[index], track, 1, 5)
-    print("this iteration, track = " + str(track) + " and index = " + str(index))
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Itération à l'aide de tableaux : Utilisation d'un tableau pour contenir plusieurs clips audio qui seront placés dans le DAW grâce à une boucle « for »
-
-// Paramétrage
-setTempo(130);
-
-// Musique
-
-// Création d'un tableau de clips
-var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
-
-for (var track = 1; track < 4; track++) {
-    var index = track - 1;
-    fitMedia(myEnsemble[index], track, 1, 5);
-    println("this iteration, track = " + track + " and index = " + index);
-}
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -181,39 +113,13 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Introduction additive : Création d'une introduction additive avec itération de liste
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-# Musique
-introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
-
-for measure in range(1, len(introSounds) + 1):
-    # nous ajoutons 1 à len(introSounds) puisque le deuxième argument de la plage est exclusif
-    index = measure - 1  # index de liste basé sur zéro
-    track = measure  # la piste est la même que le compteur "measure"
-    fitMedia(introSounds[index], track, measure, 5)
+include::code-examples/data-structures-additive-introduction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Introduction additive : Création d'une introduction additive avec une itération de tableau
-
-// Paramétrage
-setTempo(120);
-
-// Musique
-var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
-
-for (var measure = 1; measure < introSounds.length + 1; measure++) {
-    // nous ajoutons 1 à introSounds.length, car nous voulons que "measure" aille jusqu'à "introSounds.length"
-    var index = measure - 1; // index de tableau basé sur 0
-    var track = measure; // la piste "track" est la même que le compteur "measure"
-    fitMedia(introSounds[index], track, measure, 5);
-}
+include::code-examples/data-structures-additive-introduction.js.txt[]
 ----
 
 [[usingdatastructureswithmakebeat]]
@@ -333,79 +239,13 @@ Voici un exemple de solution :
 [role="curriculum-python"]
 [source,python]
 ----
-# Opérations de chaînes de caractères et de listes : Ce qui peut être réalisé avec des listes et des chaînes de caractères
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-# Création de chaînes de caractères et listes de beats
-stringA = "0+++----0+++--0+"
-stringB = "0-0-0-0-----0-0-"
-soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
-soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
-
-# Affichage du deuxième caractère de chaque chaîne de caractères.
-print(stringA[1])
-print(stringB[1])
-
-# Affichage du dernier élément de vos listes.
-print(soundsA[len(soundsA) - 1])
-print(soundsB[len(soundsB) - 1])
-
-# Création et affichage de stringC, la concaténation de stringA et stringB.
-stringC = stringA + stringB
-print(stringC)
-
-# Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
-soundsC = soundsA + soundsB + soundsA
-print(soundsC)
-
-# Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
-stringD = stringC[1:5]
-print(stringD)
-
-# Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
-soundsD = soundsC[2 : len(soundsC)]
-print(soundsD)
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Opérations de chaînes de caractères et de tableaux : Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
-// Paramétrage
-setTempo(120);
-
-// Création des chaînes de caractères et des tableaux de mes beats
-var stringA = "0+++----0+++--0+";
-var stringB = "0-0-0-0-----0-0-";
-var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
-var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
-
-// Affichage du deuxième caractère de chaque chaîne de caractères.
-println(stringA[1]);
-println(stringB[1]);
-
-// Affichage du dernier élément de vos tableaux.
-println(soundsA[soundsA.length - 1]);
-println(soundsB[soundsB.length - 1]);
-
-// Création et affichage de stringC, la concatenation de stringA et de stringB.
-var stringC = stringA + stringB;
-println(stringC);
-
-// Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
-var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
-println(soundsC);
-
-// Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
-var stringD = stringC.substring(1, 5);
-println(stringD);
-
-// Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
-var soundsD = soundsC.slice(2, soundsC.lenght);
-println(soundsD);
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
 Voyez ci-dessous un exemple de la façon dont vous pouvez utiliser les opérations de chaîne de caractères avec la fonction `makeBeat()` :
@@ -421,58 +261,13 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Opérations de chaînes de caractères : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-# Musique
-initialBeat = "0+0+00-00+++-0++"
-drumInstr = RD_UK_HOUSE_MAINBEAT_10
-
-def expander(beatString):
-    newBeat = ""
-    for i in range(0, len(beatString)):
-        beatSlice = beatString[0:i]
-        newBeat = newBeat + beatSlice
-    # renvoie la nouvelle chaîne de caractères pour qu'elle puisse être utilisée à l'extérieur de la fonction
-    return newBeat
-
-finalBeat = expander(initialBeat)
-print(finalBeat)
-
-# makeBeat(drumInstr, 1, 1, initialBeat) # chaîne de caractères de beat initiale
-makeBeat(drumInstr, 1, 1, finalBeat)
+include::code-examples/data-structures-string-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Opérations de chaînes de caractères : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue
-
-// Paramétrage
-setTempo(120);
-
-// Musique
-var initialBeat = "0+0+00-00+++-0++";
-var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
-
-function expander(beatString) {
-    var newBeat = "";
-    for (var i = 0; i < beatString.length; i = i + 1) {
-        beatSlice = beatString.substring(0, i);
-        newBeat = newBeat + beatSlice;
-    }
-    // renvoie la nouvelle chaîne de caractères pour qu'elle puisse être utilisée à l'extérieur de la fonction
-    return newBeat;
-}
-
-var finalBeat = expander(initialBeat);
-println(finalBeat);
-
-// makeBeat(drumInstr, 1, 1, initialBeat); // chaîne de caractères de beat initiale
-makeBeat(drumInstr, 1, 1, finalBeat);
+include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -484,47 +279,13 @@ Enfin, `makeBeat()` vous permet de gérer plusieurs clips de sons à la fois. Ce
 [role="curriculum-python"]
 [source,python]
 ----
-# Création d'un enchaînement de rythmes percussifs : Utilisation de listes avec la fonction makeBeat()
-
-# Paramétrage
-from earsketch import *
-setTempo(100)
-
-# Avant, nous avions une piste pour chaque son (mesure 1) :
-kick = OS_KICK05
-snare = OS_SNARE01
-kickBeat = "0+++----0+++----"
-snareBeat = "----0+++----0+++"
-makeBeat(kick, 1, 1, kickBeat)
-makeBeat(snare, 2, 1, snareBeat)
-
-# Maintenant, nous allons les combiner (mesure 3):
-drums = [OS_KICK05, OS_SNARE01]
-beat = "0+++1+++0+++1+++"
-makeBeat(drums, 1, 3, beat)
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Création d'un enchaînement de rythmes percussifs : Utilisation de tableaux avec la fonction makeBeat()
-
-// Paramétrage
-setTempo(100);
-
-// Musique
-// Avant, nous avions une piste pour chaque son (mesure 1):
-var kick = OS_KICK05;
-var snare = OS_SNARE01;
-var kickBeat = "0+++----0+++----";
-var snareBeat = "----0+++----0+++";
-makeBeat(kick, 1, 1, kickBeat);
-makeBeat(snare, 2, 1, snareBeat);
-
-// Maintenant, nous allons les combiner (mesure 3):
-var drums = [OS_KICK05, OS_SNARE01];
-var beat = "0+++1+++0+++1+++";
-makeBeat(drums, 1, 3, beat);
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
 
 .ENTRAÎNEZ-VOUS
@@ -537,54 +298,13 @@ Voici la solution :
 [role="curriculum-python"]
 [source,python]
 ----
-# Exemples de beats ou rythmes : Créez des rythmes de divers genres
-
-# Paramétrage
-from earsketch import *
-setTempo(110)
-
-# Clips de sons
-drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01]
-
-# Beat de rock sur la mesure 1
-makeBeat(drums, 1, 1, "0+++1+++0+++1+++")
-makeBeat(drums, 2, 1, "2+2+2+2+2+2+2+2+")
-
-# Beat de hip-hop sur la mesure 3
-makeBeat(drums, 1, 3, "0+++1++1+10+1+++")
-makeBeat(drums, 2, 3, "2+2+2+2+2+2+2+2+")
-
-# Beat de jazz sur la mesure 5
-makeBeat(drums, 2, 5, "2++2+22++2+22++2")
-
-# Beat de dembow (latin, caribéen) sur la mesure 7
-makeBeat(drums, 1, 7, "0++10+1+0++10+1+")
+include::code-examples/data-structures-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Exemples de beats ou rythmes : Créez des rythmes de divers genres
-
-// Paramétrage
-setTempo(110);
-
-// Clips de sons
-var drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
-
-// Beat de rock sur la mesure 1
-makeBeat(drums, 1, 1, "0+++1+++0+++1+++");
-makeBeat(drums, 2, 1, "2+2+2+2+2+2+2+2+");
-
-// Beat de hip-hop sur la mesure 3
-makeBeat(drums, 1, 3, "0+++1++1+10+1+++");
-makeBeat(drums, 2, 3, "2+2+2+2+2+2+2+2+");
-
-// Beat de jazz sur la mesure 5
-makeBeat(drums, 2, 5, "2++2+22++2+22++2");
-
-// Beat de dembow (latin, caribéen) sur la mesure 7
-makeBeat(drums, 1, 7, "0++10+1+0++10+1+");
+include::code-examples/data-structures-examples-of-beats.js.txt[]
 ----
 
 .ENTRAÎNEZ-VOUS

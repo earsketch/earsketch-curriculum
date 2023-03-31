@@ -1,0 +1,16 @@
+// Iterar a través de arreglos: Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
+
+// Configuración
+setTempo(130);
+
+// Música
+
+// Crear un arreglo de clips
+var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
+
+// Recorrer los elementos del arreglo
+for (var pista = 1; pista < 4; pista++) {
+    var indice = pista - 1;
+    fitMedia(miConjunto[indice], pista, 1, 5);
+    println("en esta iteracion, pista = " + pista + " y indice = " + indice);
+}

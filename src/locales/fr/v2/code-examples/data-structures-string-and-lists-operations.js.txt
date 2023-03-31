@@ -1,0 +1,33 @@
+// Opérations de chaînes de caractères et de tableaux : Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
+// Paramétrage
+setTempo(120);
+
+// Création des chaînes de caractères et des tableaux de mes beats
+var stringA = "0+++----0+++--0+";
+var stringB = "0-0-0-0-----0-0-";
+var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
+var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
+
+// Affichage du deuxième caractère de chaque chaîne de caractères.
+println(stringA[1]);
+println(stringB[1]);
+
+// Affichage du dernier élément de vos tableaux.
+println(soundsA[soundsA.length - 1]);
+println(soundsB[soundsB.length - 1]);
+
+// Création et affichage de stringC, la concatenation de stringA et de stringB.
+var stringC = stringA + stringB;
+println(stringC);
+
+// Création et affichage de soundsC, la concaténation de vos soundsA, soundsB et soundsA à nouveau.
+var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
+println(soundsC);
+
+// Création et affichage de stringD, la tranche de stringC comprise entre le deuxième et le cinquième caractère.
+var stringD = stringC.substring(1, 5);
+println(stringD);
+
+// Création et affichage de soundsD, la tranche de stringC comprise entre le troisième et les derniers éléments.
+var soundsD = soundsC.slice(2, soundsC.lenght);
+println(soundsD);

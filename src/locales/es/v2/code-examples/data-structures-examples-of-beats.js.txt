@@ -1,0 +1,21 @@
+// Ejemplos de ritmos: Crear ritmos de diferentes géneros
+
+// Configuración
+setTempo(110);
+
+// Clips de sonido
+var bateria = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
+
+// Ritmo de rock en el compás 1
+makeBeat(bateria, 1, 1, "0+++1+++0+++1+++");
+makeBeat(bateria, 2, 1, "2+2+2+2+2+2+2+2+");
+
+// Ritmo de hip hop en el compás 3
+makeBeat(bateria, 1, 3, "0+++1++1+10+1+++");
+makeBeat(bateria, 2, 3, "2+2+2+2+2+2+2+2+");
+
+// Ritmo de jazz en el compás 5
+makeBeat(bateria, 2, 5, "2++2+22++2+22++2");
+
+// Ritmo de dembow (latino, caribeño) en el compás 7
+makeBeat(bateria, 1, 7, "0++10+1+0++10+1+");

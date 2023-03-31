@@ -1,0 +1,14 @@
+// Introduction additive : Création d'une introduction additive avec une itération de tableau
+
+// Paramétrage
+setTempo(120);
+
+// Musique
+var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
+
+for (var measure = 1; measure < introSounds.length + 1; measure++) {
+    // nous ajoutons 1 à introSounds.length, car nous voulons que "measure" aille jusqu'à "introSounds.length"
+    var index = measure - 1; // index de tableau basé sur 0
+    var track = measure; // la piste "track" est la même que le compteur "measure"
+    fitMedia(introSounds[index], track, measure, 5);
+}
