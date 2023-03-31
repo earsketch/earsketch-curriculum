@@ -1,0 +1,78 @@
+# Canción completa de verano en Atlanta: Cómo crear una canción completa usando abstracciones
+# la estructura de la canción: Intro-A-B-A-B
+
+from earsketch import *
+setTempo(110)
+
+# Variables de sonido
+melodia1 = EIGHT_BIT_ATARI_BASSLINE_005
+melodia2 = DUBSTEP_LEAD_018
+melodia3 = DUBSTEP_LEAD_017
+melodia4 = DUBSTEP_LEAD_013
+lineaDeBajo1 = HIPHOP_BASSSUB_001
+lineaDeBajo2 = RD_TRAP_BASSDROPS_2
+metales1 = Y30_BRASS_4
+grito = CIARA_SET_TALK_ADLIB_AH_4
+piano = YG_RNB_PIANO_4
+bombo = OS_KICK02
+hihat = OS_CLOSEDHAT03
+
+# DEFINICIONES DE FUNCIONES
+
+# Añadir batería:
+def anadirBateria(comienzo, fin, patron):
+    # Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
+    if patron == "heavy":
+        cadenaDeTiemposDeBombo = "0---0---0---00--"
+        cadenaDeTiemposDeHihat = "-----000----0-00"
+    elif patron == "ligero":
+        cadenaDeTiemposDeBombo = "0-------0---0---"
+        cadenaDeTiemposDeHihat = "--0----0---0---"
+    # Entonces creamos el ritmo
+    # de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4)
+    # de los compases comienzo al fin:
+    for compas in range(comienzo, fin):
+        # Aquí colocaremos nuestro ritmo en "compas",
+        # el cual, al principio, es igual a "comienzo",
+        # el cual es un parámetro de la función.
+        makeBeat(bombo, 3, compas, cadenaDeTiemposDeBombo)
+        makeBeat(hihat, 4, compas, cadenaDeTiemposDeHihat)
+
+# Intro:
+def intro(comienzo, fin):
+    fitMedia(melodia1, 1, comienzo, comienzo + 1)
+    fitMedia(melodia1, 1, comienzo + 2, comienzo + 3)
+    fitMedia(lineaDeBajo1, 2, comienzo, comienzo + 3)
+    # transición:
+    fitMedia(lineaDeBajo2, 2, comienzo + 3, fin)
+    fitMedia(grito, 3, comienzo + 3.75, fin)
+
+# SeccionA:
+def seccionA(comienzo, fin):
+    fitMedia(melodia2, 1, comienzo, fin)
+    fitMedia(metales1, 2, comienzo, fin)
+    setEffect(2, VOLUME, GAIN, -20, comienzo, -10, fin)
+    anadirBateria(comienzo, fin, "heavy")
+    # Modulación del registro para la transición:
+    setEffect(1, BANDPASS, BANDPASS_FREQ, 200, fin - 2, 1000, fin)
+
+# SeccionB:
+def seccionB(comienzo, fin):
+    fitMedia(melodia3, 1, comienzo, comienzo + 2)
+    fitMedia(melodia4, 1, comienzo + 2, fin)
+    fitMedia(piano, 2, comienzo, fin)
+    anadirBateria(comienzo, fin, "ligero")
+
+# LLAMADAS A FUNCIÓN
+intro(1, 5)
+seccionA(5, 9)
+seccionB(9, 13)
+seccionA(13, 17)
+seccionB(17, 21)
+
+# _Fade out_:
+for pista in range(1, 5):
+    setEffect(pista, VOLUME, GAIN, 0, 19, -60, 21)
+# Reducir el volumen del hihat y del bombo:
+setEffect(4, VOLUME, GAIN, -15)
+setEffect(3, VOLUME, GAIN, -10)

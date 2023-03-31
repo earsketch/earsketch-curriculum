@@ -1,0 +1,27 @@
+# Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+# Música
+introSolista = TECHNO_ACIDBASS_002
+solistaPrincipal1 = TECHNO_ACIDBASS_003
+solistaPrincipal2 = TECHNO_ACIDBASS_005
+bateriaAdicional1 = TECHNO_LOOP_PART_025
+bateriaAdicional2 = TECHNO_LOOP_PART_030
+bateriaPrincipal = TECHNO_MAINLOOP_019
+lineaDeBajo = TECHNO_SUBBASS_002
+
+# Sección 1
+fitMedia(introSolista, 1, 1, 5)
+fitMedia(solistaPrincipal1, 1, 5, 9)
+fitMedia(bateriaAdicional1, 2, 3, 5)
+fitMedia(bateriaAdicional2, 2, 5, 8)  # Los tambores paran.
+fitMedia(bateriaPrincipal, 3, 5, 8)
+
+# Sección 2
+fitMedia(solistaPrincipal2, 1, 9, 17)
+fitMedia(bateriaAdicional2, 2, 9, 17)  # Se vuelve a tocar la batería.
+fitMedia(bateriaPrincipal, 3, 9, 17)
+fitMedia(lineaDeBajo, 4, 9, 17)

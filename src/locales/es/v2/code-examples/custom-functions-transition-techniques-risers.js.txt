@@ -1,0 +1,36 @@
+// Técnicas de transición - risers: Cómo crear transiciones entre secciones usando _risers_ y un platillo crash
+
+// Configuración
+setTempo(128);
+
+// Música
+var riseSynth = YG_EDM_SYNTH_RISE_1;
+var riseDeAire = RD_EDM_SFX_RISER_AIR_1;
+var principal1 = YG_EDM_LEAD_1;
+var principal2 = YG_EDM_LEAD_2;
+var bombo1 = YG_EDM_KICK_LIGHT_1;
+var bombo2 = ELECTRO_DRUM_MAIN_LOOPPART_001;
+var redoblante = ELECTRO_DRUM_MAIN_LOOPPART_003;
+var crash = Y50_CRASH_2;
+var fxEnReversa = YG_EDM_REVERSE_FX_1;
+
+// Sección 1
+fitMedia(principal1, 1, 1, 17);
+fitMedia(bombo1, 2, 9, 17);
+
+// Transición
+fitMedia(fxEnReversa, 3, 16, 17);
+fitMedia(riseSynth, 4, 13, 17);
+fitMedia(riseDeAire, 5, 13, 17);
+fitMedia(crash, 6, 17, 19);
+
+// Sección 2
+fitMedia(principal2, 1, 17, 33);
+fitMedia(bombo2, 7, 25, 33);
+fitMedia(redoblante, 8, 29, 33);
+
+// Efectos
+setEffect(1, VOLUME, GAIN, 0, 16, 1, 17); // Ajustar los volúmenes para que encajen mejor
+setEffect(4, VOLUME, GAIN, -10);
+setEffect(7, VOLUME, GAIN, -20);
+setEffect(8, VOLUME, GAIN, -20);
