@@ -1,0 +1,13 @@
+// Création de boucle pour mes beats : Création d'une boucle d'une instruction makeBeat() grâce à une boucle for
+
+// Paramétrage
+setTempo(120);
+
+// Variables
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
+
+// Création d'une boucle pour notre beat
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
+}
