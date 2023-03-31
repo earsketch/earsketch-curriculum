@@ -55,26 +55,13 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# Intro Script: This code adds one audio clip to the DAW
-
-# Setup Section
-from earsketch import *
-setTempo(120)
-
-# Music Section
-fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
+include::../../en/code-examples/getting-started-intro-script.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Intro Script: This code adds one audio clip to the DAW
-
-// Setup Section
-setTempo(120);
-
-// Music Section
-fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
+include::../../en/code-examples/getting-started-intro-script.js.txt[]
 ----
 
 {nbsp} +
@@ -176,26 +163,13 @@ OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# Using fitMedia(): Adding a clip to the DAW
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Music
-fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
+include::../../en/code-examples/getting-started-using-fitmedia.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using fitMedia(): Adding a clip to the DAW
-
-// Setup
-setTempo(120);
-
-// Music
-fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
+include::../../en/code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
 لتحدي إضافي ، أضف المزيد من استدعاءات `fitMedia()`إلى البرنامج النصي كما نفعل أدناه. لاحظ أننا نستخدم رقم مسار مختلف لكل استدعاء` fitMedia () `:
@@ -203,30 +177,13 @@ fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
 [role="curriculum-python"]
 [source,python]
 ----
-# Using fitMedia() 2: Multiple fitMedia() calls on different tracks
-
-# Setup Section
-from earsketch import *
-setTempo(100)
-
-# Music Section
-fitMedia(Y01_DRUMS_1, 1, 1, 9)
-fitMedia(Y11_BASS_1, 2, 1, 9)
-fitMedia(Y11_GUITAR_1, 3, 1, 9)
+include::../../en/code-examples/getting-started-using-fitmedia-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
-
-// Setup Section
-setTempo(100);
-
-// Music Section
-fitMedia(Y01_DRUMS_1, 1, 1, 9);
-fitMedia(Y11_BASS_1, 2, 1, 9);
-fitMedia(Y11_GUITAR_1, 3, 1, 9);
+include::../../en/code-examples/getting-started-using-fitmedia-2.js.txt[]
 ----
 
 {nbsp} +
@@ -298,24 +255,13 @@ END OF OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-# Finding errors: Five errors below must be fixed
-
-from earsketch import *
-setTempo(88
-
-fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
-fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
+include::../../en/code-examples/getting-started-finding-errors.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Finding errors: Five errors below must be fixed
-
-setTempo(88;
-
-fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
-fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
+include::../../en/code-examples/getting-started-finding-errors.js.txt[]
 ----
 ////
 OPTIONAL

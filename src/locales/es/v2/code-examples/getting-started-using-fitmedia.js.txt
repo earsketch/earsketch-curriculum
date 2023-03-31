@@ -1,0 +1,7 @@
+// Cómo usar fitMedia(): Agregar un clip a la EAD
+
+// Configuración
+setTempo(120);
+
+// Música
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);

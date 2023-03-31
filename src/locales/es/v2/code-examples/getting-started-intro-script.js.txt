@@ -1,0 +1,7 @@
+// Script de introducción: Este código agrega un clip de audio a la EAD
+
+// Sección de configuración
+setTempo(120);
+
+// Sección de música
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
