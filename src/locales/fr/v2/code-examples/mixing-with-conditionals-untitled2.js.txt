@@ -1,0 +1,10 @@
+if (condition1) {
+    // Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est true (vraie)
+} else if (condition2) {
+    // Ici, écrivez les instructions si la condition2 est True. Si la condition2 est False, passez à la prochaine ligne
+    // elif est l'abbréviation de else if
+} else if (condition3) {
+    // Ici, écrivez les instructions si la condition3 est True. Si la condition3 est False, passez à la ligne suivante
+} else {
+    // Ici, écrivez les instructions au cas où toutes les 3 conditions sont False
+}

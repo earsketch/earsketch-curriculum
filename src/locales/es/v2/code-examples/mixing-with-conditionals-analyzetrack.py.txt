@@ -1,0 +1,15 @@
+# AnalyzeTrack(): Cómo usar la función analyzeTrack() para desplegar el volumen de una pista
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+# Colocar un sonido en la pista 1
+sonido = COMMON_LOVE_VOX_COMMON_1
+fitMedia(sonido, 1, 1, 9)
+
+# Crear una variable para almacenar el volumen de la pista 1
+volumen1 = analyzeTrack(1, RMS_AMPLITUDE)
+
+# Mostrar el volumen en la consola
+print(volumen1)

@@ -1,0 +1,8 @@
+if condition1:
+    # Ici, écrivez les instructions que l'ordinateur doit exécuter si la condition1 est True (vraie). Si la condition est False (n'est pas respectée), passez à la ligne suivante
+elif condition2:
+    # Ici, écrivez les instructions si condition2 est True. Si la condition2 est False, passez à la ligne suivante
+elif condition3:
+    # Ici, écrivez ici les instructions si condition3 est True. Si la condition3 est False, passez à la ligne suivante
+else:
+    # Ici, écrivez les instructions au cas où toutes les 3 conditions sont False

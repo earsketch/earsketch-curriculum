@@ -1,0 +1,3 @@
+if condition:
+    # Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est True (vraie)
+    # Notez que les instructions sont indentées, tout comme pour les boucles

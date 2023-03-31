@@ -13,40 +13,13 @@ Vamos a ver cómo detectar la intensidad sonora, o volumen, de la pista. Asegúr
 [role="curriculum-python"]
 [source,python]
 ----
-# AnalyzeTrack(): Cómo usar la función analyzeTrack() para desplegar el volumen de una pista
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Colocar un sonido en la pista 1
-sonido = COMMON_LOVE_VOX_COMMON_1
-fitMedia(sonido, 1, 1, 9)
-
-# Crear una variable para almacenar el volumen de la pista 1
-volumen1 = analyzeTrack(1, RMS_AMPLITUDE)
-
-# Mostrar el volumen en la consola
-print(volumen1)
+include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// AnalyzeTrack(): Cómo usar la función analyzeTrack() para desplegar el volumen de una pista
-
-// Configuración
-setTempo(120);
-
-// Colocar un sonido en la pista 1
-var sonido = COMMON_LOVE_VOX_COMMON_1;
-fitMedia(sonido, 1, 1, 9);
-
-// Crear una variable para almacenar el volumen de la pista 1
-var volumen1 = analyzeTrack(1, RMS_AMPLITUDE);
-
-// Mostrar el volumen en la consola
-println(volumen1);
+include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
 Puedes leer en tu consola que el volumen impreso es de 0.10306035109110138.
@@ -169,64 +142,13 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Ejemplo Booleano: Analizamos el volumen de nuestras pistas
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Crear 2 pistas
-melodia1 = RD_CINEMATIC_SCORE_STRINGS_14
-melodia2 = RD_UK_HOUSE__5THCHORD_1
-fitMedia(melodia1, 1, 1, 9)
-fitMedia(melodia2, 2, 1, 9)
-
-# Evaluar el volumen de las pistas
-volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-
-# Revisar si la pista 1 tiene más volumen que la pista 2
-# Creamos la comparacion1 booleana.
-comparacion1 = volumenPista1 > volumenPista2
-print("Tiene la pista 1 mas volumen que la pista 2?")
-print(comparacion1)
-
-# Crear un ciclo for para comparar con 0.01 el volumen de cada pista
-for pista in range(1, 3):
-    volumen = analyzeTrack(pista, RMS_AMPLITUDE)
-    print("Es el número de pista" + str(pista) + "mayor que 0.01?")
-    print(volumen > 0.01)
+include::code-examples/mixing-with-conditionals-boolean-example.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ejemplo Booleano: Analizamos el volumen de nuestras pistas.
-// Configuración
-setTempo(120);
-
-// Crear 2 pistas
-var melodia1 = RD_CINEMATIC_SCORE_STRINGS_14;
-var melodia2 = RD_UK_HOUSE__5THCHORD_1;
-fitMedia(melodia1, 1, 1, 9);
-fitMedia(melodia2, 2, 1, 9);
-
-// Evaluar el volumen de las pistas
-var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
-var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
-
-// Revisar si la pista 1 tiene más volumen que la pista 2
-// Creamos la comparacion1 booleana.
-var comparacion1 = (volumenPista1 > volumenPista2);
-println("Tiene la pista 1 más volumen que la pista 2?");
-println(comparacion1);
-
-// Crear un ciclo for para comparar con 0.01 el volumen de cada pista
-for (var pista = 1; pista < 3; pista++) {
-    var volumen = analyzeTrack(pista, RMS_AMPLITUDE);
-    println("Es el número de pista " + pista + " mayor que 0.01?");
-    println(volumen > 0.01);
-}
+include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -245,15 +167,13 @@ A continuación, hay un ejemplo de una declaración condicional. Observa sus sim
 [role="curriculum-python"]
 [source,python]
 ----
-if condicion:
-    # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es True.
+include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-if (condicion){
-    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es true.
+include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
 .PRÁCTICA
@@ -268,48 +188,13 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Mezcla Automática 1: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Crear 2 pistas
-melodia1 = RD_CINEMATIC_SCORE_STRINGS_14
-melodia2 = RD_UK_HOUSE__5THCHORD_1
-fitMedia(melodia1, 1, 1, 9)
-fitMedia(melodia2, 2, 1, 9)
-
-# Evaluar el volumen de las pistas
-volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-
-# Mezcla Automática 1: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
-if volumenPista1 > volumenPista2:
-    setEffect(1, VOLUME, GAIN, -10)
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
-
-// Configuración
-setTempo(120);
-
-// Crear 2 pistas
-var melodia1 = RD_CINEMATIC_SCORE_STRINGS_14;
-var melodia2 = RD_UK_HOUSE__5THCHORD_1;
-fitMedia(melodia1, 1, 1, 9);
-fitMedia(melodia2, 2, 1, 9);
-
-// Evaluar el volumen de las pistas
-var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
-var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
-
-// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
-if (volumenPista1 > volumenPista2) {
-    setEffect(1, VOLUME, GAIN, -10);
-}
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 
 Tal vez nos gustaría revisar varias condiciones y ejecutar otra serie de declaraciones dependiendo de cada condición. Puedes agregar todas las condiciones que quieras. Usamos la siguiente sintaxis:
@@ -317,26 +202,13 @@ Tal vez nos gustaría revisar varias condiciones y ejecutar otra serie de declar
 [role="curriculum-python"]
 [source,python]
 ----
-if condicion1:
-    # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es True. Si es False, prosigue a la siguiente línea.
-elif condicion2:
-    # Escribe aquí las instrucciones si la condicion2 es True. Si la condicion2 es False, prosigue a la siguiente línea.
-elif condicion3:
-    # Escribe aquí las instrucciones si la condicion3 es True. Si la condicion3 es False, prosigue a la siguiente línea.
-else:
-    # Escribe aquí las instrucciones si todas las 3 condiciones son False.
+include::code-examples/mixing-with-conditionals-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-if (condicion1) {
-    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true. } else if (condicion2) {
-    // # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea. // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
-} else if (condicion3) {
-    // Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea. } else {
-    // Escribe aquí las instrucciones si todas las 3 condiciones son false.
-}
+include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 ----
 
 [[mixingyourtracks]]
@@ -377,106 +249,13 @@ A continuación, hay un ejemplo de una mezcla automatizada. Podemos decir que es
 [role="curriculum-python"]
 [source,python]
 ----
-# Mezcla Automática 2: Usar declaraciones condicionales para mezclar las pistas
-
-# Configuarción
-from earsketch import *
-setTempo(120)
-
-# Añadir una melodía y un bajo
-melodia1 = YG_ALT_POP_GUITAR_3
-melodia2 = YG_ALT_POP_GUITAR_1
-bajo1 = YG_ALT_POP_BASS_1
-bajo2 = DUBSTEP_SUBBASS_008
-cuerdas = YG_HIP_HOP_STRINGS_4
-fitMedia(melodia1, 1, 1, 9)
-fitMedia(melodia2, 1, 9, 17)
-fitMedia(bajo1, 2, 1, 9)
-fitMedia(bajo2, 2, 9, 17)
-fitMedia(cuerdas, 3, 9, 17)
-
-# Añadir percusiones usando makeBeat()
-ritmoBombo = "0---0-----0-0---"
-ritmoRedoblante = "--0-0------000-"
-sonidoBombo = OS_KICK02
-sonidoRedoblante = OS_SNARE06
-for compas in range(5, 17):
-    makeBeat(ritmoBombo, 4, compas, ritmoBombo)
-    makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante)
-
-# Mezclar mis pistas
-# Primero, analizamos el volumen de las pistas.
-volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE)
-print("El volumen de la pista 1 es" + str(volumenPista1))
-volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE)
-print("El volumen de la pista 2 es" + str(volumenPista2))
-volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE)
-print("El volumen de la pista 3 es" + str(volumenPista3))
-
-if volumenPista1 < volumenPista2:
-    # Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
-    setEffect(1, VOLUME, GAIN, +5)
-    print("la pista 1 tuvo menos volumen que la pista 2")
-elif volumenPista1 < volumenPista3:
-    # Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
-    setEffect(1, VOLUME, GAIN, +5)
-    print("la pista 1 tuvo menos volumen que la pista 3")
-else:
-    # Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
-    print("la pista 1 ya tenía el volumen más alto")
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Mezcla Automática 2: Usar declaraciones condicionales para mezclar las pistas
-
-// Configuración
-setTempo(120);
-
-// Añadir una melodía y un bajo
-var melodia1 = YG_ALT_POP_GUITAR_3;
-var melodia2 = YG_ALT_POP_GUITAR_1;
-var bajo1 = YG_ALT_POP_BASS_1;
-var bajo2 = DUBSTEP_SUBBASS_008;
-var cuerdas = YG_HIP_HOP_STRINGS_4;
-fitMedia(melodia1, 1, 1, 9);
-fitMedia(melodia2, 1, 9, 17);
-fitMedia(bajo1, 2, 1, 9);
-fitMedia(bajo2, 2, 9, 17);
-fitMedia(cuerdas, 3, 9, 17);
-
-// Añadir percusiones usando makeBeat()
-var ritmoBombo = "0---0-----0-0---";
-var ritmoRedoblante = "--0-0------000-";
-var sonidoBombo = OS_KICK02;
-var sonidoRedoblante = OS_SNARE06;
-for (var compas = 5; compas > 17; compas++) {
-    makeBeat(sonidoBombo, 4, compas, ritmoBombo);
-    makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante);
-}
-
-// Mezclar mis pistas
-// Primero, analizamos el volumen de las pistas.
-var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
-println("El volumen de la pista 1 es" + volumenPista1);
-var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
-println("El volumen de la pista 2 es" + volumenPista2);
-var volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE);
-println("El volumen de la pista 3 es" + volumenPista3);
-
-if (volumenPista1 < volumenPista2) {
-    // Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
-    setEffect(1, VOLUME, GAIN, +5);
-    println("la pista 1 tuvo menos volumen que la pista 2");
-} else if (volumenPista1 < volumenPista3) {
-    // Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
-    setEffect(1, VOLUME, GAIN, +5);
-    println("la pista 1 tuvo menos volumen que la pista 3");
-} else {
-    // Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
-    println("la pista 1 ya tenía el volumen más alto");
-}
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 ----
 
 {nbsp} +
@@ -528,11 +307,7 @@ if (volumenPista1 < volumenPista2) {
 
 [source,python]
 ----
-n = 5
-if (n * 3) == 15:
-    print(n + 5)
-else:
-    print(n)
+include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 ----
 
 [answers]
@@ -548,12 +323,7 @@ else:
 
 [source,javascript]
 ----
-var n = 5;
-if (n * 3 == 15) {
-    println(5 + n);
-} else {
-    println(n);
-}
+include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 ----
 
 [answers]
