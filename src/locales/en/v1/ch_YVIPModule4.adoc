@@ -180,67 +180,13 @@ The Your Voice is Power sample code is not available for JavaScript. To view the
 [role="curriculum-python"]
 [source,python]
 ----
-# A-B-A-B Form without functions
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Music
-# Create an A section
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 1, 5)
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, 1, 5)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 1, 2)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 3, 4)
-
-# Create a 4 measure B section between measures 5 and 9
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_3, 1, 5, 9)
-fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 3, 5, 9)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 5, 6)
-
-# Back to section A at measure 9
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 9, 13)
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, 9, 13)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 9, 10)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 11, 12)
-
-# Then back to section B at measure 13.
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_3, 1, 13, 17)
-fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 3, 13, 17)
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 13, 14)
+include::code-examples/ch_YVIPModule4-untitled1.py.txt[]
 ----
 
 [role="curriculum-python"]
 [source,python]
 ----
-# A-B-A-B Form with functions
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Music
-# A section
-def sectionA(startMeasure, endMeasure):
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, startMeasure, endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, startMeasure, startMeasure + 1)
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, startMeasure + 2, startMeasure + 3)
-
-# B section
-def sectionB(startMeasure, endMeasure):
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_3, 1, startMeasure, endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 3, startMeasure, endMeasure)
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, startMeasure, startMeasure + 1)
-
-# Setting up an ABA musical form through function calls
-sectionA(1, 5)
-sectionB(5, 9)
-sectionA(9, 13)
-sectionB(13, 17)
+include::code-examples/ch_YVIPModule4-untitled2.py.txt[]
 ----
 [Writing-Custom-Functions]
 === Writing Custom Functions
@@ -269,33 +215,7 @@ The Your Voice is Power sample code is not available for JavaScript. To view the
 [role="curriculum-python"]
 [source,python]
 ----
-# Functions in YVIP
-
-from earsketch import *
-setTempo(120)
-
-# Sounds
-drum = ENTREP_BEAT_DRUMBEAT
-bass = ENTREP_THEME_BASS_1
-vox = ENTREP_VOX_BK_FALSETTO
-clap1 = CIARA_SET_PERC_CLAP_3
-
-# music
-# verse1
-def verse(start, end):
-    fitMedia(drum, 1, start, end)
-    fitMedia(bass, 2, start, end)
-
-# chorus
-def chorus(start, end):
-    fitMedia(vox, 4, start, end)
-    fitMedia(clap1, 5, start, end)
-
-# Function Calls
-verse(1, 5)
-chorus(5, 9)
-verse(9, 13)
-chorus(13, 17)
+include::code-examples/ch_YVIPModule4-untitled3.py.txt[]
 ----
 
 [CodingCustomFunctionsinEarSketch]
