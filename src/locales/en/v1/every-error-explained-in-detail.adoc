@@ -23,7 +23,7 @@ Can't turn off pasted without this appearing in JS mode.
 [role="curriculum-python"]
 [source,python]
 ----
-from EarSketch import *
+include::code-examples/every-error-explained-in-detail-untitled1.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -32,7 +32,7 @@ Instead, our statement should read:
 [role="curriculum-python"]
 [source,python]
 ----
-from earsketch import *
+include::code-examples/every-error-explained-in-detail-untitled2.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -62,11 +62,7 @@ Can't turn off pasting without this appearing in JS mode
 [role="curriculum-python"]
 [source,python]
 ----
-for measure in range(1, 9, 2):
-    fitMedia(melody, 1, measure, measure + 2)
-    makeBeat(kick, 2, measure, beatString)
-  makeBeat(kick, 2, measure + 1, beatString)
-fitMedia(beat, 3, 3, 9)
+include::code-examples/every-error-explained-in-detail-untitled3.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -75,12 +71,7 @@ A properly indented body should instead look like the snippet below. The for-loo
 [role="curriculum-python"]
 [source,python]
 ----
-for measure in range(1, 9, 2):
-    fitMedia(melody, 1, measure, measure + 2)
-    makeBeat(kick, 2, measure, beatString)
-    makeBeat(kick, 2, measure + 1, beatString)
-
-fitMedia(beat, 3, 3, 9)
+include::code-examples/every-error-explained-in-detail-untitled4.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -113,30 +104,13 @@ Indentation errors do not occur in JavaScript, though you should still use prope
 [role="curriculum-python"]
 [source,python]
 ----
-# Index Error: Example
-
-from earsketch import *
-setTempo(100)
-
-orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
-
-fitMedia(orch[1], 1, 1, 17)
-fitMedia(orch[2], 2, 5, 17)
-fitMedia(orch[3], 3, 9, 17)
+include::code-examples/every-error-explained-in-detail-index-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Index Error: Example
-
-setTempo(120);
-
-var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
-
-fitMedia(orch[1], 1, 1, 17);
-fitMedia(orch[2], 2, 5, 17);
-fitMedia(orch[3], 3, 9, 17);
+include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -148,30 +122,13 @@ A Type Error is thrown and the console states that a different data type was exp
 [role="curriculum-python"]
 [source,python]
 ----
-# Index Error: Correction
-
-from earsketch import *
-setTempo(100)
-
-orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
-
-fitMedia(orch[0], 1, 1, 17)
-fitMedia(orch[1], 2, 5, 17)
-fitMedia(orch[2], 3, 9, 17)
+include::code-examples/every-error-explained-in-detail-index-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Index Error: Correction
-
-setTempo(100);
-
-var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
-
-fitMedia(orch[0], 1, 1, 17);
-fitMedia(orch[1], 2, 5, 17);
-fitMedia(orch[2], 3, 9, 17);
+include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -205,24 +162,13 @@ fitMedia(orch[2], 3, 9, 17);
 [role="curriculum-python"]
 [source,python]
 ----
-# Name Error: Example
-
-from earsketch import *
-setTempo(120)
-
-today = readInput("What day is it?")
-print("Today is " + Today)
+include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Reference Error: Example
-
-setTempo(120);
-
-var today = readInput("What day is it?");
-println("Today is " + Today);
+include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
 ----
 
 In this case, the variable containing the string to be concatenated was not referred to by the correct name; a lowercase "t" should have been used.
@@ -230,24 +176,13 @@ In this case, the variable containing the string to be concatenated was not refe
 [role="curriculum-python"]
 [source,python]
 ----
-# Name Error: Correction
-
-from earsketch import *
-setTempo(120)
-
-today = readInput("What day is it?")
-print("Today is " + today)
+include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Reference Error: Correction
-
-setTempo(120);
-
-var today = readInput("What day is it?");
-println("Today is " + today);
+include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
 ----
 
 *Solution:* Check the spelling and case of your variables and functions. When using a variable or calling a function, make sure each has been defined previously. Make sure you define a function before it is called. Although you can paste the names in directly, ensure your sound constant names align with the clip names in the Sound Browser.
@@ -267,23 +202,7 @@ println("Today is " + today);
 [role="curriculum-python"]
 [source,python]
 ----
-# Parse Error: Example
-
-from earsketch import *
-setTempo(98)
-
-soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
-
-chords1 = RD_WORLD_PERCUSSION_PAN_FLUTE_1
-chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
-
-fitMedia(chords1, 1, 1, 9)
-fitMedia(chords2, 1, 9, 17)
-
-for measure in range(1, 17, 2):
-  # select a random clip with EarSketch API function
-  beat = selectRandomFile(soundFolder
-  fitMedia(beat, 2, measure, measure + 2)
+include::code-examples/every-error-explained-in-detail-parse-error.py.txt[]
 ----
 
 ////
@@ -296,23 +215,7 @@ Upon running the code, the console points us to line 26. This line looks fine, b
 [role="curriculum-python"]
 [source,python]
 ----
-# Parse Error: Correction
-
-from earsketch import *
-setTempo(98)
-
-soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
-
-chords1 = RD_WORLD_PERCUSSION_PAN_FLUTE_1
-chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
-
-fitMedia(chords1, 1, 1, 9)
-fitMedia(chords2, 1, 9, 17)
-
-for measure in range(1, 17, 2):
-    # select a random clip with EarSketch API function
-    beat = selectRandomFile(soundFolder)
-    fitMedia(beat, 2, measure, measure + 2)
+include::code-examples/every-error-explained-in-detail-parse-error.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -333,38 +236,13 @@ Parse errors are interpreted broadly as syntax errors in JavaScript, which is co
 [role="curriculum-python"]
 [source,python]
 ----
-# Syntax Error: Example
-
-from earsketch import *
-setTempo(120)
-
-clap = RD_TRAP_ARCADEFIRESFX_1
-beatString = "00+-0-00+0+-0+++"
-
-for measure in range(1, 32):
-    if measure % 4 = 0
-        # Use EarSketch API function to shuffle beat string
-        beatString = shuffleString(beatString)
-    makeBeat(clap, 1, measure, beatString)
+include::code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Syntax Error: Example
-
-setTempo(120);
-
-var clap = RD_TRAP_ARCADEFIRESFX_1;
-var beatString = "00+-0-00+0+-0+++";
-
-for (var measure = 1; measure < 32; measure++){
-    if (measure % 4 = 0)
-        // Use EarSketch API function to shuffle beat string
-        beatString = shuffleString(beatString);
-    }
-    makeBeat(clap, 1, measure, beatString);
-}
+include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -376,38 +254,13 @@ For this script, the code editor flags the offending line for us. Notice that we
 [role="curriculum-python"]
 [source,python]
 ----
-# Syntax Error: Correction
-
-from earsketch import *
-setTempo(120)
-
-clap = RD_TRAP_ARCADEFIRESFX_1
-beatString = "00+-0-00+0+-0+++"
-
-for measure in range(1, 32):
-    if measure % 4 == 0:
-        # Use EarSketch API function to shuffle beat string
-        beatString = shuffleString(beatString)
-    makeBeat(clap, 1, measure, beatString)
+include::code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Syntax Error: Correction
-
-setTempo(120);
-
-var clap = RD_TRAP_ARCADEFIRESFX_1;
-var beatString = "00+-0-00+0+-0+++";
-
-for (var measure = 1; measure < 32; measure++) {
-    if (measure % 4 === 0) {
-    // Use EarSketch API function to shuffle beat string
-        beatString = shuffleString(beatString);
-    }
-    makeBeat(clap, 1, measure, beatString);
-}
+include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -437,35 +290,13 @@ Beyond the common errors given above, check for opening and closing quotations a
 [role="curriculum-python"]
 [source,python]
 ----
-# Type Error: Example
-
-from earsketch import *
-setTempo(120)
-
-soundClip = DUBSTEP_DRUMLOOP_MAIN_006
-beatString = "0+000+++0--0-0--"
-measureTotal = 0
-
-for measure in range(1, 9):
-    makeBeat(soundClip, 1, measure, beatString)
-    measureTotal += 1
-
-print("Your beat is " + measureTotal + " measures long.")
+include::code-examples/every-error-explained-in-detail-type-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Type Error: Example
-
-setTempo(120);
-
-var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
-var measureTotal = readInput("How many measures?");
-
-println(measureTotal);
-
-fitMedia(soundClip, 1, 1, measureTotal + 1);
+include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -477,35 +308,13 @@ A type error is thrown because we accidentally passed a string as the last `fitM
 [role="curriculum-python"]
 [source,python]
 ----
-# Type Error: Correction
-
-from earsketch import *
-setTempo(120)
-
-soundClips = DUBSTEP_DRUMLOOP_MAIN_006
-beatString = "0+000+++0--0-0--"
-measureTotal = 0
-
-for measure in range(1, 9):
-    makeBeat(soundClips, 1, measure, beatString)
-    measureTotal += 1
-
-print("Your beat is " + str(measureTotal) + " measures long.")
+include::code-examples/every-error-explained-in-detail-type-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Type Error: Correction
-
-setTempo(120);
-
-var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
-var measureTotal = readInput("How many measures?");
-
-println(measureTotal);
-
-fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
+include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
 ----
 
 *Solution:* The EarSketch console gives the offending data type and points to a specific line number. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
@@ -538,28 +347,13 @@ fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
 [role="curriculum-python"]
 [source,python]
 ----
-# Value Error: Example
-
-from earsketch import *
-setTempo(120)
-
-drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
-beatString = "1+3+1+221+2+1+24"
-
-makeBeat(drumKit, 1, 1, beatString)
+include::code-examples/every-error-explained-in-detail-value-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Range Error: Example
-
-setTempo(120);
-
-var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
-var beatString = "1+3+1+221+2+1+24";
-
-makeBeat(drumKit, 1, 1, beatString);
+include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -571,28 +365,13 @@ makeBeat(drumKit, 1, 1, beatString);
 [role="curriculum-python"]
 [source,python]
 ----
-# Value error: Correction
-
-from earsketch import *
-setTempo(120)
-
-drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
-beatString = "0+2+0+110+1+0+13"
-
-makeBeat(drumKit, 1, 1, beatString)
+include::code-examples/every-error-explained-in-detail-value-error.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Range error: Correction
-
-setTempo(120);
-
-var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
-var beatString = "0+2+0+110+1+0+13";
-
-makeBeat(drumKit, 1, 1, beatString);
+include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
 ----
 
 *Solution:* Check your beat strings to ensure values fall within the correct range. Also, confirm any arguments provided to `setEffect()` are within the effect's required range.
