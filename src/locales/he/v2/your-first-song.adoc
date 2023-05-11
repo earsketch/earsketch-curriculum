@@ -99,13 +99,13 @@
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/your-first-song-comments.py.txt[]
+include::../../en/v2/code-examples/your-first-song-comments.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/your-first-song-comments.js.txt[]
+include::../../en/v2/code-examples/your-first-song-comments.js.txt[]
 ----
 
 

@@ -13,13 +13,13 @@ We’ll see how to detect the loudness, or volume of a track. Make sure you unde
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
 
@@ -130,13 +130,13 @@ Here is an example:
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-boolean-example.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-boolean-example.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-boolean-example.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -155,13 +155,13 @@ Below is an example of conditional statement, note the similarity with a for loo
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled1.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled1.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
 .PRACTICE
@@ -175,26 +175,26 @@ Here is an example:
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 We might want to check several conditions and execute a different set of statements depending on each condition. You can add as many conditions as you like. We use the following syntax:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled2.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled2.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled2.js.txt[]
 ----
 
 [[mixingyourtracks]]
@@ -236,13 +236,13 @@ Below is an example of automated mixing. We can say it's automated because if yo
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 ----
 
 
@@ -293,7 +293,7 @@ Which of the following elements is a boolean?
 What would the output of this block of code be (what would print to the console)?
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled3.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled3.py.txt[]
 ----
 [answers]
 * 10
@@ -308,7 +308,7 @@ include::../../en/code-examples/mixing-with-conditionals-untitled3.py.txt[]
 What would the output of this block of code be (what would print to the console)?
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled3.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled3.js.txt[]
 ----
 [answers]
 * 10

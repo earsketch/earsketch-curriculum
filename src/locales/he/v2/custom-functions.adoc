@@ -20,14 +20,14 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-form.py.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-form.py.txt[]
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-form.js.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-form.js.txt[]
 ----
 
 .תרגלו
@@ -47,13 +47,13 @@ include::../../en/code-examples/custom-functions-a-b-a-form.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-untitled1.py.txt[]
+include::../../en/v2/code-examples/custom-functions-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-untitled1.js.txt[]
+include::../../en/v2/code-examples/custom-functions-untitled1.js.txt[]
 ----
 
 . ()sectionA הוא השם שבחרנו לפונקציה. אפשר לבחור כל שם שתרצו. הקפידו לבחור בשם תיאורי, כך שהקוד יהיה קריא.
@@ -82,13 +82,13 @@ include::../../en/code-examples/custom-functions-untitled1.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
 ----
 
 
@@ -132,13 +132,13 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
 הטכניקה של השמטת ערוצים דורשת רק שינויים במספר קריאות לפונקציה `()fitMedia`. ראו את הדוגמה למטה.
@@ -146,13 +146,13 @@ include::../../en/code-examples/custom-functions-transition-techniques-drum-fill
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
 הדוגמה הבאה משתמשת במרימים (risers) ובמצילה (crash cymbal) במעבר.
@@ -160,13 +160,13 @@ include::../../en/code-examples/custom-functions-transition-techniques-track-dro
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-risers.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-risers.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.js.txt[]
 ----
 
 [[yourfullsong]]
@@ -199,12 +199,12 @@ include::../../en/code-examples/custom-functions-transition-techniques-risers.js
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
+include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 ----
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
+include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
 בדוגמה הזו, השתמשנו בלולאה בתוך פונקציה שהגדרנו! השתמשנו בפרמטרים של הפונקציה (`start` ו-`end`) בלולאה.

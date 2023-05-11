@@ -55,13 +55,13 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/getting-started-intro-script.py.txt[]
+include::../../en/v2/code-examples/getting-started-intro-script.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/getting-started-intro-script.js.txt[]
+include::../../en/v2/code-examples/getting-started-intro-script.js.txt[]
 ----
 
 {nbsp} +
@@ -163,13 +163,13 @@ OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/getting-started-using-fitmedia.py.txt[]
+include::../../en/v2/code-examples/getting-started-using-fitmedia.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/getting-started-using-fitmedia.js.txt[]
+include::../../en/v2/code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
 لتحدي إضافي ، أضف المزيد من استدعاءات `fitMedia()`إلى البرنامج النصي كما نفعل أدناه. لاحظ أننا نستخدم رقم مسار مختلف لكل استدعاء` fitMedia () `:
@@ -177,13 +177,13 @@ include::../../en/code-examples/getting-started-using-fitmedia.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/getting-started-using-fitmedia-2.py.txt[]
+include::../../en/v2/code-examples/getting-started-using-fitmedia-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/getting-started-using-fitmedia-2.js.txt[]
+include::../../en/v2/code-examples/getting-started-using-fitmedia-2.js.txt[]
 ----
 
 {nbsp} +
@@ -255,13 +255,13 @@ END OF OPTIONAL
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/getting-started-finding-errors.py.txt[]
+include::../../en/v2/code-examples/getting-started-finding-errors.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/getting-started-finding-errors.js.txt[]
+include::../../en/v2/code-examples/getting-started-finding-errors.js.txt[]
 ----
 ////
 OPTIONAL

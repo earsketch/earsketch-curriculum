@@ -43,13 +43,13 @@ video::./videoMedia/002-05-Variables-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/add-beats-instead-of-this.py.txt[]
+include::../../en/v2/code-examples/add-beats-instead-of-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/add-beats-instead-of-this.js.txt[]
+include::../../en/v2/code-examples/add-beats-instead-of-this.js.txt[]
 ----
 
 .תרגלו
@@ -60,13 +60,13 @@ include::../../en/code-examples/add-beats-instead-of-this.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/add-beats-variables.py.txt[]
+include::../../en/v2/code-examples/add-beats-variables.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/add-beats-variables.js.txt[]
+include::../../en/v2/code-examples/add-beats-variables.js.txt[]
 ----
 שימו לב לכך שחשוב לתת למשתנים שמות תיאוריים ובעלי משמעות. לדוגמה, העדיפו את השם `synth1` על `music1` או `test`, שלא מספקים מידע. בדרך זו, מי שקורא/ת את הקוד יכול/ה לדעת מהו צליל זה.
 
@@ -191,13 +191,13 @@ video::./videoMedia/011-03-makeBeat()-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/add-beats-multi-beat.py.txt[]
+include::../../en/v2/code-examples/add-beats-multi-beat.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/add-beats-multi-beat.js.txt[]
+include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
 ----
 
 .תרגלו
@@ -236,13 +236,13 @@ video is currently being edited
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/add-beats-examples-of-beats.py.txt[]
+include::../../en/v2/code-examples/add-beats-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/add-beats-examples-of-beats.js.txt[]
+include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]

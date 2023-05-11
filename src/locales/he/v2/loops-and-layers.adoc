@@ -23,13 +23,13 @@ in the "revamping videos" tab (includes link to script)
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-looping-my-beats.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-looping-my-beats.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
 
@@ -56,13 +56,13 @@ include::../../en/code-examples/loops-and-layers-looping-my-beats.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-printing.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-printing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-printing.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-printing.js.txt[]
 ----
 
 הסבר למה שיוצג בקונסול:
@@ -139,13 +139,13 @@ video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-no-loops.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-no-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-no-loops.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
 אפשר להשתמש בלולאת`for`כדי ליצור את אותה המוסיקה בצורה יותר יעילה. מונה הלולאה הוא "measure". שימו לב לכך שגוף הלולאה כולל שתי שורות. בשתי השורות מופיע המשתנה "measure".
@@ -153,13 +153,13 @@ include::../../en/code-examples/loops-and-layers-no-loops.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-loops.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-loops.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-loops.js.txt[]
 ----
 
 *המתרגם (interpreter)*, קורא ומבצע את הסקריפט. הסדר בו המתרגם מבצע את ההוראות נקרא *בקרת זרימה - control flow*. בדרך כלל המתרגם עובר שורה שורה, מלמעלה למטה. לכן צריך להגדיר משתנים לפני שמשתמשים בהם בקוד. 
@@ -202,13 +202,13 @@ BMW
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-incrementing.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-incrementing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-incrementing.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
 

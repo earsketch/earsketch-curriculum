@@ -35,13 +35,13 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-volume-effect.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-volume-effect.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.js.txt[]
 ----
 
 דנו באפקט`VOLUME`. כעת נדון באפקט `DELAY`. האזינו לשני הקליפים הבאים. הראשון ללא האפקט, והשני עם האפקט *delay*.
@@ -71,13 +71,13 @@ include::../../en/code-examples/effects-and-envelopes-volume-effect.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-delay-effect.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-delay-effect.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.js.txt[]
 ----
 
 [[functionsandmoreeffects]]
@@ -160,13 +160,13 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-envelopes.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-envelopes.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-envelopes.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
 צפו בסרטון הבא המדגים מעטפות נוספות
@@ -179,7 +179,7 @@ video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
 ----
 
 
@@ -189,7 +189,7 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 ----
 
 .תרגלו
@@ -204,13 +204,13 @@ include::../../en/code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
 ----
 
 And here is an example of fade in and fade out on all the tracks:
@@ -218,12 +218,12 @@ And here is an example of fade in and fade out on all the tracks:
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
 ----
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
+include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 ----
 
 

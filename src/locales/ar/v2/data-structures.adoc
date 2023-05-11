@@ -20,13 +20,13 @@
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-instead-of-writing-this.py.txt[]
+include::../../en/v2/code-examples/data-structures-instead-of-writing-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-instead-of-writing-this.js.txt[]
+include::../../en/v2/code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -46,13 +46,13 @@ include::../../en/code-examples/data-structures-instead-of-writing-this.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-list.py.txt[]
+include::../../en/v2/code-examples/data-structures-list.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-arrays.js.txt[]
+include::../../en/v2/code-examples/data-structures-arrays.js.txt[]
 ----
 
 [[Graphic]]
@@ -77,13 +77,13 @@ image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-iterating-through-lists.py.txt[]
+include::../../en/v2/code-examples/data-structures-iterating-through-lists.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-iterating-through-arrays.js.txt[]
+include::../../en/v2/code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -113,13 +113,13 @@ include::../../en/code-examples/data-structures-iterating-through-arrays.js.txt[
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-additive-introduction.py.txt[]
+include::../../en/v2/code-examples/data-structures-additive-introduction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-additive-introduction.js.txt[]
+include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[]
 ----
 
 [[usingdatastructureswithmakebeat]]
@@ -239,13 +239,13 @@ include::../../en/code-examples/data-structures-additive-introduction.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-string-and-lists-operations.py.txt[]
+include::../../en/v2/code-examples/data-structures-string-and-lists-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-string-and-lists-operations.js.txt[]
+include::../../en/v2/code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
 هذا hgمثال على كيفية استخدام عمليات السلاسل مع `MakeBeat()`:
@@ -261,13 +261,13 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-string-operations.py.txt[]
+include::../../en/v2/code-examples/data-structures-string-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-string-operations.js.txt[]
+include::../../en/v2/code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -279,13 +279,13 @@ include::../../en/code-examples/data-structures-string-operations.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-making-a-drum-set.py.txt[]
+include::../../en/v2/code-examples/data-structures-making-a-drum-set.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-making-a-drum-set.js.txt[]
+include::../../en/v2/code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
 
 .تدريب
@@ -298,13 +298,13 @@ include::../../en/code-examples/data-structures-making-a-drum-set.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/data-structures-examples-of-beats.py.txt[]
+include::../../en/v2/code-examples/data-structures-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/data-structures-examples-of-beats.js.txt[]
+include::../../en/v2/code-examples/data-structures-examples-of-beats.js.txt[]
 ----
 
 .تدريب

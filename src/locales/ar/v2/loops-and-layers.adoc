@@ -23,13 +23,13 @@ in the "revamping videos" tab (includes link to script)
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-looping-my-beats.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-looping-my-beats.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
 
@@ -56,13 +56,13 @@ include::../../en/code-examples/loops-and-layers-looping-my-beats.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-printing.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-printing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-printing.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-printing.js.txt[]
 ----
 
 وهنا سوف ترى بالكونسول الاسطر التالية:
@@ -140,13 +140,13 @@ video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-no-loops.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-no-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-no-loops.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
 يمكننا استخدام حلقة `for` لإنشاء نفس الموسيقى بدقة أكثر . العداد هنا هو "measure". لاحظ أن جسم الحلقة يحتوي على سطرين من التعليمات البرمجية، وكلاهما يستخدم "measure" العداد.
@@ -154,13 +154,13 @@ include::../../en/code-examples/loops-and-layers-no-loops.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-loops.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-loops.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-loops.js.txt[]
 ----
 
 يقوم *المترجم * بقراءة وتنفيذ البرنامج (السكريبت). الترتيب الذي يتم التنفيذ به يسمى * تدفق التحكم *. عادة ما يتم الانتقال سطرا سطرا ، من أعلى إلى أسفل. هذا هو السبب في أننا نحتاج إلى تحديد المتغيرات قبل استدعائها في المقطع البرمجي. 
@@ -203,13 +203,13 @@ Incrementation means increasing the counter's value. In `for` loops we used the 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/loops-and-layers-incrementing.py.txt[]
+include::../../en/v2/code-examples/loops-and-layers-incrementing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/loops-and-layers-incrementing.js.txt[]
+include::../../en/v2/code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
 

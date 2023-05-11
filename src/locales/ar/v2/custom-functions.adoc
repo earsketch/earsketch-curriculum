@@ -20,14 +20,14 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-form.py.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-form.py.txt[]
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-form.js.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-form.js.txt[]
 ----
 
 .تدريب
@@ -47,13 +47,13 @@ include::../../en/code-examples/custom-functions-a-b-a-form.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-untitled1.py.txt[]
+include::../../en/v2/code-examples/custom-functions-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-untitled1.js.txt[]
+include::../../en/v2/code-examples/custom-functions-untitled1.js.txt[]
 ----
 
 . هنا ،() sectionAهو الاسم الذي اخترناه لدالتنا ، يمكنك اختيار أي اسم تريده. حاول تسمية دالتك بطريقة وصفية حتى يسهل قراءة التعليمات البرمجية الخاصة بك.
@@ -83,13 +83,13 @@ include::../../en/code-examples/custom-functions-untitled1.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
+include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
 ----
 
 
@@ -133,13 +133,13 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
 تتطلب تقنية حذف القنوات فقط تغييرات في عدد المكالمات للدالة `fitMedia()`. وفيما يلي مثال على ذلك.
@@ -147,13 +147,13 @@ include::../../en/code-examples/custom-functions-transition-techniques-drum-fill
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
 المثال التالي يستخدم الناهضون(risers) المتعددين وانهيار الصنج أثناء الانتقال.
@@ -161,13 +161,13 @@ include::../../en/code-examples/custom-functions-transition-techniques-track-dro
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-risers.py.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-transition-techniques-risers.js.txt[]
+include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.js.txt[]
 ----
 
 [[yourfullsong]]
@@ -200,12 +200,12 @@ include::../../en/code-examples/custom-functions-transition-techniques-risers.js
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
+include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 ----
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
+include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
 في هذا المثال ، استخدمنا حلقة for داخل دالة مخصصة! استخدمنا عوامل الدالة (` بداية ` و ` نهاية `) داخل حلقة for.

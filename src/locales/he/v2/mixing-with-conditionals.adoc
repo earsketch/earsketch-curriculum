@@ -13,13 +13,13 @@
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
 
@@ -130,13 +130,13 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-boolean-example.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-boolean-example.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-boolean-example.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -155,13 +155,13 @@ include::../../en/code-examples/mixing-with-conditionals-boolean-example.js.txt[
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled1.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled1.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
 .תרגלו
@@ -175,26 +175,26 @@ include::../../en/code-examples/mixing-with-conditionals-untitled1.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 לפעמים נדרש לבדוק מספר תנאים ולבצע בלוקים שונים של קוד, בהתאם לערכי התנאים. אפשר להוסיף כמה תנאים שצריך. יש להשתמש בתחביר (syntax) הבא:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled2.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled2.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled2.js.txt[]
 ----
 
 [[mixingyourtracks]]
@@ -235,13 +235,13 @@ include::../../en/code-examples/mixing-with-conditionals-untitled2.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 ----
 
 
@@ -292,7 +292,7 @@ include::../../en/code-examples/mixing-with-conditionals-automatic-mixing-2.js.t
 מה יהי הפלט של קטע הקוד הבא (כלומר, מה הוא ידפיס לקונסול)?
 [source,python]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled3.py.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled3.py.txt[]
 ----
 [answers]
 * 10
@@ -307,7 +307,7 @@ include::../../en/code-examples/mixing-with-conditionals-untitled3.py.txt[]
 מה יהי הפלט של קטע הקוד הבא (כלומר, מה הוא ידפיס לקונסול)?
 [source,javascript]
 ----
-include::../../en/code-examples/mixing-with-conditionals-untitled3.js.txt[]
+include::../../en/v2/code-examples/mixing-with-conditionals-untitled3.js.txt[]
 ----
 [answers]
 * 10
