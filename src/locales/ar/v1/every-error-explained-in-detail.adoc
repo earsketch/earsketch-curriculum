@@ -23,7 +23,7 @@ Can't turn off pasted without this appearing in JS mode.
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-untitled1.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-import-error.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -32,7 +32,7 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-untitled1.py.
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-untitled2.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-import-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -63,7 +63,7 @@ Can't turn off pasting without this appearing in JS mode
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-untitled3.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-indentation-error.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -72,7 +72,7 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-untitled3.py.
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-untitled4.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-indentation-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]

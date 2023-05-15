@@ -23,7 +23,7 @@ Can't turn off pasted without this appearing in JS mode.
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled1.py.txt[]
+include::code-examples/every-error-explained-in-detail-import-error.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -32,7 +32,7 @@ L'instruction devrait plutôt être la suivante :
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled2.py.txt[]
+include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[]
 ----
 
 [role="curriculum-python"]

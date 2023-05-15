@@ -1,4 +1,4 @@
-# Index Error: Correction
+# Index Error: Example
 
 from earsketch import *
 setTempo(100)
