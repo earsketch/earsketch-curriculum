@@ -123,13 +123,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.j
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-index-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-index-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -178,13 +178,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-reference-err
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-name-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-name-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-reference-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
 * الحل: * تحقق من التهجئة وحالة المتغيرات والوظائف. عند استخدام متغير أو استدعاء دالة ، تأكد من تعريف كل متغير مسبقًا. تأكد من تحديد وظيفة قبل استدعائها. على الرغم من أنه يمكنك لصق الأسماء مباشرةً ، تأكد من محاذاة أسماء الصوت الثابتة الخاصة بك مع أسماء المقاطع في متصفح الصوت.
@@ -217,7 +217,7 @@ The parse error included in the example above breaks AsciiDoc syntax highlightin
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-parse-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-parse-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -257,13 +257,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -312,13 +312,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.js
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-type-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
 * الحل: * توفر وحدة التحكم في EarSketch نوع البيانات المسيء وتشير إلى رقم سطر معين. قم بمطابقة الأنواع في التعبيرات الحسابية والعمليات على هياكل البيانات ونقل المعلمات إلى دالة. بالإضافة إلى ذلك ، يجب التأكد من إرسال استدعاءات الوظائف في عوامل الكمية المطلوبة.
@@ -369,13 +369,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-range-error.j
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-value-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-value-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-range-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
 * الحل: * تحقق من سلاسل النغمات للتأكد من أن القيم تقع ضمن النطاق الصحيح. تأكد أيضًا من أن جميع العوامل' التي تم تمريرها إلى `setEffect()`تقع ضمن نطاق القيم المسموح بها للتأثير.

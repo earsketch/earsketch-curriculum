@@ -122,13 +122,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.j
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-index-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-index-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-index-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -176,13 +176,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-reference-err
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-name-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-name-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-reference-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
 *פתרון:* יש לבדוק את האיות של כל שמות המשתנים והפונקציות. יש לשים לב להבדל בין אותיות קטנות וגדולות. כשמשתמשים במשתנה או פונקציה, יש לוודא שהם הוגדרו. יש לוודא שפונקציה מודרת לפני שקוראים לה. למרות שאפשר להשתמש בהעתק/הדבק, יש לוודא ששמות הקבועים זהם לשמות הקליפים בדפדפן הצלילים.
@@ -215,7 +215,7 @@ The parse error included in the example above breaks AsciiDoc syntax highlightin
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-parse-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-parse-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -254,13 +254,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-syntax-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -308,13 +308,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.js
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-type-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-type-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
 *פתרון:* הקונסול מצביע על טיפוס הנתונים השגוי ועל השורה בה נמצאת השגיאה. יש לבדוק התאמה בין הטיפוסים בביטויים אריתמטיים, פעולות על מבני נתונים ובהעברת פרמטרים לפונקציה. בנוסף, צריך לוודא שלקריאות לפונקציה מועברים פרמטרים בכמות הנדרשת.
@@ -365,13 +365,13 @@ include::../../en/v1/code-examples/every-error-explained-in-detail-range-error.j
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-value-error.py.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-value-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v1/code-examples/every-error-explained-in-detail-range-error.js.txt[]
+include::../../en/v1/code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
 *פתרון:* יש לבדוק את מחרוזות התיפוף ולוודא שהערכים בטווח הנכון. כמו כן, יש לוודא שכל הפרמטרים המועברים ל-`()setEffect` הם בטווח הערכים המותר לאפקט.
