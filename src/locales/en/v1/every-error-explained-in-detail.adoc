@@ -32,7 +32,7 @@ Instead, our statement should read:
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled2.py.txt[]
+include::code-examples/every-error-explained-in-detail-untitled1-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -62,7 +62,7 @@ Can't turn off pasting without this appearing in JS mode
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled3.py.txt[]
+include::code-examples/every-error-explained-in-detail-untitled2.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -71,7 +71,7 @@ A properly indented body should instead look like the snippet below. The for-loo
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled4.py.txt[]
+include::code-examples/every-error-explained-in-detail-untitled2-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -122,13 +122,13 @@ A Type Error is thrown and the console states that a different data type was exp
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-index-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-index-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-index-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -176,13 +176,13 @@ In this case, the variable containing the string to be concatenated was not refe
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-name-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
 *Solution:* Check the spelling and case of your variables and functions. When using a variable or calling a function, make sure each has been defined previously. Make sure you define a function before it is called. Although you can paste the names in directly, ensure your sound constant names align with the clip names in the Sound Browser.
@@ -215,7 +215,7 @@ Upon running the code, the console points us to line 26. This line looks fine, b
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-parse-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-parse-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -254,13 +254,13 @@ For this script, the code editor flags the offending line for us. Notice that we
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -308,13 +308,13 @@ A type error is thrown because we accidentally passed a string as the last `fitM
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-type-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-type-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
 *Solution:* The EarSketch console gives the offending data type and points to a specific line number. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
