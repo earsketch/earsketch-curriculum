@@ -1,7 +1,7 @@
-# Name Error : Exemple
+# Name Error : Correction
 
 from earsketch import *
 setTempo(120)
 
 today = readInput("What day is it?")
-print("Today is " + Today)
+print("Today is " + today)

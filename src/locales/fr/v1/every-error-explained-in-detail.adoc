@@ -62,7 +62,7 @@ Can't turn off pasting without this appearing in JS mode
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled3.py.txt[]
+include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -71,7 +71,7 @@ Un corps de code à l'indentation correcte devrait plutôt ressembler à l'extra
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-untitled4.py.txt[]
+include::code-examples/every-error-explained-in-detail-indentation-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]

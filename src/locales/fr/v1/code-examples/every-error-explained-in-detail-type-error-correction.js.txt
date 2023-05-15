@@ -1,4 +1,4 @@
-// Type Error : Exemple
+// Type Error : Correction
 
 setTempo(120);
 
@@ -7,4 +7,4 @@ var measureTotal = readInput("Combien y a-t-il de mesures ?");
 
 println(measureTotal);
 
-fitMedia(soundClip, 1, 1, measureTotal + 1);
+fitMedia(soundClip, 1, 1, Number(measureTotal) + 1);
