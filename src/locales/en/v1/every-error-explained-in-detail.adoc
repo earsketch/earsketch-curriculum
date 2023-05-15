@@ -365,13 +365,13 @@ include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-value-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-value-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
 *Solution:* Check your beat strings to ensure values fall within the correct range. Also, confirm any arguments provided to `setEffect()` are within the effect's required range.
