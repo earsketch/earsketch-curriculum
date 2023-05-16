@@ -32,7 +32,7 @@ L'instruction devrait plutôt être la suivante :
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-import-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -122,13 +122,13 @@ Une erreur de type « Type Error » est renvoyée et la console indique qu'u
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-index-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-index-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-index-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -176,13 +176,13 @@ Dans ce cas, la variable contenant la chaîne de caractères à concaténer n'a 
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-name-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
 *Solution :* Vérifiez l'orthographe et la casse de vos variables et de vos fonctions. Lorsque vous utilisez une variable ou que vous appelez une fonction, assurez-vous que chacune a été précédemment définie et veillez à bien définir une fonction avant de l'appeler. Bien que vous puissiez coller les noms directement, assurez-vous que vos noms de constantes de sons s'alignent sur les noms de clips dans le navigateur de sons.
@@ -215,7 +215,7 @@ Lors de l'exécution du code, la console pointe vers la ligne 26. Cette ligne se
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-parse-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-parse-error-correction.py.txt[]
 ----
 
 [role="curriculum-python"]
@@ -254,13 +254,13 @@ Pour ce script, l'éditeur de code nous signale la ligne fautive. Notez qu'il ma
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -308,13 +308,13 @@ Une erreur de type « Type Error » est renvoyée, car nous avons accidentel
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-type-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-type-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
 *Solution :* La console de EarSketch donne le type de données fautif et pointe vers un numéro de ligne spécifique. Vérifiez les types de données cohérents dans les expressions arithmétiques, les opérations de structure de données et les arguments de fonctions. De plus, assurez-vous que vos appels de fonction ont le nombre d'arguments approprié.
@@ -365,13 +365,13 @@ Le quatrième argument de la fonction `makeBeat()` est du type approprié, mais 
 [role="curriculum-python"]
 [source,python]
 ----
-include::code-examples/every-error-explained-in-detail-value-error.py.txt[]
+include::code-examples/every-error-explained-in-detail-value-error-correction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
+include::code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
 *Solution :* Vérifiez vos chaînes de caractères de beat pour vous assurer que les valeurs sont dans la plage appropriée. De plus, confirmez que tous les arguments fournis à la fonction `setEffect()` sont dans la plage requise pour l'effet.
