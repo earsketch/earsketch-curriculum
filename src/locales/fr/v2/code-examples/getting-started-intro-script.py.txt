@@ -1,0 +1,8 @@
+# Intro Script : Ce code a pour but d'ajouter un clip audio dans le DAW
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)

@@ -1,0 +1,22 @@
+# Declaración condicional: Cómo usar un booleano para crear variaciones de una función
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+melodia2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
+bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Definición de la función
+def verso(comienzo, variacion):
+    # Variacion es igual a True o False.
+    if variacion:
+        fitMedia(melodia1, 1, comienzo, comienzo + 4)
+    else:
+        fitMedia(melodia2, 1, comienzo, comienzo + 4)
+    fitMedia(bateria1, 2, comienzo, comienzo + 4)  # Está fuera de la declaración condicional (no hay sangría).
+
+# Llamadas a función
+verso(1, True)
+verso(7, False)

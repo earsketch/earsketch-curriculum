@@ -1,0 +1,14 @@
+// Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de arreglo
+
+// Configuración
+setTempo(120);
+
+// Música
+var sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
+
+for (var compas = 1; compas < sonidosIntroductorios.length + 1; compas++) {
+    // Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length.
+    var indice = compas - 1; // El índice de lista comienza en cero.
+    var pista = compas; // Cambia la pista con compas.
+    fitMedia(sonidosIntroductorios[indice], pista, compas, 5);
+}

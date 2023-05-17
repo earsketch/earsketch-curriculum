@@ -1,0 +1,22 @@
+// Enveloppes complexes : Utilisation de plusieurs appels de fonction setEffect() sur une piste pour effectuer des modifications dans l'enveloppe d'effet
+
+// Paramétrage
+setTempo(120);
+
+// Musique
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
+
+// Points de temps de l'enveloppe (en mesures)
+var pointA = 1;
+var pointB = 4;
+var pointC = 6.5;
+var pointD = 7;
+var pointE = 8.5;
+var pointF = 9;
+
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Premier effet, modulation de filtre
+
+// Deuxième effet, changements de volume
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Crescendo
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Commencement du fondu de fermeture
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Fin du fondu de fermeture

@@ -1,0 +1,26 @@
+// Técnicas de transición – silencios de pista: Cómo crear transiciones entre secciones usando silencios de pista
+
+// Configuración
+setTempo(120);
+
+// Música
+var introPrincipal = TECHNO_ACIDBASS_002;
+var solistaPrincipal1 = TECHNO_ACIDBASS_003;
+var solistaPrincipal2 = TECHNO_ACIDBASS_005;
+var bateriaAdicional1 = TECHNO_LOOP_PART_025;
+var bateriaAdicional2 = TECHNO_LOOP_PART_030;
+var bateriaPrincipal = TECHNO_MAINLOOP_019;
+var lineaDeBajo = TECHNO_SUBBASS_002;
+
+// Sección 1
+fitMedia(introPrincipal, 1, 1, 5);
+fitMedia(solistaPrincipal1, 1, 5, 9);
+fitMedia(bateriaAdicional1, 2, 3, 5);
+fitMedia(bateriaAdicional2, 2, 5, 8); // La batería para.
+fitMedia(bateriaPrincipal, 3, 5, 8);
+
+// Sección 2
+fitMedia(solistaPrincipal2, 1, 9, 17);
+fitMedia(bateriaAdicional2, 2, 9, 17); // La batería comienza otra vez.
+fitMedia(bateriaPrincipal, 3, 9, 17);
+fitMedia(lineaDeBajo, 4, 9, 17);

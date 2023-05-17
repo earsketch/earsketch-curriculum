@@ -1,0 +1,19 @@
+// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+
+// Configuración
+setTempo(120);
+
+// Crear 2 pistas
+var melodia1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melodia2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melodia1, 1, 1, 9);
+fitMedia(melodia2, 2, 1, 9);
+
+// Evaluar el volumen de las pistas
+var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
+var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+if (volumenPista1 > volumenPista2) {
+    setEffect(1, VOLUME, GAIN, -10);
+}

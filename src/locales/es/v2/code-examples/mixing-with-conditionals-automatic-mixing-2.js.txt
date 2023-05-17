@@ -1,0 +1,48 @@
+// Mezcla Automática 2: Usar declaraciones condicionales para mezclar las pistas
+
+// Configuración
+setTempo(120);
+
+// Añadir una melodía y un bajo
+var melodia1 = YG_ALT_POP_GUITAR_3;
+var melodia2 = YG_ALT_POP_GUITAR_1;
+var bajo1 = YG_ALT_POP_BASS_1;
+var bajo2 = DUBSTEP_SUBBASS_008;
+var cuerdas = YG_HIP_HOP_STRINGS_4;
+fitMedia(melodia1, 1, 1, 9);
+fitMedia(melodia2, 1, 9, 17);
+fitMedia(bajo1, 2, 1, 9);
+fitMedia(bajo2, 2, 9, 17);
+fitMedia(cuerdas, 3, 9, 17);
+
+// Añadir percusiones usando makeBeat()
+var ritmoBombo = "0---0-----0-0---";
+var ritmoRedoblante = "--0-0------000-";
+var sonidoBombo = OS_KICK02;
+var sonidoRedoblante = OS_SNARE06;
+for (var compas = 5; compas > 17; compas++) {
+    makeBeat(sonidoBombo, 4, compas, ritmoBombo);
+    makeBeat(sonidoRedoblante, 5, compas, ritmoRedoblante);
+}
+
+// Mezclar mis pistas
+// Primero, analizamos el volumen de las pistas.
+var volumenPista1 = analyzeTrack(1, RMS_AMPLITUDE);
+println("El volumen de la pista 1 es" + volumenPista1);
+var volumenPista2 = analyzeTrack(2, RMS_AMPLITUDE);
+println("El volumen de la pista 2 es" + volumenPista2);
+var volumenPista3 = analyzeTrack(3, RMS_AMPLITUDE);
+println("El volumen de la pista 3 es" + volumenPista3);
+
+if (volumenPista1 < volumenPista2) {
+    // Si la pista 1 tiene menos volumen que la pista 2, entonces se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5);
+    println("la pista 1 tuvo menos volumen que la pista 2");
+} else if (volumenPista1 < volumenPista3) {
+    // Si la pista 1 tiene más volumen que la pista 2 pero menos volumen que la pista 3, se aumentará el volumen de la pista 1.
+    setEffect(1, VOLUME, GAIN, +5);
+    println("la pista 1 tuvo menos volumen que la pista 3");
+} else {
+    // Si la pista 1 tiene más volumen que las pistas 2 y 3, entonces no se cambiará nada.
+    println("la pista 1 ya tenía el volumen más alto");
+}

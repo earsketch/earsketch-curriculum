@@ -1,0 +1,19 @@
+# Declaraciones de retorno 2: Devolver el último compás de una función de sección
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+melodia1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+bateria1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Definición de la función
+def verso(comienzo):
+    fin = comienzo + 4
+    fitMedia(melodia1, 1, comienzo, fin)
+    fitMedia(bateria1, 2, comienzo, fin)
+    return fin
+
+# Llamadas a función
+ultimoCompas = verso(1)  # Llamar a la función verso, donde comienzo es el compás 1
+print(ultimoCompas)

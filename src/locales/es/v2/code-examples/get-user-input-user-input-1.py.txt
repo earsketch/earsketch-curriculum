@@ -1,0 +1,17 @@
+# Respuesta del usuario 1: Cómo pedir que el usuario escoja el tempo
+
+# Configuración
+from earsketch import *
+
+# Pedir que escoja el tempo
+pregunta = "What tempo would you like for your music? Choose a number between 45 and 220"
+respuesta = readInput(pregunta)
+
+# Convertirla en un número entero
+tempo = int(respuesta)
+
+# Poner el tempo
+setTempo(tempo)
+
+# Música
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)

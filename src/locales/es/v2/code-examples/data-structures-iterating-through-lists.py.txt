@@ -1,0 +1,16 @@
+# Iterar a través de las listas: Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
+
+# Configuración
+from earsketch import *
+setTempo(130)
+
+# Música
+
+# Crear una lista de clips
+miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
+
+# Recorrer los elementos de la lista
+for pista in range(1, 4):
+    indice = pista - 1
+    fitMedia(miConjunto[indice], pista, 1, 5)
+    print("en esta iteracion, pista = " + str(pista) + " e indice = " + str(indice))

@@ -1,0 +1,26 @@
+// Exemple de booléen : Analyse de l'intensité sonore de pistes
+// Paramétrage
+setTempo(120);
+
+// Création de deux pistes
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1,1,1,9);
+fitMedia(melody2,2,1,9);
+
+// Évaluation de l'intensité sonore des pistes
+var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
+
+// Vérification si la piste 1 est plus forte que la piste 2
+// Nous créons la comparaison booléenne 1
+var comparison1 = (loudnessTrack1 > loudnessTrack2);
+println('La piste 1 est-elle plus forte que la piste 2 ?');
+println(comparison1);
+
+// Création d'une boucle for pour comparer l'intensité sonore de chaque piste à la valeur 0.5
+for (var track = 1; track < 3; track++) {
+  var loudness = analyzeTrack(track,RMS_AMPLITUDE);
+  println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
+  println (loudness > 0.01);
+}

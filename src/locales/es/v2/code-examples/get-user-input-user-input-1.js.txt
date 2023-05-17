@@ -1,0 +1,16 @@
+// Respuesta del usuario 1: Cómo pedir que el usuario escoja el tempo
+
+// Configuración
+
+// Pedir que escoja el tempo
+var pregunta = "Que tempo te gustaria tener en tu musica? Elije un número entre 45 y 220.";
+var respuesta = readInput(pregunta);
+
+// Convertirla en un número entero
+var tempo = Number(respuesta);
+
+// Poner el tempo
+setTempo(tempo);
+
+// Música
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);

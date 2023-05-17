@@ -1,0 +1,14 @@
+# Loops: Musical repetition created with code loops
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Music
+drums1 = ELECTRO_DRUM_MAIN_BEAT_008
+drums2 = ELECTRO_DRUM_MAIN_BEAT_007
+
+# Using a loop instead of repeatedly writing similar lines of code
+for measure in range(1, 9):
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 1, measure + 0.5, measure + 1)

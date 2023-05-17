@@ -1,0 +1,20 @@
+// Aparecer mensajes: Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
+
+// Configuración
+setTempo(120);
+
+// Variables
+var tambor1 = OS_SNARE03;
+var cadena_de_tiempos = "0---0---0-0-0---";
+
+// Primera declaración println()
+println(1 + 3);
+
+// Poner nuestro ritmo en un ciclo
+// Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
+
+for (var compas = 1; compas < 5; compas++) {
+    makeBeat(drum1, 1, compas, beat_string);
+    println(compas);
+    println("ok");
+}

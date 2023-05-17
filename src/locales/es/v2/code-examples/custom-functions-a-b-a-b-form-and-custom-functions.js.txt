@@ -1,0 +1,29 @@
+// La forma A-B-A-B y las funciones personalizadas: Una canción con las secciones A y B, usando funciones personalizadas
+
+// Configuración
+setTempo(120);
+
+// Música
+
+// Crea una función para la sección A.
+function seccionA(compasDeComienzo, ultimoCompas) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, compasDeComienzo, ultimoCompas); // Principal
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, compasDeComienzo, ultimoCompas); // Tambores
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, compasDeComienzo, ultimoCompas); // Línea de bajo
+    setEffect(3, VOLUME, GAIN, -20, compasDeComienzo, 0, ultimoCompas); // Aumentar el volumen de la línea de bajo
+}
+
+// Crea una función para la sección B.
+function seccionB(compasDeComienzo, ultimoCompas) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, compasDeComienzo, ultimoCompas); // La melodía principal es diferente.
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, compasDeComienzo, ultimoCompas); // Los tambores son diferentes.
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, compasDeComienzo, ultimoCompas); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
+    setEffect(3, VOLUME, GAIN, 5, compasDeComienzo, 5, ultimoCompas); // Aumentar el volumen de la línea de bajo
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, compasDeComienzo, ultimoCompas); // Traqueteo: añadir un nuevo elemento
+}
+
+// Llamar a mis funciones
+seccionA(1, 5);
+seccionB(5, 9);
+seccionA(9, 13);
+seccionB(13, 17);

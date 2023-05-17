@@ -1,0 +1,18 @@
+# Hacer una batería: Usar listas con makeBeat()
+
+# Configuración
+from earsketch import *
+setTempo(100)
+
+# Antes, había una pista por cada sonido (compás 1):
+bombo = OS_KICK05
+redoblante = OS_SNARE01
+ritmoDeBombo = "0+++----0+++----"
+ritmoDeRedoblante = "----0+++----0+++"
+makeBeat(bombo, 1, 1, ritmoDeBombo)
+makeBeat(redoblante, 2, 1, ritmoDeRedoblante)
+
+# Ahora, podemos combinarlos (compás 3):
+bateria = [OS_KICK05, OS_SNARE01]
+ritmo = "0+++1+++0+++1+++"
+makeBeat(bateria, 1, 3, ritmo)

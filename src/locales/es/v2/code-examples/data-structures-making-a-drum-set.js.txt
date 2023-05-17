@@ -1,0 +1,18 @@
+// Hacer una batería: Usar arreglos con makeBeat()
+
+// Configuración
+setTempo(100);
+
+// Música
+// Antes, había una pista por cada sonido (compás 1):
+var bombo = OS_KICK05;
+var redoblante = OS_SNARE01;
+var ritmoDeBombo = "0+++----0+++----";
+var ritmoDeRedoblante = "----0+++----0+++";
+makeBeat(bombo, 1, 1, ritmoDeBombo);
+makeBeat(redoblante, 2, 1, ritmoDeRedoblante);
+
+// Ahora, podemos combinarlos (compás 3):
+var bateria = [OS_KICK05, OS_SNARE01];
+var ritmo = "0+++1+++0+++1+++";
+makeBeat(bateria, 1, 3, ritmo);

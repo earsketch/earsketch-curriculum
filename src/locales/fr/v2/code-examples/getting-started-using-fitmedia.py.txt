@@ -1,0 +1,8 @@
+# Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)

@@ -54,26 +54,13 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 [role="curriculum-python"]
 [source,python]
 ----
-# Script de introducción: Este código agrega un clip de audio a la EAD
-
-# Sección de configuración
-from earsketch import *
-setTempo(120)
-
-# Sección de música
-fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
+include::code-examples/getting-started-intro-script.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Script de introducción: Este código agrega un clip de audio a la EAD
-
-// Sección de configuración
-setTempo(120);
-
-// Sección de música
-fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
+include::code-examples/getting-started-intro-script.js.txt[]
 ----
 
 {nbsp} +
@@ -168,26 +155,13 @@ Mira algunos ejemplos de código usando `fitMedia()` (Recuerda que puedes hacer 
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar fitMedia(): Agregar un clip a la EAD
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
+include::code-examples/getting-started-using-fitmedia.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar fitMedia(): Agregar un clip a la EAD
-
-// Configuración
-setTempo(120);
-
-// Música
-fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
+include::code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
 Para un desafío extra, agrega más llamadas a `fitMedia()` a tu script tal como lo hacemos a continuación. Toma en cuenta que usamos otro número de pista musical para cada llamada a `fitMedia()`:
@@ -195,33 +169,13 @@ Para un desafío extra, agrega más llamadas a `fitMedia()` a tu script tal como
 [role="curriculum-python"]
 [source,python]
 ----
-# Cómo usar fitMedia() 2: Múltiples llamadas a fitMedia() en pistas musicales diferentes
-
-# Sección de configuración
-from earsketch import *
-setTempo(100)
-
-# Sección de música
-
-fitMedia(Y01_DRUMS_1, 1, 1, 9)
-fitMedia(Y11_BASS_1, 2, 1, 9)
-fitMedia(Y11_GUITAR_1, 3, 1, 9)
+include::code-examples/getting-started-using-fitmedia-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Cómo usar fitMedia() 2: Múltiples llamadas a fitMedia() en pistas musicales diferentes
-
-// Sección de configuración
-
-setTempo(100);
-
-// Sección de música
-
-fitMedia(Y01_DRUMS_1, 1, 1, 9);
-fitMedia(Y11_BASS_1, 2, 1, 9);
-fitMedia(Y11_GUITAR_1, 3, 1, 9);
+include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 ----
 
 {nbsp} +
@@ -291,24 +245,13 @@ Encuentra los 5 errores en el siguiente código:
 [role="curriculum-python"]
 [source,python]
 ----
-# Busca los errores: Arregla cinco errores
-
-from earsketch import *
-setTempo(88
-
-fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
-fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
+include::code-examples/getting-started-finding-errors.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Busca los errores: Arregla cinco errores
-
-setTempo(88;
-
-fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
-fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
+include::code-examples/getting-started-finding-errors.js.txt[]
 ----
 
 ////

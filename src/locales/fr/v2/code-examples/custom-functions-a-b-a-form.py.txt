@@ -1,0 +1,29 @@
+# Forme A-B-A : Une chanson composée de parties A et B
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+
+# Création d'une partie A
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # mélodie principale
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # percussions
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # ligne de basse
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5)  # augmentation du volume de la ligne de basse
+
+# Création d'une partie B à quatre mesures entre la mesure 5 et 9
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9)  # variation de la mélodie principale
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9)  # variation des percussions
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9)  # basse de contraste : plus lente et plus forte
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9)  # augmentation du volume de la basse
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9)  # ajout d'un nouvel élément de percussion
+
+# Reprise de la partie A à la mesure 9
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13)  # mélodie principale
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)  # percussions
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13)  # ligne de basse
+setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # augmentation du volume de la ligne de basse

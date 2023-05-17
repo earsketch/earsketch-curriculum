@@ -21,25 +21,13 @@ Si tienes listas muy largas de variables de sonido, puedes organizarlas eficient
 [role="curriculum-python"]
 [source,python]
 ----
-# En vez de escribir esto:
-bombo = OS_KICK03
-hihat = OS_OPENHAT01
-redoblante = OS_SNARE05
-
-# Puedes escribir esto:
-bateria = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// En vez de escribir esto:
-var bombo = OS_KICK03;
-var hihat = OS_OPENHAT01;
-var redoblante = OS_SNARE05;
-
-// Puedes escribir esto:
-var bateria = [OS_KICK03, OS_OPENHAT01, OS_SNARE05];
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -59,40 +47,13 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Listas: Cómo crear una lista que contiene varios clips de audio
-
-# Configuración
-from earsketch import *
-setTempo(130)
-
-# Música
-
-# Crear una lista de clips
-miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
-
-# Colocar los sonidos en los compases 1 al 5
-fitMedia(miConjunto[0], 1, 1, 5)  # Acceder al índice 0
-fitMedia(miConjunto[1], 2, 1, 5)  # Acceder al índice 1
-fitMedia(miConjunto[2], 3, 1, 5)  # Acceder al índice 2
+include::code-examples/data-structures-list.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Arreglos: Cómo crear un arreglo que contiene varios clips de audio
-
-// Configuración
-setTempo(130);
-
-// Música
-
-// Crear un arreglo de clips
-var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
-
-// Colocar los sonidos en los compases 1 al 5
-fitMedia(miConjunto[0], 1, 1, 5); // Acceder al índice 0
-fitMedia(miConjunto[1], 2, 1, 5); // Acceder al índice 1
-fitMedia(miConjunto[2], 3, 1, 5); // Acceder al índice 2
+include::code-examples/data-structures-arrays.js.txt[]
 ----
 
 //.The EarSketch Share window for collaboration (Let Others Edit)
@@ -118,43 +79,13 @@ A continuación, hay un ejemplo. Puedes mirar la consola para ver qué se imprim
 [role="curriculum-python"]
 [source,python]
 ----
-# Iterar a través de las listas: Cómo crear una lista que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
-
-# Configuración
-from earsketch import *
-setTempo(130)
-
-# Música
-
-# Crear una lista de clips
-miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
-
-# Recorrer los elementos de la lista
-for pista in range(1, 4):
-    indice = pista - 1
-    fitMedia(miConjunto[indice], pista, 1, 5)
-    print("en esta iteracion, pista = " + str(pista) + " e indice = " + str(indice))
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Iterar a través de arreglos: Cómo crear un arrelgo que contenga varios clips de audio y colocarlos en la EAD usando un ciclo for
-
-// Configuración
-setTempo(130);
-
-// Música
-
-// Crear un arreglo de clips
-var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
-
-// Recorrer los elementos del arreglo
-for (var pista = 1; pista < 4; pista++) {
-    var indice = pista - 1;
-    fitMedia(miConjunto[indice], pista, 1, 5);
-    println("en esta iteracion, pista = " + pista + " y indice = " + indice);
-}
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -184,39 +115,13 @@ Aquí hay un ejemplo:
 [role="curriculum-python"]
 [source,python]
 ----
-# Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de lista
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
-
-for compas in range(1, len(sonidosIntroductorios) + 1):
-    # Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo.
-    indice = compas - 1  # El índice de lista comienza en cero.
-    pista = compas  # Cambia la pista con el compás.
-    fitMedia(sonidosIntroductorios[indice], pista, compas, 5)
+include::code-examples/data-structures-additive-introduction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de arreglo
-
-// Configuración
-setTempo(120);
-
-// Música
-var sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
-
-for (var compas = 1; compas < sonidosIntroductorios.length + 1; compas++) {
-    // Sumamos 1 a sonidosIntroductorios.length porque queremos que compas llegue a sonidosIntroductorios.length.
-    var indice = compas - 1; // El índice de lista comienza en cero.
-    var pista = compas; // Cambia la pista con compas.
-    fitMedia(sonidosIntroductorios[indice], pista, compas, 5);
-}
+include::code-examples/data-structures-additive-introduction.js.txt[]
 ----
 
 {nbsp} +
@@ -310,86 +215,13 @@ Aquí está un ejemplo de una solución:
 [role="curriculum-python"]
 [source,python]
 ----
-# Operaciones de cadenas y listas: Mostrar lo que podemos hacer con listas y cadenas
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Crear mis cadenas de tiempos y listas
-cadenaA = "0+++----0+++--0+"
-cadenaB = "0-0-0-0-----0-0-"
-sonidosA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
-sonidosB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
-
-# Imprime el segundo carácter de cada cadena.
-print(cadenaA[1])
-print(cadenaB[1])
-
-# Imprime el último elemento de tus listas.
-print(sonidosA[len(sonidosA) - 1])
-print(sonidosB[len(sonidosB) - 1])
-
-# Crea e imprime cadenaC, la concatenación de cadenaA y cadenaB.
-cadenaC = cadenaA + cadenaB
-print(cadenaC)
-
-# Crea e imprime sonidosC, la concatenación de tus sonidosA, sonidosB y sonidosA otra vez.
-sonidosC = sonidosA + sonidosB + sonidosA
-print(sonidosC)
-
-# Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
-cadenaD = cadenaC[1:5]
-print(cadenaD)
-
-# Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
-sonidosD = sonidosC[2 : len(sonidosC)]
-print(sonidosD)
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Operaciones de cadenas y arreglos: Mostrar lo que podemos hacer con arreglo y cadenas
-
-// Configuración
-setTempo(120);
-
-// Crear mis cadenas de tiempos y arreglos
-var cadenaA = "0+++----0+++--0+";
-var cadenaB = "0-0-0-0-----0-0-";
-var sonidosA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
-var sonidosB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
-
-// Imprime el segundo carácter de cada cadena.
-
-println(cadenaA[1]);
-println(cadenaB[1]);
-
-// Imprime el último elemento de tus arreglos.
-
-println(sonidosA[sonidosA.length - 1]);
-println(sonidosB[sonidosB.length - 1]);
-
-// Crea e imprime cadenaC, la concatenación de cadenaA y cadenaB.
-
-var cadenaC = cadenaA + cadenaB;
-println(cadenaC);
-
-// Crea e imprime sonidosC, la concatenación de tus sonidosA, sonidosB y sonidosA otra vez.
-
-var sonidosC = (sonidosA.concat(sonidosB)).concat(sonidosA);
-println(sonidosC);
-
-// Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
-
-var cadenaD = cadenaC.substring(1, 5);
-println(cadenaD);
-
-// Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
-
-var sonidosD = sonidosC.slice(2, sonidosC.length);
-println(sonidosD);
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
 Éste es un ejemplo de cómo se puede usar operaciones de cadenas con `makeBeat()`:
@@ -405,58 +237,13 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-# Operaciones de cadenas: Expandir una cadena de tiempos a una cadena de tiempos más larga
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-ritmoInicial = "0+0+00-00+++-0++"
-instrBateria = RD_UK_HOUSE_MAINBEAT_10
-
-def expansor(cadenaDeTiempos):
-    nuevoRitmo = ""
-    for i in range(0, len(cadenaDeTiempos)):
-        porcionDelRitmo = cadenaDeTiempos[0:i]
-        nuevoRitmo = nuevoRitmo + porcionDelRitmo
-    # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
-    return nuevoRitmo
-
-ritmoFinal = expansor(ritmoInicial)
-print(ritmoFinal)
-
-# makeBeat(instrBateria, 1, 1, ritmoInicial) # Cadena de tiempos inicial
-makeBeat(instrBateria, 1, 1, ritmoFinal)
+include::code-examples/data-structures-string-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Operaciones de cadenas: Expandir una cadena de tiempos en una cadena de tiempos más larga
-
-// Configuración
-setTempo(120);
-
-// Música
-var ritmoInicial = "0+0+00-00+++-0++";
-var instrBateria = RD_UK_HOUSE_MAINBEAT_10;
-
-function expansor(cadenaDeTiempos) {
-    var nuevoRitmo = "";
-    for (var i = 0; i < cadenaDeTiempos.length; i = i + 1) {
-        porcionDelRitmo = cadenaDeTiempos.substring(0, i);
-        nuevoRitmo = nuevoRitmo + porcionDelRitmo;
-    }
-    // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
-    return nuevoRitmo;
-}
-
-var ritmoFinal = expansor(ritmoInicial);
-println(ritmoFinal);
-
-// makeBeat(instrBateria, 1, 1, ritmoInicial); // Cadena de tiempos inicial
-makeBeat(instrBateria, 1, 1, ritmoFinal);
+include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -468,47 +255,13 @@ Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto 
 [role="curriculum-python"]
 [source,python]
 ----
-# Hacer una batería: Usar listas con makeBeat()
-
-# Configuración
-from earsketch import *
-setTempo(100)
-
-# Antes, había una pista por cada sonido (compás 1):
-bombo = OS_KICK05
-redoblante = OS_SNARE01
-ritmoDeBombo = "0+++----0+++----"
-ritmoDeRedoblante = "----0+++----0+++"
-makeBeat(bombo, 1, 1, ritmoDeBombo)
-makeBeat(redoblante, 2, 1, ritmoDeRedoblante)
-
-# Ahora, podemos combinarlos (compás 3):
-bateria = [OS_KICK05, OS_SNARE01]
-ritmo = "0+++1+++0+++1+++"
-makeBeat(bateria, 1, 3, ritmo)
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Hacer una batería: Usar arreglos con makeBeat()
-
-// Configuración
-setTempo(100);
-
-// Música
-// Antes, había una pista por cada sonido (compás 1):
-var bombo = OS_KICK05;
-var redoblante = OS_SNARE01;
-var ritmoDeBombo = "0+++----0+++----";
-var ritmoDeRedoblante = "----0+++----0+++";
-makeBeat(bombo, 1, 1, ritmoDeBombo);
-makeBeat(redoblante, 2, 1, ritmoDeRedoblante);
-
-// Ahora, podemos combinarlos (compás 3):
-var bateria = [OS_KICK05, OS_SNARE01];
-var ritmo = "0+++1+++0+++1+++";
-makeBeat(bateria, 1, 3, ritmo);
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
 
 {nbsp} +
@@ -523,54 +276,13 @@ Aquí está la solución:
 [role="curriculum-python"]
 [source,python]
 ----
-# Ejemplos de ritmos: Crear ritmos de diferentes géneros
-
-# Configuración
-from earsketch import *
-setTempo(110)
-
-# Clips de sonido
-bateria = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01]
-
-# Ritmo de rock en el compás 1
-makeBeat(bateria, 1, 1, "0+++1+++0+++1+++")
-makeBeat(bateria, 2, 1, "2+2+2+2+2+2+2+2+")
-
-# Ritmo de hip hop en el compás 3
-makeBeat(bateria, 1, 3, "0+++1++1+10+1+++")
-makeBeat(bateria, 2, 3, "2+2+2+2+2+2+2+2+")
-
-# Ritmo de jazz en el compás 5
-makeBeat(bateria, 2, 5, "2++2+22++2+22++2")
-
-# Ritmo de dembow (latino, caribeño) en el compás 7
-makeBeat(bateria, 1, 7, "0++10+1+0++10+1+")
+include::code-examples/data-structures-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ejemplos de ritmos: Crear ritmos de diferentes géneros
-
-// Configuración
-setTempo(110);
-
-// Clips de sonido
-var bateria = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
-
-// Ritmo de rock en el compás 1
-makeBeat(bateria, 1, 1, "0+++1+++0+++1+++");
-makeBeat(bateria, 2, 1, "2+2+2+2+2+2+2+2+");
-
-// Ritmo de hip hop en el compás 3
-makeBeat(bateria, 1, 3, "0+++1++1+10+1+++");
-makeBeat(bateria, 2, 3, "2+2+2+2+2+2+2+2+");
-
-// Ritmo de jazz en el compás 5
-makeBeat(bateria, 2, 5, "2++2+22++2+22++2");
-
-// Ritmo de dembow (latino, caribeño) en el compás 7
-makeBeat(bateria, 1, 7, "0++10+1+0++10+1+");
+include::code-examples/data-structures-examples-of-beats.js.txt[]
 ----
 
 {nbsp} +

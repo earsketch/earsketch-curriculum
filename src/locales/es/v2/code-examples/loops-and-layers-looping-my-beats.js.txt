@@ -1,0 +1,13 @@
+// Poner mis ritmos en un ciclo: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
+
+// Configuración:
+setTempo(120);
+
+// Variables:
+var tambor1 = OS_SNARE03;
+var cadena_de_tiempos = "0---0---0-0-0---";
+
+// Poner nuestro ritmo en un ciclo
+for (var compas = 1; compas < 5; compas++) {
+    makeBeat(tambor1, 1, compas, cadena_de_tiempos);
+}

@@ -1,0 +1,19 @@
+# Affichage : Utilisation de print() pour afficher les messages dans la console
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Variables
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Première instruction « print »
+print(1 + 3)
+
+# Création d'une boucle pour notre beat
+# Notez que l'instruction « print » se trouve dans la boucle « for », elle sera donc exécutée à chaque itération de la boucle.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")

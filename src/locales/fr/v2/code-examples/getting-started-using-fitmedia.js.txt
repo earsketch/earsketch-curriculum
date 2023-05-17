@@ -1,0 +1,7 @@
+// Utilisation de la fonction fitMedia() : Ajouter un clip dans le DAW
+
+// Paramétrage
+setTempo(120);
+
+// Musique
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);

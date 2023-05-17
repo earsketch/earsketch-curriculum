@@ -1,0 +1,14 @@
+# Introducción aditiva: Cómo crear una introducción aditiva usando la iteración de lista
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+# Música
+sonidosIntroductorios = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
+
+for compas in range(1, len(sonidosIntroductorios) + 1):
+    # Sumamos 1 a len(sonidosIntroductorios) porque el segundo argumento de range es exclusivo.
+    indice = compas - 1  # El índice de lista comienza en cero.
+    pista = compas  # Cambia la pista con el compás.
+    fitMedia(sonidosIntroductorios[indice], pista, compas, 5)

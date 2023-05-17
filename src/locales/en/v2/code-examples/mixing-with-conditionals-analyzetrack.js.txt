@@ -1,0 +1,14 @@
+// analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
+
+// Setup
+setTempo(120);
+
+// Placing a sound on track 1
+var sound = COMMON_LOVE_VOX_COMMON_1;
+fitMedia(sound, 1, 1, 9);
+
+// Creating a variable to store the loudness of track 1
+var loudness1 = analyzeTrack(1, RMS_AMPLITUDE);
+
+// Showing the loudness in the console
+println(loudness1);

@@ -1,0 +1,14 @@
+// Arreglos: Cómo crear un arreglo que contiene varios clips de audio
+
+// Configuración
+setTempo(130);
+
+// Música
+
+// Crear un arreglo de clips
+var miConjunto = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
+
+// Colocar los sonidos en los compases 1 al 5
+fitMedia(miConjunto[0], 1, 1, 5); // Acceder al índice 0
+fitMedia(miConjunto[1], 2, 1, 5); // Acceder al índice 1
+fitMedia(miConjunto[2], 3, 1, 5); // Acceder al índice 2

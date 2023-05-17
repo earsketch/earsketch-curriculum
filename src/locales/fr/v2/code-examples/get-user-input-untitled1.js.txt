@@ -1,0 +1,2 @@
+var answer = readInput("Quel tempo désirez-vous appliquer pour votre musique ?");
+println(answer);

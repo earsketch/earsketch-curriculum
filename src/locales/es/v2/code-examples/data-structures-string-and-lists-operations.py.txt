@@ -1,0 +1,35 @@
+# Operaciones de cadenas y listas: Mostrar lo que podemos hacer con listas y cadenas
+
+# Configuración
+from earsketch import *
+setTempo(120)
+
+# Crear mis cadenas de tiempos y listas
+cadenaA = "0+++----0+++--0+"
+cadenaB = "0-0-0-0-----0-0-"
+sonidosA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
+sonidosB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
+
+# Imprime el segundo carácter de cada cadena.
+print(cadenaA[1])
+print(cadenaB[1])
+
+# Imprime el último elemento de tus listas.
+print(sonidosA[len(sonidosA) - 1])
+print(sonidosB[len(sonidosB) - 1])
+
+# Crea e imprime cadenaC, la concatenación de cadenaA y cadenaB.
+cadenaC = cadenaA + cadenaB
+print(cadenaC)
+
+# Crea e imprime sonidosC, la concatenación de tus sonidosA, sonidosB y sonidosA otra vez.
+sonidosC = sonidosA + sonidosB + sonidosA
+print(sonidosC)
+
+# Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
+cadenaD = cadenaC[1:5]
+print(cadenaD)
+
+# Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
+sonidosD = sonidosC[2 : len(sonidosC)]
+print(sonidosD)

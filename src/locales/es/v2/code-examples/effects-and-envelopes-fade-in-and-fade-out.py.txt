@@ -1,0 +1,27 @@
+# Fade in y fade out: Poner ciclos a todas las pistas para añadir un _fade in_ y un _fade out_
+
+# Configuración
+from earsketch import *
+setTempo(100)
+
+# Variables
+melodia1 = MILKNSIZZ_ADIOS_BRASS
+melodia2 = MILKNSIZZ_ADIOS_STRINGS
+bombo = OS_KICK04
+hihat = OS_OPENHAT03
+ritmoDeBombo = "0-------0-0-0---"
+ritmoDeHihat = "---0---0--00----"
+
+# Colocar melodías a la pista 1
+fitMedia(melodia1, 1, 1, 5)
+fitMedia(melodia2, 1, 5, 9)
+
+# Colocar los ritmos en las pistas 2 (bombo) y 3 (hihat) usando un ciclo _for_ en compas
+for compas in range(1, 9):
+    makeBeat(bombo, 2, compas, ritmoDeBombo)
+    makeBeat(hihat, 3, compas, ritmoDeHihat)
+
+# Añadir el _fade in_ y el _fade out_ de pistas 1 a 3
+for pista in range(1, 4):
+    setEffect(pista, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(pista, VOLUME, GAIN, 0, 7, -60, 9)

@@ -1,0 +1,32 @@
+// Operaciones booleanas: Pedir que el usuario escoja un género y crear un ritmo basándose en su selección
+
+// Configuración
+setTempo(120);
+
+// Variables de sonido
+var bombo = OS_KICK02;
+var hihat = OS_CLOSEDHAT04;
+var palmada = OS_CLAP03;
+
+// Variables de cadenas de tiempos
+var ritmoDeBomboDeHiphop = "0++++---0+++0+++";
+var ritmoDeHihatDeHiphop = "----0---00---000";
+var ritmoDeBomboDeEdm = "0+++----0+++----";
+var ritmoDePalmadasEdm = "----0-------0---";
+
+// Pedir que el usuario dé su respuesta
+var genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?");
+
+// Crear el ritmo adecuado
+if ((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")) {
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop);
+    makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop);
+} else if ((genero == "edm") || (genero == "Edm") || (genero == "EDM")) {
+    makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm);
+    makeBeat(palmada, 2, 1, ritmoDePalmadasEdm);
+} else {
+    println("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el codigo otra vez.");
+}
+
+// Añadir alguna reverberación en la pista 2 (track 2)
+setEffect(2, REVERB, MIX, 0.1);

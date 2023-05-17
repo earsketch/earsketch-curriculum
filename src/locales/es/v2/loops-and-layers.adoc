@@ -23,37 +23,13 @@ _UN VIDEO SOBRE LOS CICLOS VIENE PRONTO_
 [role="curriculum-python"]
 [source,python]
 ----
-# Poner mis ritmos en un ciclo: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Variables
-tambor1 = OS_SNARE03
-cadena_de_tiempos = "0---0---0-0-0---"
-
-# Poner nuestro ritmo en un ciclo
-for compas in range(1, 5):
-    makeBeat(tambor1, 1, compas, cadena_de_tiempos)
+include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Poner mis ritmos en un ciclo: Cómo hacer repetir una instrucción makeBeat() usando un ciclo for
-
-// Configuración:
-setTempo(120);
-
-// Variables:
-var tambor1 = OS_SNARE03;
-var cadena_de_tiempos = "0---0---0-0-0---";
-
-// Poner nuestro ritmo en un ciclo
-for (var compas = 1; compas < 5; compas++) {
-    makeBeat(tambor1, 1, compas, cadena_de_tiempos);
-}
+include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
 [role="curriculum-python"]
@@ -124,50 +100,13 @@ Antes de ejecutar el siguiente código, trata de adivinar qué es lo que se ver�
 [role="curriculum-python"]
 [source,python]
 ----
-# aAarecer mensajes: Cómo usar print() para aparecer mensajes en la consola
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Variables
-tambor1 = OS_SNARE03
-cadena_de_tiempos = "0---0---0-0-0---"
-
-# Primera declaración _print_
-print(1 + 3)
-
-# Poner nuestro ritmo en un ciclo
-# Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
-for compas in range(1, 5):
-    makeBeat(tambor1, 1, compas, cadena_de_tiempos)
-    print(compas)
-    print("ok")
+include::code-examples/loops-and-layers-printing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Aparecer mensajes: Cómo usar println() para hacer aparecer (o "imprimir") mensajes en la consola
-
-// Configuración
-setTempo(120);
-
-// Variables
-var tambor1 = OS_SNARE03;
-var cadena_de_tiempos = "0---0---0-0-0---";
-
-// Primera declaración println()
-println(1 + 3);
-
-// Poner nuestro ritmo en un ciclo
-// Toma en cuenta que la declaración de impresión está dentro del ciclo for para ejecutarla en cada iteración del ciclo.
-
-for (var compas = 1; compas < 5; compas++) {
-    makeBeat(drum1, 1, compas, beat_string);
-    println(compas);
-    println("ok");
-}
+include::code-examples/loops-and-layers-printing.js.txt[]
 ----
 
 Aquí, verás las siguientes líneas en tu consola:
@@ -204,66 +143,13 @@ Podemos crear repetición en nuestra música al escribir `fitMedia()` una y otra
 [role="curriculum-python"]
 [source,python]
 ----
-# Sin ciclos: Repetición musical creada sin ciclos de código
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-bateria1 = ELECTRO_DRUM_MAIN_BEAT_008
-bateria2 = ELECTRO_DRUM_MAIN_BEAT_007
-
-# Se podrían reemplazar todas estas llamadas a fitMedia() con dos llamadas en ciclos.
-
-fitMedia(bateria1, 1, 1, 1.5)
-fitMedia(bateria2, 1, 1.5, 2)
-fitMedia(bateria1, 1, 2, 2.5)
-fitMedia(bateria2, 1, 2.5, 3)
-fitMedia(bateria1, 1, 3, 3.5)
-fitMedia(bateria2, 1, 3.5, 4)
-fitMedia(bateria1, 1, 4, 4.5)
-fitMedia(bateria2, 1, 4.5, 5)
-fitMedia(bateria1, 1, 5, 5.5)
-fitMedia(bateria2, 1, 5.5, 6)
-fitMedia(bateria1, 1, 6, 6.5)
-fitMedia(bateria2, 1, 6.5, 7)
-fitMedia(bateria1, 1, 7, 7.5)
-fitMedia(bateria2, 1, 7.5, 8)
-fitMedia(bateria1, 1, 8, 8.5)
-fitMedia(bateria2, 1, 8.5, 9)
+include::code-examples/loops-and-layers-no-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Sin ciclos: Repetición musical creada sin ciclos de código
-
-// Configuración
-setTempo(120);
-
-// Música
-var bateria1 = ELECTRO_DRUM_MAIN_BEAT_008;
-var bateria2 = ELECTRO_DRUM_MAIN_BEAT_007;
-
-// Se podrían reemplazar todas estas llamadas a fitMedia() con dos llamadas en ciclos.
-
-fitMedia(bateria1, 1, 1, 1.5);
-fitMedia(bateria2, 1, 1.5, 2);
-fitMedia(bateria1, 1, 2, 2.5);
-fitMedia(bateria2, 1, 2.5, 3);
-fitMedia(bateria1, 1, 3, 3.5);
-fitMedia(bateria2, 1, 3.5, 4);
-fitMedia(bateria1, 1, 4, 4.5);
-fitMedia(bateria2, 1, 4.5, 5);
-fitMedia(bateria1, 1, 5, 5.5);
-fitMedia(bateria2, 1, 5.5, 6);
-fitMedia(bateria1, 1, 6, 6.5);
-fitMedia(bateria2, 1, 6.5, 7);
-fitMedia(bateria1, 1, 7, 7.5);
-fitMedia(bateria2, 1, 7.5, 8);
-fitMedia(bateria1, 1, 8, 8.5);
-fitMedia(bateria2, 1, 8.5, 9);
+include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
 Podemos usar un ciclo `for` para crear exactamente la misma música de manera más eficiente. Nuestro contador aquí es "compas". Toma en cuenta que el cuerpo del ciclo contiene 2 líneas de código. Las dos usan "compas" como contador.
@@ -271,41 +157,13 @@ Podemos usar un ciclo `for` para crear exactamente la misma música de manera m�
 [role="curriculum-python"]
 [source,python]
 ----
-# Ciclos: Repetición musical creada con ciclos de código
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-bateria1 = ELECTRO_DRUM_MAIN_BEAT_008
-bateria2 = ELECTRO_DRUM_MAIN_BEAT_007
-
-# Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
-
-for compas in range(1, 9):
-    fitMedia(bateria1, 1, compas, compas + 0.5)
-    fitMedia(bateria2, 1, compas + 0.5, compas + 1)
+include::code-examples/loops-and-layers-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ciclos: Repetición musical creada con ciclos de código
-
-// Configuración
-setTempo(120);
-
-// Música
-var bateria1 = ELECTRO_DRUM_MAIN_BEAT_008;
-var bateria2 = ELECTRO_DRUM_MAIN_BEAT_007;
-
-// Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
-
-for (var compas = 1; compas < 9; compas = compas + 1) {
-    fitMedia(bateria1, 1, compas, compas + 0.5);
-    fitMedia(bateria2, 1, compas + 0.5, compas + 1);
-}
+include::code-examples/loops-and-layers-loops.js.txt[]
 ----
 
 El *intérprete* lee y ejecuta un script. El orden en que se ejecuta se llama el *flujo de control*. Usualmente va línea por línea, de arriba abajo. Por eso hay que definir las variables antes de llamarlas en el código.
@@ -350,33 +208,13 @@ Antes de ejecutar el siguiente código, trata de adivinar lo que va a hacer.
 [role="curriculum-python"]
 [source,python]
 ----
-# Incrementar: Cómo crear un ritmo de batería que se alterna
-
-from earsketch import *
-setTempo(120)
-
-groove1 = HIPHOP_DUSTYGROOVE_011
-groove2 = HIPHOP_DUSTYGROOVE_010
-
-for compas in range(1, 9, 4):
-    fitMedia(groove1, 1, compas, compas + 2)
-    fitMedia(groove2, 2, compas + 2, compas + 4)
+include::code-examples/loops-and-layers-incrementing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Incrementar: Cómo crear un ritmo de batería que se alterna
-
-setTempo(120);
-
-var groove1 = HIPHOP_DUSTYGROOVE_011;
-var groove2 = HIPHOP_DUSTYGROOVE_010;
-
-for (var compas = 1; compas < 9; compas = compas + 4) {
-    fitMedia(groove1, 1, compas, compas + 2);
-    fitMedia(groove2, 2, compas + 2, compas + 4);
-}
+include::code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
 [role="curriculum-python"]

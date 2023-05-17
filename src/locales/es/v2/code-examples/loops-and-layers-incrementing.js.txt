@@ -1,0 +1,11 @@
+// Incrementar: Cómo crear un ritmo de batería que se alterna
+
+setTempo(120);
+
+var groove1 = HIPHOP_DUSTYGROOVE_011;
+var groove2 = HIPHOP_DUSTYGROOVE_010;
+
+for (var compas = 1; compas < 9; compas = compas + 4) {
+    fitMedia(groove1, 1, compas, compas + 2);
+    fitMedia(groove2, 2, compas + 2, compas + 4);
+}

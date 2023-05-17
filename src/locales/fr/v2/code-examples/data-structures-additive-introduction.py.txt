@@ -1,0 +1,14 @@
+# Introduction additive : Création d'une introduction additive avec itération de liste
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
+
+for measure in range(1, len(introSounds) + 1):
+    # nous ajoutons 1 à len(introSounds) puisque le deuxième argument de la plage est exclusif
+    index = measure - 1  # index de liste basé sur zéro
+    track = measure  # la piste est la même que le compteur "measure"
+    fitMedia(introSounds[index], track, measure, 5)

@@ -27,58 +27,13 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# Instructions de retour : Liaison de deux rythmes à l'aide d'instructions de retour
-
-# Paramétrage
-from earsketch import *
-setTempo(100)
-
-rhythm1 = "0+++0+0+0+--0+00"
-rhythm2 = "0+0-00++0-000+++"
-
-# Musique
-def createBeat(startMeasure, soundClip, beatString):
-    endMeasure = startMeasure + 3
-    for measure in range(startMeasure, endMeasure):
-        makeBeat(soundClip, 1, measure, beatString)
-
-    # Renvoi de la mesure de fin pour qu'elle puisse être utilisée à l'extérieur de la fonction
-    return endMeasure
-
-# Appels de fonction
-# Affectation de la valeur retournée à une variable
-newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
-# Passage de la valeur retournée dans une autre fonction
-createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
+include::code-examples/get-user-input-return-statements.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Instructions de retour : Liaison de deux rythmes à l'aide d'instructions de retour
-
-// Paramétrage
-setTempo(100);
-
-var rhythm1 = "0+++0+0+0+--0+00";
-var rhythm2 = "0+0-00++0-000+++";
-
-// Musique
-function createBeat(startMeasure, soundClip, beatString) {
-    var endMeasure = startMeasure + 3;
-    for (var measure = startMeasure; measure < endMeasure; measure++) {
-        makeBeat(soundClip, 1, measure, beatString);
-    }
-
-    // Renvoi de la mesure de fin pour qu'elle puisse être utilisée à l'extérieur de la fonction
-    return endMeasure;
-}
-
-// Appels de fonction
-// Affectation de la valeur retournée à une valeur
-var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
-// Passage de la valeur retournée dans une autre fonction
-createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
+include::code-examples/get-user-input-return-statements.js.txt[]
 ----
 
 Avec l'instruction de retour, le flux de commande complet d'une fonction ressemble à ceci :
@@ -105,48 +60,13 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Instructions de retour 2 : Renvoi de la mesure de fin d'une fonction de partie
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
-drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
-
-# Définition de fonction
-def verse(start):
-    end = start + 4
-    fitMedia(melody1, 1, start, end)
-    fitMedia(drums1, 2, start, end)
-    return end
-
-# Appels de fonction
-endMeasure = verse(1)  # appel de la fonction du couplet et début à la mesure 1
-print(endMeasure)
+include::code-examples/get-user-input-return-statements-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Instructions de retour 2 : Renvoi de la mesure de fin d'une fonction de partie
-
-// Paramétrage
-setTempo(120);
-
-var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
-var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
-
-// Définition de fonction
-function verse(start) {
-    var end = start + 4;
-    fitMedia(melody1, 1, start, end);
-    fitMedia(drums1, 2, start, end);
-    return end;
-}
-// Appels de fonction
-var endMeasure = verse(1); // appel de la fonction du couplet et début à la mesure 1
-println(endMeasure);
+include::code-examples/get-user-input-return-statements-2.js.txt[]
 ----
 
 .ENTRAÎNEZ-VOUS
@@ -165,56 +85,13 @@ Voici un exemple de code :
 [role="curriculum-python"]
 [source,python]
 ----
-# Instruction conditionnelle : Utilisation d'une booléenne pour créer une variation dans une fonction
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
-melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
-drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
-
-# Définition de fonction
-def verse(start, variation):
-    # la variation est soit égale à True ou False
-    if variation:
-        fitMedia(melody1, 1, start, start + 4)
-    else:
-        fitMedia(melody2, 1, start, start + 4)
-    fitMedia(drums1, 2, start, start + 4)  # ceci est à l'extérieur de l'instruction conditionnelle (sans indentation)
-
-# Appels de fonction
-verse(1, True)
-verse(7, False)
+include::code-examples/get-user-input-conditional-statement.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Instruction conditionnelle : Utilisation d'une booléenne pour créer une variation dans une fonction
-
-// Paramétrage
-setTempo(120);
-
-var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
-var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
-var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
-
-// Définition de fonction
-function verse(start, variation) {
-    // la variation est soit égale à true ou false
-    if (variation) {
-        fitMedia(melody1, 1, start, start + 4);
-    } else {
-        fitMedia(melody2, 1, start, start + 4);
-    }
-    fitMedia(drums1, 2, start, start + 4); // ceci est à l'extérieur de l'instruction conditionnelle (sans indentation)
-}
-
-// Appels de fonction
-verse(1, true);
-verse(7, false);
+include::code-examples/get-user-input-conditional-statement.js.txt[]
 ----
 
 [[userinput]]
@@ -227,15 +104,13 @@ Par exemple, copiez le code suivant dans un nouveau script et exécutez-le :
 [role="curriculum-python"]
 [source,python]
 ----
-answer = readInput("Quel tempo désirez-vous appliquer pour votre musique ?")
-print(answer)
+include::code-examples/get-user-input-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-var answer = readInput("Quel tempo désirez-vous appliquer pour votre musique ?");
-println(answer);
+include::code-examples/get-user-input-untitled1.js.txt[]
 ----
 
 Nous pourrions avoir besoin de convertir une information en un autre type de données. Voici quelques fonctions utiles :
@@ -254,44 +129,13 @@ Dans l'exemple ci-dessous, l'entrée de la console est utilisée pour détermine
 [role="curriculum-python"]
 [source,python]
 ----
-# Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
-
-# Paramétrage
-from earsketch import *
-
-# Demande de saisie du tempo
-question = "Quel tempo désirez-vous appliquer pour votre chanson ? Sélectionnez un chiffre entre 45 et 220."
-answer = readInput(question)
-
-# Conversion à un entier
-tempo = int(answer)
-
-# Définition du tempo
-setTempo(tempo)
-
-# Musique
-fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
+include::code-examples/get-user-input-user-input-1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Entrée de l'utilisateur 1 : Demande de saisie de tempo à l'utilisateur
-
-// Paramétrage
-
-// Demande de saisie de tempo
-var question = "Quel tempo désirez-vous appliquer pour votre musique ? Sélectionnez un chiffre entre 45 et 220.";
-var answer = readInput(question);
-
-// Conversion à un nombre
-var tempo = Number(answer);
-
-// Définition du tempo
-setTempo(tempo);
-
-// Musique
-fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
+include::code-examples/get-user-input-user-input-1.js.txt[]
 ----
 
 Voici un autre exemple de ce que vous pouvez faire avec une entrée d'utilisateur.rice. 
@@ -301,36 +145,13 @@ La *concaténation* est un moyen de lier des chaînes de caractères ensemble, �
 [role="curriculum-python"]
 [source,python]
 ----
-# Entrée d'utilisateur 2 : Création d'une chanson de dubstep à l'aide de paramètres spécifiés par l'utilisateur
-
-# Paramétrage
-from earsketch import *
-setTempo(120)
-
-# Musique
-clipNumber = readInput("Entrez un numéro de clip entre 10 et 46 : ")
-dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
-finalClip = dubStepClip + clipNumber
-
-# « wobbles » de dubstep sélectionnés par l'utilisateur
-fitMedia(finalClip, 1, 1, 5)
+include::code-examples/get-user-input-user-input-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Entrée d'utilisateur 2 : Création d'une chanson de dubstep avec des paramètres spécifiés par l'utilisateur
-
-// Paramétrage
-setTempo(120);
-
-// Musique
-var clipNumber = readInput("Entrez un numéro de clip entre 10 et 46 : ");
-var dubStepClip = "DUBSTEP_BASS_WOBBLE_0";
-var finalClip = dubStepClip + clipNumber;
-
-// « wobbles » de dubstep sélectionnés par l'utilisateur
-fitMedia(finalClip, 1, 1, 5);
+include::code-examples/get-user-input-user-input-2.js.txt[]
 ----
 
 .ENTRAÎNEZ-VOUS
@@ -403,34 +224,13 @@ Utilisez le code suivant pour afficher les réponses :
 [role="curriculum-python"]
 [source,python]
 ----
-# Expressions booléennes : Affichage d'expressions booléennes
-
-from earsketch import *
-
-print(not True)
-print(True and False)
-print(True or False)
-print(True and True)
-print((True and False) or True)
-print(True and not False)
-print(not (False or False))
+include::code-examples/get-user-input-boolean-expressions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Expressions booléennes : Affichage d'expressions booléennes
-
-// Paramétrage
-setTempo(120);
-
-println(!true);
-println(true && false);
-println(true || false);
-println(true && true);
-println((true && false) || true);
-println(true && !false);
-println(!(false || false);
+include::code-examples/get-user-input-boolean-expressions.js.txt[]
 ----
 
 Voici un rappel au sujet de la création de booléens et quelques exemples d'opérations booléennes :
@@ -454,74 +254,13 @@ Voici un exemple :
 [role="curriculum-python"]
 [source,python]
 ----
-# Opérations booléennes : Demande à l'utilisateur d'entrer un genre musical et création d'un beat en conséquence
-
-from earsketch import *
-setTempo(120)
-
-# Variables de sons
-kick = OS_KICK02
-hihat = OS_CLOSEDHAT04
-clap = OS_CLAP03
-
-# Variables de chaînes de caractères de beats
-hiphopKickBeat = "0++++---0+++0+++"
-hiphopHihatBeat = "----0---00---000"
-edmKickBeat = "0+++----0+++----"
-edmClapBeat = "----0-------0---"
-
-# Opérations booléennes : Demande à l'utilisateur de faire une entrée
-genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?")
-
-# Création du rythme approprié
-if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
-    makeBeat(kick, 1, 1, hiphopKickBeat)
-    makeBeat(hihat, 2, 1, hiphopHihatBeat)
-elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
-    makeBeat(kick, 1, 1, edmKickBeat)
-    makeBeat(clap, 2, 1, edmClapBeat)
-else:
-    print("Désolé, nous n'avons pas pu lire le genre que vous avez sélectionné. Veuillez exécuter le code à nouveau.")
-
-# Ajout de réverbération sur la piste 2
-setEffect(2, REVERB, MIX, 0.1)
+include::code-examples/get-user-input-boolean-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Demande à l'utilisateur d'entrer un genre musical et création d'un beat (rythme) en conséquence
-
-// Paramétrage
-setTempo(120);
-
-// Variables de sons
-var kick = OS_KICK02;
-var hihat = OS_CLOSEDHAT04;
-var clap = OS_CLAP03;
-
-// Variables de chaînes de caractères de beats
-var hiphopKickBeat = "0++++---0+++0+++";
-var hiphopHihatBeat = "----0---00---000";
-var edmKickBeat = "0+++----0+++----";
-var edmClapBeat = "----0-------0---";
-
-// Demande à l'utilisateur de faire une entrée
-var genre = readInput("Quel est votre genre musical préféré ? Le hip-hop ou l'EDM (musique électronique) ?");
-
-// Création d'un rythme approprié
-if ((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")) {
-    makeBeat(kick, 1, 1, hiphopKickBeat);
-    makeBeat(hihat, 2, 1, hiphopHihatBeat);
-} else if ((genre == "edm") || (genre == "Edm") || (genre == "EDM")) {
-    makeBeat(kick, 1, 1, edmKickBeat);
-    makeBeat(clap, 2, 1, edmClapBeat);
-} else {
-    println("Désolé, nous n'avons pas pu lire le genre que vous avez sélectionné. Veuillez exécuter le code à nouveau.");
-}
-
-// Ajout de réverbération sur la piste 2
-setEffect(2, REVERB, MIX, 0.1);
+include::code-examples/get-user-input-boolean-operations.js.txt[]
 ----
 
 .DÉFI

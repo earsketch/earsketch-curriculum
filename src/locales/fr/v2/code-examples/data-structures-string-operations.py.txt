@@ -1,0 +1,23 @@
+# Opérations de chaînes de caractères : Prolonger une chaîne de caractères de beat pour en obtenir une plus longue
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+initialBeat = "0+0+00-00+++-0++"
+drumInstr = RD_UK_HOUSE_MAINBEAT_10
+
+def expander(beatString):
+    newBeat = ""
+    for i in range(0, len(beatString)):
+        beatSlice = beatString[0:i]
+        newBeat = newBeat + beatSlice
+    # renvoie la nouvelle chaîne de caractères pour qu'elle puisse être utilisée à l'extérieur de la fonction
+    return newBeat
+
+finalBeat = expander(initialBeat)
+print(finalBeat)
+
+# makeBeat(drumInstr, 1, 1, initialBeat) # chaîne de caractères de beat initiale
+makeBeat(drumInstr, 1, 1, finalBeat)

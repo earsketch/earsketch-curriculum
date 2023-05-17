@@ -41,23 +41,13 @@ Para usar una variable,
 [role="curriculum-python"]
 [source,python]
 ----
-# En vez de esto:
-fitMedia(HIPHOP_SYNTHPLUCKLEAD_005, 1, 1, 2)
-
-# Escribimos esto:
-synth1 = HIPHOP_SYNTHPLUCKLEAD_005
-fitMedia(synth1, 1, 1, 2)
+include::code-examples/add-beats-instead-of-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// En vez de esto:
-fitMedia(HIPHOP_SYNTHPLUCKLEAD_005, 1, 1, 2);
-
-// Escribimos esto:
-var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;
-fitMedia(synth1, 1, 1, 2);
+include::code-examples/add-beats-instead-of-this.js.txt[]
 ----
 
 {nbsp} +
@@ -72,51 +62,13 @@ En tus previos scripts, usa variables para almacenar tus nombres de clips de son
 [role="curriculum-python"]
 [source,python]
 ----
-# Variables: Cómo usar variables para almacenar clips y simplificar la edición
-
-# Configuración
-from earsketch import *
-setTempo(100)
-
-# Música
-# Clips de sonido
-synth1 = HIPHOP_SYNTHPLUCKLEAD_005
-synth2 = HIPHOP_SOLOMOOGLEAD_001
-bateria = HIPHOP_TRAPHOP_BEAT_008
-
-# fitMedia() añade los clips synth1 and synth2 alternativamente a la pista musical 1 (track 1).
-fitMedia(synth1, 1, 1, 2)
-fitMedia(synth2, 1, 2, 3)
-fitMedia(synth1, 1, 3, 4)
-fitMedia(synth2, 1, 4, 5)
-
-# fitMedia() añade la batería a la pista musical 2.
-fitMedia(bateria, 2, 1, 9)
+include::code-examples/add-beats-variables.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Variables: Cómo usar variables para almacenar clips y simplificar la edición
-
-// Configuración
-setTempo(100);
-
-// Música
-var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Asigna un clip a la variable "synth1".
-var synth2 = HIPHOP_SOLOMOOGLEAD_001;
-var tambores = HIPHOP_TRAPHOP_BEAT_008;
-
-// fitMedia() añade los clips synth1 and synth2 alternativamente a la pista musical 1 (track 1).
-
-fitMedia(synth1, 1, 1, 2);
-fitMedia(synth2, 1, 2, 3);
-fitMedia(synth1, 1, 3, 4);
-fitMedia(synth2, 1, 4, 5);
-
-// fitMedia() añade la batería a la pista musical 2.
-
-fitMedia(bateria, 2, 1, 9);
+include::code-examples/add-beats-variables.js.txt[]
 ----
 
 Toma en cuenta que es importante nombrar tus variables de manera entendible y descriptiva. Por ejemplo, usa `synth1` en vez de `musica1` o `prueba`, que no proporcionan ninguna información. De esta manera, cuando tú o alguien más lea tu código, puede entender a qué te estás refiriendo.
@@ -250,39 +202,13 @@ Aquí está el ejemplo que se ve en el video:
 [role="curriculum-python"]
 [source,python]
 ----
-# Múltiples ritmos: Cómo usar varias llamadas a makeBeat y ritmos superpuestos
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Música
-
-synth = DUBSTEP_FILTERCHORD_002
-platillo = OS_CLOSEDHAT01
-ritmo1 = "-00-00+++00--0-0"
-ritmo2 = "0--0--000--00-0-"
-
-makeBeat(synth, 1, 1, ritmo1)
-makeBeat(platillo, 2, 1, ritmo2)
+include::code-examples/add-beats-multi-beat.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Múltiples ritmos: Cómo usar varias llamadas a makeBeat y ritmos superpuestos
-
-// Configuración
-setTempo(120);
-
-// Música
-var synth = DUBSTEP_FILTERCHORD_002;
-var platillo = OS_CLOSEDHAT01;
-var ritmo1 = "-00-00+++00--0-0";
-var ritmo2 = "0--0--000--00-0-";
-
-makeBeat(synth, 1, 1, ritmo1);
-makeBeat(platillo, 2, 1, ritmo2);
+include::code-examples/add-beats-multi-beat.js.txt[]
 ----
 
 {nbsp} +
@@ -325,64 +251,13 @@ Aquí está el código correspondiente:
 [role="curriculum-python"]
 [source,python]
 ----
-# Ejemplos de ritmos: Cómo crear ritmos en géneros diferentes
-
-# Configuración
-from earsketch import *
-setTempo(120)
-
-# Clips de sonido
-bombo = OS_KICK05  # Este es el sonido "pum".
-redoblante = OS_SNARE01  # Este es el sonido "cat".
-hihat = OS_CLOSEDHAT01  # Este es el sonido "ts".
-
-# Ritmo de rock en compás 1
-makeBeat(bombo, 1, 1, "0+++----0+++----")
-makeBeat(redoblante, 2, 1, "----0+++----0+++")
-makeBeat(hihat, 3, 1, "0+0+0+0+0+0+0+0+")
-
-# Ritmo de hip hop en compás 3
-makeBeat(bombo, 1, 3, "0+++------0+++--")
-makeBeat(redoblante, 2, 3, "----0++0+0++0+++")
-makeBeat(hihat, 3, 3, "0+0+0+0+0+0+0+0+")
-
-# Ritmo de jazz en compás 5
-makeBeat(hihat, 3, 5, "0++0+00++0+0")
-
-# Ritmo de dembow (latino, caribeño) en compás 7
-makeBeat(bombo, 1, 7, "0+++0+++0+++0+++")
-makeBeat(redoblante, 2, 7, "---0++0+---0++0+")
+include::code-examples/add-beats-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Ejemplos de ritmos: Cómo crear ritmos en géneros diferentes
-
-// Configuración
-setTempo(120);
-
-// Clips de sonido
-var bombo = OS_KICK05; // Este es el sonido "pum".
-var redoblante = OS_SNARE01; // Este es el sonido "cat".
-var hihat = OS_CLOSEDHAT01; // Este es el sonido "ts".
-
-// Ritmo de rock en compás 1
-makeBeat(bombo, 1, 1, "0+++----0+++----");
-makeBeat(redoblante, 2, 1, "----0+++----0+++");
-makeBeat(hihat, 3, 1, "0+0+0+0+0+0+0+0+");
-
-// Ritmo de hip hop en compás 3
-makeBeat(bombo, 1, 3, "0+++------0+++--");
-makeBeat(redoblante, 2, 3, "----0++0+0++0+++");
-makeBeat(hihat, 3, 3, "0+0+0+0+0+0+0+0+");
-
-// Ritmo de jazz en compás 5
-makeBeat(hihat, 3, 5, "0++0+00++0+0");
-
-// Ritmo de dembow (latino, caribeño) en compás 7
-makeBeat(bombo, 1, 7, "0+++0+++0+++0+++");
-makeBeat(redoblante, 2, 7, "---0++0+---0++0+");
+include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]

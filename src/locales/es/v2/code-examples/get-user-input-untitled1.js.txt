@@ -1,0 +1,2 @@
+var respuesta = readInput("Que tempo te gustaria tener en tu musica?");
+println(respuesta);

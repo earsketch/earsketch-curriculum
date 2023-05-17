@@ -1,0 +1,2 @@
+if condicion:
+    # Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condición es True.
