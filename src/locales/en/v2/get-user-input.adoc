@@ -182,7 +182,7 @@ We will now combine boolean logic and user input for another example of user int
 Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if 2 values are equal, and if so the boolean is set to `True`.
 
 [role="curriculum-javascript"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if 2 values are equal, and if so the boolean is set to `true`. 
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if 2 values are equal, and if so the boolean is set to `true`.
 
 Now let's look at *boolean operators*: these help combine several booleans. There are 3 boolean operators:
 

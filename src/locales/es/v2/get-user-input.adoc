@@ -183,7 +183,7 @@ Ahora daremos otro ejemplo de interacción con el usuario en el cual combinaremo
 Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `==` determina si 2 valores son iguales, y, si es así, el booleano creado es `True`.
 
 [role="curriculum-javascript"]
-Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `==` determina si 2 valores son iguales, y, si es así, el booleano creado es `true`.
+Primero vamos a considerar la lógica booleana. Sabes que los *operadores de comparación* ayudan a crear un booleano. Por ejemplo, el operador `===` determina si 2 valores son iguales, y, si es así, el booleano creado es `true`.
 
 Ahora vamos a considerar los *operadores booleanos*: ayudan a combinar varios booleanos. Hay 3 operadores booleanos:
 

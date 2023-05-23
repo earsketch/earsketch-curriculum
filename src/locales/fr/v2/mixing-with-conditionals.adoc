@@ -70,6 +70,11 @@ Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 =
 |\<=
 | est inférieur ou égal à
 |===
+
+Notez la différence entre :
+
+1. comparer deux valeurs pour voir si elles sont identiques : `==`
+2. l'affectation d'une valeur à une variable `=`
 --
 
 [role="curriculum-javascript"]
@@ -77,9 +82,9 @@ Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 =
 Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 = true;`), soit utiliser une comparaison. Pour faire une comparaison, nous utilisons un *opérateur de comparaison*. Voici les opérateurs de comparaison :
 [cols="^h,1"]
 |===
-| ==
+| ===
 | est identique à
-|!=
+|!==
 | n'est pas identique à
 |>
 | supérieur à
@@ -90,11 +95,12 @@ Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 =
 |\<=
 | inférieur ou égal à
 |===
---
 
-Note the difference between:
-1. Comparing two values to see if they are identical: `==`
+Notez la différence entre :
+
+1. comparer deux valeurs pour voir si elles sont identiques : `===`
 2. l'affectation d'une valeur à une variable `=`
+--
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]

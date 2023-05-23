@@ -81,7 +81,7 @@ setTempo(140);
 
 // Body
 function countdown(n) {
-    if (n == 0) {
+    if (n === 0) {
         println("GO!");
         return;
     }

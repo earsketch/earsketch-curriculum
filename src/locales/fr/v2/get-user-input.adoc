@@ -174,7 +174,7 @@ Nous allons maintenant combiner la logique booléenne et les entrées d'utilisat
 Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera `True`.
 
 [role="curriculum-javascript"]
-Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera
+Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `===` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera
  `true`. 
 
 Maintenant, examinons les *opérateurs booléens* ; ceux-ci permettent de combiner plusieurs booléens. Il existe trois opérateurs booléens :

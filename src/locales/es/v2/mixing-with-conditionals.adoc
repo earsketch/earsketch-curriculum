@@ -76,6 +76,11 @@ Para crear un booleano, puedes inicializar una variable (`variable1 = True`) o p
 |\<=
 |es menor o igual a
 |===
+
+Observa la diferencia entre:
+
+1. Comparar dos valores para ver si son idénticos: `==`
+2. Asignar un valor a una variable: `=`
 --
 
 [role="curriculum-javascript"]
@@ -84,10 +89,10 @@ Para crear un booleano, puedes inicializar una variable (`var variable1 = true;`
 
 [cols="^h,1"]
 |===
-|==
+| ===
 |es idéntico a
 
-|!=
+|!==
 |no es idéntico a
 
 |>
@@ -102,12 +107,12 @@ Para crear un booleano, puedes inicializar una variable (`var variable1 = true;`
 |\<=
 |es menor o igual a
 |===
---
 
 Observa la diferencia entre:
 
-1. Comparar dos valores para ver si son idénticos: `==`
-1. Asignar un valor a una variable: `=`
+1. Comparar dos valores para ver si son idénticos: `===`
+2. Asignar un valor a una variable: `=`
+--
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]

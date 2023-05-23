@@ -70,6 +70,11 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 |\<=
 | أصغر من أو يساوي
 |===
+
+لاحظ الفرق بين:
+
+1. مقارنة قيمتين لمعرفة ما إذا كانتا متطابقتين: `==`
+2. تخصيص قيمة لمتغير: `=`
 --
 
 [role="curriculum-javascript"]
@@ -77,9 +82,9 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 لإنشاء قيمة منطقية ، يمكنك إما تهيئة متغير (` var variable1 = true ؛ `) ، أو يمكنك استخدام مقارنة. لإجراء مقارنة ،نستخدم * عامل المقارنة *. فيما يلي عوامل المقارنة:
 [cols="^h,1"]
 |===
-| ==
+| ===
 | مطابق لـ
-|!=
+|!==
 | غير مطابقًا لـ
 |>
 | أكبر من
@@ -90,11 +95,12 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 |\<=
 | أصغر من أو يساوي
 |===
---
 
 لاحظ الفرق بين:
-1. مقارنة قيمتين لمعرفة ما إذا كانتا متطابقتين: ` == `
+
+1. مقارنة قيمتين لمعرفة ما إذا كانتا متطابقتين: `==`
 2. تخصيص قيمة لمتغير: `=`
+--
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
