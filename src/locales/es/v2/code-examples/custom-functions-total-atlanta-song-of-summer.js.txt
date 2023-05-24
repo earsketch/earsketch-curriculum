@@ -20,10 +20,10 @@ var hihat = OS_CLOSEDHAT03;
 // Añadir batería:
 function anadirBateria(comienzo, fin, patron) {
     // Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
-    if (patron == "heavy") {
+    if (patron === "heavy") {
         var cadenaDeTiemposDeBombo = "0---0---0---00--";
         var cadenaDeTiemposDeHihat = "-----000----0-00";
-    } else if (patron == "ligero") {
+    } else if (patron === "ligero") {
         cadenaDeTiemposDeBombo = "0-------0---0---";
         cadenaDeTiemposDeHihat = "--0----0---0---";
     }

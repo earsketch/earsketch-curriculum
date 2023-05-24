@@ -70,6 +70,11 @@ include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.js.txt[
 |\=>
 | קטן מ... או שווה לו
 |===
+
+שימו לב להבדל בין:
+
+1. השוואה בין שני ערכים כדי לבדוק האם הם זהים: `==`
+2. הצבת ערך במשתנה: `=`
 --
 
 [role="curriculum-javascript"]
@@ -77,9 +82,9 @@ include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.js.txt[
 כדי ליצור משתנה בוליאני, אפשר לאתחל משתנה (`var variable1 = true`), או להשתמש בהשוואה. כדי ליצור השוואה, נשתמש ב*אופרטור השוואה*. להלן האופרטורים להשוואה:
 [cols="^h,1"]
 |===
-| ==
+| ===
 | זהה ל...
-|=!
+|==!
 | לא זהה ל...
 |<
 | גדול מ...
@@ -90,11 +95,12 @@ include::../../en/v2/code-examples/mixing-with-conditionals-analyzetrack.js.txt[
 |\=>
 | קטן מ... או שווה לו
 |===
---
 
 שימו לב להבדל בין:
-1. השוואה בין שני ערכים כדי לבדוק האם הם זהים: `==`
+
+1. השוואה בין שני ערכים כדי לבדוק האם הם זהים: `===`
 2. הצבת ערך במשתנה: `=`
+--
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]

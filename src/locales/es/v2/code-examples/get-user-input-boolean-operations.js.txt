@@ -18,10 +18,10 @@ var ritmoDePalmadasEdm = "----0-------0---";
 var genero = readInput("¿Cual de estos generos es tu favorito? ¿Hip Hop o EDM?");
 
 // Crear el ritmo adecuado
-if ((genero == "Hip Hop") || (genero == "hip hop") || (genero == "HIP HOP")) {
+if ((genero === "Hip Hop") || (genero === "hip hop") || (genero === "HIP HOP")) {
     makeBeat(bombo, 1, 1, ritmoDeBomboDeHiphop);
     makeBeat(hihat, 2, 1, ritmoDeHihatDeHiphop);
-} else if ((genero == "edm") || (genero == "Edm") || (genero == "EDM")) {
+} else if ((genero === "edm") || (genero === "Edm") || (genero === "EDM")) {
     makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm);
     makeBeat(palmada, 2, 1, ritmoDePalmadasEdm);
 } else {
