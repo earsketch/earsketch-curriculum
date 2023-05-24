@@ -291,9 +291,9 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 --
 Which of the following elements is a boolean?
 [answers]
-* `2<3<4`
-* `"Hello, World!"`
+* `5+4 === 5`
 * `measure = 1`
+* `2<3<4`
 * `False()`
 --
 
