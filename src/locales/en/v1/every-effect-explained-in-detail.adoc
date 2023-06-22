@@ -10,7 +10,7 @@
 ++++
 
 
-`BANDPASS` is a filter that only passes (lets through) an adjustable-sized band of frequencies. All other frequencies are suppressed. By greatly limiting the frequency range of the original sound (when setting BANDPASS_WIDTH to a relatively small value), filter can produce special-effect sounds, such as the “megaphone” sound that is popular in some modern rock music, or a telephone or small speaker sound. By using a wider frequency range (setting BANDPASS_WIDTH to a higher value), sounds that appear “too big” for a mix may be made to sound a little smaller so that they blend better with other sounds in the mix.
+`BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), `BANDPASS` can produce a telephone or megaphone sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), sounds that seem too “big” can be made to blend better with other sounds in the mix. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -27,7 +27,8 @@
 <div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
 ++++
 
-`CHORUS` creates various copies of the original sound which get varied slightly in pitch and time, and mixed back in to the sound, creating an ensemble-like effect of many voices playing together. At extreme values of parameter settings, artificial “robot-like” sounds can be heard.
+`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch and delay, and mixing them back into the sound. At extreme values of parameter settings, `CHORUS` produces more artificial or “robot-like” sounds. 
+
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -45,7 +46,7 @@
 <div class="curriculum-mp3">audioMedia/compressor.mp3</div>
 ++++
 
-`COMPRESSOR` is a basic two-parameter compressor, which reduces the volume of the loudest sounds of the effected track, while amplifying the volume of its quietest sounds. This creates a narrower dynamic range from the original sound, and is often used to maximize the punch of the original sound, while reducing the potential for noise to be added later.
+`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -61,7 +62,7 @@
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-`DELAY` creates a repeated echo-like delay of the original sound. A delay effect plays back the original audio as well as a delayed, quieter version of the original that sounds like an echo. After the first echo, it plays an echo of the echo (even quieter), then an echo of the echo of the echo (still quieter), and so on until the echo dies out to nothing. With the delay effect, we can control how much time passes between each echo (delay time). If we set the delay time to match the length of a beat, we can create rhythmic effects with delay.
+`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on until the echo dies out to nothing. We can control how much time passes between each echo with `DELAY_TIME`; if it is set to the length of a beat, it creates an interesting rhythmic effect. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -78,7 +79,7 @@
 <div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
 ++++
 
-`DISTORTION` creates a “dirty” or “fuzzy” sound by overdriving the original sound. This compresses or clips the sound wave, adding overtones (higher frequencies related to the original sound). It is common to distort an electric guitar sound by “overdriving” the guitar amplifier. Modern music sometimes uses distortion to add a grungy or gritty effect or feel to the composition.
+`DISTORTION` adds a “dirty” or “fuzzy” effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). Modern music sometimes uses distortion to add a grungy or gritty feel; the effect is commonly applied to electric guitars. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -94,7 +95,8 @@
 <div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
 ++++
 
-`EQ3BAND` is a three-band equalizer used for simple EQ tasks. An equalizer is used to adjust the volume of separate ranges of frequencies within an audio track. This particular effect can be used to adjust the volume of three ranges (“bands”) of frequency content, namely bass, midrange, and treble (low, mid, high), where the upper border (`EQ3BAND_LOWFREQ`) of the low range and the center frequency of the mid range (`EQ3BAND_MIDFREQ`) may be set by the user.
+`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or to simply change the “vibe” of a sound. 
+
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -115,7 +117,7 @@
 <div class="curriculum-mp3">audioMedia/filter.mp3</div>
 ++++
 
-`FILTER` is a standard low-pass filter with resonance. A low-pass filter effect allows low frequency audio to pass through unchanged, while lowering the volume of the higher frequencies above a cutoff frequency (the `FILTER_FREQ` parameter). This gives the audio a “darker” sound.
+`FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -132,7 +134,7 @@
 <div class="curriculum-mp3">audioMedia/flanger.mp3</div>
 ++++
 
-`FLANGER` is similar to a chorus effect, where various copies of the original sound are created which get varied slightly in pitch and time, and mixed back in to the sound. In contrast, a flanger uses a much finer range of time values, which creates an evolving “whoosh” like sound. At extreme values of parameter settings, more artificial “robot-like” sounds can be heard.
+`FLANGER` creates a “whoosh”-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and “robot-like” sounds. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -150,7 +152,7 @@
 <div class="curriculum-mp3">audioMedia/pan2.mp3</div>
 ++++
 
-`PAN` affects the audio mix between the left and right channels. For example, if you were wearing headphones, changing the panning would affect whether you heard something in the left ear or the right.
+`PAN` affects the mix between the left and right audio channels. If you are wearing headphones, adjusting `PAN` changes how much of the sound you hear in your left ear versus the right. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -165,7 +167,7 @@
 <div class="curriculum-mp3">audioMedia/phaser.mp3</div>
 ++++
 
-`PHASER` is a sweeping-sounding effect which creates a copy of the original sound over a specified range of frequencies. This effected copy is then delayed very slightly and played against the original sound while changing its slight delay time gently back and forth. This causes some of the copied frequencies to temporarily cancel each other out by going “in and out of phase” with each other, thus creating a sweeping effect.
+`PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going “in and out of phase" with each other. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -184,7 +186,7 @@
 <div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
 ++++
 
-`PITCHSHIFT` simply lowers or raises the sound by a specific pitch interval (`PITCHSHIFT_SHIFT`). It can be useful in helping multiple sound files sound better together or, contrastingly, to add a little bit of dissonance, if desired.
+`PITCHSHIFT` simply raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together or for adding dissonance. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -199,7 +201,7 @@
 <div class="curriculum-mp3">audioMedia/reverb.mp3</div>
 ++++
 
-`REVERB` adds a slowly decaying ambiance to the source signal, which is similar to `DELAY` but is often much denser and richer. It is widely used for audio mixing and spatialization.
+`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or like it was recorded in a smaller or larger room than it actually was.
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -216,7 +218,7 @@
 <div class="curriculum-mp3">audioMedia/ringmod.mp3</div>
 ++++
 
-`RINGMOD` multiplies the signals from two sounds together: your original sound and a pure sine wave (that sounds like a tuning fork). The effect of this multiplication sounds different at every frequency of the original sound, which creates a completely artificial-sounding result, as this type of sound could never occur naturally. Some parameter settings for this effect will likely produce recognizable-sounding effects similar to ones used in old science-fiction movies. It is useful experimenting with since there are a wide range of sounds that can be generated from your original sound.
+`RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -233,7 +235,7 @@
 <div class="curriculum-mp3">audioMedia/tremolo.mp3</div>
 ++++
 
-`TREMOLO` quickly changes the volume of the original sound back and forth from its original value towards silence, resulting in a wobbling-sounding effect.
+`TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -250,7 +252,7 @@
 <div class="curriculum-mp3">audioMedia/volume2.mp3</div>
 ++++
 
-`VOLUME` allows you to change the volume of an audio clip.
+`VOLUME` allows you to change the volume of a sound.
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -265,9 +267,7 @@
 <div class="curriculum-mp3">audioMedia/wah.mp3</div>
 ++++
 
-`WAH` is a resonant bandpass filter (see `BANDPASS` effect) that creates a “wah-wah” pedal sound when changed over time using envelopes in the setEffect() function.
-
-
+`WAH` can make the sound mimic someone saying “Wah Wah” when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
 | WAH_POSITION | The center frequency of the boosted fixed-width frequency range. | 0.0 | 0.0 | 1.0 | `setEffect(1, WAH, WAH_POSITION, 0.3)`
