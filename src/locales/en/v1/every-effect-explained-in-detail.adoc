@@ -9,8 +9,7 @@
 <div class="curriculum-mp3">audioMedia/bandpass.mp3</div>
 ++++
 
-
-`BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), `BANDPASS` can produce a telephone or megaphone sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), sounds that seem too “big” can be made to blend better with other sounds in the mix. 
+`BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), you can make a telephone or megaphone-like sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), you can make sounds that seem overpowering blend better with other sounds in the mix. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -27,7 +26,7 @@
 <div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
 ++++
 
-`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch and delay, and mixing them back into the sound. At extreme values of parameter settings, `CHORUS` produces more artificial or “robot-like” sounds. 
+`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.  
 
 
 |========================================================================
@@ -62,7 +61,7 @@
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on until the echo dies out to nothing. We can control how much time passes between each echo with `DELAY_TIME`; if it is set to the length of a beat, it creates an interesting rhythmic effect. 
+`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -79,7 +78,8 @@
 <div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
 ++++
 
-`DISTORTION` adds a “dirty” or “fuzzy” effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). Modern music sometimes uses distortion to add a grungy or gritty feel; the effect is commonly applied to electric guitars. 
+`DISTORTION` adds a "dirty, "fuzzy," or "gritty" effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
+
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -95,7 +95,7 @@
 <div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
 ++++
 
-`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or to simply change the “vibe” of a sound. 
+`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound. 
 
 
 |========================================================================
@@ -134,7 +134,7 @@
 <div class="curriculum-mp3">audioMedia/flanger.mp3</div>
 ++++
 
-`FLANGER` creates a “whoosh”-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and “robot-like” sounds. 
+`FLANGER` creates a "whoosh"-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and "robot-like" sounds. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -167,7 +167,7 @@
 <div class="curriculum-mp3">audioMedia/phaser.mp3</div>
 ++++
 
-`PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going “in and out of phase" with each other. 
+`PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going "in and out of phase" with each other. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -186,7 +186,7 @@
 <div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
 ++++
 
-`PITCHSHIFT` simply raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together or for adding dissonance. 
+`PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together or for adding dissonance.  
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -201,7 +201,7 @@
 <div class="curriculum-mp3">audioMedia/reverb.mp3</div>
 ++++
 
-`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or like it was recorded in a smaller or larger room than it actually was.
+`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -252,7 +252,7 @@
 <div class="curriculum-mp3">audioMedia/volume2.mp3</div>
 ++++
 
-`VOLUME` allows you to change the volume of a sound.
+`VOLUME` allows you to change the loudness of a sound.
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
@@ -267,7 +267,8 @@
 <div class="curriculum-mp3">audioMedia/wah.mp3</div>
 ++++
 
-`WAH` can make the sound mimic someone saying “Wah Wah” when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
+`WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
+
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
 | WAH_POSITION | The center frequency of the boosted fixed-width frequency range. | 0.0 | 0.0 | 1.0 | `setEffect(1, WAH, WAH_POSITION, 0.3)`
