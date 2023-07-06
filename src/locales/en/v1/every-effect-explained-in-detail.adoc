@@ -45,7 +45,7 @@
 <div class="curriculum-mp3">audioMedia/compressor.mp3</div>
 ++++
 
-`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. 
+`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. `COMPRESSOR` is also often used on drums to give the audio more "punch."
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue | Example
