@@ -1,4 +1,4 @@
-# Using fitMedia(): Adding a clip to the DAW
+# Using fitMedia(): Adding a sound to the DAW
 
 # Setup
 from earsketch import *

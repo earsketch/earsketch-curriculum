@@ -1,4 +1,4 @@
-// Intro Script: This code adds one audio clip to the DAW
+// Intro Script: This code adds one sound to the DAW
 
 // Setup Section
 setTempo(120);
