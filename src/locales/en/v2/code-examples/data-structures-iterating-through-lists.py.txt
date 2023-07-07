@@ -1,4 +1,4 @@
-# Iterating through Lists: Using a list to hold several audio clips and placing them in our DAW thanks to a for loop
+# Iterating through Lists: Using a list to hold several sounds and placing them in our DAW thanks to a for loop
 
 # Setup
 from earsketch import *
@@ -6,7 +6,7 @@ setTempo(130)
 
 # Music
 
-# Creating a list of clips
+# Creating a list of sounds
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
 # Going through the list
