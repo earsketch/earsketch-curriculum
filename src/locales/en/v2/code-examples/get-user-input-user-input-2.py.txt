@@ -5,9 +5,9 @@ from earsketch import *
 setTempo(120)
 
 # Music
-clipNumber = readInput("Type a clip number between 10 and 46: ")
-dubstepClip = "DUBSTEP_BASS_WOBBLE_0"
-finalClip = dubstepClip + clipNumber
+soundNumber = readInput("Type a sound number between 10 and 46: ")
+dubstepSound = "DUBSTEP_BASS_WOBBLE_0"
+finalSound = dubstepSound + soundNumber
 
 # user-selected dubstep wobbles
-fitMedia(finalClip, 1, 1, 5)
+fitMedia(finalSound, 1, 1, 5)
