@@ -174,6 +174,8 @@ Copyright is not all about getting people in trouble. If you upload a song to th
 
 When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
 
+For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+
 
 [[chapter2summary]]
 === Chapter 2 Summary
