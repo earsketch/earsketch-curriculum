@@ -192,7 +192,7 @@ For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LI
 * *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
 * *Copyright* is a portion of law that covers ownership of creative work, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+* *Licensing* a piece of music gives others permission to use it.
 
 [role="curriculum-javascript"]
 * *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
@@ -205,7 +205,7 @@ For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LI
 * *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
 * *Copyright* is a portion of law that covers ownership of creative work, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+* *Licensing* a piece of music gives others permission to use it.
 
 
 
