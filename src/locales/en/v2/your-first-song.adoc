@@ -265,10 +265,10 @@ How do you get a copyright?
 
 [question]
 --
-What is Creative Commons?
+What is a music license?
 [answers]
-* A license to share your work openly under certain restrictions
+* A license gives others permission to use a musical work
 * A composing process
-* The right to sue anyone who uses your music
-* A license that allows you to collect royalties
+* A musical genre
+* A description of your song
 --
