@@ -170,6 +170,8 @@ There are two copyrights involved with a song: rights to the song (by the writer
 
 *Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use is determined for each case by a judge on a case-by-case basis.
 
+Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Copyright should help us make and share more art, not less. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
+
 When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
 
 
