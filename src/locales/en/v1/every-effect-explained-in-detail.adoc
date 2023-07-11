@@ -112,8 +112,8 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 10)
 [source,javascript]
 ----
 fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
-setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -20);
-setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 10);
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 ----
 
 `COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. 
