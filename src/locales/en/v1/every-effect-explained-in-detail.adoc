@@ -6,11 +6,11 @@
 === BANDPASS
 
 ++++
-<div class="grid" style="grid-template-columns: min-content auto; grid-auto-flow: row; align-items: center; margin-bottom: 2em">
-    <div style="white-space: nowrap; margin-right: 1em">With Effect:</div>
-    <div class="curriculum-mp3 inline-block" style="margin-bottom: 0.5em">audioMedia/bandpass_wet.mp3</div>
-    <div style="white-space: nowrap; margin-right: 1em">Without Effect:</div>
-    <div class="curriculum-mp3 inline-block">audioMedia/bandpass_dry.mp3</div>
+<div class="effect-examples">
+    <div style="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+    <div style="audio-label">Without Effect:</div>,
+    <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
 </div>
 ++++
 
