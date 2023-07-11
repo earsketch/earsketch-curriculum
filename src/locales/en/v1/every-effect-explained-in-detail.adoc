@@ -6,7 +6,8 @@
 === BANDPASS
 
 ++++
-<div class="curriculum-mp3">audioMedia/bandpass.mp3</div>
+<div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
 ++++
 
 `BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), you can make a telephone or megaphone-like sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), you can make sounds that seem overpowering blend better with other sounds in the mix. 
@@ -22,7 +23,8 @@
 === CHORUS
 
 ++++
-<div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
+<div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
 ++++
 
 `CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.  
@@ -33,7 +35,7 @@
 | CHORUS_LENGTH | The length of time (in ms) from the original sound within which the chorus effect is activated. | 15.0 | 1.0 | 250.0
 | CHORUS_NUMVOICES | The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. | 1.0 | 1.0 | 8.0
 | CHORUS_RATE | The rate (in Hz) which the pitch cycles or “wobbles” at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. | 0.5 | 0.1 | 16.0
-| MIX | The percentage of the affected sound (wet) that is mixed with the original sound (dry). At its minimum value (0.0), no effect can be heard. At its maximum value (1.0), none of the original sound is heard – it is all effect. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original (“dry”) audio. At the maximum value 1.0, it only plays the affected (“wet”) audio. | 1.0 | 0.0 | 1.0
 | CHORUS_MOD | The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. | 0.7 | 0.0 | 1.0
 |========================================================================
 
@@ -41,7 +43,8 @@
 === COMPRESSOR
 
 ++++
-<div class="curriculum-mp3">audioMedia/compressor.mp3</div>
+<div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
 ++++
 
 `COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. 
@@ -57,7 +60,8 @@
 === DELAY
 
 ++++
-<div class="curriculum-mp3">audioMedia/delay2.mp3</div>
+<div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
 ++++
 
 `DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect. 
@@ -74,7 +78,8 @@
 === DISTORTION
 
 ++++
-<div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
+<div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
 ++++
 
 `DISTORTION` adds a "dirty, "fuzzy," or "gritty" effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
@@ -91,7 +96,8 @@
 === EQ3BAND
 
 ++++
-<div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
+<div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
 ++++
 
 `EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound. 
@@ -113,7 +119,8 @@
 === FILTER
 
 ++++
-<div class="curriculum-mp3">audioMedia/filter.mp3</div>
+<div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
 ++++
 
 `FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies. 
@@ -130,7 +137,8 @@
 === FLANGER
 
 ++++
-<div class="curriculum-mp3">audioMedia/flanger.mp3</div>
+<div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
 ++++
 
 `FLANGER` creates a "whoosh"-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and "robot-like" sounds. 
@@ -148,7 +156,8 @@
 === PAN
 
 ++++
-<div class="curriculum-mp3">audioMedia/pan2.mp3</div>
+<div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
 ++++
 
 `PAN` affects the mix between the left and right audio channels. If you are wearing headphones, adjusting `PAN` changes how much of the sound you hear in your left ear versus the right. 
@@ -163,7 +172,8 @@
 === PHASER
 
 ++++
-<div class="curriculum-mp3">audioMedia/phaser.mp3</div>
+<div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
 ++++
 
 `PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going "in and out of phase" with each other. 
@@ -182,7 +192,8 @@
 === PITCHSHIFT
 
 ++++
-<div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
+<div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
 ++++
 
 `PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together or for adding dissonance.  
@@ -197,7 +208,8 @@
 === REVERB
 
 ++++
-<div class="curriculum-mp3">audioMedia/reverb.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
 ++++
 
 `REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was. 
@@ -213,7 +225,8 @@
 === RINGMOD
 
 ++++
-<div class="curriculum-mp3">audioMedia/ringmod.mp3</div>
+<div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
 ++++
 
 `RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
@@ -230,7 +243,8 @@
 === TREMOLO
 
 ++++
-<div class="curriculum-mp3">audioMedia/tremolo.mp3</div>
+<div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
 ++++
 
 `TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth. 
@@ -247,7 +261,8 @@
 === VOLUME
 
 ++++
-<div class="curriculum-mp3">audioMedia/volume2.mp3</div>
+<div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
 ++++
 
 `VOLUME` allows you to change the loudness of a sound.
@@ -262,7 +277,8 @@
 === WAH
 
 ++++
-<div class="curriculum-mp3">audioMedia/wah.mp3</div>
+<div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
+<div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
 ++++
 
 `WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
