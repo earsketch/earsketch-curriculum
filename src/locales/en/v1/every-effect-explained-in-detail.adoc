@@ -37,6 +37,7 @@ setEffect(1, BANDPASS, MIX, 1);
 | BANDPASS_WIDTH | The width (in Hz) of the window of frequencies to let through. | 0.5 | 0.0 | 1.0
 | MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.1 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
+|========================================================================
 
 [[chorus]]
 === CHORUS
@@ -174,7 +175,7 @@ setEffect(1, DISTORTION, DISTO_GAIN, 27);
 setEffect(1, DISTORTION, MIX, 1);
 ----
 
-`DISTORTION` adds a "dirty," "fuzzy," or "gritty" effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
+`DISTORTION` adds a dirty, fuzzy, and gritty effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
@@ -446,6 +447,7 @@ setEffect(1, REVERB, MIX, 0.5);
 | REVERB_DAMPFREQ | The cutoff frequency (in Hz) of the lowpass filter applied to the ambiance. The lower the value, the darker the reverberation will sound. | 10000.0 | 200.0 | 18000.0
 | MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.3 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
+|========================================================================
 
 [[ringmod]]
 === RINGMOD
