@@ -7,9 +7,9 @@
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
 </div>
 ++++
@@ -48,9 +48,9 @@ setEffect(1, BANDPASS, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
 </div>
 ++++
@@ -92,9 +92,9 @@ setEffect(1, CHORUS, MIX, 0.5);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
 </div>
 ++++
@@ -130,9 +130,9 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 10);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
 </div>
 ++++
@@ -171,9 +171,9 @@ setEffect(1, DELAY, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
 </div>
 ++++
@@ -209,9 +209,9 @@ setEffect(1, DISTORTION, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
 </div>
 ++++
@@ -259,9 +259,9 @@ setEffect(1, EQ3BAND, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
 </div>
 ++++
@@ -300,9 +300,9 @@ setEffect(1, FILTER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
 </div>
 ++++
@@ -344,9 +344,9 @@ setEffect(1, FLANGER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
 </div>
 ++++
@@ -379,9 +379,9 @@ setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
 </div>
 ++++
@@ -426,9 +426,9 @@ setEffect(1, PHASER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
 </div>
 ++++
@@ -461,9 +461,9 @@ setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
 </div>
 ++++
@@ -502,9 +502,9 @@ setEffect(1, REVERB, MIX, 0.5);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
 </div>
 ++++
@@ -543,9 +543,9 @@ setEffect(1, RINGMOD, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
 </div>
 ++++
@@ -584,9 +584,9 @@ setEffect(1, TREMOLO, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
 </div>
 ++++
@@ -619,9 +619,9 @@ setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 
 ++++
 <div class="effect-examples">
-    <div style="audio-label">With Effect:</div>
+    <div class="audio-label">With Effect:</div>
     <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
-    <div style="audio-label">Without Effect:</div>,
+    <div class="audio-label">Without Effect:</div>
     <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
 </div>
 ++++
