@@ -39,7 +39,7 @@ setEffect(1, BANDPASS, MIX, 1);
 | Parameter | Description | Default Value | minValue | maxValue
 | BANDPASS_FREQ | The center frequency (in Hz) of the window of frequencies to pass through. | 800.0 | 20.0 | 20000.0
 | BANDPASS_WIDTH | The width (in Hz) of the window of frequencies to let through. | 0.5 | 0.0 | 1.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.1 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.1 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -83,7 +83,7 @@ setEffect(1, CHORUS, MIX, 0.5);
 | CHORUS_LENGTH | The length of time (in ms) from the original sound within which the chorus effect is activated. | 15.0 | 1.0 | 250.0
 | CHORUS_NUMVOICES | The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. | 1.0 | 1.0 | 8.0
 | CHORUS_RATE | The rate (in Hz) which the pitch cycles or "wobbles" at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. | 0.5 | 0.1 | 16.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | CHORUS_MOD | The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. | 0.7 | 0.0 | 1.0
 |========================================================================
 
@@ -162,7 +162,7 @@ setEffect(1, DELAY, MIX, 1);
 | Parameter | Description | Default Value | minValue | maxValue
 | DELAY_TIME | The time amount in milliseconds (ms) that the original track is delayed, and the time between successive repeats of the delay. | 300.0 | 0.0 | 4000.0
 | DELAY_FEEDBACK | The relative amount of repeats that the delay generates. Higher values create more "echoes". Be careful of applying "too much" feedback! | -3.0 | -120.0 | -1.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.5 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.5 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -200,7 +200,7 @@ setEffect(1, DISTORTION, MIX, 1);
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
 | DISTO_GAIN | The amount of overdrive of the original sound. | 20.0 | 0.0 | 50.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio.| 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio.| 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -250,7 +250,7 @@ setEffect(1, EQ3BAND, MIX, 1);
 | EQ3BAND_MIDFREQ | Specifies the center frequency (in Hz) of the mid range. | 2000.0 | 20.0 | 20000.0
 | EQ3BAND_HIGHGAIN | The gain (in dB) of the high range of frequencies of the EQ. Negative values lower the volume of the high frequencies, while positive values boost them. | 0.0 | -24.0 | 18.0
 | EQ3BAND_HIGHFREQ | Specifies the cutoff frequency (in Hz) of the high range. | 2000.0 | 20.0 | 20000.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -291,7 +291,7 @@ setEffect(1, FILTER, MIX, 1);
 | Parameter | Description | Default Value | minValue | maxValue
 | FILTER_FREQ | The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). | 1000.0 | 20.0 | 20000.0
 | FILTER_RESONANCE | The amount of amplification of a narrow band of frequencies around the current `FILTER_FREQ` level. Higher values create a more vibrant, ringing sound around the cutoff frequency. | 0.8 | 0.0 | 1.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -335,7 +335,7 @@ setEffect(1, FLANGER, MIX, 1);
 | FLANGER_LENGTH | The length of delay time (in ms) from the original sound within which the flanger effect is activated. | 6.0 | 0.0 | 200.0
 | FLANGER_FEEDBACK | The amount (in dB) that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. | -50.0 | -80.0 | -1.0
 | FLANGER_RATE | The rate (in Hz) which the pitch cycles or "whooshes" at. Lower values create more smoothly-cycling sounds, while higher values create more whooshing-sounding effects and sonic artifacts. | 0.6 | 0.001 | 100.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -417,7 +417,7 @@ setEffect(1, PHASER, MIX, 1);
 | PHASER_RANGEMIN | The low value (in Hz) of the affected frequency range. | 440.0 | 40.0 | 20000.0
 | PHASER_RANGEMAX | The high value (in Hz) of the affected frequency range. | 1600.0 | 40.0 | 20000.0
 | PHASER_FEEDBACK | The amount that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. | -3.0 | -120.0 | -1.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -493,7 +493,7 @@ setEffect(1, REVERB, MIX, 0.5);
 | Parameter | Description | Default Value | minValue | maxValue
 | REVERB_TIME | The decaying time of the ambiance in milliseconds (ms). When modulating REVERB_TIME over time using automation curve, due to the nature of convolution-based reverb, the value is updated only at every quarter note (time=0.25) in a "stair-case" manner from the starting point of the automation. (You will, however, hardly notice that.) | 1500.0 | 100.0 | 4000.0
 | REVERB_DAMPFREQ | The cutoff frequency (in Hz) of the lowpass filter applied to the ambiance. The lower the value, the darker the reverberation will sound. | 10000.0 | 200.0 | 18000.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.3 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.3 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -534,7 +534,7 @@ setEffect(1, RINGMOD, MIX, 1);
 | Parameter | Description | Default Value | minValue | maxValue
 | RINGMOD_MODFREQ | The frequency (in Hz) of the sine wave oscillator that is being multiplied into your original sound. | 40.0 | 0.0 | 100.0
 | RINGMOD_FEEDBACK | The amount of affected sound that is fed-back into the effect. High values create more robotic-type sounds and sonic artifacts. | 0.0 | 0.0 | 100.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -575,7 +575,7 @@ setEffect(1, TREMOLO, MIX, 1);
 | Parameter | Description | Default Value | minValue | maxValue
 | TREMOLO_FREQ | The rate (in Hz) that the volume is changed back and forth. | 4.0 | 0.0 | 100.0
 | TREMOLO_AMOUNT | The amount (in dB) that the volume changes back and forth over during each cycle. | -6.0 | -60.0 | 0.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
@@ -650,6 +650,6 @@ setEffect(1, WAH, MIX, 1);
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
 | WAH_POSITION | The center frequency of the boosted fixed-width frequency range. | 0.0 | 0.0 | 1.0
-| MIX | The amount of the affected sound that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
