@@ -83,8 +83,9 @@ setEffect(1, CHORUS, MIX, 0.5);
 | CHORUS_LENGTH | The length of time (in ms) from the original sound within which the chorus effect is activated. | 15.0 | 1.0 | 250.0
 | CHORUS_NUMVOICES | The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. | 1.0 | 1.0 | 8.0
 | CHORUS_RATE | The rate (in Hz) which the pitch cycles or "wobbles" at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. | 0.5 | 0.1 | 16.0
-| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | CHORUS_MOD | The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. | 0.7 | 0.0 | 1.0
+| MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
+| BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
 
 [[compressor]]
