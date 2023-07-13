@@ -7,9 +7,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
 </div>
 ++++
@@ -30,9 +30,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
 </div>
 ++++
@@ -54,9 +54,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
 </div>
 ++++
@@ -75,9 +75,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
 </div>
 ++++
@@ -97,9 +97,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
 </div>
 ++++
@@ -118,9 +118,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
 </div>
 ++++
@@ -144,9 +144,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
 </div>
 ++++
@@ -166,9 +166,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
 </div>
 ++++
@@ -189,9 +189,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
 </div>
 ++++
@@ -209,9 +209,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
 </div>
 ++++
@@ -233,9 +233,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
 </div>
 ++++
@@ -254,9 +254,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
 </div>
 ++++
@@ -276,9 +276,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
 </div>
 ++++
@@ -298,9 +298,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
 </div>
 ++++
@@ -320,9 +320,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
 </div>
 ++++
@@ -340,9 +340,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">بتأثير:</div>
     <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">بدون تأثير:</div>
     <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
 </div>
 ++++
