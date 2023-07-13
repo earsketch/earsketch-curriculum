@@ -40,7 +40,7 @@ setEffect(1, BANDPASS, MIX, 1);
 | BANDPASS_FREQ | The center frequency (in Hz) of the window of frequencies to pass through. | 800.0 | 20.0 | 20000.0
 | BANDPASS_WIDTH | The width (in Hz) of the window of frequencies to let through. | 0.5 | 0.0 | 1.0
 | MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.1 | 0.0 | 1.0
-| BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
+| BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). | 0.0 | 0.0 | 1.0
 |========================================================================
 
 [[chorus]]
@@ -104,8 +104,8 @@ setEffect(1, CHORUS, MIX, 0.5);
 ----
 from earsketch import *
 fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
-setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -20)
-setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 10)
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30)
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100)
 ----
 
 [role="curriculum-javascript"]
@@ -311,7 +311,7 @@ setEffect(1, FILTER, MIX, 1);
 [source,python]
 ----
 from earsketch import *
-fitMedia(YG_TECHNO_VOX_2,1,1,2)
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
 setEffect(1, FLANGER, FLANGER_LENGTH, 10)
 setEffect(1, FLANGER, FLANGER_FEEDBACK, -5)
 setEffect(1, FLANGER, FLANGER_RATE, 20)
@@ -321,7 +321,7 @@ setEffect(1, FLANGER, MIX, 1)
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-fitMedia(YG_TECHNO_VOX_2,1,1,2);
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
 setEffect(1, FLANGER, FLANGER_LENGTH, 10);
 setEffect(1, FLANGER, FLANGER_FEEDBACK, -5);
 setEffect(1, FLANGER, FLANGER_RATE, 20);
@@ -448,7 +448,7 @@ fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
 setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 ----
 
-`PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together or for adding dissonance.  
+`PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together.  
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
