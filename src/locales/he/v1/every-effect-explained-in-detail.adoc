@@ -6,7 +6,12 @@
 === BANDPASS
 
 ++++
-<div class="curriculum-mp3">audioMedia/bandpass.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
+</div>
 ++++
 
 
@@ -24,7 +29,12 @@
 === CHORUS
 
 ++++
-<div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
+</div>
 ++++
 
 `CHORUS` יוצר מספר עותקים של הצליל המקורי השונים מעט בגובה ובזמן, ומעורבלים חזרה לתוך הצליל, ויוצרים אפקט של הרבה קולות המנגנים יחד. בהצבת ערכים קיצוניים לפרמטר, יכולים להישמע צלילים מלאכותיים "דמויי רובוט".
@@ -42,7 +52,12 @@
 === COMPRESSOR
 
 ++++
-<div class="curriculum-mp3">audioMedia/compressor.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
+</div>
 ++++
 
 `COMPRESSOR` הוא קומפרסור בסיסי עם שני פרמטרים, המנחית את העוצמה של הצלילים החזקים, ומגביר את העוצמה של הצלילים החלשים. כך נוצר טווח דינמי צר יותר מאשר בצליל המקורי, אשר משמש, לעיתים קרובות, כדי למקסם את הפאנץ' של הצליל המקורי, ולהפחית את הפוטנציאל לתוספת רעש מאוחר יותר.
@@ -58,7 +73,12 @@
 === DELAY
 
 ++++
-<div class="curriculum-mp3">audioMedia/delay2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
+</div>
 ++++
 
 `DELAY` יוצר חזרה דמוית הד של הצליל המקורי. אפקט ה-delay מצרף לצליל המקורי גרסה שקטה יותר ו"מעוכבת" של הצליל המקורי, הנשמעת כמו הד. אחרי ההד הראשון , הוא מצרף הד של ההד (אפילו שקט יותר) והד של ההד של ההד (שקט עוד יותר), וכך הלאה עד שההד דועך. באפקט ה-delay, אנחנו יכולים לשלוט בזמן העובר בין הד להד (זמן העיכוב). אם נקבע את זמן העיכוב בהתאמה לאורך הביט, נוכל ליצור אפקטים ריתמיים.
@@ -75,7 +95,12 @@
 === DISTORTION
 
 ++++
-<div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
+</div>
 ++++
 
 `DISTORTION` יוצר צליל "מלוכלך" על ידי הגברת יתר (overdrive) של הצליל המקורי. האפקט קוטם את הגל, ומוסיף טונים עליים (תדרים גבוהים יותר הקשורים לתדרי הצליל המקורי). מקובל לעוות צליל של גיטרה חשמלית על-ידי הגברת יתר (overdrive) של מגבר הגיטרה. מוזיקה מודרנית משתמשת ב-distirtion כדי להוסיף אפקט "מלוכלך" או "מחוספס" ליצירה.
@@ -91,7 +116,12 @@
 === EQ3BAND
 
 ++++
-<div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
+</div>
 ++++
 
 `EQ3BAND` הוא אקולייזר של שלושה פסים המשמש למשימות EQ פשוטות. איקוולייזר משמש לכיוון העוצמה של טווחי תדרים נפרדים בערוץ שמע. אפקט זה משמש לכיוון העוצמה של שלושה טווחים ("פסים") של תדרים: בס, אמצע, טרבל (נמוך, אמצעי, גבוה). הגבול העליון (`EQ3BAND_LOWFREQ`) של הפס הנמוך והתדר המרכזי של הטווח האמצעי (`EQ3BAND_MIDFREQ`) יכולים להיקבע על-ידי המשתמש.
@@ -112,7 +142,12 @@
 === FILTER
 
 ++++
-<div class="curriculum-mp3">audioMedia/filter.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
+</div>
 ++++
 
 `FILTER` הוא מסנן מביר נמוכים סטנדרטי עם תהודה. אפקט מסנן מעביר נמוכים מעביר תדרי שמע נמוכים ללא שינוי, ומנחית את עוצמת הצלילי בעלי התדרים הגבוהים מתדר הקיטעון (הפרמטר `FILTER_FREQ` ). זה נותן לצליל גוון "כהה" או "חשוך".
@@ -129,7 +164,12 @@
 === FLANGER
 
 ++++
-<div class="curriculum-mp3">audioMedia/flanger.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
+</div>
 ++++
 
 `FLANGER`דומה לאפקט chorus, בו נוצרים עותקים של הצליל המקורי השונים ממנו בזמן ובגובה. עותקים אלה מעורבלים לתוך הצליל המקורי. בניגוד לכך, פלנג'ר משמש בטווח הרבה יותר "עדין" של ערכי זמן, דבר שיוצר צליל מתפתח דמוי "וווש". בהצבת ערכים קיצוניים לפרמטר, יכולים להישמע צלילים מלאכותיים "דמויי רובוט".
@@ -147,7 +187,12 @@
 === PAN
 
 ++++
-<div class="curriculum-mp3">audioMedia/pan2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
+</div>
 ++++
 
 `PAN` משפיע על המיקס בין הערוץ השמאלי והערוץ הימני. לדוגמה, אם תחבשו אוזניות, שינוי באפקט יקבע אם תשמעו משהו באוזן ימין או באוזן שמאל.
@@ -162,7 +207,12 @@
 === PHASER
 
 ++++
-<div class="curriculum-mp3">audioMedia/phaser.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
+</div>
 ++++
 
 `PHASER` הוא אפקט שיוצר עותק של הצליל המקורי בטווח נתון של תדרים. עותק הצליל לאחר האפקט מעוכב לזמן קצרצר ומושמע כנגד הצליל המקורי, תוך כדי תוך הגדלה והקטנה (עדינות) של זמן העיכוב הקצרצר. זה גורם לחלק מהתדרים המועתקים לבטל, זמנית, זה את זה על-ידי "יצאה מפאזה" ו"כניסה לפאזה" לסירוגין, ובכך ליצור את האפקט.
@@ -181,7 +231,12 @@
 === PITCHSHIFT
 
 ++++
-<div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
+</div>
 ++++
 
 `PITCHSHIFT` מגביה או מנמיך את הצליל בטווח גבהים ספציפי (`PITCHSHIFT_SHIFT`). הוא יכול לגרום למספר קבצי צליל להישמע טוב יותר ביחד, או להיפך, להוסיף מעט דיסוננטיות.
@@ -196,7 +251,12 @@
 === REVERB
 
 ++++
-<div class="curriculum-mp3">audioMedia/reverb.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
+</div>
 ++++
 
 `REVERB` מוסיף אווירה הדועכת לאיטה, לצליל. אפשט זה דומה ל-`DELAY` אבל, לעיתים קרובות, הוא עשיר יותר ודחוס. הוא משמש למיקס ולמיקום הצליל במרחב.
@@ -213,7 +273,12 @@
 === RINGMOD
 
 ++++
-<div class="curriculum-mp3">audioMedia/ringmod.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
+</div>
 ++++
 
 `RINGMOD` מכפיל שני אותו משני צלילים זה בזה: הצליל המקורי וסינוס טהור. האפקט של הכפלה זו נשמע אחרת לכל תדר של הצליל המקורי. כך נוצר צליל מלאכותי לגמרי, שלא יכול להיווצר בצורה טבעית. מספר ערכים של הפרמטרים לאפקט, ייצרו צלילים דומים לצלילים ששימשו בסרטי מד"ב ישנים. מועיל להתנסות בכך, כי יש טווח רחב של צלילים היכולים להיווצר מהצליל המקורי.
@@ -230,7 +295,12 @@
 === TREMOLO
 
 ++++
-<div class="curriculum-mp3">audioMedia/tremolo.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
+</div>
 ++++
 
 `TREMOLO` משנה במהירות את העוצמה של הצליל המקורי, הלוך וחזור, מהערך המקורי לשקט. התוצאה היא אפקט של רטט.
@@ -247,7 +317,12 @@
 === VOLUME
 
 ++++
-<div class="curriculum-mp3">audioMedia/volume2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
+</div>
 ++++
 
 `VOLUME` מאפשר לכם לשנות את העוצמה של הצליל.
@@ -262,7 +337,12 @@
 === WAH
 
 ++++
-<div class="curriculum-mp3">audioMedia/wah.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
+</div>
 ++++
 
 `WAH` מסנן מעביר פס תהודתי (ראה אפקט `BANDPASS`) שיוצר צליל של פדאל "וואה-וואה", כאשר הוא משתנה בזמן, באמצעות מעטפות, בפונקציה ()setEffect.

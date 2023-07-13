@@ -6,7 +6,12 @@
 === BANDPASS
 
 ++++
-<div class="curriculum-mp3">audioMedia/bandpass.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
+</div>
 ++++
 
 
@@ -24,7 +29,12 @@
 === CHORUS
 
 ++++
-<div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
+</div>
 ++++
 
 `CHORUS` crée diverses copies du son original qui sont légèrement modifiées sur le plan de la hauteur et du temps et mixées à nouveau dans le son, créant ainsi un effet d'ensemble de plusieurs voix jouant ensemble. À des valeurs extrêmes de réglage des paramètres, on peut entendre des sons artificiels ressemblant à ceux d'un robot.
@@ -42,7 +52,12 @@
 === COMPRESSOR
 
 ++++
-<div class="curriculum-mp3">audioMedia/compressor.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
+</div>
 ++++
 
 `COMPRESSOR` est un compresseur de deux paramètres de base, qui réduit le volume des sons les plus forts de la piste avec effet, tout en amplifiant le volume de ses sons les plus faibles. Cela crée une plage dynamique plus étroite à partir du son d'origine et est souvent utilisé pour maximiser la force du son original, tout en réduisant le bruit à ajouter plus tard.
@@ -60,7 +75,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === DELAY
 
 ++++
-<div class="curriculum-mp3">audioMedia/delay2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
+</div>
 ++++
 
 `DELAY` crée un délai ressemblant à un écho répété du son d'origine. Un effet de délai permet de lire l'audio d'origine ainsi qu'une version avec délai plus silencieuse de l'original qui sonne comme un écho. Après le premier écho, il joue un écho de l'écho (encore plus silencieux), puis un écho de l'écho de l'écho (encore plus silencieux) et ainsi de suite jusqu'à ce que l'écho disparaisse. Avec l'effet de délai, nous pouvons contrôler combien de temps passe entre chaque écho (délai). Si nous réglons le délai de manière à ce qu'il corresponde à la durée d'un beat, nous pouvons créer des effets rythmiques avec délai.
@@ -77,7 +97,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === DISTORTION
 
 ++++
-<div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
+</div>
 ++++
 
 `DISTORTION` crée un son « sale » ou « saturé » en surchargeant le son original. Cela comprime ou écrête l'onde sonore, ajoutant des harmoniques (des fréquences plus élevées liées au son d'origine). Il est courant de déformer le son d'une guitare électrique en « surchargeant » l'amplificateur de la guitare. La musique moderne utilise parfois la distorsion pour ajouter un effet ou une sensation grunge ou granuleuse à la composition.
@@ -93,7 +118,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === EQ3BAND
 
 ++++
-<div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
+</div>
 ++++
 
 `EQ3BAND` est un égaliseur à trois bandes utilisé pour des tâches d'égalisation simples. Un égaliseur est utilisé pour régler le volume des gammes de fréquences séparées dans une piste audio. Cet effet particulier peut être utilisé pour régler le volume de trois gammes (« bandes ») de fréquence, à savoir les graves, les médiums et les aigus (bas, moyen, haut), où la limite supérieure (`EQ3BAND_LOWFREQ`) de la gamme des graves et la fréquence centrale de la gamme des médiums (`EQ3BAND_MIDFREQ`) peuvent être réglées par l'utilisateur.
@@ -114,7 +144,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === FILTER
 
 ++++
-<div class="curriculum-mp3">audioMedia/filter.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
+</div>
 ++++
 
 `FILTER` est un filtre passe-bas type avec résonance. Un effet filtre passe-bas permet à l'audio de basse fréquence de passer inchangé, tout en abaissant le volume des fréquences supérieures à une fréquence de coupure (le paramètre `FILTER_FREQ`). Cela donne à l'audio un son plus « sombre ».
@@ -131,7 +166,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === FLANGER
 
 ++++
-<div class="curriculum-mp3">audioMedia/flanger.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
+</div>
 ++++
 
 `FLANGER` est similaire à un effet Chorus, qui consiste à créer plusieurs copies du son original, à les faire varier légèrement en hauteur et en temps, puis à les remixer dans le son. Par contre, un effet « Flanger » utilise une plage de valeurs de temps beaucoup plus réduite, ce qui crée un son évolutif de type « whoosh ». À des valeurs extrêmes de réglage des paramètres, on peut entendre des sons plus artificiels ressemblant à ceux d'un robot.
@@ -149,7 +189,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === PAN
 
 ++++
-<div class="curriculum-mp3">audioMedia/pan2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
+</div>
 ++++
 
 `PAN` affecte le mixage audio entre les canaux gauche et droit. Par exemple, si vous portez des écouteurs, le fait de modifier le panoramique déterminera si vous entendez quelque chose dans l'oreille gauche ou dans l'oreille droite.
@@ -164,7 +209,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === PHASER
 
 ++++
-<div class="curriculum-mp3">audioMedia/phaser.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
+</div>
 ++++
 
 `PHASER` est un effet de balayage qui crée une copie du son original sur une gamme de fréquences spécifiée. Cette copie produite subit ensuite un très léger délai et est jouée contre le son original tout en modifiant légèrement son temps de délai dans un sens ou dans l'autre. Ainsi, certaines des fréquences copiées s'annulent temporairement en étant « en phase et hors phase » les unes avec les autres, créant ainsi un effet de balayage.
@@ -183,7 +233,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === PITCHSHIFT
 
 ++++
-<div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
+</div>
 ++++
 
 `PITCHSHIFT` permet simplement de diminuer ou d'augmenter le son d'un intervalle de hauteur spécifique (`PITCHSHIFT_SHIFT`). Cela peut être utile pour que plusieurs fichiers sonores sonnent mieux ensemble ou, au contraire, pour ajouter un peu de dissonance, si vous le souhaitez.
@@ -198,7 +253,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === REVERB
 
 ++++
-<div class="curriculum-mp3">audioMedia/reverb.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
+</div>
 ++++
 
 `REVERB` ajoute une ambiance à décroissance lente au signal source, similaire à l'effet `DELAY` mais souvent beaucoup plus dense et riche. Il est largement utilisé pour le mixage audio et la spatialisation.
@@ -215,7 +275,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === RINGMOD
 
 ++++
-<div class="curriculum-mp3">audioMedia/ringmod.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
+</div>
 ++++
 
 `RINGMOD` multiplie les signaux provenant de deux sons en même temps : votre son original et une onde sinusoïdale pure (qui ressemble à un diapason). L'effet de cette multiplication produit un son différent à chaque fréquence du son original, ce qui crée un résultat complètement artificiel, car ce type de son ne pourrait jamais se produire naturellement. Certains réglages de paramètres pour cet effet produiront probablement des effets sonores reconnaissables, semblables à ceux utilisés dans les vieux films de science-fiction. Il peut être ainsi utile d'expérimenter avec cet effet, car il existe un large éventail de sons qui peuvent être générés à partir de votre son original.
@@ -232,7 +297,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === TREMOLO
 
 ++++
-<div class="curriculum-mp3">audioMedia/tremolo.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
+</div>
 ++++
 
 `TREMOLO` modifie rapidement le volume du son original alternativement de sa valeur initiale au silence, ce qui entraîne un effet de sonorité vacillante.
@@ -249,7 +319,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === VOLUME
 
 ++++
-<div class="curriculum-mp3">audioMedia/volume2.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
+</div>
 ++++
 
 `VOLUME` vous permet de modifier le volume d'un clip audio.
@@ -264,7 +339,12 @@ setEffect(1, COMPRESSOR, BYPASS, 1.0)`
 === WAH
 
 ++++
-<div class="curriculum-mp3">audioMedia/wah.mp3</div>
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
+</div>
 ++++
 
 `WAH` est un filtre passe-bande résonant (voir l'effet `BANDPASS`) qui crée un son de pédale de type « wah-wah » lorsque modifié au fil du temps à l'aide d'enveloppes dans la fonction setEffect().
