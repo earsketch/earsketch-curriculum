@@ -46,6 +46,7 @@
 | CHORUS_RATE | La fréquence (en Hz) à laquelle la hauteur du son se déplace ou « oscille ». Les valeurs faibles créent des sons réguliers, tandis que les valeurs élevées créent des effets plus ondulatoires. | 0.5 | 0.1 | 16.0
 | CHORUS_MOD | La profondeur de l'oscillation de la hauteur (c'est-à-dire la quantité de cycles de hauteur utilisés). Les réglages bas créent un son plus naturel, tandis que les paramètres plus élevés créent un son plus artificiel. | 0.7 | 0.0 | 1.0
 | MIX | Le pourcentage de son produit (avec effet) qui est mixé au son original (sans effet). À sa valeur minimale (0.0), aucun effet ne peut être entendu. À sa valeur maximale (1.0), aucun son original n'est entendu, il s'agit uniquement d'effets. | 1.0 | 0.0 | 1.0
+| BYPASS | Implique que l'effet est activé/"on" (1.0) ou désactivé/"off" (0.0). Si le contournement ou « bypass » est activé/"on" (1.0) pour un effet, cela signifie que l'audio ne sera pas affecté par l'effet. Notez que contrairement aux autres paires de nom/paramètre, les seules valeurs valides pour BYPASS sont 0.0 et 1.0. | 0.0 | 0.0 | 1.0
 |========================================================================
 
 [[compressor]]
