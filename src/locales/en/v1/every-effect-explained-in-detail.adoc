@@ -116,7 +116,7 @@ setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
 setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 ----
 
-`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. 
+`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. Music producers often use compressors to fine-tune and add “punch” to drums. 
 
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
