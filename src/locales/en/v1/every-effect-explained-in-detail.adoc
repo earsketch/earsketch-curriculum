@@ -291,7 +291,7 @@ setEffect(1, FILTER, MIX, 1);
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
 | FILTER_FREQ | The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). | 1000.0 | 20.0 | 20000.0
-| FILTER_RESONANCE | The amount of amplification of a narrow band of frequencies around the current `FILTER_FREQ` level. Higher values create a more vibrant, ringing sound around the cutoff frequency. | 0.8 | 0.0 | 1.0
+| FILTER_RESONANCE | The boosting of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. | 0.8 | 0.0 | 1.0
 | MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
