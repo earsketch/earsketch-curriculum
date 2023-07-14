@@ -20,7 +20,7 @@
 from earsketch import *
 fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
 setEffect(1, BANDPASS, BANDPASS_FREQ, 1000)
-setEffect(1, BANDPASS, BANDPASS_WIDTH, 0.9)
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9)
 setEffect(1, BANDPASS, MIX, 1)
 ----
 
@@ -29,7 +29,7 @@ setEffect(1, BANDPASS, MIX, 1)
 ----
 fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
 setEffect(1, BANDPASS, BANDPASS_FREQ, 1000);
-setEffect(1, BANDPASS, BANDPASS_WIDTH, 0.9);
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9);
 setEffect(1, BANDPASS, MIX, 1);
 ----
 
@@ -38,7 +38,7 @@ setEffect(1, BANDPASS, MIX, 1);
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
 | BANDPASS_FREQ | The center frequency (in Hz) of the window of frequencies to pass through. | 800.0 | 20.0 | 20000.0
-| BANDPASS_WIDTH | The width (in Hz) of the window of frequencies to let through. | 0.5 | 0.0 | 1.0
+| BANDPASS_RESONANCE | The boost of frequncies around the BANDPASS_FREQ level. Higher values of resonance strongly boost a small window (band)of frequencies, while lower values of resonance subtly boost a larger window (band). | 0.5 | 0.0 | 1.0
 | MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 0.1 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). | 0.0 | 0.0 | 1.0
 |========================================================================
@@ -291,7 +291,7 @@ setEffect(1, FILTER, MIX, 1);
 |========================================================================
 | Parameter | Description | Default Value | minValue | maxValue
 | FILTER_FREQ | The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). | 1000.0 | 20.0 | 20000.0
-| FILTER_RESONANCE | The boosting of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. | 0.8 | 0.0 | 1.0
+| FILTER_RESONANCE | The boost of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. | 0.8 | 0.0 | 1.0
 | MIX | The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. | 1.0 | 0.0 | 1.0
 | BYPASS | When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on).  | 0.0 | 0.0 | 1.0
 |========================================================================
