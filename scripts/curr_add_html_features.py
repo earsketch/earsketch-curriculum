@@ -50,7 +50,10 @@ for ch in chapters:
 
 	# replace the divs with "mp3" contents with an audio tag
 	for el in soup.find_all('div', {'class':'curriculum-mp3'}):
-		el.contents[0] = soup.new_tag('audio', src=base_host_url+'/curriculum/'+el.string, controls='')
+		new_src = base_host_url + '/curriculum/' + el.string
+		new_tag = soup.new_tag('audio', src=new_src, controls='')
+		el.contents = []
+		el.append(new_tag)
 
 	# fix legacy audio paths
 	for el in soup.find_all('audio', src=lambda x: x.startswith('./audioMedia/')):
