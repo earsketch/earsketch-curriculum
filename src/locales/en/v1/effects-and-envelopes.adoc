@@ -140,7 +140,7 @@ Listen to the clips below to hear the result of adding reverb to a track:
 
 No effect:
 ++++
-<div class="curriculum-mp3">audioMedia/reverbReferance.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 Reverb effect:
