@@ -61,9 +61,9 @@ Fair use is one way that people are allowed to make new, transformative works ba
 [[licensingandfreeculture]]
 === Licensing and Free Culture
 
-To *license* is to give permission. If you own a copyright for something and you want to let someone else use it, you typically do not just sign over your copyright. Instead, you give them permission. Permission can be given on an individual basis, like sampling licenses. You can also put a license on your work that lets anyone use it. For example, all of the samples in the EarSketch sound library are licensed so that you are allowed to use them however you like. This means that all the music you create in EarSketch is totally yours. You have the copyright, and you can do what you want with it.
+To *license* is to give permission. If you own a copyright for something and you want to let someone else use it, you typically do not just sign over your copyright. Instead, you give them permission. Permission can be given on an individual basis, like sampling licenses. You can also put a license on your work that lets anyone use it.
 
-Open, permissive licenses like this are sometimes called *free culture* licenses. This means that by sharing and allowing other people to use your work, you are contributing to a pool of art and culture that is freely available and, in turn, inspires more art. Just think: right now you have all of this great material to work with. The musicians who created the samples in EarSketch have licensed it to us so that you can use it freely. As you continue to make music, you should consider whether you want to pay this forward and encourage other people to use your work as well.
+Open, permissive licenses like this are sometimes called *free culture* licenses. This means that by sharing and allowing other people to use your work, you are contributing to a pool of art and culture that is freely available and, in turn, inspires more art.
 
 *Creative Commons* licenses let creators specify what rights they keep and what rights they give away. By default, copyright is "all rights reserved." That is, you keep all of the rights listed in the first section of this chapter. Creative Commons (CC) lets you specify "some rights reserved" to let others use your work in certain ways. Here are the possible parts of a CC license:
 
@@ -76,7 +76,7 @@ Open, permissive licenses like this are sometimes called *free culture* licenses
 
 All Creative Commons licenses include attribution (BY). For the other parts, you can choose. The most permissive license you can use is CC-BY, but you could also use something like CC-BY-ND-NC.
 
-To specify a Creative Commons license, all you have to do is choose a type and put it on your work. EarSketch provides this functionality via the Share window, which appears when sharing a script. For an in depth explanation of how to share a script, please refer to <<evaluating-correctness-3#sharinganearsketchscript,Chapter 21>>. In addition, https://creativecommons.org/[https://creativecommons.org/^] has a license chooser, allowing you to get HTML for different licenses.
+To specify a Creative Commons license, all you have to do is choose a type and put it on your work.
 
 Creative Commons means that you can find other people's work to use as well. A great resource is ccMixter, http://ccmixter.org/[http://ccmixter.org/^]. It has tons of CC-licensed music that you are free to use, sample, and remix, as long as you abide by whatever CC license the creator specifies.
 
@@ -92,7 +92,7 @@ As remixers, you have a lot of options when it comes to your own work and findin
 * Two copyrights exist in music: rights to a song and rights to a sound recording.
 * *Sampling* is the act of taking part of a sound recording and using it in a new piece of music.
 * *Fair use* is a check that allows copyright content to be used by others under certain conditions.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses.
 
 [[chapter-questions]]
 === Questions
