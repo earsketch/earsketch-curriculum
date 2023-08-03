@@ -123,7 +123,7 @@ video::./videoMedia/1_3_fitmedia_py.mp4[]
 [[video110js]]
 video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-To add a sound with `fitMedia()`, use the following form.
+To add a sound to the DAW, we start by typing `fitMedia()` and use the following form.
 
 `fitMedia(sound, track, start, end)`
 
@@ -138,7 +138,7 @@ _Example:_
 
 `fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
-The code above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`.
+The statement above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`. A *statement* tells the computer to carry out an action.
 
 Try adding `fitMedia()` to a script.
 
@@ -322,7 +322,7 @@ TODO: when options are ready, modify the link
 * *Sounds* can be found in the *Sound Browser*. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
 * *Programming languages* are collections of words and symbols that are understood by the computer.
 * The rules of *syntax* define how code must be written and how punctuation (`.`, `,`) is used.
-* Create a new script by clicking the "+" icon on the editor tabs. If this is your first script, click the large blue link "Click here to create...".
+* Create a new script by clicking the large blue link "Click here to create..." or the "+" icon on the editor tabs.
 * `fitMedia()` is a way of adding sounds to the DAW. It has the following four parameters.
 ** *Sound*: the sound constant from the sound browser
 ** *Track*: the track number
