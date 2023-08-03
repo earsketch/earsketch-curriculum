@@ -176,7 +176,7 @@ END OF OPTIONAL
 
 *Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
-When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can make copies, make modifications, and share what you create.
+When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
 
 There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
 
@@ -184,19 +184,11 @@ There are two copyrights involved with a song: rights to the song (by the writer
 
 Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
 
-* See the https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] for more details regarding legal use of stock sounds.
+Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Copyright should help us make and share more art, not less. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
 
-One option for artists to share their work is a *Creative Commons* license, which gives permission for others to use their work. In EarSketch, you have access to these samples, and all the music you create in EarSketch is shareable, although you cannot sell it. You can, however, share your music or let other students remix your code, helping to put new art into the world.
+When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
 
-*Creative Commons* (or CC) licenses let creators specify what rights they keep and what rights they give away. Here are the possible parts of a CC license: "You can use this work however you like, EXCEPT..."
-
-* "...you have to put my name on it." - Attribution (BY)
-* "...you cannot change it at all." - No Derivatives (ND)
-* "...you cannot make money from it." - Non-Commercial (NC)
-* "...you have to share whatever new thing you make under the same license." - Share-Alike (SA)
-
-To specify a Creative Commons license, all you have to do is choose a type and put it on your work. In EarSketch, when you share a script, you will be asked to specify a license for your song. 
-
+For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
 
 
 [[chapter2summary]]
@@ -214,7 +206,7 @@ To specify a Creative Commons license, all you have to do is choose a type and p
 * *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
 * *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+* *Licensing* a piece of music gives others permission to use it.
 
 [role="curriculum-javascript"]
 * *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
@@ -227,7 +219,7 @@ To specify a Creative Commons license, all you have to do is choose a type and p
 * *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
 * *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it. Sometimes, certain rights to a work are kept with *Creative Commons* licenses. EarSketch allows you to add Creative Commons licenses to your music via the Share window.
+* *Licensing* a piece of music gives others permission to use it.
 
 
 
@@ -287,10 +279,10 @@ How do you get a copyright?
 
 [question]
 --
-What is Creative Commons?
+What is a music license?
 [answers]
-* A license to share your work openly under certain restrictions
+* A license gives others permission to use a musical work
 * A composing process
-* The right to sue anyone who uses your music
-* A license that allows you to collect royalties
+* A musical genre
+* A description of your song
 --

@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Entered the install phase...
       - yum install -y asciidoctor
-      - pip install BeautifulSoup4
+      - pip install -r "$CODEBUILD_SRC_DIR/scripts/requirements.txt"
   pre_build:
     commands:
       - export ES_SCRIPT_HOME="$CODEBUILD_SRC_DIR/scripts"
@@ -37,7 +37,7 @@ phases:
                               fr
                               iu
                               oj)
-  
+
         declare -a locale_subdir_array=(v1
                                       v2)
         # render the table of contents template first

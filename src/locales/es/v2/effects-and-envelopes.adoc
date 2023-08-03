@@ -127,7 +127,7 @@ Escucha los clips a continuación para oír el resultado de añadir reverberaci�
 Sin efecto:
 
 ++++
-<div class="curriculum-mp3">audioMedia/reverbReferance.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 Con el reverb:
