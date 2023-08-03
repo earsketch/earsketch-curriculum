@@ -112,7 +112,7 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 
 بدون تأثير:
 ++++
-<div class="curriculum-mp3">audioMedia/reverbReferance.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 تأثير الصدى:
