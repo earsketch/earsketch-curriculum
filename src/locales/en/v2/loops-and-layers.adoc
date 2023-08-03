@@ -74,7 +74,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 [[printstatements]]
 === Print statements
 
-To better understand the flow of your code, you can use a `print()`. It allows you to display information in the console when you run the code.
+To better understand the flow of your code, you can use `print()`. It allows you to display information in the console when you run the code.
 
 [role="curriculum-python"]
 When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
