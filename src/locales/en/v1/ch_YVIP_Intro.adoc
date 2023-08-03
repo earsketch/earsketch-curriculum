@@ -19,4 +19,4 @@ video::RqVYUpdTvwA[youtube]
 
 Over the next 5 days, you are going to analyze the music of a famous musical artist, Pharrell Williams, to explore how music, entrepreneurship, and computer science can be used as pathways to promote racial equity. At the end of the five days, you will code and remix Pharrell’s music to create your own 30 second song that will be judged on the quality of your code, music, and social justice themes.  *You’ll be able to submit your song into a final competition to have the chance to  win $5000 college scholarships and a call with Pharrell.*   What you are waiting for?  It is time to start coding.
 
-Check out the https://soundcloud.com/escomp-ceismc/ciara-set-dj-stewart-remix-py[The EarSketch 2020 Competition Winning Remix^] and click the right arrow to get started.
+Click the right arrow to get started.
