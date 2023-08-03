@@ -112,7 +112,7 @@ La *réverbération* (ou « reverb ») est un son qui rebondit sur les murs 
 
 Aucun effet :
 ++++
-<div class="curriculum-mp3">audioMedia/reverbReferance.mp3</div>
+<div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 Effet de réverbération :
