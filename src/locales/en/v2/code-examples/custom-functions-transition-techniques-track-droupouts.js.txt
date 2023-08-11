@@ -1,4 +1,4 @@
-// Transition Techniques - Track Droupouts: Transitioning between sections with track dropouts
+// Transition Techniques - Track Silencing: Transitioning between sections with track silencing
 
 // Setup
 setTempo(120);
