@@ -4,9 +4,9 @@
 from earsketch import *
 setTempo(120)
 
-# Sound clips
+# Sounds
 kick = OS_KICK05  # This is the "boom" sound.
-snare = OS_SNARE01  # This is the "cat" sound.
+snare = OS_SNARE01  # This is the "bap" sound.
 hihat = OS_CLOSEDHAT01  # This is the "ts" sound.
 
 # Rock beat on measure 1

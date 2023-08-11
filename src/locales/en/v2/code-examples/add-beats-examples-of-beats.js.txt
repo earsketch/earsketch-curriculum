@@ -3,9 +3,9 @@
 // Setup
 setTempo(120);
 
-// Sound clips
+// Sounds
 var kick = OS_KICK05; // This is the "boom" sound.
-var snare = OS_SNARE01; // This is the "cat" sound.
+var snare = OS_SNARE01; // This is the "bap" sound.
 var hihat = OS_CLOSEDHAT01; // This is the "ts" sound.
 
 // Rock beat on measure 1
