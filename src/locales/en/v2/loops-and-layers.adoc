@@ -8,9 +8,9 @@ In this chapter you will learn about `for` loops and how you can create repetiti
 [[forloops]]
 === `for` loops
 
-Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more efficient: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
+Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
 
-For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop. Here is how:
+For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop.
 
 ////
 add new video
@@ -18,7 +18,6 @@ more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPu
 in the "revamping videos" tab (includes link to script)
 ////
 
-_VIDEO ABOUT FOR LOOPS COMING SOON_
 
 [role="curriculum-python"]
 [source,python]
@@ -52,20 +51,20 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
 * *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
-* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` checks if the loop counter value is in the specified range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` connects the loop counter to the range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
 * *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
 * *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
 * *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
-* *Iteration Statement*: A statement that updates the loop counter. It counts up on each iteration.
+* *Iteration Statement*: A statement that updates the loop counter. It counts up each time the loop repeats.
 * *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
 
 .PRACTICE
 ****
-. Create a `for` loop with the counter "measure" to have your `makeBeat()` from measures 1 to 4
-. Modify your code to go from measures 3 to 7
-. Then modify your code to have your beats on track 2 instead of track 1, still from measures 3 to 7
+. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
+. Modify your code to go from measures `3` to `7`
+. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
 . Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
 . Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
 ****
@@ -75,18 +74,20 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 [[printstatements]]
 === Print statements
 
-To better understand the flow of your code, you can use a `print` statement. It allows you to display information in the console when you run the code.
+To better understand the flow of your code, you can use `print()`. It allows you to display information in the console when you run the code.
 
 [role="curriculum-python"]
-`print` *evaluates* an expression: it simplifies it to its basic form, whatever its data-type, and then shows it in the console. Note that in Python, `print` is different from other functions because we do not always need to use parentheses.
+When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
 
 [role="curriculum-javascript"]
-The function `println()` *evaluates* an expression: it simplifies it to its basic form, whatever its data type, and then shows it in the console.
+When use provide data to `println()`, it is *evaluated*, or simplified it to its basic form.
+
+Then the data is converted into text and shown in the console.
 
 [role="curriculum-python"]
 .PRACTICE
 ****
-Before running the following code, try to guess what the console will display for each `print` statement.
+Before running the following code, try to guess what the console will display for each `print()` call.
 ****
 
 [role="curriculum-javascript"]
@@ -152,7 +153,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-We can use a `for` loop to create the exact same music more efficiently. Our counter here is "measure". Note that the body of the loop contains 2 lines of code, both of which use the counter "measure".
+We can use a `for` loop to create the exact same music with less code. Our counter here is `measure`. Note that the body of the loop contains two lines of code, both of which use the counter `measure`.
 
 [role="curriculum-python"]
 [source,python]
@@ -193,10 +194,10 @@ BMW
 One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive, meaning the for loop stops when the counter becomes the endingNumber). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen two parameters for range: `startingNumber` and `endingNumber`. There is an optional third parameter: `increment`. By default, `increment` is equal to one, but you can use it to increment by more than one. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
 
 [role="curriculum-javascript"]
-Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
+Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by `1` for on each repeat. It's possible to increment it by more than one, like `measure = measure + 4`.
 
 .PRACTICE
 *****
@@ -240,16 +241,16 @@ Programming is not only writing code. It's also debugging and maintaining it. De
 
 [role="curriculum-python"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have 3 options here.
+. *Locate the error in your code:* You have three options here.
 .. If the console provided a line number, take a look at that line and the previous line in your code. 
 .. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
-.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print` statements where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
+.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
 . *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
 . *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
 [role="curriculum-javascript"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have 3 options here.
+. *Locate the error in your code:* You have three options here.
 .. If the console provided a line number, take a look at that line and the previous line in your code.
 .. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
 .. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening. 
@@ -269,16 +270,16 @@ video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
 You've seen a list of potential errors in Chapter 1. Here are some other errors that you might encounter:
 
 [role="curriculum-python"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign a value to your variable before using it later.
 . *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python comments must start with a `#` symbol.
 . *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
 . *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
 
 [role="curriculum-javascript"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script. Don't forget to initialize variables with `var`!
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should create it with `var` before using it later.
+. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
 . *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript comments must start with `//`.
-. *Semicolons:* Including semicolons after every statement is highly recommended in JavaScript. 
 . *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call. 
 
@@ -310,11 +311,11 @@ Now let's talk about the different types of tracks you can have. You might remem
 * You also have a *bass line*. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
 * Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
 
-These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain 1 or 2 of the 4. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
+These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
 
 Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
 
-Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used. A good example of contrast comes around 0:21 (second 21) and 1:01 (minute 1, second 1) of the song https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] by Son Lux.
+Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
 
 .PRACTICE
 ****
@@ -323,8 +324,8 @@ Create a complete song with:
 * A theme (please mention your chosen theme in your commented intro in the code)
 * The `fitMedia()` and `makeBeat()` functions
 * One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
-* At least 4 tracks
-* At least 16 measures
+* At least four tracks
+* At least sixteen measures
 * At least one uploaded sound
 * Comments and variables to organize your code
 
@@ -338,9 +339,9 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 === Chapter 4 Summary
 
 [role="curriculum-python"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
-* The `print` statement evaluates its accompanying expression and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* `print()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
@@ -348,14 +349,14 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 * You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 [role="curriculum-javascript"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
-* The `println()` function evaluates its argument and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* `println()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
-* You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+* You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 
 [[chapter-questions]]
