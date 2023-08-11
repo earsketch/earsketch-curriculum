@@ -121,8 +121,6 @@ For example: `"0-00-00-0+++0+0+"`
 * `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
 * `-` is a rest, meaning silence.
 
-As a reminder, a string is a data type. It consists of a series of characters (like `0` or `+`) inside quotation marks.
-
 .PRACTICE
 ****
 For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work. 
@@ -219,7 +217,7 @@ Create a new `beatString1` variable, a 16-character string with the characters `
 Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
 Please note that:
 
-. You should assign your variables with the symbol `=` before using them.
+. You should assign your variables with the `=` symbol before using them.
 . Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
 . Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
 
