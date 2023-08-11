@@ -1,11 +1,11 @@
-// Iterating through Arrays: Using an array to hold several audio clips and placing them in our DAW thanks to a for loop
+// Iterating through Arrays: Using an array to hold several sounds and placing them in our DAW thanks to a for loop
 
 // Setup
 setTempo(130);
 
 // Music
 
-// Creating an array of clips
+// Creating an array of sounds
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
 // Going through the array

@@ -3,7 +3,7 @@
 // Setup
 setTempo(110);
 
-// Sound clips
+// Sounds
 var drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
 
 // Rock beat on measure 1
