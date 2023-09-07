@@ -1,0 +1,27 @@
+# Techniques de transition - Pertes de niveau audio de piste : Transition entre des parties avec pertes de niveau audio sélectives
+
+# Paramétrage
+from earsketch import *
+setTempo(120)
+
+# Musique
+introLead = TECHNO_ACIDBASS_002
+mainLead1 = TECHNO_ACIDBASS_003
+mainLead2 = TECHNO_ACIDBASS_005
+auxDrums1 = TECHNO_LOOP_PART_025
+auxDrums2 = TECHNO_LOOP_PART_030
+mainDrums = TECHNO_MAINLOOP_019
+bass = TECHNO_SUBBASS_002
+
+# Partie 1
+fitMedia(introLead, 1, 1, 5)
+fitMedia(mainLead1, 1, 5, 9)
+fitMedia(auxDrums1, 2, 3, 5)
+fitMedia(auxDrums2, 2, 5, 8)  # Sortie des percussions
+fitMedia(mainDrums, 3, 5, 8)
+
+# Partie 2
+fitMedia(mainLead2, 1, 9, 17)
+fitMedia(auxDrums2, 2, 9, 17)  # Entrée des percussions à nouveau
+fitMedia(mainDrums, 3, 9, 17)
+fitMedia(bass, 4, 9, 17)
