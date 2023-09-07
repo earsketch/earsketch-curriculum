@@ -18,7 +18,7 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 [[envelopeswithseteffect]]
 === Envelopes with setEffect
 
-The `setEffect()` function takes a variable number of arguments. Its full set of arguments is listed below.
+The `setEffect()` function takes a variable number of parameters. Its full set of parameters is listed below.
 
 . trackNumber
 . effectName
@@ -190,4 +190,3 @@ setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
 * Increase the volume of track 1 over 10 measures.
 * Decrease the volume on track 1 over 50 measures.
 --
-
