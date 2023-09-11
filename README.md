@@ -256,19 +256,20 @@ image:../media/RemixComp/example_logo.png[]
 [source,python]
 ----
 from earsketch import *
-init()
-setTempo(127)
-finish()
+setTempo(99)
+fitMedia(Y63_SHOUT_1, 1, 1, 5)
+setEffect(1, DISTORTION, DISTO_GAIN, 27)
+setEffect(1, VOLUME, GAIN, -6)
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-init();
-setTempo(127);
-finish();
+setTempo(99);
+fitMedia(Y63_SHOUT_1, 1, 1, 5);
+setEffect(1, DISTORTION, DISTO_GAIN, 27);
+setEffect(1, VOLUME, GAIN, -6);
 ----
 
 ```
