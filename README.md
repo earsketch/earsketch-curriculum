@@ -1,4 +1,5 @@
-# Earsketch Curriculum
+# EarSketch Curriculum
+
 Curriculum source files for the EarSketch project (https://earsketch.gatech.edu)
 
 ## Table of Contents
