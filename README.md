@@ -239,17 +239,17 @@ Welcome to the EarSketch Remix Competition curriculum.
 [[Intro]]
 === Introduction
 
-Here is your chance—enter an EarSketch Competition!
-
+Let your melody be heard in the EarSketch Competition!
 
 video::363707397[vimeo]
-
 
 
 [[SimpleScript]]
 === A Simple Script
 
 image:../media/RemixComp/example_logo.png[]
+
+Check out the example script below.
 
 
 [role="curriculum-python"]
