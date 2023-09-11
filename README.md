@@ -1,8 +1,7 @@
 # Earsketch Curriculum
 Curriculum source files for the EarSketch project (https://earsketch.gatech.edu)
 
-Table of Contents
-=============================
+## Table of Contents
 
 - [Build Instructions](#build-instructions)
 - [About ASCIIDOC](#about-curriculum-asciidocs)
@@ -14,9 +13,9 @@ Table of Contents
     - [Multiple-choice Questions](#question-formatting-in-asciidoc)
 - [Example Chapter](#example-chapter)
 
-----------------------------------
 
 ## Build Instructions
+
 To build locally for development:
 
 ```shell
@@ -24,12 +23,12 @@ cd /path/to/earsketch-curriculum
 ./scripts/local_dev_curriculum_asciidoc_builder.sh /path/to/earsketch-curriculum
 ```
 
-
 ## About Curriculum ASCIIDOCs
 
 The curriculum lessons for EarSketch are created from special text files called _ascii-docs_.  These files end with `.adoc` and contain the text for the curriculum lessons.
 
 The advantage of using ascii-doc format is that a non-techincal person can add text to a web site using a human-friendly format.  For example, bold text is set with asterisk, like: `this is *bold* text`.
+
 
 ## Ascii-doc Quick Reference
 
@@ -82,11 +81,13 @@ c = a + b  # expecting 2
 ----
 ```
 
+
 ### Further Formatting References
 
 * [AsciiDoc Quick Reference](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
 
 * [AsciiDoc LIVE Online Editor](https://asciidoclive.com)
+
 
 ## Filename Conventions for EarSketch
 
@@ -100,7 +101,7 @@ c = a + b  # expecting 2
     * For example `ch_8.adoc` OR `getting-started.adoc` OR `loops-and-layers.adoc`
 
 3. Other Languages / Locales
-    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content. 
+    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content.
     * Other language `.adoc` files should only be updated by building and downloading from CrowdIn, and copying/overwriting those files into their appropriate locale directories in this repository.
 
 
@@ -109,7 +110,6 @@ c = a + b  # expecting 2
 1. Include `:nofooter:` in every file to remove the last update tag to appear at the bottom of the page
 
 2. To include code snippets, use following code before the snippet
-
 
 Show in python mode:
 ```asciidoc
@@ -223,6 +223,7 @@ makeBeat(2, "000-00000-000--0");
 --
 ```
 
+
 ## Example Chapter
 
 `ch_RemixComp.asc`
@@ -233,7 +234,6 @@ makeBeat(2, "000-00000-000--0");
 :nofooter:
 
 Welcome to the EarSketch Remix Competition curriculum.
-
 
 
 [[Intro]]
