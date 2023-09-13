@@ -18,7 +18,7 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 [[envelopeswithseteffect]]
 === Envelopes with setEffect
 
-The complete set of parameters for `setEffect()` is provided below.
+The complete set of parameters for the `setEffect()` function is provided below.
 
 . trackNumber
 . effectName
