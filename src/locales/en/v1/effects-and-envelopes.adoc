@@ -18,15 +18,15 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 [[envelopeswithseteffect]]
 === Envelopes with setEffect
 
-The `setEffect()` function takes a variable number of arguments. Its full set of arguments is listed below.
+The complete set of parameters for the `setEffect()` function is provided below.
 
 . trackNumber
 . effectName
-. effectParameter
-. effectStartValue
-. effectStartLocation
-. effectEndValue
-. effectEndLocation
+. effectParameter _(optional)_
+. effectStartValue _(optional)_
+. effectStartLocation _(optional)_
+. effectEndValue _(optional)_
+. effectEndLocation _(optional)_
 
 The last five parameters are *optional parameters*; if left unspecified, they are set to the default value. In the previous chapter we used `setEffect()` 's first four parameters (the remaining set to the default value) to apply an effect to an entire track. We will need to use all of `setEffect()` 's parameters to create envelopes. Each `setEffect()` call takes two value-time pairs: {effectStartValue, effectStartLocation}; {effectEndValue, effectEndLocation}. The following example creates a volume ramp by calling `setEffect()` with all seven arguments.
 
@@ -190,4 +190,3 @@ setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
 * Increase the volume of track 1 over 10 measures.
 * Decrease the volume on track 1 over 50 measures.
 --
-
