@@ -2,12 +2,24 @@
 # FOR LOCAL DEVELOPMENT USE ONLY
 # Prepare curriculum html files, and toc json data files for the client
 
-if [ ! -d "$1" ]; then
-    echo "Usage: curriculum_asciidoc_builder.sh <GIT_REPO_DIR>" >&2
+USAGE_MSG="Usage: curriculum_asciidoc_builder.sh <GIT_REPO_DIR>"
+
+if [ "$1" = "help" ]; then
+    echo "$USAGE_MSG" >&2
     exit 1
+elif [ -z "$1" ]; then
+    if [ "$(basename "$(pwd)")" = "scripts" ]; then
+        GIT_REPO="$(dirname "$(pwd)")"
+    elif [ "$(basename "$(pwd)")" = "earsketch-curriculum" ]; then
+        GIT_REPO="$(pwd)"
+    else
+        echo "$USAGE_MSG" >&2
+        exit 1
+    fi
 else
     GIT_REPO="$1"
 fi
+
 if ! command -v asciidoctor &> /dev/null
 then
     echo "asciidoctor could not be found"

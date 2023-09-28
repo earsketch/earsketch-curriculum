@@ -1,8 +1,9 @@
-# Earsketch Curriculum
-Curriculum source files for the EarSketch project (https://earsketch.gatech.edu)
+# EarSketch Curriculum
 
-Table of Contents
-=============================
+Curriculum source files integrated within EarSketch at https://earsketch.gatech.edu
+
+
+## Table of Contents
 
 - [Build Instructions](#build-instructions)
 - [About ASCIIDOC](#about-curriculum-asciidocs)
@@ -14,14 +15,20 @@ Table of Contents
     - [Multiple-choice Questions](#question-formatting-in-asciidoc)
 - [Example Chapter](#example-chapter)
 
-----------------------------------
 
-## Build Instructions
-To build locally for development:
+## Getting Started
 
-```shell
-cd /path/to/earsketch-curriculum
-./scripts/local_dev_curriculum_asciidoc_builder.sh /path/to/earsketch-curriculum
+### Requirements
+
+- Asciidoctor version 2+
+
+- Python dependencies, see scripts/README.md
+
+
+### Build
+
+```sh
+./scripts/local_dev_curriculum_asciidoc_builder.sh
 ```
 
 
@@ -30,6 +37,7 @@ cd /path/to/earsketch-curriculum
 The curriculum lessons for EarSketch are created from special text files called _ascii-docs_.  These files end with `.adoc` and contain the text for the curriculum lessons.
 
 The advantage of using ascii-doc format is that a non-techincal person can add text to a web site using a human-friendly format.  For example, bold text is set with asterisk, like: `this is *bold* text`.
+
 
 ## Ascii-doc Quick Reference
 
@@ -82,11 +90,13 @@ c = a + b  # expecting 2
 ----
 ```
 
+
 ### Further Formatting References
 
 * [AsciiDoc Quick Reference](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
 
 * [AsciiDoc LIVE Online Editor](https://asciidoclive.com)
+
 
 ## Filename Conventions for EarSketch
 
@@ -100,7 +110,7 @@ c = a + b  # expecting 2
     * For example `ch_8.adoc` OR `getting-started.adoc` OR `loops-and-layers.adoc`
 
 3. Other Languages / Locales
-    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content. 
+    * All other locales (ex. Spanish, French, Hebrew, Arabic, etc.) should originate from Build/Downloads from our [CrowdIn project](https://crowdin.com/project/earsketch). CrowdIn is a translation web app which helps manage and track translated content.
     * Other language `.adoc` files should only be updated by building and downloading from CrowdIn, and copying/overwriting those files into their appropriate locale directories in this repository.
 
 
@@ -109,7 +119,6 @@ c = a + b  # expecting 2
 1. Include `:nofooter:` in every file to remove the last update tag to appear at the bottom of the page
 
 2. To include code snippets, use following code before the snippet
-
 
 Show in python mode:
 ```asciidoc
@@ -223,6 +232,7 @@ makeBeat(2, "000-00000-000--0");
 --
 ```
 
+
 ## Example Chapter
 
 `ch_RemixComp.asc`
@@ -235,15 +245,12 @@ makeBeat(2, "000-00000-000--0");
 Welcome to the EarSketch Remix Competition curriculum.
 
 
-
 [[Intro]]
 === Introduction
 
-Here is your chance—enter an EarSketch Competition!
-
+Let your melody be heard in the EarSketch Competition!
 
 video::363707397[vimeo]
-
 
 
 [[SimpleScript]]
@@ -251,26 +258,44 @@ video::363707397[vimeo]
 
 image:../media/RemixComp/example_logo.png[]
 
+Check out the example script below.
+
 
 [role="curriculum-python"]
 [source,python]
 ----
 from earsketch import *
-init()
-setTempo(127)
-finish()
+setTempo(99)
+fitMedia(Y63_SHOUT_1, 1, 1, 5)
+setEffect(1, DISTORTION, DISTO_GAIN, 27)
+setEffect(1, VOLUME, GAIN, -6)
 ----
 
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-"use strict";
-init();
-setTempo(127);
-finish();
+setTempo(99);
+fitMedia(Y63_SHOUT_1, 1, 1, 5);
+setEffect(1, DISTORTION, DISTO_GAIN, 27);
+setEffect(1, VOLUME, GAIN, -6);
 ----
 
 ```
 
 Happy writing!
+
+
+## Issues / Contact
+
+Please use our contact form at https://earsketch.gatech.edu/landing/#/contact.
+
+
+## Contributing
+
+English language contributions can be submitted as pull requests. Translations can be submitted on our CrowdIn page.
+
+
+## License
+
+This project is licensed under [CC BY-NC-SA](LICENSE).
