@@ -45,27 +45,6 @@ ES_HOST="http://localhost:8888"
 cd "$GIT_REPO" || exit 1
 
 ## array of paths to be processed
-
-if sudo python3 -c "from bs4 import BeautifulSoup" &> /dev/null; then
-    echo 'BeautifulSoup is installed'
-else
-    echo 'BeautifulSoup is not installed. Please run "pip install beautifulsoup4"'
-    exit 1
-fi
-if [ ! -d "$2" ]; then
-    ES_SCRIPT_HOME=$GIT_REPO/scripts
-else
-    ES_SCRIPT_HOME="$2"
-fi
-
-SRC_DIR=$GIT_REPO/src
-ASCIIDOC_DIR=$GIT_REPO/src/locales
-LOCAL_STAGING_DIR=$GIT_REPO/curriculum-local/
-ES_HOST="http://localhost:8888"
-
-cd "$GIT_REPO" || exit 1
-
-## array of paths to be processed
 declare -a locale_array=(en
                       es
                       ar
