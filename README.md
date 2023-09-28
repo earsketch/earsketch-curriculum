@@ -16,14 +16,21 @@ Curriculum source files integrated within EarSketch at https://earsketch.gatech.
 - [Example Chapter](#example-chapter)
 
 
-## Build Instructions
+## Getting Started
 
-To build locally for development:
+### Requirements
 
-```shell
-cd /path/to/earsketch-curriculum
-./scripts/local_dev_curriculum_asciidoc_builder.sh /path/to/earsketch-curriculum
+- Asciidoctor version 2+
+
+- Python dependencies, see scripts/README.md
+
+
+### Build
+
+```sh
+./scripts/local_dev_curriculum_asciidoc_builder.sh
 ```
+
 
 ## About Curriculum ASCIIDOCs
 
@@ -277,3 +284,18 @@ setEffect(1, VOLUME, GAIN, -6);
 ```
 
 Happy writing!
+
+
+## Issues / Contact
+
+Please use our contact form at https://earsketch.gatech.edu/landing/#/contact.
+
+
+## Contributing
+
+English language contributions can be submitted as pull requests. Translations can be submitted on our CrowdIn page.
+
+
+## License
+
+This project is licensed under [CC BY-NC-SA](LICENSE).
