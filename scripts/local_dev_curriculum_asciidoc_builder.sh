@@ -2,17 +2,50 @@
 # FOR LOCAL DEVELOPMENT USE ONLY
 # Prepare curriculum html files, and toc json data files for the client
 
-if [ ! -d "$1" ]; then
-    echo "Usage: curriculum_asciidoc_builder.sh <GIT_REPO_DIR>" >&2
+USAGE_MSG="Usage: curriculum_asciidoc_builder.sh <GIT_REPO_DIR>"
+
+if [ "$1" = "help" ]; then
+    echo "$USAGE_MSG" >&2
     exit 1
+elif [ -z "$1" ]; then
+    if [ "$(basename "$(pwd)")" = "scripts" ]; then
+        GIT_REPO="$(dirname "$(pwd)")"
+    elif [ "$(basename "$(pwd)")" = "earsketch-curriculum" ]; then
+        GIT_REPO="$(pwd)"
+    else
+        echo "$USAGE_MSG" >&2
+        exit 1
+    fi
 else
     GIT_REPO="$1"
 fi
+
 if ! command -v asciidoctor &> /dev/null
 then
     echo "asciidoctor could not be found"
     exit 1
 fi
+if sudo python3 -c "from bs4 import BeautifulSoup" &> /dev/null; then
+    echo 'BeautifulSoup is installed'
+else
+    echo 'BeautifulSoup is not installed. Please run "pip install beautifulsoup4"'
+    exit 1
+fi
+if [ ! -d "$2" ]; then
+    ES_SCRIPT_HOME=$GIT_REPO/scripts
+else
+    ES_SCRIPT_HOME="$2"
+fi
+
+SRC_DIR=$GIT_REPO/src
+ASCIIDOC_DIR=$GIT_REPO/src/locales
+LOCAL_STAGING_DIR=$GIT_REPO/curriculum-local/
+ES_HOST="http://localhost:8888"
+
+cd "$GIT_REPO" || exit 1
+
+## array of paths to be processed
+
 if sudo python3 -c "from bs4 import BeautifulSoup" &> /dev/null; then
     echo 'BeautifulSoup is installed'
 else
