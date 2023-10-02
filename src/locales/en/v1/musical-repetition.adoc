@@ -364,7 +364,7 @@ Notice that inside our `chordProg()` function we are using an incrementing techn
 
 [question]
 --
-_____________ refers to repeated sections of music.
+Which term refers to repeated sections of music?
 [answers]
 * Repetition
 * Contrast
