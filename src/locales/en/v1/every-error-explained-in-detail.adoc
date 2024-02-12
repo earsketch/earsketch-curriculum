@@ -2,8 +2,23 @@
 == Every Error Explained in Detail
 :nofooter:
 
-[[importerror]]
-=== Import Error
+[[othererrors]]
+=== Overview
+
+An error is a mistake in the code that prevents the program from running.
+
+Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
+
+Guidance on addressing the most common errors is given in the next sections.
+
+[role="curriculum-python"]
+See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
+
+[role="curriculum-javascript"]
+See the official https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[MDN documentation^] for a full list of errors in JavaScript.
+
+[[modulenotfounderror]]
+=== ModuleNotFoundError
 
 //Python only
 
@@ -148,6 +163,8 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 
 [role="curriculum-python"]
 *Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo.
+
+Often there is a missing `from earsketch import *` statement at the top of the script.
 
 [role="curriculum-javascript"]
 *Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo. JavaScript specifically refers to this type of error as a reference error.
