@@ -23,10 +23,10 @@ See the official https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referen
 //Python only
 
 [role="curriculum-python"]
-*Console message:* ImportError: The appropriate packages cannot be found or imported.
+*Console message:* ModuleNotFoundError: No module named 'missing_module_name'
 
 [role="curriculum-python"]
-*Description:* An import error occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
+*Description:* A ModuleNotFoundError occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
 
 [role="curriculum-python"]
 *Example:* Although the snippet below shows the word "EarSketch" with its usual styling, Python modules are specified in all lowercase.
@@ -54,7 +54,7 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 *Solution:* Check your `from...import` statements at the top of your script for typos and letter case.
 
 [role="curriculum-javascript"]
-Import errors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#othererrors>>.
 
 [[indentationerror]]
 === Indentation Error
