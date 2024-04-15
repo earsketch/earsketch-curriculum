@@ -12,7 +12,9 @@ if len(sys.argv) < 2:
     exit(1)
 curr_dir = sys.argv[1]
 
-toc = codecs.open(curr_dir+'/toc.html', 'r').read()
+current_locale = os.path.basename(os.path.normpath(curr_dir))
+toc_html_path = curr_dir + '/toc.html'
+toc = codecs.open(toc_html_path, 'r').read()
 parser = BeautifulSoup(toc, 'html.parser')
 
 documents = []
@@ -65,3 +67,12 @@ wf.write(json.dumps(documents, indent=4))
 wf.close()
 
 print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
+
+print("Fixing toc html links to make links usable")
+
+# fix the toc link href paths
+for a in parser.find_all('a'):
+    a['href'] = a['href'].replace('/'+current_locale+'/', '')
+
+with open(toc_html_path, 'wb') as wf:
+    wf.write(parser.encode_contents())
