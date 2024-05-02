@@ -17,7 +17,7 @@ Guidance on addressing the most common errors is given in the next sections.
 See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
 
 [role="curriculum-javascript"]
-See the official https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[MDN documentation^] for a full list of errors in JavaScript.
+See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] for a full list of errors.
 
 [[modulenotfounderror]]
 === ModuleNotFoundError
