@@ -1,0 +1,6 @@
+[[reference]]
+== Effektlar, Xatolar va EarSketch Funktsiyalari
+
+:nofooter:
+
+Ushbu bo'limda siz barcha effektlar, xatolar va EarSketch IDI funktsiyalariga havolalarni topasiz.

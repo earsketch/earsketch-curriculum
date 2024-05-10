@@ -1,0 +1,276 @@
+[[ch_28]]
+== Har Bir Effektning Batafsil Tavsifi
+:nofooter:
+
+[[bandpass]]
+=== BANDPASS
+
+++++
+<div class="curriculum-mp3">audioMedia/bandpass.mp3</div>
+++++
+
+
+`BANDPASS` bu faqat sozlanish o'lchamdagi chastota diapazonidan o'tadigan (o'tkazadigan) filtr. Boshqa barcha chastotalar o'tkazilmaydi. Asl tovushning chastota diapazonini sezilarli darajada cheklash orqali (BANDPASS_WIDTH ni nisbatan kichik qiymatga sozlashda) filtr ba'zi zamonaviy rok musiqalarida mashhur bo'lgan "megafon" tovushi yoki telefon hamda kichik musiqa karnayi kabi maxsus effektli tovushlarni ishlab chiqishi mumkin. Tovushni chastotasi keng qilinsa (ya'ni BANDPASS WIDTH parametrini kattaroq songa tenglashtirganda), xajmi "o'ta katta" tovushlar pastroq, kichikroq qilinishi mumkin va bu tovush miks tarkibidagi boshqa tovushlar bilan samaraliroq qo'shilishi mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| BANDPASS_FREQ | O'tish uchun chastotalar oynasining markaziy chastotasi (Gertsda). | 800.0 | 20.0 | 20000.0 | `setEffect(1, BANDPASS, BANDPASS_FREQ, 200)`
+| BANDPASS_WIDTH | O'tkazish uchun chastotalar oynasining kengligi (Gertsda). | 0.5 | 0.0 | 1.0 | `setEffect(1, BANDPASS, BANDPASS_WIDTH, 0.3)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 0.1 | 0.0 | 1.0 | `setEffect(1, BANDPASS, MIX, 0.3)`
+| BYPASS | effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0). Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, BANDPASS, BYPASS, 0.0)`
+|========================================================================
+
+[[chorus]]
+=== NAQORAT
+
+++++
+<div class="curriculum-mp3">audioMedia/chorus1.mp3</div>
+++++
+
+`NAQORAT` asl tovushning turli xil nusxalarini yaratadi, ular tovush pardasi va vaqt jihatidan bir oz oʻzgarib, tovushga qayta aralashib, koʻplab ovozlarning birgalikda ansamblga oʻxshab ijro etilishining effektini yaratadi. Parametr sozlamalarining haddan tashqari qiymatlarida sun'iy "robotga o'xshash" tovushlar eshitilishi mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| CHORUS_LENGTH | Asl tovush ichidan naqorat effekti faollashtirilgan vaqt uzunligi (ms-da). | 15.0 | 1.0 | 250.0 | `setEffect(1, CHORUS, CHORUS_LENGTH, 53.0)`
+| CHORUS_NUMVOICES | Foydalanilgan asl tovushning nusxalari miqdori. Kattaroq qiymatlar ansamblga o'xshash katta effekt yaratadi. | 1.0 | 1.0 | 8.0 | `setEffect(1, CHORUS, CHORUS_NUMVOICES, 4.0) `
+| CHORUS_RATE | Tovush pardasining aylanish yoki "tebranish" darajasi (Gertsda). Pastroq qiymatlar silliq aylanuvchi tovushlarni yaratadi, yuqori qiymatlar esa ko'proq tebranish effektlarini yaratadi. | 0.5 | 0.1 | 16.0 | `setEffect(1, CHORUS, CHORUS_RATE, 3.0) `
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bularning barchasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, CHORUS, MIX, 0.5) `
+| CHORUS_MOD | Tovush pardasining tebranish chuqurligi (ya'ni, qancha tovush pardasi aylanmasi ishlatiladi). Past sozlamalar tabiiyroq tovushni yaratadi, yuqoriroq sozlamalar esa sun'iyroq tovushni yaratadi. | 0.7 | 0.0 | 1.0 | `setEffect(1, CHORUS, CHORUS_MOD, 0.4) `
+|========================================================================
+
+[[compressor]]
+=== KOMPRESSOR
+
+++++
+<div class="curriculum-mp3">audioMedia/compressor.mp3</div>
+++++
+
+`KOMPRESSOR` asosiy ikki parametrli kompressor bo'lib, u o'z ta'siri ostida bo'lgan trekning eng baland tovushlari hajmini pasaytiradi, shu bilan birga uning eng past tovushlari hajmini kuchaytiradi. Bu asl tovushdan torroq dinamik diapazonni yaratadi va ko'pincha asl tovushning zarbasini maksimal darajada oshirish uchun ishlatiladi, shu bilan birga keyinchalik qo'shiladigan shovqin salohiyatini kamaytiradi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| COMPRESSOR_THRESHOLD | Kompressor tovushni kamaytira boshlagan amplituda (ovoz balandligi) darajasi (dB da). | -18.0 | -30.0 | 0.0 | `setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -4.0)`
+| COMPRESSOR_RATIO | Belgilangan o'sishning kamayish miqdori. 3:1 nisbati, agar asl tovush chegaradan 3 dB yuqori bo'lsa, ta'sirlangan tovush chegaradan 1 dB yuqori bo'lishini anglatadi. | 10.0 | 1.0 | 100.0 | `setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 35.0)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, COMPRESSOR, BYPASS, 1.0)`
+|========================================================================
+
+[[delay]]
+=== KECHIKTIRISH
+
+++++
+<div class="curriculum-mp3">audioMedia/delay2.mp3</div>
+++++
+
+`KECHIKTIRISH` asl tovushning takroriy aks-sadosi kabi kechikishini hosil qiladi. Kechiktirish effekti asl audioni, shuningdek aks-sadoga o‘xshagan asl nusxaning kechiktirilgan, sokinroq versiyasini ijro etadi. Birinchi aks-sadodan keyin u aks-sado aks-sadosini (yanada pastroq), keyin aks sado aks-sadosini (undanda pastroq) va shunga o'xshash aks-sado tamomila so'nmaguncha davom etadi. Kechiktirish effekti bilan biz har bir aks-sado (kechikish vaqti) orasida qancha vaqt o'tishini boshqarishimiz mumkin. Agar biz kechiktirish vaqtini zarba uzunligiga mos keladigan qilib qo'ysak, biz kechiktirish bilan ritmik effektlarni yaratishimiz mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| DELAY_TIME | Asl trek kechiktirilgan vaqt miqdori millisoniyalarda (ms) va kechikishning ketma-ket takrorlanishi orasidagi vaqt. | 300.0 | 0.0 | 4000.0 | `setEffect(1, DELAY, DELAY_TIME, 1200.0)`
+| DELAY_FEEDBACK | Kechiktirish keltirib chiqaradigan takrorlashlarning nisbiy miqdori. Yuqori qiymatlar ko'proq "aks-sadolarni" yaratadi. "Haddan tashqari" fikr-mulohazalarni qo'llashdan ehtiyot bo'ling! | -3.0 | -120.0 | -1.0 | `setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 0.5 | 0.0 | 1.0 | `setEffect(1, DELAY, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, DELAY, BYPASS, 1.0)`
+|========================================================================
+
+[[distortion]]
+=== DISTORTSIYA
+
+++++
+<div class="curriculum-mp3">audioMedia/distortion2.mp3</div>
+++++
+
+`DISTORTSIYA` asl tovushni haddan tashqari yuklab, “kir” yoki “loyqa” tovush hosil qiladi. Bu obertonlar qo'shgan holda tovush to'lqinini siqib chiqaradi yoki qirqadi (asl tovush bilan bog'liq yuqori chastotalar). Gitara amplifayerini "haddan tashqari kuchaytirish" orqali elektr gitara ovozini buzib chiqarish odatiy holdir. Zamonaviy musiqa ba'zan kompozitsiyaga g'ayrioddiy yoki qumli effekt qo'shish, yohud tuyg'uni oshirish uchun distortsiyadan foydalanadi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| DISTO_GAIN | Asl tovushning haddan tashqari kuchaytirish miqdori. | 20.0 | 0.0 | 50.0 | `setEffect(1, DISTORTION, DISTO_GAIN, 25.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, DISTORTION, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, DISTORTION, BYPASS, 1.0)`
+|========================================================================
+
+[[eq3band]]
+=== EQ3BAND
+
+++++
+<div class="curriculum-mp3">audioMedia/eq3band.mp3</div>
+++++
+
+`EQ3BAND` oddiy EQ vazifalari uchun ishlatiladigan uch diapazonli ekvalayzerdir. Ekvalayzer audio trekdagi alohida chastota diapazonlarining ovoz balandligini sozlash uchun ishlatiladi. Ushbu maxsus effekt chastota tarkibining uchta diapazonida (“bandlar”) ovoz balandligini sozlash uchun ishlatilishi mumkin, xususan, bas, o'rta diapazon va uchlik (past, o'rta, yuqori), bu yerda past diapazonning yuqori chegarasi (`EQ3BAND_LOWFREQ`) va oʻrta diapazonning markaziy chastotasi (`EQ3BAND_MIDFREQ`) foydalanuvchi tomonidan oʻrnatilishi mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| EQ3BAND_LOWGAIN | EQ chastotasining past diapazonining o'sishi (dB-da). Salbiy qiymatlar past chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. | 0.0 | -24.0 | 18.0 | `setEffect(1, EQ3BAND, EQ3BAND_LOWGAIN, 5.3)`
+| EQ3BAND_LOWFREQ | Past diapazonning eng yuqori chastotasini (Gertsda) belgilaydi. | 200.0 | 20.0 | 20000.0 | `setEffect(1, EQ3BAND, EQ3BAND_LOWFREQ, 700.0)`
+| EQ3BAND_MIDGAIN | EQ chastotasining o'rta diapazonining o'sishi (dB-da). Salbiy qiymatlar o'rta chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. | 0.0 | -24.0 | 18.0 | `setEffect(1, EQ3BAND, EQ3BAND_MIDGAIN, -15.0)`
+| EQ3BAND_MIDFREQ | O'rta diapazonning markaziy chastotasini (Gertsda) belgilaydi. | 2000.0 | 20.0 | 20000.0 | `setEffect(1, EQ3BAND, EQ3BAND_MIDFREQ, 1200.0)`
+| EQ3BAND_HIGHGAIN | EQ chastotasining yuqori diapazonining o'sishi (dB-da). Salbiy qiymatlar yuqori chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. | 0.0 | -24.0 | 18.0 | `setEffect(1, EQ3BAND, EQ3BAND_HIGHGAIN, -15.0)`
+| EQ3BAND_HIGHFREQ | Yuqori diapazonning kesish chastotasini (Gertsda) belgilaydi. | 2000.0 | 20.0 | 20000.0 | `setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 8000.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, EQ3BAND, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, EQ3BAND, BYPASS, 1.0)`
+|========================================================================
+
+[[filter]]
+=== FILTR
+
+++++
+<div class="curriculum-mp3">audioMedia/filter.mp3</div>
+++++
+
+`FILTR` rezonansli standart past chastotadagi filtrdir. Past o'tkazuvchan filtr effekti past chastotali audioni o'zgarmagan holda o'tkazishga imkon beradi, shu bilan birga yuqori chastotalar ovoz balandligini kesish chastotasidan (`FILTER_FREQ` parametri) pasaytiradi. Bu audioga "qayg'uliroq" ohang beradi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| FILTER_FREQ | Kesish chastotasi (Gerts), ya'ni bu qiymatdan yuqori bo'lgan barcha chastotalar o'chirilgan (bu qiymatdan qanchalik yuqori bo'lsa, ovoz balandligi pastlashib boraveradi). | 1000.0 | 20.0 | 20000.0 | `setEffect(1, FILTER, FILTER_FREQ, 3000.0)`
+| FILTER_RESONANCE | Joriy `FILTER_FREQ` darajasi atrofida tor chastota diapazonini kuchaytirish miqdori. Bu joriy `FILTER_FREQ` darajasi atrofidagi chastotalar ko'proq jiringlashiga va ko'proq "rezonansli" tovush chiqarishiga olib keladi. U kesish chastotasi (`FILTER_FREQ`) atrofida yanada jonli, jiringlash tovushini samarali yaratadi. Rezonansning yuqori qiymatlari filtrni `FILTER_FREQ` atrofida "aniqroq" qiladi, bu esa kesish chastotasiga eng yaqin chastotalarni ta'kidlaydi. Bu filtrning tovushini aniq sozlashga yordam beradigan nozik parametr. | 0.8 | 0.0 | 1.0 | `setEffect(1, FILTER, FILTER_RESONANCE, 0.0, 1.0, 0.9, 3.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, FILTER, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, FILTER, BYPASS, 1.0)`
+|========================================================================
+
+[[flanger]]
+=== FLANGER
+
+++++
+<div class="curriculum-mp3">audioMedia/flanger.mp3</div>
+++++
+
+`FLANGER` naqorat effektiga o'xshaydi, bunda asl tovushning pardasi va vaqti biroz o'zgarib turadigan va yana ovozga aralashadigan turli nusxalari yaratiladi. Bundan farqli o'laroq, flanger vaqt qiymatlarining ancha nozik diapazonidan foydalanadi, bu esa "xushtak"ka o'xshash rivojlanayotgan tovushni yaratadi. Parametr sozlamalarining haddan tashqari qiymatlarida sun'iy "robotga o'xshash" tovushlar eshitilishi mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| FLANGER_LENGTH | Flanger effekti faollashtirilgan asl tovushdan kechikish vaqtining uzunligi (ms da). | 6.0 | 0.0 | 200.0 | `setEffect(1, FLANGER, FLANGER_LENGTH, 23.0)`
+| FLANGER_FEEDBACK | Ta'sir qilingan tovush effektga "qaytargan" miqdor (dB). Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. | -50.0 | -80.0 | -1.0 | `setEffect(1, FLANGER, FLANGER_FEEDBACK, -80.0)`
+| FLANGER_RATE | Tovush pardasining aylanish yoki "hushtak chalish" darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq shovqinli jaranglaydigan effektlar va tovush artefaktlarini yaratadi. | 0.6 | 0.001 | 100.0 | `setEffect(1, FLANGER, FLANGER_RATE, 45.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, FLANGER, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, FLANGER, BYPASS, 1.0)`
+|========================================================================
+
+[[pan]]
+=== PAN
+
+++++
+<div class="curriculum-mp3">audioMedia/pan2.mp3</div>
+++++
+
+`PAN` chap va o'ng kanallar orasidagi audio miksga ta'sir qiladi. Misol uchun, agar siz quloqchin taqqan bo'lsangiz, panoramalash - tovushni chap yoki o'ng quloqda eshitayotganingizga ta'sir qiladi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| LEFT_RIGHT | Stereo maydon ichida asl tovushning chap/o‘ng joyini belgilaydi (0,0 markazda, -100,0 to‘liq chapda, 100,0 to‘liq o‘ngda). | 0.0 | -100.0 | 100.0 | `setEffect(1, PAN, LEFT_RIGHT, -50.0)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, PAN, BYPASS, 1.0)`
+|========================================================================
+
+[[phaser]]
+=== FAZER
+
+++++
+<div class="curriculum-mp3">audioMedia/phaser.mp3</div>
+++++
+
+`FAZER` - bu ma'lum chastotalar oralig'ida asl tovush nusxasini yaratuvchi keng silkituvchi tovush effektidir. Ushbu ta'sir qilingan nusxa biroz kechiktiriladi hamda uning biroz kechiktirish vaqtini oldinga va orqaga ohista o'zgartirib, asl tovushga qarshi ijro etiladi. Bu nusxa ko'chirilgan chastotalarning bir-biri bilan "fazaga kirishi va undan chiqishi" orqali vaqtincha bir-birini bekor qilishiga olib keladi va shu bilan silkitish effektini yaratadi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| PHASER_RATE | Yengil kechiktirish vaqti oldinga va orqaga o'zgarish darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq robot tovushiga o'xshash effektlar va tovush artefaktlarini yaratadi. | 0.5 | 0.0 | 10.0 | `setEffect(1, PHASER, PHASER_RATE, 3.0)`
+| PHASER_RANGEMIN | Ta'sir qilingan chastota diapazonining past qiymati (Gertsda). | 440.0 | 40.0 | 20000.0 | `setEffect(1, PHASER, PHASER_RANGEMIN, 880.0)`
+| PHASER_RANGEMAX | Ta'sir qilingan chastota diapazonining yuqori qiymati (Gertsda). | 1600.0 | 40.0 | 20000.0 | `setEffect(1, PHASER, PHASER_RANGEMAX, 1700.0)`
+| PHASER_FEEDBACK | Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. | -3.0 | -120.0 | -1.0 | `setEffect(1, PHASER, PHASER_FEEDBACK, -1.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, PHASER, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, PHASER, BYPASS, 1.0)`
+|========================================================================
+
+[[pitchshift]]
+=== PITCHSHIFT
+
+++++
+<div class="curriculum-mp3">audioMedia/pitchshift1.mp3</div>
+++++
+
+`PITCHSHIFT` shunchaki tovushni ma'lum bir tovush pardasi oralig'ida pasaytiradi yoki oshiradi (`PITCHSHIFT_SHIFT`). Bu bir nechta tovush fayllarini birgalikda yaxshiroq yangrashida yoki aksincha, agar xohlasangiz, ozgina uyg'unsizlik qo'shishda foydali bo'lishi mumkin.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| PITCHSHIFT_SHIFT | Yarim ohanglarda asl ohangning tovush pardasini sozlash miqdorini belgilaydi (va o'nli nuqtadan keyingi qiymatlar bilan berilgan yarim ohangning kasrlari). 12 ta yarim ohang 1 oktavaga teng. | 0.0 | -12.0 | 12.0 | `setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, 4.0)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, PITCHSHIFT, BYPASS, 1.0)`
+|========================================================================
+
+[[reverb]]
+=== REVERBATSIYA
+
+++++
+<div class="curriculum-mp3">audioMedia/reverb.mp3</div>
+++++
+
+`REVERB` manba signaliga `KECHIKTIRISH` ga o'xshash, lekin ko'p holda ancha zichroq va boyroq bo'lgan asta-sekin so'nib boradigan muhit qo'shadi. Ovozni miks qilish va fazoviylashtirish uchun keng qo'llaniladi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| REVERB_TIME | Muhitning so'nish vaqti millisekundlarda (ms). Avtomatlashtirish egri chizig'i yordamida vaqt o'tishi bilan REVERB_TIME modulyatsiya qilinganda, o'rama asosli reverbatsiyaning tabiati tufayli qiymat faqat har chorak notada (vaqt = 0,25) avtomatlashtirishning boshlang'ich nuqtasidan boshlab "zinapoya" ko'rinishida yangilanadi. (Biroq, siz buni deyarli sezmaysiz.) | 1500.0 | 100.0 | 4000.0 | `setEffect(1, REVERB, REVERB_TIME, 1000.0)`
+| REVERB_DAMPFREQ | Muhitga qo'llaniladigan past o'tkazuvchan filtrning kesish chastotasi (Gertsda). Qiymat qanchalik past bo'lsa, reverberatsiya shunchalik qayg'uli yangraydi. | 10000.0 | 200.0 | 18000.0 | `setEffect(1, REVERB, REVERB_DAMPFREQ, 1500.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 0.3 | 0.0 | 1.0 | `setEffect(1, REVERB, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, REVERB, BYPASS, 1.0)`
+|========================================================================
+
+[[ringmod]]
+=== RINGMOD
+
+++++
+<div class="curriculum-mp3">audioMedia/ringmod.mp3</div>
+++++
+
+`RINGMOD` ikkita tovushdan kelgan signallarni ko'paytiradi: asl ovozingiz va sof sinus to'lqin (kamerton kabi eshitiladi). Ushbu multiplikatsiyaning effekti asl tovushning har bir chastotasida turlicha yangraydi, bu butunlay sun'iy tovushli natijani yaratadi, chunki bunday turdagi tovush hech qachon tabiiy ravishda paydo bo'lishi mumkin emas. Ushbu effekt uchun ba'zi parametr sozlamalari eski ilmiy-fantastik filmlarda qo'llaniladiganlarga o'xshash taniqli tovush effektlarini yaratishi mumkin. Bu bilan tajriba o'tkazish foydalidir, chunki asl tovushingizdan yaratilishi mumkin bo'lgan tovushlarning keng doirasi mavjud.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| RINGMOD_MODFREQ | Asl tovushingizga ko'paytirilayotgan sinus to'lqin osilatorining chastotasi (Gertsda). | 40.0 | 0.0 | 100.0 | `setEffect(1, RINGMOD, RINGMOD_MODFREQ, 70.0)`
+| RINGMOD_FEEDBACK | Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq robotsimon tovushlar va tovushli artefaktlarni yaratadi. | 0.0 | 0.0 | 100.0 | `setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 30.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, RINGMOD, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, RINGMOD, BYPASS, 1.0)`
+|========================================================================
+
+[[tremolo]]
+=== TREMOLO
+
+++++
+<div class="curriculum-mp3">audioMedia/tremolo.mp3</div>
+++++
+
+`TREMOLO` asl tovushning ovozini asl qiymatidan tez orqaga va oldinga oʻzgartirib sukunatgacha olib boradi, natijada tebranish effekti paydo boʻladi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| TREMOLO_FREQ | Ovoz balandligini oldinga va orqaga o'zgartirish darajasi (Gertsda). | 4.0 | 0.0 | 100.0 | `setEffect(1, TREMOLO, TREMOLO_FREQ, 10.0)`
+| TREMOLO_AMOUNT | Har bir halqa davomida ovoz balandligi oldinga va orqaga o'zgarib turadigan miqdor (dB). | -6.0 | -60.0 | 0.0 | `setEffect(1, TREMOLO, TREMOLO_AMOUNT, -40.0)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, TREMOLO, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, TREMOLO, BYPASS, 1.0)`
+|========================================================================
+
+[[volume]]
+=== OVOZ BALANDLIGI
+
+++++
+<div class="curriculum-mp3">audioMedia/volume2.mp3</div>
+++++
+
+`OVOZ BALANDLIGI` sizga audio klipning ovozini o'zgartirish imkonini beradi.
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| GAIN | Asl tovushning chiqishdagi ovoz balandligi darajasini belgilaydi. | 0.0 | -60.0 | 12.0 | `setEffect(1, VOLUME, GAIN, -5.0)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, VOLUME, BYPASS, 1.0)`
+|========================================================================
+
+[[wah]]
+=== WAH
+
+++++
+<div class="curriculum-mp3">audioMedia/wah.mp3</div>
+++++
+
+`WAH` - rezonansli tarmoqli o'tkazuvchi filtr (qarang: `BANDPASS` effekti), u setEffect() funktsiyasidagi zarflar yordamida vaqt o'tishi bilan o'zgartirilganda "vah-vah" pedal tovushini yaratadi.
+
+
+|========================================================================
+| Parametr | Izoh | Standart Qiymat | minQiymat | maksQiymat | Misol
+| WAH_POSITION | Ruxsat etilgan kenglikdagi chastota diapazonining markaziy chastotasi. | 0.0 | 0.0 | 1.0 | `setEffect(1, WAH, WAH_POSITION, 0.3)`
+| MIX | Ta'sir qilingan tovushning (ho'l) asl tovush (quruq) bilan mix qilingan foizi. Uning minimal qiymatida (0,0) hech qanday effekt eshitilmaydi. Uning maksimal qiymatida (1,0) asl tovushning hech biri eshitilmaydi - bu hammasi effekt. | 1.0 | 0.0 | 1.0 | `setEffect(1, WAH, MIX, 0.4)`
+| BYPASS | Effekt "yoqilgan" (1,0) yoki "o'chirilgan" (0,0) bo'ladi. Effektni chetlab o'tish "yoqilgan" (1.0) bo'lsa, bu effektga kiradigan audio orqali o'tadi va ta'sirlanmasdan chiqadi. E'tibor bering, boshqa effekt nomi/parametr juftlaridan farqli o'laroq, CHETLAB O'TISH uchun yagona haqiqiy qiymatlar 0,0 va 1,0 dir. | 0.0 | 0.0 | 1.0 | `setEffect(1, WAH, BYPASS, 1.0)`
+|========================================================================

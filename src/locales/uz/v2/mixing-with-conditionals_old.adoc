@@ -1,0 +1,661 @@
+[[mixingwithconditionnals]]
+== Shartlar bilan Mix Qilamiz!
+:nofooter:
+
+Dasturlashda siz narsalarni avtomatlashtirishingiz mumkin. Siz robotni to'siq aniqlanganda to'xtab qoladigan tarzda dasturlashtirishingiz avtomatlashtirishga misol bo'ladi. Ushbu stsenariyda robotga qo'lda to'xtashni aytish uchun inson kerak bo'lmaydi. Buning o'rniga robotda to'siqlarni aniqlaydigan sensor bo'ladi va agar to'siq mavjud bo'lsa, u to'xtaydi. Biz EarSketch-da shartlar (“if” bayonotlari) yordamida musiqiy avtomatlashtirishni amalga oshirishimiz mumkin. Biz treklarni miks qilish qanday avtomatlashtirishini ko'rib chiqamiz. Miks qilish bu shuni bildiradi: agar trek juda baland bo'lsa, biz uning ovoz balandligini pasaytiramiz va juda past bo'lsa, biz uning ovoz balandligini oshiramiz.
+
+
+[[analyzetrack]]
+=== `analyzeTrack()` dan Foydalanish
+
+Biz trekning ovoz balandligi yoki tovushini qanday aniqlashni ko'rib chiqamiz. Tovush pardasi (yuqori yoki past) va ovoz balandligi (baland yoki sokin) o'rtasidagi farqni tushunganingizga ishonch hosil qiling. Biz `analyzeTrack()` deb nomlangan EarSketch funktsiyasidan foydalanamiz. Quyidagi kodni nusxalang va ishga tushiring:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: analyzeTrack() funktsiyasi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: trekning ovoz balandligini chop etish uchun analyzeTrack() funktsiyasidan foydalanish
+#
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# Tovushni 1-trekka joylashtirish
+sound = COMMON_LOVE_VOX_COMMON_1
+fitMedia(sound, 1, 1, 9)
+
+# 1-trekning ovoz balandligini saqlash uchun o'zgaruvchi yaratish
+loudness1 = analyzeTrack(1, RMS_AMPLITUDE)
+
+# Konsolda ovoz balandligini ko'rsatish
+print(loudness1)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: analyzeTrack() funktsiyasi
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: trekning ovoz balandligini chop etish uchun analyzeTrack() funktsiyasidan foydalanish
+//
+// Sozlash
+init();
+setTempo(120);
+
+// Tovushni 1-trekka joylashtirish
+sound = COMMON_LOVE_VOX_COMMON_1;
+fitMedia(sound, 1, 1, 9);
+
+// 1-trekning ovoz balandligini saqlash uchun o'zgaruvchi yaratish
+loudness1 = analyzeTrack(1, RMS_AMPLITUDE);
+
+// Konsolda ovoz balandligini ko'rsatish
+println(loudness1);
+
+// Yakunlash
+finish();
+----
+
+
+Konsolingizda chop etilgan ovoz balandligi 0,10306035109110138 ekanligini o'qishingiz mumkin.
+
+* Ovoz balandligi 0 dan (sukunat) 1 ga (maksimal ovoz balandligi) o'zgarishi mumkin. 
+* Ba'zan siz shunga o'xshash raqamni ko'rasiz: 1.74630733714e-05. Bunga ilmiy belgi deyiladi: oxiridagi e-05 ga qarang? Bu o'nli kasrni 5 taga chapga ko'chirishni anglatadi (kerak bo'lsa 0 bilan almashtiring). Bu 0,0000174630733714 ga teng.
+* Ko'pgina tovushlarning balandligi 0,4 dan past bo'ladi 
+
+`analyzeTrack()` funktsiyasi 2 ta argument oladi:
+
+. trek raqami,
+. biz tahlil qilmoqchi bo'lgan parametr. Ovoz balandligi uchun bu: `RMS_AMPLITUDE`.
+
+.AMALIYOT
+****
+. Chiqishda nimani yangrashini ko'rish uchun yuqorida berilgan kodni turli tovushlar bilan ishlatib ko'ring ("tovush" o'zgaruvchisini o'zgartiring).
+. Ikkinchi trekni qo'shing va uning ovoz balandligini konsolda chop etish uchun `analyzeTrack()` funktsiyasidan foydalaning. Kodni ishga tushirganingizda, konsolingizga qarashdan avval musiqangizni tinglang va qaysi trek balandroq ekanligini taxmin qilishga harakat qiling.
+****
+
+`analyzeTrack()` parametri ovoz balandligini baholash uchun `RMS_AMPLITUDE` yoki tovush yorqinligini tahlil qilish uchun `SPECTRAL_CENTROID` boʻlishi mumkin. Biz ushbu bobda ovoz balandligini tahlil qilishga e'tibor qaratamiz.
+
+[[booleansandcomparisons]]
+=== Mantiqiy qiymatlar va taqqoslashlar
+
+Endi biz *Boolean mantig'i*ning qanday ishlashini ko'rib chiqamiz, bu bizga ba'zi vazifalarni avtomatlashtirishga yordam beradi.
+
+[role="curriculum-python"]
+*Mantiqiy qiymatlar* ma'lumotlar turidir. Boolean ma'lumotlar turi faqat ikkita mumkin bo'lgan qiymatga ega, `True` va `False`. `True` va `False` soʻzlari bosh harf bilan boshlanadi va qo'shtirnoqsiz yoziladi.
+
+[role="curriculum-javascript"]
+*Mantiqiy qiymatlar* ma'lumotlar turidir. Boolean ma'lumotlar turi faqat ikkita mumkin bo'lgan qiymatga ega, `true` va `false`. `true` va `false` kichik harf bilan boshlanadi va qo'shtirnoqsiz yoziladi.
+
+[role="curriculum-python"]
+--
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = True;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Quyida taqqoslash operatorlari:
+[cols="^h,1"]
+|===
+|==
+| bilan bir xil
+|!=
+| bilan bir xil emas
+|>
+| dan kattaroq
+|>
+| dan kattaroq yoki barobar
+|<
+| dan kam
+|\<=
+| dan kichik yoki teng
+|===
+--
+
+[role="curriculum-javascript"]
+--
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = true;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Quyida taqqoslash operatorlari:
+[cols="^h,1"]
+|===
+| ==
+| bilan bir xil
+|!=
+| bilan bir xil emas
+|>
+| dan kattaroq
+|>
+| dan kattaroq yoki barobar
+|<
+| dan kam
+|\<=
+| dan kichik yoki teng
+|===
+--
+
+Bular o'rtasidagi farqqa e'tibor bering:
+
+1. Ikki qiymatni taqqoslash, ularning bir xilligini aniqlash uchun: `==`
+2. O'zgaruvchiga qiymat tayinlash: `=`
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
+
+// this video will be cut at 2' to delete the section about boolean operators//
+
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+* Yangi skript yarating va 2 trekka tovush qo'shing.
+* Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `Rost`, aks holda `Yolg'on` deb chop eting.
+* Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `Rost`ni, bo'lmasa, `Yolg'on`ni chop eting.
+* Siz `True` yoki `False`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `Rost` yoki `Yolg'on` ekanligini bilib olasiz. Masalan, avval trek raqamini, so'ngra 'Rost' yoki 'Yolg'on'ni chop etishingiz mumkin.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+* Yangi skript yarating va 2 trekka tovush qo'shing.
+* Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `rost`, aks holda `yolg'on` deb chop eting.
+* Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `rost`ni, bo'lmasa, `yolg'on`ni chop eting.
+* Siz `true` yoki `false`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `rost` yoki `yolg'on` ekanligini bilib olasiz. Masalan, avval trek raqamini, so'ngra 'rost' yoki 'yolg'on'ni chop etishingiz mumkin.
+****
+
+Mana bir misol:
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+# skript_nomi: Mantiqiy Misol
+#
+# muallif: EarSketch Jamoasi
+# izoh: Biz treklarimiz ovoz balandligini tahlil qilamiz
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# 2 ta trek yaratish
+melody1 = RD_CINEMATIC_SCORE_STRINGS_14
+melody2 = RD_UK_HOUSE__5THCHORD_1
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 2, 1, 9)
+
+# Treklarning ovoz balandligini baholash
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+
+# 1-trek 2-trekdan balandroq ekanligini tekshirish
+# Biz 1-mantiqiy taqqoslashni yaratamiz
+comparison1 = (loudnessTrack1 > loudnessTrack2)
+print('1-trek 2-trekdan balandroqmi?')
+print(comparison1)
+
+# Har bir trekning ovoz balandligini 0,01 ga solishtirish for track in range(1, 3) :
+  loudness = analyzeTrack(track, RMS_AMPLITUDE)
+  print('Trek raqami ' + str(trek) + ' 0,01 dan kattaroqmi?')
+  print(loudness > 0.01)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Mantiqiy Misol
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Biz treklarimiz balandligini tahlil qilamiz
+//
+//
+// Sozlash
+init();
+setTempo(120);
+
+// 2 ta trek yaratish
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
+
+// Treklarning ovoz balandligini baholash
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// 1-trek 2-trekdan balandroq ekanligini tekshirish
+// Biz 1-mantiqiy taqqoslashni yaratamiz
+var comparison1 = (loudnessTrack1 > loudnessTrack2);
+println('1-trek 2-trekdan balandroqmi?');
+println(comparison1);
+
+// Har bir trekning ovoz balandligini 0,01 ga solishtirish for (var track = 1; track < 3; track++) {
+  var loudness = analyzeTrack(track, RMS_AMPLITUDE);
+  println ('Trek raqami ' + track + ' 0.01 dan kattaroqmi?');
+  println (loudness > 0.01);
+}
+
+//Yakunlash
+finish();
+
+----
+
+[role="curriculum-python"]
+Eslatma: ushbu misolda biz konsol mazmunini o'qishga yordam berish uchun satrlar bilan ba'zi chop etish bayonotlaridan foydalandik. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun, str() funktsiyasidan esa raqamlarni satrlarga aylantirish uchun foydalandik.
+
+[role="curriculum-javascript"]
+Eslatma: ushbu misolda biz konsol mazmunini o'qishga yordam berish uchun satrlar bilan ba'zi chop etish bayonotlaridan foydalandik. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun foydalandik.
+
+[[conditionalstatements]]
+=== Shartli Bayonotlar
+
+Shartli Bayonot nima? *Bayonotlar* - bu kompyuter uchun ko'rsatma. *Shartli bayonot* - bu ma'lum bir *shart* rost bo'lgandagina bajarilishi kerak bo'lgan ko'rsatma. Misol uchun, agar siz robotni to'siq oldida to'xtash uchun dasturlashtirsangiz, shart "to'siq bormi?" bo'ladi. Ha bo'lsa, to'xtating. Agar yo'q bo'lsa, hech narsa qilmang (davom eting).
+
+Quyida shartli bayonotning namunasi keltirilgan, for halqasi bilan o'xshashligiga e'tibor bering:
+
+[role="curriculum-python"]
+[source, python]
+----
+if (condition):
+    # Bu yerda shart Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing
+    # E'tibor bering, ko'rsatmalar xuddi for halqalarida bo'lgani kabi chekinish bilan kiritilgan
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+if (condition):
+    // Bu yerda shart Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing
+    // E'tibor bering, ko'rsatmalar xuddi for halqalarida bo'lgani kabi chekinish bilan kiritilgan
+}
+----
+
+.AMALIYOT
+****
+* 2 trekdan iborat yangi skript yarating.
+* Agar birinchi trekning ovozi ikkinchisidan balandroq bo'lsa, uning ovozini pasaytiring. Sizga `analyzeTrack()` va `setEffect()` funktsiyalari hamda if bayonoti kerak bo`ladi.
+* Ovozni pasaytirish uchun sizga salbiy o'sish (-1 va -60dB oralig'ida) kerak bo'ladi. 
+****
+
+Mana bir misol:
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: Remiks 1
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Agar 1-trek 2-trekdan balandroq boʻlsa, uning ovozini pasaytiramiz
+#
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# 2 ta trek yaratish
+melody1 = RD_CINEMATIC_SCORE_STRINGS_14
+melody2 = RD_UK_HOUSE__5THCHORD_1
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 2, 1, 9)
+
+# Treklarning ovoz balandligini baholash
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+
+# Agar 1-trek 2-trekdan balandroq bo'lsa, biz uning ovozini pasaytiramiz
+if (loudnessTrack1 > loudnessTrack2):
+	setEffect(1, VOLUME, GAIN, -10)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Remiks 1
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Agar 1-trek 2-trekdan balandroq bo'lsa, biz uning ovozini pasaytiramiz
+
+// Sozlash
+init();
+setTempo(120);
+
+// 2 ta trek yaratish
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
+
+// Treklarning ovoz balandligini baholash
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// Agar 1-trek 2-trekdan balandroq bo'lsa, biz uning ovozini pasaytiramiz
+if (loudnessTrack1 > loudnessTrack2){
+	setEffect(1, VOLUME, GAIN, -10);
+}
+
+//Yakunlash
+finish();
+----
+Biz bir nechta shartlarni tekshirishni va har bir shartga qarab turli xil bayonotlar to'plamini bajarishni xohlashimiz mumkin. Istaganingizcha shartlarni qo'shishingiz mumkin. Biz quyidagi sintaksisdan foydalanamiz:
+
+[role="curriculum-python"]
+[source, python]
+----
+if (condition1):
+    # Bu yerda 1-shart Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing. Agar u Yolg'on bo'lsa, keyingi qatorga o'ting
+elif (condition2):
+	# Bu yerda 2-shart Rost bo'lsa, ko'rsatmalarni yozing. Agar 2-shart Yolg'on bo'lsa, keyingi qatorga o'ting
+elif (condition3):
+	# Bu yerda 3-shart Rost bo'lsa, ko'rsatmalarni yozing. Agar 3-shart Yolg'on bo'lsa, keyingi qatorga o'ting
+else:
+# Bu yerda barcha 3 shart Yolg'on bo'lsa, ko'rsatmalarni yozing
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+if (condition1) {
+    // Bu yerda 1-shart rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing
+} else if (condition2) {
+	// Bu yerda 2-shart Rost bo'lsa, ko'rsatmalarni yozing. Agar 2-shart Yolg'on bo'lsa, keyingi qatorga o'ting
+	// elif - else if uchun qisqartma
+} else if (condition3) {
+	// Agar 3-shart Rost bo'lsa, bu erda ko'rsatmalarni yozing. Agar 3-shart Yolg'on bo'lsa, keyingi qatorga o'ting
+} else {
+// Agar barcha 3 shart Yolg'on bo'lsa, ko'rsatmalarni bu yerga yozing
+}
+----
+
+[[mixingyourtracks]]
+=== Treklaringizni miks qiling
+
+Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Miks qilish treklarning ovoz balandligini o'zgartiradi, shunda ular birgalikda yaxshi muvozanatlanadi. 
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+* Yangi skript yarating.
+* Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
+* Zarbdorlik qoʻshish uchun `makeBeat()` funktsiyasidan va for halqasidan foydalanishingiz mumkin.
+* "asosiy" trekingizni tanlang. Bu sizning ohangingiz yoki siz ta'kidlashni istagan bitta trek bo'lishi mumkin.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. `analyzeTrack()` zarbdorlik uchun muvofiq bo'lmagunga qadar zarbdor trekni hisob ichiga olmang. `analyzeTrack()` oʻrtacha qiymatni qaytaradi, perkussiya esa tovushning portlashidir, shuning uchun o'rtacha qiymat ovoz balandligini aniq baholamaydi.
+* Jarayoningizni konsolda ko'rsatish uchun chop etish bayonotlaridan foydalaning. Chop etish bayonotiga misol: `print('trek raqami' +str( trek) + '0,01 dan kattami?')`, agar hisoblagich `trek` `1` ga teng bo'lsa, bu '1 raqamli trek 0,01 dan kattami?' deb chop etadi. `str()` funktsiyasi raqamni (masalan: 1) satrga (masalan: '1') aylantiradi.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+* Yangi skript yarating.
+* Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
+* Zarbdorlik qoʻshish uchun `makeBeat()` funktsiyasidan va for halqasidan foydalanishingiz mumkin.
+* "asosiy" trekingizni tanlang. Bu sizning ohangingiz yoki siz ta'kidlashni istagan trek bo'lishi mumkin.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. `analyzeTrack()` zarbdorlik uchun muvofiq bo'lmagunga qadar zarbdor trekni hisob ichiga olmang. `analyzeTrack()` oʻrtacha qiymatni qaytaradi, perkussiya esa tovushning portlashidir, shuning uchun o'rtacha qiymat ovoz balandligini aniq baholamaydi.
+* Jarayoningizni konsolda ko'rsatish uchun chop etish bayonotlaridan foydalaning. Chop etish bayonotiga misol: `println('trek raqami' + trek + '0,01 dan kattami?')`, agar hisoblagich `trek` `1` ga teng bo'lsa, bu '1 raqamli trek 0,01 dan kattami?' deb chop etadi.
+****
+
+
+Keling, ba'zi lug'atlarni ko'rib chiqaylik:
+
+1. *Operator*: harakatni ifodalovchi belgi. We have seen arithmetic operators (`\+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
+2. *Ifoda*: qiymatlar, konstantalar, o‘zgaruvchilar, operatorlar va funktsiyalar birikmasi. Natija hosil qilish uchun kompyuter ifodalarni baholaydi, u odatda bitta raqam yoki mantiqiy qiymat bo'ladi.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
+3. *Bayonotllar* - bu kompyuter bajarishi uchun ko'rsatma.
+
+
+Quyida avtomatlashtirilgan miks qilish misoli keltirilgan. Agar siz bir yoki bir nechta tovushni o'zgartirsangiz, ularning ovoz balandligini tekshirishingiz va o'zingiz o'zgartirishingiz shart emas, chunki u allaqachon kodga kiritilgan. Shuning uchun biz buni avtomatlashtirilgan deb aytishimiz mumkin.
+
+[role="curriculum-python"]
+[source, python]
+----
+#python kodi
+# skript_nomi: Miks Qilish
+#
+# muallif: EarSketch Jamoasi
+# izoh: Qisqa qo'shiq yaratish va treklarni mix qilish uchun shartli bayonotlardan foydalanish
+#
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# Ohang va bas qo'shish
+melody1 = YG_ALT_POP_GUITAR_3
+melody2 = YG_ALT_POP_GUITAR_1
+bass1 = YG_ALT_POP_BASS_1
+bass2 = DUBSTEP_SUBBASS_008
+strings = YG_HIP_HOP_STRINGS_4
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 1, 9, 17)
+fitMedia(bass1, 2, 1, 9)
+fitMedia(bass2, 2, 9, 17)
+fitMedia(strings, 3, 9, 17)
+
+# makeBeat() yordamida zarbalar qo'shish
+beatKick = '0---0-----0-0---'
+beatSnare = '--0-0------000-'
+soundKick = OS_KICK02
+soundSnare = OS_SNARE06
+for measure in range(5,17):
+  makeBeat(soundKick, 4, measure, beatKick)
+  makeBeat(soundSnare, 5, measure, beatSnare)
+
+# Mening treklarimni mix qilish
+# Avval biz treklarni ovoz balandligi uchun tahlil qilamiz
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+print('1-trekning ovoz balandligi' + str(loudnessTrack1))
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+print('2-trekning ovoz balandligi' + str(loudnessTrack2))
+loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
+print('3-trekning ovoz balandligi' + str(loudnessTrack3))
+
+if (loudnessTrack1 < loudnessTrack2):
+  # agar 1-trek 2-trekdan sokinroq bo'lsa, biz 1-trekning ovozini ko'taramiz
+  setEffect(1, VOLUME, GAIN, +5)
+  print ('1-trek 2-trekdan sokinroq edi')
+elif (loudnessTrack1 < loudnessTrack3):
+  # agar 1-trek 2-trekdan balandroq, lekin 3-trekdan sokinroq bo'lsa, biz 1-trekning ovozini ko'taramiz
+  setEffect(1, VOLUME, GAIN, +5)
+  print ('1-trek 3-trekka nisbatan sokinroq edi')
+else:
+  # agar 1-trek 2 va 3-treklardan balandroq bo'lsa, biz hech narsani o'zgartirmaymiz
+   print('1-trek allaqachon eng baland trek edi')
+
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+
+// javascript kodi
+// skript_nomi: Miks Qilish
+//
+//muallif: EarSketch Jamoasi
+// izoh: Qisqa qo'shiq yaratish va treklarni mix qilish uchun shartli bayonotlardan foydalanish
+//
+
+//Sozlash
+init();
+setTempo(120);
+
+// Ohang va bas qo'shish
+var melody1 = YG_ALT_POP_GUITAR_3;
+var melody2 = YG_ALT_POP_GUITAR_1;
+var bass1 = YG_ALT_POP_BASS_1;
+var bass2 = DUBSTEP_SUBBASS_008;
+var strings = YG_HIP_HOP_STRINGS_4;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 1, 9, 17);
+fitMedia(bass1, 2, 1, 9);
+fitMedia(bass2, 2, 9, 17);
+fitMedia(strings, 3, 9, 17);
+
+// makeBeat() yordamida zarbalar qo'shish
+var beatKick = '0---0-----0-0---';
+var beatSnare = '--0-0------000-';
+var soundKick = OS_KICK02;
+var soundSnare = OS_SNARE06;
+for (var measure = 5; measure > 17; measure++){
+  makeBeat(soundKick, 4, measure, beatKick);
+  makeBeat(soundSnare, 5, measure, beatSnare);
+}
+
+
+// Mening treklarimni mix qilish
+// Avval biz treklarni ovoz balandligi uchun tahlil qilamiz
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+println('1-trekning ovoz balandligi' + loudnessTrack1);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+println('2-trekning ovoz balandligi' + loudnessTrack2);
+var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
+println('3-trekning ovoz balandligi' + loudnessTrack3);
+
+if (loudnessTrack1 < loudnessTrack2){
+  // agar 1-trek 2-trekdan sokinroq bo'lsa, biz 1-trekning ovozini ko'taramiz
+  setEffect(1, VOLUME, GAIN, +5);
+  println ('1-trek 2-trekdan sokinroq edi');
+} else if (loudnessTrack1 < loudnessTrack3){
+  // agar 1-trek 2-trekdan balandroq, lekin 3-trekdan sokinroq bo'lsa, biz 1-trekning ovozini ko'taramiz
+  setEffect(1, VOLUME, GAIN, +5);
+  println ('1-trek 3-trekka nisbatan sokinroq edi');
+} else {
+  // agar 1-trek 2 va 3-treklardan balandroq bo'lsa, biz hech narsani o'zgartirmaymiz
+  println('1-trek allaqachon eng baland trek edi');
+}
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+
+[[chapter6summary]]
+=== 6-Bob Xulosa
+
+[role="curriculum-python"]
+* `analyzeTrack()` funktsiyasi ikkita argumentni oladi: trek raqami va parametr. Parametr `RMS_AMPLITUDE` bo'lsa, funktsiya trekning balandligini qaytaradi (0 va 1 orasidagi raqam). Parametr `SPECTRAL_CENTROID` bo'lsa, funktsiya trekning yorqinligini qaytaradi.
+* *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `True` va `False`.
+* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `==` 2 ta qiymat tengligini baholaydi, `=` esa o`zgaruvchiga qiymat tayinlaydi.
+* *Operator*: harakatni ifodalovchi belgi.
+* *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
+* *Bayonot* - bu kompyuter uchun ko'rsatma.
+* *Shart* `Rost` yoki `Yolg'on` deb baholanadigan iboradir. 
+* _if_ bayonoti shart faqat `Rost` bo'lgandagina kod blokini bajaradi. 
+* Agar _if_ bayonotining sharti `Yolg{rsquo}on` bo'lsa, ixtiyoriy _else_ operatori muqobil kod blokini bajarishga imkon beradi.
+
+[role="curriculum-javascript"]
+* `analyzeTrack()` funktsiyasi ikkita argumentni oladi: trek raqami va parametr. Parametr `RMS_AMPLITUDE` bo'lsa, funktsiya trekning balandligini qaytaradi (0 va 1 orasidagi raqam). Parametr `SPECTRAL_CENTROID` bo'lsa, funktsiya trekning yorqinligini qaytaradi.
+* *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `true` va `false`.
+* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `==` 2 ta qiymat tengligini baholaydi, `=` esa o`zgaruvchiga qiymat tayinlaydi.
+* *Operator*: harakatni ifodalovchi belgi.
+* *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
+* *Bayonot* - bu kompyuter uchun ko'rsatma.
+* *Shart* `rost` yoki `yolg'on` deb baholanadigan iboradir.
+* _if_ bayonoti shart faqat `rost` bo'lgandagina kod blokini bajaradi.
+* Agar _if_ bayonotining sharti `yolg{rsquo}on` bo'lsa, ixtiyoriy _else_ operatori muqobil kod blokini bajarishga imkon beradi.
+
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Quyidagi elementlardan qaysi biri mantiqiy hisoblanadi?
+[answers]
+* `5+4 == 5`
+* `o'lchov = 1`
+* `2<3<4`
+* `False()`
+--
+
+[role="curriculum-python"]
+[question]
+--
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
+[source,python]
+----
+n = 5
+if (n * 3 == 15):
+    print(n + 5)
+else:
+    print(n)
+----
+[answers]
+* 10
+* 5
+* True
+* Yolg'on
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
+[source,javascript]
+----
+var n = 5;
+if (n * 3 == 15) {
+    println(5 + n);
+} else {
+    print(n);
+}
+----
+[answers]
+* 10
+* 5
+* True
+* Yolg'on
+--
+
+[question]
+--
+Miks qilish nima?
+[answers]
+* har bir trek yaxshi muvozanatli eshitilishi uchun ularning ovoz balandligini moslashtirish
+* treklar muvozanatli eshitilishi uchun har bir trekning tovush pardasini moslashtirish
+* tovushning asta kuchayishini qo'shish
+* tovushning asta so'nishini qo'shish
+--
+
+[question]
+--
+Shartli bayonotda nechta shartni tekshirishingiz mumkin?
+[answers]
+* har qanday miqdordagi shartlar
+* 1ta shart
+* 2ta shart
+* 3ta shart
+--

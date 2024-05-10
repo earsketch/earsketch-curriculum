@@ -1,0 +1,884 @@
+[[customfunctionssongstructure]]
+== Maxsus Funktsiyalar va Qo'shiq Tuzilmasi
+:nofooter:
+
+Qo'shiq tuzilmasi vaqt o'tishi bilan qo'shiqni tashkillashtirishdir. Maqsad musiqangiz oqimi uchun mazmunli bo'limlar va o'tishlarni yaratishdir. Ushbu bobda siz qo'shiqlaringizni tuzish uchun shaxsiy funktsiyangizni, maxsus funktsiyalarni yaratasiz!
+
+[[asongsstructure]]
+=== Qo'shiqning tuzilmasi
+:nofooter:
+
+Qo'shiqni *bo'limlarga* bo'lish mumkin. Bo'lim bir nechta o'lchovlardan (musiqiy vaqt birliklaridan) iborat bo'lib, u fikr yoki tuyg'uni ifodalaydi. Odatda, musiqachilar turli bo'limlar o'rtasida kontrast qo'shishga harakat qilishadi. _Muqaddimalar, She'rlar, Naqoratlar_ va _Xotimalar_ bo'limlarga misoldir.
+
+Umumiy va oddiy *shakl* yoki qo'shiq tuzilishi ABA hisoblanadi. A va B ikki xil bo'limdir, masalan, naqorat va she'r. B bo'limi rang-baranglikni qo'shadi, A bo'limiga qaytish esa boxabarlikni chaqiradi. Quyidagi kod ABA shaklini yaratadi. B bo'limida A bo'limiga nisbatan kontrast tovushlar mavjud - sekinroq va balandroq bass va qo'shimcha shitirlash:
+
+[[imediau2sections_052016png]]
+.EarSketch RAIS ichidagi ABA shakli
+[caption="Figure 9.2: "]
+image::../media/U2/sections_052016.png[Alt Text]
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: A-B-A Shakli
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: A va B bo'limlari bo'lgan qo'shiq
+#
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# Musiqa
+
+# A bo'limini yarating
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # baraban
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # bas chizig'i
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) # bas chizig'ining ovozini ko'taish
+
+# 5 va 9 o'lchovlar orasida 4 o'lchovli B bo'limini yarating
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9) # asosiy ohang farqlanadi
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9) # baraban farqlanadi
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9) # kontrastli bas: u sekinroq va balandroq
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9) # bas balandligini ko'tarish
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9) # shitirlash: yangi element qo'shish
+
+# Keyin 9-o'lchovdagi A bo'limiga qaytish
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13) # asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13) # barabanlar
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13) # bas chizig'i
+setEffect(3, VOLUME, GAIN, 0, 9, -20, 13) # bas chizig'ining ovozini ko'tarish
+
+# Yakunlash
+finish()
+----
+
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+
+// JavaScript kodi
+//
+// skript_nomi: A-B-A Shakli
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: A va B bo'limlari bo'lgan qo'shiq
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+// Musiqa
+
+// A bo'limini yarating
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5);// barabanlar
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bas chizig'i
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // bas chizig'ining ovozini ko'tarish
+
+// 5 va 9 o'lchovlar orasida 4 o'lchovli B bo'limini yarating
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // asosiy ohang farqlanadi
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // barabanlar farqlanadi
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // kontrastli bas: u sekinroq va balandroq
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // bas balandligini ko'tarish
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // shitirlash: yangi element qo'shish
+
+// Keyin 9-o'lchovdagi A bo'limiga qaytish
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // barabanlar
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // bas chizig'i
+setEffect(3, VOLUME, GAIN, -20, 9, 0, 13); // bas chizig'ining ovozini ko'tarish
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+O'zingizga yoqqan qo'shiqni tanlang. Uni tinglang va turli bo'limlarga e'tibor berishga harakat qiling. Musiqachilar bo'limlarni qachon o'zgartirishini ayta olasizmi? Qancha naqorat yoki she'rlarni eshita olyapsiz? Qanday kontrastni kuzatia olyapsiz? O'zingizning misolingizni qo'shningiz bilan baham ko'ring.
+****
+
+Yodda tutingki, kliplar 2, 4, 8, 16 va hokazo guruhlarga ajratilganda musiqiy ibora tabiiy eshitiladi. Shunday qilib, sizning bo'limlaringiz 2, 4, 8, 16 o'lchovlarga ega bo'lishi kerak.
+
+[[creatingyourcustomfunctions]]
+=== Maxsus funktsiyalaringizni yarating
+
+ABA qo'shig'i bilan oldingi misolda kod katta bo'lib, u ikkinchi A bo'limi uchun ham takrorlanadi. *Maxsus funktsiyalar* ko'magida yanada samaraliroq bo'lish yo'li bor! Biz A bo'limini ifodalovchi funktsiyani aniqlaymiz, so'ngra funktsiyani ikki marta chaqiramiz.  
+
+Siz foydalangan `fitMedia()` kabi funktsiyalardan farqi shundaki, `fitMedia()` qoʻshiqni ijro etish uchun jamoamiz tomonidan oldindan belgilangan. Maxsus funktsiyada siz uning nima qilishini aniq belgilashingiz mumkin. A bo'limini qanday belgilashingiz mumkin:
+
+[role="curriculum-python"]
+[source, python]
+----
+def sectionA():
+	# Ko'rsatmalaringizni shu yerga yozing. Bu funktsiyaning tanasi.
+	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5) # asosiy
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5) # baraban
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5) # bass qatori
+setEffect(3,VOLUME,GAIN, -20, 1, 0, 5) # bass qatorining ovoz balandligini ko'tarish
+	# Ushbu kod chekintirilgan. Skriptingizning davomini yozayotganda chekinishni to'xtatganingizga ishonch hosil qiling.
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+function sectionA() {
+	// Ko'rsatmalaringizni shu yerga yozing. Bu funktsiyaning tanasi.
+ 	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // asosiy
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // barabanlar
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bass qatori
+	setEffect(3,VOLUME,GAIN, -20, 1, 0, 5); // bass qatorining ovozini ko'tarish
+}
+----
+
+. sectionA() funktsiyamiz uchun tanlagan nomdir. O'zingizga yoqqan har qanday nomni tanlashingiz mumkin. Funktsiyangizni tavsiflovchi tarzda nomlashga harakat qiling, shunda kodingizni o'qish osonroq bo'ladi.
+. Ko'rsatmalar funktsiyaning *tanasi* hisoblanadi. Ular chekingan bo'ladi.
+
+.AMALIYOT
+****
+Ushbu kodni yangi skriptga joylashtiring va uni ishga tushiring. Siz RAIS bo'sh qolganligini ko'rishingiz kerak. 
+Buning sababi, uni ishlatish uchun funktsiyani *chaqirishingiz* kerak.  
+Funktsiyangizni chaqirish uchun funktsiya izohidan so'ng `sectionA()` qatorini chekintirmasdan qo'shing. Kodni ishga tushirishda siz RAIS-da A bo'limini ko'rishingiz kerak
+****
+
+Endi biz A bo'limini 9 dan 13 gacha o'lchovlarda qo'shmoqchimiz. Biroq, sectionA() ni chaqirganimizda, tovushlar 1 dan 5 gacha o'lchovlardan joylashtiriladi. Ushbu muammoni hal qilishda biz funktsiyamiz uchun *parametrlarni* yaratamiz.
+
+.AMALIYOT
+****
+Avvalgi amaliyot muammosi uchun siz joriy skriptingizda yaratgansiz:
+
+1. SectionA funktsiyasi ta'rifi uchun qavslar ichida hamda vergul bilan ajratilgan `startMeasure` va `endMeasure` parametrlarini qo'shing: `sectionA(startMeasure,endMeasure)`.
+2. Funktsiyaning tanasida boshlan'ich o'lchovlarini (1) va yakunlash o'lchovlarini (5) mos ravishda `startMeasure` va `endMeasure` bilan almashtiring.
+3. Funktsiyangizni chaqirganingizda, qavslar orasiga `1` va `5` parametrlarini qo'shing. Hech qanday xato yo'qligiga ishonch hosil qilish uchun kodni ishga tushiring.
+4. Bu safar `9` va `13` parametrlari bilan ikkinchi funktsiya chaqiruvini qo'shing. Hech qanday xato yo'qligiga ishonch hosil qilish uchun kodni ishga tushiring.
+5. Xuddi shu jarayondan foydalanib, B bo'limi uchun funktsiyani aniqlang hamda 5 dan 9 gacha va 13 dan 17 gacha bo'lgan o'lchovlardan B qismini chaqiring.
+****
+
+Sizning kodingiz shunday ko'rinishi mumkin:
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: A-B-A-B Shakli va maxsus funktsiyalar
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Maxsus funktsiyalardan foydalangan holda A va B bo'limlari bo'lgan qo'shiq
+#
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+# Musiqa
+
+# A bo'limi funktsiyasini yaratish
+def sectionA(startMeasure, endMeasure):
+	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure) # asosiy
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure) # baraban
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure) # bas chizig'i
+	setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure) # bas chizig'ining ovozini ko'taish
+
+# B bo'limi funktsiyasini yaratish
+def sectionB(startMeasure, endMeasure):
+	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure) # asosiy ohang farqlanadi
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure) # baraban farqlanadi
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # kontrastli bas: u sekinroq va balandroq
+	setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure) # bas ovozini ko'tarish
+	fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure) # shitirlash: yangi element qo'shish
+
+# Funktsiyalarimni chaqirish
+sectionA(1, 5)
+sectionB(5, 9)
+sectionA(9, 13)
+sectionB(13, 17)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+
+// JavaScript kodi
+//
+// skript_nomi: A-B-A-B Shakl va maxsus funktsiyalar
+//
+//muallif: EarSketch Jamoasi
+//
+// izoh: A va B bo'limlari bo'lgan qo'shiq, maxsus funktsiyalardan foydalangan holda
+//
+
+//Sozlash
+init();
+setTempo(120);
+
+//Musiqa
+
+// A bo'limi funktsiyasini yarating
+function sectionA(startMeasure, endMeasure){
+	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure); // asosiy
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure);// barabanlar
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure); // bas qatori
+	setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure); // bas qatoriining hajmini oshirish
+}
+
+// B bo'limi funktsiyasini yarating
+function sectionB(startMeasure, endMeasure){
+	fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure); // asosiy ohang farqlanadi
+	fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure); // barabanlar farqlanadi
+	fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); // kontrastli bas: u sekinroq va balandroq
+	setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure); // bas tovushini oshirish
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); // shovqin: yangi element qo'shish
+}
+
+// Mening funktsiyalarimni chaqirish
+sectionA(1, 5);
+sectionB(5, 9);
+sectionA(9, 13);
+sectionB(13, 17);
+
+// Yakunlash
+finish();
+----
+
+
+//The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
+
+
+[role="curriculum-python curriculum-mp4"]
+[[video93py]]
+video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video93js]]
+video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
+
+
+[[transitionstrategies]]
+=== O'tish Strategiyalari
+
+Endi siz qo'shiqni tuzish uchun maxsus funktsiyalarni qanday yaratishni bilasiz, keling, o'tishlarni ko'rib chiqaylik. *O'tishlar* bir bo'lim ikkinchisiga silliq o'tishiga yordam beradi. Ular she'r va naqoratni bog'lashi, notalarni biriktirishi, treklar o'rtasida miks qilish (DJ-lik) yoki ohangni o'zgartirishi mumkin. O'tishning maqsadi tinglovchining e'tiborini jalb qilish va ularga o'zgarish sodir bo'lishini bildirishdir. 
+
+Quyida musiqiy o'tishlarni yaratish uchun mashhur strategiyalar keltirilgan:
+
+. *To'qnashuv Simbali*: To'qnashuv Simbalini yangi qismning birinchi zarbasiga joylashtirish. Bu https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[misol^]ga qarang.
+. *Baraban bilan toʻldirish*: Yangi boʻlim oldidagi boʻshliqni toʻldirish uchun ritmik oʻzgarishlar. Baraban bilan toʻldirishning https://www.youtube.com/watch?v=YMskGG39Y0Y[misollarini^] koʻring.
+. *Trek Uzilishlari*: sukunatlar yaratish uchun ba'zi treklarni vaqtincha uzib qo'yish. https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love] ni tinglang.
+. *Ohangning o'zgarishi*: yangi bo'lim oldidan akkordlar, bass qatori yoki ohangning o'zgarishini kiritish. Ko'p xollarda, EarSketch tovush kutubxonasida shunga o'xshash riffning turlari mavjud.
+. *Ko'taruvchi*: Tovush pardasini oshiradigan nota yoki shovqin. EDM (Elektron Raqs Musiqasi) da juda keng tarqalgan va tushriib qoldirishdagi intiqishni yaratadi. Tovush Brauzerida "ko'taruvchi" qidiruv terminidan foydalanishingiz mumkin. Teskari to'qnashuv simbalidan ko'taruvchi sifatida foydalanish mumkin, masalan YG_EDM_REVERSE_CRASH_1. Bu yerda https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[Karl Koksning texno-to'plami^]dagi ko'taruvchining misoli.
+. *Pistirma Kasri*: ortib borayotgan zichlik, tovush pardasi yoki amplituda bilan takrorlangan pistirma urishlar ketma-ketligi. Siz RD_FUTURE_DUBSTEP_FILL_1 yoki HOUSE_BREAK_FILL_003 kabi klipdan yoki `makeBeat()` bilan foydalanishingiz mumkin. Mana https://www.youtube.com/watch?v=c3HLuTAsbFE[misol^].
+. *Halqalash*: yangi qism oldidan qisqa musiqa segmentini takrorlash. Mana, DJ'likda halqalashning https://www.youtube.com/watch?v=AQg4wnbBjiQ[misoli^].
+. *Crossfeyding*: Bir qismning ovozini balandligini pasaytirish va yangi bo'limning ovoz balandligini oshirish. 
+. *Anakrusis*: Yangi bo'limning ohangi ikki zarbaga ertaroq boshlanganadi.
+
+.AMALIYOT
+****
+Mumkin bo'lgan o'tishlarning ushbu ro'yxatiga qarab, ulardan 2 tasini tanlang va ularni kod yordamida qanday amalga oshirishingiz mumkinligini ko'rishga harakat qiling. Siz juftlikda ishlashingiz mumkin. Bu haqda o'ylab ko'rganingizdan so'ng, quyidagi misollarni ko'rishingiz mumkin.
+
+O'tishni yangi qismdan 1 yoki 2 o'lchovga avvalroq qo'yish kerak. Bir vaqtning o'zida bir nechta o'tish uslubidan foydalanishingiz mumkin.
+****
+ 
+
+Baraban bilan to'ldirishlar:
+
+[role="curriculum-python"]
+[source, python]
+----
+#	python kodi
+#
+#	skript_nomi: O'tish Uslubi - Barabanlar Bilan To'ldirish
+#
+#	muallif: EarSketch Jamoasi
+#
+#	izoh: Bo'limlar o'rtasida baraban bilan to'ldirib o'tish
+#
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(130)
+
+#Musiqa
+leadGuitar1 = RD_ROCK_POPLEADSTRUM_GUITAR_4
+leadGuitar2 = RD_ROCK_POPLEADSTRUM_GUITAR_9
+bass1 = RD_ROCK_POPELECTRICBASS_8
+bass2 = RD_ROCK_POPELECTRICBASS_25
+drums1 = RD_ROCK_POPRHYTHM_DRUM_PART_10
+drums2 = RD_ROCK_POPRHYTHM_MAINDRUMS_1
+drumFill = RD_ROCK_POPRHYTHM_FILL_4
+
+# 1-bo'lim
+fitMedia(leadGuitar1, 1, 1, 8)
+fitMedia(bass1, 2, 1, 8)
+fitMedia(drums1, 3, 1, 8)
+
+# Baraban bilan to'ldirish
+fitMedia(drumFill, 3, 8, 9)
+
+# 2-bo'lim
+fitMedia(leadGuitar2, 1, 9, 17)
+fitMedia(bass2, 2, 9, 17)
+fitMedia(drums2, 3, 9, 17)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+// javascript kodi
+//
+// skript_nomi: O'tish Uslubi - Barabanlar Bilan To'ldirish
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Bo'limlar o'rtasida baraban bilan to'ldirib o'tish
+//
+
+// Sozlash
+init();
+setTempo(130);
+
+// Musiqa
+var leadGuitar1 = RD_ROCK_POPLEADSTRUM_GUITAR_4;
+var leadGuitar2 = RD_ROCK_POPLEADSTRUM_GUITAR_9;
+var bass1 = RD_ROCK_POPELECTRICBASS_8;
+var bass2 = RD_ROCK_POPELECTRICBASS_25;
+var drums1 = RD_ROCK_POPRHYTHM_DRUM_PART_10;
+var drums2 = RD_ROCK_POPRHYTHM_MAINDRUMS_1;
+var drumFill = RD_ROCK_POPRHYTHM_FILL_4;
+
+// 1-bo'lim
+fitMedia(leadGuitar1, 1, 1, 8);
+fitMedia(bass1, 2, 1, 8);
+fitMedia(drums1, 3, 1, 8);
+
+// Baraban bilan to'ldirish
+fitMedia(drumFill, 3, 8, 9);
+
+// 2-bo'lim
+fitMedia(leadGuitar2, 1, 9, 17);
+fitMedia(bass2, 2, 9, 17);
+fitMedia(drums2, 3, 9, 17);
+
+// Yakunlash
+finish();
+----
+
+Trekni uzish uslubi faqat bir nechta `fitMedia()` chaqiruvlarini o'zgartirishni talab qiladi. Quyida misol keltirilgan.
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: O'tish Uslubi - Trek Uzilishlari
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Trek uzilishlari orqali bo'limlar o'rtasida o'tish
+#
+#
+#
+
+ # Sozlash
+from earsketch import *
+
+init()
+setTempo(120)
+
+#Musiqa
+introLead = TECHNO_ACIDBASS_002
+mainLead1 = TECHNO_ACIDBASS_003
+mainLead2 = TECHNO_ACIDBASS_005
+auxDrums1 = TECHNO_LOOP_PART_025
+auxDrums2 = TECHNO_LOOP_PART_030
+mainDrums = TECHNO_MAINLOOP_019
+bass = TECHNO_SUBBASS_002
+
+# 1-bo'lim
+fitMedia(introLead, 1, 1, 5)
+fitMedia(mainLead1, 1, 5, 9)
+fitMedia(auxDrums1, 2, 3, 5)
+fitMedia(auxDrums2, 2, 5, 8) # Barabanlar uziladi
+fitMedia(mainDrums, 3, 5, 8)
+
+# 2-bo'lim
+fitMedia(mainLead2, 1, 9, 17)
+fitMedia(auxDrums2, 2, 9, 17) # Barabanlar qayta tiklanadi
+fitMedia(mainDrums, 3, 9, 17)
+fitMedia(bass, 4, 9, 17)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+// javascript kodi
+//
+// skript_nomi: O'tish Uslubi - Trek Uzilishlari
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Trek uzilishlari orqali bo'limlar o'rtasida o'tish
+//
+//
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+//Musiqa
+var introLead = TECHNO_ACIDBASS_002;
+var mainLead1 = TECHNO_ACIDBASS_003;
+var mainLead2 = TECHNO_ACIDBASS_005;
+var auxDrums1 = TECHNO_LOOP_PART_025;
+var auxDrums2 = TECHNO_LOOP_PART_030;
+var mainDrums = TECHNO_MAINLOOP_019;
+var bass = TECHNO_SUBBASS_002;
+
+// 1-bo'lim
+fitMedia(introLead, 1, 1, 5);
+fitMedia(mainLead1, 1, 5, 9);
+fitMedia(auxDrums1, 2, 3, 5);
+fitMedia(auxDrums2, 2, 5, 8); // Barabanlar uziladi
+fitMedia(mainDrums, 3, 5, 8);
+
+// 2-bo'lim
+fitMedia(mainLead2, 1, 9, 17);
+fitMedia(auxDrums2, 2, 9, 17); // Barabanlar qayta tiklanadi
+fitMedia(mainDrums, 3, 9, 17);
+fitMedia(bass, 4, 9, 17);
+
+// Yakunlash
+finish();
+----
+
+Keyingi misol, o'tish jarayonida bir nechta ko'taruvchilar va to'qnashuv simbalidan foydalaniladi.
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: O'tish Texnikasi - Ko'taruvchilar
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Ko'taruvchilar va to'qnashuv simbali yordamida bo'limlar o'rtasida o'tish
+#
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(128)
+
+#Musiqa
+synthRise = YG_EDM_SYNTH_RISE_1
+airRise = RD_EDM_SFX_RISER_AIR_1
+lead1 = YG_EDM_LEAD_1
+lead2 = YG_EDM_LEAD_2
+kick1 = YG_EDM_KICK_LIGHT_1
+kick2 = ELECTRO_DRUM_MAIN_LOOPPART_001
+snare = ELECTRO_DRUM_MAIN_LOOPPART_003
+crash = Y50_CRASH_2
+reverseFX = YG_EDM_REVERSE_FX_1
+
+# 1-bo'lim
+fitMedia(lead1, 1, 1, 17)
+fitMedia(kick1, 2, 9, 17)
+
+#O'tish
+fitMedia(reverseFX, 3, 16, 17)
+fitMedia(synthRise, 4, 13, 17)
+fitMedia(airRise, 5, 13, 17)
+fitMedia(crash, 6, 17, 19)
+
+# 2-bo'lim
+fitMedia(lead2, 1, 17, 33)
+fitMedia(kick2, 7, 25, 33)
+fitMedia(snare, 8, 29, 33)
+
+# Effektlar
+setEffect(1, VOLUME, GAIN, 0, 16, 1, 17) #Yaxshiroq moslashish uchun ovoz balandligini sozlash
+setEffect(4, VOLUME, GAIN, -10)
+setEffect(7, VOLUME, GAIN, -20)
+setEffect(8, VOLUME, GAIN, -20)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+// javascript kodi
+//
+// skript_nomi: O'tish Texnikasi - Ko'taruvchilar
+//
+// muallif: EarSketch Jamoasi
+//
+// tavsifi: Ko'taruvchilar va to'qnashuv simbali yordamida bo'limlar o'rtasida o'tish
+//
+
+// Sozlash
+init();
+setTempo(128);
+
+// Musiqa
+var synthRise = YG_EDM_SYNTH_RISE_1;
+var airRise = RD_EDM_SFX_RISER_AIR_1;
+var lead1 = YG_EDM_LEAD_1;
+var lead2 = YG_EDM_LEAD_2;
+var kick1 = YG_EDM_KICK_LIGHT_1;
+var kick2 = ELECTRO_DRUM_MAIN_LOOPPART_001;
+var snare = ELECTRO_DRUM_MAIN_LOOPPART_003;
+var crash = Y50_CRASH_2;
+var reverseFX = YG_EDM_REVERSE_FX_1;
+
+// 1-bo'lim
+fitMedia(lead1, 1, 1, 17);
+fitMedia(kick1, 2, 9, 17);
+
+// O'tish
+fitMedia(reverseFX, 3, 16, 17);
+fitMedia(synthRise, 4, 13, 17);
+fitMedia(airRise, 5, 13, 17);
+fitMedia(crash, 6, 17, 19);
+
+// 2-bo'lim
+fitMedia(lead2, 1, 17, 33);
+fitMedia(kick2, 7, 25, 33);
+fitMedia(snare, 8, 29, 33);
+
+// Effektlar
+setEffect(1, VOLUME, GAIN, 0, 16, 1, 17); //Yaxshiroq moslashish uchun ovoz balandligini sozlash
+setEffect(4, VOLUME, GAIN, -10);
+setEffect(7, VOLUME, GAIN, -20);
+setEffect(8, VOLUME, GAIN, -20);
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+[[yourfullsong]]
+=== Sizning to'liq qo'shig'ingiz
+
+Dasturlashda biz *abstraksiyalarni* yaratishimiz mumkin, ya'ni yagona tushunchani shakllantirish uchun g'oyalar to'plami. Musiqada biz musiqiy g'oyalarni bo'limlarga ajratamiz. Funktsiyalar - bu informatika fanida qo'llaniladigan mavhumlikning bir turi. Ular bir nechta bayonotlarni bitta vositaga to'playdi, shuning uchun ularga osongina murojaat qilish mumkin. Abstraktsiyalar dastur shaklini aniqroq qilishi mumkin.
+
+.AMALIYOT
+****
+Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'liq qo'shiq yarataylik! Bu erda qanday ishlash bo'yicha taklif bor, lekin uni xohlaganingizcha moslashtirishingiz mumkin:
+
+. Qo'shiq uchun mavzuni tanlang. Sizning xabaringizni eng zo'r yetkazadigan tovushlar, asboblar yoki so'zlarning turi haqida o'ylab ko'ring.
+. So'ng oddiy tuzilmani tanlang. 
+. Va nihoyat, dasturlashni boshlang! Tovushlarni tanlash uchun ba'zi `fitMedia()` funktsiyalaridan boshlang.
+. Zarbdorlik qoʻshish uchun `makeBeat()` dan foydalaning.
+. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
+. Kodingizdagi takrorlanishni kamaytirish uchun `for` halqalaridan foydalaning.
+. Bo'limlaringizni belgilash va qo'shiq tuzilmangizni yaratish uchun maxsus funktsiyalardan foydalaning.
+. Bir yoki ikkita mazmunli o'tishni qo'shing.
+. SetEffect() yordamida effektlar qo'shing.
+. Bir yoki bir nechta shartli bayonotlarni qo'shing.
+. Ovozli klip nomlari kabi ba'zi ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanganingizga ishonch hosil qiling.
+. Nima qilayotganingizni tushuntirish uchun sharhlardan foydalanganingizga ishonch hosil qiling.
+. Kodingizni muntazam ravishda ishga tushirishni va qo'shiqni tinglashni unutmang. Bu sizga uning yangrashi o'zingizga yoqmagunga qadar uni o'zgartirishga yordam beradi.
+. Qo'shiq uchun nom tanlang.
+****
+
+Mana to'liq qo'shiqning namunasi:
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+# skript_nomi: Yozning Umumiy Atlanta Qo'shig'i
+# muallif: EarSketch Jamoasi
+# izoh: abstraktsiyalar bilan to'liq qo'shiq yaratish
+# qo'shiqning tuzilishi: kirish-A-B-A-B
+
+from earsketch import *
+
+init()
+setTempo(110)
+
+# Ovoz o'zgaruvchilari
+melody1 = EIGHT_BIT_ATARI_BASSLINE_005
+melody2 = DUBSTEP_LEAD_018
+melody3 = DUBSTEP_LEAD_017
+melody4 = DUBSTEP_LEAD_013
+bass1 = HIPHOP_BASSSUB_001
+bass2 = RD_TRAP_BASSDROPS_2
+brass1 = Y30_BRASS_4
+shout = CIARA_SET_TALK_ADLIB_AH_4
+piano = YG_RNB_PIANO_4
+kick = OS_KICK02
+hihat = OS_CLOSEDHAT03
+
+# FUNKTSIYA TA'RIFLARI
+
+# Barabanlar qo'shish:
+def addingDrums(start, end, pattern):
+  # birinchi, biz parametr andozasiga qarab zarba satrlarini yaratamiz:
+  if (pattern == "heavy"):
+    beatStringKick = "0---0---0---00--"
+    beatStringHihat = "-----000----0-00"
+  elif(pattern == "light"):
+    beatStringKick = "0-------0---0---"
+    beatStringHihat ="--0----0---0---"
+  # So'ng zarbani yaratamiz,
+  # tepki uchun 3-trekda va likopcha uchun 4-trek,
+  # o'lchovlar boshidan oxirigacha:
+  for measure in range(start, end):
+    # bu erda biz zarbamizni "o'lchov" ga joylashtiramiz,
+    # birinchisi "boshlang'ich" ga teng bo'lgan,
+    # funktsiyaning parametri bo'lgan
+    makeBeat(kick, 3, measure, beatStringKick)
+    makeBeat(hihat, 4, measure, beatStringHihat)
+
+# Kirish:
+def intro(start, end):
+  fitMedia(melody1, 1, start, start + 1)
+  fitMedia(melody1, 1, start + 2, start + 3)
+  fitMedia(bass1, 2, start, start + 3)
+  #o'tish:
+  fitMedia(bass2, 2, start + 3, end)
+  fitMedia(shout, 3, start + 3.75, end)
+
+# A bo'limi:
+def sectionA(start, end):
+  fitMedia(melody2, 1, start, end)
+  fitMedia(brass1, 2, start, end)
+  setEffect(2, VOLUME, GAIN, -20, start, -10, end)
+  addingDrums(start, end, "heavy")
+  # O'tish uchun tovush pardasi modulyatsiyasi:
+  setEffect(1, BANDPASS, BANDPASS_FREQ, 200, end-2, 1000, end)
+
+# B bo'limi:
+def sectionB(start, end):
+  fitMedia(melody3, 1, start, start + 2)
+  fitMedia(melody4, 1, start + 2, end)
+  fitMedia(piano, 2, start, end)
+  addingDrums(start, end, "light")
+
+# FUNKTSIYA CHAQIRUVLARI
+intro(1, 5)
+sectionA(5, 9)
+sectionB(9, 13)
+sectionA(13, 17)
+sectionB(17, 21)
+
+# Tovushning asta so'nishi:
+for track in range(1, 5):
+  setEffect(track, VOLUME, GAIN, 0, 19, -60, 21)
+# Likopcha va zarba tovushini pasaytirish:
+setEffect(4, VOLUME, GAIN, -15)
+setEffect(3, VOLUME, GAIN, -10)
+
+finish() 
+----
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+
+//		javascript kodi
+//		skript_nomi: Yozning Umumiy Atlanta Qo'shig'i
+//
+//		muallif: EarSketch Jamoasi
+//		izoh: abstraktsiyalar bilan to'liq qo'shiq yaratish
+//   qo'shiqning tuzilishi: kirish-A-B-A-B
+//
+
+
+init();
+setTempo(110);
+
+// Ovoz o'zgaruvchilari
+var melody1 = EIGHT_BIT_ATARI_BASSLINE_005;
+var melody2 = DUBSTEP_LEAD_018;
+var melody3 = DUBSTEP_LEAD_017;
+var melody4 = DUBSTEP_LEAD_013;
+var bass1 = HIPHOP_BASSSUB_001;
+var bass2 = RD_TRAP_BASSDROPS_2;
+var brass1 = Y30_BRASS_4;
+var shout = CIARA_SET_TALK_ADLIB_AH_4;
+var piano = YG_RNB_PIANO_4;
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT03;
+
+// FUNKTSIYA TA'RIFLARI
+
+// Barabanlar qo'shish:
+function addingDrums(start, end , pattern) {
+  // birinchi, biz parametr andozasiga qarab zarba satrlarini yaratamiz:
+  if (pattern == "heavy") {
+    var beatStringKick = "0---0---0---00--";
+    var beatStringHihat = "-----000----0-00";
+  } else if(pattern == "light") {
+    beatStringKick = "0-------0---0---";
+    beatStringHihat ="--0----0---0---";
+  }
+  // so'ng zarbani yaratamiz,
+  // tepki uchun 3-trekda va likopcha uchun 4-trek,
+  // o'lchovlar boshidan oxirigacha:
+   for (var measure = start; measure < end; measure++){
+    //bu erda biz zarbamizni "o'lchov" ga joylashtiramiz,
+    // birinchisi "boshlang'ich" ga teng bo'lgan,
+    // funktsiyaning parametri bo'lgan
+    makeBeat(kick, 3, measure, beatStringKick);
+    makeBeat(hihat, 4, measure, beatStringHihat);
+  }
+}
+
+// Kirish:
+function intro(start, end){
+  fitMedia(melody1, 1, start, start + 1);
+  fitMedia(melody1, 1, start + 2, start + 3);
+  fitMedia(bass1, 2, start, start + 3);
+   // o'tish:
+  fitMedia(bass2, 2, start + 3, end);
+  fitMedia(shout, 3, start + 3.75, end);
+}
+// A bo'limi:
+function sectionA(start, end){
+  fitMedia(melody2, 1, start, end);
+  fitMedia(brass1, 2, start, end);
+  setEffect(2, VOLUME, GAIN, -20, start, -10, end);
+  addingDrums(start, end, "heavy");
+  // O'tish uchun tovush pardasi modulyatsiyasi:
+  setEffect(1, BANDPASS, BANDPASS_FREQ, 200, end-2, 1000, end);
+}
+
+// B bo'limi:
+function sectionB(start, end){
+  fitMedia(melody3, 1, start, start + 2);
+  fitMedia(melody4, 1, start + 2, end);
+  fitMedia(piano, 2, start, end);
+  addingDrums(start, end, "light");
+}
+
+// FUNKTSIYA CHAQIRUVLARI
+intro(1, 5);
+sectionA(5, 9);
+sectionB(9, 13);
+sectionA(13, 17);
+sectionB(17, 21);
+
+// Tovushning asta so'nishi:
+for (var track = 1; track < 5; track++){
+  setEffect(track, VOLUME, GAIN, 0, 19, -60, 21);
+}
+
+// Likopcha va zarba tovushini pasaytirish:
+setEffect(4, VOLUME, GAIN, -15);
+setEffect(3, VOLUME, GAIN, -10);
+
+finish();
+----
+
+Ushbu misolda biz maxsus funktsiya ichida for halqasidan foydalandik! Biz for halqasi ichida (`start` va `end`) funktsiya parametrlaridan foydalandik.
+
+
+[[chapter7summary]]
+=== 7-Bob Xulosa
+
+* *Bo'limlar* bir nechta o'lchovlardan tashkil topgan o'zaro bog'liq musiqa birliklari. Ularning har biri g'oya yoki his-tuyg'ularni ifodalaydi.
+* *Oʻtishlar* musiqaning ketma-ket musiqiy boʻlimlarini bogʻlash uchun foydalaniladigan parchalardir.
+* Qo'shiqning tuzilishi va xilma-xilligi uning *shakli* deb nomlanadi. A-B-A umumiy musiqiy shakl hisoblanadi.
+* *Maxsus funktsiyalar* - bu muayyan vazifani bajarish uchun dasturchi tomonidan yozilgan noyob funktsiyalar. Uni chaqira olish uchun maxsus funktsiya yaratishingiz kerak. Siz xohlagancha ko'p parametrlarni yaratishingiz mumkin.
+* *Abstraktsiya* - bu yagona, ko'pincha unchalik murakkab bo'lmagan tushunchani shakllantirish uchun g'oyalar to'plami. Funktsiyalar abstraktsiyaga bir misoldir.
+
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Bulardan qaysi biri musiqiy qismga misol EMAS?
+[answers]
+* Barabanlar
+* Muqaddima
+* She'r
+* Naqorat
+--
+
+[question]
+--
+Abstraksiya nima?
+[answers]
+* Yagona tushunchani shakllantirish uchun g'oyalar to'plami
+* Bo'limlar bo'ylab turli xil tovushlar
+* Qo'shiqning o'zaro bog'liq bo'lgan, shu bilan birga bir-biridan farq qilgan qismlari
+* Funktsiya chaqiruviga qiymat qaytaruvchi bayonot
+--
+
+[role="curriculum-python"]
+[question]
+--
+Ushbu variantlardan qaysi biri `myFunction()` funktsiyasini `startMeasure` va `endMeasure` parametrlari bilan toʻgʻri belgilaydi?
+[answers]
+* `def myFunction(startMeasure, endMeasure):`
+* `def myFunction():`
+* `myFunction(startMeasure, endMeasure):`
+* `myFunction(2, 5)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Ushbu variantlardan qaysi biri `myFunction()` funktsiyasini `startMeasure` va `endMeasure` parametrlari bilan toʻgʻri belgilaydi?
+[answers]
+* `function myFunction(startMeasure, endMeasure) {}`
+* `function myFunction() {}`
+* `myFunction(startMeasure, endMeasure){}`
+* `myFunction(2, 5)`
+--
+
+[question]
+--
+Bulardan qaysi biri o'tish uslubiga misol EMAS?
+[answers]
+* Ohangning Izchilligi
+* To'qnashuv Simbali
+* Ko'taruvchi
+* Trek Uzilishlari
+--

@@ -1,0 +1,8 @@
+[[unit3]]
+== 3-dars: Qo'shiqlaringizni tuzing
+
+:nofooter:
+
+Endi sizda qo'shiq yaratish, effektlar qo'shish va treklaringizni mix qilish uchun ko'plab vositalar mavjud bo'lgani uchun biz qo'shiqning tuzilishini ko'rib chiqamiz. Buning uchun biz maxsus funktsiyalardan foydalanamiz: bu oʻzingiz yaratadigan funktsiyalar!
+
+Shuningdek, biz shaxsiylashtirilgan qo'shiqlarni yaratish uchun foydalanuvchi tomonidan kiritilgan ma'lumotlarni hamda ularni kodingizga qanday joriy etish mumkinligini ko'rib chiqamiz. Va nihoyat, kodingizni soddalashtirish uchun ma'lumot tuzilmalaridan qanday foydalanishingiz mumkinligini ko'rib chiqamiz.

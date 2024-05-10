@@ -1,0 +1,833 @@
+[[ch_29]]
+== Har Bir Xatoning Batafsil Tavsifi
+:nofooter:
+
+[[importerror]]
+=== Import Xatosi
+
+//Python only
+
+[role="curriculum-python"]
+*Konsol xabari:* ImportError: Tegishli paketlarni topib bo‘lmadi yoki import qilib bo‘lmadi.
+
+[role="curriculum-python"]
+*Izoh:* `from...import` bayonotida keltirilgan dastur modulni yuklay olmaganida import xatosi yuzaga keladi. Masalan, `from module import *`. Buning sababi imlo xatosi bo'lishi mumkin yoki import qilinadigan modul mavjud emas.
+
+[role="curriculum-python"]
+*Misol:* Quyidagi parcha "EarSketch" so'zini odatdagi uslub bilan ko'rsatsa-da, Python modullaribing barchasi kichik harflarda ko'rsatilgan.
+
+////
+Can't turn off pasted without this appearing in JS mode.
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+from EarSketch import *
+----
+
+[role="curriculum-python"]
+Buning o'rniga bizning bayonotimiz quyidagicha o'qilishi kerak:
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+----
+
+[role="curriculum-python"]
+*Yechim:* Skriptingizning yuqori qismidagi `from...import`dan imlo va katta-kichik harf xatolari mavjudligini tekshiring.
+
+[role="curriculum-javascript"]
+Import xatoliklari JavaScript-da uchramaydi. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
+
+[[indentationerror]]
+=== Chekinish Xatosi
+
+//Python only
+
+[role="curriculum-python"]
+*Konsol xabari:* IndentationError: kodda chekinish xatosi mavjud (bo'shliq qoldirilmagan yoki ortiqcha bo'shliq mavjud).
+
+[role="curriculum-python"]
+*Izoh:* Yodda tutingki, Python-da halqalar, funktsiyalar va ikki nuqta (`:`) bilan tugaydigan har qanday bayonot kabi shartli bayonotlardan foydalanganda to'g'ri chekinishga ehtiyoj tug'iladi. Chekinish miqdoridan noto'g'ri foydalanilganda, ya'ni yetarli emas yoki keragidan ortiq bo'lsa, chekinish xatosi yuzaga keladi.
+
+[role="curriculum-python"]
+*Misol:* EarSketch Kod Muharriri avtomatik ravishda ikki nuqtadan keyin kod satrlarini cheklaydi, lekin dasturchi kod qismiga o'zgartirishlar kiritishda tasodifan cheklovni qo'lda o'zgartirishi mumkin. Quyidagi parchada foydalanuvchiga ham, interpretatorga ham qaysi qatorlar halqaga tushishi aniq emas.
+
+////
+Can't turn off pasting without this appearing in JS mode
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+for measure in range(1, 9, 2):
+  fitMedia(melody, 1, measure, measure + 2)
+  makeBeat(kick, 2, measure, beatString)
+  makeBeat(kick, 2, measure + 1, beatString)
+
+fitMedia(beat, 3, 3, 9)
+----
+
+[role="curriculum-python"]
+To'g'ri chekintirilgan tana quyidagi parcha ko'rinishida bo'lishi kerak. For-halqasi tanasi bitta tab bilan chekintirilgan va oxirgi `fitMedia()` chaqiruvi halqadan tashqarida ekanligi aniq.
+
+[role="curriculum-python"]
+[source,python]
+----
+for measure in range(1, 9, 2):
+  fitMedia(melody, 1, measure, measure + 2)
+  makeBeat(kick, 2, measure, beatString)
+  makeBeat(kick, 2, measure + 1, beatString)
+
+fitMedia(beat, 3, 3, 9)
+----
+
+[role="curriculum-python"]
+*Yechim:* Har bir satr kod muharririning chap chetiga suyangan boʻlishi uchun kod tanasidagi barcha boʻshliqlarni oʻchirib koʻring. So'ngra, tanani satr bo'ylab ichkariga chekintiring va barcha chekinishlar sobit bo'lishiga ishonch hosil qiling.
+
+[role="curriculum-javascript"]
+JavaScript-da chekinish xatolari yuzaga kelmaydi, ammo o'qish imkoniyati uchun to'g'ri chekinishdan foydalanish kerak. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
+
+[[indexerror]]
+=== Indeks Xatosi
+
+[role="curriculum-python"]
+*Konsol xabari:* IndexError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
+
+[role="curriculum-javascript"]
+*Konsol xabari:* TypeError: diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
+
+[role="curriculum-python"]
+*Ta'rif:* Ro'yxat yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi.
+
+[role="curriculum-javascript"]
+*Ta'rif:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da yozuv xatosi sifatida paydo bo'ladi. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror, type errors>>.
+
+[role="curriculum-python"]
+*Misol:* Quyidagi kodda biz roʻyxatdagi kliplar yordamida qoʻshimcha tuzilma yaratishga harakat qilamiz.
+
+[role="curriculum-javascript"]
+*Misol:* Quyidagi kodda biz massivdagi kliplar yordamida qoʻshimcha tuzilma yaratishga harakat qilamiz.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Indeks Xatosi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Indeks xatosini keltirib chiqaradigan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(100)
+
+orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
+
+fitMedia(orch[1], 1, 1, 17)
+fitMedia(orch[2], 2, 5, 17)
+fitMedia(orch[3], 3, 9, 17)
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: Indeks Xatosi
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Indeks xatosini keltirib chiqaradigan kod
+//
+
+init();
+setTempo(120);
+
+var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
+
+fitMedia(orch[1], 1, 1, 17);
+fitMedia(orch[2], 2, 5, 17);
+fitMedia(orch[3], 3, 9, 17);
+
+finish();
+----
+
+[role="curriculum-python"]
+Indeks xatosi yuz berdi va konsol bizni 19-qatorga ishora qilib, indeks diapazondan tashqarida ekanligini bildiradi. Bizda uchta ovozli klip bor, lekin biz ro'yxat indekslari 0 dan boshlanishini unutdik, shuning uchun biz kirishimiz kerak bo'lgan oxirgi indeks bu - indeks 2:
+
+[role="curriculum-javascript"]
+Yozuv xatosi paydo bo'ldi va konsol 17-qatorda boshqa ma'lumotlar turi kutilganligini bildiradi. So'nggi `fitMedia()` chaqiruviga diapazondan tashqari qiymat berilgan. Bizda uchta ovozli klip bor, lekin biz massiv indekslari 0 dan boshlanishini unutdik, shuning uchun biz kirishimiz kerak bo'lgan oxirgi indeks bu - indeks 2:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Indeks Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Xatolardan xoli bo'lgan qo'shimcha tuzilma
+#
+
+from earsketch import *
+
+init()
+setTempo(100)
+
+orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
+
+fitMedia(orch[0], 1, 1, 17)
+fitMedia(orch[1], 2, 5, 17)
+fitMedia(orch[2], 3, 9, 17)
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: Indeks Xatosini Tuzatish
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Xatolardan xoli qo'shimcha tuzilma
+//
+
+init();
+setTempo(100);
+
+var orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2];
+
+fitMedia(orch[0], 1, 1, 17);
+fitMedia(orch[1], 2, 5, 17);
+fitMedia(orch[2], 3, 9, 17);
+
+finish();
+----
+
+[role="curriculum-python"]
+*Yechim:* Ro'yxatingizdagi har bir klip nomini yozing va har biriga 0 dan boshlab o'zining tegishli indeksi bilan belgilang. Bu sizga ro'yxat tuzilishini va indeks xatosiga nima sabab bo'lishi mumkinligini tushunishga yordam beradi.
+
+[role="curriculum-javascript"]
+*Yechim:* Massivingizdagi har bir klip nomini yozing va har biriga 0 dan boshlab o'zining tegishli indeksi bilan belgilang. Bu sizga massiv tuzilishini va indeks xatosiga nima sabab bo'lishi mumkinligini tushunishga yordam beradi.
+
+[[nameerror]]
+=== Nom Xatosi
+
+[role="curriculum-python"]
+*Konsol xabari:* NameError: Oʻzgaruvchi yoki funktsiya nomi bilan bogʻliq aniqlanmagan xatolik mavjud.
+
+[role="curriculum-javascript"]
+*Konsol xabari:* Reference Error: Oʻzgaruvchi yoki funktsiya nomi bilan bogʻliq aniqlanmagan xatolik mavjud.
+
+[role="curriculum-python"]
+*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi.
+
+[role="curriculum-javascript"]
+*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi. JavaScript bu turdagi xatoliklarni mos yozuvlar xatosi sifatida ko'rsatadi.
+
+[role="curriculum-python"]
+*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, chop etish bayonotidagi xato skriptning ishlashiga to'sqinlik qiladi.
+
+[role="curriculum-javascript"]
+*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, `println()` funktsiyasidagi xatolik skriptning ishlashiga xalaqit beradi.
+
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Nom Xatosi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Nom xatosiga sabab bo'lgan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+today = readInput("Bugun qaysi kun?")
+print "Bugun" + Today
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Havola Xatosi
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Havola xatosiga sabab bo'lgan kod
+//
+
+init();
+setTempo(120);
+
+var today = readInput("Bugun qaysi kun?");
+println("Bugun " + Today);
+
+finish();
+
+----
+
+Bunday holda, yopishtirilgan satrni o'z ichiga olgan o'zgaruvchi to'g'ri nom bilan atalmagan; kichik “t” harfi ishlatilishi kerak edi.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Nom Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Kunni xatosiz chop etish
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+today = readInput("Bugun qaysi kun?")
+print "Bugun " + today
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Havola Xatosini Tuzatish
+//
+// muallif: EarSketch Jamoasi
+//
+// tavsifi: Kunni xatosiz chop etish
+//
+
+init();
+setTempo(120);
+
+var today = readInput("Bugun qaysi kun?");
+println("Bugun " + today);
+
+finish();
+----
+
+*Yechim:* Oʻzgaruvchilar va funktsiyalaringizning imlosi va katta-kichik harflarini tekshiring. O'zgaruvchidan foydalanganda yoki funktsiyani chaqirganda, har birining avval aniqlanganligiga ishonch hosil qiling. Funktsiyani chaqirishdan oldin uni aniqlaganingizga ishonch hosil qiling. Nomlarni to'g'ridan-to'g'ri joylashtirishingiz mumkin bo'lsa-da, tovush konstantasi nomlari Tovush Brauzeridagi klip nomlari bilan mos kelishiga ishonch hosil qiling.
+
+[[parseerror]]
+=== Tahlil Xatosi
+
+[role="curriculum-python"]
+*Konsol xabari:* ParseError: kodni o'qishda xatolik yuz berdi.
+
+[role="curriculum-python"]
+*Izoh:* *Tahrirlash* axborotning bir shaklini boshqasiga aylantirishni bildiradi. Shuning uchun, interpretator sizning kodingizni kompyuter musiqa yaratishi uchun foydalanishi mumkin bo'lgan ma'lumotga aylantira olmaydi va tahlil qilish xatosi paydo bo'ladi. Burchakli qavslar va oddiy qavslar kabi kodni formatlash ko'pincha tahlil xatosiga sabab bo'ladi.
+
+[role="curriculum-python"]
+*Masalan:* Quyidagi misolda biz musiqa ustida ijro etish uchun tasodifiy zarbalarni tanlash orqali biroz zavqlanishga harakat qilamiz, lekin kodning ishlashiga nimadir xalaqit bermoqda.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: TahlilXatosi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Tahlil qilish xatosiga sabab bo'lgan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(98)
+
+soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
+
+chords1 = RD_WORLD_PERCUSSION_PAN_FLUTE_1
+chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
+
+fitMedia(chords1, 1, 1, 9)
+fitMedia(chords2, 1, 9, 17)
+
+for measure in range (1, 17, 2):
+  #EarSketch IDI funktsiyasi bilan tasodifiy klipni tanlang
+  beat = selectRandomFile(soundFolder
+  fitMedia(beat, 2, measure, measure + 2)
+
+finish()
+----
+
+////
+The parse error included in the example above breaks AsciiDoc syntax highlighting here for some reason. Same happens in Ch. 3. If removed while editing, the closing parentheses of selectRandomFile() should be omitted.
+////
+
+[role="curriculum-python"]
+Kodni ishga tushirgandan so'ng, konsol bizni 26-qatorga ishora qiladi. Bu qator yaxshi ko'rinadi, lekin avvalgi qatordagi `selectRandomFile()` funktsiyasida yopish qavslari yo'q. Ko'p hollarda tahlil xatolari tezda tuzatilishi mumkin.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Tahlil Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Tasodifiy zarbalarni xatosiz ijro etish
+#
+
+from earsketch import *
+
+init()
+setTempo(98)
+
+soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
+
+chords1 = RD_WORLD_PERCUSSION_PAN_FLUTE_1
+chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
+
+fitMedia(chords1, 1, 1, 9)
+fitMedia(chords2, 1, 9, 17)
+
+for measure in range (1, 17, 2):
+  #EarSketch IDI funktsiyasi bilan tasodifiy klipni tanlang
+  beat = selectRandomFile(soundFolder)
+  fitMedia(beat, 2, measure, measure + 2)
+
+finish()
+----
+
+[role="curriculum-python"]
+*Yechim:* Konsolni buzuvchi chiziq qayerda bo'lishi mumkinligini tekshiring. Barcha funktsiya taʼriflari, funktsiya chaqiruvlari va boshqa ifodalarda ochish va yopish qavslari borligiga ishonch hosil qiling. Skriptingizning boshqa joylarida yetishmayotgan yoki ortiqcha tinish belgilarini tekshiring. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
+
+[role="curriculum-javascript"]
+Parse errors are interpreted broadly as syntax errors in JavaScript, which is covered <<every-error-explained-in-detail#syntaxerror, next>>.
+
+[[syntaxerror]]
+=== Sintaksis Xatosi
+
+*Konsol xabari:* Sintaksis xatosi: kod sintaksisi (yoki tartibga solish) bilan bog'liq xatolik bor.
+
+*Izoh:* Sintaksis xatosi dastur skript sintaksisida, ma'lum bir til qoidalarida xatolikka duch kelganida yuzaga keladi.
+
+*Misol:* Quyidagi skript dinamik ravishda o'zgaruvchan futuristik signallarni yaratishi kerak. Biroq, unda sintaksis xatolariga olib keladigan ikkita keng tarqalgan nosozlik mavjud.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Sintaksis Xatosi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Sintaksis xatosiga sabab bo'lgan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+clap = RD_TRAP_ARCADEFIRESFX_1
+beatString = "00+-0-00+0+-0+++"
+
+for measure in range (1,32):
+  if measure % 4 = 0
+    #Zarba satrini aralashtirish uchun EarSketch IDI funktsiyasidan foydalaning
+    beatString = shuffleString(beatString)
+  makeBeat(clap, 1, measure, beatString)
+
+finish()
+​
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Sintaksis Xatosi
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Sintaksis xatosiga sabab bo'lgan kod
+//
+
+init();
+setTempo(120);
+
+var clap = RD_TRAP_ARCADEFIRESFX_1;
+var beatString = "00+-0-00+0+-0+++";
+
+for (measure = 1; measure < 32; measure++){
+  if (measure % 4 = 0)
+    //Zarba satrini aralashtirish uchun EarSketch IDI funktsiyasidan foydalaning
+    beatString = shuffleString(beatString);
+  }
+  makeBeat(clap, 1, measure, beatString);
+}
+
+finish();
+----
+
+[role="curriculum-python"]
+Ushbu skript uchun kod muharriri bizga noto'g'ri chiziqni belgilaydi. E'tibor bering, biz _if_ bayonotimizni ikki nuqta bilan tugatishni unutib qo'ydik. Xuddi shu qatorda biz bekor yaroqsiz shartni ham berdik; Biz tayinlash operatori `=` o'rniga tenglik operatoridan `==` foydalanishimiz kerak.
+
+[role="curriculum-javascript"]
+Ushbu skript uchun kod muharriri bizga noto'g'ri chiziqni belgilaydi. E'tibor bering, biz _if_ bayonotining asosiy qismini jingalak qavs bilan ochishni unutganmiz. Xuddi shu qatorda biz bekor yaroqsiz shartni ham berdik; Biz tayinlash operatori `=` o'rniga qat'iy tenglik operatoridan `===` foydalanishimiz kerak.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Sintaksis Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Zarba satrini xatosiz aralashtirish
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+clap = RD_TRAP_ARCADEFIRESFX_1
+beatString = "00+-0-00+0+-0+++"
+
+for measure in range (1,32):
+  if measure % 4 == 0:
+    #Zarba satrini aralashtirish uchun EarSketch IDI funktsiyasidan foydalaning
+    beatString = shuffleString(beatString)
+  makeBeat(clap, 1, measure, beatString)
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Sintaksis Xatosini Tuzatish
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Zarba satrini xatosiz aralashtirish
+//
+
+init();
+setTempo(120);
+
+var clap = RD_TRAP_ARCADEFIRESFX_1;
+var beatString = "00+-0-00+0+-0+++";
+
+for (measure = 1; measure < 32; measure++){
+  if (measure % 4 === 0){
+    // Zarba satrini aralashtirish uchun EarSketch IDI funktsiyasidan foydalaning
+    beatString = shuffleString(beatString);
+  }
+  makeBeat(clap, 1, measure, beatString);
+}
+
+finish();
+----
+
+[role="curriculum-python"]
+*Yechim:* Har doim konsol va kod muharririda maslahatlar yordamidan foydalaning. Yuqorida keltirilgan keng tarqalgan xatolardan tashqari, qo'shtirnoqlarni ochish va yopishni tekshiring va Python kalit so'zlarini o'zgaruvchi nomlar sifatida ishlatmaganingizga ishonch hosil qiling.
+
+////
+Added solution from parse error to JS version below.
+////
+
+[role="curriculum-javascript"]
+*Yechim:* Har doim konsol va kod muharririda maslahatlar yordamidan foydalaning.
+Yuqorida keltirilgan keng tarqalgan xatolardan tashqari, qo'shtirnoqlarni ochish va yopishni tekshiring va barcha funktsiya ta'riflari, funktsiya chaqiruvlari va boshqa iboralarda ochilish va yopish qavslari mavjudligiga ishonch hosil qiling. Shuningdek, skriptingizning boshqa joylarida yetishmayotgan yoki ortiqcha tinish belgilarini tekshiring. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. JavaScript-ning zahiraga olgan soʻzlaridan oʻzgaruvchi nomlari sifatida foydalana olmaysiz. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
+
+[[typeerror]]
+=== Yozuv Xatosi
+
+*Konsol xabari:* TypeError: Kutilayotgan maʼlumotlar turida xatolik yuz berdi.
+
+*Ta'rif:* Ma'lum bir operatsiya yoki funktsiya bitta ma'lumot turini kutayotgan vaqtda boshqa ma'lumot turini qabul qilsa, yozuv xatosi yuzaga keladi.
+
+[role="curriculum-python"]
+*Misol:* Faraz qilaylik, siz yangilanayotgan oʻzgaruvchi bilan foydalanilgan umumiy oʻlchovlarni kuzatib boruvchi skript yozdingiz. Quyidagi parchada biz qo'shiqning uzunligi ko'rsatilgan xabarni chop etishga harakat qilamiz.
+
+[role="curriculum-javascript"]
+*Misol:* Siz qo'shiq uzunligini aniqlash uchun foydalanuvchi ma'lumotlarini talab qiladigan skript yozdingiz deylik. Foydalanuvchi qiymati `fitMedia()` ga uzatiladi.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Yozuv Xatosi
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Yozuv xatosiga olib keladigan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+soundClip = DUBSTEP_DRUMLOOP_MAIN_006
+beatString = "0+000+++0--0-0--"
+measureTotal = 0
+
+for measure in range(1,9):
+    makeBeat(soundClip, 1, measure, beatString)
+    measureTotal += 1
+
+print "Sizning zarbangiz " + measureTotal + " o'lchovga uzun."
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: Yozuv Xatosi
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Yozuv xatosiga olib keladigan kod
+//
+
+init();
+setTempo(120);
+
+var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
+var measureTotal = readInput("O'lchovlar nechta?");
+
+println(measureTotal);
+
+fitMedia(soundClip, 1, 1 , measureTotal + 1 );
+
+finish();
+----
+
+[role="curriculum-python"]
+Raqam turini satrga yopishtirib bo'lmagani uchun yozuv xatosi yuzaga kelgan. Buning o'rniga, avval `measureTotal` qiymatini satrga aylantirish uchun ma'lumotlar turini o'zgartirishdan foydalanishimiz mumkin:
+
+[role="curriculum-javascript"]
+Biz tasodifan satrni oxirgi `fitMedia()` argumenti sifatida o'tkazib yuborganimiz uchun yozuv xatosi yuzaga keldi. Buning o'rniga, avval `measureTotal` satrini raqamga aylantirish uchun ma'lumotlar turini o'zgartirishdan foydalanishimiz mumkin:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Yozuv Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Xatodan xoli bo'lgan o'lchovlar trekini kuzatib borish
+#
+
+earsketch importidan *
+
+init()
+setTempo(120)
+
+soundClips = DUBSTEP_DRUMLOOP_MAIN_006
+beatString = "0+000+++0--0-0--"
+measureTotal = 0
+
+for measure in range(1,9):
+    makeBeat(soundClips, 1, measure, beatString)
+    measureTotal += 1
+
+print "Sizning zarbangiz " + str(measureTotal) + " measures long."
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Yozuv Xatosini Tuzatish
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Foydalanuvchi ma'lumotlarini xatosiz qabul qilish
+//
+
+init();
+setTempo(120);
+
+var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
+var measureTotal = readInput("O'lchovlar nechta?");
+
+println (measureTotal);
+
+fitMedia(soundClip, 1, 1 , Number(measureTotal) + 1 );
+
+finish();
+----
+
+*Yechim:* EarSketch konsoli qoidabuzar ma'lumot turlarini beradi va ma'lum bir qator raqamiga ishora qiladi. Arifmetik ifodalar, ma'lumotlar tuzilmasi operatsiyalari va funktsiya argumentlari ichida izchil ma'lumot turlarini tekshiring. Bundan tashqari, funktsiya chaqiruvlaringiz to'g'ri argumentlar soniga ega ekanligiga ishonch hosil qiling.
+
+////
+(ex. trying to concatenate something into string that isn't string, modifying a string value instead of concatenating something in, function call with too few arguments)
+////
+
+[[valueerror]]
+=== Qiymat Xatosi
+
+[role="curriculum-python"]
+*Konsol xabari:* ValueError: Berilgan argument funktsiya uchun qabul qilinadigan qiymatlar to‘plami yoki oralig‘ida emas.
+
+[role="curriculum-javascript"]
+*Konsol xabari:* RangeError: Berilgan argument funktsiya uchun qabul qilinadigan qiymatlar to‘plami yoki oralig‘ida emas.
+
+[role="curriculum-python"]
+*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi.
+
+[role="curriculum-javascript"]
+*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi. JavaScript bu turdagi xatoliklarni diapazon xatosi deb ataydi.
+
+[role="curriculum-python"]
+*Misol:* Quyidagi parcha `makeBeat()` yordamida roʻyxatlar bilan qiziqarli zarba yaratishga harakat qiladi.
+
+[role="curriculum-javascript"]
+*Misol:* Quyidagi parcha `makeBeat()` yordamida massivlar bilan qiziqarli zarba yaratishga harakat qiladi.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Qiymat Xatosi
+#
+#muallif: EarSketch Jamoasi
+#
+# izoh: Qiymat xatosini keltirib chiqaradigan kod
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
+beatString = "1+3+1+221+2+1+24"
+
+makeBeat(drumKit, 1, 1, beatString)
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Qiymat Xatosi
+//
+//muallif: EarSketch Jamoasi
+//
+// izoh: Qiymat xatosini keltirib chiqaradigan kod
+//
+
+init();
+setTempo(120);
+
+var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
+var beatString = "1+3+1+221+2+1+24";
+
+makeBeat(drumKit, 1, 1, beatString);
+
+finish();
+----
+
+[role="curriculum-python"]
+`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. Ushbu stsenariyda dasturchi ro'yxat indekslari noldan boshlanishini unutgan bo'lishi mumkin.
+
+[role="curriculum-javascript"]
+`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. Ushbu stsenariyda dasturchi massiv indekslari noldan boshlanishini unutgan bo'lishi mumkin.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Qiymat Xatosini Tuzatish
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: makeBeat() dan xatosiz foydalanish
+#
+
+from earsketch import *
+
+init()
+setTempo(120)
+
+drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
+beatString = "0+2+0+110+1+0+13"
+
+makeBeat(drumKit, 1, 1, beatString)
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: Qiymat Xatosini Tuzatish
+//
+//muallif: EarSketch Jamoasi
+//
+// izoh: makeBeat() dan xatosiz foydalanish
+//
+
+init();
+setTempo(120);
+
+var drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001];
+var beatString = "0+2+0+110+1+0+13";
+
+makeBeat(drumKit, 1, 1, beatString);
+
+finish();
+----
+
+*Yechim:* Qiymatlar to'g'ri diapazonga tushishiga ishonch hosil qilish uchun zarba satrlarini tekshiring. Shuningdek, `setEffect()` ga taqdim etilgan har qanday argumentlar effektning talab qilinadigan diapazonida ekanligini tasdiqlang.
