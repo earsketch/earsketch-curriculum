@@ -2,16 +2,33 @@
 == Every Error Explained in Detail
 :nofooter:
 
-[[importerror]]
-=== Import Error
+[[othererrors]]
+=== Overview
+
+Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*.
+
+The process of finding and fixing bugs is called *debugging*.
+
+Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
+
+Guidance on addressing the most common errors is given in the next sections.
+
+[role="curriculum-python"]
+See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
+
+[role="curriculum-javascript"]
+See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] for a full list of errors.
+
+[[modulenotfounderror]]
+=== ModuleNotFoundError
 
 //Python only
 
 [role="curriculum-python"]
-*Console message:* ImportError: The appropriate packages cannot be found or imported.
+*Console message:* ModuleNotFoundError: No module named 'missing_module_name'
 
 [role="curriculum-python"]
-*Description:* An import error occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
+*Description:* A ModuleNotFoundError occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
 
 [role="curriculum-python"]
 *Example:* Although the snippet below shows the word "EarSketch" with its usual styling, Python modules are specified in all lowercase.
@@ -39,7 +56,7 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 *Solution:* Check your `from...import` statements at the top of your script for typos and letter case.
 
 [role="curriculum-javascript"]
-Import errors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#othererrors>>.
 
 [[indentationerror]]
 === Indentation Error
@@ -148,6 +165,8 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 
 [role="curriculum-python"]
 *Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo.
+
+Often there is a missing `from earsketch import *` statement at the top of the script.
 
 [role="curriculum-javascript"]
 *Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo. JavaScript specifically refers to this type of error as a reference error.
