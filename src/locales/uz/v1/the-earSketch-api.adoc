@@ -1,0 +1,5 @@
+[[ch_27]]
+== EarSketch Ilova Dasturlash Interfeysi
+:nofooter:
+
+link:EarSketch IDI-ni ochish uchun <api>[Bu Yerni Bosing].

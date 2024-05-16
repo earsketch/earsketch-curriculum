@@ -1,0 +1,827 @@
+[[getuserinput]]
+== Foydalanuvchi Ma'lumotlarini Oling
+
+:nofooter:
+
+Ushbu bobda siz foydalanuvchilardan ma'lumot so'rash va musiqangizni shunga mos ravishda moslashtirishni o'rganasiz. Buning uchun biz qaytarish bayonotlari va `readInput()` funktsiyasini ko'rib chiqamiz.
+
+[[returnstatement]]
+=== Qaytarish Bayonoti
+
+Avval ushbu videoni tomosha qiling:
+
+[role="curriculum-python curriculum-mp4"]
+[[video131py]]
+video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video131js]]
+video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
+
+* Ba'zi kiritish (parametrlar) olishdan tashqari, funktsiyalar qiymatni chiqarishi ham mumkin. Dasturlashda biz buni "qiymatni qaytarish" deb ataymiz.
+* *Qaytarish bayonoti* funktsiya tanasi ichidagi bayonot bo'lib, u: A. funktsiyaga qiymat chaqirilganda qaytarishni aytadi. B. funktsiyani toʻxtatish uchun signal beradi. Agar sizda `return` kalit so'zidan keyin biron-bir bayonot bo'lsa, ular e'tiborga olinmaydi.
+* Funktsiya tomonidan qaytariladigan qiymatdan foydalanish uchun o'zgaruvchi yarating va unga funktsiya chaqiruvini tayinlang.
+* Qaytarish bayonoti majburiy emas. Qaytarish bayonotisiz funktsiya hech qanday qiymat chiqarmaydi. `fitMedia()` va `setEffect()` hech narsa qaytarmaydigan funktsiyalarga misollardir.
+
+Quyida kod misoli:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Qaytarish Bayonotlari
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Ikki zarbani qaytarish bayonotlari bilan bog'lash
+#
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(100)
+
+rhythm1 = "0+++0+0+0+--0+00"
+rhythm2 = "0+0-00++0-000+++"
+
+#Musiqa
+
+def createBeat(startMeasure, soundClip, beatString):
+  endMeasure = startMeasure + 3
+  for measure in range(startMeasure, endMeasure):
+    makeBeat(soundClip, 1, measure, beatString)
+
+  # Funktsiyadan tashqarida foydalanishimiz mumkin bo'lishi uchun tugatish o'lchovini qaytaring
+  return endMeasure
+
+# Funktsiya chaqiruvlari
+
+# Qiymatni belgilash orqali biz o'zgaruvchiga qaytamiz
+newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
+# Qaytarilgan qiymatni boshqa funktsiyaga o'tkazish
+createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
+
+# Yakunlash
+finish()
+​
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Qaytarish Bayonotlari
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Ikki zarbani qaytarish bayonotlari bilan bog'lash
+//
+//
+//
+
+// Sozlash
+init();
+setTempo(100);
+
+var rhythm1 = "0+++0+0+0+--0+00";
+var rhythm2 = "0+0-00++0-000+++";
+
+// Musiqa
+
+function createBeat(startMeasure, soundClip, beatString){
+  endMeasure = startMeasure + 3;
+  for (measure = startMeasure; measure < endMeasure; measure++){
+    makeBeat(soundClip, 1, measure, beatString);
+  }
+
+  // Funktsiyadan tashqarida foydalanishimiz mumkin bo'lishi uchun tugatish o'lchovini qaytaring
+  return endMeasure;
+}
+
+// Funktsiya chaqiruvlari
+
+// Qiymatni belgilash orqali biz o'zgaruvchiga qaytamiz
+var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
+// Qaytarilgan qiymatni boshqa funktsiyaga o'tkazish
+createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
+
+// Yakunlash
+finish();
+----
+
+Qaytarish bayonoti bilan funktsiya uchun to'liq boshqaruv oqimi quyidagicha ko'rinadi:
+
+[[return]]
+.Qaytarish bayonotining boshqaruv oqimi
+[caption="Figure 8.1.1: "]
+image::../media/U2/Return.png[Alt Text]
+
+.AMALIYOT
+****
+Musiqiy qismni amalga oshiradigan funktsiya yarating:
+
+* Boshlang'ich o'lchovini ifodalovchi `start` deb nomlangan faqat bitta parametr bilan.
+* Yakuniy o'lchovni qaytaradigan bitta qaytish bayonoti bilan.
+* `fitMedia()` funktsiyalari bilan tana funktsiyasi.
+
+Sizning bo'limingiz siz xohlagancha ko'p o'lchovlarni davom ettirishi mumkin.
+Keyin funktsiyani chaqiring va yakuniy o'lchovni chop eting.
+****
+
+Mana bir misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Qaytarish Bayonotlari 2
+#
+#muallif: EarSketch Jamoasi
+#
+# izoh: bo'lim funktsiyasining yakuniy o'lchovini qaytarish
+#
+#
+
+#Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Funktsiya ta'rifi
+def verse(start):
+  end = start + 4
+  fitMedia(melody1 , 1, start, end)
+  fitMedia(drums1, 2, start, end)
+  return end
+
+# Funktsiya chaqiruvlari
+endMeasure = verse(1) # oyat funktsiyasini chaqirish va boshlash 1-o'lchovdir
+print(endMeasure)
+
+# Yakunlsh
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+//
+// skript_nomi: Qaytarish Bayonotlari 2
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: bo'lim funktsiyasining yakuniy o'lchovini qaytarish
+//
+//
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+
+// Funktsiya ta'rifi
+function verse(start) {
+  var end = start + 4;
+  fitMedia(melody1, 1, start, end);
+  fitMedia(drums1, 2, start, end);
+  return end;
+}
+// Funktsiya chaqiruvi
+var endMeasure = verse(1); // oyat funktsiyasini chaqirish va boshlash 1-o'lchovdir
+ println(endMeasure);
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Aytaylik, sizda A bo'limi bor, lekin qo'shiqning turli lahzalarida chaqirilganda uning biroz o'zgarishini xohlaysiz. Siz 2 ta `fitMedia()` chaqiruvi bilan `sectionA()` funktsiyasini yaratasiz.
+
+Funktsiya 2 ta parametrni olishi kerak: `boshlash` va mantiqiy parametr `o'zgaruvchanlik`, bu foydalanuvchi funktsiyani chaqirayotganda o'zgaruvchanlikni tanlash imkonini beradi.
+
+Funktsiya tanasida siz parametrni baholaydigan shartli bayonotga ega bo'lishingiz kerak. Parametr qiymatiga qarab, siz `fitMedia()` chaqiruvlaridan birida ishlatiladigan ovozli klipni o'zgartirasiz.
+
+Keyin funktsiyani turli xil o'lchovlarda turli xil o'zgarishlar bilan chaqiring.
+****
+
+Mana misol kod:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Funktsiyadagi shartli bayonot
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: funktsiyada variatsiya yaratish uchun mantiqiy qiymatdan foydalanish
+#
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Funktsiya ta'rifi
+def verse(start, variation):
+  # variatsiya Rost yoki Yolg'onga teng
+  if variation:
+    fitMedia(melody1, 1, start, start+4)
+  else:
+  	fitMedia(melody2, 1, start, start+4)
+  fitMedia(drums1, 2, start, start+4) # bu shartli bayonotdan tashqarida (chekinishsiz)
+
+# Funktsiya chaqiruvlari
+verse(1, True)
+verse(7, False)
+
+# Yakunlash
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+//
+// skript_nomi: Funktsiyadagi shartli bayonot
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: funktsiyada variatsiya yaratish uchun mantiqiy qiymatdan foydalanish
+//
+//
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
+var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+
+// Funktsiya ta'rifi
+function verse(start, variation){
+  // variatsiya rost yoki yolg'onga teng
+  if(variation){
+    fitMedia(melody1, 1, start, start+4);
+  } else {
+  	fitMedia(melody2, 1, start, start+4);
+  }
+  fitMedia(drums1, 2, start, start+4); // bu shartli bayonotdan tashqarida (chekinishsiz)
+}
+
+// Funktsiya chaqiruvlari
+verse(1, true);
+verse(7, false);
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+[[userinput]]
+=== Foydalanuvchi Ma'lumotlarini Oling
+
+“Ishga tushirish” tugmasi bosilganda foydalanuvchi ma'lumotlarini qanday so‘rashni ko‘ramiz. Bu `readInput()` funktsiyasi ko'magida mumkin bo'ladi. Bu funktsiya parametr sifatida satrni oladi (masalan, “musiqangiz uchun qanday tempni xohlaysiz?”). Foydalanuvchi kodni ishga tushirganda, ular satr bilan yangi oynani ko'radi va unga javob yozish taklif etiladi. `readInput()` funktsiyasi u yerda foydalanuvchi yozgan narsalarni qaytaradi.
+
+Masalan, quyidagi kodni yangi skriptga ko'chiring va uni ishga tushiring:
+
+[role="curriculum-python"]
+[source, python]
+----
+answer = readInput("Musiqangiz uchun qanday tempni xohlaysiz?")
+print (javob)
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+var answer = readInput("Musiqangiz uchun qanday tempni xohlaysiz?");
+print(answer)
+----
+
+Qaytarilgan foydalanuvchi kirishlarini boshqa ma'lumotlar turiga aylantirishimiz kerak bo'lishi mumkin. Quyida foydali funktsiyalar mavjud:
+
+[role="curriculum-python"]
+* `str()` - istalgan qiymatni satrga aylantiradi.
+* `int()` - raqamlardan iborat satrni butun songa aylantiradi (masalan: `"3"` - `3` ga aylanadi).
+* `float()` - o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi (masalan: `"3.5"` - `3.5`ga aylanadi).
+
+[role="curriculum-javascript"]
+* `String()` - istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.
+* `Number()` - satrni raqamga aylantiradi (masalan: `"3,5"` - `3,5` ga aylanadi).
+
+Quyidagi misolda qo'shiqning tempini belgilash uchun konsol kiritishi ishlatiladi. Biz foydalanuvchi kiritgan ma'lumotlarni butun songa aylantirishga ishonch hosil qilamiz.
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: Foydalanuvchi kiritishi 1
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Foydalanuvchidan tempni so'rash
+
+# Sozlash
+from earsketch import *
+init()
+
+# tempni so'rash
+question ="Musiqangiz uchun qanday tempni xohlaysiz? 45 dan 220" gacha bo'lgan raqamni tanlang
+answer = readInput(question)
+
+# butun songa aylantirish
+tempo = int(answer)
+
+# tempni sozlash
+setTempo(tempo)
+
+# musiqa
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
+
+# yakunlash
+finish()
+
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+// skript_nomi: Foydalanuvchi kiritishi 1
+//
+// muallif: EarSketch Jamoasi
+// izoh: Foydalanuvchidan tempni so'rash
+
+
+// Sozlash
+init();
+
+// tempni so'rash
+var question = "Musiqangiz uchun qanday tempni xohlaysiz? 45 dan 220" gacha bo'lgan raqamni tanlang;
+var answer = readInput(question);
+
+// raqamga aylantirish
+var tempo = Number(answer);
+
+// tempni o'rnatish
+setTempo(tempo);
+
+// musiqa
+fitMedia (COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
+
+// yakunlash
+finish();
+----
+
+Bu yerda foydalanuvchi kiritishi bilan nima qilishingiz mumkinligiga yana bir misol.
+
+*Yopishtirish* bu `+` belgisidan foydalanib, satrlarni bir-biriga bog'lash vositasidir.  Misol uchun, `"hello"` va `"world"` satrlarini yopishtirish `"helloworld"` hosil qiladi. Quyidagi misolda foydalanuvchidan klip raqamini ko'rsatish so'raladi. Raqam “DUBSTEP_BASS_WOBBLE_0” bilan yopishtirilib, “DUBSTEP_BASS_WOBBLE_010” kabi toʻliq klip nomini hosil qiladi.
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: Foydalanuvchi kiritishi 2
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Foydalanuvchi tomonidan belgilangan parametrlarga ega dubstep qoʻshigʻini yaratish
+#
+
+# Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+#Musiqa
+clipNumber = readInput("10 dan 46 gacha klip raqamini kiriting: ")
+dubstepClip = "DUBSTEP_BASS_WOBBLE_0"
+finalClip = dubstepClip + clipNumber
+
+# foydalanuvchi tanlagan dubstep tebranishlari
+fitMedia (finalClip, 1, 1, 5)
+
+# Yakunlash
+finish()
+​
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+//
+// skript_nomi: Foydalanuvchi kiritishi 2
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Foydalanuvchi tomonidan belgilangan parametrlarga ega dubstep qoʻshigʻini yaratish
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+// Musiqa
+var clipNumber = readInput("10 dan 46 gacha klip raqamini kiriting: ");
+var dubstepClip = "DUBSTEP_BASS_WOBBLE_0";
+var finalClip = dubstepClip + clipNumber;
+
+// foydalanuvchi tanlagan dubstep tebranishlari
+fitMedia (finalClip, 1, 1, 5);
+
+// Yakunlash
+finish();
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rang.
+
+Quyida siz foydalanishingiz mumkin bo'lgan vositalar uchun g'oyalar:
+
+. satr yopishtirish,
+. ma'lumotlarni o'zgartirish,
+. maxsus funktsiyada ma'lum bir parametr yaratish
+****
+
+{nbsp} +
+
+[[booleanlogic]]
+=== Boolean Mantig'i
+
+Endi biz foydalanuvchi bilan o'zaro munosabatga misol bo'lishi uchun boolean mantig'i va foydalanuvchi kiritishini birlashtiramiz.
+
+[role="curriculum-python"]
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. Masalan, `==` operatori 2 ta qiymatning tengligini tekshiradi va agar shunday bo'lsa, mantiqiy qiymat `True` ga o'rnatiladi.
+
+[role="curriculum-javascript"]
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. Masalan, `==` operatori 2 ta qiymatning tengligini tekshiradi va agar shunday bo'lsa, mantiqiy qiymat `true` ga o'rnatiladi.
+
+Endi *mantiqiy operatorlarni* ko'rib chiqaylik: bular bir nechta mantiqiy qiymatlarni birlashtirishga yordam beradi. 3 ta mantiqiy operator mavjud:
+
+[role="curriculum-python"]
+* `va`: 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `False` qiymatini qaytaradi.
+* `yoki`: 2 ta mantiqiy kirishni oladi va kamida 1 ta kirish `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `Yolgʻon` qiymatini qaytaradi.
+* `not`: 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatni qaytaradi.
+
+[role="curriculum-javascript"]
+* `&&`: "va" deb ataladi; u 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `to'g'ri` bo'lganda `true` ni qaytaradi, aks holda `false`ni qaytaradi.
+* `||`: "yoki" deb ataladi; u 2 ta mantiqiy kirishni oladi va kamida 1 ta kiritish `to'g'ri` bo'lsa, `true` qiymatini qaytaradi, aks holda `false` qiymatini qaytaradi.
+* `!`: "not" deb ataladi: u 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatini qaytaradi.
+
+Misol uchun, agar siz 16 yoshda bo'lsangiz, "Men 16 yoshdaman" jumlasi rost va "Men 17 yoshdaman" gapi yolg'on. "Men 16 yoshdaman va men 17 yoshdaman" (rost va yolg'on) yolg'on, chunki siz ham 16, ham 17 yoshda emassiz. Ammo "Men 16 yoki 17 yoshdaman" (rost yoki yolg'on) jumlasi rostdir.
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+Sizningcha, quyidagi iboralar nimani baholaydi? `Rostmi` yoki `Yolg'onmi`?
+
+* `Rost emas`
+* `Rost va Yolg'on`
+* `Rost yoki Yolg'on`
+* `Rost va Rost`
+* `(True and False) or True`
+* `True and not False`
+* `not(False or False)`
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+Sizningcha, quyidagi iboralar nimani baholaydi? `rostmi` yoki `yolg'onmi`?
+
+* `!true`
+* `true && false`
+* `true || false`
+* `true && true`
+* `(true && false) || true`
+* `true && !false`
+* `!(false || false)`
+****
+
+Javoblarni chop etish uchun quyidagi koddan foydalaning:
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: Mantiqiy ifodalar
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: mantiqiy ifodalarni chop etish
+#
+
+from earsketch import *
+init()
+
+print(not True)
+print(True and False)
+print(True or False)
+print(True and True)
+print((True and False) or True)
+print(True and not False)
+print(not(False or False))
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+//
+// skript_nomi: Mantiqiy ifodalar
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: mantiqiy ifodalarni chop etish
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+println(!true);
+println(true && false);
+println(true || false);
+println(true && true);
+println((true && false) || true);
+println(true && !false);
+println(!(false || false));
+
+finish();
+
+----
+
+Bu yerda mantiqiy yaratilish haqida eslatma va mantiqiy amaliyotlarning ba'zi misollari:
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+
+.AMALIYOT
+****
+Endi biz foydalanuvchi kiritishi va mantiqiy amaliyotlarni birlashtiramiz.
+
+Cheklangan miqdordagi variantlar (masalan, "hip hop" va "klassik") bilan foydalanuvchidan janr tanlashni so'raydigan skript yozing. Foydalanuvchining javobiga qarab, janr bilan yaxshi ishlaydigan zarba satrni tanlang. Siz bir nechta imkoniyatlarni qabul qilishingiz mumkin. Masalan, "HIP HOP", "hip hop" va "Hip Hop" bir xil qo'shiqni chiqaradi.
+****
+
+Mana bir misol:
+
+[role="curriculum-python"]
+[source, python]
+----
+# python kodi
+#
+# skript_nomi: Mantiqiy amaliyotlar
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Foydalanuvchidan janr soʻrash va shunga mos ravishda zarba yaratish
+#
+
+from earsketch import *
+init()
+setTempo(120)
+
+# Tovush o'zgaruvchilari
+kick = OS_KICK02
+hihat = OS_CLOSEDHAT04
+clap = OS_CLAP03
+
+# Zarba satri o'zgaruvchilari
+hiphopKickBeat = "0++++---0+++0+++"
+hiphopHihatBeat = "----0---00---000"
+edmKickBeat = "0+++----0+++----"
+edmClapBeat = "----0-------0---"
+
+
+# Foydalanuvchi kiritishini so'rash
+genre = readInput("Sizga qaysi janr yoqadi? Hip Hop yoki EDM?")
+
+# Muvofiq ritmni yaratish
+if((genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP")):
+	makeBeat(kick, 1, 1, hiphopKickBeat)
+	makeBeat(hihat, 2, 1, hiphopHihatBeat)
+elif((genre == "edm") or (genre == "Edm") or (genre == "EDM")):
+	makeBeat(kick, 1, 1, edmKickBeat)
+	makeBeat(clap, 2, 1, edmClapBeat)
+else:
+	print("Kechirasiz, biz siz tanlagan janrni o'qiy olmadik. Iltimos, kodni qayta ishga tushiring.")
+
+# 2-trekka biroz reverbatsiya qo'shish
+setEffect(2, REVERB, MIX, 0.1)
+
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source, javascript]
+----
+"qat'iy foydalaning";
+// javascript kodi
+//
+// script_name: Mantiqiy amaliyotlar
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Foydalanuvchidan janr so'rash va shunga mos ravishda zarba yaratish
+//
+
+// Sozlash
+init();
+setTempo(120);
+
+// Ovoz o'zgaruvchilari
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT04;
+var clap = OS_CLAP03;
+
+// Zarba satri o'zgaruvchilari
+var hiphopKickBeat = "0++++---0+++0+++";
+var hiphopHihatBeat = "----0---00---000";
+var edmKickBeat = "0+++----0+++----";
+var edmClapBeat = "----0-------0---";
+
+
+// Foydalanuvchi kiritishini so'rash
+var genre = readInput("Sizga qaysi janr yoqadi? Hip Hop yoki EDM?")
+
+// Muvofiq ritmni yaratish
+if((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")){
+	makeBeat(kick, 1, 1, hiphopKickBeat);
+	makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if((genre == "edm") || (genre == "Edm") || (genre == "EDM")){
+	makeBeat(kick, 1, 1, edmKickBeat);
+	makeBeat(clap, 2, 1, edmClapBeat);
+} else {
+	println("Kechirasiz, biz siz tanlagan janrni o'qiy olmadik. Iltimos, kodni qayta ishga tushiring.");
+}
+
+// 2-trekka biroz reverbatsiya qo'shish
+setEffect(2, REVERB, MIX, 0,1);
+
+finish();
+
+----
+
+{nbsp} +
+
+.VAZIFA
+****
+Bu Jukebox vazifasi: 3 ta variant (masalan, "latino", "tuzoq" va "dabstep") bilan janr bo'yicha foydalanuvchi kiritishini so'raydigan skript yozing. Foydalanuvchining javobiga qarab, janrga mos keladigan qo'shiq yarating.
+****
+
+{nbsp} +
+
+[[chapter8summary]]
+=== 8-Bob Xulosa
+
+[role="curriculum-python"]
+* *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. Yagona parametr - foydalanuvchi ko'radigan satr. So'ngra foydalanuvchi kodingizga kiritgan narsadan siz foydalanishingiz mumkin, masalan, musiqangiz tempini yoki janrini o'zgartirishingiz uchun.
+* Ba'zi funktsiyalar sizga ma'lumotlarni bir turdan ikkinchisiga o'tkazish imkonini beradi. `str()` istalgan qiymatni satrga aylantiradi.
+`int()` raqamlardan iborat satrni butun songa aylantiradi. `float()` o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi.
+* Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Quyida mantiqiy operatorlar:
+** `va`: 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `False` qiymatini qaytaradi.
+** `yoki`: 2 ta mantiqiy kirishni oladi va kamida 1 ta kirish `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `Yolgʻon` qiymatini qaytaradi.
+** `not`: 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatni qaytaradi.
+* Endi musiqangizdagi oʻzgarishlarni kiritish uchun sizda koʻplab vositalar mavjud: foydalanuvchi kiritishi elementlarni aniqlashi mumkin. Funktsiyangizni chaqirganingizda o'zgarishni tanlash uchun maxsus funktsiyalaringizga parametr qo'shishingiz mumkin.
+
+[role="curriculum-javascript"]
+* *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. Yagona parametr - foydalanuvchi ko'radigan satr. So'ngra foydalanuvchi kodingizga kiritgan narsadan siz foydalanishingiz mumkin, masalan, musiqangiz tempini yoki janrini o'zgartirishingiz uchun.
+* Ba'zi funktsiyalar sizga ma'lumotlarni bir turdan ikkinchisiga o'tkazish imkonini beradi. Masalan, str() ma'lumotlarni satrga aylantiradi. `String()` istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.  `Number()` satrni raqamga aylantiradi.
+* Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Quyida mantiqiy operatorlar:
+** `&&`: "va" deb ataladi; u 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `to'g'ri` bo'lganda `true` ni qaytaradi, aks holda `false`ni qaytaradi.
+** `||`: "yoki" deb ataladi; u 2 ta mantiqiy kirishni oladi va kamida 1 ta kiritish `to'g'ri` bo'lsa, `true` qiymatini qaytaradi, aks holda `false` qiymatini qaytaradi.
+** `!`: "not" deb ataladi: u 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatini qaytaradi.
+* Endi musiqangizdagi oʻzgarishlarni kiritish uchun sizda koʻplab vositalar mavjud: foydalanuvchi kiritishi elementlarni aniqlashi mumkin. Funktsiyangizni chaqirganingizda o'zgarishni tanlash uchun maxsus funktsiyalaringizga parametr qo'shishingiz mumkin.
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Quyidagilardan qaysi biri ma'lumotlar turini o'zgartirishga misol bo'lishi mumkin?
+
+[answers]
+* Satrni raqamga aylantirish.
+* Foydalanuvchi tomonidan belgilangan tempni o'zgaruvchida saqlash.
+* Foydalanuvchidan janrni so'rash uchun `readInput()` dan foydalanish.
+* Taqqoslash operatori orqali mantiqiy qiymat hosil qilish.
+--
+
+[role="curriculum-python"]
+[question]
+--
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
+
+[source,python]
+----
+not(True and (4>5))
+----
+
+[answers]
+* `True`
+* `5`
+* `4`
+* `False`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
+
+[source,javascript]
+----
+!(true && (4>5))
+----
+
+[answers]
+* `true`
+* `4`
+* `false`
+* `5`
+--
+
+[question]
+--
+Quyidagilardan qaysi biri yopishtirishga misol bo‘la oladi?
+
+[answers]
+* `x = beatstring1 + beatstring2`
+* `x = beatstring1.beatstring2`
+* `x = (beatstring1, beatstring2)`
+* `x = beatstring1[beatstring2]`
+--
+
+[role="curriculum-python"]
+[question]
+--
+True va False mantiqiy qiymatlaridan qanday qilib True mantiqiy qiymatiga erishasiz?
+
+[answers]
+* `Rost yoki Yolg'on`
+* `Rost emas`
+* `Rost va Yolg'on`
+* `true or false`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+True va false mantiqiy qiymatlaridan qanday qilib true mantiqiy qiymatiga erishasiz?
+
+[answers]
+* `true||false`
+* `!true`
+* `true&&false`
+* `True||False`
+--
