@@ -142,12 +142,13 @@ video::./videoMedia/001-10-ComposingInEarSketch-PY.mp4[]
 [[video110js]]
 video::./videoMedia/001-10-ComposingInEarSketch-JS.mp4[]
 
-Pour ajouter un clip de son au DAW, nous commençons par entrer la fonction `fitMedia()`. Entre les parenthèses, nous aurons quatre paramètres, séparés par des virgules :
+Pour ajouter un clip de son au DAW, nous commençons par entrer la fonction `fitMedia()`. Entre les parenthèses, nous aurons quatre arguments, séparés par des virgules :
 
 . *Un nom de clip* : placez votre curseur entre les parenthèses, allez dans la bibliothèque de sons, sélectionnez un clip, puis collez-le en utilisant l'icône de collage bleue.
-. *Le numéro de piste* : les pistes sont les rangées que l'on retrouve dans le DAW ; elles vous aident à organiser vos sons par type d'instruments (voix, guitare soliste, guitare d'accompagnement, basse, batterie, etc.). Vous pouvez commencer à la piste numéro un pour votre premier son.
+. *Le numéro de piste* : chaque piste correspond à un type d'instruments (voix, guitare soliste, guitare d'accompagnement, basse, batterie, etc.). Dans le DAW, une piste est une ligne. Vous pouvez commencer à la piste numéro 1 pour votre premier son.
 . *Mesure de début* : le moment où votre son commencera à jouer. Les mesures sont des unités de temps musicales. Une mesure est composée de quatre temps. Vous pouvez commencer à la mesure numéro un pour votre premier son.
 . *Mesure de fin* : le moment où votre son arrêtera de jouer.
+
 Par exemple : `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` placera le son `Y18_DRUM_SAMPLES_2` sur la piste 1, de la mesure 1 à la mesure 5.
 
 Ensuite, appuyez sur _Exécuter_ : vous devriez voir s'afficher votre son dans le DAW. Lorsque vous appuierez sur _Jouer_, vous pourrez l'écouter.
@@ -171,7 +172,7 @@ END OF OPTIONAL
 OPTIONAL
 ////
  
-Retrouvez ci-dessous quelques exemples de code utilisant la fonction `fitMedia()` :
+Voici un exemple de code utilisant la fonction `fitMedia()` :
 
 [role="curriculum-python"]
 [source,python]
@@ -204,7 +205,7 @@ include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 END OF OPTIONAL
 ////
 
-
+ 
 .ENTRAÎNEZ-VOUS
 ****
 À l'aide de sons que vous aimez :
@@ -254,9 +255,9 @@ END OF OPTIONAL
 Voici quelques erreurs courantes :
 
 . *Erreur d'orthographe :* Vérifiez l'orthographe lors de l'utilisation d'une fonction comme `fitMedia()` ou des constantes de son.
-. *Sensibilité à la casse :* La plupart des mots utilisés en programmation sont sensibles à la casse (l'ordinateur reconnaît la différence entre les lettres majuscules et minuscules). Faites attention aux lettres minuscules et majuscules. Par exemple, vous devez écrire `fitMedia()` et non `FitMedia()` ou `fitmedia()`. La plupart des éléments d'un script suivent une règle appelée la *notation "Camel Case"* : c'est-à-dire que le premier mot est en minuscule et que la première lettre des mots suivants sera en majuscule, comme dans `exempleNomFonction()`.
-. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *Paramétrage du script :* EarSketch ajoute automatiquement des code de paramétrage à un nouveau script, mais vous pourriez accidentellement supprimer `from earsketch import *`.
+. *Sensibilité à la casse :* La plupart des mots utilisés en programmation sont sensibles à la casse (l'ordinateur reconnaît la différence entre les lettres majuscules et minuscules). Par exemple, vous devez écrire `fitMedia()` et non `FitMedia()` ou `fitmedia()`. La plupart des éléments d'un script suivent une règle appelée la *notation "Camel Case"* : c'est-à-dire que le premier mot est en minuscule et que la première lettre des mots suivants sera en majuscule, comme dans `exempleNomFonction()`.
+. *Parenthesès :* Oublier d'ouvrir ou de fermer une parenthèse peut causer une <</en/v1/every-error-explained-in-detail#syntaxerror, erreur de syntaxe>>.
+. *Paramétrage du script :* EarSketch ajoute automatiquement des code de paramétrage à un nouveau script, mais vous pourriez accidentellement supprimer `from earsketch import *`. Si c'est le cas, réécrivez `from earsketch import *` au début de votre code.
 . *Ponctuation :* Virgules manquantes ou autres erreurs de ponctuation
 
 C'est le moment de mettre en pratique tout ce que vous avez appris !
@@ -281,15 +282,15 @@ Voici la réponse
 
 . Il manque une parenthèse à la fonction `setTempo()`.
 . Il manque un « e » à la première fonction `fitMedia()`.
-. Il manque une virgule entre le troisième et le quatrième paramètre de la première fonction `fitMedia()`.
+. Il manque une virgule entre le troisième et le quatrième argument de la première fonction `fitMedia()`.
 . Il manque un « M » (majuscule) à la deuxième fonction `fitMedia()`.
-. Dans la seconde fonction `fitMedia()`, l'ordre des paramètres est incorrect : on devrait d'abord retrouver le nom du clip de son, ensuite le numéro de piste.
+. Dans la seconde fonction `fitMedia()`, l'ordre des arguments est incorrect : on devrait d'abord retrouver le nom du clip de son, ensuite le numéro de piste.
 
 ////
 END OF OPTIONAL
 ////
 
-Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
+Regardez le chapitre <</en/v1/every-error-explained-in-detail#, Toutes les erreurs expliquées en détails>> pour avoir une liste plus complète d'erreurs et de techniques pour les résoudre.
 
 
 ////
@@ -308,10 +309,9 @@ TODO: when options are ready, modify the link
 * Une ligne de code est une instruction à exécuter par l'ordinateur. L'ensemble des instructions constitue le programme.
 * Une *station de travail audionumérique ou DAW* est un logiciel informatique spécialisé pour l'enregistrement, l'édition et la lecture de fichiers audio numériques ou *clips*. EarSketch est un DAW qui permet de placer des clips audio sur une séquence temporelle avec du code. 
 * Pour créer de la musique dans EarSketch, le code doit d'abord être saisi dans le panneau de l'éditeur de code. Après avoir appuyé sur « Exécuter », la musique est visible dans le panneau du DAW.
-* Les clips de sons peuvent être trouvés dans la bibliothèque de sons. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule.
+* Les clips de sons peuvent être trouvés dans la bibliothèque de sons. Il est possible de les utiliser en les collant dans le code : cliquez sur l'icone bleue à droite du nom du son.
 * Un *programme* d'ordinateur est une séquence d'instructions que l'ordinateur exécute pour accomplir une tâche spécifique. 
 * Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Un langage de programmation suit une syntaxe spécifique afin d'organiser le code.
-* Un script EarSketch comprend une section de commentaires, une section de paramétrage, et une section dédiée à la musique.
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + » si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. Elle comprend quatre arguments, soient les informations dont elle a besoin pour faire de la musique :
 ** *Nom de clip :* Le clip de son qui est placé dans le DAW.
@@ -319,7 +319,7 @@ TODO: when options are ready, modify the link
 ** *Mesure de début :* La mesure de départ du clip de son.
 ** *Mesure de fin :* La mesure de fin du clip de son.
 * Le *débogage* est le processus de recherche et de correction de *bogues* ou d'erreurs faites par le programmeur.
-* Les règles de syntaxe ** définissent comment le code doit être écrit dans un langage de programmation spécifique.
+* Les *règles de syntaxe* définissent comment le code doit être écrit dans un langage de programmation spécifique.
 * La *console* affiche des informations sur l'état d'un programme, ce qui la rend utile pour déboguer les erreurs de syntaxe. 
 * Parmi les erreurs habituelles, on retrouve les fautes de frappe, les erreurs de casse, les parenthèses manquantes, le paramétrage incorrect du script, etc.
 
