@@ -219,7 +219,7 @@ Please note that:
 
 . You should assign your variables with the `=` symbol before using them.
 . Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
-. Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
+. Just like `fitMedia()`, the `makeBeat()` function has 4 arguments separated by commas.
 
 When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
 ****
