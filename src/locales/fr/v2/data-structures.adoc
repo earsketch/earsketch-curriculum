@@ -12,10 +12,10 @@ Vous avez maintenant de nombreux outils à votre disposition pour créer des mor
 === Les structures de données
 
 [role="curriculum-python"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. Une *liste<strong>, également appelée tableau dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. Une *liste*, également appelée *tableau* dans certains langages de programmation, est une collection de valeurs ou d'*éléments* entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-javascript"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. Un *tableau<strong>, également appelé liste dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. Un *tableau*, également appelé *liste* dans certains langages de programmation, est une collection de valeurs ou d'*éléments* entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-python"]
 [source,python]
@@ -30,10 +30,10 @@ include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
-Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
+Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, en commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[2]` appelle OS_SNARE05.
 
 [role="curriculum-javascript"]
-Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
+Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[2]` appelle OS_SNARE05.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -61,10 +61,10 @@ include::code-examples/data-structures-arrays.js.txt[]
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-Nous avons vu que `liste[index]` appellera un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple, dans l'exemple précédent : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément de la liste Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+Nous avons vu que `liste[index]` appellera un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple, dans l'exemple précédent : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément de la liste Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 [role="curriculum-javascript"]
-Nous avons vu que `tableau[index]` appellera un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple, dans l'ensemble précédent : l'expression `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément du tableau. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+Nous avons vu que `tableau[index]` appellera un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple, dans l'ensemble précédent : l'expression `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément du tableau. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -87,7 +87,7 @@ include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
-Conseil utile : la fonction len(), avec le nom de la liste comme paramètre, renvoie le nombre d'éléments de la liste. Donc `list[0]` est le premier élément de `list` et `list[len(list)-1]` est le dernier. Par exemple, si `list = ["Hello","fellow","EarSketchers"]`, `len(list)` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
+Conseil utile : la fonction len(), avec le nom de la liste comme argument, renvoie le nombre d'éléments de la liste. Donc `list[0]` est le premier élément de `list` et `list[len(list)-1]` est le dernier. Par exemple, si `list = ["Hello","fellow","EarSketchers"]`, `len(list)` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
 
 [role="curriculum-javascript"]
 Conseil utile : la propriété `length` (`tableau.length`) renvoie le nombre d'éléments du tableau. Donc `array[0]` est le premier élément de `tableau` et `tableau[tableau.length-1]` est le dernier. Par exemple, si `tableau = ["Hello","fellow","EarSketchers"];`, `tableau.length` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
@@ -136,32 +136,6 @@ Nous allons voir deux façons d'utiliser les structures de données avec la fonc
 2. Vous pouvez utiliser la fonction `len()` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `len(string)-1`.
 Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tableau ci-dessous.
 
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|Caractère
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
-
 [role="curriculum-javascript"]
 1. Tout comme les tableaux, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
 2. Vous pouvez utiliser la propriété `.length` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `string.length-1`.
@@ -193,12 +167,11 @@ Les index de la chaîne `"EarSketch"` sont affichés dans le tableau ci-dessous.
 |===
 
 
-
 [role="curriculum-python"]
 3. Vous pouvez concaténer des listes comme vous le faites avec des chaînes de caractères. Utilisez l'opérateur de concaténation (`+`) et la syntaxe sera `newList = listA + listB`. 
 
 [role="curriculum-javascript"]
-3. Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. Nous utiliserons la *méthode* `concat`. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des paramètres. Pour l'utiliser, vous devez la placer après le nom de votre tableau avec un point : la syntaxe est `newArray = arrayA.concat(arrayB)`. C'est ce qu'on appelle la *notation par points*.
+3. Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. Nous utiliserons la *méthode* `concat`. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des arguments. Pour l'utiliser, vous devez la placer après le nom de votre tableau avec un point : la syntaxe est `newArray = arrayA.concat(arrayB)`. C'est ce qu'on appelle la *notation par points*.
 
 [role="curriculum-python"]
 4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Sa syntaxe est `newString = oldString[startIndex: endIndex]`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. Par exemple, `"Sarah"[1:4]` renverra `"ara"`. Vous pouvez faire la même chose avec des listes : `newList = oldList[startIndex: endIndex]`.
@@ -341,7 +314,7 @@ Félicitations ! Vous avez maintenant acquis des compétences musicales et de co
 ** Ai-je utilisé des structures informatiques comme des fonctions et des boucles personnalisées pour organiser mon code ?
 ** Est-ce que la structure de mon script reflète la structure de ma chanson ? Cela facilite la lecture.
 
-Le *feedback par les pairs* est courant en programmation et vous aide à améliorer votre code et votre musique grâce aux commentaires des autres. Les commentaires doivent être *constructifs*, autrement dit, ils doivent permettre à un pair de s'améliorer, plutôt que de le.a rabaisser. Lors de la rétroaction :
+Le *feedback par les pairs* est courant en programmation et vous aide à améliorer votre code et votre musique grâce aux commentaires des autres. Les commentaires doivent être *constructifs*, autrement dit, ils doivent permettre à un pair de s'améliorer, plutôt que de le.a rabaisser. Lors du feedback :
 
 * *Soyez spécifique* : Faites référence à des blocs et des lignes de code spécifiques ainsi qu'à des mesures et des pistes de musique spécifiques.
 * *Soyez descriptif* : Expliquez votre raisonnement de manière détaillée ainsi que le processus que vous suivriez pour améliorer le script.
@@ -398,8 +371,8 @@ Thank you video
 
 [role="curriculum-python"]
 * Une *liste* ou « list » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans une liste.
-* Tout comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
-* Les éléments d'une liste sont accessibles par la notation entre crochets `myList[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
+* Comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
+* Les éléments d'une liste sont accessibles par la notation entre crochets `myList[1]`. Les caractères dans une chaîne peuvent être récupérés de la même manière : `myString[1]`.
 * La fonction `len()` renvoie le nombre d'éléments dans une liste ou le nombre de caractères dans une chaîne avec la syntaxe `len(list)`.
 * Les listes peuvent être concaténées et découpées en utilisant les *opérations de liste*, un ensemble d'outils pour modifier une liste.
 * La syntaxe pour créer un sous-ensemble de liste à partir d'une liste existante plus grande est `newList = oldList[startIndex: endIndex]`.
@@ -410,7 +383,7 @@ Thank you video
 
 [role="curriculum-javascript"]
 * Un *tableau* ou « array » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans un tableau.
-* Tout comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
+* Comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
 * Les éléments d'un tableau sont accessibles par la notation entre crochets `myArray[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
 * La propriété `length` renvoie le nombre d'éléments dans un tableau ou le nombre de caractères dans une chaîne avec la syntaxe `array.length` ou `string.length`.
 * Les tableaux peuvent être concaténés et découpés en utilisant des *opérations de tableau*, soit un ensemble d'outils pour modifier un tableau.
