@@ -1,6 +1,6 @@
 // Boolean operations: Asking user for genre and creating beat accordingly
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Sound variables
