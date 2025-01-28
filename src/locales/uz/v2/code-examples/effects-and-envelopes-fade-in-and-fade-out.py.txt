@@ -1,6 +1,6 @@
 # Fade in and fade out: Looping on all tracks to add a fade in and fade out
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(100)
 
