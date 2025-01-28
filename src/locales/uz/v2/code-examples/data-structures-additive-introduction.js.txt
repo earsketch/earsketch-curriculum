@@ -1,6 +1,6 @@
 // Additive Introduction: Creating an additive introduction with array iteration
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
