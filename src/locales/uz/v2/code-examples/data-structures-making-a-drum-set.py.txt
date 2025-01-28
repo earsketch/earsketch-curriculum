@@ -1,6 +1,6 @@
 # Making a drum set: Using lists with makeBeat()
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(100)
 
