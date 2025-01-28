@@ -1,6 +1,6 @@
 # Return Statements 2: Returning the end measure of a section function
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
