@@ -1,6 +1,6 @@
 # Transition Techniques - Risers: Transitioning between sections using risers and a crash cymbal
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(128)
 
