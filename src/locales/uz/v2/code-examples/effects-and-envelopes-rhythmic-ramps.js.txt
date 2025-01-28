@@ -1,6 +1,6 @@
 // Rhythmic Ramps: Automating effects with a for loop
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
