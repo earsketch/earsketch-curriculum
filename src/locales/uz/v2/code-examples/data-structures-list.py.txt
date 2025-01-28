@@ -1,6 +1,6 @@
 # List: Using a list to hold several sounds
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(130)
 
