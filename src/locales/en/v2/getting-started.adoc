@@ -309,8 +309,6 @@ TODO: when options are ready, modify the link
 
 
 
-[[chapter1summary]]
-=== Chapter 1 Summary
 
 [[chapter1summary]]
 === Chapter 1 Summary

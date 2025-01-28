@@ -230,7 +230,7 @@ Computers can only understand problems in a very specific way. In order to produ
 There are many different types of programming languages that consist of particular and unique terms, phrases and conventions. The set of rules that define the combination of symbols that are used within a certain language is called that language’s *syntax*. Every language, including English, has a different syntax and, therefore, must be written differently to accomplish correct form. For example, in English, we capitalize proper nouns and add punctuation to the ends of our sentences as a part of the syntax of the language. There are different and specific syntax rules for all of the different types of programming languages. Some of the most popular programming languages used today are Java, JavaScript, Python, and C.
 
 [role="curriculum-python"]
-[[programmingtermspython]]
+[[programmingtermspython2]]
 *Programming Terms*
 [role="curriculum-python"]
 *Boolean*:: A variable data type that stores a value that is either `True` or `False`.

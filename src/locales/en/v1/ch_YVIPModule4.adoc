@@ -1,5 +1,5 @@
 :nofooter:
-[YourVoiceisPower-Module4]
+[[YourVoiceisPower-Module4]]
 == Your Voice is Power: Module 4
 image:../media/YVIP-RemixComp/Mod4-Image-1-pharrell_williams.png[]
 

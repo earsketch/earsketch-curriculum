@@ -141,7 +141,7 @@ image::../media/HOC/hoc_play.PNG[]
 [role="curriculum-javascript"]
 The video below shows you how to open, import, run, and listen to the example code.
 
-[[video1livepy]]
+[[video1livejs]]
 [role="curriculum-javascript"]
 video::./videoMedia/037-03-RunTheCode-JS.mp4[]
 

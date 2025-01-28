@@ -75,8 +75,8 @@ account to login. If you need help, click     https://earsketch.gatech.edu/yvip/
 if you need help logging into EarSketch
 2. If you already have an EarSketch account, login to your account.
 3. In the box below, click the blue clipboard icon to copy this text into the code editor
-4.When it pastes in the code editor, click import to edit
-5.Click the green “Run” in the upper righthand corner of your code editor
+4. When it pastes in the code editor, click import to edit
+5. Click the green “Run” in the upper righthand corner of your code editor
 6. Your script should run successfully and you should see different color blocks at the top of your screen.
 7. Click the Play button to hear the remix.
 ****
