@@ -1,6 +1,6 @@
 # A-B-A-B Form and custom functions: A song with A and B sections, using custom functions
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
