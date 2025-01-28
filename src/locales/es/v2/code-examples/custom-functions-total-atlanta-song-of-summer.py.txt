@@ -20,14 +20,14 @@ hihat = OS_CLOSEDHAT03
 # DEFINICIONES DE FUNCIONES
 
 # Añadir batería:
-def anadirBateria(comienzo, fin, patron):
+def addingDrums(start, end, pattern):
     # Primero, creamos cadenas de tiempos (_beatstrings_), dependiendo del patrón del parámetro:
     if patron == "heavy":
         cadenaDeTiemposDeBombo = "0---0---0---00--"
         cadenaDeTiemposDeHihat = "-----000----0-00"
     elif patron == "ligero":
         cadenaDeTiemposDeBombo = "0-------0---0---"
-        cadenaDeTiemposDeHihat = "--0----0---0---"
+        beatStringHihat = "--0----0---0---"
     # Entonces creamos el ritmo
     # de bombo en la pista 3 (track 3) y de hihat en la pista 4 (track 4)
     # de los compases comienzo al fin:
@@ -61,7 +61,7 @@ def seccionB(comienzo, fin):
     fitMedia(melodia3, 1, comienzo, comienzo + 2)
     fitMedia(melodia4, 1, comienzo + 2, fin)
     fitMedia(piano, 2, comienzo, fin)
-    anadirBateria(comienzo, fin, "ligero")
+    addingDrums(start, end, "light")
 
 # LLAMADAS A FUNCIÓN
 intro(1, 5)
