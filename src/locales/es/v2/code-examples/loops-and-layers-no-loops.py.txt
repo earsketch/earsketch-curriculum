@@ -9,7 +9,6 @@ bateria1 = ELECTRO_DRUM_MAIN_BEAT_008
 bateria2 = ELECTRO_DRUM_MAIN_BEAT_007
 
 # Se podrían reemplazar todas estas llamadas a fitMedia() con dos llamadas en ciclos.
-
 fitMedia(bateria1, 1, 1, 1.5)
 fitMedia(bateria2, 1, 1.5, 2)
 fitMedia(bateria1, 1, 2, 2.5)
