@@ -1,8 +1,8 @@
 [[unit3]]
-== Unit 3: Structure your Songs
+== 3-dars: Qo'shiqlaringizni tuzing
 
 :nofooter:
 
-Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. We'll be using custom functions for that: these are functions that you will create yourself!
+Endi sizda qo'shiq yaratish, effektlar qo'shish va treklaringizni mix qilish uchun ko'plab vositalar mavjud bo'lgani uchun biz qo'shiqning tuzilishini ko'rib chiqamiz. Buning uchun biz maxsus funktsiyalardan foydalanamiz: bu oʻzingiz yaratadigan funktsiyalar!
 
-We will also look at user inputs and how they can be embedded in your code to create personalize songs. Finally, we'll see how you can use data structures to simplify your code.
+Shuningdek, biz shaxsiylashtirilgan qo'shiqlarni yaratish uchun foydalanuvchi tomonidan kiritilgan ma'lumotlarni hamda ularni kodingizga qanday joriy etish mumkinligini ko'rib chiqamiz. Va nihoyat, kodingizni soddalashtirish uchun ma'lumot tuzilmalaridan qanday foydalanishingiz mumkinligini ko'rib chiqamiz.
