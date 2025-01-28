@@ -1,0 +1,30 @@
+# A-B-A-B Form without functions
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Music
+# Create an A section
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 1, 5)
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, 1, 5)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 1, 2)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 3, 4)
+
+# Create a 4 measure B section between measures 5 and 9
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_3, 1, 5, 9)
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 3, 5, 9)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 5, 6)
+
+# Back to section A at measure 9
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 9, 13)
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 3, 9, 13)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 9, 10)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 11, 12)
+
+# Then back to section B at measure 13.
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_3, 1, 13, 17)
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 3, 13, 17)
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_3, 4, 13, 14)
