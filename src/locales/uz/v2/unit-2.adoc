@@ -1,6 +1,6 @@
 [[unit2]]
-== Unit 2: Loops, Effects, Mixing
+== 2-dars: Halqalar, Effektlar, Mix qiliish
 
 :nofooter:
 
-In this unit you will learn about for loops, which allow you to repeat code instructions efficiently. We'll also go over sound effects and envelopes - the evolution of effects over time. Finally, you learn about mixing your tracks and using conditionals.
+Ushbu bo'limda siz kod ko'rsatmalarini samarali tarzda takrorlash imkonini beruvchi for halqalari haqida bilib olasiz. Shuningdek, biz tovush effektlari va vaqt o'tishi bilan effektlarning evolyutsiyasi bo'lgan zarflarni ko'rib chiqamiz. Va nihoyat, siz treklaringizni mix qilish va shartlardan foydalanishni o'rganasiz.
