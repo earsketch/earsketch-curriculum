@@ -1,6 +1,6 @@
 [[unit2]]
-== יחידה 2: לולאות, אפקטים ומיקסוס
+== Unit 2: Loops, Effects, Mixing
 
 :nofooter:
 
-ביחידה זו תלמדו על לולאות, שמאפשרות לחזור על הוראות בצורה יעילה. נלמד גם על אפקטים ומעטפות - השינוי בזמן של אפקטים. לסיום, נלמד למקסס ערוצים ולהשתמש בתנאים.
+In this unit you will learn about for loops, which allow you to repeat code instructions efficiently. We'll also go over sound effects and envelopes - the evolution of effects over time. Finally, you learn about mixing your tracks and using conditionals.
