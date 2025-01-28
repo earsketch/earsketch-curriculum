@@ -1,6 +1,6 @@
 # Variables: Using variables to store sounds and simplify edits
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(100)
 
