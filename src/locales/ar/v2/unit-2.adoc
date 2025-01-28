@@ -1,6 +1,6 @@
 [[unit2]]
-== Unit 2: Loops, Effects, Mixing
+== الوحدة 2: الحلقات والتأثيرات والمزج
 
 :nofooter:
 
-In this unit you will learn about for loops, which allow you to repeat code instructions efficiently. We'll also go over sound effects and envelopes - the evolution of effects over time. Finally, you learn about mixing your tracks and using conditionals.
+ستتعرف في هذه الوحدة على حلقات for ، والتي تسمح لك بتكرار تعليمات المقطع البرمجي بشكل فعال. سنستعرض أيضًا المؤثرات الصوتية والظروف - تطور التأثيرات مع مرور الوقت. أخيرًا ، ستتعرف على مزج المسارات الخاصة بك واستخدام الشروط.
