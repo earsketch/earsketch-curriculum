@@ -1,6 +1,6 @@
 // Variables: Using variables to store sounds and simplify edits
 
-// Setup
+// Sozlash
 setTempo(100);
 
 // Sounds
