@@ -1,6 +1,6 @@
 // String and Lists Operations: Showing what we can do with arrays and strings
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Creating my beat strings and arrays
