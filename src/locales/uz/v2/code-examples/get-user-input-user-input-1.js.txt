@@ -1,6 +1,6 @@
 // User input 1: Asking the user for the tempo
 
-// Setup
+// Sozlash
 
 // asking for tempo
 var question = "What tempo would you like for your music? Choose a number between 45 and 220";
