@@ -1,6 +1,6 @@
 // Multi Beat: Using several makeBeat calls with different rhythms
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
