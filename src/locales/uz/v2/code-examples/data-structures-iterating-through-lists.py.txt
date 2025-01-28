@@ -1,6 +1,6 @@
 # Iterating through Lists: Using a list to hold several sounds and placing them in our DAW thanks to a for loop
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(130)
 
