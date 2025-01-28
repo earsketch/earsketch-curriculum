@@ -1,6 +1,6 @@
 # Delay Effect: Adding delay to a track
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
