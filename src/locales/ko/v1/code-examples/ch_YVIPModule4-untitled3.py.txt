@@ -1,0 +1,27 @@
+# Functions in YVIP
+
+from earsketch import *
+setTempo(120)
+
+# Sounds
+drum = ENTREP_BEAT_DRUMBEAT
+bass = ENTREP_THEME_BASS_1
+vox = ENTREP_VOX_BK_FALSETTO
+clap1 = CIARA_SET_PERC_CLAP_3
+
+# music
+# verse1
+def verse(start, end):
+    fitMedia(drum, 1, start, end)
+    fitMedia(bass, 2, start, end)
+
+# chorus
+def chorus(start, end):
+    fitMedia(vox, 4, start, end)
+    fitMedia(clap1, 5, start, end)
+
+# Function Calls
+verse(1, 5)
+chorus(5, 9)
+verse(9, 13)
+chorus(13, 17)
