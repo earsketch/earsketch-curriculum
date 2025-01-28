@@ -1,6 +1,6 @@
 # String and Lists Operations: Showing what we can do with lists and strings
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
