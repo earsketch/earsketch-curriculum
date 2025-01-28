@@ -1,6 +1,6 @@
 // analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Placing a sound on track 1
