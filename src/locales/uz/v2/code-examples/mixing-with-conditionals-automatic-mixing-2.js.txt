@@ -1,6 +1,6 @@
 // Automatic Mixing 2: Using conditional statements to mix the tracks
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Adding a melody and bass
