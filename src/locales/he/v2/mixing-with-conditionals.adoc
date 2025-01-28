@@ -3,12 +3,12 @@
 
 :nofooter:
 
-In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (`if` statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+בתכנות, אפשר להפוך דברים לאוטומטיים. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. לרובוט יש חיישן שמזהה מכשולים, וכשהוא נתקל במכשול הוא עוצר. We can do musical automations in EarSketch using conditionals (`if` statements). נראה כיצד להפוך את ערבול הערוצים (mixing) לאוטומטי. משמעותו של הערבול היא שאם הערוץ בעצמה (ווליום) גבוהה מדי נקטין את עצמתו, ואם הוא שקט מדי נגביר אותה.
 
 [[analyzetrack]]
 === Use `analyzeTrack()`
 
-We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. We’ll use an EarSketch function called `analyzeTrack()`. Import and run the following code:
+נלמד כיצד לקבוע מהי עצמת (ווליום) הערוץ. ודאו שההבדל בין עצמה (ווליום) וגובה (pitch) ברור ומובן. We’ll use an EarSketch function called `analyzeTrack()`. Import and run the following code:
 
 [role="curriculum-python"]
 [source,python]
@@ -24,25 +24,25 @@ include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 
 You can read in your console that the printed loudness is 0.10306035109110138.
 
-* The loudness can go from 0 (silence) to 1 (maximum loudness).
-* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
-* Most of the sounds will have a loudness under 0.4
+* העצמה יכולה לקבל ערכים מ-0 (שקט מוחלט) ל-1 (ווליום מקסימלי).
+* לפעמים המספר יכול להראות כך: 1.74630733714e-05. זה נקרא תצוגה מדעית. מה משמעות  ה-e-05 בסוף? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
+* לרוב הצלילים עצמה הקטנה מ-0.4.
 
 The `analyzeTrack()` function takes 2 arguments:
 
 . *track*: Track number
 . *feature*: Analysis constant, like `RMS_AMPLITUDE`
 
-.PRACTICE
+.תרגלו
 ****
 . Try using the code given above with different sounds (change the variable `sound`) to see what the output is.
-. Add a second track and use the `analyzeTrack()` function to print its loudness in the console. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
+. Add a second track and use the `analyzeTrack()` function to print its loudness in the console. לפני הרצת הקוד, האזינו לצלילים, ונסו לנחש למי משניהם ווליום חזק יותר.
 ****
 
 The parameter for `analyzeTrack()` can either be `RMS_AMPLITUDE`, to evaluate the loudness, or `SPECTRAL_CENTROID` to analyze the brightness of the sound. We'll focus on analyzing loudness in this chapter.
 
 [[booleansandcomparisons]]
-=== Booleans and comparisons
+=== ביטויים בוליאניים והשוואות
 
 We will now see how *Boolean Logic* works. This will help us automate some tasks.
 
@@ -54,14 +54,14 @@ We will now see how *Boolean Logic* works. This will help us automate some tasks
 
 [role="curriculum-python"]
 --
-To create a boolean, you can either initialize a variable (`variable1 = True`), or you can use a comparison. To make a comparison, we use a *comparison operator*. Here are the comparison operators:
+To create a boolean, you can either initialize a variable (`variable1 = True`), or you can use a comparison. To make a comparison, we use a *comparison operator*. להלן האופרטורים להשוואה:
 
 [cols="^h,1"]
 |===
 |==
 |is equal to
 
-|!=
+|=!
 |is not equal to
 
 |>
@@ -85,7 +85,7 @@ Note the difference between:
 
 [role="curriculum-javascript"]
 --
-To create a boolean, you can either initialize a variable (`var variable1 = true;`), or you can use a comparison. To make a comparison, we use a *comparison operator*. Here are the comparison operators:
+To create a boolean, you can either initialize a variable (`var variable1 = true;`), or you can use a comparison. To make a comparison, we use a *comparison operator*. להלן האופרטורים להשוואה:
 
 [cols="^h,1"]
 |===
@@ -125,7 +125,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 // this video will be cut at 2' to delete the section about boolean operators//
 
 [role="curriculum-python"]
-.PRACTICE
+.תרגלו
 ****
 * Create a new script, and add sounds on two tracks.
 * Print `True` if the first track is louder than the second track, and `False` otherwise.
@@ -134,7 +134,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.תרגלו
 ****
 * Create a new script, and add sounds on two tracks.
 * Print `true` if the first track is louder than the second track, and `false` otherwise.
@@ -142,7 +142,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 * You can use additional print statements before printing `true` or `false` so that when you read the console, you know what is `true` or `false`. For example, you can first print the track number and then 'true' or 'false'.
 ****
 
-Here is an example:
+הנה דוגמה:
 
 [role="curriculum-python"]
 [source,python]
@@ -163,11 +163,11 @@ In this example, we used `print()` with strings to help read the content of the 
 In this example, we used `println()` with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings.
 
 [[conditionalstatements]]
-=== Conditional Statements
+=== הוראות תנאי
 
-What is a conditional statement? A *statement* is an instruction for the computer. A *conditional statement* is an instruction that must be executed only if a certain *condition* is true. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. If no, don't do anything (keep going).
+מהי הוראת תנאי? A *statement* is an instruction for the computer. A *conditional statement* is an instruction that must be executed only if a certain *condition* is true. למשל, אם נתכנת רובוט לעצור כשהוא לפני מכשול, התנאי יהיה "האם יש לפני הרובוט מכשול?". אם יש, עצור. If no, don't do anything (keep going).
 
-Below is an example of conditional statement, note the similarity with a for loop:
+להלן דוגמה להוראת תנאי. שימו לב לדמיון ללולאת for:
 
 [role="curriculum-python"]
 [source,python]
@@ -181,14 +181,14 @@ include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
 include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
-.PRACTICE
+.תרגלו
 ****
 * Create a new script with two tracks.
-* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
+* אם אחד הערוצים בעצמה גבוהה יותר מעצמת הערוץ האחר, הקטינו את הווליום שלו. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
 * You will need a negative gain (between -1dB and -60dB) to reduce the volume.
 ****
 
-Here is an example:
+הנה דוגמה:
 
 [role="curriculum-python"]
 [source,python]
@@ -202,7 +202,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 
-We might want to check several conditions and execute a different set of statements depending on each condition. You can chain multiple conditions together. We use the following syntax:
+לפעמים נדרש לבדוק מספר תנאים ולבצע בלוקים שונים של קוד, בהתאם לערכי התנאים. You can chain multiple conditions together. יש להשתמש בתחביר (syntax) הבא:
 
 [role="curriculum-python"]
 [source,python]
@@ -219,26 +219,26 @@ include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 [[mixingyourtracks]]
 === Mix your tracks
 
-Let's use all these tools to mix your song. Mixing is modifying the volume of tracks so that they sound well balanced together.
+Let's use all these tools to mix your song. למקסס, פירושו לשנות את עצמת הערוצים כל שישמעו מאוזנים (balanced).
 
 [role="curriculum-python"]
-.PRACTICE
+.תרגלו
 ****
-* Create a new script.
+* צרו סקריפט חדש.
 * Add sounds on at least three tracks for at least sixteen measures.
 * You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or one track that you wish to highlight.
+* בחרו את הערוץ "המרכזי". הוא יכול להיות ערוץ המלודיה או ערוץ אחר שתרצו להדגיש.
 * If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use `print()` to show your process in the console. Here is an example: `print("Is track number" + str(track) + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?". The function `str()` converts a number (ex: `1`) into a string (ex: `"1"`).
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.תרגלו
 ****
-* Create a new script.
+* צרו סקריפט חדש.
 * Add sounds on at least three tracks for at least sixteen measures.
 * You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or the track that you wish to highlight.
+* בחרו את הערוץ "המרכזי". הוא יכול להיות ערוץ המלודיה או ערוץ אחר שתרצו להדגיש.
 * If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use `println()` to show your process in the console. Here is an example: `println("Is track number" + track + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?".
 ****
@@ -246,10 +246,10 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 Let's review some vocabulary:
 
 1. *Operator*: a character that represents an action. We have seen arithmetic operators (`\+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `===`, `!==`).
-1. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1 + 2` (evaluated to 3) or `1 < 2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track `1`, a float between 0 and 1).
+1. *ביטוי*: שילוב של ערכים, קבועים, משתנים, אופרטורים ופונקציות. המחשב מחשב את ערך הביטוי כדי לקבל תוצאה. בדרך כלל ערך הביטוי הוא ערך מספרי או בוליאני יחיד.  For example: `1 + 2` (evaluated to 3) or `1 < 2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track `1`, a float between 0 and 1).
 1. *Statements*: instructions for the computer to execute.
 
-Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
+למטה יש דוגמה של מיקסוס אוטומטי. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
 
 [role="curriculum-python"]
 [source,python]
@@ -266,7 +266,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 {nbsp} +
 
 [[chapter6summary]]
-=== Chapter 6 Summary
+=== סיכום פרק שישי
 
 [role="curriculum-python"]
 * The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
@@ -293,11 +293,11 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
 
 [[chapter-questions]]
-=== Questions
+=== שאלות
 
 [question]
 --
-Which of the following elements is a boolean?
+מי מהביטויים הבאים הוא בוליאני?
 
 [answers]
 * `5+4 === 5`
@@ -309,7 +309,7 @@ Which of the following elements is a boolean?
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+מה יהי הפלט של קטע הקוד הבא (כלומר, מה הוא ידפיס לקונסול)?
 
 [source,python]
 ----
@@ -326,7 +326,7 @@ include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+מה יהי הפלט של קטע הקוד הבא (כלומר, מה הוא ידפיס לקונסול)?
 
 [source,javascript]
 ----
@@ -342,22 +342,22 @@ include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 
 [question]
 --
-What is mixing?
+מה זה mixing?
 
 [answers]
-* adapting the volume of each track so they sound well balanced
-* adapting the pitch of each track so they sound well balanced
-* adding a fade in
-* adding a fade out
+* התאמת הווליום של כל ערוץ כך שהם ישמעו מאוזנים (balanced)
+* התאמת גובה הצלילים בכל ערוץ כך שהם ישמעו מאוזנים (balanced)
+* הוספת fade in
+* הוספת fade out
 --
 
 [question]
 --
-How many conditions can you check in a conditional statement?
+כמה תנאים ניתן לבדוק בהוראת תנאי?
 
 [answers]
-* any number of conditions
-* 1 condition
-* 2 conditions
-* 3 conditions
+* כל מספר של תנאים
+* תנאי אחד
+* שני תנאים
+* שלושה תנאים
 --
