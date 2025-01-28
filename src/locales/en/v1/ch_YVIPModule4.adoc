@@ -115,9 +115,9 @@ Let’s analyze the structure of Entrepreneur.
 *_Student Activity: Determining the Structure of Entrepreneur_*
 
 1. Listen to the "Entrepreneur" song. See if you can identify the parts of the song: Intro, Verse, Chorus, Bridge, Outro.
-
++
 audio::/yvip/Entrepreneur-FULLProdMaster.wav[]
-
++
 2. Listen to the song again.  Stop the song at the times listed below to hear the different sections of the song.
 * 0-0:23 : Intro Verse
 * 0:24–0:46: Chorus
@@ -244,12 +244,12 @@ and replace them with the words start,end. example: `fitMedia(drum,1, start, end
 8. Press enter to create a new line and delete the indent.
 9. Call your function. Type `verse(1,5)`, press enter, then type `verse(6,10)`. We recommend calling each function and separating the start and end numbers with multiples of 4.
 10. Run your script. Did your "verse" play twice?  Does it sound the way you intended to code it? Does your code look like the example below?
-
++
 [role="curriculum-javascript"]
 ****
 The Your Voice is Power sample code is not available for JavaScript. To view the sample code, please switch back to Python by clicking the "JS" box at the top of this sidebar.
 ****
-
++
 [role="curriculum-python"]
 [source,noicon]
 ----
@@ -266,7 +266,7 @@ verse(6,10)
 11. Repeat these instructions to write a new custom function for  “chorus.”
 example. `def chorus(start,end)`
 12. Place your `fitMedia ()` tracks below your chorus function.  Remember, to replace your measure numbers with start,end.
-10. Call your chorus function.  You may want to change the measures you used in your verse call to have verse and chorus fit the ABAB song song structure.
+13. Call your chorus function.  You may want to change the measures you used in your verse call to have verse and chorus fit the ABAB song song structure.
 
 Continue to add custom functions to lengthen your songs and add more variety. You can add a intro, outro, more verses, or a bridge to your song. Think about adding some transitions to your song between the verse and chorus.  Transitions can be a one-measure sound clip using a `fitMedia() function`.  It does not need to be included in a custom function.  Check out the EarSketch Chapter on transitions. link:ch_6.html#transitionstrategies[6.3 Transition Strategies]
 
