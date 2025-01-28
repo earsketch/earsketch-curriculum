@@ -1,6 +1,6 @@
 # Conditional statement: Using a boolean to create variation in a function
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
