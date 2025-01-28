@@ -1,6 +1,6 @@
 # No loops: Musical repetition created without code loops
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
