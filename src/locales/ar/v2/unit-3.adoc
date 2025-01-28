@@ -1,8 +1,8 @@
 [[unit3]]
-== Unit 3: Structure your Songs
+== الوحدة 3: ترتيب اغانيك
 
 :nofooter:
 
-Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. We'll be using custom functions for that: these are functions that you will create yourself!
+الآن بعد أن أصبح لديك العديد من الأدوات لإنشاء أغنيتك وإضافة المؤثرات ومزج المقطوعات الموسيقية الخاصة بك ، سننظر الى بنية الأغنية. سنستخدم دوال مخصصة لذلك: هذه هي الدوال التي ستنشئها بنفسك!
 
-We will also look at user inputs and how they can be embedded in your code to create personalize songs. Finally, we'll see how you can use data structures to simplify your code.
+سننظر أيضًا في ادخال المستخدم وكيف يمكن تضمينها في التعليمات البرمجية الخاصة بك لإنشاء أغانٍ مع طابع شخصي خاص بك. أخيرًا ، سنرى كيف يمكنك استخدام هياكل البيانات لتبسيط التعليمات البرمجية الخاصة بك.
