@@ -1,6 +1,6 @@
 // Making a drum set: Using arrays with makeBeat()
 
-// Setup
+// Sozlash
 setTempo(100);
 
 // Music
