@@ -1,4 +1,5 @@
-// Opérations de chaînes de caractères et de tableaux : Ce qui peut être réalisé avec des tableaux et des chaînes de caractères
+// String and Lists Operations: Showing what we can do with arrays and strings
+
 // Paramétrage
 setTempo(120);
 
