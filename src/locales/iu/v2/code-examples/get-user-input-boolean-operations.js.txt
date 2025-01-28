@@ -1,0 +1,32 @@
+// Boolean operations: Asking user for genre and creating beat accordingly
+
+// Setup
+setTempo(120);
+
+// Sound variables
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT04;
+var clap = OS_CLAP03;
+
+// Beat string variables
+var hiphopKickBeat = "0++++---0+++0+++";
+var hiphopHihatBeat = "----0---00---000";
+var edmKickBeat = "0+++----0+++----";
+var edmClapBeat = "----0-------0---";
+
+// Requesting user input
+var genre = readInput("What genre is your favorite? Hip Hop or EDM?");
+
+// Creating the appropriate rhythm
+if ((genre === "Hip Hop") || (genre === "hip hop") || (genre === "HIP HOP")) {
+    makeBeat(kick, 1, 1, hiphopKickBeat);
+    makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if ((genre === "edm") || (genre === "Edm") || (genre === "EDM")) {
+    makeBeat(kick, 1, 1, edmKickBeat);
+    makeBeat(clap, 2, 1, edmClapBeat);
+} else {
+    println("Sorry we couldn't read the genre you selected. Please run the code again.");
+}
+
+// Adding some reverb on track 2
+setEffect(2, REVERB, MIX, 0.1);
