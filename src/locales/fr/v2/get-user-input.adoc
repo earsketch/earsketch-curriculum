@@ -56,7 +56,7 @@ Votre section peut durer autant de mesures que vous le souhaitez.
 Ensuite, appelez la fonction et affichez la mesure de fin dans la console.
 ****
 
-Voici un exemple de code :
+Voici un exemple :
 
 [role="curriculum-python"]
 [source,python]
@@ -83,7 +83,7 @@ Dans le corps de la fonction, vous devrez avoir une instruction conditionnelle q
 Ensuite, vous ferez appel à la fonction à différentes mesures avec différentes variations.
 ****
 
-Voici un exemple de code :
+Voici un exemple :
 
 [role="curriculum-python"]
 [source,python]
@@ -191,7 +191,7 @@ Maintenant, examinons les *opérateurs booléens* ; ceux-ci permettent de combi
 [role="curriculum-python"]
 * `and` : prend deux booléens en entrée et renvoie `True` uniquement lorsque les deux sont `True`, sinon il renvoie `False`.
 * `or` : prend deux booléens en entrée et renvoie `True` lorsqu'au moins une entrée est `True`, sinon il renvoie `False`.
-* `not` : prend un booléen et renvoie le booléen opposé.
+* `not` : prend un booléen en entrée et renvoie le booléen opposé.
 
 [role="curriculum-javascript"]
 * `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
@@ -260,7 +260,7 @@ Combinons maintenant des entrées d'utilisateur et des opérations booléennes :
 Rédigez un script qui demandera à l'utilisateur de choisir un genre, avec un nombre limité d'options (par exemple "hip-hop" et "classique"). Selon la réponse de l'utilisateur, sélectionnez une chaîne de caractères de beat (ou rythme) qui s'adapte bien au genre musical. You can accept several possibilities. Vous pouvez accepter plusieurs possibilités, par exemple : "HIP HOP", "hip hop" et "Hip Hop" afficheront la même chanson.
 ****
 
-Voici un exemple de code :
+Voici un exemple :
 
 [role="curriculum-python"]
 [source,python]
@@ -288,19 +288,19 @@ Voici le défi Juke-box : Rédigez un script qui demandera à l'utilisateur de c
 
 [role="curriculum-python"]
 * Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
-* `readInput()` demandera à l'utilisateur d'écrire du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
+* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
 * Certaines fonctions vous permettent de convertir des données d'un type à un autre. `str()` convertit n'importe quelle valeur en une chaîne de caractères.
 `int()` convertit une chaîne de caractères en nombres entiers. `float()` convertit une chaîne de caractères en nombres décimaux.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
 ** `and` : prend deux booléens en entrée et renvoie `True` uniquement lorsque les deux sont `True`, sinon il renvoie `False`.
 ** `or` : prend deux booléens en entrée et renvoie `True` lorsqu'au moins une entrée est `True`, sinon il renvoie `False`.
-** `not` : prend un booléen et renvoie le booléen opposé.
+** `not` : prend un booléen en entrée et renvoie le booléen opposé.
 * Vous disposez maintenant de nombreux outils pour introduire des variations dans votre musique : les entrées d'utilisateur peuvent déterminer les éléments. Vous pouvez ajouter un paramètre dans vos fonctions personnalisées pour sélectionner une variation lorsque vous appelez votre fonction.
 
 [role="curriculum-javascript"]
 * Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
-* `readInput()` demandera à l'utilisateur d'écrire du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
+* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
 * Certaines fonctions vous permettent de convertir des données d'un type à un autre. La concaténation de chaînes de caractères `String()` convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule.  Number() convertit une chaîne de caractères en nombre.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
