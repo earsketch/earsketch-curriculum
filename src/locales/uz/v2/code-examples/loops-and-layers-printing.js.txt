@@ -1,6 +1,6 @@
 // Printing: Using println() to print messages in the console
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Variables
