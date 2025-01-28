@@ -1,0 +1,720 @@
+[[ch_28]]
+== Every Effect Explained in Detail
+
+:nofooter:
+
+[[bandpass]]
+=== BANDPASS
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, BANDPASS, BANDPASS_FREQ, 1000)
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9)
+setEffect(1, BANDPASS, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, BANDPASS, BANDPASS_FREQ, 1000);
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9);
+setEffect(1, BANDPASS, MIX, 1);
+----
+
+`BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), you can make a telephone or megaphone-like sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), you can make sounds that seem overpowering blend better with other sounds in the mix.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|BANDPASS_FREQ |The center frequency (in Hz) of the window of frequencies to pass through. |800.0 |20.0 |20000.0
+
+|BANDPASS_RESONANCE |The boost of frequncies around the BANDPASS_FREQ level. Higher values of resonance strongly boost a small window (band)of frequencies, while lower values of resonance subtly boost a larger window (band). |0.5 |0.0 |1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.1 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[chorus]]
+=== CHORUS
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, CHORUS, CHORUS_LENGTH, 15)
+setEffect(1, CHORUS, CHORUS_NUMVOICES, 1)
+setEffect(1, CHORUS, CHORUS_RATE, 10)
+setEffect(1, CHORUS, MIX, 0.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, CHORUS, CHORUS_LENGTH, 15);
+setEffect(1, CHORUS, CHORUS_NUMVOICES, 1);
+setEffect(1, CHORUS, CHORUS_RATE, 10);
+setEffect(1, CHORUS, MIX, 0.5);
+----
+
+`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|CHORUS_LENGTH |The length of time (in ms) from the original sound within which the chorus effect is activated. |15.0 |1.0 |250.0
+
+|CHORUS_NUMVOICES |The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. |1.0 |1.0 |8.0
+
+|CHORUS_RATE |The rate (in Hz) which the pitch cycles or "wobbles" at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. |0.5 |0.1 |16.0
+
+|CHORUS_MOD |The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. |0.7 |0.0 |1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[compressor]]
+=== COMPRESSOR
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30)
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
+----
+
+`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. Music producers often use compressors to fine-tune and add “punch” to drums.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|COMPRESSOR_THRESHOLD |The amplitude (volume) level (in dB) above which the compressor starts to reduce volume. |-18.0 |-30.0 |0.0
+
+|COMPRESSOR_RATIO |The amount of specified gain reduction. A ratio of 3:1 means that if the original sound is 3 dB over the threshold, then the affected sound will be 1 dB over the threshold. |10.0 |1.0 |100.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[delay]]
+=== DELAY
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 3)
+setEffect(1, DELAY, DELAY_TIME, 370)
+setEffect(1, DELAY, DELAY_FEEDBACK, -3.5)
+setEffect(1, DELAY, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 3);
+setEffect(1, DELAY, DELAY_TIME, 370);
+setEffect(1, DELAY, DELAY_FEEDBACK, -3.5);
+setEffect(1, DELAY, MIX, 1);
+----
+
+`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|DELAY_TIME |The time amount in milliseconds (ms) that the original track is delayed, and the time between successive repeats of the delay. |300.0 |0.0 |4000.0
+
+|DELAY_FEEDBACK |The relative amount of repeats that the delay generates. Higher values create more "echoes". Be careful of applying "too much" feedback! |-3.0 |-120.0 |-1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.5 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[distortion]]
+=== DISTORTION
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, DISTORTION, DISTO_GAIN, 27)
+setEffect(1, DISTORTION, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, DISTORTION, DISTO_GAIN, 27);
+setEffect(1, DISTORTION, MIX, 1);
+----
+
+`DISTORTION` adds a dirty, fuzzy, and gritty effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|DISTO_GAIN |The amount of overdrive of the original sound. |20.0 |0.0 |50.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[eq3band]]
+=== EQ3BAND
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, EQ3BAND, EQ3BAND_LOWGAIN, -15)
+setEffect(1, EQ3BAND, EQ3BAND_MIDGAIN, -5)
+setEffect(1, EQ3BAND, EQ3BAND_HIGHGAIN, 15)
+setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000)
+setEffect(1, EQ3BAND, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, EQ3BAND, EQ3BAND_LOWGAIN, -15);
+setEffect(1, EQ3BAND, EQ3BAND_MIDGAIN, -5);
+setEffect(1, EQ3BAND, EQ3BAND_HIGHGAIN, 15);
+setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000);
+setEffect(1, EQ3BAND, MIX, 1);
+----
+
+`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|EQ3BAND_LOWGAIN |The gain (in dB) of the low range of frequencies of the EQ. Negative values lower the volume of the low frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+
+|EQ3BAND_LOWFREQ |Specifies the highest frequency (in Hz) of the low range. |200.0 |20.0 |20000.0
+
+|EQ3BAND_MIDGAIN |The gain (in dB) of the mid range of frequencies of the EQ. Negative values lower the volume of the mid frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+
+|EQ3BAND_MIDFREQ |Specifies the center frequency (in Hz) of the mid range. |2000.0 |20.0 |20000.0
+
+|EQ3BAND_HIGHGAIN |The gain (in dB) of the high range of frequencies of the EQ. Negative values lower the volume of the high frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+
+|EQ3BAND_HIGHFREQ |Specifies the cutoff frequency (in Hz) of the high range. |2000.0 |20.0 |20000.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[filter]]
+=== FILTER
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, FILTER, FILTER_FREQ, 20, 1, 4000, 3)
+setEffect(1, FILTER, FILTER_RESONANCE, 0.9)
+setEffect(1, FILTER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, FILTER, FILTER_FREQ, 20, 1, 4000, 3);
+setEffect(1, FILTER, FILTER_RESONANCE, 0.9);
+setEffect(1, FILTER, MIX, 1);
+----
+
+`FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|FILTER_FREQ |The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). |1000.0 |20.0 |20000.0
+
+|FILTER_RESONANCE |The boost of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. |0.8 |0.0 |1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[flanger]]
+=== FLANGER
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, FLANGER, FLANGER_LENGTH, 10)
+setEffect(1, FLANGER, FLANGER_FEEDBACK, -5)
+setEffect(1, FLANGER, FLANGER_RATE, 20)
+setEffect(1, FLANGER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, FLANGER, FLANGER_LENGTH, 10);
+setEffect(1, FLANGER, FLANGER_FEEDBACK, -5);
+setEffect(1, FLANGER, FLANGER_RATE, 20);
+setEffect(1, FLANGER, MIX, 1);
+----
+
+`FLANGER` creates a "whoosh"-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and "robot-like" sounds.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|FLANGER_LENGTH |The length of delay time (in ms) from the original sound within which the flanger effect is activated. |6.0 |0.0 |200.0
+
+|FLANGER_FEEDBACK |The amount (in dB) that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-50.0 |-80.0 |-1.0
+
+|FLANGER_RATE |The rate (in Hz) which the pitch cycles or "whooshes" at. Lower values create more smoothly-cycling sounds, while higher values create more whooshing-sounding effects and sonic artifacts. |0.6 |0.001 |100.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[pan]]
+=== PAN
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
+----
+
+`PAN` affects the mix between the left and right audio channels. If you are wearing headphones, adjusting `PAN` changes how much of the sound you hear in your left ear versus the right.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|LEFT_RIGHT |Specifies the left/right location of the original sound within the stereo field (0.0 is center, -100.0 is fully left, 100.0 is fully right). |0.0 |-100.0 |100.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[phaser]]
+=== PHASER
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, PHASER, PHASER_RATE, 0.7)
+setEffect(1, PHASER, PHASER_RANGEMIN, 440)
+setEffect(1, PHASER, PHASER_RANGEMIN, 1600)
+setEffect(1, PHASER, PHASER_FEEDBACK, -2)
+setEffect(1, PHASER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, PHASER, PHASER_RATE, 0.7);
+setEffect(1, PHASER, PHASER_RANGEMIN, 440);
+setEffect(1, PHASER, PHASER_RANGEMIN, 1600);
+setEffect(1, PHASER, PHASER_FEEDBACK, -2);
+setEffect(1, PHASER, MIX, 1);
+----
+
+`PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going "in and out of phase" with each other.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|PHASER_RATE |The rate (in Hz) that the slight delay time changes back and forth. Lower values create more smoothly-cycling sounds, while higher values create more robotic-sounding effects and sonic artifacts. |0.5 |0.0 |10.0
+
+|PHASER_RANGEMIN |The low value (in Hz) of the affected frequency range. |440.0 |40.0 |20000.0
+
+|PHASER_RANGEMAX |The high value (in Hz) of the affected frequency range. |1600.0 |40.0 |20000.0
+
+|PHASER_FEEDBACK |The amount that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-3.0 |-120.0 |-1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[pitchshift]]
+=== PITCHSHIFT
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
+----
+
+`PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|PITCHSHIFT_SHIFT |Specifies the amount to adjust the pitch of the original sound in semitones (and fractions of a semitone, given by values after the decimal point). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[reverb]]
+=== REVERB
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, REVERB, REVERB_TIME, 2000)
+setEffect(1, REVERB, REVERB_DAMPFREQ, 18000)
+setEffect(1, REVERB, MIX, 0.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, REVERB, REVERB_TIME, 2000);
+setEffect(1, REVERB, REVERB_DAMPFREQ, 18000);
+setEffect(1, REVERB, MIX, 0.5);
+----
+
+`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|REVERB_TIME |The decaying time of the ambiance in milliseconds (ms). When modulating REVERB_TIME over time using automation curve, due to the nature of convolution-based reverb, the value is updated only at every quarter note (time=0.25) in a "stair-case" manner from the starting point of the automation. (You will, however, hardly notice that.) |1500.0 |100.0 |4000.0
+
+|REVERB_DAMPFREQ |The cutoff frequency (in Hz) of the lowpass filter applied to the ambiance. The lower the value, the darker the reverberation will sound. |10000.0 |200.0 |18000.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.3 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[ringmod]]
+=== RINGMOD
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+ffitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, RINGMOD, RINGMOD_MODFREQ, 100)
+setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80)
+setEffect(1, RINGMOD, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, RINGMOD, RINGMOD_MODFREQ, 100);
+setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80);
+setEffect(1, RINGMOD, MIX, 1);
+----
+
+`RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|RINGMOD_MODFREQ |The frequency (in Hz) of the sine wave oscillator that is being multiplied into your original sound. |40.0 |0.0 |100.0
+
+|RINGMOD_FEEDBACK |The amount of affected sound that is fed-back into the effect. High values create more robotic-type sounds and sonic artifacts. |0.0 |0.0 |100.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[tremolo]]
+=== TREMOLO
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, TREMOLO, TREMOLO_FREQ, 7.5)
+setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10)
+setEffect(1, TREMOLO, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, TREMOLO, TREMOLO_FREQ, 7.5);
+setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10);
+setEffect(1, TREMOLO, MIX, 1);
+----
+
+`TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|TREMOLO_FREQ |The rate (in Hz) that the volume is changed back and forth. |4.0 |0.0 |100.0
+
+|TREMOLO_AMOUNT |The amount (in dB) that the volume changes back and forth over during each cycle. |-6.0 |-60.0 |0.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[volume]]
+=== VOLUME
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, VOLUME, GAIN, -55, 1, 0, 3)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
+----
+
+`VOLUME` allows you to change the loudness of a sound.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|GAIN |Specifies the output volume level of the original sound. |0.0 |-60.0 |12.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
+
+[[wah]]
+=== WAH
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">With Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
+    <div class="audio-label">Without Effect:</div>
+    <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, WAH, WAH_POSITION, 0, 1, 0.5, 2)
+setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3)
+setEffect(1, WAH, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, WAH, WAH_POSITION, 0, 1, 0.5, 2);
+setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3);
+setEffect(1, WAH, MIX, 1);
+----
+
+`WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
+
+|===
+|Parameter |Description |Default Value |minValue |maxValue
+
+|WAH_POSITION |The center frequency of the boosted fixed-width frequency range. |0.0 |0.0 |1.0
+
+|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+
+|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|===
