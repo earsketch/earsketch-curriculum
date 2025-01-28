@@ -1,6 +1,6 @@
 // Delay Effect: Adding delay to a track
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
