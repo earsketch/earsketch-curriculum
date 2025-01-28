@@ -1,0 +1,11 @@
+# setup
+from earsketch import *
+setTempo(120)
+
+# music
+
+# sounds
+
+# verse 1
+
+# verse 2
