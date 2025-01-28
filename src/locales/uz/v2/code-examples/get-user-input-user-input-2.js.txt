@@ -1,6 +1,6 @@
 // User input 2: Creating a dubstep song with user-specified parameters
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
