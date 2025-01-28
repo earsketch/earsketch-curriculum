@@ -1,6 +1,6 @@
 // Return Statements: Linking two beats together with return statements
 
-// Setup
+// Sozlash
 setTempo(100);
 
 var rhythm1 = "0+++0+0+0+--0+00";
