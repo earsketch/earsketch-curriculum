@@ -1,6 +1,6 @@
 // Comments: Using comments to describe what the code does
 
-// Setup
+// Sozlash
 setTempo(130);
 
 // Music
