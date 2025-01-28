@@ -1,0 +1,13 @@
+# Staggered Start and End Measures
+
+# setup
+from earsketch import *
+setTempo(120)
+
+# music
+fitMedia(RD_UK_HOUSE_MAINBEAT_8, 1, 1, 5)
+fitMedia(RD_POP_SYNTHBASS_6, 2, 2, 5)
+fitMedia(YG_FUNK_CONGAS_3, 3, 3, 7)
+fitMedia(ENTREP_BEAT_DRUMBEAT, 4, 5, 9)
+fitMedia(CIARA_SET_BASSLINE_1, 5, 5, 9)
+fitMedia(ENTREP_THEME_ORCH, 6, 6, 10)
