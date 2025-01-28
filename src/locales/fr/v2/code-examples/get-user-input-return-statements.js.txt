@@ -20,5 +20,6 @@ function createBeat(startMeasure, soundClip, beatString) {
 // Appels de fonction
 // Affectation de la valeur retournée à une valeur
 var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
+
 // Passage de la valeur retournée dans une autre fonction
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
