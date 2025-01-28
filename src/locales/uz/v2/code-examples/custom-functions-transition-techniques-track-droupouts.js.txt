@@ -1,6 +1,6 @@
 // Transition Techniques - Track Silencing: Transitioning between sections with track silencing
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
