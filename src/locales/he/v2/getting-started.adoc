@@ -1,16 +1,16 @@
 [[getstartedwithearsketch]]
-== Getting Started with EarSketch
+== להתחיל עם EarSketch
 
 :nofooter:
 
 In this chapter you will learn how EarSketch works. You will place sounds into your music and see how to debug your code.
 
 [[discoverearsketch]]
-=== Discover EarSketch
+=== גלו את EarSketch
 
 :nofooter:
 
-In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. How does it work? Find out in the video below!
+ב-EarSketch, תתנו למחשב הוראות על-ידי כתיבת קוד. כל שורת קוד היא הוראה אחת. כל ההוראות ביחד נקראות תכנית (הן נקראות גם אלגוריתם). בדיוק כמו שמעקב אחרי מתכון בספר בישול יוצר ארוחה, כך ביצוע של תכנית ב-EarSketch יכול ליצור שיר. How does it work? Find out in the video below!
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -37,7 +37,7 @@ Some popular DAWs include https://www.ableton.com/[Ableton Live^], https://www.i
 
 EarSketch is DAW that allows you to create music by writing code.
 
-Here is how to make full use of the DAW:
+כך תוכלו לעשות שימוש ב-DAW:
 
 [role="curriculum-mp4"]
 [[video1b]]
@@ -64,7 +64,7 @@ include::code-examples/getting-started-intro-script.js.txt[]
 {nbsp} +
 
 [[createanewscript]]
-=== Create your first script!
+=== צרו את הסקריפט הראשון!
 
 Let's see how to create a script from scratch.
 
@@ -73,19 +73,19 @@ Let's see how to create a script from scratch.
 If this is your first script, click the large blue text "Click here to create a new script!"
 +
 [[newscriptplus]]
-.Create a new script, open scripts
+.יצירת סקריפט חדש
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
 . *Choose a name and language.* Give your new script a name, and choose between Python and JavaScript programming languages.
 +
 [[newscriptpromptpy]]
-.The create a new script dialog box
+.תיבת הדיאלוג ליצירת סקריפט חדש
 [role="curriculum-python"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 +
 [[newscriptpromptjs]]
-.The create a new script dialog box
+.תיבת הדיאלוג ליצירת סקריפט חדש
 [role="curriculum-javascript"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
@@ -106,7 +106,7 @@ At the deepest level, computers execute code using *binary*. This means that all
 
 Now that you have created your first script, let's start working on your music!
 
-Watch this video to see how to add an audio clip to your song:
+הווידאו הבא מתאר כיצד להוסיף קליפ לשיר שלך:
 
 [role="curriculum-python curriculum-mp4"]
 [[video110py]]
@@ -200,23 +200,23 @@ include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.תרגלו
 ****
-Using sounds that you like:
+בחרו קליפים לטעמכם/ן מספריית הצלילים ו:
 
 . Place sounds on two different tracks
 . Place sounds from measure `2` to `12`
 . Create a short song with three tracks that is eight measures long or more
 
-For each exercise, you can have your neighbour listen to your song.
+בכל תרגיל, בקשו מחבר/ה להקשיב לשיר ולתת משוב.
 
-If you have errors when running your code, check out the next chapter about debugging.
+אם יש שגיאות בקוד תקנו אותן. בפרק הבא נעסוק בהרחבה בתיקון שגיאות.
 ****
 
 [[debugging]]
-=== Debug your code
+=== תיקון שגיאות (debugging)
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. You can use debugging strategies, using the console.
+לפעמים, מתכנתות ומתכנתים עושים שגיאות שגורמות לקוד לרוץ באופן שגוי, או לא לרוץ בכלל. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. אפשר לדבג בשיטות שונות, בעזרת הקונסול (החלונית מתחת לחלונית עורך הקוד).
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
@@ -234,32 +234,32 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 OPTIONAL
 ////
 
-What are the different types of errors?
+מהם הסוגים השונים של שגיאות?
 
 . *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote `fitMedia` incorrectly).
 . *Runtime errors*: Your program starts to run but halts due to an error.
-. *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place.
+. *Logic errors*: Your program runs, but it doesn't do what is expected. אפשר לתקן שגיאות לוגיות באמצעות הסתכלות על ה-DAW ובדיקה אלו קליפים לא נמצאים במקומם הרצוי.
 
 ////
 END OF OPTIONAL
 ////
 
-Here are some common errors:
+הנה מספר שגיאות נפוצות:
 
 [role="curriculum-python"]
 . *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
-. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
 . *Punctuation:* Missing commas or other punctuation errors
 
 [role="curriculum-javascript"]
 . *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
-. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
 . *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Punctuation:* Missing commas or other punctuation errors
 
-Time to practice!
+זמן לתרגל!
 Find the five errors in the following code:
 
 [role="curriculum-python"]
@@ -278,7 +278,7 @@ include::code-examples/getting-started-finding-errors.js.txt[]
 OPTIONAL
 ////
 
-Here is the answer
+אלה השגיאות בקטע:
 
 . The `setTempo()` function is missing a parentheses
 . The first `fitMedia()` is missing an `e`
@@ -297,7 +297,7 @@ TODO: when options are ready, modify the link
 ////
 
 [[chapter1summary]]
-=== Chapter 1 Summary
+=== סיכום פרק ראשון
 
 * A computer *program* is a sequence of instructions the computer executes to accomplish a specific task.
 * A *script* is a nickname for a short program.
@@ -317,17 +317,17 @@ TODO: when options are ready, modify the link
 * Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
 
 [[chapter-questions]]
-=== Questions
+=== שאלות
 
 [question]
 --
-Which of the following is NOT a panel in the EarSketch workspace?
+מי מהבאים אינו פאנל בסביבת העבודה של EarSketch?
 
 [answers]
-* The effects browser
-* The code editor
-* The DAW
-* The console
+* דפדפן האפקטים
+* עורך הקוד
+* ב-DAW
+* בקונסול
 --
 
 [question]
@@ -346,41 +346,41 @@ How many parameters do you need for your `fitMedia()` function?
 One script corresponds to...
 
 [answers]
-* One EarSketch song
-* One line of code
-* One programming language
-* One programmer
+* שיר אחד
+* שורת קוד אחת
+* שפת תכנות אחת
+* מתכנתת אחת או מתכנת אחד
 --
 
 [question]
 --
-What is a measure?
+מהי תיבה?
 
 [answers]
-* A musical time unit
-* An audio volume unit
-* A line in the DAW
-* A pitch unit
+* יחידת זמן מוסיקלית
+* יחידת עוצמה (ווליום)
+* שורה ב-DAW
+* יחידת גובה צליל
 --
 
 [question]
 --
-Which of the following is NOT a common type of error found in code?
+מי מהבאים אינו סוג נפוץ של שגיאה בקוד?
 
 [answers]
-* Grammatical Errors
-* Runtime Errors
-* Logic Errors
-* Syntax Errors
+* שגיאות דקדוקיות
+* שגיאות זמן ריצה
+* שגיאות לוגיות
+* שגיאות תחביריות
 --
 
 [question]
 --
-Where in the EarSketch workspace can you get information about your bugs?
+היכן, בסביבת הפיתוח של EarSketch אפשר למצוא מידע על באגים בקוד?
 
 [answers]
-* The console
-* The sound browser
-* The script browser
-* The DAW
+* בקונסול
+* בדפדפן הצלילים
+* בדפדפן הסקריפטים
+* ב-DAW
 --
