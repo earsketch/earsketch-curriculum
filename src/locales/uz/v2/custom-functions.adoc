@@ -3,16 +3,16 @@
 
 :nofooter:
 
-The song structure is the song's organization over time. The goal is to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own function, custom functions, to structure your songs!
+Qo'shiq tuzilmasi vaqt o'tishi bilan qo'shiqni tashkillashtirishdir. The goal is to create meaningful sections and transitions for the flow of your music. Ushbu bobda siz qo'shiqlaringizni tuzish uchun shaxsiy funktsiyangizni, maxsus funktsiyalarni yaratasiz!
 
 [[asongsstructure]]
-=== A song's structure
+=== Qo'shiq tuzilishi
 
 :nofooter:
 
-A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
+Qo'shiqni *bo'limlarga* bo'lish mumkin. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
 
-A common and simple *form*, or song structure, is ABA. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
+Umumiy va oddiy *shakl* yoki qo'shiq tuzilishi ABA hisoblanadi. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
 
 [[imediau2sections_052016png]]
 .An ABA form within the EarSketch DAW
@@ -60,16 +60,16 @@ include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
 . `sectionA()` is the name we chose for our function. You can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
-. The instructions are the *body* of the function. They are indented.
+. Ko'rsatmalar funktsiyaning *tanasi* hisoblanadi. They are indented.
 
 .PRACTICE
 ****
 Paste this code in a new script, and run it. You should see that your DAW remains empty.
-That's because you need to *call* a function to use it.
-To call your function, add the line `sectionA()`, unindented, after your function definition. When running the code, you should see section A in your DAW
+Buning sababi, uni ishlatish uchun funktsiyani *chaqirishingiz* kerak.
+Funktsiyangizni chaqirish uchun funktsiya izohidan so'ng `sectionA()` qatorini chekintirmasdan qo'shing. When running the code, you should see section A in your DAW
 ****
 
-Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. To remedy this issue, we will create *parameters* for our function.
+Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. Ushbu muammoni hal qilishda biz funktsiyamiz uchun *parametrlarni* yaratamiz.
 
 .PRACTICE
 ****
@@ -77,8 +77,8 @@ In your current script you created for the previous practice problem:
 
 1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
 1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
-1. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
-1. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
+1. Funktsiyangizni chaqirganingizda, qavslar orasiga `1` va `5` parametrlarini qo'shing. Run the code to make sure there is no error.
+1. Bu safar `9` va `13` parametrlari bilan ikkinchi funktsiya chaqiruvini qo'shing. Run the code to make sure there is no error.
 1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
 ****
 
@@ -109,23 +109,23 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Transition Strategies
 
-Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help one section smoothly go into the next. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. The goal of a transition is to grab the listener's attention and let them know a change is about to occur.
+Endi siz qo'shiqni tuzish uchun maxsus funktsiyalarni qanday yaratishni bilasiz, keling, o'tishlarni ko'rib chiqaylik. *O'tishlar* bir bo'lim ikkinchisiga silliq o'tishiga yordam beradi. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. O'tishning maqsadi tinglovchining e'tiborini jalb qilish va ularga o'zgarish sodir bo'lishini bildirishdir.
 
 Following are some popular strategies for creating musical transitions:
 
-. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section.
-. *Drum Fill*: A rhythmic variation to fill the gap before a new section.
+. *To'qnashuv Simbali*: To'qnashuv Simbalini yangi qismning birinchi zarbasiga joylashtirish.
+. *Baraban bilan toʻldirish*: Yangi boʻlim oldidagi boʻshliqni toʻldirish uchun ritmik oʻzgarishlar.
 . *Track Silencing*: Silence some tracks temporarily for dramatic effect.
-. *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
-. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
-. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
-. *Looping*: Repeating a short segment of melody before a new section.
-. *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section.
-. *Anacrusis*: When the melody of the new section starts a couple beats early.
+. *Ohangning o'zgarishi*: yangi bo'lim oldidan akkordlar, bass qatori yoki ohangning o'zgarishini kiritish. Often, a folder within the EarSketch sound library contains variations of a similar riff.
+. *Ko'taruvchi*: Tovush pardasini oshiradigan nota yoki shovqin. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
+. *Pistirma Kasri*: ortib borayotgan zichlik, tovush pardasi yoki amplituda bilan takrorlangan pistirma urishlar ketma-ketligi. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Halqalash*: yangi qism oldidan qisqa musiqa segmentini takrorlash.
+. *Krossfeyding*: Bir qismning ovozini balandligini pasaytirish va yangi bo'limning ovoz balandligini oshirish.
+. *Anakrusis*: Yangi bo'limning ohangi ikki zarbaga ertaroq boshlanganadi.
 
 .PRACTICE
 ****
-Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
+Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Bu haqda o'ylab ko'rganingizdan so'ng, quyidagi misollarni ko'rishingiz mumkin.
 
 The transition should be placed one or two measures before the new section. You can use several transition techniques at the same time.
 ****
@@ -181,21 +181,21 @@ In programming we can create *abstractions*, the bundling of ideas to form a sin
 
 .PRACTICE
 ****
-Let's create a full song using all the tools you've discovered in EarSketch! Here is a suggestion of how to work, but you can adapt it as you like:
+Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'liq qo'shiq yarataylik! Here is a suggestion of how to work, but you can adapt it as you like:
 
 . Choose a theme for your song. Think about the type of sounds, instruments, or lyrics that will best convey your message.
 . Then select a simple structure.
-. And finally, start coding! Start with some `fitMedia()` functions to select sounds.
-. Use `makeBeat()` to add some percussion.
+. And finally, start coding! Tovushlarni tanlash uchun `fitMedia()` funktsiyalaridan boshlang.
+. Zarbdorlik qoʻshish uchun `makeBeat()` dan foydalaning.
 . You can upload your own sounds.
-. Use `for` loops to reduce repetition in your code.
+. Kodingizdagi takrorlanishni kamaytirish uchun `for` halqalaridan foydalaning.
 . Use custom functions to define your sections and create your song structure.
 . Add one or two meaningful transitions.
 . Add effects with `setEffect()`.
 . Add one or several conditional statements.
 . Make sure you use variables to store some information such as sound constants.
 . Make sure you use comments to explain what you are doing.
-. Don't forget to regularly run your code and listen to your song. This will help you modify it until you like the sound of it.
+. Kodingizni muntazam ravishda ishga tushirishni va qo'shiqni tinglashni unutmang. This will help you modify it until you like the sound of it.
 . Choose a name for your song.
 ****
 
@@ -213,16 +213,16 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-In this example, we have used a `for` loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
+In this example, we have used a `for` loop inside a custom function! Biz for halqasi ichida (`start` va `end`) funktsiya parametrlaridan foydalandik.
 
 [[chapter7summary]]
 === Chapter 7 Summary
 
-* *Sections* are related musical units consisting of multiple measures. Each expresses an idea or feeling.
-* *Transitions* are passages of music used to connect consecutive musical sections.
-* The structure and variety found within a song is known as its *form*. A common musical form is A-B-A.
-* *Custom functions* are unique functions written by the programmer to accomplish a specific task. You have to create a custom function to be able to call it. You can create as many parameters as you want.
-* An *abstraction* is the bundling of ideas to form a single, often less complex, concept. Functions are an example of abstraction.
+* *Bo'limlar* bir nechta o'lchovlardan tashkil topgan o'zaro bog'liq musiqa birliklari. Each expresses an idea or feeling.
+* *Oʻtishlar* musiqaning ketma-ket musiqiy boʻlimlarini bogʻlash uchun foydalaniladigan parchalardir.
+* Qo'shiqning tuzilishi va xilma-xilligi uning *shakli* deb nomlanadi. A common musical form is A-B-A.
+* *Maxsus funktsiyalar* - bu muayyan vazifani bajarish uchun dasturchi tomonidan yozilgan noyob funktsiyalar. You have to create a custom function to be able to call it. You can create as many parameters as you want.
+* *Abstraktsiya* - bu yagona, ko'pincha unchalik murakkab bo'lmagan tushunchani shakllantirish uchun g'oyalar to'plami. Functions are an example of abstraction.
 
 [[chapter-questions]]
 === Questions
@@ -252,7 +252,7 @@ What is an abstraction?
 [role="curriculum-python"]
 [question]
 --
-Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+Ushbu variantlardan qaysi biri `myFunction()` funktsiyasini `startMeasure` va `endMeasure` parametrlari bilan toʻgʻri belgilaydi?
 
 [answers]
 * `def myFunction(startMeasure, endMeasure):`
@@ -264,7 +264,7 @@ Which of these options correctly defines the function `myFunction()` with the pa
 [role="curriculum-javascript"]
 [question]
 --
-Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+Ushbu variantlardan qaysi biri `myFunction()` funktsiyasini `startMeasure` va `endMeasure` parametrlari bilan toʻgʻri belgilaydi?
 
 [answers]
 * `function myFunction(startMeasure, endMeasure) {}`
