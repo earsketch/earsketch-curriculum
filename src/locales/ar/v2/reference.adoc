@@ -1,6 +1,6 @@
 [[reference]]
-== Effects, Errors, and EarSketch Functions
+== التأثيرات, الأخطاء ودوال EarSketch
 
 :nofooter:
 
-In this unit you will find references to all effects, errors and EarSketch API functions.
+في هذه الوحدة سوف تجد مراجع لجميع التأثيرات، الأخطاء و ودوال الـ EarSketch API.
