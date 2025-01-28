@@ -1,6 +1,6 @@
 # analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
