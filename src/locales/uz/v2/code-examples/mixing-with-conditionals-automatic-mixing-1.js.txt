@@ -1,6 +1,6 @@
 // Automatic mixing 1: If track 1 is louder than track 2, we'll reduce its volume
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Creating 2 tracks
