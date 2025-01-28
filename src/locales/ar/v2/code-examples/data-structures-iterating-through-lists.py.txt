@@ -1,0 +1,16 @@
+# Iterating through Lists: Using a list to hold several sounds and placing them in our DAW thanks to a for loop
+
+# Setup
+from earsketch import *
+setTempo(130)
+
+# Music
+
+# Creating a list of sounds
+myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
+
+# Going through the list
+for track in range(1, 4):
+    index = track - 1
+    fitMedia(myEnsemble[index], track, 1, 5)
+    print("this iteration, track = " + str(track) + " and index = " + str(index))
