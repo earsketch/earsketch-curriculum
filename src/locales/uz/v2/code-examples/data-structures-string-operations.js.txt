@@ -1,6 +1,6 @@
 // String Operations: Expand a beat string into a longer beat string
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
