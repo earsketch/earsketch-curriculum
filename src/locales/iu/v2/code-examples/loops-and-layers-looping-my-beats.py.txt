@@ -1,0 +1,13 @@
+# Looping my beats: Looping a makeBeat() instruction with a for loop
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Variables
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Looping our beat
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
