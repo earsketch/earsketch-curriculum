@@ -1,6 +1,6 @@
 // Boolean expressions: printing boolean expressions
 
-// Setup
+// Sozlash
 setTempo(120);
 
 println(!true);
