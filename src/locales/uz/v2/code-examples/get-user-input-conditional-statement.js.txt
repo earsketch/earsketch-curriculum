@@ -1,6 +1,6 @@
 // Conditional statement: Using a boolean to create variation in a function
 
-// Setup
+// Sozlash
 setTempo(120);
 
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
