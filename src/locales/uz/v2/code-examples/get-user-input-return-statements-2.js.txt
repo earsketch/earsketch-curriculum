@@ -1,6 +1,6 @@
 // Return Statements 2: Returning the end measure of a section function
 
-// Setup
+// Sozlash
 setTempo(120);
 
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
