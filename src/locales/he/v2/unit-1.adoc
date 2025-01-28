@@ -1,13 +1,13 @@
 [[unit1]]
-== יחידה 1: הלחנה והוספת ביטים
+== Unit 1: Compose and Add Beats
 
 :nofooter:
 
-ביחידה זו תלמדו איך EarSketch עובדת, תמקמו צלילים (קליפים) בקטע, תתקנו את הקוד, תתאימו את הקוד לטעמכן/ם ותוסיפו ביטים בהתאם לז'אנר המוסיקלי שתבחרו.
+In this unit you will learn how EarSketch works, you will place sounds (clips) into your music, debug your code, customize your song, and add beats based on your musical genre.
 
-כל אחת וכל אחד יכולים ללמוד לתכנת! כמו כשלומדים לנגן על כלי, יש לתרגל הרבה כדי להתקדם. לא צריך להתייאש כשנתקעים, זה חלק מהתהליך. אפשר לבקש עזרה מחברים וחברות או לחפש מידע ברשת, אם יש בכך צורך.
+Anyone (especially you) can learn to program! Like learning a musical instrument, it takes consistent practice to make progress. Don't get discouraged if you get stuck, this is part of the process. Ask for help in your class or look online if needed.
 
-שיהיה בהצלחה. לפני שנתחיל הנה דוגמה למה אפשר לעשות עם EarSketch:
+We wish you the best of luck, and before you start here's an example of what you can do with EarSketch:
 
 [role="curriculum-python curriculum-mp4"]
 [[video1livepy]]
