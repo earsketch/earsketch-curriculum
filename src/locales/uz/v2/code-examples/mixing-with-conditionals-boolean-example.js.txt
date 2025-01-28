@@ -1,5 +1,5 @@
 // Boolean Example: We analyze the loudness of our tracks
-// Setup
+// Sozlash
 setTempo(120);
 
 // Creating 2 tracks
