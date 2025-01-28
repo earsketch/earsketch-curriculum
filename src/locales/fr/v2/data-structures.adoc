@@ -1,21 +1,22 @@
 [[getorganizedwithdatastructures]]
-== Comment organiser votre code avec les structures de données
+== Data Structures
+
 :nofooter:
 
 [role="curriculum-python"]
-Vous avez maintenant de nombreux outils à votre disposition pour créer des morceaux dans EarSketch. Il est possible que vos scripts soient très variés et longs. Ce chapitre vous aidera à organiser votre code, en particulier à l'aide d'une abstraction appelée « liste » et d'une nouvelle fonctionnalité de `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionality of `makeBeat()`.
 
 [role="curriculum-javascript"]
-Vous avez maintenant de nombreux outils à votre disposition pour créer des morceaux dans EarSketch. Il est possible que vos scripts soient très variés et longs. Ce chapitre vous aidera à organiser votre code, en particulier à l'aide d'une abstraction appelée « tableau » et d'une nouvelle fonctionnalité de `makeBeat()`.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionality of `makeBeat()`.
 
 [[datastructures]]
-=== Les structures de données
+=== What is a Data Structure
 
 [role="curriculum-python"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. Une *liste<strong>, également appelée tableau dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
+If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-javascript"]
-Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. Un *tableau<strong>, également appelé liste dans certains langages de programmation, est une collection de valeurs ou d'*éléments</strong> entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
+If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-python"]
 [source,python]
@@ -30,18 +31,18 @@ include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
-Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
+If you have replaced variables with a list, how will you reference the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
-Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[3]` appelle OS_SNARE05.
+If you have replaced variables with an array, how will you reference the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Créez un tableau avec trois noms de clips de sons.
-Puis, à l'aide de trois appels de fonction `fitMedia()`, placez les trois clips sur les pistes 1, 2 et 3 ; des mesures 1 à 5.
+Create a list/array with three sounds.
+Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
 ****
 
-Voici un exemple :
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
@@ -55,24 +56,25 @@ include::code-examples/data-structures-list.py.txt[]
 include::code-examples/data-structures-arrays.js.txt[]
 ----
 
-[[Graphic]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
+
 //[caption="Figure 21.4.2: "]
+
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-Nous avons vu que `liste[index]` appellera un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple, dans l'exemple précédent : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément de la liste Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+We've seen that `list[index]` will reference an element of the list. This can also be used to modify an element of the list. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 [role="curriculum-javascript"]
-Nous avons vu que `tableau[index]` appellera un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple, dans l'ensemble précédent : l'expression `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément du tableau. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation <strong>`=`.
+We've seen that `array[index]` will reference an element of the array. This can also be used to modify an element of the array. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Dans l'exemple précédent, utilisez une boucle « for » pour éviter d'appeler la fonction `fitMedia()` trois fois. Vous pouvez utiliser le numéro de piste comme compteur.
-Le numéro d'index doit commencer à `0`, tandis que votre piste commencera à `1`. À l'intérieur de votre boucle, vous devrez créer une variable `index` égale au nombre de pistes moins un.
+In the previous example, use a `for` loop instead of calling `fitMedia()` three times. You can use the track number as the counter.
+The index number must start at `0` while your track starts at `1`. Inside your for loop, you'll need to create an `index` variable equal to the track number minus one.
 ****
 
-Voyez l'exemple ci-dessous. Vous pouvez jeter un coup d'œil dans la console pour voir ce qui s'affichera lorsque vous exécuterez le code.
+Below is an example. You can have a look in the console to see what is printed when you run the code.
 
 [role="curriculum-python"]
 [source,python]
@@ -87,28 +89,28 @@ include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
-Conseil utile : la fonction len(), avec le nom de la liste comme paramètre, renvoie le nombre d'éléments de la liste. Donc `list[0]` est le premier élément de `list` et `list[len(list)-1]` est le dernier. Par exemple, si `list = ["Hello","fellow","EarSketchers"]`, `len(list)` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
+A useful tip: `len()` function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-Conseil utile : la propriété `length` (`tableau.length`) renvoie le nombre d'éléments du tableau. Donc `array[0]` est le premier élément de `tableau` et `tableau[tableau.length-1]` est le dernier. Par exemple, si `tableau = ["Hello","fellow","EarSketchers"];`, `tableau.length` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Nous allons créer une introduction par couches dans EarSketch dans laquelle les instruments (pistes) sont ajoutés à la musique un par un au fil du temps. Par exemple, la première piste commencera à la mesure 1, puis la deuxième piste commencera à la mesure 2, etc. Cette technique est couramment utilisé pour une introduction de morceau. Voir la chanson https://www.youtube.com/watch?v=L53gjP-TtGEKanye[« Power » de Kanye West^].
-À l’aide d’une liste et d’une boucle « for », créez une telle introduction de la mesure 1 à 5. Comme dans l'exemple précédent, vous pouvez utiliser `track` comme compteur, et vous devrez créer une variable `index`. De plus, vous pouvez créer une variable `measure`.
-Utilisez la fonction `len()`.
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using a list and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `len()` function.
 ****
 
 [role="curriculum-javascript"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Nous allons créer une introduction additive dans EarSketch dans laquelle les instruments (pistes) sont ajoutés à la musique un par un au fil du temps. Par exemple, la première piste commencera à la mesure 1, puis la deuxième piste commencera à la mesure 2, etc. Ceci est couramment utilisé pour une introduction de chanson. Voir la chanson https://www.youtube.com/watch?v=L53gjP-TtGEKanye[« Power » de Kanye West^].
-À l’aide d’un tableau et d’une boucle « for », créez une telle introduction de la mesure 1 à 5. Comme dans l'exemple précédent, vous pouvez utiliser `track` comme compteur, et vous devrez créer une variable `index`. De plus, vous pouvez créer une variable `measure`.
-Utilisez la propriété `length`.
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using an array and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `length` property.
 ****
 
-Voici un exemple :
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
@@ -122,24 +124,30 @@ include::code-examples/data-structures-additive-introduction.py.txt[]
 include::code-examples/data-structures-additive-introduction.js.txt[]
 ----
 
+{nbsp} +
+
 [[usingdatastructureswithmakebeat]]
-=== Utiliser des structures de données avec la fonction `makeBeat()`
+=== Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
-Nous allons voir deux façons d'utiliser les structures de données avec la fonction `makeBeat()`. Tout d'abord, voyons à quel point les chaînes de caractères et les listes sont similaires :
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
 
 [role="curriculum-javascript"]
-Nous allons voir deux façons d'utiliser les structures de données avec la fonction `makeBeat()`. Tout d'abord, voyons à quel point les chaînes de caractères et les tableaux sont similaires :
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
 
 [role="curriculum-python"]
-1. Tout comme les listes, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
-2. Vous pouvez utiliser la fonction `len()` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `len(string)-1`.
-Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tableau ci-dessous.
+* Like lists, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the function `len()` with strings, which returns the number of characters in the string. The last character is at index `len(string) - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
+[role="curriculum-javascript"]
+* Like arrays, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the property `.length` with strings, which returns the number of characters in the string. The last character is at index `string.length - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
 [cols="h,^,^,^,^,^,^,^,^,^"]
 |===
-|Caractère
+|Character
 |E
 |a
 |r
@@ -162,79 +170,47 @@ Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tabl
 |8
 |===
 
+[role="curriculum-python"]
+* You can concatenate lists together like you do with strings. Use the concatenation operator (`+`): the syntax is `newList = listA + listB`.
+
 [role="curriculum-javascript"]
-1. Tout comme les tableaux, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
-2. Vous pouvez utiliser la propriété `.length` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `string.length-1`.
-Les index de la chaîne `"EarSketch"` sont affichés dans le tableau ci-dessous.
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|Caractère
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
-
-
+* You can concatenate arrays together like you do with strings. We use the `concat` *method*. A method is similar to a function as it has parentheses which contain parameters. To use it, place it after your array name, with a dot: the syntax is `newArray = arrayA.concat(arrayB)`. This is called *dot-notation*.
 
 [role="curriculum-python"]
-3. Vous pouvez concaténer des listes comme vous le faites avec des chaînes de caractères. Utilisez l'opérateur de concaténation (`+`) et la syntaxe sera `newList = listA + listB`. 
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
-3. Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. Nous utiliserons la *méthode* `concat`. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des paramètres. Pour l'utiliser, vous devez la placer après le nom de votre tableau avec un point : la syntaxe est `newArray = arrayA.concat(arrayB)`. C'est ce qu'on appelle la *notation par points*.
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1, 4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
 
 [role="curriculum-python"]
-4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Sa syntaxe est `newString = oldString[startIndex: endIndex]`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. Par exemple, `"Sarah"[1:4]` renverra `"ara"`. Vous pouvez faire la même chose avec des listes : `newList = oldList[startIndex: endIndex]`.
-
-[role="curriculum-javascript"]
-4. Vous pouvez obtenir une *sous-chaîne*, également connue sous le nom de tranche d'une chaîne de caractères plus grande. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Sa syntaxe est `newString = oldString.substring(startIndex, endIndex)`. La sous-chaîne inclut le caractère à `startIndex`, mais pas le caractère à `endIndex`. Par exemple, `"Sarah.substring(1,4)"` renverra `"ara"`. Vous pouvez faire la même chose avec des tableaux, en utilisant la méthode `slice()` : `newList = oldList.slice(startIndex, endIndex)`. Notez que `concat()`, `substring()` et `slice()` sont des méthodes et utilisent toutes la notation par points.
-
-[role="curriculum-python"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Dans un nouveau script :
+In a new script:
 
-. Créez quatre variables : deux chaînes de caractères (`stringA` et `stringB`) et deux listes de clips de sons (`soundsA` et `soundsB`).
-. Affichez le deuxième caractère de chaque chaîne de caractères.
-. Affichez le dernier élément de vos listes.
-. Créez et affichez `stringC`, la concaténation de `stringA` et `stringB`.
-. Créez et affichez `soundsC`, la concaténation de vos `soundsA`, `soundsB` puis  `soundsA`.
-. Créez et affichez `stringD`, la tranche de `stringC` comprenant du deuxième caractère au cinquième caractère.
-. Créez et affichez `soundsD`, la tranche de `stringC` comprenant du troisième caractère aux dernier élément.
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound lists (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your lists.
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 [role="curriculum-javascript"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Dans un nouveau script :
+In a new script:
 
-. Créez quatre variables : deux chaînes de caractères (`stringA` et `stringB`) et deux tableaux de clips de sons (`soundsA` et `soundsB`).
-. Affichez le deuxième caractère de chaque chaîne de caractères.
-. Affichez le dernier élément de vos tableaux.
-. Créez et affichez `stringC`, la concaténation de `stringA` et `stringB`.
-. Créez et affichez `soundsC`, la concaténation de vos `soundsA`, `soundsB` puis `soundsA`.
-. Créez et affichez `stringD`, la tranche de `stringC` comprenant du deuxième caractère au cinquième caractère.
-. Créez et affichez `soundsD`, la tranche de `stringC` comprenant le troisième caractère jusqu'aux derniers éléments.
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound arrays (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your arrays.
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
-Voici un exemple de solution :
+Here is an example of a solution:
 
 [role="curriculum-python"]
 [source,python]
@@ -248,7 +224,7 @@ include::code-examples/data-structures-string-and-lists-operations.py.txt[]
 include::code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
-Voyez ci-dessous un exemple de la façon dont vous pouvez utiliser les opérations de chaîne de caractères avec la fonction `makeBeat()` :
+This is an example of how you can use string operations with `makeBeat()`:
 
 [role="curriculum-python curriculum-mp4"]
 [[video13py]]
@@ -271,10 +247,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Enfin, `makeBeat()` vous permet de gérer plusieurs clips de sons à la fois. Cela vous permet de placer tous les sons percussifs sur une seule piste à l'aide d'une seule ligne `makeBeat()`. Au lieu de mettre votre fichier son comme premier argument, vous utiliserez une liste de fichiers sons. Dans votre chaîne de caractères de beat, au lieu d'utiliser seulement des `0` pour jouer un son, vous pouvez utiliser des chiffres entre `0` et `9`. Ces chiffres renvoient à un index dans votre liste de sons. Examinez l'exemple « avant et après» ci-dessous, avec le rythme « boot cat boot cat ».
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a list of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your list of sounds. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-javascript"]
-Enfin, `makeBeat()` vous permet de gérer plusieurs clips de sons à la fois. Cela vous permet de placer tous les sons percussifs sur une seule piste à l'aide d'une seule ligne `makeBeat()`. Au lieu de mettre votre fichier son comme premier argument, vous utiliserez un tableau de fichiers sons. Dans votre chaîne de caractères de beat, au lieu d'utiliser seulement des `0` pour jouer un son, vous pouvez utiliser des chiffres entre `0` et `9`. Ces chiffres renvoient à un index dans votre tableau de sons. Examinez l'exemple « avant et après» ci-dessous, avec le rythme « boot cat boot cat ».
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass an array of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your array of sounds. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-python"]
 [source,python]
@@ -288,12 +264,14 @@ include::code-examples/data-structures-making-a-drum-set.py.txt[]
 include::code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
 
-.ENTRAÎNEZ-VOUS
+{nbsp} +
+
+.PRACTICE
 ****
-Copiez l'exemple de code dans le chapitre 3.4 pour les rythmes (beats) par genre. Modifiez le code de manière à avoir juste une ligne de fonction `makeBeat()` pour chaque genre. Parfois, le charleston joue en même temps que la grosse caisse ou la caisse claire ; dans ce cas, vous pouvez avoir une ligne `makeBeat()` juste pour le charleston.
+Copy the code example in chapter 3.4 for beats by genre. Modify the code to have just one `makeBeat()` line for each genre. Sometimes, the hihat is playing at the same time as the kick or snare. In that case, you can have one `makeBeat()` line just for the hihat.
 ****
 
-Voici la solution :
+Here is the solution:
 
 [role="curriculum-python"]
 [source,python]
@@ -307,137 +285,117 @@ include::code-examples/data-structures-examples-of-beats.py.txt[]
 include::code-examples/data-structures-examples-of-beats.js.txt[]
 ----
 
-.ENTRAÎNEZ-VOUS
+{nbsp} +
+
+.PRACTICE
 ****
-À l'aide de ce que vous avez appris dans ce chapitre, créez les rythmes de votre choix avec la fonction `makeBeat()`. Vous pouvez vous référer à la vidéo du chapitre 3.4 pour des beats par genre. Rappelez-vous que vous pouvez exécuter votre code, écoutez votre création et la modifier jusqu'à ce que vous en soyez satisfait.e.
+Using what you have learned in this chapter, create rhythms that you like with `makeBeat()`. You can refer to the video in chapter 3.4 for beats by genre. Don't forget that you can run your code, listen to what you've created, and modify it until it sounds good to you.
 ****
+
+{nbsp} +
 
 [[evaluatingcorrectness]]
-=== Évaluer la qualité et la justesse du code
+=== Evaluate Correctness
 
-Félicitations ! Vous avez maintenant acquis des compétences musicales et de codage qui vous permettent d'être créatif.ve avec EarSketch ! Il y a un dernier point que nous aimerions aborder avec vous : veiller à ce que votre code soit aussi fluide et ordonné que possible. Voici quelques éléments que vous pouvez vérifier :
+Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
-[role="curriculum-python"]
-* *La concision* implique un code bref qui réalise efficacement son objectif. Voici quelques questions à vous poser qui vous aideront à rendre votre code plus concis :
-** Ai-je copié/collé plusieurs appels de fonctions dans une ligne ? (si c'est le cas, vous pouvez rendre le tout plus concis à l'aide d'une boucle !)
-** Ai-je réutilisé des blocs de code ? (si c'est le cas, mettez-les dans une fonction !)
-** Y a-t-il des constantes de sons ou des expressions mathématiques que j'utilise à plusieurs reprises dans mon code ? (si c'est le cas, affectez-les à des variables ! Le recours à une liste/ un tableau peut également être utile.)
-* *La clarté* se rapporte à la manière dont le code communique sa fonction et l'intention du programmeur. Si vos collègues ne comprennent pas votre code, c'est qu'il manque probablement de clarté. Voici quelques questions à vous poser qui vous aideront à rendre votre code plus clair :
-** Ai-je inscrit tous les commentaires d'introduction dans mon script incluant le titre de mon script, l'auteur et la description ? 
-** Les noms de mes variables et fonctions sont-ils descriptifs ? (dans le cas contraire, renommez-les)
-** Ai-je utilisé des commentaires pour expliquer chaque bloc de code et toutes les lignes de code pouvant prêter à confusion ?
-** Ai-je utilisé des structures informatiques comme des fonctions et des boucles personnalisées pour organiser mon code ?
-** Est-ce que la structure de mon script reflète la structure de ma chanson ? Cela facilite la lecture.
+* *Conciseness* means brief code that accomplishes its goal with fewer lines. Here are some questions that can help you make your code more concise:
+** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
+** Am I reusing any blocks of code? If so, put them in a function!
+** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! A list might also be useful.
+* *Clarity* relates to how well code communicates its function and the programmer's intent. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
+** Are the names of my variables and functions descriptive? If not, rename them.
+** Have I used comments to explain each block of code and any potentially confusing lines of code?
+** Have I used computational structures like custom functions and loops to help organize my code?
+** Can I structure my script to mirror the structure of my song? In some cases this can help the flow of reading.
 
-[role="curriculum-javascript"]
-* *La concision* implique un code bref qui réalise efficacement son objectif. Voici quelques questions à vous poser qui vous aideront à rendre votre code plus concis :
-** Ai-je copié/collé plusieurs appels de fonctions dans une ligne ? (si c'est le cas, vous pouvez rendre le tout plus concis à l'aide d'une boucle !)
-** Ai-je réutilisé des blocs de code ? (si c'est le cas, mettez-les dans une fonction !)
-** Y a-t-il des constantes de sons ou des expressions mathématiques que j'utilise à plusieurs reprises dans mon code ? (si c'est le cas, affectez-les à des variables ! Le recours à un tableau peut également être utile.)
-* *La clarté* se rapporte à la manière dont le code communique sa fonction ainsi que l'intention du programmeur. Si vos collègues ne comprennent pas votre code, c'est qu'il manque probablement de clarté. Voici quelques questions à vous poser qui vous aideront à rendre votre code plus clair :
-** Ai-je inscrit tous les commentaires d'introduction dans mon script incluant le titre de mon script, l'auteur et la description ? 
-** Les noms de mes variables et fonctions sont-ils descriptifs ? (dans le cas contraire, renommez-les)
-** Ai-je utilisé des commentaires pour expliquer chaque bloc de code et toutes les lignes de code pouvant prêter à confusion ?
-** Ai-je utilisé des structures informatiques comme des fonctions et des boucles personnalisées pour organiser mon code ?
-** Est-ce que la structure de mon script reflète la structure de ma chanson ? Cela facilite la lecture.
+*Peer Feedback* is common in programming and helps you improve your code and music thanks to comments from others. Feedback must be *constructive*, meaning it builds a peer up, rather them breaking them down. When giving feedback:
 
-Le *feedback par les pairs* est courant en programmation et vous aide à améliorer votre code et votre musique grâce aux commentaires des autres. Les commentaires doivent être *constructifs*, autrement dit, ils doivent permettre à un pair de s'améliorer, plutôt que de le.a rabaisser. Lors de la rétroaction :
+* *Be specific* - Refer to specific blocks and lines of code and to specific measures and tracks of music.
+* *Be descriptive* - Describe your reasoning and the process you would take to improve a script.
+* *Be sensitive to your peer's musical vision/goals* - Your own musical tastes should not factor in to an evaluation of your peer's music.
+* *Be positive* - In addition to what needs improvement, point out code blocks and musical passages that are strong.
+* *Don't compare* - Treat your peer's code as their own, not as a competition with your own or other peers' code.
 
-* *Soyez spécifique* : Faites référence à des blocs et des lignes de code spécifiques ainsi qu'à des mesures et des pistes de musique spécifiques.
-* *Soyez descriptif* : Expliquez votre raisonnement de manière détaillée ainsi que le processus que vous suivriez pour améliorer le script.
-* *Soyez sensible à la vision et aux objectifs musicaux de votre collègue* : Vos goûts musicaux ne devraient pas être pris en compte lorsque vous évaluez la musique de votre collègue.
-* *Soyez positif* : en plus d'indiquer ce qui a besoin d'être amélioré, signalez les blocs de code et les passages musicaux qui sont réussis.
-* *Ne faites pas de comparaisons* : Traitez le code de vos collègues comme le leur, et non comme une compétition avec votre propre code ou celui d'autes collègues.
+Likewise, when receiving feedback:
 
-De même, lorsque vous recevez des commentaires :
-
-* *Soyez spécifique* : Indiquez les blocs ou les lignes de code ainsi que les pistes ou les mesures de musique qui vous causent problème. Cela permettra à vos collègues de vous fournir des commentaires qui vous seront davantage utiles.
-* *Soyez attentif* : Attendez que votre collègue ait fini de parler avant de répondre. Soyez attentif aux informations que votre collègue vous transmet. Commentez votre code en fonction de ses commentaires. Ceux-ci vous seront utiles lors de la révision de votre code.
-* *Posez des questions* : Posez des questions sur les éléments de logique dont vous n'êtes pas sûr.e, les problèmes, les bogues, la cohérence musicale ou tout élément relatif à la justesse.
+* *Be specific* - Point out blocks or lines of code and tracks or measures of music that are causing issues. This will allow your peers to provide feedback that is most helpful to you.
+* *Listen* - Wait to respond until your peer has finished speaking. Be attentive to the information your peer is conveying. Comment your code based on their feedback. These comments can be useful when revising.
+* *Ask questions* - Ask about logic you are unsure of, issues, bugs, musical coherence, or any element of correctness.
 
 [role="curriculum-python"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Créez une chanson complète et faites-la évaluer par votre voisin.e pour l'améliorer. Voici quelques idées pour vous aider à démarrer :
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
 
-* Il est toujours recommandé de penser à un thème pour votre chanson et à une structure avant de commencer. Votre structure peut être aussi simple que la forme ABA. 
-* Commencez à sélectionner des sons et à tester des choses. Créez des variables de sons et de chaînes de caractères de beats et utilisez des appels aux fonctions `fitMedia()` et `makeBeat()`. Vous pouvez aussi charger vos propres sons.
-* Lorsque c'est pertinent, créez des boucles « for » et des fonctions personnalisées.
-* Ajoutez quelques effets avec la fonction `setEffect()`. Vous pourriez ajouter, par exemple, un fondu d'ouverture, un fondu de fermeture, un délai, une réverbération, etc.
-* Vous pouvez utiliser une instruction conditionnelle pour mixer votre chanson (adapter le volume de chaque piste).
-* Vous pouvez demander une entrée d'utilisateur.rice pour modifier quelque chose dans votre chanson.
-* Si nécessaire, placez quelques éléments dans une liste.
+* It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`. You can add a fade in, fade out, some delay, reverb...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in a list.
 ****
 
 [role="curriculum-javascript"]
-.ENTRAÎNEZ-VOUS
+.PRACTICE
 ****
-Créez une chanson complète et faites-la évaluer par votre voisin.e pour l'améliorer. Voici quelques idées pour vous aider à démarrer :
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
 
-* Il est toujours recommandé de penser à un thème pour votre chanson et à une structure avant de commencer. Votre structure peut être aussi simple que la forme ABA. 
-* Commencez à sélectionner des sons et à tester des choses. Créez des variables de sons et de chaînes de caractères de beats et utilisez des appels aux fonctions `fitMedia()` et `makeBeat()`. Vous pouvez aussi charger vos propres sons.
-* Lorsque c'est pertinent, créez des boucles « for » et des fonctions personnalisées.
-* Ajoutez quelques effets avec la fonction `setEffect()`. Vous pourriez ajouter, par exemple, un fondu d'ouverture, un fondu de fermeture, un délai, une réverbération, etc.
-* Vous pouvez utiliser une instruction conditionnelle pour mixer votre chanson (adapter le volume de chaque piste).
-* Vous pouvez demander une entrée d'utilisateur.rice pour modifier quelque chose dans votre chanson.
-* Si nécessaire, placez quelques éléments dans un tableau.
+* It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`.  You can add a fade in, fade out, some delay, reverb...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in an array.
 ****
-
-[[conclusion]]
-=== Conclusion
-
-Nous sommes ravis que vous ayez pu participer à l'aventure EarSketch ! Nous espérons que vous avez apprécié votre expérience et que vous avez appris beaucoup de choses avec cet outil :) Il y a bien plus à découvrir dans les chapitres facultatifs !
-
-////
-Thank you video
-////
-
 
 [[chapter9summary]]
-=== Résumé du chapitre 9
+=== Chapter 9 Summary
 
 [role="curriculum-python"]
-* Une *liste* ou « list » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans une liste.
-* Tout comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
-* Les éléments d'une liste sont accessibles par la notation entre crochets `myList[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
-* La fonction `len()` renvoie le nombre d'éléments dans une liste ou le nombre de caractères dans une chaîne avec la syntaxe `len(list)`.
-* Les listes peuvent être concaténées et découpées en utilisant les *opérations de liste*, un ensemble d'outils pour modifier une liste.
-* La syntaxe pour créer un sous-ensemble de liste à partir d'une liste existante plus grande est `newList = oldList[startIndex: endIndex]`.
-* Les listes peuvent être combinées en utilisant l'opérateur de concaténation, `+`, comme dans l'exemple : `newList = listA + listB`.
-* `makeBeat()` permet de composer des rythmes à partir de plusieurs clips à la fois à l'aide d'une chaîne de caractères de beat (rythme) qui fait référence à différents index de liste. Aussi, `makeBeat()` peut accéder aux clips dans les index 0 à 9, à condition qu'ils soient stockés dans le même tableau.
-* L'échange de commentaires constructifs avec d'autres personnes est une forme de *feedback par les pairs*. Cela offre la possibilité d’apprendre des autres.
-
+* A *list* is a collection of values combined into a single entity, a good way to organize data. Items stored within a list, or elements, can be any data type.
+* Like strings, list elements get assigned an index. List indices start at 0.
+* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The function `len()` returns the number of elements in a list, or the number of characters in a string. The syntax is `len(list)`.
+* Lists and arrays can be concatenated and sliced using *list operations*, a set of tools for modifying a list.
+* The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
+* Lists can be combined using the concatenation operator, `+`, like `newList = listA + listB`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
+* Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 [role="curriculum-javascript"]
-* Un *tableau* ou « array » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans un tableau.
-* Tout comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
-* Les éléments d'un tableau sont accessibles par la notation entre crochets `myArray[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
-* La propriété `length` renvoie le nombre d'éléments dans un tableau ou le nombre de caractères dans une chaîne avec la syntaxe `array.length` ou `string.length`.
-* Les tableaux peuvent être concaténés et découpés en utilisant des *opérations de tableau*, soit un ensemble d'outils pour modifier un tableau.
-* La syntaxe pour découper un tableau à partir d'un tableau existant plus grand est `newArray = oldArray.slice(startIndex, endIndex)`.
-* La syntaxe pour découper une sous-chaîne d'une chaîne de caractères plus grande est `newString = oldString.substring(startIndex, endIndex)`.
-* Les tableaux peuvent être concaténés en utilisant la méthode de concaténation `concat()`, comme dans l'exemple : `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` permet de composer des rythmes à partir de plusieurs clips à la fois à l'aide d'une chaîne de caractères de beat (rythme) qui fait référence à différents index de tableau. Aussi, `makeBeat()` peut accéder aux clips dans les index 0 à 9, à condition qu'ils soient stockés dans le même tableau.
-* L'échange de commentaires constructifs avec d'autres personnes est une forme de *feedback par les pairs*. Cela offre la possibilité d’apprendre des autres.
-
+* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
+* Like strings, array elements get assigned an index. Array indices start at 0.
+* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
+* Arrays can be concatenated and sliced using *array operations*, a set of tools for modifying an array.
+* The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
+* The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
+* Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
+* Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 [[chapter-questions]]
 === Questions
 
 [question]
 --
-Parmi les opérations suivantes, laquelle est utilisée pour combiner des listes ou des tableaux ?
+Which of the following operations is used to join lists/arrays?
+
 [answers]
-* La concaténation
-* Le découpage
-* La combinaison
-* L'addition
+* Concatenation
+* Slicing
+* Combination
+* Addition
 --
 
 [role="curriculum-python"]
 [question]
 --
-Quel est le numéro d'index du premier élément d'une liste en Python ?
+What is the index number of the first element of a list in Python?
+
 [answers]
 * `0`
 * `1`
@@ -448,18 +406,20 @@ Quel est le numéro d'index du premier élément d'une liste en Python ?
 [role="curriculum-python"]
 [question]
 --
-Qu'est-ce que l'expression `len(myList)` renvoie ?
+What does `len(myList)` return?
+
 [answers]
-* Le nombre d'éléments dans `myList`
-* Les types de données de `myList`
-* Les éléments dans `myList`
-* La longueur de `myList`
+* The number of elements in `myList`
+* The data types of `myList`
+* The elements of `myList`
+* The width of `myList`
 --
 
 [role="curriculum-python"]
 [question]
 --
-Quelle est la syntaxe pour concaténer deux listes (`listA` et `listB`) ?
+What is the syntax to concatenate two lists (`listA` and `listB`)?
+
 [answers]
 * `listA + listB`
 * `listA ++ listB`
@@ -470,18 +430,20 @@ Quelle est la syntaxe pour concaténer deux listes (`listA` et `listB`) ?
 [role="curriculum-python"]
 [question]
 --
-Comment pouvez-vous obtenir une liste à partir de oldList sans le premier et le dernier élément ?
+How can you get a list from oldList without the first and last elements?
+
 [answers]
-* `oldList[1:len(oldList)-1]`
+* `oldList[1:len(oldList) - 1]`
 * `oldList[1:len(oldList)]`
 * `oldList[0:len(oldList)]`
-* `oldList[2:len(oldList-1)]`
+* `oldList[2:len(oldList - 1)]`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-Quel est le numéro d'index du premier élément d'un tableau en Javascript ?
+What is the index number of the first element of an array in Javascript?
+
 [answers]
 * `0`
 * `1`
@@ -492,18 +454,20 @@ Quel est le numéro d'index du premier élément d'un tableau en Javascript ?
 [role="curriculum-javascript"]
 [question]
 --
-Qu'est-ce que l'expression `myArray.length` renvoie ?
+What does `myArray.length` return?
+
 [answers]
-* Le nombre d'éléments dans `myArray`
-* Les types de données de `myArray`
-* Les éléments dans `myArray`
-* La longueur de `myArray`
+* The number of elements in `myArray`
+* The data types of `myArray`
+* The elements of `myArray`
+* The width of `myArray`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-Quelle est la syntaxe pour concaténer deux tableaux (`arrayA` and `arrayB`) ?
+What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+
 [answers]
 * `arrayA.concat(arrayB)`
 * `arrayA.concatenate(arrayB)`
@@ -514,10 +478,20 @@ Quelle est la syntaxe pour concaténer deux tableaux (`arrayA` and `arrayB`) ?
 [role="curriculum-javascript"]
 [question]
 --
-Comment pouvez-vous obtenir un tableau à partir de oldArray sans le premier et le dernier élément ?
+How can you get an array from `oldArray` without the first and last elements?
+
 [answers]
-* `oldArray.slice(1,oldArray.length-1]`
-* `oldArray.slice(1,oldArray.length)`
-* `oldArray.slice(0,oldArray.length)`
-* `oldArray.slice(2:oldArray.length-1)`
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
 --
+
+[[conclusion]]
+=== Conclusion
+
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
+
+////
+Thank you video
+////
