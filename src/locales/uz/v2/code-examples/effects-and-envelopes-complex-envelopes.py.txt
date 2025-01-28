@@ -1,6 +1,6 @@
 # Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
