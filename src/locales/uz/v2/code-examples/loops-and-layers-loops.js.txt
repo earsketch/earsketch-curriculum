@@ -1,6 +1,6 @@
 // Loops: Musical repetition created with code loops
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
