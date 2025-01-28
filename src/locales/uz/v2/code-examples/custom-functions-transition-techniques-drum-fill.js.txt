@@ -1,6 +1,6 @@
 // Transition Techniques - Drum Fill: Transitioning between sections with a drum fill
 
-// Setup
+// Sozlash
 setTempo(130);
 
 // Music
