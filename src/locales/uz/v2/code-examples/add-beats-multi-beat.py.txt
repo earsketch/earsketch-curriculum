@@ -1,6 +1,6 @@
 # Multi Beat: Using several makeBeat calls with different rhythms
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
