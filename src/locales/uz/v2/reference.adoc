@@ -1,6 +1,6 @@
 [[reference]]
-== Effects, Errors, and EarSketch Functions
+== Effektlar, Xatolar va EarSketch Funktsiyalari
 
 :nofooter:
 
-In this unit you will find references to all effects, errors and EarSketch API functions.
+Ushbu bo'limda siz barcha effektlar, xatolar va EarSketch IDI funktsiyalariga havolalarni topasiz.
