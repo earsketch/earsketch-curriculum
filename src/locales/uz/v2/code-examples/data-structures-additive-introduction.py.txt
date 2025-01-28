@@ -1,6 +1,6 @@
 # Additive Introduction: Creating an additive introduction with list iteration
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
