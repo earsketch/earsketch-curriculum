@@ -29,7 +29,7 @@ As you become familiar with EarSketch these are the main panels.
 
 {nbsp} +
 
-_What is a DAW?_
+_RAIS nima?_
 
 A *DAW*, or *Digital Audio Workstation*, is software that produces or edits audio on a computer, be it in a professional studio or in home laptop-based studios.
 
@@ -47,7 +47,7 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-Let's try running a code example in EarSketch! On the box below, press the blue clipboard icon in the top right corner. This will paste the example code onto a new file in the *code editor*. No need to understand the code yet, just press the _run_ button and your music will show up in the DAW. You can press the _play_ button to hear it.
+Keling, EarSketch-da kod misolini ishga tushirishga harakat qilaylik! On the box below, press the blue clipboard icon in the top right corner. Bu misol kodini *kod muharriri*dagi yangi faylga joylashtiradi. Hali kodni tushunishning hojati yo'q, shunchaki _Ishga Tushir_ tugmasini bosing va musiqangiz RAIS da paydo bo'ladi. Uni tinglash uchun _ijro_ tugmasini bosishingiz mumkin.
 
 [role="curriculum-python"]
 [source,python]
@@ -93,7 +93,7 @@ image::../media/U1P1/newScriptPromptJS.png[Alt Text]
 +
 _Note: Your EarSketch account does not require any personal information or email._
 
-*_What is a programming language?_*
+*_Dasturlash tili nima?_*
 
 Code is written in a *programming language*. Like a spoken language it has vocabulary and syntax. You need to follow your programming language's grammar rules as you would with spoken language.
 
@@ -102,9 +102,9 @@ When you press the *run* button, a *compiler* translates the Python or JavaScrip
 At the deepest level, computers execute code using *binary*. This means that all computer code eventually becomes `1` 's and `0` 's as it is processed by electrical components in the computer.
 
 [[fitmedia]]
-=== The `fitMedia()` function
+=== `fitMedia()` funktsiyasi
 
-Now that you have created your first script, let's start working on your music!
+Endi siz birinchi skriptingizni yaratdingiz, keling, musiqangiz ustida ishlashni boshlaylik!
 
 Watch this video to see how to add an audio clip to your song:
 
@@ -131,7 +131,7 @@ _Example:_
 
 `fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
-The statement above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`. A *statement* tells the computer to carry out an action.
+The statement above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`. *bayonot* kompyuterga biror amalni bajarishni buyuradi.
 
 Try adding `fitMedia()` to a script.
 
@@ -184,7 +184,7 @@ include::code-examples/getting-started-using-fitmedia.py.txt[]
 include::code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
-For an extra challenge, add more `fitMedia()` calls to your script like we do below. Notice that we use a different track number for each `fitMedia()` call:
+Qo'shimcha vazifa uchun, quyida qilganimizdek, skriptingizga ko'proq `fitMedia()` chaqiruvlarini qo'shing. E'tibor bering, biz har bir `fitMedia()` chaqiruvi uchun farqli trek raqamidan foydalanamiz:
 
 [role="curriculum-python"]
 [source,python]
@@ -216,7 +216,7 @@ If you have errors when running your code, check out the next chapter about debu
 [[debugging]]
 === Debug your code
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. You can use debugging strategies, using the console.
+Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi. Xatolarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi. You can use debugging strategies, using the console.
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
@@ -237,8 +237,8 @@ OPTIONAL
 What are the different types of errors?
 
 . *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote `fitMedia` incorrectly).
-. *Runtime errors*: Your program starts to run but halts due to an error.
-. *Logic errors*: Your program runs, but it doesn't do what is expected. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place.
+. *Ijro etish xatolari*: Dasturingiz ishlay boshlaydi, lekin xato tufayli toʻxtab qoladi.
+. *Mantiqiy xatolar*: Dasturingiz ishlaydi, lekin u kutilgan ishni bajarmaydi. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place.
 
 ////
 END OF OPTIONAL
@@ -247,17 +247,17 @@ END OF OPTIONAL
 Here are some common errors:
 
 [role="curriculum-python"]
-. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
-. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
-. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Pay attention to lowercase and uppercase letters. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Qavslar:* Qavsni kerakli joyda ochish yoki yopishni unutish <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
 . *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
-. *Punctuation:* Missing commas or other punctuation errors
+. *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
 
 [role="curriculum-javascript"]
-. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
-. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). Pay attention to lowercase and uppercase letters. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
-. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Punctuation:* Missing commas or other punctuation errors
+. *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Pay attention to lowercase and uppercase letters. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Qavslar:* Qavsni kerakli joyda ochish yoki yopishni unutish <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
+. *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
 
 Time to practice!
 Find the five errors in the following code:
@@ -282,15 +282,15 @@ Here is the answer
 
 . The `setTempo()` function is missing a parentheses
 . The first `fitMedia()` is missing an `e`
-. The first `fitMedia()` is missing a comma between the third and fourth parameters
+. Birinchi `fitMedia()`da uchinchi va toʻrtinchi parametrlar orasida vergul yoʻq
 . The second `fitMedia()` is missing an uppercase `M`
-. In the second `fitMedia()`, the order of parameters is not correct: it should be sound clip name then track number
+. Ikkinchi `fitMedia()`da parametrlar tartibi toʻgʻri emas: u ovozli klip nomi, so'ng trek raqami boʻlishi kerak
 
 ////
 END OF OPTIONAL
 ////
 
-Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
+Turli xil xatolarning tavsifi va ularni oldini olish uchun nima qilishingiz mumkinligi haqida <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>ni koʻrib chiqing.
 
 ////
 TODO: when options are ready, modify the link
@@ -313,7 +313,7 @@ TODO: when options are ready, modify the link
 ** *Start*: the starting measure
 ** *End*: the ending measure
 * *Debugging* is the process of finding and fixing *bugs*, or errors, made by the programmer.
-* The *console* shows information about the state of a program, making it useful for debugging syntax errors.
+* *Konsol* dasturning holati haqidagi ma'lumotlarni ko'rsatadi, bu esa sintaksis xatolarini tuzatish uchun foydali bo'ladi.
 * Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
 
 [[chapter-questions]]
@@ -332,7 +332,7 @@ Which of the following is NOT a panel in the EarSketch workspace?
 
 [question]
 --
-How many parameters do you need for your `fitMedia()` function?
+`fitMedia()` funktsiyasi uchun sizga nechta parametr kerak?
 
 [answers]
 * 4
@@ -343,7 +343,7 @@ How many parameters do you need for your `fitMedia()` function?
 
 [question]
 --
-One script corresponds to...
+Bitta skript ... ga mos keladi
 
 [answers]
 * One EarSketch song
