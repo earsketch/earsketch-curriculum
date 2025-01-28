@@ -1,6 +1,6 @@
 # Return Statements: Linking two beats together with return statements
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(100)
 
