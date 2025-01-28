@@ -1,6 +1,6 @@
 # Looping my beats: Looping a makeBeat() instruction with a for loop
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
