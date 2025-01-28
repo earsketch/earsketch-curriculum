@@ -1,6 +1,6 @@
 # Envelopes: Making envelopes with 7-parameter setEffect()
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
