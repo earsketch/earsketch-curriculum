@@ -1,6 +1,6 @@
 # Printing: Using print() to print messages in the console
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
