@@ -1,6 +1,6 @@
 [[reference]]
-== אפקטים, שגיאות והפונקציות של EarSketch
+== Effects, Errors, and EarSketch Functions
 
 :nofooter:
 
-ביחידה זו תמצאו התייחסות לכל האפקטים, השגיאות והפונקציות ב-API של EarSketch.
+In this unit you will find references to all effects, errors and EarSketch API functions.
