@@ -1,6 +1,6 @@
 # Automatic Mixing 2: Using conditional statements to mix the tracks
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
