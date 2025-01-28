@@ -1,6 +1,6 @@
 # Boolean Example: We analyze the loudness of our tracks
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
