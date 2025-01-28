@@ -1,6 +1,6 @@
 // No loops: Musical repetition created without code loops
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
