@@ -184,7 +184,7 @@ video revamping tab
 Maintenant, voyons comment vous pouvez créer votre rythme ou « beat ». Ici, nous utiliserons le terme « beat » au lieu de rythme percussif : un motif répété de sons percussifs. Nous utiliserons la fonction `makeBeat()` avec quatre arguments :
 
 . *Sound*: A sound constant. Vous pouvez utiliser le filtre Artist dans la bibliothèque de sons et sélectionner « MAKEBEAT » : ce sont des clips audio courts adaptés pour les motifs rythmiques. These are short sounds appropriate for beat patterns.
-. *Numéro de piste* : Il s'agit de la piste sur laquelle se trouvera votre beat.
+. *trackNumber :* La piste sur laquelle la musique est placée.
 . *Numéro de mesure* : Il s'agit de la mesure de départ pour votre beat.
 . *Chaîne de percussion :* Une chaîne de caractères qui spécifie le rythme créé.
 
@@ -274,7 +274,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * Les chaînes de caractères sont utilisées avec la fonction `makeBeat()` pour créer des motifs rythmiques dans EarSketch. `makeBeat()` utilise une chaîne de beat pour définir chaque double croche de son motif. Un `0` commence à jouer un clip, un `+` prolonge la note jusqu&#8217à la prochaine double croche et `-` crée un silence.
 * La fonction `makeBeat()` nécessite quatre arguments :
 ** *Sound*: A sound constant
-** *Numéro de piste* : Il s'agit de la piste sur laquelle se trouvera votre beat.
+** *trackNumber :* La piste sur laquelle la musique est placée.
 ** *Numéro de mesure* : Il s'agit de la mesure de départ pour votre beat.
 ** *Chaîne de percussion :* Une chaîne de caractères qui spécifie le rythme créé.
 * Différents motifs rythmiques correspondent à différents genres musicaux.
