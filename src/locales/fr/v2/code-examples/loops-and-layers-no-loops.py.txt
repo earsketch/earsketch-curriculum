@@ -9,7 +9,6 @@ drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
 # Tous ces appels de fonction fitMedia() peuvent être remplacés par deux appels placés dans une boucle.
-
 fitMedia(drums1, 1, 1, 1.5)
 fitMedia(drums2, 1, 1.5, 2)
 fitMedia(drums1, 1, 2, 2.5)
