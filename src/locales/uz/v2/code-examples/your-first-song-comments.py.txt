@@ -1,6 +1,6 @@
 # Comments: Using comments to describe what the code does
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(130)
 
