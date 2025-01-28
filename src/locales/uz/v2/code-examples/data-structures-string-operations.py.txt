@@ -1,6 +1,6 @@
 # String Operations: Expand a beat string into a longer beat string
 
-# Setup
+# Sozlash
 from earsketch import *
 setTempo(120)
 
