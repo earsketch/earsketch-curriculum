@@ -1,6 +1,6 @@
 // Arrays: Using an array to hold several sounds
 
-// Setup
+// Sozlash
 setTempo(130);
 
 // Music
