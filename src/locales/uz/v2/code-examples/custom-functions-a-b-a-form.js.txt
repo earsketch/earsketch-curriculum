@@ -1,6 +1,6 @@
 // A-B-A Form: A song with A and B sections
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
