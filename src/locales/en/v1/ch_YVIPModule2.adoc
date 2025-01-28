@@ -170,7 +170,7 @@ Look at your `#SOUNDBANK` in your code editor.  It’s time to assign these clip
 1. Assign the  soundclip a variable name or nickname  (usually the name connects to the sound, just like a nickname is connected to your full name)
 2. Use the assignment operator =  to assign your variable a value.  Ex. `drum=ENTREP_BEAT_DRUMBEAT`
 3. Complete for each sound clip in your `#SOUNDBANK`
-3. <<building-blocks#variables,Click here>> to learn more about variables
+4. <<building-blocks#variables,Click here>> to learn more about variables
  and review your sample script from Module 1 to see an example of a `#SOUNDBANK`.
 
 ***

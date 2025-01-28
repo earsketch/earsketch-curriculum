@@ -130,13 +130,13 @@ for (var i = 0; i < myArray.length; i++) {
 ----
 
 [role="curriculum-python"]
-[[Graphic]]
+[[Graphic2]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
 //[caption="Figure 21.4.2: "]
 image::../media/U3/18_2_Graphics_PY_1_100.gif[Alt Text]
 
 [role="curriculum-javascript"]
-[[Graphic]]
+[[Graphic3]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
 //[caption="Figure 21.4.2: "]
 image::../media/U3/18_2_Graphics_JS_1_100.gif[Alt Text]
@@ -180,13 +180,13 @@ for (var measure = 1; measure < 5; measure++) {
 ----
 
 [role="curriculum-python"]
-[[Graphic]]
+[[Graphic4]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
 //[caption="Figure 21.4.2: "]
 image::../media/U3/18_2_Graphics_PY_2_100.gif[Alt Text]
 
 [role="curriculum-javascript"]
-[[Graphic]]
+[[Graphic5]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
 //[caption="Figure 21.4.2: "]
 image::../media/U3/18_2_Graphics_JS_2_100.gif[Alt Text]

@@ -166,7 +166,7 @@ Now onto sonification: we have data that EarSketch can understand, and we can tu
 
 Now that we know how to turn an image into data using `importImage`, we can use EarSketch to turn that data into sound. Let’s go back to our checkerboard. We can turn it into a drum beat by writing code that will create a beat with hits on the black squares and rests on the white squares.
 
-[[gridzoomed]]
+[[gridzoomed2]]
 image::../media/OptionalLessons/grid_zoomed.png[Alt Text]
 
 [role="curriculum-python"]

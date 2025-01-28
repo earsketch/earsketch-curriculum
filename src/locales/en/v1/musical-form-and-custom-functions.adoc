@@ -119,7 +119,7 @@ Below, we define and call a function named `myFunction()`. It has two parameters
 image::../media/U2/Function_9_3_Graphics_PY.jpg[Alt Text]
 
 [role="curriculum-javascript"]
-[[Graphic]]
+[[GraphicJS]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
 //[caption="Figure 21.4.2: "]
 image::../media/U2/Function_9_3_Graphics_JS.jpg[Alt Text]
