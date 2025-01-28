@@ -1,6 +1,6 @@
 // Iterating through Arrays: Using an array to hold several sounds and placing them in our DAW thanks to a for loop
 
-// Setup
+// Sozlash
 setTempo(130);
 
 // Music
