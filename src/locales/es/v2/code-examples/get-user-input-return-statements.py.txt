@@ -8,18 +8,17 @@ ritmo1 = "0+++0+0+0+--0+00"
 ritmo2 = "0+0-00++0-000+++"
 
 # Música
-
-def crearRitmo(compasDeComienzo, clipDeSonido, CadenaDeTiempos):
-    ultimoCompas = compasDeComienzo + 3
-    for compas in range(compasDeComienzo, ultimoCompas):
+def createBeat(startMeasure, sound, beatString):
+    endMeasure = startMeasure + 3
+    for measure in range(startMeasure, endMeasure):
         makeBeat(clipDeSonido, 1, compas, cadenaDeTiempos)
 
     # Devolver el último compás para poder usarlo fuera de la función
     return ultimoCompas
 
 # Llamadas a función
-
 # Asignar el valor que devolvemos a una variable
 nuevoComienzo = crearRitmo(1, HIPHOP_DUSTYGROOVE_007, ritmo1)
+
 # Pasar el valor devuelto a otra función
 crearRitmo(nuevoComienzo, HIPHOP_DUSTYGROOVE_010, ritmo2)
