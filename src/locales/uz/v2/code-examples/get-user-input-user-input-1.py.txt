@@ -1,6 +1,6 @@
 # User input 1: Asking the user for the tempo
 
-# Setup
+# Sozlash
 from earsketch import *
 
 # asking for tempo
