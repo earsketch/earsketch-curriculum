@@ -7,10 +7,9 @@ var ritmo1 = "0+++0+0+0+--0+00";
 var ritmo2 = "0+0-00++0-000+++";
 
 // Música
-
-function crearRitmo(compasDeComienzo, clipDeSonido, cadenaDeTiempos) {
-    var ultimoCompas = compasDeComienzo + 3;
-    for (var compas = compasDeComienzo; compas < ultimoCompas; compas++) {
+function createBeat(startMeasure, sound, beatString) {
+    var endMeasure = startMeasure + 3;
+    for (var measure = startMeasure; measure < endMeasure; measure++) {
         makeBeat(clipDeSonido, 1, compas, cadenaDeTiempos);
     }
 
@@ -19,8 +18,8 @@ function crearRitmo(compasDeComienzo, clipDeSonido, cadenaDeTiempos) {
 }
 
 // Llamadas a función
-
 // Asignar el valor que devolvemos a una variable
 var nuevoComienzo = crearRitmo(1, HIPHOP_DUSTYGROOVE_007, ritmo1);
+
 // Pasar el valor devuelto a otra función
 crearRitmo(nuevoComienzo, HIPHOP_DUSTYGROOVE_010, ritmo2);
