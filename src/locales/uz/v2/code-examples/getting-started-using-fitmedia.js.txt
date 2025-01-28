@@ -1,6 +1,6 @@
 // Using fitMedia(): Adding a sound to the DAW
 
-// Setup
+// Sozlash
 setTempo(120);
 
 // Music
