@@ -6,9 +6,9 @@
 [[othererrors]]
 === Overview
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*.
+Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi.
 
-The process of finding and fixing bugs is called *debugging*.
+Xatolarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi.
 
 Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
 
