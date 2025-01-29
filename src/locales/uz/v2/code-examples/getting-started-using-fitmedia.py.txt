@@ -1,0 +1,8 @@
+# Using fitMedia(): Adding a sound to the DAW
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# Music
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
