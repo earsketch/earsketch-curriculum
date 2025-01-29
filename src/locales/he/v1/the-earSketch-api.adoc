@@ -1,5 +1,6 @@
 [[ch_27]]
 == ה-API של EarSketch
+
 :nofooter:
 
-link:<api>[לחץ כאן] לפתיחת ה-API של EarSketch.
+link:<api>[Click Here] to open the EarSketch API.
