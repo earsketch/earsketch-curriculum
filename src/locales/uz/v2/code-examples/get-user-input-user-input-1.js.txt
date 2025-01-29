@@ -1,0 +1,16 @@
+// User input 1: Asking the user for the tempo
+
+// Sozlash
+
+// asking for tempo
+var question = "What tempo would you like for your music? Choose a number between 45 and 220";
+var answer = readInput(question);
+
+// converting to a number
+var tempo = Number(answer);
+
+// setting the tempo
+setTempo(tempo);
+
+// music
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
