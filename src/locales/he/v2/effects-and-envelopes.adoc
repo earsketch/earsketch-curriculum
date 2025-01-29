@@ -1,13 +1,16 @@
 [[effectsandenvelopes]]
 == אפקטים ומעטפות
+
 :nofooter:
 
-EarSketch מאפשרת ליוצר/ת לשנות קליפים וליצור צלילים חדשים וייחודיים. זה נעשה בעזרת הפונקציה`()setEffect`, בה נתמקד בפרק זה.
+EarSketch lets the composer alter existing sounds to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.
 
 [[effectsinearsketch]]
-=== שימוש באפקטים ב-EarSketch
+=== Use Effects in EarSketch
 
-*אפקטים* מאפשרים לשנות איכויות של צלילים. בדומה לאופן בו פילטרים משנים תמונה, הוספת אפקט משנה את הצליל. אפשר לשנות את העוצמה של הצליל ולהוסיף לו הד, למשל...
+:nofooter:
+
+*Effects* allow us to change qualities of sounds. בדומה לאופן בו פילטרים משנים תמונה, הוספת אפקט משנה את הצליל. For example, you can change the volume, add some echo or reverb, etc.
 
 [role="curriculum-python curriculum-mp4"]
 [[video4py]]
@@ -17,17 +20,17 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-נשתמש בפונקציה`()setEffect`, שמקבלת ארבעה פרמטרים, בדומה לפונקציה`()fitMedia`:
+We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
 
-. *trackNumber*: הערוץ אליו יתווסף האפקט.
-. *effectName*: האפקט עצמו.
-. *effectParameter*: הפרמטר של האפקט.
-. *effectValue*: הערך של הפרמטר: מספר בטווח ספציפי. הטווח תלוי בפרמטר של האפקט.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 
 .תרגלו
 ****
-כתבו שיר בשני ערוצים ושנו את העוצמה (ווליום) של שני הערוצים בעזרת הפונקציה `()setEffect`. 
-במקרה זה, שם האפקט (הפרמטר השני) הוא VOLUME, והפרמטר של האפקט (הפרמטר השלישי) הוא GAIN. הערך של האפקט (הפרמטר הרביעי) הוא מספר של דציבלים (dB) בין 60- ל-12+. 
+Write a new song with two tracks and modify the volume for both of the tracks using the `setEffect()` function.
+In that case, the effect name (second argument) is `VOLUME`, and the effect parameter (third argument) is `GAIN`. The effect value (fourth argument) is a number of decibels (dB), between `-60` and `+12`.
 ****
 
 הנה דוגמה:
@@ -35,72 +38,80 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.py.txt[]
+include::code-examples/effects-and-envelopes-volume-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.js.txt[]
+include::code-examples/effects-and-envelopes-volume-effect.js.txt[]
 ----
 
-דנו באפקט`VOLUME`. כעת נדון באפקט `DELAY`. האזינו לשני הקליפים הבאים. הראשון ללא האפקט, והשני עם האפקט *delay*.
+We've seen the `VOLUME` effect. Let's now look at `DELAY`. Listen to the 2 clips below, one without and one with a *delay* effect applied.
 
 ללא אפקט:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reference.mp3</div>
 ++++
 
 עם אפקט delay:
+
 ++++
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-במקרה זה, שם האפקט (הפרמטר השני) הוא `DELAY`, והפרמטר של האפקט (הפרמטר השלישי) יכול להיות או `DELAY_TIME` (אורך הזמן לפני שההד "עונה") או `DELAY_FEEDBACK` (עוצמת ההד). הערך של `DELAY_TIME` הוא במילישניות (1000 מילישניות הן שניה אחת) והערך של`DELAY_FEEDBACK` הוא מספר בין 120- ו-1-.
+In that case, the effect name (second argument) is `DELAY`, and the effect parameter (third argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between `-120` and `-1`.
+
+For example, `setEffect(1, DELAY, DELAY_TIME, 500)` puts a delay onto track 1 with the delay/echo lasting for 500 ms.
 
 .תרגלו
 ****
-. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#, effects>>
+. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#,effects>>
 . הריצו את הקוד שמופיע בהמשך והקשיבו למוסיקה ללא אפקטים
-. הפכו ללא הערה את שורת `()setEffect` הראשונה והקשיבו להבדל
-. הפכו ללא הערה את שורת `()setEffect` השנייה והקשיבו להבדל (להפוך שורה ללא הערה פירושו למחוק מתחילת השורה את `#` או`//` ).
-שימו לב לכך שזמן ההשהיה (הפרמטר הרביעי) הוא 500mS, שהוא אורך של ביט (פעמה) אחד. מכיוון שהטמפו הוא 120bpm, יש ביט כל חצי שניה (1/2=60/120). שנייה אחת היא 1000 מילישניות, וחצי שנייה היא 500 מילישניות.
+. Then uncomment the first `setEffect()` line and listen to the difference
+. Then uncomment the second `setEffect()` line and listen to the difference ("uncomment" means to erase the comment syntax, `#` or `//` from a block of code)
+Note that the delay time, 500ms, is the length of one beat. מכיוון שהטמפו הוא 120bpm, יש ביט כל חצי שניה (1/2=60/120). שנייה אחת היא 1000 מילישניות, וחצי שנייה היא 500 מילישניות.
 שנו את זמן ההשהיה. האם המוסיקה נשמעת טוב יותר או לא?
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.py.txt[]
+include::code-examples/effects-and-envelopes-delay-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.js.txt[]
+include::code-examples/effects-and-envelopes-delay-effect.js.txt[]
 ----
+
+{nbsp} +
 
 [[functionsandmoreeffects]]
 === פונקציות ועוד אפקטים
 
- עד עתה, השתמשנו במספר פונקציות ב-EarSketch כמו `()fitMedia` או `()setEffect`. שימו לב לכך, ששם של פונקציה תמיד מתחיל באות קטנה, והוא, לרוב, פועל. הסוגריים מורות למחשב *לקרוא* לפונקציה או *לבצע* אותה. *פרמטרים* (שלפעמים נקראים גם ארגומנטים), בתוך הסוגריים, מופרדים על-ידי פסיקים.
+So far, you've been using several functions in EarSketch like `fitMedia()` or `setEffect()`. שימו לב לכך, ששם של פונקציה תמיד מתחיל באות קטנה, והוא, לרוב, פועל. The parentheses tell the computer to *call*, or *execute*, the function. *Arguments*, or parameters, between the parentheses are separated by commas.
 
 [role="curriculum-python"]
-* לפונקציות `setTempo()`, `fitMedia()`, `makeBeat()`ו-`setEffect()` יש פרמטרים. הן חלק מה-<strong>Application Programming Interface - ממשק לתכנות 
- אפליקציות </strong>, או, בקיצור, ה-*API*. ה-API של EarSketch מוסיף יכולות מוסיקליות לפייתון. דוגמה נוספת ל-API הוא ה-API של Googie Maps: אוסף כלים לשיבוץ מפות באתרים או יישומים.
-* בפרק מאוחר יותר נלמד איך ליצור פונקציות נוספות, המותאמות לצרכינו.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. ה-API של EarSketch מוסיף יכולות מוסיקליות לפייתון. דוגמה נוספת ל-API הוא ה-API של Googie Maps: אוסף כלים לשיבוץ מפות באתרים או יישומים.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
 [role="curriculum-javascript"]
-* לפונקציות `setTempo()`, `fitMedia()`, `makeBeat()`ו-`setEffect()` יש פרמטרים. הן חלק מה-<strong>Application Programming Interface - ממשק לתכנות 
- אפליקציות </strong>, או, בקיצור, ה-*API*. ה-API של EarSketch מוסיף יכולות מוסיקליות ל-JavaScript. דוגמה נוספת ל-API הוא ה-API של Googie Maps: אוסף כלים לשיבוץ מפות באתרים או יישומים.
-* בפרק מאוחר יותר נלמד איך ליצור פונקציות נוספות, המותאמות לצרכינו.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. ה-API של EarSketch מוסיף יכולות מוסיקליות ל-JavaScript. דוגמה נוספת ל-API הוא ה-API של Googie Maps: אוסף כלים לשיבוץ מפות באתרים או יישומים.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
 כל פרמטר של פונקציה יכול להיות מטיפוס נתונים שונה. סדר הפרמטרים חשוב. הנה מספר דוגמאות לטיפוסי נתונים:
 
-* *מספרים*. *מספרים שלמים או Integers* (או int) הם מספרים שלמים כמו 0, 5 או 26-. *Floating point* הם מספרים ממשיים כמו 0.125 או 21.0-. לדוגמה, הפרמטרים מספר הערוץ, תיבת ההתחלה ותיבת הסיום, בפונקציה `()fitMedia` הם כולם מספרים.
-* * מחרוזות Strings*. מחרוזת תיפוף כמו `"----0000----0000"`, משמשת כפרמטר לפונקציה`()makeBeat`.
+* *Numbers*
+** *Integers* are whole numbers, like 0, 5, or -26. Example: track numbers
+** *Floating point* numbers are rational numbers like 0.125 or -21.0. Example: volume of -4.2dB
+* *Strings* represent text. Example: `"0000----0000----"`
 
-בואו נמשיך לשחק עם הפונקציה `()setEffect`. קטע הווידאו הבא מראה כיצד להשתמש במספר אפקטים:
+Now, let's play more with the `setEffect()` function. קטע הווידאו הבא מראה כיצד להשתמש במספר אפקטים:
 
 ////
 VIDEO IS BEEING MADE
@@ -108,65 +119,68 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-* Reverb (הדהוד)* הוא צליל שחוזר מהקירות אל האוזניים. הוא נותן תחושה של מרחב לצליל. חשבו על ההבדל בין דיבור בחדר קטן לדיבור בחלל של אולם גדול. ככל שהחדר גדול יותר, לוקח לצליל יותר זמן לחזור מהקירות לאוזניכם/ן, ונוצר הצליל המהדהד של אולם גדול. לאפקט `REVERB` יש פרמטרים לשליטה בזמן הדעיכה (`REVERB_DECAY`) ועצמת האפקט (`MIX`).
+*Reverb* (short for reverberation) is sound bouncing off walls and returning to your ears. הוא נותן תחושה של מרחב לצליל. חשבו על ההבדל בין דיבור בחדר קטן לדיבור בחלל של אולם גדול. ככל שהחדר גדול יותר, לוקח לצליל יותר זמן לחזור מהקירות לאוזניכם/ן, ונוצר הצליל המהדהד של אולם גדול. The `REVERB` effect has parameters to control the decay time (`REVERB_DECAY`) and amount of the effect present (`MIX`).
 
 הקשיבו לקליפים הבאים, ושמעו את התוצאה של הוספת reverb לערוץ:
 
 ללא אפקט:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 עם אפקט reverb:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbEffect.mp3</div>
 ++++
 
+{nbsp} +
+
 .תרגלו
 ****
-Go to this chapter for a complete list of effects: <</en/v1/every-effect-explained-in-detail#, effects>>.
-צרו שיר עם אפקט ווליום (volume) ושני אפקטים נוספים. אל תשכחו לתאר, בהערות, מה הקוד עושה ולהשתמש במשתנים, כשצריך.
+Go to <</en/v1/every-effect-explained-in-detail#,this chapter>> for a complete list of effects.
+Create a song with a volume effect and two other effects. Don't forget to write what you are doing in the comments and to create variables when necessary.
 ****
 
-
-[[effectsandenvelopes]]
+[[effectsandenvelopes2]]
 === אפקטים ומעטפות
 
-לפעמים, נרצה שאפקט ישתנה בזמן. לדוגמה, נרצה שעצמת הצליל תלך ותגדל (fade in) בתחילת השיר.
+You've started using effects, and maybe you'd like for one effect to change over time. For example, you might want a fade in (volume getting higher) at the beginning of your song.
 
-* מעטפות או envelopes* מאפשרות להגדיר כיצד ישתנה האפקט לאורך זמן. 
+*Envelopes* allow us to define how an effect changes over time.
 
-נשתמש בשני זוגות של ערך וזמן. כל זוג כולל ערך של אפקט ותיבה מתאימה. לדוגמה, המשמעות של (3 ,0 ,1 ,60-) היא שנקודה אחת בעלת ערך 60- תמוקם בתיבה הראשונה, ושנקודה שנייה בעלת ערך 0 תמוקם בתיבה השלישית. המעטפת יוצרת קו בין שתי נקודות אלה, שנקרא *ramp או רמפה*:
+We will use two value-time pairs. כל זוג כולל ערך של אפקט ותיבה מתאימה. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. The envelope creates a line between these points, called a *ramp*:
 
 [[envelopepoints]]
 .מעטפת (עם הערות) ב-EarSketch
-[caption="Figure 5.1: "]
+[caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-הגדרת המעטפת נעשית בפונקציה`()setEffect`שיש לה שבעה פרמטרים. ארבעת הפרמטרים האחרונים הם שני הזוגות של ערך וזמן.
+To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
 
-. trackNumber
-. effectName
-. effectParameter
-. effectStartValue
-. effectStartLocation
-. effectEndValue
-. effectEndLocation
+. track
+. type
+. parameter
+. startValue
+. start
+. endValue
+. end
 
-שלושת הפרמטרים האחרונים הם *פרמטרים אופציונליים*. אם לא נקבע את ערכם, כפי שעשינו כשהשתמשנו ב-`setEffect()` עם ארבעה פרמטרים, האפקט יופעל על כל הערוץ.
+The last three out of seven parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only four parameters, the effect is applied to the entire track.
 
 הנה דוגמה של fade in:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-envelopes.py.txt[]
+include::code-examples/effects-and-envelopes-envelopes.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-envelopes.js.txt[]
+include::code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
 צפו בסרטון הבא המדגים מעטפות נוספות
@@ -175,13 +189,11 @@ include::../../en/v2/code-examples/effects-and-envelopes-envelopes.js.txt[]
 [[video5b]]
 video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
-
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
+include::code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
 ----
-
 
 [role="curriculum-javascript curriculum-mp4"]
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
@@ -189,28 +201,29 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
+include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 ----
+
+{nbsp} +
 
 .תרגלו
 ****
-צרו שיר חדש. השתמשו בלולאת for כדי להוסיף מעטפת לכל הערוצים (למשל, fade in ו-fade out לכל הערוצים), או כדי לחזור על אפקט באותו ערוץ. השתמשו באיזה אפקט שתרצו. 
+צרו שיר חדש. Use one `for` loop to add an envelope to all the tracks (for example: fade in and fade out for all your tracks), or to repeat an effect on the same track. השתמשו באיזה אפקט שתרצו.
 השמיעו את השיר לחבר/ה, עם ובלי האפקט (כדי "לבטל" את האפקט, הפכו את השורות בקוד שמגדירות את האפקט להערות). על החבר/ה לנחש מהו האפקט.
 ****
 
-למטה ישנה דוגמה. כל איטרציה של הלולאה מוסיפה קטע באורך של תיבה אחת של המעטפת. השינוי האוטומטי של הפרמטר GAIN, יוצר דעיכות ריתמיות בעוצמה. זהו אפקט פופולרי ב-EDM, המודגם בשיר https://www.youtube.com/watch?v=Us_U-d2YN5Y[Rhythm] של Lvly. נסו לכבות ולהפעיל את האפקט ב-DAW כדי לשמוע את השפעת האפקט (בעזרת כפתור "bypass" משמאל לערוץ האפקט ב-DAW).
-
+Below is an example of the above practice. כל איטרציה של הלולאה מוסיפה קטע באורך של תיבה אחת של המעטפת. Automating the GAIN parameter creates rhythmic volume fades. נסו לכבות ולהפעיל את האפקט ב-DAW כדי לשמוע את השפעת האפקט (בעזרת כפתור "bypass" משמאל לערוץ האפקט ב-DAW).
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
+include::code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
+include::code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
 ----
 
 And here is an example of fade in and fade out on all the tracks:
@@ -218,30 +231,31 @@ And here is an example of fade in and fade out on all the tracks:
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
 ----
+
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 ----
 
+{nbsp} +
 
 [[chapter5summary]]
 === סיכום פרק חמישי
 
-* *אפקטים* משנים את איכויות הצליל, והופכים את הצליל לייחודי.
-* *Volume* משנה את עצמת הקול. *Delay* יוצר הד. *Reverb* גורם לצליל להישמע כאילו הוא מנוגן בחלל של אולם גדול. *Panning* ממקם את הצליל בצד ימין או בצד שמאל.
-* אפקטים מופעלים ב-EarSketch בעזרת הפונקציה `()setEffect`. התחביר שלה הוא: `setEffect(trackNumber, effectName, effectParameter, effectValue)`.
-** *trackNumber*: הערוץ אליו יתווסף האפקט.
-** *effectName*: האפקט עצמו.
-** *effectParameter*: הפרמטר של האפקט.
-** *effectValue*: הערך של הפרמטר: מספר בטווח ספציפי.
-* *פונקציות* מכילות הוראות שעל המחשב לבצע. נתונים מועברים לפונקציה ב-*פרמטרים*, שמשפיעים על אופן ביצוע הפונקציה. התחביר של *קריאה* לפונקציה בעלת שני פרמטרים הוא: `myFunction(argument1, argument2)`. דוגמה לתחביר של *קריאה* לפונקציה בעלת ארבעה פרמטרים היא: `makeBeat(kick, 2, measure, kickBeat)`.
-* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#, effects>>, along with descriptions for each.
-* *מעטפות* מגדירות את האופן בו האפקט משתנה בזמן. הן מוגדרות בעזרת צמדים של ערך-זמן, כמו _(ערך, זמן, ערך, זמן)_.
-* להגדרת מעטפת, שבעת הפרמטרים של `()setEffect` הם: `setEffect(trackNumber, effectName, effectParameter, startEffectValue, effectStartLocation, endEffectValue, effectEndLocation)`.
-
+* *Effects* change the qualities of a sound to make them unique.
+* *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
+* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(track, type, parameter, value)`.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
+* *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
+* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
+* *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
+* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 [[chapter-questions]]
 === שאלות
@@ -249,6 +263,7 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 [question]
 --
 מה אפקט מאפשר לעשות ב-EarSketch?
+
 [answers]
 * שינוי האיכויות של צליל בפרויקט
 * הוספת צליל לערוץ
@@ -258,7 +273,8 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 
 [question]
 --
-מי מהבאים אינו פרמטר של `()setEffect`?
+Which of these is NOT a `setEffect()` argument?
+
 [answers]
 * Clip Name
 * Effect Name
@@ -269,6 +285,7 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 [question]
 --
 כיצד ניתן לקבוע את זמן ההשהיה (delay time) של אפקט delay, בערוץ השלישי, ל-50 מילישניות?
+
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
 * `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
@@ -278,7 +295,8 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 
 [question]
 --
-מי מהבאים אינו פרמטר המשמש להגדרת מעטפת בעזרת הפונקציה `()setEffect`?
+Which of the following is not a parameter used with `setEffect()` envelopes?
+
 [answers]
 * Clip Length
 * Start Value
@@ -288,11 +306,13 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 
 [question]
 --
-מה עושה הפונקציה `()setEffect`הבאה?
+What would the following `setEffect()` function do?
+
 [source,python]
 ----
-setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
 ----
+
 [answers]
 * מגדילה את כמות הדיסטורשן בערוץ הראשון לאורך 10 תיבות.
 * מקטינה את כמות הדיסטורשן בערוץ הראשון לאורך 50 תיבות.
