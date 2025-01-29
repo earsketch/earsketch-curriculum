@@ -1,15 +1,16 @@
 [[getstartedwithearsketch]]
 == להתחיל עם EarSketch
+
 :nofooter:
 
-בפרק זה תלמדו איך EarSketch עובדת, איך להוסיף צלילים (קליפים) למוסיקה ואיך לדבג (לתקן שגיאות) קוד.
-
+In this chapter you will learn how EarSketch works. You will place sounds into your music and see how to debug your code.
 
 [[discoverearsketch]]
 === גלו את EarSketch
+
 :nofooter:
 
-ב-EarSketch, תתנו למחשב הוראות על-ידי כתיבת קוד. כל שורת קוד היא הוראה אחת. כל ההוראות ביחד נקראות תכנית (הן נקראות גם אלגוריתם). בדיוק כמו שמעקב אחרי מתכון בספר בישול יוצר ארוחה, כך ביצוע של תכנית ב-EarSketch יכול ליצור שיר. היכן בתכנית נמצא הקוד? צפו בקטע הוידאו!
+ב-EarSketch, תתנו למחשב הוראות על-ידי כתיבת קוד. כל שורת קוד היא הוראה אחת. כל ההוראות ביחד נקראות תכנית (הן נקראות גם אלגוריתם). בדיוק כמו שמעקב אחרי מתכון בספר בישול יוצר ארוחה, כך ביצוע של תכנית ב-EarSketch יכול ליצור שיר. How does it work? Find out in the video below!
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -19,24 +20,22 @@ video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 TODO: upload video
 ////
 
-כדי להשתמש ב-EarSketch
+As you become familiar with EarSketch these are the main panels.
 
-. אפשר לדפדף ולבחור צליל *מספריית הצלילים*
-. אפשר לכתוב קוד *בעורך הקוד*,
-. לחיצה על כפתור *run* יגרום ליצירה להופיע ב-*Digital Audio Workstation* (או *DAW*)
-. אפשר ללחוץ על כפתור *play* כדי להאזין למוסיקה
-. אפשר לשנות את הקוד עד שהשיר נשמע בדיוק לטעמנו!
-. אפשר לפתוח ולסגור את חלונית חומרי הלימוד בעזרת כפתור הגלילה בראש החלונית
+* *Content Manager* _(left)_: Your scripts and sounds
+* *DAW* _(top-center)_: The song timeline and "play" button
+* *Editor* _(mid-center)_: The code editor and "run" button
+* *Console* _(bottom-center)_: The script output and errors
 
-_מה זה DAW?_
+{nbsp} +
 
-*Digital Audio Workstation*, או *DAW*, היא תוכנה שמייצרת ועורכת קטעי קול במחשב, באולפן מקצועי או ביתי.
+_What is a DAW?_
 
-תכנות DAW פופולריות הן: https://www.ableton.com/[Ableton^] ת https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], ו- http://www.reaper.fm/[Reaper^]
+A *DAW*, or *Digital Audio Workstation*, is software that produces or edits audio on a computer, be it in a professional studio or in home laptop-based studios.
 
-בעזרת DAW אפשר להקליט, לערוך ולנגן קבצי קול. קבצי קול אלה נקראים *קליפים*.
+Some popular DAWs include https://www.ableton.com/[Ableton Live^], https://www.image-line.com/[FL Studio^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], https://www.avid.com/pro-tools[Pro Tools^], and http://www.reaper.fm/[Reaper^].
 
-EarSketch היא בדיוק כמו DAW, חוץ מזה שהמרכיבים המוסיקליים מתוכנתים בקוד.
+EarSketch is DAW that allows you to create music by writing code.
 
 כך תוכלו לעשות שימוש ב-DAW:
 
@@ -48,74 +47,64 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-
-בואו נריץ דוגמאות קוד ב-EarSketch! בתיבה למטה, לחצו על האייקון עם לוח הכתיבה הכחול שבפינה הימנית העליונה. דוגמת הקוד תועתק *לעורך הקוד*. לעת עתה, אין צורך להבין את הקוד, רק ללחוץ על כפתור _run_: המוסיקה תופיע ב-DAW. לחיצה על _play_ תשמיע אותה.
+Let's try running a code example in EarSketch! On the box below, press the blue clipboard icon in the top right corner. This will paste the example code onto a new file in the *code editor*. No need to understand the code yet, just press the _run_ button and your music will show up in the DAW. You can press the _play_ button to hear it.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/getting-started-intro-script.py.txt[]
+include::code-examples/getting-started-intro-script.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/getting-started-intro-script.js.txt[]
+include::code-examples/getting-started-intro-script.js.txt[]
 ----
 
 {nbsp} +
 
-
-
 [[createanewscript]]
 === צרו את הסקריפט הראשון!
 
-ב-EarSketch, כל סקריפט מתייחס לשיר אחד. בואו נראה איך יוצרים סקריפט:
+Let's see how to create a script from scratch.
 
-. *היכנסו לחשבון שלכם/ן או צרו חשבון חדש* בפינה הימנית העליונה של המסך. אם תלחצו על הכפתור הלבן "Create / Reset Account", תוכלו לשחזר סיסמה או ליצור חשבון חדש ("Register a New Account"). זהירות: באופן כללי ברשת, אל תשתמשו באותה הסיסמה לכל החשבונות. אל תגלו את הסיסמאות שלכם/ן.
-
-. *לחצו כדי ליצור:* אם אין סקריפטים פתוחים, לחצו על הקישור הכחול הגדול בעורך הקוד "click here to create a new script".
+. *Create.* In the editor tabs, click the white "+" icon.
 +
-אם יש סקריפטים פתוחים, לחצו על ה-"+" הלבן ליד הלשוניות.
+If this is your first script, click the large blue text "Click here to create a new script!"
 +
 [[newscriptplus]]
 .יצירת סקריפט חדש
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
-
-
-. *בחר שם ושפה* תפתח תיבת הדיאלוג "Create a new script". Give your new script a name which will be name of your song. עכשיו בחרו את שפת התכנות (Python או JavaScript). לסיום, לחצו על כפתור "Create".
+. *Choose a name and language.* Give your new script a name, and choose between Python and JavaScript programming languages.
 +
 [[newscriptpromptpy]]
 .תיבת הדיאלוג ליצירת סקריפט חדש
 [role="curriculum-python"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptPY.png[Alt Text]
++
 [[newscriptpromptjs]]
 .תיבת הדיאלוג ליצירת סקריפט חדש
 [role="curriculum-javascript"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
+. *(OPTIONAL) Sign in or create a new account.* To save your scripts for future editing and sharing, sign in with an EarSketch account.
++
+_Note: Your EarSketch account does not require any personal information or email._
 
+*_What is a programming language?_*
 
-*_מהי שפת תכנות?_*
+Code is written in a *programming language*. Like a spoken language it has vocabulary and syntax. You need to follow your programming language's grammar rules as you would with spoken language.
 
-קוד נכתב ב*שפת תכנות*, שכוללת אוצר מילים ותחביר, כמו שפה רגילה. יש לדעת את חוקי הדקדוק של שפת התכנות, אחרת המחשב לא יוכל לבצע את ההוראות. 
+When you press the *run* button, a *compiler* translates the Python or JavaScript instructions into machine code which the computer can understand. Then the computer *executes* the code, which causes your music appear in the DAW.
 
-ב-EarSketch אפשר לכתוב ב-Python או ב-JavaScript.
-
-[role="curriculum-python"]
-_את/ה בחרת לתכנת ב-Python. Python משמשת חברות כמו גוגל, יאהו, נאסא ודיסני. בשפה זו קודדו המשחקים Civilization 4, Battlefield 2 ו-Crystal Space._
-
-[role="curriculum-javascript"]
-_את/ה בחרת לתכנת ב-JavaScript. JavaScrupt היא אחת מעשר שפות התכנות הפופולריות ביותר. כמעט כל אתר ברשת משתמש ב-JavaScript._
-
-ברמה העמוקה ביותר, מחשבים פועלים על צירופים של אפסים ואחדים: מספרים בינריים. זה בגלל שרכיבים אלקטרוניים יכולים להגיב בצורות שונות אם יש זרם חשמלי (1) או אם אין זרם חשמלי (0). כשנלחץ כפתור *run*, המחשב מתרגם את ההוראות c-Python או ב-JavaScript, לקוד בינרי. הקוד *מבוצע* על-ידי המחשב, ואפשר לראות את השיר מופיע ב-DAW.
+At the deepest level, computers execute code using *binary*. This means that all computer code eventually becomes `1` 's and `0` 's as it is processed by electrical components in the computer.
 
 [[fitmedia]]
-=== הפונקציה `()fitMedia`
+=== The `fitMedia()` function
 
-עכשיו, אחרי שיצרת את הסקריפט הראשון שלך, נעבוד על המוסיקה שלך!
+Now that you have created your first script, let's start working on your music!
 
 הווידאו הבא מתאר כיצד להוסיף קליפ לשיר שלך:
 
@@ -127,27 +116,51 @@ video::./videoMedia/1_3_fitmedia_py.mp4[]
 [[video110js]]
 video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-כדי להוסיף קליפ ל-DAW, מקלידים`()fitMedia`. בין הסוגריים יהיו ארבעה פרמטרים, שביניהם פסיקים:
+To add a sound to the DAW, we start by typing `fitMedia()` and use the following form.
 
-. *שם הערוץ*: כשהסמן בתוך הסוגריים, יש לבחור קליפ מדפדפן הצלילים, ולהדביק אותו על-ידי לחיצה על האייקון הכחול.
-. *מספר הערוץ*: ערוצים הם השורות לאורך ה-DAW; הם עוזרים לארגן את הצלילים לפי כלים (קולות, גיטרה מובילה, גיטרת קצב, בס, תופים וכו'). את/ה יכול/ה להתחיל בערוץ אחד לצליל הראשון.
-. *תיבת התחלה*: מתי הצליל יתחיל להתנגן. תיבות הן יחידות זמן מוזיקליות. תיבה אחת מכילה ארבע פעמות (beats). אפשר להתחיל בתיבה הראשונה עם הצליל הראשון.
-. *תיבת סיום*: מתי הצליל יסיים להתנגן.
+`fitMedia(sound, track, start, end)`
 
-_Example:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` will place the sound `Y18_DRUM_SAMPLES_2` on track 1 from measure 1 to measure 5.
+There are 4 *parameters*, separated by commas.
 
-עכשיו, אחרי לחיצה על _run_: תוכל/י לראות את הקליפ ב-DAW. לחיצה על _play_ תנגן אותו.
+. *Sound*: the sound constant from the sound browser
+. *Track*: the track number
+. *Start*: the starting measure
+. *End*: the ending measure
+
+_Example:_
+
+`fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
+
+The statement above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`. A *statement* tells the computer to carry out an action.
+
+Try adding `fitMedia()` to a script.
+
+When you've finished adding all your parameters, press _run_. You will see your sounds visualized in the DAW. Press _play_ to listen to your song.
 
 [role="curriculum-javascript"]
-*פקודה* מורה למחשב לבצע פעולה. לדוגמה, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` היא הוראה. כל פקודה ב-JavaScript *_חייבת להסתיים בנקודה פסיק_*.
-
+Note: In JavaScript an optional semicolon `;` can be added to the end of each statement. Use of the semicolon is your personal choice.
 
 ////
 OPTIONAL
 ////
 
-*דפדפן הצלילים*: מאפשר לחפש בספרייה של מעל 4000 קליפים שתוכל/י לשלב במוזיקה שלך. הם נוצרו על-ידי היוצרים/מפיקים https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, ו-https://www.sndbrd.com/[Milknsizz^].
+{nbsp} +
 
+*_The Sound Browser_*
+
+The *sound browser* provides a library of over four thousand sounds to use in your music.
+Contributors include celebrity musicians
+https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
+https://en.wikipedia.org/wiki/Ciara[Ciara^],
+https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
+https://en.wikipedia.org/wiki/Khalid[Khalid^],
+https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
+https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
+and https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
+
+You can explore the sound browser within the *Content Manager* (left) by clicking "sounds". Try using different sound constants inside `fitMedia()`.
+
+Note: The https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] covers fair use of stock sounds.
 
 ////
 END OF OPTIONAL
@@ -156,33 +169,33 @@ END OF OPTIONAL
 ////
 OPTIONAL
 ////
- 
-See some examples of code using `fitMedia()` (Remember you can click the blue clip board in the top right corner of the box to paste the code into a new file):
+
+Below is an example script using `fitMedia()`. Remember, you can import this script by clicking the blue clipboard icon.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/getting-started-using-fitmedia.py.txt[]
+include::code-examples/getting-started-using-fitmedia.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/getting-started-using-fitmedia.js.txt[]
+include::code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
-אתגר: הוסיפו עוד שורות`()fitMedia`לסקריפט, כמו שאנחנו עשינו. שימו לב לכך שהשתמשנו בערוץ נפרד לכל שורת`()fitMedia`:
+For an extra challenge, add more `fitMedia()` calls to your script like we do below. Notice that we use a different track number for each `fitMedia()` call:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/getting-started-using-fitmedia-2.py.txt[]
+include::code-examples/getting-started-using-fitmedia-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/getting-started-using-fitmedia-2.js.txt[]
+include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 ----
 
 {nbsp} +
@@ -191,20 +204,19 @@ include::../../en/v2/code-examples/getting-started-using-fitmedia-2.js.txt[]
 ****
 בחרו קליפים לטעמכם/ן מספריית הצלילים ו:
 
-. מקמו צלילים בשני ערוצים שונים 
-. מקמו צלילים מתיבה 2 עד תיבה 12
-. צרו שיר קצר בשלושה ערוצים, באורך של שמונה תיבות או יותר
+. Place sounds on two different tracks
+. Place sounds from measure `2` to `12`
+. Create a short song with three tracks that is eight measures long or more
 
-בכל תרגיל, בקש/י מחבר/ה להקשיב לשיר ולתת משוב.
+בכל תרגיל, בקשו מחבר/ה להקשיב לשיר ולתת משוב.
 
 אם יש שגיאות בקוד תקנו אותן. בפרק הבא נעסוק בהרחבה בתיקון שגיאות.
 ****
 
-
 [[debugging]]
 === תיקון שגיאות (debugging)
 
-לפעמים, מתכנתות ומתכנתים עושים שגיאות שגורמות לקוד לרוץ באופן שגוי, או לא לרוץ בכלל. שגיאות תכנות נקראות *באגים*, ובאנגלית *bugs*. התהליך למציאת ותיקון השגיאות נקרא דיבוג, ובאנגלית *debugging*. אפשר לדבג בשיטות שונות, בעזרת הקונסול (החלונית מתחת לחלונית עורך הקוד).
+לפעמים, מתכנתות ומתכנתים עושים שגיאות שגורמות לקוד לרוץ באופן שגוי, או לא לרוץ בכלל. In programming, coding faults are called *errors*, or *bugs*. The process of finding and fixing bugs is called *debugging*. אפשר לדבג בשיטות שונות, בעזרת הקונסול (החלונית מתחת לחלונית עורך הקוד).
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
@@ -224,113 +236,85 @@ OPTIONAL
 
 מהם הסוגים השונים של שגיאות?
 
-. *שגיאות תחביר - Syntax errors*: התכנית לא רצה בגלל שהקוד לא עומד בכללי ה*תחביר (syntax)* של השפה (לדוגמה: אין סוגריים סוגרים, או האיות של fitMedia שגוי).
-. *שגיאות זמן-ריצה - runtime errors*: התכנית מתחילה לרוץ אך עוצרת בגלל שגיאה.
-. *שגיאות לוגיות - logic errors*: התכנית רצה, אבל לא מבצעת את מה שמצופה ממנה. אפשר לתקן שגיאות לוגיות באמצעות הסתכלות על ה-DAW ובדיקה אלו קליפים לא נמצאים במקומם הרצוי. 
+. *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote `fitMedia` incorrectly).
+. *Runtime errors*: Your program starts to run but halts due to an error.
+. *Logic errors*: Your program runs, but it doesn't do what is expected. אפשר לתקן שגיאות לוגיות באמצעות הסתכלות על ה-DAW ובדיקה אלו קליפים לא נמצאים במקומם הרצוי.
 
 ////
 END OF OPTIONAL
 ////
 
-
 הנה מספר שגיאות נפוצות:
 
 [role="curriculum-python"]
-. *טעות באיות:* יש לבדוק את האיות כשמשתמשים בפונקציות כמו `()fitMedia` או בשמות של קבועים (כמו שמות קליפים).
-. *Case sensitivity:* רוב המילים שמשתמשים בהן בתכנות הן case-sensitive (כלומר, המחשב מקפיד להבדיל בין אותיות גדולות ואותיות קטנות). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. לדוגמה, יש לכתוב `()fitMedia` ולא `()FitMedia` או `()fitmedia`. רוב השמות בסקריפט מאויתים לפי כלל שנקרא *camel-caps*: המילה הראשונה באותיות קטנות וכל שאר המילים מתחילות באות גדולה, למשל: `()exampleFunctionName`.
-. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *אתחול הסקריפט:* EarSketch מוסיפה, אוטומטית, פונקציות אתחול לסקריפט. מחיקה של `from earsketch import *`.
-. *סימני פיסוק:* פסיקים, או סימני פיסוק אחרים, חסרים.
+. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
+. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
+. *Punctuation:* Missing commas or other punctuation errors
 
 [role="curriculum-javascript"]
-. *טעות באיות:* יש לבדוק את האיות כשמשתמשים בפונקציות כמו `()fitMedia` או בשמות של קבועים (כמו שמות קליפים).
-. *Case sensitivity:* רוב המילים שמשתמשים בהן בתכנות הן case-sensitive (כלומר, המחשב מקפיד להבדיל בין אותיות גדולות ואותיות קטנות). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. לדוגמה, יש לכתוב `()fitMedia` ולא `()FitMedia` או `()fitmedia`. רוב השמות בסקריפט מאויתים לפי כלל שנקרא *camel-caps*: המילה הראשונה באותיות קטנות וכל שאר המילים מתחילות באות גדולה, למשל: `()exampleFunctionName`.
-. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *סימני פיסוק:* פסיקים, או סימני פיסוק אחרים, חסרים.
+. *Misspelling:* Check the spelling when using a function like `fitMedia()` or sound constants.
+. *Case sensitivity:* Most words used in programming are case-sensitive (the computer recognizes the difference between capitalized and uncapitalized letters). יש להקפיד ולהשתמש באות גדולה או אות קטנה, כנדרש. For example, write `fitMedia()` and not `FitMedia()` or `fitmedia()`. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Punctuation:* Missing commas or other punctuation errors
 
 זמן לתרגל!
-מצאו את חמש השגיאות בקוד הבא:
+Find the five errors in the following code:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/getting-started-finding-errors.py.txt[]
+include::code-examples/getting-started-finding-errors.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/getting-started-finding-errors.js.txt[]
+include::code-examples/getting-started-finding-errors.js.txt[]
 ----
+
 ////
 OPTIONAL
 ////
 
 אלה השגיאות בקטע:
 
-. בפונקציה `()setTempo` חסרים סוגריים
-. בפונקציה`()fitMedia`הראשונה חסרה האות 'e'
-. בפונקציה `()fitMedia` הראשונה חסר פסיק בין הפרמטר השלישי והפרמטר הרביעי
-. בפונקציה`()fitMedia` השנייה, ה-M צריכה להיות גדולה
-. בפונקציה `()fitMedia`השנייה, סדר הפרמטרים שגוי. שם הקליפ צריך לבוא לפני מספר הערוץ
+. The `setTempo()` function is missing a parentheses
+. The first `fitMedia()` is missing an `e`
+. The first `fitMedia()` is missing a comma between the third and fourth parameters
+. The second `fitMedia()` is missing an uppercase `M`
+. In the second `fitMedia()`, the order of parameters is not correct: it should be sound clip name then track number
 
 ////
 END OF OPTIONAL
 ////
 
-Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
-
+Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
 
 ////
 TODO: when options are ready, modify the link
 ////
 
-
-
-
-
-
 [[chapter1summary]]
 === סיכום פרק ראשון
 
-[role="curriculum-python"]
-* שורת קוד היא הוראה שעל המחשב לבצע. כל ההוראות יחד מהוות תכנית.
-* *DAW* היא תוכנה להקלטה, עריכה ונגינה של קבצי שמע דיגיטליים, או *קליפים*. EarSketch היא DAW, שמאפשרת למקם קליפים על ציר הזמן, בעזרת קוד. 
-* כדי ליצור מוסיקה ב-EarSketch, יש להקליד קוד בעורך הקוד. אחרי לחיצה על run, אפשר לנגן את השיר בחלונית ה-DAW.
-* קליפים של צלילים אפשר למצוא בדפדפן הצלילים. אפשר להקליד או להדביק את שמותיהם בקוד. כל האותיות בשמות הקליפים הן אותיות גדולות.
-* *תכנית מחשב* היא רצף של הוראות שהמחשב מבצע כדי להשלים משימה כלשהי. 
-* *שפות תכנות* הן אוסף של מילים וסמלים שהמחשב מבין. לשפת תכנות יש תחביר (syntax) לפיו הקוד נכתב.
-* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה.
-* כדי ליצור סקריפט חדש יש ללחוץ על הקישור הכחול הגדול או על ה-"+" (אם כבר יש סקריפט פתוח בעורך הקוד).
-* `()fitMedia` היא הדרך העיקרית להוספת צלילים ל-DAW. יש לה ארבעה פרמטרים (או ארגומנטים), המידע שהיא צריכה כדי ליצור מוסיקה:
-** *fileName:* שם הקליפ שימוקם ב-DAW.
-** *trackNumber:* הערוץ בו ימוקם הקליפ.
-** *startLocation:* התיבה בה יתחיל הקליפ להתנגן.
-** *endLocation:*   התיבה בה יסיים הקליפ להתנגן.
-* *דיבוג (Debugging)* הוא התהליך לגילוי ותיקון *באגים (bugs)*, שגיאות שהמתכנת או המתכנת עשו.
-* חוקי ה*תחביר (syntax)* מגדירים כיצד יש לכתוב קוד בשפת תכנות מסוימת.
-* *הקונסול* מציג מידע על מצב התוכנית. מידע זה מסייע בתהליך הדיבוג. 
-* באגים נפוצים הם טעיות הקלדה, בלבול בין אותיות גדולות וקטנות, השמטת סוגריים ואתחול לא נכון של הסקריפט.
-
-[role="curriculum-javascript"]
-* שורת קוד היא הוראה שעל המחשב לבצע. כל ההוראות יחד מהוות תכנית.
-* *DAW* היא תוכנה להקלטה, עריכה ונגינה של קבצי שמע דיגיטליים, או *קליפים*. EarSketch היא DAW, שמאפשרת למקם קליפים על ציר הזמן, בעזרת קוד. 
-* כדי ליצור מוסיקה ב-EarSketch, יש להקליד קוד בעורך הקוד. אחרי לחיצה על run, אפשר לנגן את השיר בחלונית ה-DAW.
-* קליפים של צלילים אפשר למצוא בדפדפן הצלילים. אפשר להקליד או להדביק את שמותיהם בקוד. כל האותיות בשמות הקליפים הן אותיות גדולות.
-* *תכנית מחשב* היא רצף של הוראות שהמחשב מבצע כדי להשלים משימה כלשהי. 
-* *שפות תכנות* הן אוסף של מילים וסמלים שהמחשב מבין. לשפת תכנות יש תחביר (syntax) לפיו הקוד נכתב.
-* סקריפט ב-EarSketch מורכב מקטע הערות, קטע אתחול, קטע מוזיקה.
-* כדי ליצור סקריפט חדש יש ללחוץ על הקישור הכחול הגדול או על ה-"+" (אם כבר יש סקריפט פתוח בעורך הקוד).
-* `()fitMedia` היא הדרך העיקרית להוספת צלילים ל-DAW. יש לה ארבעה פרמטרים (או ארגומנטים), המידע שהיא צריכה כדי ליצור מוסיקה:
-** *fileName:* שם הקליפ שימוקם ב-DAW.
-** *trackNumber:* הערוץ בו ימוקם הקליפ.
-** *startLocation:*  התיבה בה יתחיל הקליפ להתנגן.
-** *endLocation:* התיבה בה יסיים הקליפ להתנגן.
-* *דיבוג (Debugging)* הוא התהליך לגילוי ותיקון *באגים (bugs)*, שגיאות שהמתכנת או המתכנת עשו.
-* חוקי ה*תחביר (syntax)* מגדירים כיצד יש לכתוב קוד בשפת תכנות מסוימת.
-* *הקונסול* מציג מידע על מצב התוכנית. מידע זה מסייע בתהליך הדיבוג. 
-* באגים נפוצים הם טעיות הקלדה, בלבול בין אותיות גדולות וקטנות, השמטת סוגריים ואתחול לא נכון של הסקריפט.
-
+* A computer *program* is a sequence of instructions the computer executes to accomplish a specific task.
+* A *script* is a nickname for a short program.
+* A *DAW*, or Digital Audio Workstation, is a type of computer software for recording and editing audio. EarSketch is a DAW that lets you make music with code.
+* To make music, type code into the *editor*, click "run", and click "play" to listen.
+* *Sounds* can be found in the *Sound Browser*. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
+* *Programming languages* are collections of words and symbols that are understood by the computer.
+* The rules of *syntax* define how code must be written and how punctuation (`.`, `,`) is used.
+* Create a new script by clicking the large blue link "Click here to create..." or the "+" icon on the editor tabs.
+* `fitMedia()` is a way of adding sounds to the DAW. It has the following four parameters.
+** *Sound*: the sound constant from the sound browser
+** *Track*: the track number
+** *Start*: the starting measure
+** *End*: the ending measure
+* *Debugging* is the process of finding and fixing *bugs*, or errors, made by the programmer.
+* The *console* shows information about the state of a program, making it useful for debugging syntax errors.
+* Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
 
 [[chapter-questions]]
 === שאלות
@@ -338,16 +322,18 @@ TODO: when options are ready, modify the link
 [question]
 --
 מי מהבאים אינו פאנל בסביבת העבודה של EarSketch?
+
 [answers]
 * דפדפן האפקטים
 * עורך הקוד
-* ה-DAW
-* הקונסול
+* ב-DAW
+* בקונסול
 --
 
 [question]
 --
-כמה פרמטרים יש לפונקציה`()fitMedia`?
+How many parameters do you need for your `fitMedia()` function?
+
 [answers]
 * 4
 * 6
@@ -357,7 +343,8 @@ TODO: when options are ready, modify the link
 
 [question]
 --
-כל סקריפט ב-EarSketch מתאים ל...
+One script corresponds to...
+
 [answers]
 * שיר אחד
 * שורת קוד אחת
@@ -368,6 +355,7 @@ TODO: when options are ready, modify the link
 [question]
 --
 מהי תיבה?
+
 [answers]
 * יחידת זמן מוסיקלית
 * יחידת עוצמה (ווליום)
@@ -378,6 +366,7 @@ TODO: when options are ready, modify the link
 [question]
 --
 מי מהבאים אינו סוג נפוץ של שגיאה בקוד?
+
 [answers]
 * שגיאות דקדוקיות
 * שגיאות זמן ריצה
@@ -388,6 +377,7 @@ TODO: when options are ready, modify the link
 [question]
 --
 היכן, בסביבת הפיתוח של EarSketch אפשר למצוא מידע על באגים בקוד?
+
 [answers]
 * בקונסול
 * בדפדפן הצלילים
