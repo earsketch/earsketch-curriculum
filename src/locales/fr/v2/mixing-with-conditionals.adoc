@@ -1,9 +1,9 @@
 [[mixingwithconditionnals]]
-== Mixer à l'aide d'instructions conditionnelles
+== Mix with Conditionals!
+
 :nofooter:
 
-Il est possible d'automatiser beaucoup d'opérations grâce au codage. Un exemple d’automatisation consisterait à programmer un robot pour qu’il s’arrête à la détection d'un obstacle : le robot n’aura donc pas besoin d’un être humain pour le faire arrêter manuellement. Au lieu de cela, le robot aura un capteur pour détecter les obstacles, et s'il y en rencontre, il s'arrêtera. Il est possible de faire des automatisations musicales dans EarSketch, en utilisant des instructions conditionnelles (« if »). Nous allons maintenant voir comment automatiser le mixage des pistes. Le mixage signifie que si une piste est trop forte, nous réduirons son volume et si elle est trop faible, nous augmenterons son volume.
-
+Il est possible d'automatiser beaucoup d'opérations grâce au codage. Un exemple d’automatisation consisterait à programmer un robot pour qu’il s’arrête à la détection d'un obstacle : le robot n’aura donc pas besoin d’un être humain pour le faire arrêter manuellement. Mixer à l'aide d'instructions conditionnelles Au lieu de cela, le robot aura un capteur pour détecter les obstacles, et s'il y en rencontre, il s'arrêtera. Il est possible de faire des automatisations musicales dans EarSketch, en utilisant des instructions conditionnelles (« if »). Nous allons maintenant voir comment automatiser le mixage des pistes. Le mixage signifie que si une piste est trop forte, nous réduirons son volume et si elle est trop faible, nous augmenterons son volume.
 
 [[analyzetrack]]
 === Utilisation de la fonction `analyzeTrack()`
@@ -22,16 +22,18 @@ include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
-
 Vous pouvez lire dans votre console que l'intensité sonore affichée est de 0.0967737948641.
 
-* L'intensité sonore peut aller de 0 (silence) à 1 (intensité sonore maximale). 
-* Parfois, vous verrez un nombre comme ceci : 1.74630733714e-05. C'est ce qu'on appelle la notation scientifique. Vous voyez le e-05 à la fin ? Cela signifie écrire cinq zéros avant le nombre 17... Ceci correspond à 0,0000174630733714. 
-* La plupart des sons auront une intensité sonore inférieure à 0.4. 
+* L'intensité sonore peut aller de 0 (silence) à 1 (intensité sonore maximale).
+* Parfois, vous verrez un nombre comme ceci : 1.74630733714e-05. C'est ce qu'on appelle la notation scientifique. It means move the decimal to the left 5 places (replacing with 0 if needed). Ceci correspond à 0,0000174630733714.
+* La plupart des sons auront une intensité sonore inférieure à 0.4.
 
 La fonction `analyzeTrack()` prend 2 arguments :
 * le numéro de piste,
-* le paramètre que nous voulons analyser. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
+* le paramètre que nous voulons analyser.
+
+. *track*: Track number
+. *feature*: Analysis constant, like `RMS_AMPLITUDE`
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -55,63 +57,74 @@ Les *booléens* sont un type de données. Le type de données booléen peut pren
 [role="curriculum-python"]
 --
 Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 = True`), soit utiliser une comparaison. Pour faire une comparaison, nous utilisons un *opérateur de comparaison*. Voici les opérateurs de comparaison :
+
 [cols="^h,1"]
 |===
 |==
-| est identique à
+|est identique à
+
 |!=
-| n'est pas identique à
+|n'est pas identique à
+
 |>
-| est supérieur à
+|supérieur à
+
 |>=
-| est supérieur ou égal à
+|supérieur ou égal à
+
 |<
-| est inférieur à
+|inférieur à
+
 |\<=
-| est inférieur ou égal à
+|inférieur ou égal à
 |===
 
 Notez la différence entre :
 
 1. comparer deux valeurs pour voir si elles sont identiques : `==`
-2. l'affectation d'une valeur à une variable `=`
+1. l'affectation d'une valeur à une variable `=`
 --
 
 [role="curriculum-javascript"]
 --
 Pour créer un booléen, vous pouvez soit initialiser une variable (`variable1 = true;`), soit utiliser une comparaison. Pour faire une comparaison, nous utilisons un *opérateur de comparaison*. Voici les opérateurs de comparaison :
+
 [cols="^h,1"]
 |===
-| ===
-| est identique à
+|===
+|est identique à
+
 |!==
-| n'est pas identique à
+|n'est pas identique à
+
 |>
-| supérieur à
+|supérieur à
+
 |>=
-| supérieur ou égal à
+|supérieur ou égal à
+
 |<
-| inférieur à
+|inférieur à
+
 |\<=
-| inférieur ou égal à
+|inférieur ou égal à
 |===
 
 Notez la différence entre :
 
 1. comparer deux valeurs pour voir si elles sont identiques : `===`
-2. l'affectation d'une valeur à une variable `=`
+1. l'affectation d'une valeur à une variable `=`
 --
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
-video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video17ajs]]
-video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
 
 // this video will be cut at 2' to delete the section about boolean operators//
-
 
 [role="curriculum-python"]
 .ENTRAÎNEZ-VOUS
@@ -119,7 +132,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 * Créez un nouveau script et ajouter des sons sur deux pistes.
 * Imprimez dans la console `True` si la première piste est plus forte que la seconde piste et `False` sinon.
 * Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `True`, sinon, imprimez dans la console `False`.
-* Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `True` ou `False`, afin que vous puissiez savoir ce qui est `True` ou `False` lorsque vous lirez la console.
+* Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `True` ou `False`, afin que vous puissiez savoir ce qui est `True` ou `False` lorsque vous lirez la console. For example, you can first print the track number and then 'True' or 'False'.
 ****
 
 [role="curriculum-javascript"]
@@ -128,7 +141,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 * Créez un nouveau script et ajouter des sons sur deux pistes.
 * Imprimez dans la console `true` si la première piste est plus forte que la seconde piste et `false` sinon.
 * Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `true`, sinon, imprimez `false` dans la console.
-* Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `true` ou `false`, afin que vous puissiez savoir ce qui est `true` ou `false` lorsque vous lirez la console.
+* Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `true` ou `false`, afin que vous puissiez savoir ce qui est `true` ou `false` lorsque vous lirez la console. For example, you can first print the track number and then 'true' or 'false'.
 ****
 
 Voici un exemple :
@@ -156,7 +169,7 @@ Remarque : dans cet exemple, nous avons utilisé des instructions d'affichage av
 
 Qu'est-ce qu'une instruction conditionnelle ? Une *instruction* correspond à une commande pour l'ordinateur. Une *instruction conditionnelle* est une instruction qui ne doit être exécutée que si une certaine *condition* est remplie (vraie). Par exemple, si vous programmez un robot pour qu'il s'arrête devant un obstacle, la condition sera "Y a-t-il un obstacle ?". Si oui, il doit s'arrêter. Si non, ne faites rien (continuez).
 
-Voyez ci-dessous un exemple d'instruction conditionnelle. Notez la similitude avec une boucle « for » :
+Voyez ci-dessous un exemple d'instruction conditionnelle.
 
 [role="curriculum-python"]
 [source,python]
@@ -174,10 +187,11 @@ include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ****
 * Créez un nouveau script avec deux pistes.
 * Si la première piste est plus forte que la deuxième, réduisez alors son volume. Vous aurez besoin des fonctions `analyzeTrack()` et `setEffect()`, en plus d'une instruction « if ».
-* Vous aurez besoin d'un gain négatif (entre -1 et -60dB) pour réduire le volume. 
+* Vous aurez besoin d'un gain négatif (entre -1 et -60dB) pour réduire le volume.
 ****
 
 Voici un exemple :
+
 [role="curriculum-python"]
 [source,python]
 ----
@@ -189,7 +203,8 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 ----
 include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
-Il est possible de vérifier plusieurs conditions et d'exécuter des instructions différente selon chaque condition. Vous pouvez ajouter autant de conditions que vous le souhaitez. Nous utiliserons la syntaxe suivante :
+
+Il est possible de vérifier plusieurs conditions et d'exécuter des instructions différente selon chaque condition. You can chain multiple conditions together. Nous utiliserons la syntaxe suivante :
 
 [role="curriculum-python"]
 [source,python]
@@ -206,7 +221,7 @@ include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 [[mixingyourtracks]]
 === Mixer vos pistes
 
-Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie le volume des pistes pour qu'elles soient bien équilibrées. 
+Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie le volume des pistes pour qu'elles soient bien équilibrées.
 
 [role="curriculum-python"]
 .ENTRAÎNEZ-VOUS
@@ -216,7 +231,7 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 * Vous pouvez utiliser la fonction `makeBeat()` et une boucle « for » pour ajouter des percussions.
 * Choisissez votre piste « principale ». Il peut s'agir de votre mélodie ou d'une piste que vous souhaitez mettre en évidence.
 * Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. `analyzeTrack()` renvoie une moyenne alors que les percussions sont des rafales de son, donc une moyenne n'évalue pas vraiment l'intensité sonore.
-* Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `print('Est-ce que le numéro de piste' + str(track) + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?". La fonction `str()` permet de convertir un nombre (p. ex. : 1) en une chaîne de caractères (p. ex. : '1').
+* Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `print('Est-ce que le numéro de piste' + str(track) + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?". La fonction `str()` permet de convertir un nombre (p. ex.
 ****
 
 [role="curriculum-javascript"]
@@ -226,18 +241,18 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 * Ajoutez des sons, au moins trois pistes, pour un minimum de 16 mesures.
 * Vous pouvez utiliser la fonction `makeBeat()` et une boucle « for » pour ajouter des percussions.
 * Choisissez votre piste « principale ». Il peut s'agir de votre mélodie ou de la piste que vous souhaitez mettre en évidence.
-* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions.
+* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. `analyzeTrack()` renvoie une moyenne alors que les percussions sont des rafales de son, donc une moyenne n'évalue pas vraiment l'intensité sonore.
 * Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `println('Est-ce que le numéro de piste' + track + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?".
 ****
 
-
 Let's review some vocabulary:
+1.
+
 1. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
-2. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
-3. *Statements*: instructions for the computer to execute.
+1. *Expression*: A combination of values, constants, variables, operators, and functions. L'ordinateur évalue les expressions pour produire un résultat, généralement une valeur numérique ou booléenne unique.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
+1. *Statements*: instructions for the computer to execute.
 
-
-Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
+Voici un exemple de mixage automatisé. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
 
 [role="curriculum-python"]
 [source,python]
@@ -251,28 +266,29 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
 include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 ----
 
+{nbsp} +
 
 [[chapter6summary]]
 === Résumé du chapitre 6
 
 [role="curriculum-python"]
 * La fonction `analyzeTrack()` nécessite deux arguments :
-le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie le volume de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la brillance de la piste.
+le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la brillance de la piste.
 * Le type de données *booléen* peut seulement prendre deux valeurs : `True` ou `False`.
 * Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
 * `==` évalue si deux valeurs sont égales, alors que `=` affecte une valeur à une variable.
 * Un *opérateur * est un caractère qui représente une action.
 * Les *expressions* sont évaluées par l'ordinateur pour produire une valeur.
 * Une *instruction* correspond à une commande pour l'ordinateur.
-* Une *condition* est une expression qui peut être évaluée `True` (vraie) ou `False` (fausse). 
-* L'instruction _if_ n'exécute son bloc de code que lorsque sa condition est `True` (vraie). 
+* Une *condition* est une expression qui peut être évaluée `True` (vraie) ou `False` (fausse).
+* L'instruction _if_ n'exécute son bloc de code que lorsque sa condition est `True` (vraie).
 * Dans le cas où une condition _if_ est `False`, une instruction facultative _else_ permet l'exécution d'un bloc de code alternatif.
 
 [role="curriculum-javascript"]
-* La fonction `analyzeTrack()` prend deux arguments :
-le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la hauteur de la piste.
+* La fonction `analyzeTrack()` nécessite deux arguments :
+le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la brillance de la piste.
 * Le type de données *booléen* peut valoir seulement deux valeurs : `true` ou `false`.
-* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* Notez la similitude avec une boucle « for » :
 * `==` évalue si deux valeurs sont égales, alors que `=` affecte une valeur à une variable.
 * Un *opérateur * est un caractère qui représente une action.
 * Les *expressions* sont évaluées par l'ordinateur pour produire une valeur.
@@ -281,13 +297,13 @@ le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`,
 * L'instruction _if_ n'exécute son bloc de code que lorsque sa condition est `true` (vraie).
 * Dans le cas où une condition _if_ est `false`, une instruction facultative _else_ permet l'exécution d'un bloc de code alternatif.
 
-
 [[chapter-questions]]
 === Questions
 
 [question]
 --
 Parmi les éléments suivants, lesquels sont des booléens ?
+
 [answers]
 * `5+4 == 5`
 * `measure = 1`
@@ -299,10 +315,12 @@ Parmi les éléments suivants, lesquels sont des booléens ?
 [question]
 --
 Quelle serait la valeur de retour du bloc de code suivant (qu'est-ce qui s'afficherait dans la console) ?
+
 [source,python]
 ----
 include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 ----
+
 [answers]
 * 10
 * 5
@@ -314,10 +332,12 @@ include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 [question]
 --
 Quelle serait la valeur de retour du bloc de code suivant (qu'est-ce qui s'afficherait dans la console) ?
+
 [source,javascript]
 ----
 include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 ----
+
 [answers]
 * 10
 * 5
@@ -328,6 +348,7 @@ include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 [question]
 --
 Qu'est-ce que le mixage ?
+
 [answers]
 * Adapter le volume de chaque piste pour qu'elles paraissent bien équilibrées
 * Adapter la hauteur de chaque piste pour qu'elles paraissent bien équilibrées
@@ -338,6 +359,7 @@ Qu'est-ce que le mixage ?
 [question]
 --
 Combien de conditions pouvez-vous vérifier avec une instruction conditionnelle ?
+
 [answers]
 * n'importe quel nombre
 * 1 condition
