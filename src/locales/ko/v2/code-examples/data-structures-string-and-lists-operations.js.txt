@@ -1,0 +1,34 @@
+// String and Lists Operations: Showing what we can do with arrays and strings
+
+// Setup
+setTempo(120);
+
+// Creating my beat strings and arrays
+var stringA = "0+++----0+++--0+";
+var stringB = "0-0-0-0-----0-0-";
+var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
+var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
+
+// Print the second character of each string.
+println(stringA[1]);
+println(stringB[1]);
+
+// Print the last element of your arrays.
+println(soundsA[soundsA.length - 1]);
+println(soundsB[soundsB.length - 1]);
+
+// Create and print stringC, the concatenation of stringA and stringB.
+var stringC = stringA + stringB;
+println(stringC);
+
+// Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
+println(soundsC);
+
+// Create and print stringD, the slice of stringC from the second to the fifth characters included.
+var stringD = stringC.substring(1, 5);
+println(stringD);
+
+// Create and print soundsD, the slice of stringC from the third to the last elements included.
+var soundsD = soundsC.slice(2, soundsC.length);
+println(soundsD);
