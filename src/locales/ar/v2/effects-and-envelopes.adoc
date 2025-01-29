@@ -1,13 +1,16 @@
 [[effectsandenvelopes]]
-== المؤثرات والمغلفات
+== Effects and Envelopes
+
 :nofooter:
 
-يسمح EarSketch للملحن بتغيير مقاطع الصوت لإنتاج أصوات جديدة وفريدة من نوعها. يتم تحقيق ذلك من خلال الدالة `setEffect()` ، وهي محور هذا الفصل.
+EarSketch lets the composer alter existing sounds to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.
 
 [[effectsinearsketch]]
-=== استخدام التأثيرات في EarSketch
+=== Use Effects in EarSketch
 
-*Effects*التأثيرات, تسمح لنا بتغيير جودة الأصوات. على غرار الطريقة التي نضيف بها مُنقي يُؤدي إلى تغيير الصورة ، فإن إضافة تأثير صوتي يغير الصوت. على سبيل المثال ، يمكنك تغيير مستوى الصوت وإضافة بعض صدى الصوت أو صدى ...
+:nofooter:
+
+*Effects* allow us to change qualities of sounds. Similar to how adding a filter alters a photo, adding an audio effect changes the sound. For example, you can change the volume, add some echo or reverb, etc.
 
 [role="curriculum-python curriculum-mp4"]
 [[video4py]]
@@ -17,88 +20,98 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-نستخدم الوظيفة`setEffect()` ، والتي تأخذ 4 عوامل ، على غرار `fitMedia()`:
+We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
 
-. *trackNumber*: المسار الذي سيتم إضافة التأثير إليه.
-. *effectName*: التأثير المحدد المُستخدم.
-. *effectParameter*: العامل أو الإعداد للتأثير.
-. *effectValue*: قيمة العامل: رقم في نطاق معين. النطاق يعتمد على عامل التأثير.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 
-.تدريب
+.PRACTICE
 ****
-اكتب أغنية جديدة مع مسارين وعدّل مستوى الصوت لكلا المسارين باستخدام الدالة ` setEffect () `. 
-في هذه الحالة ، يكون اسم التأثير (الوسيطة الثانية) هو VOLUME ، وعامل التأثير (الوسيطة الثالثة) هي GAIN. قيمة التأثير (الوسيطة الرابعة) هي عدد ديسيبل (ديسيبل) ، بين -60 و +12. 
+Write a new song with two tracks and modify the volume for both of the tracks using the `setEffect()` function.
+In that case, the effect name (second argument) is `VOLUME`, and the effect parameter (third argument) is `GAIN`. The effect value (fourth argument) is a number of decibels (dB), between `-60` and `+12`.
 ****
 
-فيما يلي مثال:
+Here is an example below:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.py.txt[]
+include::code-examples/effects-and-envelopes-volume-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-volume-effect.js.txt[]
+include::code-examples/effects-and-envelopes-volume-effect.js.txt[]
 ----
 
-لقد' رأينا تأثير `VOLUME`. دعونا 'ننظر الآن إلى `DELAY`. استمع إلى مقطعين أدناه ، أحدهما بدون تأثير والآخر بتأثير *delay*.
+We've seen the `VOLUME` effect. Let's now look at `DELAY`. Listen to the 2 clips below, one without and one with a *delay* effect applied.
 
-بدون تأثير:
+No effect:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reference.mp3</div>
 ++++
 
-مع تأثير Delay:
+Delay effect:
+
 ++++
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-في هذه الحالة ، يكون اسم التأثير (الوسيطة الثانية) هو ` DELAY ` ، ويمكن أن يكون عامل التأثير (الوسيطة الثالثة) إما ` DELAY_TIME ` (كم من الوقت قبل صدى "الإجابات") أو ` DELAY_FEEDBACK ` (مدى ارتفاع صدى صوتك). قيمة ` DELAY_TIME ` بالمللي ثانية (1000 مللي ثانية هي ثانية واحدة) وقيمة ` DELAY_FEEDBACK ` هي رقم بين -120 و -1.
+In that case, the effect name (second argument) is `DELAY`, and the effect parameter (third argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between `-120` and `-1`.
 
-.تدريب
+For example, `setEffect(1, DELAY, DELAY_TIME, 500)` puts a delay onto track 1 with the delay/echo lasting for 500 ms.
+
+.PRACTICE
 ****
-. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#, effects>>
-. ثم قم بتشغيل المقطع البرمجي أدناه واستمع إلى الموسيقى بدون تأثيرات
-. ثم قم بإلغاء التعليق عن السطر الأول ` setEffect () ` واستمع إلى الفرق
-. ثم قم بإلغاء التعليق عن السطر الثاني ` setEffect () ` واستمع إلى الفرق ("uncomment" تعني محو صيغة التعليق ، ` # ` أو ` // ` من كتلة من التعليمات البرمجية)
-لاحظ أن وقت ، 500delay مللي ثانية ، هو طول نبضة واحدة. نظرًا لأن الإيقاع يبلغ 120 نبضة في الدقيقة ، فهناك نبضة واحدة كل 60/120 = 1/2 ثانية. 1 ثانية تساوي 1000 مللي ثانية ، لذا 1/2 ثانية هي 1000/2 = 500 مللي ثانية.
-يمكنك محاولة تعديل وقت الdelay ومراقبة ما إذا كانت موسيقاك تبدو أفضل أم لا.
+. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#,effects>>
+. Then run the code below and listen to the music without effects
+. Then uncomment the first `setEffect()` line and listen to the difference
+. Then uncomment the second `setEffect()` line and listen to the difference ("uncomment" means to erase the comment syntax, `#` or `//` from a block of code)
+Note that the delay time, 500ms, is the length of one beat. Since the tempo is 120 beats per minute, there is one beat every 60/120 = 1/2 seconds. 1 second is 1000ms, so 1/2 second is 1000/2 = 500ms.
+You can try modifying the delay time and observing if your music sounds better or not.
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.py.txt[]
+include::code-examples/effects-and-envelopes-delay-effect.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-delay-effect.js.txt[]
+include::code-examples/effects-and-envelopes-delay-effect.js.txt[]
 ----
 
-[[functionsandmoreeffects]]
-=== دوال وتأثيرات أكثر
+{nbsp} +
 
-حتى الآن '، كنت تستخدم العديد من الدوال في EarSketch مثل ` fitMedia () ` أو ` setEffect () `. لاحظ أن أسماء الدوال تبدأ دائمًا بحرف صغير ، وغالبًا ما تكون فعل. تُرشد الأقواس الحاسوي أن * يستدعي * ، أو * ينفذ * ، الدالة. * العوامل * (تسمى أحيانًا الوسائط) ، داخل الأقواس ، مفصولة بفواصل.
+[[functionsandmoreeffects]]
+=== Functions and more effects
+
+So far, you've been using several functions in EarSketch like `fitMedia()` or `setEffect()`. Note that the function names always start with a lower-case letter, and are often a verb. The parentheses tell the computer to *call*, or *execute*, the function. *Arguments*, or parameters, between the parentheses are separated by commas.
 
 [role="curriculum-python"]
-* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` تستقبل عوامل. هم جزء من *Application Programming Interface*او, *API*. تضيف EarSketch أو EarSketch API ميزات موسيقية إلى لغة Python. مثال آخر على API هو Google Maps API: مجموعة من الأدوات لتضمين الخرائط في مواقع الويب أو التطبيقات.
-* في فصل لاحق ، ستتعلم' أيضًا كيفية إنشاء الدوال المخصصة الخاصة بك.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. EarSketch, or the EarSketch API, adds musical features to Python. Another example of API is the Google Maps API: a set of tools for embedding maps into websites or apps.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
 [role="curriculum-javascript"]
-* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` تستقبل عوامل. هم جزء من *Application Programming Interface*او, *API*. تضيف EarSketch أو EarSketch API ميزات موسيقية إلى لغة JavaScript. مثال آخر على API هو Google Maps API: مجموعة من الأدوات لتضمين الخرائط في مواقع الويب أو التطبيقات.
-* في فصل لاحق ، ستتعلم' أيضًا كيفية إنشاء الدوال المخصصة الخاصة بك.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. EarSketch, or the EarSketch API, adds musical features to JavaScript. Another example of API is the Google Maps API: a set of tools for embedding maps into websites or apps.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
-يمكن أن تحتوي عوامل الدالة على نوع بيانات محدد. ترتيب العوامل مهم. فيما يلي بعض أمثلة لأنواع البيانات:
+The arguments of the function can each have a specific data type. The order of the arguments is important. Here are some data type examples:
 
-* *Numbers- ارقام*. *Integers- عدد صحيح*(أو "int") هي أعداد صحيحة ، مثل 0 أو 5 أو -26. *Floating point-اعداد عشرية* أعداد عشرية مثل 0.125 أو 21.0-. على سبيل المثال ، فإن وسيطات/ عوامل رقم المسار وبدء القياس والنهاية للدالة ` fitMedia () ` كلها أرقام.
-* *Strings-سلسلة*. يتم استخدام سلسلة إيقاعية مثل ` "0000 ---- 0000 ----" ` ، كعامل في دالة ` makeBeat () `.
+* *Numbers*
+** *Integers* are whole numbers, like 0, 5, or -26. Example: track numbers
+** *Floating point* numbers are rational numbers like 0.125 or -21.0. Example: volume of -4.2dB
+* *Strings* represent text. Example: `"0000----0000----"`
 
-الآن ، دعونا'نستمر باللعب مع الدالة ` setEffect () `. يوضح الفيديو التالي كيفية استخدام بعض التأثيرات:
+Now, let's play more with the `setEffect()` function. The following video shows how to use some effects:
 
 ////
 VIDEO IS BEEING MADE
@@ -106,81 +119,81 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-*Reverb-تردد *(اختصار لصدى) هو صوت يرتد من الجدران ويعود إلى أذنيك. يمنح صوتك إحساسًا بالمساحة. فكر في الفرق بين التحدث في غرفة نوم صغيرة والتحدث في كنيسة كبيرة. كلما كانت الغرفة أكبر و "أكثر انبساطًا" ، كلما استغرقت الموجات وقتًا أطول للعودة إلى أذنيك ، ومن هنا يأتي صوت "غرفة الصدى الكبيرة". يحتوي التأثير ` REVERB ` على عوامل للتحكم في وقت الاضمحلال (` REVERB_DECAY `) ومقدار التأثير الموجود (` MIX `).
+*Reverb* (short for reverberation) is sound bouncing off walls and returning to your ears. It gives a sense of space to your sound. Think about the difference between talking in a small bedroom and talking in a large church. The larger and "flatter" the room, the longer it takes the waves to return to your ears, hence that "large echoey room" sound. The `REVERB` effect has parameters to control the decay time (`REVERB_DECAY`) and amount of the effect present (`MIX`).
 
-استمع إلى المقاطع أدناه لسماع نتيجة إضافة صدى إلى مسار:
+Listen to the clips below to hear the result of adding reverb to a track:
 
-بدون تأثير:
+No effect:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
-تأثير الصدى:
+Reverb effect:
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbEffect.mp3</div>
 ++++
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-Go to this chapter for a complete list of effects: <</en/v1/every-effect-explained-in-detail#, effects>>.
-قم بإنشاء أغنية ذات تأثير صوت وتأثيران آخران. لا تنس' كتابة ما تفعله في التعليقات وإنشاء متغيرات عند الضرورة.
+Go to <</en/v1/every-effect-explained-in-detail#,this chapter>> for a complete list of effects.
+Create a song with a volume effect and two other effects. Don't forget to write what you are doing in the comments and to create variables when necessary.
 ****
 
+[[effectsandenvelopes2]]
+=== Effects and Envelopes
 
-[[effectsandenvelopes]]
-=== المؤثرات والمغلفات
+You've started using effects, and maybe you'd like for one effect to change over time. For example, you might want a fade in (volume getting higher) at the beginning of your song.
 
-في بعض الأحيان' ، نريد تغيير' التأثير بمرور الوقت:على سبيل المثال ، نريد أن يتلاشى الصوت(حجم الصوت يرتفع) في بداية الأغنية.
+*Envelopes* allow us to define how an effect changes over time.
 
-*Envelopes*تسمح لنا بتحديد كيفية تغير التأثير بمرور الوقت. 
-
-سنستخدم زوجان وقت- قيمة. يحتوي كل زوج على قيمة تأثير ومقياس مناسب. على سبيل المثال ، (-60 ، 1 ، 0 ، 3) تعني أن النقطة موضوعة عند القيمة -60 عند المقياس 1 ، ونقطة أخرى توضع عند القيمة 0 عند المقياس 3. ينشئ المغلف خطًا بين هذه النقاط ، يسمى * ramp -منحدر *:
+We will use two value-time pairs. Each pair contains an effect value and a corresponding measure. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. The envelope creates a line between these points, called a *ramp*:
 
 [[envelopepoints]]
-.مغلفات (مع ملاحظات) في EarSketch
-[caption="Figure 5.1: "]
+.An annotated envelope in EarSketch
+[caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-لتغيير مغلف ، تحتاج فقط إلى الدالة ` setEffect () ` مع 7 عوامل. العوامل الأربعة الأخيرة هي زوجان قيمة الوقت.
+To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
 
-. trackNumber
-- رقم المسار
-. effectName-اسم التأثير
-. effectParameter-عامل التأثير
-. effectStartValue-تأثير بداية القيمة
-. effectStartLocation-تأثير بداية الموقع
-. effectEndValue-تأثير نهاية القيمة
-. effectEndLocation-تأثير بداية الموقع
+. track
+. type
+. parameter
+. startValue
+. start
+. endValue
+. end
 
-العوامل الثلاثة الأخيرة من أصل 7 هي * optional parameters-عوامل اختيارية *. إذا تُركت بدون تحديد ، كما كان الحال عندما استخدمنا ` setEffect () ` مع 4 عوامل فقط ، فسيتم تطبيق التأثير على المسار بأكمله.
+The last three out of seven parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only four parameters, the effect is applied to the entire track.
 
-هذا مثال على fade-التلاشي:
+Here is an example of fade in:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-envelopes.py.txt[]
+include::code-examples/effects-and-envelopes-envelopes.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-envelopes.js.txt[]
+include::code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
-شاهد الآن هذا الفيديو لأمثلة المغلفات الأخرى
+Now watch this video for other envelope examples
 
 [role="curriculum-python curriculum-mp4"]
 [[video5b]]
 video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
-
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
+include::code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
 ----
-
 
 [role="curriculum-javascript curriculum-mp4"]
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
@@ -188,86 +201,91 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
+include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 ----
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-أنشئ أغنية جديدة. استخدم حلقة for لإضافة غلاف إلى جميع المسارات (على سبيل المثال ، التلاشي والتلاشي لجميع المسارات) ، أو لتكرار كل تأثير في نفس المسار. يمكنك استخدام أي تأثير تريده. 
-اجعل صديقك يستمع إلى أغنيتك ، مع وبدون التأثير (لسماع أغنيتك بدون تأثير ، قم بتحويل الاسطر في المقطع البرمجي التي تحد التأثير الى ملاحظة). يجب على صديقك تخمين التأثير الذي أضفته.
+Create a new song. Use one `for` loop to add an envelope to all the tracks (for example: fade in and fade out for all your tracks), or to repeat an effect on the same track. You can use any effect you like.
+Have your neighbor listen to your song, with and without the effect (to hear your song without the effect, comment out the lines that create the effect). Your neighbor has to guess which effect you added.
 ****
 
-مثالا على ذلك. يضيف كل تكرار للحلقة مقطعًا طويلاً من المغلف بقياس واحد. يؤدي التغيير التلقائي لعامل GAIN إلى حدوث شدة تسوس إيقاعي. هذا تأثير شائع على موسيقى الرقص الإلكترونية EDM ، موضحة في أغنيةhttps://www.youtube.com/watch?v=Us_U-d2YN5Y[ -Rhythm إيقاع ] لLvly. حاول إيقاف تشغيل التأثير وتشغيله في DAW لسماع تأثير التأثير (باستخدام زر "bypass-تجاوز" على يسار قناة التأثير في DAW).
-
+Below is an example of the above practice. Each iteration of the loop adds a one measure long segment of the envelope. Automating the GAIN parameter creates rhythmic volume fades. Try toggling the effect bypass in the DAW to hear the difference the effect makes (the "bypass" button to the left of the effect track in your DAW).
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
+include::code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
+include::code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
 ----
 
-وهنا مثال على التلاشي والتلاشي على جميع المسارات:
+And here is an example of fade in and fade out on all the tracks:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
 ----
+
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 ----
 
+{nbsp} +
 
 [[chapter5summary]]
-=== الفصل 5 ملخص
+=== Chapter 5 Summary
 
-* *Effects-تأثيرات *تغيير صفات الصوت لجعلها أكثر تميزًا.
-* *Volume- الصوت *يغير الحجم الصوت. *Delay*يخلق صدى. *Reverb-صدى *يجعلك تشعر وكأن الصوت يتم تشغيله في غرفة كبيرة. *Panning*يضع الموسيقى الخاصة بك على الجانب الأيسر أو الأيمن.
-* يتم تنفيذ التأثيرات في EarSketch باستخدام الدالة ` setEffect () `. تركيبها هو ` setEffect (trackNumber ، effectName ، effectParameter ، effectValue) `.
-** *trackNumber:*المسار التي سيتم إضافة التأثير إليه.
-** *effectName:*التأثير المحدد نفسه.
-** *effectParameter:*الإعداد المستخدم للتأثير.
-** *effectValue:*قيمة العامل: رقم في نطاق معين.
-* *Functions*تحتوي على تعليمات لجهاز الكمبيوتر لتنفيذها. يتم إرسال البيانات إلى الدوال بواسطة *arguments- عوامل* ، مما يؤثر على كيفية تنفيذ الدالة. صيغة *call* لدالة ذات عاملين هي: `myFunction(argument1, argument2)`. مثال على بناء الجملة المستخدمة في دالة *call* مع 4 عوامل هو `makeBeat(kick, 2, measure, kickBeat)`.
-* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#, effects>>, along with descriptions for each.
-* *Envelopes-مغلفات *تحديد كيفية تغير عامل التأثير بمرور الوقت. يتم تعريفها باستخدام أزواج القيمة الزمنية ، مثل _ (القيمة-value ، الوقت-time ، القيمة-value ، الوقت-time) _.
-* بالنسبة للمغلف ، فإن الوسيطات المكونة من 7 عوامل ` setEffect () ` هي: `setEffect(trackNumber, effectName, effectParameter, startEffectValue, effectStartLocation, endEffectValue, effectEndLocation)`.
-
+* *Effects* change the qualities of a sound to make them unique.
+* *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
+* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(track, type, parameter, value)`.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
+* *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
+* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
+* *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
+* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 [[chapter-questions]]
-=== الأسئلة
+=== Questions
 
 [question]
 --
-ما الذي يسمح لك التأثير بالقيام به في EarSketch؟
+What does an effect allow you to do in EarSketch?
+
 [answers]
-* غيّر نوعية الصوت داخل المشروع
-* أضف صوت إلى المسار
-* انشئ قرع طبلة
-* غيّر وتيرة الأغنية
+* Change the qualities of sound within a project
+* Add a sound to a track
+* Create a drum beat
+* Change the tempo of a song
 --
 
 [question]
 --
-أي مما يلي ليس وسيط ` setEffect () `؟
+Which of these is NOT a `setEffect()` argument?
+
 [answers]
-* Clip Name-اسم المقطع
-* Effect Name-اسم التأثير
-* Effect Value-قيمة التأثير
-* Track Number-رقم المسار
+* Clip Name
+* Effect Name
+* Effect Value
+* Track Number
 --
 
 [question]
 --
-كيف يمكن ضبط وقت تأخير delay time تأثير التأخير ، في القناة الثالثة ، على 50 مللي ثانية؟
+How would you set the delay time of a delay effect on track 3 to 50 milliseconds?
+
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
 * `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
@@ -277,24 +295,27 @@ include::../../en/v2/code-examples/effects-and-envelopes-fade-in-and-fade-out.js
 
 [question]
 --
-أي مما يلي ليس معاملًا مستخدمًا لتعريف مغلفات باستخدام الدالة ` () setEffect `؟
+Which of the following is not a parameter used with `setEffect()` envelopes?
+
 [answers]
-* Clip Length-طول المقطع
-* Start Value-قيمه البدايه
-* Track Number-رقم المسار
-* Effect-تأثير
+* Clip Length
+* Start Value
+* Track Number
+* Effect
 --
 
 [question]
 --
-ماذا ستفعل الدالة التالية ` setEffect () ` ؟
+What would the following `setEffect()` function do?
+
 [source,python]
 ----
-setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
 ----
+
 [answers]
-* قم بزيادة مقدار التشويه على المسار 1 عبر 10 مقاييس.
-* تقليل مقدار التشويه على المسار 1 عبر 50 مقياسًا.
-* قم بزيادة حجم المسار 1 على 10 مقاييس.
-* قم بتقليل مستوى الصوت على المسار 1 عبر 50 مقياسًا.
+* Increase the amount of distortion on track 1 over 10 measures.
+* Decrease the amount of distortion on track 1 over 50 measures.
+* Increase the volume of track 1 over 10 measures.
+* Decrease the volume on track 1 over 50 measures.
 --
