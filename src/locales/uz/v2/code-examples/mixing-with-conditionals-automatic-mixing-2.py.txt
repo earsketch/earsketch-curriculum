@@ -1,0 +1,47 @@
+# Automatic Mixing 2: Using conditional statements to mix the tracks
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# Adding a melody and bass
+melody1 = YG_ALT_POP_GUITAR_3
+melody2 = YG_ALT_POP_GUITAR_1
+bass1 = YG_ALT_POP_BASS_1
+bass2 = DUBSTEP_SUBBASS_008
+strings = YG_HIP_HOP_STRINGS_4
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 1, 9, 17)
+fitMedia(bass1, 2, 1, 9)
+fitMedia(bass2, 2, 9, 17)
+fitMedia(strings, 3, 9, 17)
+
+# Adding percussion using makeBeat()
+beatKick = "0---0-----0-0---"
+beatSnare = "--0-0------000-"
+soundKick = OS_KICK02
+soundSnare = OS_SNARE06
+for measure in range(5, 17):
+    makeBeat(soundKick, 4, measure, beatKick)
+    makeBeat(soundSnare, 5, measure, beatSnare)
+
+# Mixing my tracks
+# First, we analyze the tracks for loudness
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+print("The loudness of track 1 is" + str(loudnessTrack1))
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+print("The loudness of track 2 is" + str(loudnessTrack2))
+loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
+print("The loudness of track 3 is" + str(loudnessTrack3))
+
+if loudnessTrack1 < loudnessTrack2:
+    # if track 1 is quieter than track 2 then we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5)
+    print("track 1 was quieter than track 2")
+elif loudnessTrack1 < loudnessTrack3:
+    # if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+    setEffect(1, VOLUME, GAIN, +5)
+    print("track 1 was quieter than track 3")
+else:
+    # if track 1 is louder than tracks 2 and 3, then we change nothing
+    print("track 1 was the loudest track already")
