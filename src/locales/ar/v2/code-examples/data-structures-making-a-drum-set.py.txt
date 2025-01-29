@@ -1,0 +1,18 @@
+# Making a drum set: Using lists with makeBeat()
+
+# Setup
+from earsketch import *
+setTempo(100)
+
+# Before, we had one track for every sound (measure 1):
+kick = OS_KICK05
+snare = OS_SNARE01
+kickBeat = "0+++----0+++----"
+snareBeat = "----0+++----0+++"
+makeBeat(kick, 1, 1, kickBeat)
+makeBeat(snare, 2, 1, snareBeat)
+
+# Now, we can combine them (measure 3):
+drums = [OS_KICK05, OS_SNARE01]
+beat = "0+++1+++0+++1+++"
+makeBeat(drums, 1, 3, beat)
