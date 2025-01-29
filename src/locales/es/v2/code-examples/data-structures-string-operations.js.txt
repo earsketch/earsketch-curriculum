@@ -11,7 +11,7 @@ function expansor(cadenaDeTiempos) {
     var nuevoRitmo = "";
     for (var i = 0; i < cadenaDeTiempos.length; i = i + 1) {
         porcionDelRitmo = cadenaDeTiempos.substring(0, i);
-        nuevoRitmo = nuevoRitmo + porcionDelRitmo;
+        newBeat = newBeat + beatSlice;
     }
     // Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
     return nuevoRitmo;
