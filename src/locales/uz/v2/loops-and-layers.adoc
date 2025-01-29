@@ -1,0 +1,414 @@
+[[loopandlayers]]
+== Loops and Layers
+
+:nofooter:
+
+Ushbu bobda siz `for` halqalari hamda kodingiz va musiqangizda takrorlashni qanday yaratishingiz haqida bilib olasiz. We will also cover musical layers and textures as well as some debugging tips.
+
+[[forloops]]
+=== `for` halqalari
+
+Musiqachilar andozani *halqada* qayta-qayta ijro etishi mumkin bo'lgani kabi, dasturchilar ham kompyuterdan vazifalarni qayta-qayta bajarishni so'rashi mumkin... *halqa* ichida! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
+
+Misol uchun, agar siz yaratgan `makeBeat()`ni takrorlamoqchi bo'lsangiz, `makeBeat()` funktsiyalarining bir necha qatorini yozish o'rniga, `for` halqasini yaratishingiz mumkin.
+
+////
+add new video
+more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
+in the "revamping videos" tab (includes link to script)
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
+----
+
+[role="curriculum-python"]
+Python-da `for` halqalari 3 ta asosiy qismdan iborat:
+
+[role="curriculum-javascript"]
+JavaScript-da `for` halqalari 4 ta asosiy qismdan iborat:
+
+[[loop-components-PY]]
+.The basic components of a for loop
+[role="curriculum-python"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_PY.png[Alt Text]
+
+[[loop-components-JS]]
+.The basic components of a for loop
+[role="curriculum-javascript"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_JS.png[Alt Text]
+
+[role="curriculum-python"]
+* *Loop Counter*: Halqa hisoblagichi sifatida foydalanish uchun o'zgaruvchini yaratadi. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
+* *Range*: halqa hisoblagichi uchun sonlar roʻyxatini tuzadigan funktsiya. The keyword `in` connects the loop counter to the range. `range()` ikkita argument oladi, boshlang'ich nuqta (o'z ichiga olgan holda) va tugash nuqtasi (mustasno holda): `range(startingNumber, endingNumber)`.
+* *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U `:` ikki nuqtadan so'ng to'g'ridan-to'g'ri *chekingan* (_tab_ tugmasi yordamida) barcha narsalarni o'z ichiga oladi.
+
+[role="curriculum-javascript"]
+* *Initialization*: Bu birinchi halqa ishga tushishidan oldin *halqa hisoblagichi* sifatida foydalanish uchun oʻzgaruvchini yaratadi.
+* *Loop Condition*: Bu halqa qayta ishga tushishini tekshiradi. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
+* *Takrorlanish bayonoti*: halqa hisoblagichini yangilaydigan bayonot. It counts up each time the loop repeats.
+* *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U jingalak qavslar `{ }` bilan o'ralgan va (_tab_ tugmasi yordamida) *chekingan*. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
+
+.PRACTICE
+****
+. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
+. Modify your code to go from measures `3` to `7`
+. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
+. So'ng hisoblagich nomini o'zgartiring, trek va o'lchovlarni tanlang va tegishli `for` halqasini yarating
+. Qo‘shningizga so'nggi `for` halqasini ko'rsating va ular sizning zarbangiz qaysi trekda yoqilganligini, unda qaysi o'lchovlar yoqilaganini va hisoblagichingizning nomini aniqlashlarini so‘rang.
+****
+
+{nbsp} +
+
+[[printstatements]]
+=== Print statements
+
+To better understand the flow of your code, you can use `print()`. It allows you to display information in the console when you run the code.
+
+[role="curriculum-python"]
+When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
+
+[role="curriculum-javascript"]
+When use provide data to `println()`, it is *evaluated*, or simplified it to its basic form.
+
+Then the data is converted into text and shown in the console.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+Before running the following code, try to guess what the console will display for each `print()` call.
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+Quyidagi kodni ishga tushirishdan oldin, har bir `println()` chaqiruvi uchun konsol nimani ko'rsatishini taxmin qilishga harakat qiling.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-printing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-printing.js.txt[]
+----
+
+Here, you will see in your console the following lines:
+
+----
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
+ok
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
+3
+ok
+4
+ok
+----
+
+and it ends there since measure has to be lower than 5, so 4 is your limit.
+
+[[controlflow]]
+=== Control Flow
+
+`For` halqalaridan qanday foydalanishga yana bir misol:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12bpy]]
+video::./videoMedia/012-03-ExampleLoop-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12bjs]]
+video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
+
+Biz musiqamizda takrorlanish uchun `fitMedia()` ni turli oʻlchov raqamlari bilan qayta-qayta kiritishimiz mumkin:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-no-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-no-loops.js.txt[]
+----
+
+We can use a `for` loop to create the exact same music with less code. Our counter here is `measure`. Note that the body of the loop contains two lines of code, both of which use the counter `measure`.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-loops.js.txt[]
+----
+
+*Interpretator* skriptni o‘qiydi va bajaradi. Uning bajarilish tartibi *boshqaruv oqimi* deb ataladi. It usually goes line by line, top to bottom. This is why we need to define variables before calling them in the code.
+
+Halqa bu tartibni o'zgartiradigan *boshqaruv oqimining bayonoti*. At the end of a loop body, it jumps back to the top of the loop.
+
+Bu animatsiya boshqaruv oqimining `for` halqasida qanday harakatlanishini va halqa hisoblagichining qiymati har bir *takrorlanish*da yoki halqa tanasining takrorlanishida qanday o‘zgarishini ko‘rsatadi:
+
+[[loop-py]]
+.Stepping through a for loop
+[role="curriculum-python"]
+[caption="Figure 4.2.1: "]
+image::../media/U1P2/LoopPy_updated.gif[Alt Text]
+
+.Stepping through a for loop
+[role="curriculum-javascript"]
+[caption="Figure 4.2.1: "]
+[[loop-js]]
+image::../media/U1P2/LoopJS_updated.gif[Alt Text]
+
+////
+Although it is valid syntax, a `*monospace bold phrase*` causes a build error in AsciidocFX. Might be something to do with DocBook conversion. No bold for now. May see how ES handles it in the future.
+
+BMW
+////
+
+`for` halqalari haqida yana bir qiziqarli narsa - bu o'sish.
+
+[role="curriculum-python"]
+O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida hisoblagichni oshirish uchun `range()` funktsiyasidan foydalandik. We've seen two parameters for range: `startingNumber` and `endingNumber`. `O'sish` deb nomlanuvchi ixtiyoriy uchinchi parametr mavjud. By default, `increment` is equal to one, but you can use it to increment by more than one. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
+
+[role="curriculum-javascript"]
+O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida biz `measure = measure + 1` atamalaridan foydalanganmiz. This increments the counter `measure` by `1` for on each repeat. Uni bir necha marta oshirish mumkin, masalan, `measure = measure + 4'.
+
+.PRACTICE
+****
+Before running the following code, try to guess what it will do.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-incrementing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-incrementing.js.txt[]
+----
+
+[role="curriculum-python"]
+Bu yerda biz `range()` funktsiyasidan foydalandik, lekin siz `measure = measure + 1` ifodasi yordamida oʻzgaruvchini oshirish (o'sish) yoki tushirishingiz (pasayish) ham mumkin. This means measure is now equal to its former value plus one. Siz o'sish uchun `+=` yoki pasayish uchun `-=` qisqartmasidan foydalanishingiz mumkin. Bu quyidagicha: `measure += 1` va `measure = measure + 1` teng iboralar. Shuningdek, `measure -=1` va `measure = measure- 1` teng iboralar
+
+[role="curriculum-python"]
+* `measure += 1` increments measure by 1. Agar siz bir nechta orttirmoqchi bo'lsangiz, `measure += 2` dan foydalaning.
+* `measure -= 1` decrements measure by 1. Agar siz birdan ortiq pasaytirmoqchi bo'lsangiz, `measure -= 2` dan foydalaning.
+
+[role="curriculum-javascript"]
+Bu yerda biz `measure = measure + 4` deb yozdik, yaʼni oʻlchov endi avvalgi qiymatiga nisbatan toʻrttaga ko'p qiymatga teng. Siz ba'zi qisqartmalardan foydalanishingiz mumkin:
+ `+=` (yoki pasayish uchun `-=`). The following is a shorthand method for incrementing (or decrementing) a counter:
+
+[role="curriculum-javascript"]
+* `measure++` yoki `measure += 1` o'lchovni 1 ga oshiradi. Agar siz bir nechta orttirmoqchi bo'lsangiz, `measure += 2` dan foydalaning.
+* `measure--` yoki `measure -= 1` o'lchovni 1 ga pasaytiradi. Agar siz birdan ortiq pasaytirmoqchi bo'lsangiz, `measure -= 2` dan foydalaning.
+
+[[debuggingtips]]
+=== Debugging Tips
+
+Programming is not only writing code. Bundan tashqari, undagi nosozliklarni tuzatish va xizmat ko'satish. Debugging means finding and solving bugs. Bugs are another term for errors in your code. Try following these steps if you run into an error:
+
+[role="curriculum-python"]
+. *Ishoralar uchun konsolni o'qing*.
+. *Locate the error in your code:* You have three options here.
+[role="curriculum-python"]
+.. If the console provided a line number, take a look at that line and the previous line in your code.
+.. Use the "comment out" method. Siz kod blokiga sharh sintaksisini qo'yish yoki *uni sharhlash* va kodni ishga tushirish orqali xatoni qisqartirishingiz mumkin. If there is no error, the error is somewhere in the commented block.
+.. *Chop etishda nosozliklarni tuzatish* xatoni aniqlash uchun ham ishlatilishi mumkin. Read through the problem section of your code and try to follow the logic. Insert `print()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
+. *Xatoni bartaraf qiling:* Xatolarni tekshiring va uni keltirib chiqargan kodni tahrirlang, so'ng uning to'g'riligini tekshirish uchun uni ishga tushiring.
+. *Yordam so'rang:* Agar xatoga ko'p vaqt sarflaganingizni aniqlasangiz, kimdandir yordam so'rang! A fresh pair of eyes can do wonders for spotting mistakes.
+
+[role="curriculum-javascript"]
+. *Ishoralar uchun konsolni o'qing*.
+. *Locate the error in your code:* You have three options here.
+[role="curriculum-javascript"]
+.. If the console provided a line number, take a look at that line and the previous line in your code.
+.. Use the "comment out" method. Siz kod blokiga sharh sintaksisini qo'yish yoki *uni sharhlash* va kodni ishga tushirish orqali xatoni qisqartirishingiz mumkin. If there is no error, the error is somewhere in the commented block.
+.. *Chop etishda nosozliklarni tuzatish* xatoni aniqlash uchun ham ishlatilishi mumkin. Read through the problem section of your code and try to follow the logic. Mantiqqa ishonchingiz komil bo'lmagan, o'zgaruvchilar qiymatini olish va dastur holatini tekshirish uchun `println()` chaqiruvlarini kiriting. This helps you check your understanding of the program against what is actually happening.
+. *Xatoni bartaraf qiling:* Xatolarni tekshiring va uni keltirib chiqargan kodni tahrirlang, so'ng uning to'g'riligini tekshirish uchun uni ishga tushiring.
+. *Yordam so'rang:* Agar xatoga ko'p vaqt sarflaganingizni aniqlasangiz, kimdandir yordam so'rang! A fresh pair of eyes can do wonders for spotting mistakes.
+
+Below, we walk through an example of printing variables to help debug a script:
+
+[role="curriculum-python curriculum-mp4"]
+[[video15py]]
+video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video15js]]
+video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
+
+1-Bobda siz uchratishingiz mumkin bo'lgan xatolar ro'yxatini ko'rdingiz. Here are some other errors that you might encounter:
+
+[role="curriculum-python"]
+. *O'zgaruvchilarni ishga tushirish*: O'zgaruvchini skriptda foydalanishdan avval uni ishga tushirish kerak. This means you should assign a value to your variable before using it later.
+. *Sharhlar:* Noto'g'ri sharhlash <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>ga sabab bo'ladi. Python sharhlari `#` belgisi bilan boshlanishi kerak.
+. *Chekinish:* Python-da chekinish juda muhim. `for` halqa jismlarida chekinish bo`lmasa, <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>> hosil bo`ladi.
+. *Qo'shtirnoqlar:* Ochish yoki yopish qo'shtirnoq belgisini unutish ham <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
+. *Argumentlar:* Funktsiya argumentlari bilan bog'liq xatolar barcha turdagi xatolarga olib kelishi mumkin. You must provide the correct number and type of arguments to a function call.
+
+[role="curriculum-javascript"]
+. *O'zgaruvchilarni ishga tushirish*: O'zgaruvchini skriptda foydalanishdan avval uni ishga tushirish kerak. This means you should create it with `var` before using it later.
+. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
+. *Sharhlar:* Noto'g'ri sharhlash <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>ga sabab bo'ladi. JavaScript sharhlari `//` belgisi bilan boshlanishi kerak.
+. *Qo'shtirnoqlar:* Ochish yoki yopish qo'shtirnoq belgisini unutish ham <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
+. *Argumentlar:* Funktsiya argumentlari bilan bog'liq xatolar barcha turdagi xatolarga olib kelishi mumkin. You must provide the correct number and type of arguments to a function call.
+
+Turli xil xatolarning toʻliq tavsifi va ularni oldini olish uchun nima qilishingiz mumkinligi haqida <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>ni koʻrib chiqing.
+
+[[musicaltips]]
+=== Musical tips
+
+Endi sizda musiqa yaratish uchun `fitMedia()`, `makeBeat()` va `for` halqalari kabi koʻplab vositalar mavjud boʻlgani uchun biz musiqiy gʻoyalarni koʻrib chiqamiz.
+
+Qo'shiqingizning *kalitidan* boshlaylik:
+
+* *Tovush pardasi* - bu nota qanchalik baland yoki past ovozda chiqishi. Biz nisbiy musiqiy ohanglarga *shkalada* yoki tovush chastotasining jarangiga qarab musiqiy notalar to'plamiga buyurtma beramiz.
+* Qo'shiqning *kaliti* musiqa tuzilgan miqyosdagi tovush pardalarining shkalasi yoki guruhini ko'rsatadi. Keys can be major (usually sounds "happier") or minor (usually sounds "darker").
+* For beginner composers, we recommend that you have just one key for your song. Tovushlarni turli kalitlardan tanlash bu narsaga olib keladi... soxta jaranglash! In general, sounds within the same folder in the EarSketch sound library are all in the same key.
+
+Listen to the audio clip below to hear the difference between major and minor keys (the major scale and chord is first):
+
+++++
+<div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
+++++
+
+Endi sizda bo'lishi mumkin bo'lgan treklarning har xil turlari haqida gapiraylik. You might remember that you can use one track of your DAW for each type of instrument. In a pop song, you can find the following basic tracks:
+
+* *Melodiya* - bu ko'pincha balandroq pardada bo'lgan asosiy g'oya yoki "yetakchi kuylanadigan notalar." It can be a voice, higher notes of a keyboard, guitar, etc.
+* *Uyg'unlik* - bu pianinodagi akkordlar, chalinadigan gitara yoki satrlar to'plami kabi "ohangni qo'llab-quvvatlovchi" uzunroq tovushli notalardir.
+* Sizda *bas qatori* ham bor. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
+* Keyin *zarbdorlik* mavjud. Agar siz `makeBeat()` dan foydalansangiz, bu bir nechta treklarni olishi mumkin. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
+
+Bular qo'shig'ingizning tuzilishini yaratadigan asosiy g'oyalardir. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
+
+Nihoyat, keling, *takrorlash* va *kontrast*ni muhokama qilaylik. Psixologlar _shunchaki ta'sir qilish effekti_ deb ataydigan ibora tufayli odamlar takrorlashni yaxshi ko'radilar. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
+
+Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
+
+.PRACTICE
+****
+Create a complete song with:
+
+* A theme (please mention your chosen theme in your commented intro in the code)
+* `fitMedia()` va `makeBeat()` fuktsiyalari
+* `fitMedia()` yoki `makeBeat()` bilan bir yoki bir nechta `for` halqa(lar)
+* At least four tracks
+* At least sixteen measures
+* At least one uploaded sound
+* Comments and variables to organize your code
+
+Remember that you can try things out and keep only the sounds/ideas that you like most. Feel free to share your music!
+****
+
+{nbsp} +
+
+[[chapter4summary]]
+=== Chapter 4 Summary
+
+[role="curriculum-python"]
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` halqalari halqa tanasi, halqa hisoblagichi va diapazondan iborat. The code in the loop body must be indented.
+* *Boshqaruv oqimi* bayonotlar kompyuter tomonidan bajarilish tartibini ifodalaydi.
+* `print()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
+* Umumiy dasturlash xatolarining kengaytirilgan ro'yxatini qayta ko'rib chiqish: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Ohangning *tovush pardasi* nisbiy shkalada uning qanchalik baland yoki past yangrashini aniqlaydi.
+* Qo'shiqning *kaliti* parcha yaratilgan miqyosdagi tovush pardalarining *shkalasi* yoki guruhini ko'rsatadi hamda *tonik* notasini belgilaydi. Keys are either major or minor, which tend to give a different impression to the listener.
+* You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+
+[role="curriculum-javascript"]
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` halqalari halqa tanasi, ishga tushirish, takrorlanish bayonoti va halqa shartidan iborat. The code in the loop body should be indented.
+* *Boshqaruv oqimi* bayonotlar kompyuter tomonidan bajarilish tartibini ifodalaydi.
+* `println()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
+* Umumiy dasturlash xatolarining kengaytirilgan ro'yxatini qayta ko'rib chiqish: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Ohangning *tovush pardasi* nisbiy shkalada uning qanchalik baland yoki past yangrashini aniqlaydi.
+* Qo'shiqning *kaliti* parcha yaratilgan miqyosdagi tovush pardalarining *shkalasi* yoki guruhini ko'rsatadi hamda *tonik* notasini belgilaydi. Keys are either major or minor, which tend to give a different impression to the listener.
+* You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+Quyidagilardan qaysi biri `for` halqasining komponenti EMAS?
+
+[answers]
+* Loop interpreter
+* Loop Counter
+* Loop Body
+* Loop Range
+--
+
+[question]
+--
+Which of the following is NOT a good use of loops in a musical composition?
+
+[answers]
+* Creating a beat pattern than never repeats
+* Placing musical clips on every third measure
+* Repeating a beat on several consecutive measures
+* Placing musical clips on odd measures
+--
+
+[question]
+--
+Which of the following is NOT a recommended technique for debugging?
+
+[answers]
+* Copying and pasting code into Google
+* Printing variable values to the console
+* Looking at error lines identified in the console
+* Asking others for help
+--
+
+[question]
+--
+Which of the following is NOT something that can be printed to the console?
+
+[answers]
+* Code Comments
+* Strings
+* Mathematical Expressions
+* Variables
+--
+
+[question]
+--
+____ tovushning qanchalik baland yoki pastligini belgilovchi sifati.
+
+[answers]
+* Pitch
+* Tempo
+* Rhythm
+* Loudness
+--
