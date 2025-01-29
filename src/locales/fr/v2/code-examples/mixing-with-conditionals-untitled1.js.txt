@@ -1,3 +1,4 @@
 if (condition){
     // Ici, vous devez écrire les instructions que l'ordinateur doit exécuter si la condition est true (vraie)
     // Notez que les instructions sont indentées, comme pour les boucles
+}
