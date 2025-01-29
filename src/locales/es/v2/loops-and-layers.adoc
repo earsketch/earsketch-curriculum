@@ -10,15 +10,13 @@ En este capítulo aprenderás sobre ciclos `for` y cómo puedes crear repetició
 
 Igual que los músicos pueden tocar un patrón una y otra vez en un *ciclo* (_loop_ en inglés), los programadores pueden pedir que la computadora complete una tarea una y otra vez... ¡en un *ciclo*! Es más eficiente así: en vez de escribir una instrucción muchas veces, se escribe un ciclo con las instrucciones y la computadora sabe que tiene que repetirlas.
 
-Por ejemplo, si quieres repetir un `makeBeat()` que has creado, en vez de escribir varias líneas de funciones `makeBeat()`, puedes crear un ciclo `for `. así:
+Por ejemplo, si quieres repetir un `makeBeat()` que has creado, en vez de escribir varias líneas de funciones `makeBeat()`, puedes crear un ciclo `for `.
 
 ////
 add new video
 more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
 in the "revamping videos" tab (includes link to script)
 ////
-
-_UN VIDEO SOBRE LOS CICLOS VIENE PRONTO_
 
 [role="curriculum-python"]
 [source,python]
@@ -57,8 +55,8 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-javascript"]
 * *La inicialización*: Crea una variable que se usa como *contador del ciclo* antes de que se ejecute el primer ciclo.
-* *La condición del ciclo*: Revisa si se debe ejecutar el ciclo otra vez. Si el contador llega a un número demasiado alto, la declaración será falsa y se sale del ciclo.   Entonces la computadora sigue ejecutando el código que viene después del ciclo.
-* *La declaración de iteración*: Una declaración que actualiza el contador del ciclo. El conteo sube con cada iteración.
+* *La condición del ciclo*: Revisa si se debe ejecutar el ciclo otra vez. Hemos visto 2 parámetros de rango: `numeroInicial` y `numeroFinal` (que es exclusivo, lo cual quiere decir que el ciclo termina cuando el contador llegue al numeroFinal). Si el contador llega a un número demasiado alto, la declaración será falsa y se sale del ciclo. Entonces la computadora sigue ejecutando el código que viene después del ciclo.
+* *La declaración de iteración*: Una declaración que actualiza el contador del ciclo. It counts up each time the loop repeats.
 * *El cuerpo del ciclo*: El cuerpo del ciclo contiene declaraciones que se ejecutarán repetidamente. Está rodeado por llaves `{ }` y tiene *sangría* (usando la tecla _tab_). Puedes tener más de una línea de instrucciones dentro del ciclo `for`.
 
 .PRÁCTICA
@@ -78,10 +76,12 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 Para entender mejor el flujo de tu código, puedes usar una declaración `print` (declaración de impresión en español). Permite visualizar información en la consola cuando ejecutas el código.
 
 [role="curriculum-python"]
-`print` *evalúa* una expresión: la simplifica a su forma básica, sea cual sea el tipo de dato, y luego muestra su resultado en la consola. Observa que, en Python, `print` es diferente de otras funciones porque no siempre tenemos que usar paréntesis.
+`print` *evalúa* una expresión: la simplifica a su forma básica, sea cual sea el tipo de dato, y luego muestra su resultado en la consola.
 
 [role="curriculum-javascript"]
 La función `println()` *evalúa* una expresión: la simplifica a su forma básica, sea cual sea el tipo de dato, y luego muestra su resultado en la consola.
+
+Then the data is converted into text and shown in the console.
 
 [role="curriculum-python"]
 .PRÁCTICA
@@ -112,11 +112,11 @@ include::code-examples/loops-and-layers-printing.js.txt[]
 Aquí, verás las siguientes líneas en tu consola:
 
 ----
-4 (éste es 1+3, simplificado)
-1 (inicialmente tu contador compas es igual a 1)
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
 ok
-2 (ahora tu contador compas es igual a 2)
-ok (cada vez que se ejecuta un ciclo, se imprime "ok", por eso se repite)
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
 3
 ok
 4
@@ -152,7 +152,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-Podemos usar un ciclo `for` para crear exactamente la misma música de manera más eficiente. Nuestro contador aquí es "compas". Toma en cuenta que el cuerpo del ciclo contiene 2 líneas de código. Las dos usan "compas" como contador.
+Podemos usar un ciclo `for` para crear exactamente la misma música de manera más eficiente. Nuestro contador aquí es "compas". Toma en cuenta que el cuerpo del ciclo contiene 2 líneas de código.
 
 [role="curriculum-python"]
 [source,python]
@@ -193,7 +193,7 @@ BMW
 Una última cosa interesante de ciclos `for` es la incrementación.
 
 [role="curriculum-python"]
-La incrementación es el aumento del valor del contador. En los ciclos `for`, se usó la función `range()` para incrementar el contador. Hemos visto 2 parámetros de rango: `numeroInicial` y `numeroFinal` (que es exclusivo, lo cual quiere decir que el ciclo termina cuando el contador llegue al numeroFinal). Hay un tercer parámetro opcional: `increment`. El valor predeterminado de `increment` es 1, pero se puede usar para incrementar por más de uno.
+La incrementación es el aumento del valor del contador. En los ciclos `for`, se usó la función `range()` para incrementar el contador. We've seen two parameters for range: `startingNumber` and `endingNumber`. Hay un tercer parámetro opcional: `increment`. El valor predeterminado de `increment` es 1, pero se puede usar para incrementar por más de uno. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
 
 [role="curriculum-javascript"]
 La incrementación es el aumento del valor del contador. En los ciclos _for_ se usaron los términos `compas = compas + 1`. Esto incrementa el contador `compas` por 1 por cada ciclo. Se puede incrementarlo por más de uno, tal como `compas = compas + 4`.
@@ -220,12 +220,17 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 [role="curriculum-python"]
 Aquí se usó la función `range()`, pero también se puede incrementar (aumentar) o decrementar (reducir) una variable usando este tipo de expresión: `compas = compas + 1`. Esto quiere decir que compas ahora es igual a su valor anterior más uno. Se puede usar la abreviatura `+=` para incrementar o `-=` para decrementar. Así se hace: `compas += 1` es equivalente a `compas = compas + 1`. Y `compas -=1` es equivalente a `compas = compas - 1`.
 
+[role="curriculum-python"]
+* El conteo sube con cada iteración. Observa que, en Python, `print` es diferente de otras funciones porque no siempre tenemos que usar paréntesis.
+* La *melodía* es la idea principal. Las dos usan "compas" como contador.
+
 [role="curriculum-javascript"]
 Aquí se escribió `compas = compas + 4`, lo cual significa que compas ahora es igual a su valor anterior más cuatro. Puedes usar algunas abreviaturas:
  `+=` (o `-=` para decrementar). A continuación, hay un método para incrementar (o decrementar) un contador usando abreviaturas:
 
-* `compas++`, o `compas += 1` incrementa compas por 1. Si quieres incrementarlo por más de uno, usa `compas += 2`.
-* `compas--`, o `compas -= 1` decrementa compas por 1. Si quieres decrementarlo por más de uno, usa `compas -= 2`.
+[role="curriculum-javascript"]
+* `compas++`, o `compas += 1` incrementa compas por 1. Observa que, en Python, `print` es diferente de otras funciones porque no siempre tenemos que usar paréntesis.
+* `compas--`, o `compas -= 1` decrementa compas por 1. Las dos usan "compas" como contador.
 
 [[debuggingtips]]
 === Consejos para depurar
@@ -235,6 +240,7 @@ Programar no sólo es el acto de escribir código. También hay que depurarlo y 
 [role="curriculum-python"]
 . *Lee la consola para encontrar pistas*.
 . *Encuentra el error en tu código:* Tienes 3 opciones aquí.
+[role="curriculum-python"]
 .. Si la consola proveyó un número de línea, revisa esa línea y la línea anterior de tu código.
 .. Usa el método "_comment out_" (comentar). Puedes encontrar un error al insertar la sintaxis que se usa para los comentarios en un bloque de código, o *_commenting it out_*, y ejecutar el código. Si no hay ningún error, el error se encuentra en alguna parte del bloque de código que tenga esa sintaxis de comentario.
 .. También se puede usar *_Print debugging_* (depuración de impresión) para encontrar un error. Lee la sección problemática de tu código y trata de seguir la lógica. Inserta declaraciones `print` donde no estés seguro/a de la lógica; consigue los valores de las variables y revisa el estado del programa. Esto te ayuda a comparar tu entendimiento del programa con lo que pasa en realidad en ese programa.
@@ -244,6 +250,7 @@ Programar no sólo es el acto de escribir código. También hay que depurarlo y 
 [role="curriculum-javascript"]
 . *Lee la consola para encontrar pistas*.
 . *Encuentra el error en tu código:* Tienes 3 opciones aquí.
+[role="curriculum-javascript"]
 .. Si la consola proveyó un número de línea, revisa esa línea y la línea anterior de tu código.
 .. Usa el método "_comment out_" (comentar). Puedes encontrar un error al insertar la sintaxis que se usa para los comentarios en un bloque de código, o *_commenting it out_*, y ejecutar el código. Si no hay ningún error, el error se encuentra en alguna parte del bloque de código que tenga esa sintaxis de comentario.
 .. También se puede usar *_Print debugging_* (depuración de impresión) para encontrar un error. Lee la sección problemática de tu código y trata de seguir la lógica. Inserta declaraciones `println` donde no estés seguro/a de la lógica; consigue los valores de las variables y revisa el estado del programa. Esto te ayuda a comparar tu entendimiento del programa con lo que pasa en realidad en ese programa.
@@ -270,9 +277,9 @@ Has visto una lista de posibles errores en el capítulo 1. Aquí hay algunos otr
 . *Argumentos:* Fallas de argumentos de función pueden causar todo tipo de errores. Tienes que proporcionar el número y tipo correcto de argumentos a una llamada a función.
 
 [role="curriculum-javascript"]
-. *Inicializar las variables*: Hay que inicializar una variable antes de que se pueda usar en un script. Esto quiere decir que debes asignar valores a tus variables al comienzo de tu script. ¡No te olvides de inicializar las variables con `var`!
+. *Inicializar las variables*: Hay que inicializar una variable antes de que se pueda usar en un script. This means you should create it with `var` before using it later.
+. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
 . *Comentarios:* Comentar impropiamente causará un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Los comentarios en JavaScript tienen que empezar con `//`.
-. *Puntos y comas:* Es altamente recomendado incluir puntos y comas después de cada declaración en JavaScript.
 . *Comillas:* Si se te olvida poner una comilla inicial o una segunda comilla también podría causar un <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
 . *Argumentos:* Fallas de argumentos de función pueden causar todo tipo de errores. Tienes que proporcionar el número y tipo correcto de argumentos a una llamada a función.
 
@@ -297,16 +304,16 @@ Escucha el clip de audio de abajo para escuchar la diferencia entre las teclas p
 
 Ahora vamos a hablar de los diferentes tipos de pistas musicales (tracks) que puedes tener. Tal vez recuerdes que puedes usar una pista de tu EAD para cada tipo de instrumento. En una canción pop, puedes encontrar las siguientes pistas básicas:
 
-* La *melodía* es la idea principal. Muchas veces tiene un registro más agudo, o "lo que canta el cantante principal". Puede ser una voz, las notas agudas de un teclado, una guitarra, etc.
+* Muchas veces tiene un registro más agudo, o "lo que canta el cantante principal". Puede ser una voz, las notas agudas de un teclado, una guitarra, etc.
 * La *armonía* son las notas más prolongadas que "apoyan la melodía", como los acordes de piano, el rasgueo de la guitarra, o cuando se tocan numerosos instrumentos de cuerdas.
 * También está la *línea de bajo*. Estos son los registros más bajos. Puede ser un bajo, un violonchelo, las notas bajas de un teclado, etc.
 * Entonces está la *percusión*. Si estás usando `makeBeat()`, puede ocupar varias pistas musicales. Por ejemplo, puedes tener una pista para el bombo, una para el redoblante y una para el hihat.
 
-Éstas son las ideas básicas que crean la estructura de la textura de tu canción. Sin embargo, está bien si partes de tu canción sólo contienen 1 o 2 de los 4. También puedes añadir muchas pistas más: puedes crear una segunda melodía, añadir pedales (notas muy largas en el fondo), sonidos grabados, ráfagas de viento, etc. ¡Las posibilidades son infinitas! ¡Explora ideas y quédate con las que más te gusten!
+Éstas son las ideas básicas que crean la estructura de la textura de tu canción. Sin embargo, está bien si partes de tu canción sólo contienen 1 o 2 de los 4. También puedes añadir muchas pistas más: puedes crear una segunda melodía, añadir pedales (notas muy largas en el fondo), sonidos grabados, ráfagas de viento, etc. ¡Las posibilidades son infinitas! ¡Las posibilidades son infinitas! ¡Explora ideas y quédate con las que más te gusten!
 
 Finalmente, vamos a hablar de la *repetición* y el *contraste*. A los humanos les gusta la repetición por lo que los psicólogos llaman _el efecto de mera exposición_. Al escuchar una sección de música repetida, el cerebro tratará de imaginar la próxima nota antes de que se toque, lo cual nos hace sentir como si estuviéramos participando. Asimismo, cada vez que se repite una sección de música, el oyente puede notar detalles diferentes de la pieza porque el cerebro ya no tiene que enfocarse en procesar el contenido melódico básico.
 
-El contraste se refiere a las diferencias de las secciones de música posteriores, proporcionando un importante contrapeso con la repetición. Se usa el contraste para hacer que el oyente se fije en nuevos elementos. Los músicos proveen contrastes a través de: cambios rítmicos, nuevas líneas melódicas, armonías distintas, o variaciones en los instrumentos o sonidos usados. Hay un buen ejemplo del contraste alrededor del 0:21 (segundo 21) y 1:01 (minuto 1, segundo 1) de la canción https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] by Son Lux.
+El contraste se refiere a las diferencias de las secciones de música posteriores, proporcionando un importante contrapeso con la repetición. Se usa el contraste para hacer que el oyente se fije en nuevos elementos. Los músicos proveen contrastes a través de: cambios rítmicos, nuevas líneas melódicas, armonías distintas, o variaciones en los instrumentos o sonidos usados.
 
 .PRÁCTICA
 ****
@@ -329,9 +336,9 @@ Recuerda que puedes probar cosas y quedarte sólo con los sonidos/ideas que más
 === Resumen del capítulo 4
 
 [role="curriculum-python"]
-* Un *ciclo `for`* ordena que la computadora ejecute una sección de código repetidamente, lo cual crea código más eficiente. Los ciclos `for` consisten de un cuerpo del ciclo, un contador del ciclo, y un rango. Hay que escribir el código del cuerpo del ciclo con sangría.
+* Un *ciclo `for`* ordena que la computadora ejecute una sección de código repetidamente, lo cual crea código más eficiente. Los ciclos `for` consisten de un cuerpo del ciclo, un contador del ciclo, y un rango. El código del cuerpo del ciclo tiene que tener sangría.
 * El *flujo de control* representa el orden en el cual la computadora ejecuta sus declaraciones.
-* La declaración `print` evalúa su expresión acompañante y muestra el resultado en la consola. Es una herramienta útil para depurar porque permite que el programador aprenda cuál es el estado del programa.
+* `print()` displays the data in the console. Es una herramienta útil para depurar porque permite que el programador aprenda cuál es el estado del programa.
 * Para depurar el código, se puede imprimir (_print_), insertar la sintaxis que se usa para los comentarios en un bloque de código (comentar líneas de código, o _comment out code_ en inglés) y usar la consola. Además, pedirle ayuda a alguien puede acelerar significativamente el proceso de depuración.
 * Repasa otra vez la lista expandida de errores comunes de programación: <<debugging-and-documenting#commonerrors,Common Errors>>.
 * El *registro* de un sonido determina cuán agudo o grave suena en una escala relativa.
@@ -339,7 +346,7 @@ Recuerda que puedes probar cosas y quedarte sólo con los sonidos/ideas que más
 * Puedes usar 3 pistas básicas como base de tus canciones: una melodía de registro más agudo, una línea de bajo con registro más grave y percusión.
 
 [role="curriculum-javascript"]
-* Un *ciclo `for`* ordena que la computadora ejecute una sección de código repetidamente, lo cual crea código más eficiente. Los ciclos `for` consisten de un cuerpo del ciclo, una inicialización, una declaración de iteración, y una condición de ciclo. El código del cuerpo del ciclo tiene que tener sangría.
+* Un *ciclo `for`* ordena que la computadora ejecute una sección de código repetidamente, lo cual crea código más eficiente. Los ciclos `for` consisten de un cuerpo del ciclo, una inicialización, una declaración de iteración, y una condición de ciclo. Hay que escribir el código del cuerpo del ciclo con sangría.
 * El *flujo de control* representa el orden en el cual la computadora ejecuta sus declaraciones.
 * La función `println()` evalúa su argumento y muestra el resultado en la consola. Es una herramienta útil para depurar porque permite que el programador aprenda cuál es el estado del programa.
 * Para depurar el código, se puede imprimir (_print_), insertar la sintaxis que se usa para los comentarios en un bloque de código (comentar líneas de código, o _comment out code_ en inglés) y usar la consola. Además, pedirle ayuda a alguien puede acelerar significativamente el proceso de depuración.
