@@ -1,0 +1,7 @@
+// Intro Script: This code adds one sound to the DAW
+
+// Setup Section
+setTempo(120);
+
+// Music Section
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
