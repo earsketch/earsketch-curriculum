@@ -1,7 +1,7 @@
 // Utilisation de la fonction fitMedia() 2 : Plusieurs appels de fonction fitMedia() sur différentes pistes
 
 // Paramétrage
-setTempo(100);
+setTempo(120);
 
 // Musique
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
