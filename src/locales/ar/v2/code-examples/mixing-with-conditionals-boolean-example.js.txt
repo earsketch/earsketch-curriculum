@@ -1,0 +1,26 @@
+// Boolean Example: We analyze the loudness of our tracks
+// Setup
+setTempo(120);
+
+// Creating 2 tracks
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
+
+// Evaluating the loudness of the tracks
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// Checking if track 1 is louder than track 2
+// We create the boolean comparison1
+var comparison1 = (loudnessTrack1 > loudnessTrack2);
+println("Is track 1 louder than track 2?");
+println(comparison1);
+
+// Creating a for loop to compare each track's loudness to 0.01
+for (var track = 1; track < 3; track++) {
+    var loudness = analyzeTrack(track, RMS_AMPLITUDE);
+    println("Is track number " + track + " greater than 0.01?");
+    println(loudness > 0.01);
+}
