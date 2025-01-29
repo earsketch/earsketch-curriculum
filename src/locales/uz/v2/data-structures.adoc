@@ -1,0 +1,497 @@
+[[getorganizedwithdatastructures]]
+== Data Structures
+
+:nofooter:
+
+[role="curriculum-python"]
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, ro'yxatlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+
+[role="curriculum-javascript"]
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, massivlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+
+[[datastructures]]
+=== What is a Data Structure
+
+[role="curriculum-python"]
+If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
+
+[role="curriculum-javascript"]
+If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
+----
+
+[role="curriculum-python"]
+If you have replaced variables with a list, how will you reference the content of the list? We use indices. Roʻyxatning har bir elementiga `0` dan boshlab indeks beriladi. Avvalgi misolda `drums[0]` - `OS_KICK03`ni, `drums[1]` - `OS_OPENHAT01`ni va `drums[2]` - `OS_SNARE05`ni chaqirmoqda.
+
+[role="curriculum-javascript"]
+If you have replaced variables with an array, how will you reference the content of the array? We use indices. Massivning har bir elementiga `0` dan boshlab indeks beriladi. Avvalgi misolda `drums[0]` - `OS_KICK03`ni, `drums[1]` - `OS_OPENHAT01`ni va `drums[2]` - `OS_SNARE05`ni chaqirmoqda.
+
+.PRACTICE
+****
+Create a list/array with three sounds.
+Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-list.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-arrays.js.txt[]
+----
+
+//.The EarSketch Share window for collaboration (Let Others Edit)
+
+//[caption="Figure 21.4.2: "]
+
+image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
+
+[role="curriculum-python"]
+We've seen that `list[index]` will reference an element of the list. This can also be used to modify an element of the list. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. U `=` *tayinlash operatoridan* foydalanadi.
+
+[role="curriculum-javascript"]
+We've seen that `array[index]` will reference an element of the array. This can also be used to modify an element of the array. Masalan, oldingi misoldagi `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` massivning birinchi elementini `RD_ROCK_POPRHYTHM_MAINDRUMS_11` ga o'zgartiradi. This process is similar to updating a variable. U `=` *tayinlash operatoridan* foydalanadi.
+
+.PRACTICE
+****
+In the previous example, use a `for` loop instead of calling `fitMedia()` three times. You can use the track number as the counter.
+Indeks raqami `0` da, trekingiz esa `1` da boshlanishi kerak. For halqasi ichida trek raqamidan bittaga kam bo'lgan raqamga teng `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi.
+****
+
+Below is an example. You can have a look in the console to see what is printed when you run the code.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
+----
+
+[role="curriculum-python"]
+A useful tip: `len()` function, with the name of the list as parameter, returns the number of elements of the list. Demak, `list[0]` - `list`ning birinchi elementi va `list[len(list) - 1]` oxirgi elementi hisoblanadi. Masalan, agar `list = ["Salom", "o'rtoq", "EarSketchchilar"];` bo'lsa, `len(list)` `3`ni qaytaradi. Indekslar `0`, `1` va `2`. The last index is 3-1 = 2.
+
+[role="curriculum-javascript"]
+Foydali maslahat: `length` xususiyati (`array.length`) massiv elementlari sonini qaytaradi. Demak, `massiv[0]` - `massiv`ning birinchi elementi, `massiv[array.length - 1]` esa oxirgi elementi hisoblanadi. Masalan, agar `array = ["Salom", "o'rtoq", "EarSketchchilar"];` bo'lsa, `array.length` `3`ni qaytaradi. Indekslar `0`, `1` va `2`. The last index is 3-1 = 2.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using a list and a `for` loop, create such an introduction from measures `1` to `5`. Oldingi misolda bo'lgani kabi, hisoblagich sifatida `trek`dan foydalanishingiz mumkin va siz `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi. Bundan tashqari, siz `len()` funktsiyasidan foydalanib, `o'lchov` oʻzgaruvchisini yaratishingiz mumkin.
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using an array and a `for` loop, create such an introduction from measures `1` to `5`. Oldingi misolda bo'lgani kabi, hisoblagich sifatida `trek`dan foydalanishingiz mumkin va siz `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi. Bundan tashqari, siz `length` xususiyatidan foydalanib, `o'lchov` o‘zgaruvchisini yaratishingiz mumkin.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-additive-introduction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-additive-introduction.js.txt[]
+----
+
+{nbsp} +
+
+[[usingdatastructureswithmakebeat]]
+=== Ma'lumot Tuzilmalaridan `makeBeat()` bilan foydalaning
+
+[role="curriculum-python"]
+We will see two ways you can use data structures with `makeBeat()`. Birinchidan, keling, satrlar va ro'yxatlar qanchalik o'xshashligini ko'rib chiqaylik:
+
+[role="curriculum-javascript"]
+We will see two ways you can use data structures with `makeBeat()`. Birinchidan, keling, satrlar va massivlar qanchalik o'xshashligini ko'rib chiqaylik:
+
+[role="curriculum-python"]
+* Like lists, strings have indices. *Indeks* 0 dan boshlanadigan satrdagi ma'lum bir belgining o'rnini ifodalaydi. Masalan, `"Sarah"[3]` `a` ni qaytaradi.
+* Siz satrlar bilan `len()` funktsiyasidan foydalanishingiz mumkin, bu satrdagi belgilar miqdorini qaytaradi. Oxirgi belgi `len(string) - 1` indeksida.
+`"EarSketch"` satrining indekslari quyidagi jadvalda ko'rsatilgan.
+
+[role="curriculum-javascript"]
+* Like arrays, strings have indices. *Indeks* 0 dan boshlanadigan satrdagi ma'lum bir belgining o'rnini ifodalaydi. Masalan, `"Sarah"[3]` `a` ni qaytaradi.
+* Siz satrlar bilan `.length` xususiyatidan foydalanishingiz mumkin, bu satrdagi belgilar miqdorini qaytaradi. Oxirgi belgi `string.length - 1` indeksida.
+`"EarSketch"` satrining indekslari quyidagi jadvalda ko'rsatilgan.
+
+[cols="h,^,^,^,^,^,^,^,^,^"]
+|===
+|Character
+|E
+|a
+|r
+|S
+|k
+|e
+|t
+|c
+|h
+
+|Index
+|0
+|1
+|2
+|3
+|4
+|5
+|6
+|7
+|8
+|===
+
+[role="curriculum-python"]
+* You can concatenate lists together like you do with strings. Yopishtirish operatoridan foydalaning (`+`): sintaksisi `newList = listA + listB`.
+
+[role="curriculum-javascript"]
+* You can concatenate arrays together like you do with strings. Biz "yopishtirish" *usuli*dan foydalanamiz. A method is similar to a function as it has parentheses which contain parameters. Uni ishlatish uchun uni massiv nomidan keyin, nuqta bilan qo'ying: sintaksis `newArray = arrayA.concat(arrayB)`. Bu *nuqtali qaydnoma* deb ataladi.
+
+[role="curriculum-python"]
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Uning sintaksisi `newString = oldString[startIndex: endIndex]`. Quyi-satr `startIndex` belgisini o`z ichiga oladi, lekin `endIndex` belgisini olmaydi. Masalan, `"Sarah[1:4]"` `"ara"`ni qaytaradi. Roʻyxatlar bilan ham xuddi shunday qilishingiz mumkin: `newList = oldList[startIndex: endIndex]`.
+
+[role="curriculum-javascript"]
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Uning sintaksisi `newString = oldString.substring(startIndex, endIndex)`. Quyi-satr `startIndex` belgisini o`z ichiga oladi, lekin `endIndex` belgisini olmaydi. Masalan, `"Sarah.substring(1, 4)"` - `"ara"`ni qaytaradi. Siz `slice()` usuli yordamida massivlar bilan ham shunday qilishingiz mumkin: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` va `slice()` usullar bo`lib, barchasi nuqta belgilaridan foydalanadi.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+In a new script:
+
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound lists (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your lists.
+. `stringA` va `stringB` yopishmasidan `stringC` yarating va chop eting.
+. `SoundsA`, `soundsB` va yana `soundsA` yopishmasidan `SoundsC` yarating va chop eting.
+. `stringC` ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan `stringD` yarating va chop eting.
+. `soundsC` ning uchinchidan oxirgi elementigacha bo'lgan qismidan `soundsD` yarating va chop eting.
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+In a new script:
+
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound arrays (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your arrays.
+. `stringA` va `stringB` yopishmasidan `stringC` yarating va chop eting.
+. `SoundsA`, `soundsB` va yana `soundsA` yopishmasidan `SoundsC` yarating va chop eting.
+. `stringC` ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan `stringD` yarating va chop eting.
+. `soundsC` ning uchinchidan oxirgi elementigacha bo'lgan qismidan `soundsD` yarating va chop eting.
+****
+
+Here is an example of a solution:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
+----
+
+Bu `makeBeat()` orqali satr amaliyotlaridan qanday foydalanishga misol:
+
+[role="curriculum-python curriculum-mp4"]
+[[video13py]]
+video::./videoMedia/013-03-Substrings-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video13js]]
+video::./videoMedia/013-03-Substrings-JS.mp4[]
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-string-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-string-operations.js.txt[]
+----
+
+[role="curriculum-python"]
+Finally, `makeBeat()` can handle multiple sounds at once. Bu sizga faqatgina bir `makeBeat()` qatori yordamida barcha zarbdor tovushlarni bitta trekka joylashtirish imkonini beradi. Instead of passing your sound file as a first argument, you will pass a list of sounds. Zarba satrida tovushni ijro etish uchun “0” dan foydalanish o‘rniga “0”dan “9”gacha bo‘lgan raqamlardan foydalanishingiz mumkin. These numbers indicate an index in your list of sounds. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
+
+[role="curriculum-javascript"]
+Finally, `makeBeat()` can handle multiple sounds at once. Bu sizga faqatgina bir `makeBeat()` qatori yordamida barcha zarbdor tovushlarni bitta trekka joylashtirish imkonini beradi. Instead of passing your sound file as a first argument, you will pass an array of sounds. Zarba satrida tovushni ijro etish uchun “0” dan foydalanish o‘rniga “0”dan “9”gacha bo‘lgan raqamlardan foydalanishingiz mumkin. These numbers indicate an index in your array of sounds. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Copy the code example in chapter 3.4 for beats by genre. Har bir janrda faqat bitta `makeBeat()` qatoriga ega bo'lish uchun kodni o'zgartiring. Sometimes, the hihat is playing at the same time as the kick or snare. Bunday holda, siz faqat likopcha uchun bitta “makeBeat()” qatoriga ega bo'lishingiz mumkin.
+****
+
+Here is the solution:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-examples-of-beats.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Ushbu bobda o'rganganlaringizdan foydalanib, `makeBeat()` yordamida o'zingizga yoqadigan ritmlarni yarating. You can refer to the video in chapter 3.4 for beats by genre. Kodingizni ishga tushirishingiz, yaratgan narsalaringizni tinglashingiz va uni sizga yoqmagunga qadar o'zgartirishingiz mumkinligini unutmang.
+****
+
+{nbsp} +
+
+[[evaluatingcorrectness]]
+=== Evaluate Correctness
+
+Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
+
+* *Conciseness* means brief code that accomplishes its goal with fewer lines. Here are some questions that can help you make your code more concise:
+** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
+** Am I reusing any blocks of code? If so, put them in a function!
+** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! A list might also be useful.
+* *Aniqlik* kod o'z funktsiyasi va dasturchining niyatini qanchalik yaxshi bildirishi bilan bog'liq. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
+** Are the names of my variables and functions descriptive? If not, rename them.
+** Have I used comments to explain each block of code and any potentially confusing lines of code?
+** Have I used computational structures like custom functions and loops to help organize my code?
+** Can I structure my script to mirror the structure of my song? In some cases this can help the flow of reading.
+
+*Tengdoshlarning fikr-mulohazalari* dasturlashda keng tarqalgan bo‘lib, boshqalarning sharhlari ko'magida kod va musiqangizni mukammallashtirishga yordam beradi. Fikr-mulohaza *konstruktiv* bo'lishi kerak, ya'ni u tengdoshlar orasini buzishdan ko'ra ular orasidagi munosabatni mustahkamlaydi. When giving feedback:
+
+* *Aniq bo'ling* - Kodning muayyan bloklari va qatorlariga hamda musiqaning muayyan o'lchovlari va treklariga murojaat qiling.
+* *Tavsiflovchi bo'ling* - Skriptni mukammal qilish uchun o'z fikringizni va amalga oshirayotgan jarayoningizni tavsiflab bering.
+* *Tengdoshingizning musiqiy qarashlari/maqsadlariga hushyor bo'ling* - Sizning musiqiy didingiz tengdoshingiz musiqasini baholashga ta'sir qilmasligi kerak.
+* *Ijobiy bo'ling* - Mukammallik ehtiyoj sezgan narsalardan tashqari, kuchli kod bloklari va musiqiy parchalarni ko'rsatib o'ting.
+* *Taqqoslamang* - Tengdoshingizning kodini o'zingizning yoki boshqa tengdoshlaringizning kodlari bilan raqobatlashuvchi sifatida emas, balki ularning shaxsiy mulki sifatida ko'ring.
+
+Likewise, when receiving feedback:
+
+* *Aniq bo'ling* - Muammolarni keltirib chiqaradigan kodning bloklari yoki qatorlarini, musiqaning treklari yoki o'lchovlarini ko'rsating. This will allow your peers to provide feedback that is most helpful to you.
+* *Tinglang* - Tengdoshingiz gapirib bo'lguncha javob berishni kuting. Be attentive to the information your peer is conveying. Comment your code based on their feedback. These comments can be useful when revising.
+* *Savollar bering* - O'zingiz bilmagan mantiq, muammolar, nosozliklar, musiqiy uyg'unlik yoki to'g'rilikning biron bir elementi haqida so'rang.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
+
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. You can upload your own sounds.
+* Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
+* `setEffect()` yordamida ba'zi effektlarni qo'shing. Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in a list.
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
+
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. You can upload your own sounds.
+* Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
+* `setEffect()` yordamida ba'zi effektlarni qo'shing.  Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in an array.
+****
+
+[[chapter9summary]]
+=== Chapter 9 Summary
+
+[role="curriculum-python"]
+* A *list* is a collection of values combined into a single entity, a good way to organize data. Items stored within a list, or elements, can be any data type.
+* Like strings, list elements get assigned an index. List indices start at 0.
+* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* `len()` funktsiyasi roʻyxatdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `len(list)`.
+* Ro'yxatlarni o‘zgartirish vositalari to‘plami - *ro'yxat operatsiyalari* yordamida yopishtirish va kesish mumkin.
+* Kattaroq, mavjud roʻyxatdan roʻyxatning quyi toʻplamini yaratish sintaksisi - `newList = oldList[startIndex: endIndex]`.
+* Roʻyxatlar yopishtirish operatori `+` yordamida birlashtirilishi mumkin, masalan, `newList = listA + listB`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. It provides the opportunity to learn from others.
+
+[role="curriculum-javascript"]
+* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
+* Like strings, array elements get assigned an index. Array indices start at 0.
+* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* `length` xossasi massivdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `array.length` yoki `string.length`.
+* Massivlarni o‘zgartirish vositalari to‘plami - *massiv operatsiyalari* yordamida yopishtirish va kesish mumkin.
+* Kattaroq, mavjud massivdan massivni ajratib olish sintaksisi `newArray = oldArray.slice(startIndex, endIndex)`.
+* Kattaroq satrdan quyi-satrni kesib olish sintaksisi - `newString = oldString.substring(startIndex, endIndex)`.
+* Massivlarni `concat()` usuli yordamida yopishtirish mumkin, masalan, `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. It provides the opportunity to learn from others.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+Which of the following operations is used to join lists/arrays?
+
+[answers]
+* Concatenation
+* Slicing
+* Combination
+* Addition
+--
+
+[role="curriculum-python"]
+[question]
+--
+What is the index number of the first element of a list in Python?
+
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-python"]
+[question]
+--
+"len(myList)" nimani qaytaradi?
+
+[answers]
+* `myList` elementlari miqdori
+* `myList` ma`lumot turlari
+* `myList` elementlari
+* `myList` kengligi
+--
+
+[role="curriculum-python"]
+[question]
+--
+Ikki ro‘yxatni (`listA` va `listB`) yopishtirish sintaksisi qanday?
+
+[answers]
+* `listA + listB`
+* `listA ++ listB`
+* `listA va listB`
+* `listB + listA`
+--
+
+[role="curriculum-python"]
+[question]
+--
+How can you get a list from oldList without the first and last elements?
+
+[answers]
+* `oldList[1:len(oldList) - 1]`
+* `oldList[1:len(oldList)]`
+* `oldList[0:len(oldList)]`
+* `oldList[2:len(oldList - 1)]`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What is the index number of the first element of an array in Javascript?
+
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+`myArray.length` nimani qaytaradi?
+
+[answers]
+* `myArray` elementlari miqdori
+* `myArray` ma`lumot turlari
+* `myArray` elementlari
+* `myArray` kengligi
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Ikki massivni (`arrayA` va `arrayB`) yopishtirish sintaksisi qanday?
+
+[answers]
+* `arrayA.concat(arrayB)`
+* `arrayA.concatenate(arrayB)`
+* `arrayB.concat(arrayA)`
+* `arrayB.concatenate(arrayB)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Birinchi va oxirgi elementlarsiz `oldArray` dan massivni qanday olish mumkin?
+
+[answers]
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
+--
+
+[[conclusion]]
+=== Conclusion
+
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
+
+////
+Thank you video
+////
