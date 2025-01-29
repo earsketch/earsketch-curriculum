@@ -1,7 +1,7 @@
 // Variables : Utilisation de variables pour stocker des clips et simplifier les modifications
 
 // Paramétrage
-setTempo(100);
+setTempo(120);
 
 // Musique
 var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Assigne un clip à la variable "synth1".
@@ -9,7 +9,7 @@ var synth2 = HIPHOP_SOLOMOOGLEAD_001;
 var drums = HIPHOP_TRAPHOP_BEAT_008;
 
 // fitMedia() ajoute les clips synth1 et synth2 en alternance sur la piste 1.
-fitMedia(synth1, 1, 1, 2);
+fitMedia(synth1, 1, 1, 1, 2);
 fitMedia(synth2, 1, 2, 3);
 fitMedia(synth1, 1, 1, 3, 4);
 fitMedia(synth2, 1, 4, 5);
