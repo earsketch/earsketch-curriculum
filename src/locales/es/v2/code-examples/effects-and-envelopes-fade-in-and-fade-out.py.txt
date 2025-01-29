@@ -9,8 +9,8 @@ melodia1 = MILKNSIZZ_ADIOS_BRASS
 melodia2 = MILKNSIZZ_ADIOS_STRINGS
 bombo = OS_KICK04
 hihat = OS_OPENHAT03
-ritmoDeBombo = "0-------0-0-0---"
-ritmoDeHihat = "---0---0--00----"
+kickBeat = "0-------0-0-0---"
+hihatBeat = "---0---0--00----"
 
 # Colocar melodías a la pista 1
 fitMedia(melodia1, 1, 1, 5)
