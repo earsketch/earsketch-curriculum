@@ -1,44 +1,45 @@
 [[getorganizedwithdatastructures]]
-== ארגון הקוד בעזרת מבני נתונים
+== מבני נתונים
+
 :nofooter:
 
 [role="curriculum-python"]
-לרשותנו כלים רבים ליצירת שירים ב-EarSketch. הסקריפטים שכתבנו עלולים להיות מאוד ארוכים. בפרק זה תלמדו איך לארגן את הקוד, בעיקר בעזרת רשימות (lists) ופונקציונליות חדשה של `()makeBeat`.
+לרשותנו כלים רבים ליצירת שירים ב-EarSketch. הסקריפטים שכתבנו עלולים להיות מאוד ארוכים. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionality of `makeBeat()`.
 
 [role="curriculum-javascript"]
-לרשותנו כלים רבים ליצירת שירים ב-EarSketch. הסקריפטים שכתבנו עלולים להיות מאוד ארוכים. בפרק זה תלמדו איך לארגן את הקוד, בעיקר בעזרת מערכים (arrays) ופונקציונליות חדשה של `()makeBeat`.
+לרשותנו כלים רבים ליצירת שירים ב-EarSketch. הסקריפטים שכתבנו עלולים להיות מאוד ארוכים. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionality of `makeBeat()`.
 
 [[datastructures]]
-=== מבני נתונים
+=== What is a Data Structure
 
 [role="curriculum-python"]
-רשימות ארוכות של משתנים שמאחסנים צלילים, אפשר לארגן ביעילות בעזרת *רשימות (lists)*. *רשימה*, שנקראת מערך (array) בשפות תכנות מסוימות, היא אוסף של ערכים, או *אלמנטים*, בתוך סוגריים מרובעים (`[]`) המופרדים על-ידי פסיקים. הנה דוגמה:
+If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. הנה דוגמה:
 
 [role="curriculum-javascript"]
-רשימות ארוכות של משתנים שמאחסנים צלילים, אפשר לארגן ביעילות בעזרת *מערכים (arrays)*. *מערך*, שנקרא רשימה (list) בשפות תכנות מסוימות, היא אוסף של ערכים, או *איברים*, בתוך סוגריים מרובעים (`[]`) המופרדים על-ידי פסיקים. הנה דוגמה:
+If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. הנה דוגמה:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-instead-of-writing-this.py.txt[]
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-instead-of-writing-this.js.txt[]
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
-לאחר החלפת משתנים ברשימה, כיצד נתן לגשת לתוכן הרשימה? על-ידי שימוש באינדקסים. לכל איבר ברשימה יש אינדקס, החל מ-`0`. בדוגמה הקודמת, `drums[0]` מכיל את הקליפ `OS_KICK03`, `drums[1]` מכיל את הקליפ `OS_OPENHAT01` ו-`drums[3]` מכיל את הקליפ OS_SNARE05.
+If you have replaced variables with a list, how will you reference the content of the list? על-ידי שימוש באינדקסים. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
-לאחר החלפת משתנים במערך, כיצד נתן לגשת לתוכן המערך? על-ידי שימוש באינדקסים. לכל איבר במערך יש אינדקס, החל מ-`0`. בדוגמה הקודמת, `drums[0]` מכיל את הקליפ `OS_KICK03`, `drums[1]` מכיל את הקליפ `OS_OPENHAT01` ו-`drums[3]` מכיל את הקליפ OS_SNARE05.
+If you have replaced variables with an array, how will you reference the content of the array? על-ידי שימוש באינדקסים. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 .תרגלו
 ****
-צרו מערך המכיל שלושה שמות של קליפים.
-השתמשו בשלוש קריאות ל-`()fitMedia` כדי למקם את שלושת הקליפים בשלושת הערוצים הראשונים, מתיבה אחת יעד תיבה חמש.
+Create a list/array with three sounds.
+Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
 ****
 
 הנה דוגמה:
@@ -46,30 +47,31 @@ include::../../en/v2/code-examples/data-structures-instead-of-writing-this.js.tx
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-list.py.txt[]
+include::code-examples/data-structures-list.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-arrays.js.txt[]
+include::code-examples/data-structures-arrays.js.txt[]
 ----
 
-[[Graphic]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
+
 //[caption="Figure 21.4.2: "]
+
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-ראינו כיצד `list[index]` מתייחס לאיבר של הרשימה. אפשר להשתמש בביטוי זה כדי לשנות איבר של הרשימה. לדוגמה: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` בדוגמה הקודמת, ישנה את האיבר הראשון של הרשימה ל-`RD_ROCK_POPRHYTHM_MAINDRUMS_11`. זה דומה לעדכון ערך משתנה, שגם בו השתמשנו *באופרטור ההשמה* `=`.
+We've seen that `list[index]` will reference an element of the list. אפשר להשתמש בביטוי זה כדי לשנות איבר של הרשימה. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 [role="curriculum-javascript"]
-ראינו כיצד `array[index]` מתייחס לאיבר של המערך. אפשר להשתמש בביטוי זה כדי לשנות איבר של המערך. לדוגמה: `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` בדוגמה הקודמת, ישנה את האיבר הראשון של המערך ל-`RD_ROCK_POPRHYTHM_MAINDRUMS_11`. זה דומה לעדכון ערך משתנה, שגם בו השתמשנו *באופרטור ההשמה* `=`.
+We've seen that `array[index]` will reference an element of the array. אפשר להשתמש בביטוי זה כדי לשנות איבר של המערך. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 .תרגלו
 ****
-שנו את הדוגמה הקודמת, כך שתשתמש בלולאה כדי להימנע מקריאה לפונקציה`fitMedia()` שלוש פעמים. השתמשו במספר הערוץ כמונה הלולאה.
-האינדקס חייב להתחיל ב-`0`, בעוד מספר הערוץ מתחיל ב-`1`. בתוך הלולאה צרו משתנה שיהווה `אינדקס` שערכו מספר הערוץ פחות אחת.
+In the previous example, use a `for` loop instead of calling `fitMedia()` three times. השתמשו במספר הערוץ כמונה הלולאה.
+The index number must start at `0` while your track starts at `1`. Inside your for loop, you'll need to create an `index` variable equal to the track number minus one.
 ****
 
 למטה ישנה דוגמה. הסתכלו בקונסול וראו מה הסקריפט מדפיס בזמן הריצה.
@@ -77,35 +79,35 @@ image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-iterating-through-lists.py.txt[]
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-iterating-through-arrays.js.txt[]
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
-טיפ מועיל: הפונקציה ()len, עם שם הרשימה (list) כפרמטר, מחזירה את מספר איברי הרשימה. כך ש-`list[0]` הוא האיבר הראשון של `list`, ו- `list[len(list)-1]` הוא האיבר האחרון שלה. לדוגמה, אם `list = ["Hello","fellow","EarSketchers"]`, אז `len(list)` מחזירה `3`. האינדקסים הם `0`, `1` ו-`2`. האינדקס האחרון הוא 2 = 3-1.
+A useful tip: `len()` function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. האינדקס האחרון הוא 2 = 3-1.
 
 [role="curriculum-javascript"]
-טיפ מועיל: ערך התכונה `length` (`array.length`) הוא מספר האיברים במערך. כך ש-`array[0]` הוא האיבר הראשון של `array`, ו- `array[array.length-1]` הוא האיבר האחרון שלו. לדוגמה, אם `array = ["Hello","fellow","EarSketchers"]`, אז ערכה של `array.length` הוא `3`. האינדקסים הם `0`, `1` ו-`2`. האינדקס האחרון הוא 2 = 3-1.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. האינדקס האחרון הוא 2 = 3-1.
 
 [role="curriculum-python"]
 .תרגלו
 ****
-ניצור פתיחה לשיר ב-EarSketch בה כלים (ערוצים) יתווספו למוסיקה אחד אחד לאורך זמן. לדוגמה, הערוץ הראשון יתחיל בתיבה הראשונה, הערוץ השני יתחיל בתיבה השנייה וכו'. הדרגה בהוספה שימושית בפתיחה של שיר. למשל, שירו של https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West's "Power"^].
-בעזרת לולאה ורשימה, צרו פתיחה כזו מתיבה אחת עד חמש. כמו בדוגמה הקודמת, תוכלו להשתמש ב-`track` כמונה, ובמשתנה נוסף `כאינדקס`. בנוסף, תוכלו ליצור משתנה בשם `measure`.
-השתמשו בפונקציה `()len`.
+ניצור פתיחה לשיר ב-EarSketch בה כלים (ערוצים) יתווספו למוסיקה אחד אחד לאורך זמן. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using a list and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `len()` function.
 ****
 
 [role="curriculum-javascript"]
 .תרגלו
 ****
-ניצור פתיחה לשיר ב-EarSketch בה כלים (ערוצים) יתווספו למוסיקה אחד אחד לאורך זמן. לדוגמה, הערוץ הראשון יתחיל בתיבה הראשונה, הערוץ השני יתחיל בתיבה השנייה וכו'. הדרגה בהוספה שימושית בפתיחה של שיר. למשל, שירו של https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West's "Power"^].
-בעזרת לולאה ומערך, צרו פתיחה כזו מתיבה אחת עד חמש. כמו בדוגמה הקודמת, תוכלו להשתמש ב-`track` כמונה, ובמשתנה נוסף `כאינדקס`. בנוסף, תוכלו ליצור משתנה בשם `measure`.
-השתמשו בתכונה `length`.
+ניצור פתיחה לשיר ב-EarSketch בה כלים (ערוצים) יתווספו למוסיקה אחד אחד לאורך זמן. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using an array and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `length` property.
 ****
 
 הנה דוגמה:
@@ -113,29 +115,35 @@ include::../../en/v2/code-examples/data-structures-iterating-through-arrays.js.t
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-additive-introduction.py.txt[]
+include::code-examples/data-structures-additive-introduction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[]
+include::code-examples/data-structures-additive-introduction.js.txt[]
 ----
 
+{nbsp} +
+
 [[usingdatastructureswithmakebeat]]
-=== שימוש במבני נתונים עם `()makeBeat`
+=== Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
-נראה שתי דרכים לשימוש במבני נתונים עם `()makeBeat`. ראשית, נראה עד כמה דומות מחרוזות ורשימות:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
 
 [role="curriculum-javascript"]
-נראה שתי דרכים לשימוש במבני נתונים עם `()makeBeat`. ראשית, נראה עד כמה דומים מערכים ומחרוזות:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
 
 [role="curriculum-python"]
-1. כמו לרשימות, גם למחרוזות יש אינדקסים. *האינדקס* מייצג את מיקום התו (character) במחרוזת, החל מ-0. לדוגמה, ערכו של`[3]"Sarah"` הוא`a`.
-2. אפשר להשתמש בפונקציה `()len` עם מחרוזות, והיא תחזיר את מספר התווים במחרוזת. התו האחרון נמצא באינדקס`len(string)-1`.
-האינדקסים במחרוזת `"EarSketch"` מוצגים בטבלה הבאה.
+* כמו לרשימות, גם למחרוזות יש אינדקסים. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the function `len()` with strings, which returns the number of characters in the string. The last character is at index `len(string) - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
+[role="curriculum-javascript"]
+* כמו למערכים, גם למחרוזות יש אינדקסים. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the property `.length` with strings, which returns the number of characters in the string. The last character is at index `string.length - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
 [cols="h,^,^,^,^,^,^,^,^,^"]
 |===
@@ -162,62 +170,30 @@ include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[
 |8
 |===
 
+[role="curriculum-python"]
+* אפשר לשרשר רשימות כמו שמשרשרים מחרוזות. Use the concatenation operator (`+`): the syntax is `newList = listA + listB`.
+
 [role="curriculum-javascript"]
-1. כמו למערכים, גם למחרוזות יש אינדקסים. *האינדקס* מייצג את מיקום התו (character) במחרוזת, החל מ-0. לדוגמה, ערכו של`[3]"Sarah"` הוא`a`.
-2. אפשר להשתמש בתכונה (attribute) `length.` עם מחרוזות, והיא תחזיר את מספר התווים במחרוזת. התו האחרון נמצא באינדקס`string.length-1`.
-האינדקסים במחרוזת `"EarSketch"` מוצגים בטבלה הבאה.
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|תו
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|אינדקס
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
-
-
+* אפשר לשרשר מערכים כמו שמשרשרים מחרוזות. We use the `concat` *method*. פעולה דומה לפונקציה, בכך שיש לה סוגריים המכילים פרמטרים. To use it, place it after your array name, with a dot: the syntax is `newArray = arrayA.concat(arrayB)`. This is called *dot-notation*.
 
 [role="curriculum-python"]
-3. אפשר לשרשר רשימות כמו שמשרשרים מחרוזות. שרשור נעשה בעזרת אופרטור השרשור (`+`): התחביר (syntax) הוא `newList = listA + listB`. 
+* You can get a *substring*, also known as a slice, of a larger string. זה מאפשר לחתוך ביט, טכניקה פופולרית במוסיקה אלקטרונית ורמיקסינג. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
-3. אפשר לשרשר מערכים כמו שמשרשרים מחרוזות. השרשור נעשה בעזרת `concat` שהיא *פעולה (method)*. פעולה דומה לפונקציה, בכך שיש לה סוגריים המכילים פרמטרים. כדי להשתמש בה, כותבים את שמה אחרי שם המערך ומוסיפים נקודה ביניהם: התחביר (syntax) הוא `newArray = arrayA.concat(arrayB)`. צורת כתיבה זו נקראת *dot-notation*.
-
-[role="curriculum-python"]
-4. אפשר לחתוך מחרוזת ולקבל *תת-מחרוזת (substring)*. זה מאפשר לחתוך ביט, טכניקה פופולרית במוסיקה אלקטרונית ורמיקסינג. התחביר (syntax) הוא `newString = oldString[startIndex: endIndex]`. התת-מחרוזת כוללת את התו באינדקס`startIndex`, אבל לא את התו באינדקס `endIndex`. לדוגמה, הערך של `[1,4]"Sarah"` הוא `"ara"`. אפשר לעשות כך גם עם רשימות: `newList = oldList[startIndex: endIndex]`.
-
-[role="curriculum-javascript"]
-4. אפשר לחתוך מחרוזת ולקבל *תת-מחרוזת (substring)*. זה מאפשר לחתוך ביט, טכניקה פופולרית במוסיקה אלקטרונית ורמיקסינג. התחביר הוא `newString = oldString.substring(startIndex, endIndex)`. התת-מחרוזת כוללת את התו באינדקס`startIndex`, אבל לא את התו באינדקס `endIndex`.לדוגמה, ערכה של `Sarah".substring(1,4)"` הוא `"ara"`. אפשר לעשות אותו דבר עם מערכים, בעזרת הפעולה (method) `()slice`. התחביר הוא: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` ו-`slice()` הן פעולות, וכולן משתמשות ב-dot notation.
+* You can get a *substring*, also known as a slice, of a larger string. זה מאפשר לחתוך ביט, טכניקה פופולרית במוסיקה אלקטרונית ורמיקסינג. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1, 4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
 
 [role="curriculum-python"]
 .תרגלו
 ****
 בסקריפט חדש:
 
-. צרו ארבעה משתנים: שתי מחרוזות תיפוף (`stringA` ו- `stringB`) ושתי רשימות של קליפים (`soundsA` ו- `soundsB`).
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound lists (`soundsA` and `soundsB`).
 . הדפיסו את התו השני של כל מחרוזת.
 . הדפיסו את האיבר האחרון של כל רשימה.
-. צרו והדפיסו את `stringC`, השרשור של `stringA` ו- `stringB`.
-. צרו והדפיסו את `soundsC`, השרשור של `soundsB`, `soundsA` ושוב`soundsA`.
-. צרו והדפיסו `stringD`, תת-מחרוזת של`stringC` מהתו השני עד התו החמישי (כולל).
-. צרו והדפיסו את `soundsD`, תת-רשימה של `soundC` מאיבר השלישי ועד האחרון (כולל).
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 [role="curriculum-javascript"]
@@ -225,30 +201,30 @@ include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[
 ****
 בסקריפט חדש:
 
-. צרו ארבעה משתנים: שתי מחרוזות תיפוף (`stringA` ו- `stringB`) ושני מערכים של קליפים (`soundsA` ו- `soundsB`).
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound arrays (`soundsA` and `soundsB`).
 . הדפיסו את התו השני של כל מחרוזת.
 . הדפיסו את האיבר האחרון של כל מערך.
-. צרו והדפיסו את `stringC`, השרשור של `stringA` ו- `stringB`.
-. צרו והדפיסו את `soundsC`, השרשור של `soundsB`, `soundsA` ושוב`soundsA`.
-. צרו והדפיסו `stringD`, תת-מחרוזת של`stringC` מהתו השני עד התו החמישי (כולל).
-. צרו והדפיסו את `soundsD`, תת-רשימה של `soundC` מאיבר השלישי ועד האחרון (כולל).
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
-הנה דוגמה לפתרון:
+Here is an example of a solution:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-string-and-lists-operations.py.txt[]
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-string-and-lists-operations.js.txt[]
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
-דוגמה לשימוש של עיבוד מחרוזות ושל `()makeBeat`:
+This is an example of how you can use string operations with `makeBeat()`:
 
 [role="curriculum-python curriculum-mp4"]
 [[video13py]]
@@ -261,36 +237,38 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-string-operations.py.txt[]
+include::code-examples/data-structures-string-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-string-operations.js.txt[]
+include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-לסיום, `()makeBeat` יכולה לטפל במספר קליפים בבת-אחת. זה מאפשר למקם את כל כלי ההקשה (percussions) בערוץ אחד בעזרת קריאה אחת לפונקציה`()makeBeat`. במקום להעביר, כפרמטר הראשון, את שם הקליפ, אפשר להעביר רשימה של שמות קליפים. במחרוזת התיפוף, במקום להשתמש רק ב-`0` כדי לנגן קליפ, אפשר להשתמש במספרים מ-`0` עד `9`. המספרים הללו מציינים את האינדקס של הקליפ ברשימת הקליפים. ראו את הדוגמה "לפני ואחרי" שלהלן, עם מקצב ה-"בום פאם בום פאם".
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a list of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your list of sounds. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-javascript"]
-לסיום, `()makeBeat` יכולה לטפל במספר קליפים בבת-אחת. זה מאפשר למקם את כל כלי ההקשה (percussions) בערוץ אחד בעזרת קריאה אחת לפונקציה`()makeBeat`. במקום להעביר, כפרמטר הראשון, את שם הקליפ, אפשר להעביר מערך של שמות קליפים. במחרוזת התיפוף, במקום להשתמש רק ב-`0` כדי לנגן קליפ, אפשר להשתמש במספרים מ-`0` עד `9`. המספרים הללו מציינים את האינדקס של הקליפ במערך הקליפים. ראו את הדוגמה "לפני ואחרי" שלהלן, עם מקצב ה-"בום פאם בום פאם".
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass an array of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your array of sounds. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-making-a-drum-set.py.txt[]
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-making-a-drum-set.js.txt[]
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
+
+{nbsp} +
 
 .תרגלו
 ****
-העתיקו את דוגמת הקוד מפרק 3.4 של ביטים לפי ז'אנר (סוגה). שנו אותה כך שתהיה רק קריאה אחת לפונקציה`()makeBeat` לכל ז'אנר. לפעמים ההיי-האט מנוגן בו זמנית עם הקיק או הסנר. במקרים אלו הוסיפו קריאה ל-`()makeBeat` רק בשביל ההיי-האט.
+העתיקו את דוגמת הקוד מפרק 3.4 של ביטים לפי ז'אנר (סוגה). Modify the code to have just one `makeBeat()` line for each genre. Sometimes, the hihat is playing at the same time as the kick or snare. In that case, you can have one `makeBeat()` line just for the hihat.
 ****
 
 הנה הפתרון:
@@ -298,75 +276,65 @@ include::../../en/v2/code-examples/data-structures-making-a-drum-set.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-examples-of-beats.py.txt[]
+include::code-examples/data-structures-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-examples-of-beats.js.txt[]
+include::code-examples/data-structures-examples-of-beats.js.txt[]
 ----
+
+{nbsp} +
 
 .תרגלו
 ****
-צרו מקצבים (rhythms) עם הפונקציה `()makeBeat` ובעזרת מה שנלמד בשיעור זה. צפו שוב בקטע הווידאו בפרק 3.4 על ביטים לפי ד'אנר (סוגה), אם יש צורך בכך. אל תשכחו, שניתן להריץ את הקוד, לשמוע את הקטע ולתקן בהתאם.
+Using what you have learned in this chapter, create rhythms that you like with `makeBeat()`. צפו שוב בקטע הווידאו בפרק 3.4 על ביטים לפי ד'אנר (סוגה), אם יש צורך בכך. Don't forget that you can run your code, listen to what you've created, and modify it until it sounds good to you.
 ****
 
+{nbsp} +
+
 [[evaluatingcorrectness]]
-=== הערכת נכונות
+=== Evaluate Correctness
 
-ברכותינו. רכשתן/ם מיומנויות מוסיקליות ותכנותיות שיאפשרו לכם/ן לכתוב שירים מקוריים ומעניינים עם EarSketch! הדבר האחרון שנרצה לדבר עליו, הוא איך ניתן לוודא שהקוד יהיה מסודר ופשוט ככל האפשר. הנה מספר עצות:
+Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. הנה מספר עצות:
 
-[role="curriculum-python"]
-* *תמצות* - צרו קוד קצר המשיג את מטרתו ביעילות. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד תמציתי:
-** האם העתקתי מספר קריאות לאותה פונקציה, אחת אחרי השנייה? (אם כן, ניתן לקצר את הקוד בעזרת לולאה!)
-** האם העתקתי את אותו בלוק של קוד מספר פעמים בסקריפט? (אם כן, כדאי להגדיר את הבלוק כפונקציה!)
-** האם יש שמות קליפים או ביטויים מתמטיים שחוזרים בקוד? (אם כן, צריך לשים את ערכם במשתנים! לפעמים רשימה יכולה לעזור)
-* *בהירות* מתייחסת לאופן בו הקוד מסביר את פעולתו ואת כוונת המתכנת/ת. אם קשה לחבר/ה להבין את הקוד שכתבת, הקוד, כנראה, לא בהיר. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד בהיר:
-** האם יש בקוד הערות פתיחה עם שם הסקריפט, שם המחבר/ת ותיאור? 
-** האם שמות המשתנים והפונקציות תיאוריים? (אם לא, יש לשנות את השמות)
+* *Conciseness* means brief code that accomplishes its goal with fewer lines. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד תמציתי:
+** האם העתקתי מספר קריאות לאותה פונקציה, אחת אחרי השנייה? If so, simplify with a loop!
+** האם העתקתי את אותו בלוק של קוד מספר פעמים בסקריפט? If so, put them in a function!
+** האם יש שמות קליפים או ביטויים מתמטיים שחוזרים בקוד? If so, assign them to variables! A list might also be useful.
+* *Clarity* relates to how well code communicates its function and the programmer's intent. אם קשה לחבר/ה להבין את הקוד שכתבת, הקוד, כנראה, לא בהיר. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד בהיר:
+** האם שמות המשתנים והפונקציות תיאוריים? If not, rename them.
 ** האם יש, בכל בלוק של קוד, הערות המסבירות את הקוד, ביחוד בקטעים שעלולים להיות קשים להבנה?
 ** האם נעשה שימוש במבנים תכנותיים, כמו פונקציות (המוגדרות על-ידי המתכנת/ת) ולולאות, כדי לארגן את הקוד?
-** האם מבנה הסקריפט משקף את מבנה השיר? זה מאפשר קריאה שוטפת של הקוד.
+** Can I structure my script to mirror the structure of my song? In some cases this can help the flow of reading.
 
-[role="curriculum-javascript"]
-* *תמצות* - צרו קוד קצר המשיג את מטרתו ביעילות. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד תמציתי:
-** האם העתקתי מספר קריאות לאותה פונקציה, אחת אחרי השנייה? (אם כן, ניתן לקצר את הקוד בעזרת לולאה!)
-** האם העתקתי את אותו בלוק של קוד מספר פעמים בסקריפט? (אם כן, כדאי להגדיר את הבלוק כפונקציה!)
-** האם יש שמות קליפים או ביטויים מתמטיים שחוזרים בקוד? (אם כן, צריך לשים את ערכם במשתנים! לפעמים מערך יכול לעזור)
-* *בהירות* מתייחסת לאופן בו הקוד מסביר את פעולתו ואת כוונת המתכנת/ת. אם קשה לחבר/ה להבין את הקוד שכתבת, הקוד, כנראה, לא בהיר. הנה מספר שאלות מנחות, שעוזרות לוודא שהקוד בהיר:
-** האם יש בקוד הערות פתיחה עם שם הסקריפט, שם המחבר/ת ותיאור? 
-** האם שמות המשתנים והפונקציות תיאוריים? (אם לא, יש לשנות את השמות)
-** האם יש, בכל בלוק של קוד, הערות המסבירות את הקוד, ביחוד בקטעים שעלולים להיות קשים להבנה?
-** האם נעשה שימוש במבנים תכנותיים, כמו פונקציות (המוגדרות על-ידי המתכנת/ת) ולולאות, כדי לארגן את הקוד?
-** האם מבנה הסקריפט משקף את מבנה השיר? זה מאפשר קריאה שוטפת של הקוד.
+*Peer Feedback* is common in programming and helps you improve your code and music thanks to comments from others. Feedback must be *constructive*, meaning it builds a peer up, rather them breaking them down. בנתינת משוב יש להיות:
 
-*משוב עמיתים/ות* נפוץ בתכנות ועוזר לשפר את הקוד ואת המוסיקה בעזרת הערות של חבר/ה. משוב חייב להיות *בונה*, כלומר, מעודד ולא "שובר". בנתינת משוב יש להיות:
-
-* *ספציפי/ת* - יש להתייחס לבלוקים ספציפיים, לשורות קוד ספציפיות, לתיבות ספציפיות ולערוצים ספציפיים.
-* *תיאורי/ת* - יש לתאר את דרך החשיבה ואת התהליך שיובילו לשיפור השיר.
-* *רגיש/ה לחזון ולמטרות של הזולת* - הטעם המוסיקלי שלך לא צריך להיות גורם בהערכת שיר של חבר/ה.
-* *חיובי* - בנוסף לדברים הדורשים שיפור, יש לציין גם את החלקים החזקים בקוד ובשיר.
-* *לא השוואתי/ת* - יש להתייחס לקוד בפני עצמו ולא בהשוואה או בתחרות מול קוד אחר (שלך או של חבר/ה אחר/ת).
+* *Be specific* - Refer to specific blocks and lines of code and to specific measures and tracks of music.
+* *Be descriptive* - Describe your reasoning and the process you would take to improve a script.
+* *Be sensitive to your peer's musical vision/goals* - Your own musical tastes should not factor in to an evaluation of your peer's music.
+* *Be positive* - In addition to what needs improvement, point out code blocks and musical passages that are strong.
+* *Don't compare* - Treat your peer's code as their own, not as a competition with your own or other peers' code.
 
 בדומה לכך, בקבלת משוב יש להיות:
 
-* *ספציפי/ת* - יש לציין מהם קטעי הקוד, שורות הקוד, התיבות והערוצים שדורשים, לדעתך, שיפור ועבודה נוספת. זה יקל על מתן משוב שיסייע לשיפור בשיר.
-* *קשוב/ה* - יש להמתין לסיום מתן המשוב לפני שתגיב/י עליו. יש להקשיב (באמת להקשיב...) לדברי המשוב. מומלץ לכתוב הערות בקוד המתארות את המשוב. הערות אלה יועילו כשתחזרו לקוד כדי לשפרו.
-* *חוקר/ת* - חשוב לשאול שאלות מפורטות על כל עניין שיש בו ספק: לוגיקה, טעויות אפשריות, אחידות מוסיקלית או כל אלמנט אחר.
+* *Be specific* - Point out blocks or lines of code and tracks or measures of music that are causing issues. זה יקל על מתן משוב שיסייע לשיפור בשיר.
+* *Listen* - Wait to respond until your peer has finished speaking. יש להקשיב (באמת להקשיב...) לדברי המשוב. מומלץ לכתוב הערות בקוד המתארות את המשוב. הערות אלה יועילו כשתחזרו לקוד כדי לשפרו.
+* *Ask questions* - Ask about logic you are unsure of, issues, bugs, musical coherence, or any element of correctness.
 
 [role="curriculum-python"]
 .תרגלו
 ****
 צרו שיר וקבלו עליו משוב מחבר/ה. הנה מספר רעיונות כדי להתניע את כתיבת השיר:
 
-* מומלץ להחליט על הנושא של השיר ועל המבנה שלו לפני שמתחילים לכתוב את השיר. המבנה יכול להיות פשוט. ABA, למשל. 
-* בחרו קליפים ונסו אפשרויות שונות. הגדירו משתנים לצלילים ומחרוזות תיפוף. השתמשו בפונקציות `()fitMedia` ו-`()makeBeat`. תוכלו להעלות צלילים שלכן/ם.
-* כשזה מועיל, השתמשו בלולאות והגדירו פונקציות.
-* הוסיפו אפקטים בעזרת `()setEffect`.
+* It's always recommended to think about a theme for your song and a structure before getting started. המבנה יכול להיות פשוט. ABA, למשל.
+* בחרו קליפים ונסו אפשרויות שונות. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. תוכלו להעלות לספריית הצלילים קליפים שלכם.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`. You can add a fade in, fade out, some delay, reverb...
 * השתמשו בהוראת if כדי למקסס (להתאים את הווליום בכל ערוץ).
 * בקשו קלט מהמשתמש/ת כדי לשנות משהו בשיר.
-* אם יש צורך הכך, השתמשו במערכים.
+* If necessary, place some elements in a list.
 ****
 
 [role="curriculum-javascript"]
@@ -374,52 +342,40 @@ include::../../en/v2/code-examples/data-structures-examples-of-beats.js.txt[]
 ****
 צרו שיר וקבלו עליו משוב מחבר/ה. הנה מספר רעיונות כדי להתניע את כתיבת השיר:
 
-* מומלץ להחליט על הנושא של השיר ועל המבנה שלו לפני שמתחילים לכתוב את השיר. המבנה יכול להיות פשוט. ABA, למשל. 
-* בחרו קליפים ונסו אפשרויות שונות. הגדירו משתנים לצלילים ומחרוזות תיפוף. השתמשו בפונקציות `()fitMedia` ו-`()makeBeat`. תוכלו להעלות צלילים שלכן/ם.
-* כשזה מועיל, השתמשו בלולאות והגדירו פונקציות.
-* הוסיפו אפקטים בעזרת `()setEffect`.
+* It's always recommended to think about a theme for your song and a structure before getting started. המבנה יכול להיות פשוט. ABA, למשל.
+* בחרו קליפים ונסו אפשרויות שונות. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. תוכלו להעלות לספריית הצלילים קליפים שלכם.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`.  You can add a fade in, fade out, some delay, reverb...
 * השתמשו בהוראת if כדי למקסס (להתאים את הווליום בכל ערוץ).
 * בקשו קלט מהמשתמש/ת כדי לשנות משהו בשיר.
 * אם יש צורך הכך, השתמשו במערכים.
 ****
-
-[[conclusion]]
-=== סיכום
-
-תודה רבה על השתתפותכן/ם בהרפתקה של EarSketch! צוות EarSketch מקווה שנהניתן/ם ולמדתן/ם הרבה בעזרת כלי זה :) יש עוד מה לגלות ולחקור בפרקי הבחירה!
-
-////
-Thank you video
-////
-
 
 [[chapter9summary]]
 === סיכום פרק תשיעי
 
 [role="curriculum-python"]
-* *רשימה (list)* היא אוסף סדור של ערכים. זו דרך יעילה לאחסן נתונים. הערכים המאוחסנים ברשימה, ונקראים איברי הרשימה, יכולים להיות מכל טיפוס נתונים שהוא.
+* A *list* is a collection of values combined into a single entity, a good way to organize data. הערכים המאוחסנים ברשימה, ונקראים איברי הרשימה, יכולים להיות מכל טיפוס נתונים שהוא.
 * כמו במחרוזות, לאיברי הרשימה יש אינדקסים. האינדקסים מתחילים מ-0.
-* הגישה לאיברי הרשימה היא בעזרת סוגריים מרובעים. למשל, `myList[1]`. לתווים במחרוזת ניתן לגשת בצורה דומה: `myString[1]`.
-* הפונקציה `len()` מחזירה את מספר איברי הרשימה, או את מספר התווים במחרוזת. התחביר (syntax) הוא:`len(list)`.
-* אפשר לשרשר ולחתוך רשימות בעזרת *אופרטורים של רשימות*, קבוצת אופרטורים לעיבוד רשימות.
-* התחביר (syntax) ליצירת תת-רשימה מרשימה קיימת הוא: `newList = oldList[startIndex: endIndex]`.
-* אפשר לחבר רשימות בעזרת אופרטור השרשור `+`. למשל, `newList = listA + listB`.
-* `()makeBeat` יכולה ליצור מקצבים ממספר קליפים בו זמנית, עם היא מקבלת פרמטר עם רשימת הקליפים ומחרוזת תיפוף המתייחסת לקליפים השונים</0>. `()makeBeat` יכולה לגשת לקליפים באינדקסים 0 עד 9, בתנאי שהם מאוחסנים באותה רשימה.
-* החלפת מידע בונה עם הזולת היא צורה של *משוב עמיתים*. משוב עמיתים מספק הזדמנות ללמוד מהזולת.
-
+* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The function `len()` returns the number of elements in a list, or the number of characters in a string. The syntax is `len(list)`.
+* Lists and arrays can be concatenated and sliced using *list operations*, a set of tools for modifying a list.
+* The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
+* Lists can be combined using the concatenation operator, `+`, like `newList = listA + listB`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
+* Exchanging constructive information with others is a form of *peer feedback*. משוב עמיתים מספק הזדמנות ללמוד מהזולת.
 
 [role="curriculum-javascript"]
-* *מערך (array)* היא אוסף סדור של ערכים. זו דרך יעילה לאחסן נתונים. הערכים המאוחסנים במערך, ונקראים איברי המערך, יכולים להיות מכל טיפוס נתונים שהוא.
+* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
 * כמו במחרוזות, לאיברי המערך יש אינדקסים. האינדקסים מתחילים מ-0.
-* הגישה לאיברי המערך היא בעזרת סוגריים מרובעים. למשל, `myArray[1]`. לתווים במחרוזת ניתן לגשת בצורה דומה: `myString[1]`.
-* התכונה `length` מחזירה את מספר איברי המערך, או את מספר התווים במחרוזת. התחביר (syntax) הוא `array.length` או `string.length`.
-* אפשר לשרשר ולחתוך מערכים בעזרת *אופרטורים של מערכים*, קבוצת כלים לעיבוד מערכים.
-* התחביר (syntax) ליצירת תת-מערך ממערך קיים הוא: `newArray = oldArray.slice(startIndex, endIndex)`.
-* התחבר (syntax) ליצירת תת-מחרוזת ממחרוזת קיימת הוא: `newString = oldString.substring(startIndex, endIndex)`.
-* אפשר לחבר מערכים בעזרת השיטה `concat()`. למשל, `newArray = arrayA.concat(arrayB)`.
-* `()makeBeat` יכולה ליצור מקצבים ממספר קליפים בו זמנית, עם היא מקבלת פרמטר עם מערךהקליפים ומחרוזת תיפוף המתייחסת לקליפים השונים</0>. `()makeBeat` יכולה לגשת לקליפים באינדקסים 0 עד 9, בתנאי שהם מאוחסנים באותו מערך.
-* החלפת מידע בונה עם הזולת היא צורה של *משוב עמיתים*. משוב עמיתים מספק הזדמנות ללמוד מהזולת.
-
+* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
+* Arrays can be concatenated and sliced using *array operations*, a set of tools for modifying an array.
+* The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
+* The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
+* Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
+* Exchanging constructive information with others is a form of *peer feedback*. משוב עמיתים מספק הזדמנות ללמוד מהזולת.
 
 [[chapter-questions]]
 === שאלות
@@ -427,6 +383,7 @@ Thank you video
 [question]
 --
 מי מהפעולות הבאות משמשת לצירוף של רשימות/מערכים?
+
 [answers]
 * שרשור
 * חיתוך
@@ -438,28 +395,31 @@ Thank you video
 [question]
 --
 מהו האינדקס של האיבר הראשון ברשימה בפייתון?
+
 [answers]
 * `0`
 * `1`
 * `2`
-* `1-`
+* `-1`
 --
 
 [role="curriculum-python"]
 [question]
 --
-מה מחזירה `len(myList)`?
+What does `len(myList)` return?
+
 [answers]
-* מספר האיברים ב-`myList`
-* טיפוס הנתונים של`myList`
-* האיברים של`myList`
-* הרוחב של`myList`
+* The number of elements in `myList`
+* The data types of `myList`
+* The elements of `myList`
+* The width of `myList`
 --
 
 [role="curriculum-python"]
 [question]
 --
-מהו התחביר לשרשור שתי רשימות(`listA` ו-`listB`)?
+What is the syntax to concatenate two lists (`listA` and `listB`)?
+
 [answers]
 * `listA + listB`
 * `listA ++ listB`
@@ -471,39 +431,43 @@ Thank you video
 [question]
 --
 כיצד ניתן ליצור רשימה המכילה את כל איברי oldList, חוץ מהאיבר הראשון והאיבר האחרון?
+
 [answers]
-* `oldList[1:len(oldList)-1]`
+* `oldList[1:len(oldList) - 1]`
 * `oldList[1:len(oldList)]`
 * `oldList[0:len(oldList)]`
-* `oldList[2:len(oldList-1)]`
+* `oldList[2:len(oldList - 1)]`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
 מהו האינדקס של האיבר הראשון במערך ב-Javascript?
+
 [answers]
 * `0`
 * `1`
 * `2`
-* `1-`
+* `-1`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-מה ערכו של `myArray.length`?
+What does `myArray.length` return?
+
 [answers]
-* מספר האיברים ב-`myArray`
-* טיפוס הנתונים של `myArray`
-* האיברים של`myArray`
-* הרוחב של `myArray`
+* The number of elements in `myArray`
+* The data types of `myArray`
+* The elements of `myArray`
+* The width of `myArray`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-מה התחביר (syntax) לשרשור שני מערכים (`arrayA` ו- `arrayB`)?
+What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+
 [answers]
 * `arrayA.concat(arrayB)`
 * `arrayA.concatenate(arrayB)`
@@ -514,10 +478,20 @@ Thank you video
 [role="curriculum-javascript"]
 [question]
 --
-כיצד ניתן ליצור מערך מאיברי `oldArray` ללא האיבר הראשון והאיבר האחרון?
+How can you get an array from `oldArray` without the first and last elements?
+
 [answers]
-* `oldArray.slice(1,oldArray.length-1]`
-* `oldArray.slice(1,oldArray.length)`
-* `oldArray.slice(0,oldArray.length)`
-* `oldArray.slice(2:oldArray.length-1)`
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
 --
+
+[[conclusion]]
+=== סיכום
+
+תודה רבה על השתתפותכן/ם בהרפתקה של EarSketch! We hope you had fun and learned many things with this tool :)
+
+////
+Thank you video
+////
