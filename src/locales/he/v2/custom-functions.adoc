@@ -1,16 +1,18 @@
 [[customfunctionssongstructure]]
-== מבנה השיר ופונקציות המוגדרות על-ידי המתכנת/ת
+== Custom Functions and Song Structure
+
 :nofooter:
 
-מבנה השיר הוא ארגון השיר בזמן: האופן בו נחבר קטעים משמעותיים ומעברים ביניהם ונגרום למוסיקה לזרום. בפרק זה תצרו פונקציות: פונקציות המוגדרות על-ידי המתכנת/ת, כדי לקבוע את מבנה השיר!
+The song structure is the song's organization over time. The goal is to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own function, custom functions, to structure your songs!
 
 [[asongsstructure]]
-=== מבנה השיר
+=== A song's structure
+
 :nofooter:
 
-שיר יכול להתחלק *לקטעים*. קטע מורכב ממספר תיבות והוא מבטא רעיון או תחושה. בדרך כלל, מוסיקאים מנסים ליצור קונטרסט (ניגודיות) בין קטעים שונים. פתיחה, בית, פזמון וקטע סיום הם דוגמאות לקטעים.
+A song can be divided into *sections*. קטע מורכב ממספר תיבות והוא מבטא רעיון או תחושה. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
 
-*צורה*, או מבנה שיר, נפוץ הוא ABA. הקטעים A ו-B הם שני קטעים שונים. למשל, בית ופזמון. קטע B מוסיף גיוון, והחזרה לקטע A שומרת על אחידות ומעוררת תחושה של חזרה למשהו מוכר ובטוח. הקוד בהמשך יוצר שיר במבנה ABA. קטע B מכיל צלילים ניגודיים לצלילים בקטע A: בס איטי יותר ובעצמה גבוהה יותר, ותוספת של "חריקות":
+A common and simple *form*, or song structure, is ABA. הקטעים A ו-B הם שני קטעים שונים. למשל, בית ופזמון. קטע B מוסיף גיוון, והחזרה לקטע A שומרת אחידות ומעוררת תחושה של חזרה למשהו מוכר ובטוח. הקוד בהמשך יוצר שיר במבנה ABA. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
 
 [[imediau2sections_052016png]]
 .מבנה ABA ב-DAW
@@ -20,61 +22,64 @@ image::../media/U2/sections_052016.png[Alt Text]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-form.py.txt[]
+include::code-examples/custom-functions-a-b-a-form.py.txt[]
 ----
-
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-form.js.txt[]
+include::code-examples/custom-functions-a-b-a-form.js.txt[]
 ----
+
+{nbsp} +
 
 .תרגלו
 ****
-בחרו שיר והאזינו לו. נסו להבחין בקטעים השונים. האם הצלחתן/ם להבחין מתי השיר עובר מקטע לקטע? כמה בתים יש לשיר וכמה פעמים חוזר הפזמון? איזה קונטרסט (ניגודיות) יש בין הקטעים? שתפו את השיר עם חבר/ה.
+בחרו שיר והאזינו לו. נסו להבחין בקטעים השונים. האם הצלחתן/ם להבחין מתי השיר עובר מקטע לקטע? How many times do you hear the chorus and verse? What kind of contrasts can you observe? שתפו את השיר עם חבר/ה.
 ****
 
-זכרו שמשפט מוסיקלי נשמע הכי טבעי כשהקליפים מאורגנים בקבוצות של 2,4,8,16 וכו'. כך שגם הקטעים בשיר שבחרתם/ן מכילים, קרוב לוודאי, 2, 4, 8 או 16 תיבות.
+Keep in mind that a musical phrase sounds most natural when sounds are arranged into groups of two, four, eight, sixteen, etc. So your sections should preferably have a size of two, four, eight, or sixteen measures.
 
 [[creatingyourcustomfunctions]]
 === הגדירו פונקציות
 
-בדוגמה הקודמת של שיר במבנה ABA, הקוד ארוך, וחוזר על עצמו בקטע A השני. יש דרך ליעל את כתיבת הקוד ולקצרו, בעזרת *פונקציות המוגדרות על-ידי המתכנת/ת*! נגדיר פונקציה שתיצור את קטע A, ונקרא לה פעמיים.  
+בדוגמה הקודמת של שיר במבנה ABA, הקוד ארוך, וחוזר על עצמו בקטע A השני. There is a way to be more concise, thanks to *custom functions*! נגדיר פונקציה שתיצור את קטע A, ונקרא לה פעמיים.
 
-בשונה מפונקציות בהן השתמשנו בעבר, כמו `()fitMedia`, שהיו מוגדרות מראש, יהיה עלינו להגדיר את הפונקציה שתיצור את קטע A. כך נגדיר את הפונקציה:
+The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a sound. In a custom function, you get to define exactly what it does. כך נגדיר את הפונקציה:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-untitled1.py.txt[]
+include::code-examples/custom-functions-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-untitled1.js.txt[]
+include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
-. ()sectionA הוא השם שבחרנו לפונקציה. אפשר לבחור כל שם שתרצו. הקפידו לבחור בשם תיאורי, כך שהקוד יהיה קריא.
-. ההוראות הן *גוף* הפונקציה. הן מוזחות ימינה.
+. `sectionA()` is the name we chose for our function. You can choose any name you like. הקפידו לבחור בשם תיאורי, כך שהקוד יהיה קריא.
+. The instructions are the *body* of the function. הן מוזחות ימינה.
 
 .תרגלו
 ****
-העתיקו והדביקו את הקוד בסקריפט חדש. הריצו את הקוד. שימו לב לכך שה-DAW נשאר ריק. 
-זה בגלל שצריך *לקרוא* לפונקציה כדי להשתמש בה.  
-כדי לקרוא לפונקציה, הוסיפו `()sectionA`, בשורה לא מוזחת, אחרי הגדרת הפונקציה. כשתריצו את הקוד תראו את קטע A ב-DAW.
+העתיקו והדביקו את הקוד בסקריפט חדש. הריצו את הקוד. שימו לב לכך שה-DAW נשאר ריק.
+That's because you need to *call* a function to use it.
+To call your function, add the line `sectionA()`, unindented, after your function definition. כשתריצו את הקוד תראו את קטע A ב-DAW.
 ****
 
-עכשיו, נרצה להוסיף את קטע A מתיבה תשע עד תיבה שלוש-עשרה. אבל, כשנקרא לפונקציה ()sectionA, הצלילים ימוקמו בתיבות אחת עד חמש. כדי לתקן זאת, נעביר *פרמטרים* לפונקציה.
+Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. To remedy this issue, we will create *parameters* for our function.
 
 .תרגלו
 ****
-בסקריפט הנוכחי, 1. הוסיפו את הפרמטרים `startMeasure` ו- `endMeasure`, מופרדים על-ידי פסיקים, בתוך הסוגריים בהגדרת הפונקציה. (`sectionA(startMeasure,endMeasure)`).
-2. בגוף הפונקציה, החליפו את תיבת ההתחלה (1) ואת תיבת הסיום (5) בפרמטרים `startMeasure` ו-`endMeasure` בהתאמה.
-3. בקריאה לפונקציה, הוסיפו את הפרמטרים`1` ו-`5` בתוך הסוגריים. הריצו את הקוד וודאו שאין בו שגיאות.
-4. הוסיפו קריאה שנייה לפונקציה, הפעם עם הפרמטרים `9`ו-`13`. הריצו את הקוד וודאו שאין בו שגיאות.
-5. באופן דומה, הגדירו פונקציה לקטע B. קראו לפונקציה כדי למקם את קטע B מתיבה חמש עד תיבה תשע ומתיבה שלוש-עשרה עד תיבה שבע-עשרה.
+In your current script you created for the previous practice problem:
+
+1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
+1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
+1. When you call your function, add the parameters `1` and `5` between the parentheses. הריצו את הקוד וודאו שאין בו שגיאות.
+1. Add a second function call, this time with the parameters `9` and `13`. הריצו את הקוד וודאו שאין בו שגיאות.
+1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
 ****
 
 כך אמור להראות הקוד:
@@ -82,18 +87,16 @@ include::../../en/v2/code-examples/custom-functions-untitled1.js.txt[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
 ----
 
-
 //The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
-
 
 [role="curriculum-python curriculum-mp4"]
 [[video93py]]
@@ -103,56 +106,56 @@ video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
 [[video93js]]
 video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 
-
 [[transitionstrategies]]
 === אסטרטגיות מעבר
 
-אחרי שלמדנו איך להגדיר פונקציות כדי לקבוע את מבנה השיר, נדון במעברים. *מעברים* מסייעים למעבר חלק מקטע לקטע. מעברים יכולים לחבר בית ופזמון, לטפס עד לנפילה, לערבל ערוצים או להחליף סולם (key). מטרת המעבר היא להפנות את תשומת הלב של המאזין/ה לכך ששינוי עומד להתרחש. 
+Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help one section smoothly go into the next. מעברים יכולים לחבר בית ופזמון, לטפס עד לנפילה, לערבל ערוצים או להחליף סולם (key). The goal of a transition is to grab the listener's attention and let them know a change is about to occur.
 
 להלן מספר דרכים ליצירת מעברים מוסיקליים:
 
-. *מצילה (Crash Cymbal)*: מיקום קול מצילה בביט הראשון של הקטע החדש. הקשיבו https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[לדוגמה^].
-. *מעבר תופים*: שינוי ריתמי למילוי המרווח לפני הקטע החדש. הקשיבו https://www.youtube.com/watch?v=YMskGG39Y0Y[לדוגמאות^] האלה.
-. *השמטת ערוצים*: השתקה זמנית של ערוצים מסוימים ליצירת הפסקות. הקשיבו ל-https://www.youtube.com/watch?v=PxIgHSOLO_Q[Imagine Dragon's Love], ב-16'1 כדוגמה.
-. *שינוי במלודיה*: הצגת שינויים באקורדים, קו הבס או המלודיה לפני הקטע החדש. לעיתים קרובות, תיקייה בתוך ספריית הצלילים של EarSketch מכילה וריאציות לריף. 
-. *"מרים" (riser)*: תו או רעש שגובהו עולה בהדרגה. הוא מאוד נפוץ ב-EDM (קיצור של Electronic Dance Music), ויוצר ציפייה לירידה (drop). אפשר לחפש "riser" בדפדפן הצלילים. קול מצילה הפוך יכול לשמש כ-riser. לדוגמה: YG_EDM_REVERSE_CRASH_1. הקשיבו לדוגמה ל-riser https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[בסט טכנו של Carl Cox^].
-. *דרדור של סנר (snare roll)*: רצף מהיר של מכות בסנר, עם עלייה במהירות, בעצמה או בגובה הצליל. ליצירת דרדור סנר אפשר להשתמש בקליפים כמו RD_FUTURE_DUBSTEP_FILL_1 או HOUSE_BREAK_FILL_003, או להשתמש ב-`()makeBeat`. הקשיבו https://www.youtube.com/watch?v=c3HLuTAsbFE[לדוגמה^].
-. *Looping*: חזרה על מקטע של מלודיה לפני הקטע החדש. הקשיבו https://www.youtube.com/watch?v=AQg4wnbBjiQ[לדוגמה^] של looping שמבצע DJ.
-. *דעיכה צולבת (crossfading)*: הורדה הדרגתית של הווליום של הקטע תוך הגברת הווליום של הקטע החדש. 
-. *אקדם (anacrusis)*: כשהמלודיה של הקטע החדש מקדימה במספר ביטים.
+. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section.
+. *Drum Fill*: A rhythmic variation to fill the gap before a new section.
+. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
+. *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. לעיתים קרובות, תיקייה בתוך ספריית הצלילים של EarSketch מכילה וריאציות לריף.
+. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. אפשר לחפש "riser" בדפדפן הצלילים. קול מצילה הפוך יכול לשמש כ-riser. לדוגמה: YG_EDM_REVERSE_CRASH_1.
+. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Looping*: Repeating a short segment of melody before a new section.
+. *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section.
+. *Anacrusis*: When the melody of the new section starts a couple beats early.
 
 .תרגלו
 ****
-עברו על רשימת המעברים האפשריים, בחרו שניים מתוכם ונסו לממש אותם בקוד. עבדו בזוגות, זה יכול לעזור. אחרי שהבנתם איך לממש מעברים בקוד, תוכלו להסתכל בדוגמאות הבאות.
+Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. עבדו בזוגות, זה יכול לעזור. Once you've thought about it, you can have a look at the examples below.
+
+The transition should be placed one or two measures before the new section. תוכלו להשתמש במספר טכניקות מעבר מעבר בו-זמנית.
 ****
-המעבר צריך להיות ממוקם תיבה או שתיים לפני הקטע החדש. תוכלו להשתמש במספר טכניקות מעבר מעבר בו-זמנית. 
 
 מעבר תופים:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
+include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
+include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-הטכניקה של השמטת ערוצים דורשת רק שינויים במספר קריאות לפונקציה `()fitMedia`. ראו את הדוגמה למטה.
+The track silencing technique only requires the modification of a couple `fitMedia()` calls. ראו את הדוגמה למטה.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
+include::code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
+include::code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
 הדוגמה הבאה משתמשת במרימים (risers) ובמצילה (crash cymbal) במעבר.
@@ -160,37 +163,39 @@ include::../../en/v2/code-examples/custom-functions-transition-techniques-track-
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.py.txt[]
+include::code-examples/custom-functions-transition-techniques-risers.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.js.txt[]
+include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 ----
+
+{nbsp} +
 
 [[yourfullsong]]
 === השיר בשלמותו
 
-בתכנות ניתן ליצור *הפשטות (אבסטרקציות)*:  חיבור של רעיונות ליצירת מושג אחד. בדיוק כמו שבמוסיקה מחברים מספר רעיונות מוסיקליים לקטע אחד. פונקציות הן סוג של הפשטה במדעי המחשב. הן מחברות מספר הוראות לכלי אחד שאפשר להשתמש בו בקלות. הפשטות כאלה מסייעות להבהיר את מבנה התוכנית.
+In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. פונקציות הן סוג של הפשטה במדעי המחשב. הן מחברות מספר הוראות לכלי אחד שאפשר להשתמש בו בקלות. הפשטות כאלה מסייעות להבהיר את מבנה התוכנית.
 
 .תרגלו
 ****
-בתרגיל זה ניצור שיר שלם, באמצעות כל האמצעים שלמדנו וגילינו ב-EarSketch! הנה הצעה לדרך העבודה על השיר. תוכלו להתאים את דרך העבודה כך שתהיה נוחה לכן/ם:
+Let's create a full song using all the tools you've discovered in EarSketch! הנה הצעה לדרך העבודה על השיר. תוכלו להתאים את דרך העבודה כך שתהיה נוחה לכן/ם:
 
-. בחרו נושא, או מסר, לשיר. חשבו על סוגי הצלילים, הכלים והמילים שיעבירו את המסר בצורה הטובה ביותר.
-. בחרו מבנה פשוט לשיר. 
-. ולסיום, התחילו לכתוב קוד! התחילו בבחירת צלילים ומיקומם בעזרת הפונקציה `()fitMedia`.
-. השתמשו ב-`()makeBeat` כדי להוסיף כלי הקשה.
+. בחרו נושא, או מסר, לשיר. Think about the type of sounds, instruments, or lyrics that will best convey your message.
+. בחרו מבנה פשוט לשיר.
+. ולסיום, התחילו לכתוב קוד! Start with some `fitMedia()` functions to select sounds.
+. Use `makeBeat()` to add some percussion.
 . תוכלו להעלות לספריית הצלילים קליפים שלכם.
-. השתמשו בלולאות for למניעת חזרות בקוד.
-. בעזרת פונקציות, הגדירו קטעים בשיר, וקבעו את מבנה השיר.
-. הוסיפו מעברים (אחד או שניים) משמעותיים.
-. הוסיפו אפקטים עם ()serEffect.
+. Use `for` loops to reduce repetition in your code.
+. Use custom functions to define your sections and create your song structure.
+. Add one or two meaningful transitions.
+. Add effects with `setEffect()`.
 . הוסיפו הוראות תנאי (if).
-. השתמשו במשתנים לאחסון נתונים כמו שמות קליפים, למשל.
+. Make sure you use variables to store some information such as sound constants.
 . אל תשכחו להשתמש בהערות כדי להסביר מה עשיתם.
-. הריצו את הקוד מדי פעם, תוך כדי הכתיבה, כדי להקשיב למה שיצרתם/ן עד כאן. שנו את השיר עד שהוא יביע את רצונכן/ם.
+. Don't forget to regularly run your code and listen to your song. שנו את השיר עד שהוא יביע את רצונכן/ם.
 . בחרו שם לשיר.
 ****
 
@@ -199,26 +204,25 @@ include::../../en/v2/code-examples/custom-functions-transition-techniques-risers
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
+include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 ----
+
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
+include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-בדוגמה הזו, השתמשנו בלולאה בתוך פונקציה שהגדרנו! השתמשנו בפרמטרים של הפונקציה (`start` ו-`end`) בלולאה.
-
+In this example, we have used a `for` loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
 
 [[chapter7summary]]
 === סיכום פרק שביעי
 
-* *קטעים* הם אוספים של יחידות מוסיקליים הקשורות זו לזו. קטע נמשך על פני מספר תיבות. כל קטע מביע רעיון או רגש מסוימים.
-* *מעברים* הם פסקאות מוסיקליות המקשרות בין קטעים שונים.
-* המבנה והמגוון של השיר נקראים *הצורה (form)* של השיר. צורה נפוצה היא ABA.
-* *פונקציות המוגדרות של-ידי המתכנת* מבצעות משימה מוגדרת. יש להגדיר את הפונקציה לפני שקוראים לה. לפונקציה יכול להיות מספר כלשהו של פרמטרים.
-* *הפשטה (אבסטרקציה)* היא חיבור של רעיונות ליצירת מושג אחד. המושג שנוצר, יותר כללי מהמושגים שיצרו אותו. פונקציות הן דוגמה להפשטה.
-
+* *Sections* are related musical units consisting of multiple measures. כל קטע מביע רעיון או רגש מסוימים.
+* *Transitions* are passages of music used to connect consecutive musical sections.
+* The structure and variety found within a song is known as its *form*. צורה נפוצה היא ABA.
+* *Custom functions* are unique functions written by the programmer to accomplish a specific task. יש להגדיר את הפונקציה לפני שקוראים לה. You can create as many parameters as you want.
+* An *abstraction* is the bundling of ideas to form a single, often less complex, concept. פונקציות הן דוגמה להפשטה.
 
 [[chapter-questions]]
 === שאלות
@@ -226,6 +230,7 @@ include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer
 [question]
 --
 מי מהבאים אינו דוגמה לקטע מוסיקלי?
+
 [answers]
 * תופים
 * פתיחה
@@ -236,6 +241,7 @@ include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer
 [question]
 --
 מהי הפשטה (אבסטרקציה)?
+
 [answers]
 * חיבור של מספר רעיונות למושג אחד
 * מגוון של צלילים לאורך הקטע
@@ -246,31 +252,34 @@ include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer
 [role="curriculum-python"]
 [question]
 --
-מי מהבאים מגדיר, בצורה נכונה, את הפונקציה `()myFunction` עם הפרמטרים `startMeasure` ו-`endMeasure` ?
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+
 [answers]
-* `:def myFunction(startMeasure, endMeasure)`
-* `:()def myFunction`
-* `:myFunction(startMeasure, endMeasure)`
+* `def myFunction(startMeasure, endMeasure):`
+* `def myFunction():`
+* `myFunction(startMeasure, endMeasure):`
 * `myFunction(2, 5)`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-מי מהבאים מגדיר, בצורה נכונה, את הפונקציה `()myFunction` עם הפרמטרים `startMeasure` ו-`endMeasure` ?
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+
 [answers]
-* `{}function myFunction(startMeasure, endMeasure) `
-* `{}()function myFunction`
-* `{}myFunction(startMeasure, endMeasure)`
+* `function myFunction(startMeasure, endMeasure) {}`
+* `function myFunction() {}`
+* `myFunction(startMeasure, endMeasure){}`
 * `myFunction(2, 5)`
 --
 
 [question]
 --
 מי מהבאים אינו דוגמה למעבר?
+
 [answers]
 * עקביות (קונסיסטנטיות) של המלודיה
 * מצילה
 * "מרים" (riser)
-* השמטת ערוצים
+* Track Silencing
 --
