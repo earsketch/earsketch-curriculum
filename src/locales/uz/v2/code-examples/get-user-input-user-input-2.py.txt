@@ -1,0 +1,13 @@
+# User input 2: Creating a dubstep song with user-specified parameters
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# Music
+soundNumber = readInput("Type a sound number between 10 and 46: ")
+dubstepSound = "DUBSTEP_BASS_WOBBLE_0"
+finalSound = dubstepSound + soundNumber
+
+# user-selected dubstep wobbles
+fitMedia(finalSound, 1, 1, 5)
