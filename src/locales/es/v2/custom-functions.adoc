@@ -10,7 +10,7 @@ La estructura de la canción es la organización de la propia canción a lo larg
 
 :nofooter:
 
-Se puede dividir una canción en *secciones*. Una sección se compone de varios compases (unidades musicales de tiempo), y expresa una idea o sentimiento. Usualmente, los músicos tratan de crear contrastes entre secciones diferentes. _Intros, Versos, Coros_ y _Outros_ son ejemplos de secciones.
+Se puede dividir una canción en *secciones*. Una sección se compone de varios compases (unidades musicales de tiempo), y expresa una idea o sentimiento. Usualmente, los músicos tratan de crear contrastes entre secciones diferentes. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
 
 Una *forma*, o estructura de canción, común y sencilla es ABA. A y B son dos secciones diferentes, el coro y el verso, por ejemplo. La sección B añade variedad, mientras un regreso a la sección A crea familiaridad. El código a continuación crea una forma ABA. La sección B contiene sonidos que contrastan con la sección A - una línea de bajo más lenta y más fuerte y un traqueteo adicional:
 
@@ -35,17 +35,17 @@ include::code-examples/custom-functions-a-b-a-form.js.txt[]
 
 .PRÁCTICA
 ****
-Selecciona una canción que te guste. Escúchala y trata de determinar cuáles son las diferentes secciones. ¿Te das cuenta cuando los músicos cambian de sección? ¿Cuántos coros o versos puedes escuchar? ¿Qué tipos de contrastes puedes observar? Comparte tu ejemplo con tu compañero/a.
+Selecciona una canción que te guste. Escúchala y trata de determinar cuáles son las diferentes secciones. ¿Te das cuenta cuando los músicos cambian de sección? How many times do you hear the chorus and verse? ¿Qué tipos de contrastes puedes observar? Comparte tu ejemplo con tu compañero/a.
 ****
 
-Ten en cuenta que una frase musical suena más natural cuando se arreglan los clips en grupos de 2, 4, 8, 16, etc. Por lo tanto, tus secciones preferiblemente deben durar 2, 4, 8, o 16 compases.
+Keep in mind that a musical phrase sounds most natural when sounds are arranged into groups of two, four, eight, sixteen, etc. So your sections should preferably have a size of two, four, eight, or sixteen measures.
 
 [[creatingyourcustomfunctions]]
 === Crea tus funciones personalizadas
 
-En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. ¡Hay una manera más eficiente de hacerlo usando *funciones personalizadas*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.
+En el ejemplo previo de la canción ABA, el código es largo y se repite en la segunda sección A. There is a way to be more concise, thanks to *custom functions*! Vamos a definir una función que representará la sección A, y luego la llamaremos dos veces.
 
-La diferencia con las funciones que has utilizado como `fitMedia()`, es que `fitMedia()` ya está predefinida por nuestro equipo para reproducir una canción. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
+The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a sound. En una función personalizada, tú defines exactamente lo que hará. Aquí se explica cómo definir la sección A:
 
 [role="curriculum-python"]
 [source,python]
@@ -59,7 +59,7 @@ include::code-examples/custom-functions-untitled1.py.txt[]
 include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
-. Aquí se optó por llamar a la función seccionA(). Puedes elegir el nombre que quieras. Trata de nombrar tu función de manera descriptiva para que tu código sea más fácil de leer.
+. `sectionA()` is the name we chose for our function. Puedes elegir el nombre que quieras. Trata de nombrar tu función de manera descriptiva para que tu código sea más fácil de leer.
 . Las instrucciones son el *cuerpo* de la función. Tienen sangría.
 
 .PRÁCTICA
@@ -69,17 +69,17 @@ Es porque tienes que *llamar* a una función para usarla.
 Para llamar a la función, añade la línea `seccionA()`, sin sangría, después de la definición de la función. Cuando ejecutes el código, debes ver la sección A en tu EAD.
 ****
 
-Ahora queremos añadir la sección A de los compases 9 al 13. Sin embargo, cuando llamemos a la seccionA(), los sonidos se colocan desde los compases 1 al 5. Para remediar este problema, crearemos *parámetros* para nuestra función.
+Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. Para remediar este problema, crearemos *parámetros* para nuestra función.
 
 .PRÁCTICA
 ****
-En tu script actual que creaste para el problema previo de práctica:
+In your current script you created for the previous practice problem:
 
-1. Añade los parámetros `compasDeComienzo` y `ultimoCompas` separados por una coma entre los paréntesis de la función seccionA en su definición así: `seccionA(compasDeComienzo, ultimoCompas)`.
-1. En el cuerpo de la función, reemplaza el compás de comienzo (1) y el último compás (5) con `compasDeComienzo` y `ultimoCompas` respectivamente.
+1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
+1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
 1. Cuando llames a tu función, añade los parámetros `1` y `5` entre paréntesis. Ejecuta el código para asegurarte de que no haya ningún error.
 1. Añade una segunda llamada a función, esta vez con los parámetros `9` y `13`. Ejecuta el código para asegurarte de que no haya ningún error.
-1. Define una función para la sección B, usando el mismo proceso, y llama a la sección B desde los compases 5 al 9 y del 13 al 17.
+1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
 ****
 
 Aquí está un ejemplo del código que podrías escribir:
@@ -113,21 +113,21 @@ Ahora que sabes cómo crear funciones personalizadas para estructurar tu canció
 
 A continuación, hay unas estrategias populares para crear transiciones musicales:
 
-. *Platillo Crash*: Colocar un platillo crash en el primer tiempo de una nueva sección. Ve a este https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[ejemplo^].
-. *Drum Fill*: Una variación rítmica que llena el espacio antes de la nueva sección. Ve a estos https://www.youtube.com/watch?v=YMskGG39Y0Y[ejemplos^] de drum fills.
-. *Silencios de Pista* (*_Track Dropouts_*): No tocar ciertas pistas temporalmente para crear pausas. Escucha a https://youtu.be/cQbAm4dIDKA?t=82[Imagine Dragon's Love^].
+. *Platillo Crash*: Colocar un platillo crash en el primer tiempo de una nueva sección.
+. *Drum Fill*: Una variación rítmica que llena el espacio antes de la nueva sección.
+. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
 . *Variación de la Melodía*: Introducir una variación de acordes, la línea de bajo o la melodía antes de la nueva sección. Muchas veces, habrá una carpeta en la biblioteca de sonidos de EarSketch con variaciones de una frase repetitiva (_riff_ en inglés).
-. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1. Aquí está un ejemplo de un _riser_ en la https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[música tecno de Carl Cox^].
-. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. Puedes usar un clip como RD_FUTURE_DUBSTEP_FILL_1 o HOUSE_BREAK_FILL_003 o usar `makeBeat().` Aquí está un https://www.youtube.com/watch?v=c3HLuTAsbFE[ejemplo^].
-. *Looping* (*Ciclos* en español): Repetir un corto segmento de una melodía antes de una nueva sección. Aquí está un https://www.youtube.com/watch?v=AQg4wnbBjiQ[ejemplo^] de looping en DJ'ing.
+. *_Riser_*: Una nota o ruido cuyo registro se aumenta. Es muy común en EDM (Música Electrónica Dance) y crea la expectativa de un _drop_. Se puede colocar el término de búsqueda "riser" en el Navegador de Sonidos. Se puede usar un platillo crash tocado en reversa como un _riser_, tal como YG_EDM_REVERSE_CRASH_1.
+. *Redoble* (*Snare Roll* en inglés): Una secuencia de golpes repetidos de redoblante, con una densidad, registro o amplitud creciente. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Looping* (*Ciclos* en español): Repetir un corto segmento de una melodía antes de una nueva sección.
 . *Crossfading*: Reducir el volumen de una sección mientras aumentas el volumen de una nueva sección.
 . *Anacrusa* (*_Anacrusis_* en inglés): Cuando la melodía de una nueva sección empieza unos tiempos antes del comienzo de la sección.
 
 .PRÁCTICA
 ****
-Mira esta lista de posibles transiciones, selecciona 2 y trata de averiguar cómo implementarlas usando código. Pueden trabajar en parejas. Después de pensarlo, puedes ver los siguientes ejemplos.
+Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. Pueden trabajar en parejas. Después de pensarlo, puedes ver los siguientes ejemplos.
 
-Se debe colocar la transición 1 o 2 compases antes de la nueva sección. Puedes usar varias técnicas de transición a la vez.
+The transition should be placed one or two measures before the new section. Puedes usar varias técnicas de transición a la vez.
 ****
 
 Drum fills:
@@ -144,7 +144,7 @@ include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-La técnica de silencio de pista (_track dropout_) sólo requiere la modificación de unas llamadas a `fitMedia()`. Aquí hay un ejemplo.
+The track silencing technique only requires the modification of a couple `fitMedia()` calls. Aquí hay un ejemplo.
 
 [role="curriculum-python"]
 [source,python]
@@ -177,7 +177,7 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 [[yourfullsong]]
 === Tu canción completa
 
-En la programación, se puede crear *abstracciones*: la agrupación de ideas con el fin de formar un solo concepto. En la música, agrupamos las ideas musicales en secciones. Las funciones son un tipo de abstracción que se usa en la informática. Colocan múltiples declaraciones en una herramienta para fácilmente referirse a ellas. Las abstracciones hacen que la estructura del programa sea más clara.
+In programming we can create *abstractions*, the bundling of ideas to form a single concept. En la música, agrupamos las ideas musicales en secciones. Las funciones son un tipo de abstracción que se usa en la informática. Colocan múltiples declaraciones en una herramienta para fácilmente referirse a ellas. Las abstracciones hacen que la estructura del programa sea más clara.
 
 .PRÁCTICA
 ****
@@ -191,9 +191,9 @@ En la programación, se puede crear *abstracciones*: la agrupación de ideas con
 . Usa ciclos `for` para reducir la repetición en tu código.
 . Usa funciones personalizadas para definir tus secciones y crear la estructura de tu canción.
 . Añade una o dos transiciones significativas.
-. Añade efectos usando setEffect().
+. Add effects with `setEffect()`.
 . Añade una o varias declaraciones condicionales.
-. Asegúrate de usar variables para almacenar alguna información como los nombres de los clips de sonido.
+. Make sure you use variables to store some information such as sound constants.
 . Asegúrate de usar comentarios para explicar lo que estás haciendo.
 . No te olvides de ejecutar tu código y escuchar tu canción con regularidad. Te ayudará a modificarla hasta que te guste como suena.
 . Elige un nombre para tu canción.
@@ -213,7 +213,7 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
+In this example, we have used a `for` loop inside a custom function! Hemos usado parámetros de la función (`comienzo` y `fin`) dentro del ciclo for.
 
 [[chapter7summary]]
 === Resumen del capítulo 7
@@ -281,5 +281,5 @@ En ese ejemplo, ¡hemos usado un ciclo for dentro de una función personalizada!
 * Consistencia Melódica
 * Platillo Crash
 * _Riser_
-* Silencios de Pista
+* Track Silencing
 --
