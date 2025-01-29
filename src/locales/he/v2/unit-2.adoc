@@ -3,4 +3,4 @@
 
 :nofooter:
 
-ביחידה זו תלמדו על לולאות, שמאפשרות לחזור על הוראות בצורה יעילה. נלמד גם על אפקטים ומעטפות - השינוי בזמן של אפקטים. לסיום, נלמד למקסס ערוצים ולהשתמש בתנאים.
+In this unit you will learn about for loops, which allow you to repeat code instructions efficiently. נלמד גם על אפקטים ומעטפות - השינוי בזמן של אפקטים. Finally, you learn about mixing your tracks and using conditionals.
