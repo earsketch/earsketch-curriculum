@@ -5,7 +5,6 @@ from earsketch import *
 setTempo(100)
 
 # Música
-# Clips de sonido
 synth1 = HIPHOP_SYNTHPLUCKLEAD_005
 synth2 = HIPHOP_SOLOMOOGLEAD_001
 bateria = HIPHOP_TRAPHOP_BEAT_008
