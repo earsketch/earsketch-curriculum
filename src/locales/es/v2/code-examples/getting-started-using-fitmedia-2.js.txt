@@ -1,11 +1,9 @@
 // Cómo usar fitMedia() 2: Múltiples llamadas a fitMedia() en pistas musicales diferentes
 
 // Sección de configuración
-
 setTempo(100);
 
 // Sección de música
-
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
