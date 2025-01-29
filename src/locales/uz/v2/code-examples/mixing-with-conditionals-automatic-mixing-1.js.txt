@@ -1,0 +1,19 @@
+// Automatic mixing 1: If track 1 is louder than track 2, we'll reduce its volume
+
+// Sozlash
+setTempo(120);
+
+// Creating 2 tracks
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
+
+// Evaluating the loudness of the tracks
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// If track 1 is louder than track 2, we reduce its volume
+if (loudnessTrack1 > loudnessTrack2) {
+    setEffect(1, VOLUME, GAIN, -10);
+}
