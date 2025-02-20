@@ -6,12 +6,12 @@ setTempo(120);
 // Création de deux pistes
 var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
 var melody2 = RD_UK_HOUSE__5THCHORD_1;
-fitMedia(melody1, 1, 1, 9);
-fitMedia(melody2, 2, 1, 9);
+fitMedia(melody1,1,1,9);
+fitMedia(melody2,2,1,9);
 
 // Évaluation de l'intensité sonore des pistes
-var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
-var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
 
 // Si la piste 1 est plus forte que la piste 2, nous réduirons le volume
 if (loudnessTrack1 > loudnessTrack2) {

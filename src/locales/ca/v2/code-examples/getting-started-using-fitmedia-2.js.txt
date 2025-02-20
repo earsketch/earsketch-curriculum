@@ -1,0 +1,9 @@
+// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
+
+// Setup Section
+setTempo(100);
+
+// Music Section
+fitMedia(Y01_DRUMS_1, 1, 1, 9);
+fitMedia(Y11_BASS_1, 2, 1, 9);
+fitMedia(Y11_GUITAR_1, 3, 1, 9);

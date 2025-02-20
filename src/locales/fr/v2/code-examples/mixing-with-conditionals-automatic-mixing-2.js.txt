@@ -1,6 +1,6 @@
 // Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
 
-// Setup
+// Paramétrage
 setTempo(120);
 
 // Adding a melody and bass
@@ -9,7 +9,7 @@ var melody2 = YG_ALT_POP_GUITAR_1;
 var bass1 = YG_ALT_POP_BASS_1;
 var bass2 = DUBSTEP_SUBBASS_008;
 var strings = YG_HIP_HOP_STRINGS_4;
-fitMedia(melody1, 1, 1, 9);
+fitMedia(melody1,1,1,9);
 fitMedia(melody2, 1, 9, 17);
 fitMedia(bass1, 2, 1, 9);
 fitMedia(bass2, 2, 9, 17);
@@ -27,9 +27,9 @@ for (var measure = 5; measure > 17; measure++) {
 
 // Mixing my tracks
 // First, we analyze the tracks for loudness
-var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack1 = analyzeTrack(1,RMS_AMPLITUDE);
 println("The loudness of track 1 is" + loudnessTrack1);
-var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2,RMS_AMPLITUDE);
 println("The loudness of track 2 is" + loudnessTrack2);
 var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
 println("The loudness of track 3 is" + loudnessTrack3);

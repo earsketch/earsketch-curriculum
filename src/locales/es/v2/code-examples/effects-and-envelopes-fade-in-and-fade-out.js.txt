@@ -3,7 +3,7 @@
 // Configuración
 setTempo(100);
 
-// Variables
+// Variables:
 var melodia1 = MILKNSIZZ_ADIOS_BRASS;
 var melodia2 = MILKNSIZZ_ADIOS_STRINGS;
 var bombo = OS_KICK04;

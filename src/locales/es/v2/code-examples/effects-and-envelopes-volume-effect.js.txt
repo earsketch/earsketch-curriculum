@@ -3,7 +3,7 @@
 // Configuración
 setTempo(120);
 
-// Variables
+// Variables:
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percusiones1 = HOUSE_BREAK_FILL_002;
 

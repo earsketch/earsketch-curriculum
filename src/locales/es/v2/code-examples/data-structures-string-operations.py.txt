@@ -8,11 +8,11 @@ setTempo(120)
 ritmoInicial = "0+0+00-00+++-0++"
 instrBateria = RD_UK_HOUSE_MAINBEAT_10
 
-def expansor(cadenaDeTiempos):
+def expander(beatString):
     nuevoRitmo = ""
     for i in range(0, len(cadenaDeTiempos)):
-        porcionDelRitmo = cadenaDeTiempos[0:i]
-        nuevoRitmo = nuevoRitmo + porcionDelRitmo
+        beatSlice = beatString[0:i]
+        newBeat = newBeat + beatSlice
     # Devuelve la nueva cadena de tiempos para poder usarla fuera de la función.
     return nuevoRitmo
 

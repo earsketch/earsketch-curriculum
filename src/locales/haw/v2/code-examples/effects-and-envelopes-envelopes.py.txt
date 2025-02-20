@@ -1,0 +1,12 @@
+# Envelopes: Making envelopes with 7-parameter setEffect()
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Music
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
+
+# Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB.
+# This is a fade in
+setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)

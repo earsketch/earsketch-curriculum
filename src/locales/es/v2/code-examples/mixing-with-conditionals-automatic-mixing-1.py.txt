@@ -1,4 +1,5 @@
 # Mezcla Automática 1: Si la pista 1 tiene más volumen que la pista 2, reduciremos su volumen.
+
 # Configuración
 from earsketch import *
 setTempo(120)

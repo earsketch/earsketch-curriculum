@@ -63,7 +63,7 @@ function seccionB(comienzo, fin) {
     fitMedia(melodia3, 1, comienzo, comienzo + 2);
     fitMedia(melodia4, 1, comienzo + 2, fin);
     fitMedia(piano, 2, comienzo, fin);
-    anadirBateria(comienzo, fin, "ligero");
+    addingDrums(start, end, "light");
 }
 
 // LLAMADAS A FUNCIÓN

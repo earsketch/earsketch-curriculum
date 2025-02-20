@@ -11,7 +11,7 @@ solistaPrincipal2 = TECHNO_ACIDBASS_005
 bateriaAdicional1 = TECHNO_LOOP_PART_025
 bateriaAdicional2 = TECHNO_LOOP_PART_030
 bateriaPrincipal = TECHNO_MAINLOOP_019
-lineaDeBajo = TECHNO_SUBBASS_002
+bass = TECHNO_SUBBASS_002
 
 # Sección 1
 fitMedia(introSolista, 1, 1, 5)

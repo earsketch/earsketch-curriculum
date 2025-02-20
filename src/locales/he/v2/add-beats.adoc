@@ -1,9 +1,9 @@
 [[addsomebeats]]
 == הוסיפו ביטים למוסיקה!
+
 :nofooter:
 
-בפרק זה תלמדו איך ליצור ביטים! נלמד על משתנים, על פונקציה חדשה שנקראת ()makeBit ועל דוגמאות לביטים לפי סוגה (ז'אנר).
-
+בפרק זה תלמדו איך ליצור ביטים! We'll look at variables, a new function called `makeBeat()`, and beats from different genres.
 
 [[variables]]
 === משתנים
@@ -16,88 +16,95 @@ video::./videoMedia/002-05-Variables-PY.mp4[]
 [[video2js]]
 video::./videoMedia/002-05-Variables-JS.mp4[]
 
-מה זה משתנה? זה שם שיעזור למחשב למצוא פיסת מידע או נתונים. הנתונים יכולים להיות מסוגים שונים. משתנה יכול, למשל, להצביע על:
+מה זה משתנה? A *variable* is a name given to a piece of data that we plan to use later in our program.
 
-* מספר (כמו מספר ערוץ או מספר תיבה),
-* קובץ (כמו קובץ שמע), 
-* מחרוזת (string), כמו שם של קליפ או תמליל של שיר. *תו או character* הוא ספרה, אות או סימן כמו `A`, `a`, `2` או `=` (אל תתבלבלו בין תו כזה, לתו מוסיקלי המורה איזה צליל לנגן). מחרוזת היא רצף של תווים עם מרכאות בהתחלה ובסוף, כמו `"Hello World 123!"`.
+In EarSketch, the variables in your scripts may point to:
 
-נותנים שם לנתונים כדי שיהיה קל יותר להתייחס אליהם ולשנות אותם. 
+* A *number*, like a track number or a measure number
+* A *file*, like an audio file
+* A *string*, like the name of a sound clip or some lyrics
+* A *character*, like `A`, `a`, `2`, or `=`
+
+A *character* can be any  number, letter or symbol. A *string* is a series of characters with quotation marks around it, like `"Hello World 123!"`.
+
+כדי להשתמש במשתנה,
 
 [role="curriculum-python"]
-כדי להשתמש במשתנה,
-
-. צריך, קודם כל, *להציב* בו ערך. הסימן "=" משמש *כאופרטור ההצבה*. משמעות ההוראה `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` היא שיש ליצור משתנה בשם synth1 ולאחסן בתוכו את הנתון HIPHOP_SYNTHPLUCKLEAD_005.
-. HIPHOP_SYNTHPLUCKLEAD_005 הוא *הערך* של`synth1`.
-. כדי להשתמש במשתנה יש לכתוב`synth1`בקוד. אפשר להשתמש במשתנה רק אחרי שהוצב בו ערך. לדוגמה:`fitMedia(synth1, 1, 1, 3)`.
-. בזמן הריצה, המחשב יבין שעליו להשתמש בקליפ HIPHOP_SYNTHPLUCKLEAD_005 כשבקוד כתוב`synth1`. 
+. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. Writing `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
+. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
+. Then you need to call the variable: use `synth1` in your code. אפשר להשתמש במשתנה רק אחרי שהוצב בו ערך. For example, write `fitMedia(synth1, 1, 1, 3)`.
+. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
 
 [role="curriculum-javascript"]
-כדי להשתמש במשתנה,
-
-. צריך, קודם כל, *להציב* בו ערך. הסימן "=" משמש *כאופרטור ההצבה*. כמו כן, יש להשתמש ב-`var` בתחילת השורה. משמעות ההוראה `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` היא שיש ליצור משתנה בשם synth1 ולאחסן בתוכו את הנתון HIPHOP_SYNTHPLUCKLEAD_005.
-. HIPHOP_SYNTHPLUCKLEAD_005 הוא *הערך* של`synth1`.
-. כדי להשתמש במשתנה יש לכתוב`synth1`בקוד. לדוגמה: ;`fitMedia(synth1,1,1,3)`
-. בזמן הריצה, המחשב יבין שעליו להשתמש בקליפ HIPHOP_SYNTHPLUCKLEAD_005 כשבקוד כתוב`synth1`.
+. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. We also use the command `var` at the beginning of the line. Writing `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
+. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
+. Then you need to call the variable: use `synth1` in your code. For example, write `fitMedia(synth1, 1, 1, 3);`.
+. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-instead-of-this.py.txt[]
+include::code-examples/add-beats-instead-of-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-instead-of-this.js.txt[]
+include::code-examples/add-beats-instead-of-this.js.txt[]
 ----
+
+{nbsp} +
 
 .תרגלו
 ****
-בסקריפט הקודם שכתבת, השתמש/י במשתנים לאחסון שמות הקליפים. הדוגמאות שלמטה יכולות לעזור. על שמות המשתנים להיות קצרים (כמו "bass", "voice1" וכו'). על השם לתאר בקצרה את תפקיד הקליפ.
+In your previous scripts, use variables to store your sound constants. הדוגמאות שלמטה יכולות לעזור. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-variables.py.txt[]
+include::code-examples/add-beats-variables.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-variables.js.txt[]
+include::code-examples/add-beats-variables.js.txt[]
 ----
-שימו לב לכך שחשוב לתת למשתנים שמות תיאוריים ובעלי משמעות. לדוגמה, העדיפו את השם `synth1` על `music1` או `test`, שלא מספקים מידע. בדרך זו, מי שקורא/ת את הקוד יכול/ה לדעת מהו צליל זה.
 
-*קבע או constant* דומה למשתנה בכך שמאוחסן בו ערך. ההבדל הוא שערכו של קבוע לא משתנה. לדוגמה, `TECHNO_SYNTHPLUCK_001`הוא קבוע, שמתייחס לקובץ שמע מסוים. כמוסכמה, שמו של קבוע יהיה תמיד באותיות גדולות, והוא יכיל קווים תחתונים כרווחים בין מילים.
+Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. בדרך זו, מי שקורא/ת את הקוד יכול/ה לדעת מהו צליל זה.
+
+A *constant* is similar to a variable because it stores values. ההבדל הוא שערכו של קבוע לא משתנה. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. כמוסכמה, שמו של קבוע יהיה תמיד באותיות גדולות, והוא יכיל קווים תחתונים כרווחים בין מילים.
 
 [[drumbeatstrings]]
 === מחרוזות ביטים
 
-קודם כל נלמד מושגים בסיסיים על קצב (rhythm):
+Let's first learn some basic concepts about rhythm:
 
-* *הקצב או rhythm* הוא האופן בו הצלילים מסודרים בזמן.
-* ה-*tempo* הוא מהירות המוסיקה בביטים לדקה (BPM). לביט קוראים, לפעמים, פעימה בעברית. אנחנו נשתמש בשם הלועזי.
-* *הביט* הוא ה"דופק הקבוע" של השיר. כשהקהל מוחא כפיים בקונצרט, הוא מוחא על הביט.
-* *תיבה* היא יחידת זמן מוסיקלית, בעלת מספר קבוע מראש של ביטים. ב-EarSketch *תיבה* אחת היא באורך של ארבעה ביטים. בגלל שיש ארבעה ביטים בתיבה, ביטים נקראים גם *רבעים*.
-* כל ביט יכול להתחלק למספר *תת-ביטים*. לדוגמה, רבע יכול להתחלק לשתי *שמיניות*. כשסופרים רבעים, סופרים: "אחת, שתיים, שלוש, ארבע". כשסופרים שמיניות, סופרים: "אחת, ו.., שתיים, ו.., שלוש, ו.., ארבע, ו..". שמינית יכולה להתחלק לשתי *שש-עשריות*.
-* תיבה אחת מכילה ארבעה רבעים או שמונה שמיניות או שש עשרה שש-עשריות. שימו לב לכך, שסכום כל אורכי התווים בתיבה חייב להיות אחד. אפשר לערבב אורכים בתיבה (כל עוד סכומם שווה לאחד). למשל: 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
-* *מטרונום או פעמן* עוזר לקבוע את הקצב, על-ידי השמעת קליק על הביט. ב-DAW אפשר להפעיל ולכבות את המטרונום, על ידי לחיצה על האייקון "toggle metronome", לשמאל הסרגל שקובע את עצמת הצליל.
+* *Rhythm* is a pattern of sound, often repeated.
+* The *tempo* is the speed of the music in BPM (beats per minute).
+* A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
+* A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
+* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4...." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and...."
+* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
+* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. שימו לב לכך, שסכום כל אורכי התווים בתיבה חייב להיות אחד. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
+* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
 
 [[imediameasurepng]]
 .תיבה
-[caption="Figure 1: "]
-image::../media/U1P1/beat.png[A measure]
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
 .ביט (פעמה)
-[caption="Figure 2: "]
+[caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
 .תו באורך שש-עשרית
-[caption="Figure 3: "]
+[caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 .תרגלו
@@ -105,57 +112,66 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 האזינו לשיר שאתם אוהבים, ונסו למחוא כף על הביט. אפשר לתרגל זאת עם חברים וחברות.
 ****
 
-ניצור טיפוס חדש של משתנים: *מחרוזות תיפוף*; לתבניות כלי ההקשה. 
-מחרוזת תיפוף היא מחרוזת המורכבת מהתווים `"0"`, `"+"` או `"-"`. לדוגמה: `"+0+0+++0-00-00-0"`. בדרך כלל, מחרוזת תיפוף היא באורך של 16 תווים, אבל אורכה יכול להשתנות. כל תו מתייחס לשש-עשרית, כך שמחרוזת של שישה עשר תווים היא תיבה שלמה.
+We'll compose each of our rhythms in a *beat* string.
 
-* `0` מתחיל לנגן את הקליפ (המכיל הקשה של תוף, למשל).
-* `+` מרחיב את נגינת הקליפ לתת-ביט הבא. הוא תמיד יבוא אחרי `0` או `+`.
-* `-` מהווה הפסקה, כלומר שקט.
+A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
 
-נזכיר שמחרוזת היא טיפוס נתונים. היא מכילה סדרה של תווים (כמו `0` או `+`) בתוך מרכאות.
+For example: `"0-00-00-0+++0+0+"`
+
+* `0` starts playing the percussive sound clip (one hit of the drum, for example).
+* `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
+* `-` is a rest, meaning silence.
 
 .תרגלו
 ****
-לכל אחת ממחרוזות התיפוף הבאות, נסו למחוא כפיים על האפסים. אחר-כך, האזינו לקובץ השמע ובדקו אם מחאתם במקום הנכון. תרגיל זה עוזר להבין כיצד מחרוזות תיפוף פועלות. 
+לכל אחת ממחרוזות התיפוף הבאות, נסו למחוא כפיים על האפסים. אחר-כך, האזינו לקובץ השמע ובדקו אם מחאתם במקום הנכון. תרגיל זה עוזר להבין כיצד מחרוזות תיפוף פועלות.
 ****
 
 הנה מספר דוגמאות למחרוזות תיפוף באורך של תיבה אחת:
 
 Quarter notes: `"0\+++0+++0\+++0+++"`
-(read: "1,2,3,4")
+(read: "1, 2, 3, 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
 ++++
 
-שמיניות: `"+0+0+0+0+0+0+0+0"`
-(קראו: "אחד ושתיים ושלוש וארבע")
+Eighth notes: `"0+0+0+0+0+0+0+0+"`
+(read: "1 and 2 and 3 and 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
 ++++
 
-שש-עשריות: `"0000000000000000"`
-(זה עלול להיות מאוד מהיר, תלוי בטמפו.)
+Sixteenth notes: `"0000000000000000"`
+(that's very fast, depending on the tempo)
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
 ++++
 
-`"---0-0-0---0-0-0"`
-(קראו: "אחד ושתיים, שלוש וארבע")
+`"0-0-0---0-0-0---"`
+(read: "1 and 2, 3 and 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
 ++++
 
-`"---0-0-0---0---0"`
-(קראו: "אחד, שתיים, שלוש וארבע")
+`"0---0---0-0-0---"`
+(read: "1, 2, 3 and 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
 ++++
 
-`"0000---0---0---0"`
-(קראו: "אחד, שתיים, שלוש, ארבע e ו-a")
+`"0---0---0---0000"`
+(read: "1, 2, 3, 4 e and a")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
 ++++
+
+{nbsp} +
 
 ////
 ADDITIONAL VIDEO TO BE ADDED
@@ -163,103 +179,106 @@ See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_
 video revamping tab
 ////
 
-
 [[makebeat]]
-=== הפונקציה `()makeBeat`
+=== The `makeBeat()` function
 
-בואו נראה איך אפשר ליצור ביטים. המונח "ביט" ישמש אותנו כשם קצר יותר למחרוזת תיפוף: תבנית ריתמית חוזרת של צלילי הקשה. נשתמש בפונקציה `()makeBeat` עם ארבעה פרמטרים:
+Now let's see how you can make your own beat. המונח "ביט" ישמש אותנו כשם קצר יותר למחרוזת תיפוף: תבנית ריתמית חוזרת של צלילי הקשה. We will use the `makeBeat()` function, with 4 arguments:
 
-. *Clip Name*: הקליפ הנבחר. בדפדפן הצלילים, אפשר לבחור באמן "MAKEBEAT". אלה צלילים קצרים המתאימים למחרוזות תיפוף.
-. *Track Number*: הערוץ בו ינוגן הביט.
-. *Measure Number*: התיבה בה יתחיל הביט.
-. *Beat String*: מחרוזת המורכבת מהתווים `"0"`, `"+"`, ו-`"-"`.
+. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
+. *Track*: The track number
+. *Start*: The starting measure
+. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
 
-לדוגמה: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` ימקם את הביט `0--0--000--00-0-` בערוץ אחד, בתיבה הראשונה וישתמש בקליפ `DUBSTEP_FILTERCHORD_002`.
+For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
 
-פרטים נוספים בקטע הווידאו הבא:
+Let's see more details with this video:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
-video::./videoMedia/011-03-makeBeat()-PY.mp4[]
+video::./videoMedia/3_3_makebeat_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video12js]]
-video::./videoMedia/011-03-makeBeat()-JS.mp4[]
+video::./videoMedia/3_3_makebeat_js.mp4[]
 
 הנה הדוגמה המוצגת בקטע:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-multi-beat.py.txt[]
+include::code-examples/add-beats-multi-beat.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
+include::code-examples/add-beats-multi-beat.js.txt[]
 ----
 
+{nbsp} +
+
 .תרגלו
 ****
-צרו משתנה חדש בשם `beatString1`, המכיל מחרוזת של 16 תווים. התווים יהיו מתוך: `"0"`, `"+"`, ו-`"-"`.
-השתמשו בפונקציה `()makeBeat` כדי להוסיף את מחרוזת התיפוף לערוץ אחד.
+Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
+Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
 שימו לכך ש:
 
-. יש להציב ערך במשתנה, לפני שמשתמשים בו. הצבת ערך נעשית בעזרת הסימן `=`.
-. כמו `()fitMedia`, גם הפונקציה `()makeBeat` מתחילה באות קטנה (`m`) ויש לה אות גדולה באמצע (`B`).
-. כמו `()fitMedia`, גם לפונקציה `()makeBeat` יש ארבעה פרמטרים המופרדים בפסיקים.
+. You should assign your variables with the `=` symbol before using them.
+. Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
+. Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
 
-אם בשמיעה ראשונה, השיר לא נשמע טוב מספיק, זה בסדר גמור. שחקו עם הביט עד שהשיר יישמע מצוין.
+When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
 ****
+
+{nbsp} +
 
 .תרגלו
 ****
-צרו סקריפט חדש והוסיפו לו שניים או שלושה קליפים בעזרת `()fitMedia`. השתמשו במשתנים כדי לאחסן את שמות הקליפים.
-השתמשו בפונקציה `()makeBeat` כדי להוסיף לפחות שני ביטים שונים. תוכלו לנגן אותם בו-זמנית, בשני ערוצים שונים, או אחד אחרי השני באותו ערוץ.
+Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
+Use the `makeBeat()` function to add at least two different beats. תוכלו לנגן אותם בו-זמנית, בשני ערוצים שונים, או אחד אחרי השני באותו ערוץ.
 ****
 
 [[beatsandgenres]]
 === צרו ביטים המבוססים על ז'אנר (סוגה) מסוים
 
-עכשיו, אחרי שהתחלנו לעבוד עם `()makeBeat` ומחרוזות תיפוף (ביטים), נוכל להכיר מספר תבניות ביטים בסיסיות.
-למדנו שסוגה מוסיקלית היא קטגוריה של יצירה אמנותית (כמו מוסיקה), המאופיינת בדמיון בצורה, בסגנון או בנושא. לסוגות מוסיקליות מסוימות יש תבניות ביטים אופייניות. הנה מספר דוגמאות:
+Now that you've started working with `makeBeat()` and beat strings, let's explore some basic beat patterns that you can use.
+You've learned that a musical genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. לסוגות מוסיקליות מסוימות יש תבניות ביטים אופייניות. הנה מספר דוגמאות:
 
-נשתמש בשלושה סוגי צלילים: קיק (kick) בערוץ הראשון, סנר (snare) בערוץ השני והייהאט (hihat) בערוץ השלישי. נשתמש בפונקציה`()makeBeat` לכל אחד מהצלילים הללו, בשלושה ערוצים.
+We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
 
-////
-video is currently being edited
-////
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
 
 הנה הקוד:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-examples-of-beats.py.txt[]
+include::code-examples/add-beats-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
+include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
 === סיכום פרק שלישי
 
-* ב-EarSketch תיבה אחת מתחלקת לארבע פעימות (ביטים) או ארבעה רבעים. ביט אחד מתחלק לארבע שש-עשריות. 
-* *משתנים* יוצרים מקום בזיכרון המחשב לאחסון נתונים. 
-* לפני שימוש במשתנה יש להציב בשם המשתנה ערך (נתון) באמצעות הסימן `=`. רק אחרי ההצבה הראשונית ניתן להשתמש במשתנה בקוד על-ידי כתיבת שמו.
-* *מחרוזת* היא טיפוס נתונים שמכיל סדרה של תווים בין מירכאות. 
-* ניתן למצוא קליפים שמכילים צלילים של כלי הקשה, בדפדפן הצלילים, על-ידי סינון בעזרת הפילטר ARTIST. יש לבחור את האמן MAKEBEAT.
-* נשתמש במחרוזות ובפונקציה `()makeBeat`כדי ליצור תבניות ריתמיות. `()makeBeat` מגדירה כל שש-עשרית בתבנית הריתמית בעזרת מחרוזת התיפוף. `0` מתחיל לנגן את הקליפ, `+` מרחיב את הקליפ לשש-עשרית הבאה, ו-`-` יוצר הפסקה.
-* לפונקציה`()makeBeat` ארבעה פרמטרים:
-** *clipName:* הקליפ שיוצר את הביט.
-** *trackNumber:* הערוץ בו תמוקם המוסיקה.
-** *Measure Number*: התיבה בה יתחיל הביט. מחרוזת התיפוף עצמה תקבע את האורך הכולל.
-** *beatString:* המחרוזת שקובעת את הקצב שיווצר.
-* תבניות קצב שונות מתאימות לז'אנרים (סוגות) מוסיקליים שונים.
+* ב-EarSketch תיבה אחת מתחלקת לארבעה פעימות (ביטים) או ארבעה רבעים. ביט אחד מתחלק לארבע שש-עשריות.
+* *Variables* create a space in computer memory to store data.
+* You first need to assign the value (data) to the variable name using the sign `=`. רק אחרי ההצבה הראשונית ניתן להשתמש במשתנה בקוד על-ידי כתיבת שמו.
+* A *string* is a data type that consists of a series of characters encapsulated by single or double quotes.
+* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
+* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
+* `makeBeat()` takes four arguments:
+** *Sound*: A sound constant
+** *Track*: The track number
+** *Start*: The starting measure
+** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+* Different beat patterns often correspond to different musical genres.
 
 [[chapter-questions]]
 === שאלות
@@ -267,6 +286,7 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 מי מבין השורות הבאות היא מחרוזת?
+
 [answers]
 * "Five"
 * 5
@@ -277,6 +297,7 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 מה מייצג "0" במחרוזת תיפוף?
+
 [answers]
 * התחלת נגינת הקליפ
 * הפסקה
@@ -286,7 +307,8 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 
 [question]
 --
-ב-EarSketch, תיבה אחת היא:
+In EarSketch, one measure is...
+
 [answers]
 * באורך ארבעה ביטים
 * באורך ארבעה תת-ביטים
@@ -296,7 +318,8 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 
 [question]
 --
-תו באורך שש-עשרית הוא...
+One sixteenth note is...
+
 [answers]
 * רבע של תו באורך רבע
 * חצי ביט
@@ -306,7 +329,8 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 
 [question]
 --
-כדי להשתמש בפונקציה `()makeBeat`, אילו פרמטרים צריך?
+To use the `makeBeat()` function, what is the order of parameters you need to provide?
+
 [answers]
 * שם הקליפ, ערוץ, תיבת התחלה, מחרוזת תיפוף
 * טמפו, ערוץ, תיבת התחלה, תיבת סיום

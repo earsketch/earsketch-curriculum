@@ -1,0 +1,16 @@
+// Iterating through Arrays: Using an array to hold several sounds and placing them in our DAW thanks to a for loop
+
+// Sozlash
+setTempo(130);
+
+// Music
+
+// Creating an array of sounds
+var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
+
+// Going through the array
+for (var track = 1; track < 4; track++) {
+    var index = track - 1;
+    fitMedia(myEnsemble[index], track, 1, 5);
+    println("this iteration, track = " + track + " and index = " + index);
+}

@@ -5,9 +5,8 @@ from earsketch import *
 setTempo(120)
 
 # Música
-
 synth = DUBSTEP_FILTERCHORD_002
-platillo = OS_CLOSEDHAT01
+cymbal = OS_CLOSEDHAT01
 ritmo1 = "-00-00+++00--0-0"
 ritmo2 = "0--0--000--00-0-"
 
