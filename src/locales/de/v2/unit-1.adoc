@@ -1,5 +1,5 @@
 [[unit1]]
-== Unit 1: Compose and Add Beats
+== Einheit 1: Schreibe und füge Beats hinzu
 
 :nofooter:
 
