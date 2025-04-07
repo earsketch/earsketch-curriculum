@@ -43,9 +43,9 @@ setEffect(1, BANDPASS, MIX, 1);
 
 |BANDPASS_RESONANCE |Der Boost von Frequenzen um das BANDPASS_FREQ-Level. Höhere Resonanzwerte erhöhen ein kleines Fenster (Band) der Frequenzen stark, während niedrigere Resonanzwerte ein größeres Fenster (Band) leicht boosten. |0.5 |0.0 |1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.1 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |0.1 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[chorus]]
@@ -53,9 +53,9 @@ setEffect(1, BANDPASS, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Ohne Effekt:</div>
     <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
 </div>
 ++++
@@ -81,22 +81,22 @@ setEffect(1, CHORUS, CHORUS_RATE, 10);
 setEffect(1, CHORUS, MIX, 0.5);
 ----
 
-`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.
+`CHORUS` erzeugt einen subtilen ensemble-artigen Effekt, indem er verschiedene Kopien des Sounds anfertigt, sie leicht im Pitch ändert und sie wieder in den Klang mischt.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|CHORUS_LENGTH |The length of time (in ms) from the original sound within which the chorus effect is activated. |15.0 |1.0 |250.0
+|CHORUS_LÄNGE |Die Zeitspanne (in ms) vom ursprünglichen Klang, innerhalb dessen der Chorus-Effekt aktiviert wird. |15.0 |1.0 |250.0
 
-|CHORUS_NUMVOICES |The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. |1.0 |1.0 |8.0
+|CHORUS_NUMVOICES |Die Anzahl der verwendeten Kopien des Originalsounds. Größere Werte erzeugen einen größeren Ensembleeffekt. |1.0 |1.0 |8.0
 
-|CHORUS_RATE |The rate (in Hz) which the pitch cycles or "wobbles" at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. |0.5 |0.1 |16.0
+|CHORUS_RATE |Die Rate (in Hz), in der der Pitch cycelt oder "wackelt" Niedrigere Werte erzeugen sanfte zyklische Geräusche, während höhere Werte mehr wackelnde Effekte erzeugen. |0.5 |0.1 |16.0
 
-|CHORUS_MOD |The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. |0.7 |0.0 |1.0
+|CHORUS_MOD |Die Tiefe des Pitch-Wackeln (d.h. wie viel Pitch-Cycling verwendet wird). Niedrige Einstellungen erzeugen einen natürlicheren Klang, während höhere Einstellungen einen künstlicheren Klang erzeugen. |0.7 |0.0 |1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[compressor]]
@@ -104,9 +104,9 @@ setEffect(1, CHORUS, MIX, 0.5);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Ohne Effekt:</div>
     <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
 </div>
 ++++
@@ -128,16 +128,16 @@ setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
 setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 ----
 
-`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. Music producers often use compressors to fine-tune and add “punch” to drums.
+`COMPRESSOR` reduziert die Lautstärke der lautesten Abschnitte eines Sounds und verstärkt die leisesten Abschnitte. Dadurch entsteht ein kleinerer Dynamikumfang, was bedeutet, dass die Lautstärke der Spur konstanter bleibt. Musikproduzenten verwenden Kompressoren häufig zur Feinabstimmung und um dem Schlagzeug „Punch“ zu verleihen.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|COMPRESSOR_THRESHOLD |The amplitude (volume) level (in dB) above which the compressor starts to reduce volume. |-18.0 |-30.0 |0.0
+|KOMPRESSOR_SCHWELLENWERT |Die Amplitude (Lautstärke, in dB) oberhalb derer der Kompressor beginnt, die Lautstärke zu reduzieren. |-18.0 |-30.0 |0.0
 
-|COMPRESSOR_RATIO |The amount of specified gain reduction. A ratio of 3:1 means that if the original sound is 3 dB over the threshold, then the affected sound will be 1 dB over the threshold. |10.0 |1.0 |100.0
+|COMPRESSOR_RATIO |Die Menge der angegebenen Verstärkerreduzierung. Ein Verhältnis von 3:1 bedeutet, dass, wenn der ursprüngliche Sound 3 dB über dem Schwellenwert liegt, dann liegt der betroffene Sound 1 dB über den Schwellenwert. |10.0 |1.0 |100.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[delay]]
@@ -145,10 +145,10 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
-    <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
+    <div class="audio-label">Mit Effekt:</div>
+    <div class="curriculum-mp3">AudioMedia/delay_wet.mp3</div>
+    <div class="audio-label">Ohne Effekt:</div>
+    <div class="curriculum-mp3">Audio-Media/delay_dry.mp3</div>
 </div>
 ++++
 
@@ -171,30 +171,30 @@ setEffect(1, DELAY, DELAY_FEEDBACK, -3.5);
 setEffect(1, DELAY, MIX, 1);
 ----
 
-`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect.
+`DELAY` erzeugt ein wiederholtes Echo des Originalsounds. Dies geschieht durch Abspielen des Originalklangs sowie einer verzögerten, leiseren Version des Originals. Nach diesem ersten Echo spielt es ein Echo des Echos (leiser als das erste), dann ein Echo des Echos (noch leiser), und so weiter. Wenn Sie die Zeit zwischen jedem Echo (`DELAY_TIME`) auf die Länge eines Beats setzen, können Sie einen interessanten rhythmischen Effekt erzeugen.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|DELAY_TIME |The time amount in milliseconds (ms) that the original track is delayed, and the time between successive repeats of the delay. |300.0 |0.0 |4000.0
+|DELAY_TIME |Der Zeitbetrag in Millisekunden (ms), die die Originalspur verzögert wird, und die Zeit zwischen aufeinander folgenden Wiederholungen der Verzögerung. |300.0 |0.0 |4000.0
 
-|DELAY_FEEDBACK |The relative amount of repeats that the delay generates. Higher values create more "echoes". Be careful of applying "too much" feedback! |-3.0 |-120.0 |-1.0
+|DELAY_FEEDBACK |Die relative Menge an Wiederholungen, die die Verzögerung erzeugt. Höhere Werte erzeugen mehr "Echos". Seien Sie vorsichtig mit der Anwendung von "zu viel" Feedback! |-3.0 |-120.0 |-1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.5 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |0.5 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[distortion]]
 === DISTORTION
 
 ++++
-<div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
-    <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
-</div>
+<0>
+    <1>Mit Effekt:</1>
+    <2>audio-Media/distortion_wet.mp3</2>
+    <1>Ohne Effekt:</1>
+    <2>audioMedia/distortion_dry.mp3</2>
+</0>
 ++++
 
 [role="curriculum-python"]
@@ -214,16 +214,16 @@ setEffect(1, DISTORTION, DISTO_GAIN, 27);
 setEffect(1, DISTORTION, MIX, 1);
 ----
 
-`DISTORTION` adds a dirty, fuzzy, and gritty effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
+DISTORTION" fügt einem Sound einen schmutzigen, unscharfen und rauen Effekt hinzu, indem er ihn übersteuert, was die Klangwelle abschneidet und Obertöne (höhere Frequenzen, die mit dem ursprünglichen Sound zusammenhängen) hinzufügt. `DISTORTION` wird häufig auf E-Gitarren in Rock- und Grungen-Musik verwendet, aber du kannst es für viele verschiedene Sounds verwenden.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|DISTO_GAIN |The amount of overdrive of the original sound. |20.0 |0.0 |50.0
+|DISTO_GAIN |Die Menge der Übertreibung des ursprünglichen Sounds. |20.0 |0.0 |50.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[eq3band]]
@@ -231,9 +231,9 @@ setEffect(1, DISTORTION, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Ohne Effekt:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
 </div>
 ++++
@@ -261,26 +261,26 @@ setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000);
 setEffect(1, EQ3BAND, MIX, 1);
 ----
 
-`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound.
+`EQ3BAND` ist ein dreibändiges Equalizer, welches ein Werkzeug ist, um die Lautstärke von drei verschiedenen Frequenzbereichen in einer Audiospur anzupassen: Bässe, Mitteltöne, und Höhen (niedrig, mittel, hoch). EQ wird in der Musikproduktion eingesetzt, um unerwünschte Frequenzen zu entfernen, die Balance zwischen den Tracks herzustellen, um einen radiotauglichen Mix zu erhalten, oder um einfach den „Vibe“ eines Sounds zu verändern.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|EQ3BAND_LOWGAIN |The gain (in dB) of the low range of frequencies of the EQ. Negative values lower the volume of the low frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_LOWGAIN |Die Verstärkung (in dB) des tiefen Frequenzbereichs des EQs. Negative Werte senken die Lautstärke der niedrigen Frequenzen, während positive Werte sie erhöhen. |0.0 |-24.0 |18.0
 
-|EQ3BAND_LOWFREQ |Specifies the highest frequency (in Hz) of the low range. |200.0 |20.0 |20000.0
+|EQ3BAND_LOWFREQ |Bestimmt die höchste Frequenz (in Hz) des niedrigen Bereichs. |200.0 |20.0 |20000.0
 
-|EQ3BAND_MIDGAIN |The gain (in dB) of the mid range of frequencies of the EQ. Negative values lower the volume of the mid frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_MIDGAIN |Die Verstärkung (in dB) des mittleren Frequenzbereichs des EQs. Negative Werte senken die Lautstärke der mittleren Frequenzen, während positive Werte sie erhöhen. |0.0 |-24.0 |18.0
 
-|EQ3BAND_MIDFREQ |Specifies the center frequency (in Hz) of the mid range. |2000.0 |20.0 |20000.0
+|EQ3BAND_MIDFREQ |Bestimmt die mittlere Frequenz (in Hz) des mittleren Bereichs. |2000.0 |20.0 |20000.0
 
-|EQ3BAND_HIGHGAIN |The gain (in dB) of the high range of frequencies of the EQ. Negative values lower the volume of the high frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_HIGHGAIN |Die Verstärkung (in dB) des hohen Frequenzbereichs des EQs. Negative Werte senken das Volumen der hohen Frequenzen, während positive Werte sie erhöhen. |0.0 |-24.0 |18.0
 
-|EQ3BAND_HIGHFREQ |Specifies the cutoff frequency (in Hz) of the high range. |2000.0 |20.0 |20000.0
+|EQ3BAND_HIGHFREQ |Legt die Grenzfrequenz (in Hz) des hohen Bereichs fest. |2000.0 |20.0 |20000.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[filter]]
@@ -288,10 +288,10 @@ setEffect(1, EQ3BAND, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
-    <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
+    <div class="audio-label">Mit Effekt:</div>
+    <div class="curriculum-mp3">Audio-Media/filter_wet.mp3</div>
+    <div class="audio-label">Ohne Effekt:</div>
+    <div class="curriculum-mp3">Audio-Media/filter_dry.mp3</div>
 </div>
 ++++
 
@@ -314,18 +314,18 @@ setEffect(1, FILTER, FILTER_RESONANCE, 0.9);
 setEffect(1, FILTER, MIX, 1);
 ----
 
-`FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies.
+FILTER" kann den Klang abschwächen, abdunkeln oder ihm Tiefe verleihen. Dies geschieht durch den Einsatz eines Tiefpass-Filters, der das Volumen von Hochfrequenzen verringert.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|FILTER_FREQ |The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). |1000.0 |20.0 |20000.0
+|FILTER_FREQ |Die Grenzfrequenz (Hz), d. h. alle Frequenzen, die über diesem Wert liegen, werden abgeschwächt (sie werden immer leiser, je weiter sie von diesem Wert entfernt sind). |1000.0 |20.0 |20000.0
 
-|FILTER_RESONANCE |The boost of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. |0.8 |0.0 |1.0
+|FILTER_RESONANCE |Der Boost von Frequenzen in der Nähe des FILTER_FREQ-Pegels. Höhere Werte der Resonanz verstärken ein kleines Frequenzfenster nahe des FILTER_FREQ und erzeugen einen schärferen, klingenderen Klang um diese Frequenzen herum, während niedrigere Werte der Resonanz ein größeres Fenster dezent anheben. |0.8 |0.0 |1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[flanger]]
@@ -372,9 +372,9 @@ setEffect(1, FLANGER, MIX, 1);
 
 |FLANGER_RATE |The rate (in Hz) which the pitch cycles or "whooshes" at. Lower values create more smoothly-cycling sounds, while higher values create more whooshing-sounding effects and sonic artifacts. |0.6 |0.001 |100.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[pan]]
@@ -411,7 +411,7 @@ setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
 
 |LEFT_RIGHT |Specifies the left/right location of the original sound within the stereo field (0.0 is center, -100.0 is fully left, 100.0 is fully right). |0.0 |-100.0 |100.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[phaser]]
@@ -462,9 +462,9 @@ setEffect(1, PHASER, MIX, 1);
 
 |PHASER_FEEDBACK |The amount that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-3.0 |-120.0 |-1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[pitchshift]]
@@ -501,7 +501,7 @@ setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 
 |PITCHSHIFT_SHIFT |Specifies the amount to adjust the pitch of the original sound in semitones (and fractions of a semitone, given by values after the decimal point). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[reverb]]
@@ -535,18 +535,18 @@ setEffect(1, REVERB, REVERB_DAMPFREQ, 18000);
 setEffect(1, REVERB, MIX, 0.5);
 ----
 
-`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was.
+"REVERB" fügt einem Klang eine langsam abklingende Atmosphäre hinzu, die ihn dichter, verträumter oder so klingen lässt, als sei er in einem kleineren oder größeren Raum aufgenommen worden, als er tatsächlich war.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|REVERB_TIME |The decaying time of the ambiance in milliseconds (ms). When modulating REVERB_TIME over time using automation curve, due to the nature of convolution-based reverb, the value is updated only at every quarter note (time=0.25) in a "stair-case" manner from the starting point of the automation. (You will, however, hardly notice that.) |1500.0 |100.0 |4000.0
+|REVERB_TIME |Die Abklingzeit des Ambientes in Millisekunden (ms). Bei der zeitlichen Modulation von REVERB_TIME über eine Automationskurve wird der Wert aufgrund der Natur des faltungsbasierten Halls nur bei jeder Viertelnote (Zeit=0,25) treppenförmig vom Startpunkt der Automation aus aktualisiert. (Du wirst das jedoch kaum bemerken.) |1500.0 |100.0 |4000.0
 
-|REVERB_DAMPFREQ |The cutoff frequency (in Hz) of the lowpass filter applied to the ambiance. The lower the value, the darker the reverberation will sound. |10000.0 |200.0 |18000.0
+|REVERB_DAMPFREQ |Die Grenzfrequenz (in Hz) des Tiefpassfilters, der auf die Umgebung angewendet wird. Je niedriger der Wert, desto dunkler klingt der Nachhall. |10000.0 |200.0 |18000.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.3 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |0.3 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[ringmod]]
@@ -554,10 +554,10 @@ setEffect(1, REVERB, MIX, 0.5);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
-    <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
+    <div class="audio-label">Mit Effekt:</div>
+    <div class="curriculum-mp3">audio-Media/ringmod_wet.mp3</div>
+    <div class="audio-label">Ohne Effekt:</div>
+    <div class="curriculum-mp3">audio-Media/ringmod_wet.mp3</div>
 </div>
 ++++
 
@@ -580,18 +580,18 @@ setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80);
 setEffect(1, RINGMOD, MIX, 1);
 ----
 
-`RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
+RINGMOD" erzeugt viele verschiedene künstlich klingende Effekte durch Multiplikation der Signale des Originals und einer reinen Sinuswelle (die wie eine Stimmgabel klingt). Einige Parametereinstellungen erzeugen ähnliche Effekte wie in alten Science-Fiction-Filmen.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|RINGMOD_MODFREQ |The frequency (in Hz) of the sine wave oscillator that is being multiplied into your original sound. |40.0 |0.0 |100.0
+|RINGMOD_MODFREQ |Die Frequenz (in Hz) des Sinuswellen-Oszillators, die in deinen ursprünglichen Klang multipliziert wird. |40.0 |0.0 |100.0
 
-|RINGMOD_FEEDBACK |The amount of affected sound that is fed-back into the effect. High values create more robotic-type sounds and sonic artifacts. |0.0 |0.0 |100.0
+|RINGMOD_FEEDBACK |Der Anteil des beeinflussten Klangs, der in den Effekt zurückgeführt wird. Hohe Werte erzeugen mehr Robotik-Sounds und Klang-Artefakte. |0.0 |0.0 |100.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[tremolo]]
@@ -599,9 +599,9 @@ setEffect(1, RINGMOD, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Ohne Effekt:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
 </div>
 ++++
@@ -625,18 +625,18 @@ setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10);
 setEffect(1, TREMOLO, MIX, 1);
 ----
 
-`TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth.
+`TREMOLO` erzeugt einen wobbelig klingenden Effekt, indem er schnell die Lautstärke des Klangs hin und her ändert.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|TREMOLO_FREQ |The rate (in Hz) that the volume is changed back and forth. |4.0 |0.0 |100.0
+|TREMOLO_FREQ |Die Rate (in Hz), mit der die Lautstärke hin und her geändert wird. |4.0 |0.0 |100.0
 
-|TREMOLO_AMOUNT |The amount (in dB) that the volume changes back and forth over during each cycle. |-6.0 |-60.0 |0.0
+|TREMOLO_AMOUNT |Der Betrag (in dB), um den sich die Lautstärke bei jedem Zyklus hin und her ändert. |-6.0 |-60.0 |0.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[volume]]
@@ -644,10 +644,10 @@ setEffect(1, TREMOLO, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
-    <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
+    <div class="audio-label">Mit Effekt:</div>
+    <div class="curriculum-mp3">audio-Media/volume_wet.mp3</div>
+    <div class="audio-label">Ohne Effekt:</div>
+    <div class="curriculum-mp3">audio-Media/volume_dry.mp3</div>
 </div>
 ++++
 
@@ -666,14 +666,14 @@ fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
 setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 ----
 
-`VOLUME` allows you to change the loudness of a sound.
+`VOLUME` erlaubt dir, die Lautstärke eines Sounds zu ändern.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|GAIN |Specifies the output volume level of the original sound. |0.0 |-60.0 |12.0
+|GAIN |Bestimmt die Ausgabelautstärke des Originaltons. |0.0 |-60.0 |12.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
 
 [[wah]]
@@ -681,10 +681,10 @@ setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
-    <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
+    <div class="audio-label">Ohne Effekt:</div>
+    <div class="curriculum-mp3">audio-Media/wah_dry.mp3</div>
 </div>
 ++++
 
@@ -707,14 +707,14 @@ setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3);
 setEffect(1, WAH, MIX, 1);
 ----
 
-`WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
+Mit `WAH` kann der Sound jemanden nachahmen, der „Wah Wah“ sagt, wenn der Parameter `WAH_POSITION` mit der Funktion setEffect() über die Zeit verändert wird. Es handelt sich um einen resonanten Bandpassfilter, d. h. er senkt die Lautstärke der hohen und tiefen Frequenzen ab, während er ein schmales Frequenzfenster in der Mitte anhebt.
 
 |===
 |Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|WAH_POSITION |The center frequency of the boosted fixed-width frequency range. |0.0 |0.0 |1.0
+|WAH_POSITION |Die Mittenfrequenz des geboosteten  Frequenzbereichs mit fester Breite. |0.0 |0.0 |1.0
 
-|MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |1.0 |0.0 |1.0
+|MIX |Die Menge an Sound-Effekts, der in den ursprünglichen Klang gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
-|BYPASS |When you bypass an effect, the effect turns off. The only valid values for `BYPASS` are 1.0 (to turn the effect off) and 0.0 (to keep the effect on). |0.0 |0.0 |1.0
+|UMGEHEN |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
