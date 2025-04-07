@@ -15,10 +15,10 @@ Der Prozess der Fehlersuche und -behebung nennt sich *debugging*.
 In den folgenden Abschnitten werden Hinweise zur Behebung der häufigsten Fehler gegeben.
 
 [role="curriculum-python"]
-See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
+In der offiziellen https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python-Dokumentation^] finden Sie eine vollständige Liste der Fehler.
 
 [role="curriculum-javascript"]
-See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] for a full list of errors.
+Eine vollständige Liste aller Fehler finden Sie unter Mozillas https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript-Dokumentation^] .
 
 [[modulenotfounderror]]
 === ModuleNotFoundError
@@ -26,13 +26,13 @@ See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 //Python only
 
 [role="curriculum-python"]
-*Console message:* ModuleNotFoundError: No module named 'missing_module_name'
+*Konsolenmeldung:* ModuleNotFoundError: Kein Modul namens 'missing_module_name'
 
 [role="curriculum-python"]
-*Description:* A ModuleNotFoundError occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
+*Beschreibung:* Ein ModuleNotFoundError tritt auf, wenn ein Programm das in einer `from...import`-Anweisung angegebene Modul nicht laden kann, z.B. `from module import *`. Dies kann auf eine falsche Schreibweise zurückzuführen sein, oder vielleicht existiert das zu importierende Modul nicht.
 
 [role="curriculum-python"]
-*Example:* Although the snippet below shows the word "EarSketch" with its usual styling, Python modules are specified in all lowercase.
+*Beispiel:* Obwohl das unten stehende Snippet das Wort "EarSketch" mit seinem üblichen Styling zeigt, werden Python-Module komplett in Kleinbuchstaben angegeben.
 
 ////
 Can't turn off pasted without this appearing in JS mode.
@@ -45,7 +45,7 @@ include::code-examples/every-error-explained-in-detail-import-error.py.txt[]
 ----
 
 [role="curriculum-python"]
-Instead, our statement should read:
+Stattdessen sollte unsere Aussage lauten:
 
 [role="curriculum-python"]
 [source,python]
@@ -54,24 +54,24 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 ----
 
 [role="curriculum-python"]
-*Solution:* Check your `from...import` statements at the top of your script for typos and letter case.
+*Lösung:* Überprüfe deine `from...import` Anweisungen oben in deinem Skript auf Tipp- und Großschreibungsfehler.
 
 [role="curriculum-javascript"]
-ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#othererrors>>.
+ModuleNotFoundErrors treten nicht in JavaScript auf. Öffne ein Python-Skript für eine Erklärung dieses Fehlertyps oder gehe weiter zu <<every-error-explained-in-detail#othererrors>>.
 
 [[indentationerror]]
-=== Indentation Error
+=== Einrückfehler
 
 //Python only
 
 [role="curriculum-python"]
-*Console message:* IndentationError: There is an indentation error in the code (lack of or extra spaces).
+*Konsolenmeldung:* IndentationError: Es gibt einen Einrückungsfehler im Code (fehlende oder zusätzliche Leerzeichen).
 
 [role="curriculum-python"]
-*Description:* Recall that proper indentation is needed in Python when using loops, functions, and conditional statements - any statement that ends with a colon (`:`). An indentation error is thrown when an incorrect amount of indentation is used, either not enough or too much.
+*Beschreibung:* Ruft auf, dass in Python richtige Einrückung benötigt wird, wenn Schleifen, Funktionen und bedingte Anweisungen verwendet werden - jede Anweisung, die mit einem Doppelpunkt endet (`:`). Es wird ein Einrückungsfehler erzeugt, wenn eine falsche Einrückungsmenge verwendet wird, entweder nicht genug oder zu viel.
 
 [role="curriculum-python"]
-*Example:* The EarSketch Code Editor automatically indents lines of code following a colon, but the programmer may accidentally change indentation manually, perhaps when making changes to a body of code. In the snippet below, it is unclear which lines should fall within the loop, both to user and the interpreter.
+*Beispiel:* Der EarSketch-Code-Editor rückt Codezeilen nach einem Doppelpunkt automatisch ein, aber der Programmierer kann die Einrückung versehentlich manuell ändern, z. B. wenn er Änderungen an einem Codeteil vornimmt. Im Snippet unten ist unklar, welche Zeilen in die Schleife fallen sollen, sowohl für Benutzer als auch für den Interpreter.
 
 ////
 Can't turn off pasting without this appearing in JS mode
@@ -84,7 +84,7 @@ include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[
 ----
 
 [role="curriculum-python"]
-A properly indented body should instead look like the snippet below. The for-loop body is indented by one tab and it is clear that the last `fitMedia()` call is outside the loop.
+Ein richtig eingerückter Körper sollte stattdessen wie ein Snippet unten aussehen. Der For-Loop-Körper wird von einem Tab eingerückt und es ist klar, dass der letzte `fitMedia()` Aufruf außerhalb der Schleife liegt.
 
 [role="curriculum-python"]
 [source,python]
@@ -93,31 +93,31 @@ include::code-examples/every-error-explained-in-detail-indentation-error-correct
 ----
 
 [role="curriculum-python"]
-*Solution:* Try deleting all the spaces in front of the code in the body so each line is against the left edge of the code editor. Then, indent the body line by line, ensuring that all indentation is constant.
+*Lösung:* Versuche alle Leerzeichen vor dem Code im Körper zu löschen, so dass jede Zeile am linken Rand des Code-Editors ist. Anschließend wird der Textkörper zeilenweise eingerückt, wobei darauf zu achten ist, dass alle Einrückungen gleich bleiben..
 
 [role="curriculum-javascript"]
-Indentation errors do not occur in JavaScript, though you should still use proper indentation for readability. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+Einrückungsfehler treten in JavaScript nicht auf, allerdings sollten Sie aus Gründen der Lesbarkeit trotzdem eine korrekte Einrückung verwenden. Öffne ein Python-Skript für eine Erklärung dieses Fehlertyps oder gehe zu <<every-error-explained-in-detail#indexerror,index errors>>.
 
 [[indexerror]]
-=== Index Error
+=== Index-Fehler
 
 [role="curriculum-python"]
-*Console message:* IndexError: There is an error using an out of range index.
+*Konsolenmeldung:* IndexError: Es ist ein Fehler bei der Verwendung eines Index außerhalb des Bereichs aufgetreten.
 
 [role="curriculum-javascript"]
-*Console message:* TypeError: There is an error using an out of range index.
+*Konsolenmeldung:* TypeError: Es ist ein Fehler bei der Verwendung eines Index außerhalb des Bereichs aufgetreten.
 
 [role="curriculum-python"]
-*Description:* An index error is thrown when trying to access an index that is out of range or does not exist within a list or string.
+*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder in einer Liste oder einem String nicht existiert.
 
 [role="curriculum-javascript"]
-*Description:* An index error is thrown when trying to access an index that is out of range or does not exist within an array or string. It is thrown as a type error in JavaScript. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
+*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder nicht innerhalb eines Arrays oder Strings existiert. Er wird als Tippfehler in JavaScript gemeldet.  Um allgemeinere Tippfehler zu erklären, lesen Sie bitte den Abschnitt <<every-error-explained-in-detail#typeerror,type errors>>.
 
 [role="curriculum-python"]
-*Example:* In the following code, we attempt to create an additive structure using clips from a list.
+*Beispiel:* Im folgenden Code versuchen wir eine additive Struktur mit Clips aus einer Liste zu erstellen.
 
 [role="curriculum-javascript"]
-*Example:* In the following code, we attempt to create an additive structure using clips from an array.
+*Beispiel:* Im folgenden Code versuchen wir eine additive Struktur mit Clips aus einem Array zu erstellen.
 
 [role="curriculum-python"]
 [source,python]
@@ -132,10 +132,10 @@ include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-An Index Error is thrown and the console points us to line 19, stating the index is out of range. We have three sound clips, but we forgot that list indices start at 0, so the last index we should be accessing is index 2:
+Es wird ein Indexfehler gemeldet und die Konsole verweist auf Zeile 19, die besagt, dass der Index außerhalb des Bereichs liegt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass die Listen-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:
 
 [role="curriculum-javascript"]
-A Type Error is thrown and the console states that a different data type was expected on line 17. An out of range value was provided to the last `fitMedia()` call. We have three sound clips, but we forgot that array indices start at 0, so the last index we should be accessing is index 2:
+Ein Tippfehler wird ausgelöst, und die Konsole gibt an, dass ein anderer Datentyp in Zeile 17 erwartet wurde. Beim letzten Aufruf von `fitMedia()` wurde ein Wert außerhalb des Bereichs zur Verfügung gestellt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass Array-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:
 
 [role="curriculum-python"]
 [source,python]
@@ -150,33 +150,33 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 ----
 
 [role="curriculum-python"]
-*Solution:* Write down the name of each clip in your list and label each with its associated index, starting at 0. This helps you understand the structure of the list and what may be causing an index error.
+*Lösung:* Notiere den Namen jedes Clips in Ihrer Liste und benennen Sie jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft Ihnen, die Struktur der Liste zu verstehen und was einen Indexfehler verursachen kann.
 
 [role="curriculum-javascript"]
-*Solution:* Write down the name of each clip in your array and label each with its associated index, starting at 0. This helps you understand the structure of the array and what may be causing an index error.
+*Lösung:* Notieren Sie den Namen jedes Clips in Ihrem Array und benennen Sie jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft Ihnen, die Struktur des Arrays zu verstehen und was einen Indexfehler verursachen kann.
 
 [[nameerror]]
-=== Name Error
+=== Namensfehler
 
 [role="curriculum-python"]
-*Console message:* NameError: There is an error with a variable or function name that is not defined.
+*Konsolenmeldung:* NameError: Es gibt einen Fehler mit einem nicht definierten Variablen- oder Funktionsnamen.
 
 [role="curriculum-javascript"]
-*Console message:* Reference Error: There is an error with a variable or function name that is not defined.
+*Konsolenmeldung:* Referenzfehler: Es gibt einen Fehler mit einem nicht definierten Variablen- oder Funktionsnamen.
 
 [role="curriculum-python"]
-*Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo.
+*Beschreibung:* Ein Namensfehler tritt auf, wenn ein Programm versucht, eine Variable zu verwenden oder eine Funktion aufzurufen, die nie definiert wurde, am häufigsten durch einen Tippfehler.
 
-Often there is a missing `from earsketch import *` statement at the top of the script.
+Oft fehlt eine `from earsketch import *` Anweisung oben am Skript.
 
 [role="curriculum-javascript"]
-*Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo. JavaScript specifically refers to this type of error as a reference error.
+*Beschreibung:* Ein Namensfehler tritt auf, wenn ein Programm versucht, eine Variable zu verwenden oder eine Funktion aufzurufen, die nie definiert wurde, am häufigsten durch einen Tippfehler. JavaScript bezieht sich speziell auf diese Art von Fehler als Referenzfehler.
 
 [role="curriculum-python"]
-*Example:* Below is a simple script to print the string assigned to the `today` variable. However, a mistake with the print statement prevents the script from running.
+*Beispiel:* Unten ist ein einfaches Skript, um den String auszugeben, der der `today` Variable zugewiesen ist. Ein Fehler mit der Print-Anweisung verhindert jedoch das Ausführen des Skripts.
 
 [role="curriculum-javascript"]
-*Example:* Below is a simple script to print the string assigned to the `today` variable. However, a mistake within the `println()` function prevents the script from running.
+*Beispiel:* Unten ist ein einfaches Skript, um den String auszugeben, der der `today` Variable zugewiesen ist. Ein Fehler innerhalb der `println()` Funktion verhindert jedoch das Ausführen des Skripts.
 
 [role="curriculum-python"]
 [source,python]
