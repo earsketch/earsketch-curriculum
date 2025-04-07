@@ -1,18 +1,18 @@
 [[ch_29]]
-== Every Error Explained in Detail
+== Jeder Fehler im Detail erklärt
 
 :nofooter:
 
 [[othererrors]]
-=== Overview
+=== Übersicht
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. In programming, coding faults are called *errors*, or *bugs*.
+Manchmal macht man beim Programmieren Fehler, die dazu führen, dass der Code nicht richtig oder gar nicht funktioniert. Bei der Programmierung werden Fehler *errors* oder *bugs* genannt.
 
-The process of finding and fixing bugs is called *debugging*.
+Der Prozess der Fehlersuche und -behebung nennt sich *debugging*.
 
-Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
+Überprüfen Sie die Konsole für Details und die Zeilennummer. In einigen Fällen müssen Sie _die vorige Zeile_ beheben, um den Fehler zu beheben.
 
-Guidance on addressing the most common errors is given in the next sections.
+In den folgenden Abschnitten werden Hinweise zur Behebung der häufigsten Fehler gegeben.
 
 [role="curriculum-python"]
 See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
