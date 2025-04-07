@@ -1,5 +1,5 @@
 [[ch_28]]
-== Every Effect Explained in Detail
+== Jeder Effekt im Detail erklärt
 
 :nofooter:
 
@@ -8,9 +8,9 @@
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Mit Effekt:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Ohne Effekt:</div>
     <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
 </div>
 ++++
@@ -34,14 +34,14 @@ setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9);
 setEffect(1, BANDPASS, MIX, 1);
 ----
 
-`BANDPASS` is a filter that only lets through (passes) an adjustable window (band) of frequencies. All other frequencies are suppressed. By creating a narrower band of frequencies (setting `BANDPASS_RESONANCE` closer to 1), you can make a telephone or megaphone-like sound. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), you can make sounds that seem overpowering blend better with other sounds in the mix.
+`BANDPASS` ist ein Filter, der nur ein einstellbares Fenster (Band) von Frequenzen durchlässt. Alle anderen Frequenzen werden unterdrückt. Durch das Erstellen eines engeren Frequenzbandes (Einstellung `BANDPASS_RESONANCE` näher an 1) kannst du einen Telefon- oder Megaphon-ähnlichen Ton erstellen. Durch das Erstellen eines breiteren Frequenzbereichs (Einstellung `BANDPASS_RESONANCE` näher an 0), kannst du Sounds, die übermächtig klingen, besser mit anderen Klängen im Mix vermischen.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
-|BANDPASS_FREQ |The center frequency (in Hz) of the window of frequencies to pass through. |800.0 |20.0 |20000.0
+|BANDPASS_FREQ |Die mittlere Frequenz (in Hz) des Frequenzfensters, das durchlaufen werden soll. |800.0 |20.0 |20000.0
 
-|BANDPASS_RESONANCE |The boost of frequncies around the BANDPASS_FREQ level. Higher values of resonance strongly boost a small window (band)of frequencies, while lower values of resonance subtly boost a larger window (band). |0.5 |0.0 |1.0
+|BANDPASS_RESONANCE |Der Boost von Frequenzen um das BANDPASS_FREQ-Level. Höhere Resonanzwerte erhöhen ein kleines Fenster (Band) der Frequenzen stark, während niedrigere Resonanzwerte ein größeres Fenster (Band) leicht boosten. |0.5 |0.0 |1.0
 
 |MIX |The amount of the sound effect that is mixed into the original sound. At the minimum value 0.0, it only plays the original ("dry") audio. At the maximum value 1.0, it only plays the affected ("wet") audio. |0.1 |0.0 |1.0
 
@@ -84,7 +84,7 @@ setEffect(1, CHORUS, MIX, 0.5);
 `CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |CHORUS_LENGTH |The length of time (in ms) from the original sound within which the chorus effect is activated. |15.0 |1.0 |250.0
 
@@ -131,7 +131,7 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 `COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. Music producers often use compressors to fine-tune and add “punch” to drums.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |COMPRESSOR_THRESHOLD |The amplitude (volume) level (in dB) above which the compressor starts to reduce volume. |-18.0 |-30.0 |0.0
 
@@ -174,7 +174,7 @@ setEffect(1, DELAY, MIX, 1);
 `DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |DELAY_TIME |The time amount in milliseconds (ms) that the original track is delayed, and the time between successive repeats of the delay. |300.0 |0.0 |4000.0
 
@@ -217,7 +217,7 @@ setEffect(1, DISTORTION, MIX, 1);
 `DISTORTION` adds a dirty, fuzzy, and gritty effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |DISTO_GAIN |The amount of overdrive of the original sound. |20.0 |0.0 |50.0
 
@@ -264,7 +264,7 @@ setEffect(1, EQ3BAND, MIX, 1);
 `EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |EQ3BAND_LOWGAIN |The gain (in dB) of the low range of frequencies of the EQ. Negative values lower the volume of the low frequencies, while positive values boost them. |0.0 |-24.0 |18.0
 
@@ -317,7 +317,7 @@ setEffect(1, FILTER, MIX, 1);
 `FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |FILTER_FREQ |The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). |1000.0 |20.0 |20000.0
 
@@ -364,7 +364,7 @@ setEffect(1, FLANGER, MIX, 1);
 `FLANGER` creates a "whoosh"-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and "robot-like" sounds.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |FLANGER_LENGTH |The length of delay time (in ms) from the original sound within which the flanger effect is activated. |6.0 |0.0 |200.0
 
@@ -407,7 +407,7 @@ setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
 `PAN` affects the mix between the left and right audio channels. If you are wearing headphones, adjusting `PAN` changes how much of the sound you hear in your left ear versus the right.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |LEFT_RIGHT |Specifies the left/right location of the original sound within the stereo field (0.0 is center, -100.0 is fully left, 100.0 is fully right). |0.0 |-100.0 |100.0
 
@@ -452,7 +452,7 @@ setEffect(1, PHASER, MIX, 1);
 `PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going "in and out of phase" with each other.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |PHASER_RATE |The rate (in Hz) that the slight delay time changes back and forth. Lower values create more smoothly-cycling sounds, while higher values create more robotic-sounding effects and sonic artifacts. |0.5 |0.0 |10.0
 
@@ -497,7 +497,7 @@ setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 `PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |PITCHSHIFT_SHIFT |Specifies the amount to adjust the pitch of the original sound in semitones (and fractions of a semitone, given by values after the decimal point). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
 
@@ -538,7 +538,7 @@ setEffect(1, REVERB, MIX, 0.5);
 `REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |REVERB_TIME |The decaying time of the ambiance in milliseconds (ms). When modulating REVERB_TIME over time using automation curve, due to the nature of convolution-based reverb, the value is updated only at every quarter note (time=0.25) in a "stair-case" manner from the starting point of the automation. (You will, however, hardly notice that.) |1500.0 |100.0 |4000.0
 
@@ -583,7 +583,7 @@ setEffect(1, RINGMOD, MIX, 1);
 `RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |RINGMOD_MODFREQ |The frequency (in Hz) of the sine wave oscillator that is being multiplied into your original sound. |40.0 |0.0 |100.0
 
@@ -628,7 +628,7 @@ setEffect(1, TREMOLO, MIX, 1);
 `TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |TREMOLO_FREQ |The rate (in Hz) that the volume is changed back and forth. |4.0 |0.0 |100.0
 
@@ -669,7 +669,7 @@ setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 `VOLUME` allows you to change the loudness of a sound.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |GAIN |Specifies the output volume level of the original sound. |0.0 |-60.0 |12.0
 
@@ -710,7 +710,7 @@ setEffect(1, WAH, MIX, 1);
 `WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
 
 |===
-|Parameter |Description |Default Value |minValue |maxValue
+|Parameter |Beschreibung |Standardwert |Minimalwert |Maximalwert
 
 |WAH_POSITION |The center frequency of the boosted fixed-width frequency range. |0.0 |0.0 |1.0
 
