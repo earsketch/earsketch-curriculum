@@ -1,9 +1,9 @@
-// Delay Effect: Adding delay to a track
+// Verzögerungseffekt: Verzögerung zu einer Spur hinzufügen
 
 // Setup
-setTempo(120);
+setTempo (120);
 
-// Music
+// Musik
 var lead1 = EIGHT_BIT_ATARI_SYNTH_001;
 var lead2 = EIGHT_BIT_ATARI_SYNTH_002;
 var pad1 = EIGHT_BIT_ATARI_PAD_002;
