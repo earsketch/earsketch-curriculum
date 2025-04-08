@@ -1,34 +1,34 @@
-// String and Lists Operations: Showing what we can do with arrays and strings
+// String- und Listen-Operationen: Zeigt, was wir mit Arrays und Strings tun können
 
 // Setup
-setTempo(120);
+setTempo (120);
 
-// Creating my beat strings and arrays
+// Erstellen meiner Beat-Strings und Arrays
 var stringA = "0+++----0+++--0+";
 var stringB = "0-0-0-0-----0-0-";
 var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
 var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
 
-// Print the second character of each string.
+// Das zweite Zeichen jedes Strings ausgeben.
 println(stringA[1]);
 println(stringB[1]);
 
-// Print the last element of your arrays.
+// Das letzte Element der Arrays ausgeben.
 println(soundsA[soundsA.length - 1]);
 println(soundsB[soundsB.length - 1]);
 
-// Create and print stringC, the concatenation of stringA and stringB.
+// StringC, die Verkettung von StringA und StringB, erstellen und ausgeben.
 var stringC = stringA + stringB;
 println(stringC);
 
-// Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+// StringC, die Verkettung von StringA und StringB, nochmal erstellen und ausgeben.
 var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
 println(soundsC);
 
-// Create and print stringD, the slice of stringC from the second to the fifth characters included.
+// StringD, das Stück von StringC vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
 var stringD = stringC.substring(1, 5);
 println(stringD);
 
-// Create and print soundsD, the slice of stringC from the third to the last elements included.
+// StringD, das Stück von StringC vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 var soundsD = soundsC.slice(2, soundsC.length);
 println(soundsD);
