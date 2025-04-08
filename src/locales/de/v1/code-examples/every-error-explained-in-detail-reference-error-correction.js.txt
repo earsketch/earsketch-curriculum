@@ -1,6 +1,6 @@
-// Reference Error: Correction
+// Referenzfehler: Korrektur
 
 setTempo(120);
 
-var today = readInput("What day is it?");
-println("Today is " + today);
+var today = readInput("Welcher Tag ist es?");
+println("Heute ist " + heute);
