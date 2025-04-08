@@ -4,5 +4,5 @@
 from earsketch import *
 setTempo(120)
 
-# Music
+# Musik
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
