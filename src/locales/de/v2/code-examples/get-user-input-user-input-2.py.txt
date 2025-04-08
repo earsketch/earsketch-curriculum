@@ -1,4 +1,4 @@
-# User input 2: Creating a dubstep song with user-specified parameters
+# Benutzereingabe 2: Erstellen eines dubstep-Liedes mit benutzerdefinierten Parametern
 
 # Setup
 from earsketch import *
