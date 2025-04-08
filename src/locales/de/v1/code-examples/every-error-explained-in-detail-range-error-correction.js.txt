@@ -1,4 +1,4 @@
-// Range error: Correction
+// Bereichsfehler: Korrektur
 
 setTempo(120);
 
