@@ -1,9 +1,9 @@
-// String Operations: Expand a beat string into a longer beat string
+// String-Operationen: Einen Beat String zu einem längeren Beat String erweitern
 
 // Setup
-setTempo(120);
+setTempo (120);
 
-// Music
+// Musik
 var initialBeat = "0+0+00-00+++-0++";
 var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
 
@@ -13,12 +13,12 @@ function expander(beatString) {
         beatSlice = beatString.substring(0, i);
         newBeat = newBeat + beatSlice;
     }
-    // return the new beat string so it can be used outside the function
+    // Den neuen Beat String zurückgeben, damit er außerhalb der Funktion verwendet werden kann
     return newBeat;
 }
 
 var finalBeat = expander(initialBeat);
 println(finalBeat);
 
-// makeBeat(drumInstr, 1, 1, initialBeat); // initial beat string
+// makeBeat(drumInstr, 1, 1, initialBeat); // ursprünglicher beat string
 makeBeat(drumInstr, 1, 1, finalBeat);
