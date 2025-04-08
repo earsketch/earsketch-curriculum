@@ -1,7 +1,7 @@
-// Boolean expressions: printing boolean expressions
+// Boolesche Ausdrücke: Ausgabe boolescher Ausdrücke
 
 // Setup
-setTempo(120);
+setTempo (120);
 
 println(!true);
 println(true && false);
