@@ -13,12 +13,12 @@ def createBeat(startMeasure, sound, beatString):
     for measure in range(startMeasure, endMeasure):
         makeBeat(sound, 1, measure, beatString)
 
-    # Return ending measure so we can use it outside function
+    # Ending measure zurückgeben, damit wir es außerhalb Funktion verwenden können
     return endMeasure
 
 # Function calls
-# Assigning the value we return to a variable
+# Zuweisung des zurückgegebenen Wertes an eine Variable
 newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
 
-# Passing the returned value into another function
+# Übergabe des zurückgegebenen Wertes an eine andere Funktion
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
