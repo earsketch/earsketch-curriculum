@@ -1,6 +1,6 @@
-# Parse Error: Example
+# Parse-Fehler: Beispiel
 
-from earsketch import *
+von Earsketch-Import *
 setTempo(98)
 
 soundFolder = HIP_HOP_98_BPM__HHDUSTYGROOVE
@@ -11,7 +11,7 @@ chords2 = RD_WORLD_PERCUSSION_PAN_FLUTE_2
 fitMedia(chords1, 1, 1, 9)
 fitMedia(chords2, 1, 9, 17)
 
-for measure in range(1, 17, 2):
-  # select a random clip with EarSketch API function
-  beat = selectRandomFile(soundFolder
-  fitMedia(beat, 2, measure, measure + 2)
+für Takte im Bereich(1, 17, 2):
+  # einen zufälligen Clip mit der EarSketch API Funktion auswählen
+  beat = selectRandomFile(SoundOrdner)
+  fitMedia(Beat, 2, Takt, Takt + 2)
