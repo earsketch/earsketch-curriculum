@@ -1,4 +1,4 @@
-// Index Error: Example
+// Indexfehler: Beispiel
 
 setTempo(120);
 
