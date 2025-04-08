@@ -190,7 +190,7 @@ include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
 include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
 ----
 
-In this case, the variable containing the string to be concatenated was not referred to by the correct name; a lowercase "t" should have been used.
+In diesem Fall wurde die Variable, die die zu verkettende Zeichenkette enthält, nicht durch den richtigen Namen referenziert; ein Kleinbuchstaben "t" hätte verwendet werden sollen.
 
 [role="curriculum-python"]
 [source,python]
@@ -204,19 +204,19 @@ include::code-examples/every-error-explained-in-detail-name-error-correction.py.
 include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
-*Solution:* Check the spelling and case of your variables and functions. When using a variable or calling a function, make sure each has been defined previously. Make sure you define a function before it is called. Although you can paste the names in directly, ensure your sound constant names align with the clip names in the Sound Browser.
+*Lösung:* Überprüfen Sie die Schreibweise und Groß- und Kleinschreibung Ihrer Variablen und Funktionen. Wenn Sie eine Variable verwenden oder eine Funktion aufrufen, stellen Sie sicher, dass jede zuvor definiert wurde. Stellen Sie sicher, dass Sie eine Funktion definieren, bevor sie aufgerufen wird. Obwohl Sie die Namen direkt einfügen können, stellen Sie sicher, dass Ihre Soundkonstanten-Namen sich an die Clip-Namen im Sound Browser angleichen.
 
 [[parseerror]]
-=== Parse Error
+=== Parse-Fehler
 
 [role="curriculum-python"]
-*Console message:* ParseError: There is an error when reading the code.
+*Konsolenmeldung:* ParseError: Beim Lesen des Codes ist ein Fehler aufgetreten.
 
 [role="curriculum-python"]
-*Description:* *Parsing* means converting one form of information into another. Therefore, a parse error occurs when the interpreter is unable to convert your code into information that the computer can use to make music. Code formatting, like brackets and parentheses, is often the cause of a parse error.
+*Beschreibung:* *Parsing* bedeutet, eine Form von Information in eine andere umzuwandeln. Daher tritt ein Parse-Fehler auf, wenn der Interpreter nicht in der Lage ist, Ihren Code in Informationen umzuwandeln, die der Computer verwenden kann, um Musik zu machen. Die Formatierung von Code, wie z. B. Klammern, ist oft die Ursache für einen Parse-Fehler.
 
 [role="curriculum-python"]
-*Example:* In the following example, we attempt to have some fun by selecting random beats to play over a melody, but something is preventing the code from running.
+*Beispiel:* Im folgenden Beispiel versuchen wir etwas Spaß zu haben, indem wir zufällige Beats auswählen, um über eine Melodie zu spielen, aber etwas hindert den Code am Laufen.
 
 [role="curriculum-python"]
 [source,python]
@@ -229,7 +229,7 @@ The parse error included in the example above breaks AsciiDoc syntax highlightin
 ////
 
 [role="curriculum-python"]
-Upon running the code, the console points us to line 26. This line looks fine, but the `selectRandomFile()` function in the previous line is missing its closing parentheses. In many cases, parse errors can be fixed quickly.
+Beim Ausführen des Codes verweist die Konsole auf die Linie 26. Diese Zeile sieht gut aus, aber der Funktion `selectRandomFile()` in der vorherigen Zeile fehlt ihre schließenden Klammern. In vielen Fällen können Parse-Fehler schnell behoben werden.
 
 [role="curriculum-python"]
 [source,python]
@@ -238,19 +238,19 @@ include::code-examples/every-error-explained-in-detail-parse-error-correction.py
 ----
 
 [role="curriculum-python"]
-*Solution:* Check the console for an indication of where the offending line may be. Make sure all function definitions, function calls, and other expressions have opening and closing parentheses. Check for missing or extra punctuation marks in  other areas of your script. Additionally, check for missing function definitions and arguments. Finally, check spelling of the arguments you pass to functions.
+*Lösung:* Überprüfen Sie die Konsole, um festzustellen, wo die fehlerhafte Zeile sein könnte. Stellen Sie sicher, dass alle Funktionsdefinitionen, Funktionsaufrufe und andere Ausdrücke offene und schließende Klammern haben. Prüfen Sie in anderen Bereichen Ihres Skripts auf fehlende oder zusätzliche Satzzeichen. Überprüfen Sie zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Schließlich, überprüfen Sie die Rechtschreibung der Argumente, die Sie an Funktionen übergeben.
 
 [role="curriculum-javascript"]
-Parse errors are interpreted broadly as syntax errors in JavaScript, which is covered <<every-error-explained-in-detail#syntaxerror,next>>.
+Parse-Fehler werden in JavaScript weitgehend als Syntaxfehler interpretiert, was <<every-error-explained-in-detail#syntaxerror,next>> behandelt wird.
 
 [[syntaxerror]]
-=== Syntax Error
+=== Syntax-Fehler
 
-*Console message:* SyntaxError: There is an error with the syntax (or arrangement) of code.
+*Konsolenmeldung:* SyntaxError: Es gibt einen Fehler mit der Syntax (oder Anordnung) des Codes.
 
-*Description:* A syntax error occurs when a program encounters a mistake in the script's syntax, the rules of a particular language.
+*Beschreibung:* Ein Syntaxfehler tritt auf, wenn ein Programm auf einen Fehler in der Syntax des Skripts, den Regeln einer bestimmten Sprache, stößt.
 
-*Example:* The following script is supposed to create dynamically changing futuristic bleeps. However it contains two common bugs that cause syntax errors.
+*Beispiel:* Das folgende Skript soll dynamisch wechselnde futuristische Pieptöne erzeugen. Es enthält jedoch zwei häufige Fehler, die zu Syntaxfehlern führen.
 
 [role="curriculum-python"]
 [source,python]
@@ -265,10 +265,10 @@ include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-For this script, the code editor flags the offending line for us. Notice that we forgot to end our _if_ statement with a colon. On the same line, we also gave an invalid condition; we should be using the equality operator `==` instead of the assignment operator `=`.
+Bei diesem Skript markiert der Code-Editor die fehlerhafte Zeile für uns. Beachte, dass wir vergessen haben, unsere _if_ Anweisung mit einem Doppelpunkt zu beenden. In der gleichen Zeile haben wir auch eine ungültige Bedingung angegeben; wir sollten den Gleichstellungs-Operator `==` anstelle des Zuweisungsoperators `=` verwenden.
 
 [role="curriculum-javascript"]
-For this script, the code editor flags the offending line for us. Notice that we forgot to open our _if_ statement body with a curly brace. On the same line, we also gave an invalid condition; we should be using the strict equality operator `===` instead of the assignment operator `=`.
+Bei diesem Skript markiert der Code-Editor die fehlerhafte Zeile für uns. Beachte, dass wir vergessen haben, unseren _if_ Statement-Körper mit einer geschweiften Klammer zu öffnen. In der gleichen Zeile haben wir auch eine ungültige Bedingung angegeben; wir sollten den strengen Gleichstellungs-Operator `===` anstelle des Zuweisungsoperators `=` verwenden.
 
 [role="curriculum-python"]
 [source,python]
@@ -283,28 +283,28 @@ include::code-examples/every-error-explained-in-detail-syntax-error-correction.j
 ----
 
 [role="curriculum-python"]
-*Solution:* Always check the console and code editor for clues. Beyond the common errors given above, check for opening and closing quotations and make sure you are not using Python keywords as variable names.
+*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise. Außer den obigen häufigen Fehlern überprüfen Sie das Öffnen und Schließen von Zitaten und stellen Sie sicher, dass Sie Python-Keywords nicht als Variablennamen verwenden.
 
 ////
 Added solution from parse error to JS version below.
 ////
 
 [role="curriculum-javascript"]
-*Solution:* Always check the console and code editor for clues.
-Beyond the common errors given above, check for opening and closing quotations and ensure all function definitions, function calls, and other expressions have opening and closing parentheses. Also, check for missing or extra punctuation marks in other areas of your script. Additionally, check for missing function definitions and arguments. You cannot use JavaScript reserved words as variable names. Finally, check spelling of the arguments you pass to functions.
+*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise.
+Über die oben genannten allgemeinen Fehler hinaus sollten Sie auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfen Sie auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen Ihres Skripts. Überprüfen Sie zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Sie können keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfen Sie die Rechtschreibung der Argumente, die Sie an Funktionen übergeben.
 
 [[typeerror]]
-=== Type Error
+=== Typfehler
 
-*Console message:* TypeError: There is an error with the expected data type.
+*Konsolenmeldung:* Typfehler: Es gibt einen Fehler mit dem erwarteten Datentyp.
 
-*Description:* A type error occurs when a particular operation or function is expecting one data type, but receives another.
+*Beschreibung:* Ein Typfehler tritt auf, wenn eine bestimmte Operation oder Funktion einen Datentyp erwartet, aber einen anderen empfängt.
 
 [role="curriculum-python"]
-*Example:* Suppose you have written a script that keeps track of the total measures used with an updating variable. In the snippet below, we attempt to print a message stating the length of a song.
+*Beispiel:* Angenommen, du hast ein Skript geschrieben, das die insgesamt verwendeten Maßnahmen mit einer Aktualisierungsvariablen erfasst. Im Snippet unten versuchen wir eine Nachricht mit der Länge eines Liedes zu drucken.
 
 [role="curriculum-javascript"]
-*Example:* Suppose you have written a script that takes user input to determine the length of the song. The user's value is passed to `fitMedia()`.
+*Beispiel:* Nehmen wir an, Sie haben ein Skript geschrieben, das Benutzereingaben entgegennimmt, um die Länge des Liedes zu bestimmen. Der Wert des Benutzers wird an `fitMedia()` übergeben.
 
 [role="curriculum-python"]
 [source,python]
@@ -319,10 +319,10 @@ include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-A type error is thrown because the number type cannot be concatenated into a string. Instead, we can use data type conversion to first convert the `measureTotal` value into a string:
+Es wird ein Typfehler ausgelöst, weil der Zahlentyp nicht in eine Zeichenkette verkettet werden kann. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` Wert in einen String zu konvertieren:
 
 [role="curriculum-javascript"]
-A type error is thrown because we accidentally passed a string as the last `fitMedia()` argument. Instead, we can use data type conversion to first convert the `measureTotal` string into a number:
+Ein Typfehler wird ausgelöst, weil wir versehentlich einen String als letztes `fitMedia()` Argument übergeben haben. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` String in eine Nummer zu konvertieren:
 
 [role="curriculum-python"]
 [source,python]
@@ -336,14 +336,14 @@ include::code-examples/every-error-explained-in-detail-type-error-correction.py.
 include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
-*Solution:* The EarSketch console gives the offending data type and points to a specific line number. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
+*Lösung:* Die EarSketch Konsole gibt den fehlerhaften Datentyp und verweist auf eine bestimmte Zeilennummer. Prüfe auf konsistente Datentypen in arithmetischen Ausdrücken, Datenstrukturoperationen und Funktionsargumenten. Stellen Sie außerdem sicher, dass Ihre Funktionsaufrufe die richtige Anzahl an Argumenten haben.
 
 ////
 (ex. trying to concatenate something into string that isn't string, modifying a string value instead of concatenating something in, function call with too few arguments)
 ////
 
 [[valueerror]]
-=== Value Error
+=== Wertfehler
 
 [role="curriculum-python"]
 *Console message:* ValueError: A provided argument is not within the set or range of acceptable values for a function.
