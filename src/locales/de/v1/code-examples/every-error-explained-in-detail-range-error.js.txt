@@ -1,4 +1,4 @@
-// Range Error: Example
+// Bereichsfehler: Beispiel
 
 setTempo(120);
 
