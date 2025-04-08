@@ -1,12 +1,12 @@
-// Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
+// Komplexe Umschläge: Mehrere setEffect()-Aufrufe auf einer Spur verwenden, um Änderungen am Effekt-Umschlag vorzunehmen
 
 // Setup
-setTempo(120);
+setTempo (120);
 
-// Music
+// Musik
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
-// Envelope time points (in measures)
+// Umschlag Zeitpunkte (in Takten)
 var pointA = 1;
 var pointB = 4;
 var pointC = 6.5;
@@ -14,9 +14,9 @@ var pointD = 7;
 var pointE = 8.5;
 var pointF = 9;
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // First effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Erster Effekt, Filter-Sweep
 
-// Second effect, volume changes
+// Zweiter Effekt, Lautstärkenänderung
 setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // End of fade out
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Start des fade out
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Ende des fade out
