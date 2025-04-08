@@ -1,6 +1,6 @@
-// Instead of this:
+// Anstelle hierfür:
 fitMedia(HIPHOP_SYNTHPLUCKLEAD_005, 1, 1, 2);
 
-// We write this:
+// Schreiben wir Folgendes:
 var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;
 fitMedia(synth1, 1, 1, 2);
