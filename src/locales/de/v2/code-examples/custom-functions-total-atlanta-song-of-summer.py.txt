@@ -1,10 +1,10 @@
-# Total Atlanta Song of Summer: creating a complete song with abstractions
-# structure of the song: intro-A-B-A-B
+# Total Atlanta Song des Sommers: Erstellen eines kompletten Songs mit Abstraktionen
+# Struktur des Songs: intro-A-B-A-B
 
-from earsketch import *
+von EarSketch Import *
 setTempo(110)
 
-# Sound variables
+# Soundvariablen
 melody1 = EIGHT_BIT_ATARI_BASSLINE_005
 melody2 = DUBSTEP_LEAD_018
 melody3 = DUBSTEP_LEAD_017
@@ -17,24 +17,24 @@ piano = YG_RNB_PIANO_4
 kick = OS_KICK02
 hihat = OS_CLOSEDHAT03
 
-# FUNCTION DEFINITIONS
+# FUNKTIONSDEFINITIONEN
 
-# Adding drums:
-def addingDrums(start, end, pattern):
-    # first, we create beat strings, depending on the parameter pattern:
+# Drums hinzufügen:
+def addingDrums(Anfang, Ende, Muster):
+    # Zuerst erstellen wir Beat Strings, abhängig vom Parametermuster:
     if pattern == "heavy":
         beatStringKick = "0---0---0---00--"
         beatStringHihat = "-----000----0-00"
-    elif pattern == "light":
+    if pattern == "light":
         beatStringKick = "0-------0---0---"
         beatStringHihat = "--0----0---0---"
-    # then we create the beat,
-    # on track 3 for the kick and track 4 for the hihat,
-    # from measures start to end:
-    for measure in range(start, end):
-        # here we will place our beat on "measure",
-        # which is first equal to "start",
-        # which is a parameter of the function
+    # dann erstellen wir den Beat,
+    # auf Track 3 für den Kick und Track 4 für den Hihat,
+    # von den Takten beginnend bis Ende:
+    für Takte im Bereich(Anfang, Ende):
+        # Hier werden wir unseren Schlag auf "measure" setzen
+        # was zunächst gleich „start“ ist,
+        # welches ein Parameter der Funktion ist
         makeBeat(kick, 3, measure, beatStringKick)
         makeBeat(hihat, 4, measure, beatStringHihat)
 
@@ -43,7 +43,7 @@ def intro(start, end):
     fitMedia(melody1, 1, start, start + 1)
     fitMedia(melody1, 1, start + 2, start + 3)
     fitMedia(bass1, 2, start, start + 3)
-    # transition:
+    # Übergang:
     fitMedia(bass2, 2, start + 3, end)
     fitMedia(shout, 3, start + 3.75, end)
 
@@ -53,7 +53,7 @@ def sectionA(start, end):
     fitMedia(brass1, 2, start, end)
     setEffect(2, VOLUME, GAIN, -20, start, -10, end)
     addingDrums(start, end, "heavy")
-    # Pitch modulation for transition:
+    # Pitch-Modulation für den Übergang:
     setEffect(1, BANDPASS, BANDPASS_FREQ, 200, end - 2, 1000, end)
 
 # SectionB:
@@ -70,9 +70,9 @@ sectionB(9, 13)
 sectionA(13, 17)
 sectionB(17, 21)
 
-# Fade out:
-for track in range(1, 5):
+# Ausblenden:
+für Spur im Bereich(1, 5):
     setEffect(track, VOLUME, GAIN, 0, 19, -60, 21)
-# Lower hihat and kick volume:
+# Lautstärke von HiHat und Kick senken:
 setEffect(4, VOLUME, GAIN, -15)
 setEffect(3, VOLUME, GAIN, -10)
