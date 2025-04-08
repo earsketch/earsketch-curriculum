@@ -182,16 +182,16 @@ video revamping tab
 [[makebeat]]
 === The `makeBeat()` function
 
-Now let's see how you can make your own beat. Here we use the term "beat" as a shorthand for drumbeat: a repeated rhythmic pattern of percussive sounds. We will use the `makeBeat()` function, with 4 arguments:
+Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden wir den Begriff „Beat“ als Abkürzung für Drumbeat: ein wiederholtes rhythmisches Muster aus perkussiven Klängen. Wir werden die `makeBeat()` Funktion mit 4 Argumenten verwenden:
 
-. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
-. *Track*: The track number
-. *Start*: The starting measure
-. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+. *Sound*: Eine Soundkonstante. Sie können den Genrefilter im Sound-Browser verwenden, um "MAKEBEAT" auszuwählen. Dies sind kurze Klänge passend für Beat Patterns.
+. *Track*: Die Tracknummer
+. *Start*: Der Starttakt
+. *Beat*: Ein String, der aus den Zeichen `"0"`, `"+"` und `"-"` besteht.
 
-For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
+Zum Beispiel: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` wird dein Muster `0--0--000--00-0-` auf Track 1 setzen, mit dem Sound `DUBSTEP_FILTERCHORD_002`.
 
-Let's see more details with this video:
+In diesem Video erfährst du mehr:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
@@ -201,7 +201,7 @@ video::./videoMedia/3_3_makebeat_py.mp4[]
 [[video12js]]
 video::./videoMedia/3_3_makebeat_js.mp4[]
 
-Here is the example shown in the video:
+Hier ist das Beispiel aus dem Video:
 
 [role="curriculum-python"]
 [source,python]
@@ -219,38 +219,38 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 
 .PRACTICE
 ****
-Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
-Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
-Please note that:
+Erstellen Sie eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
+Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Spur `1` hinzuzufügen.
+Bitte beachte Folgendes:
 
-. You should assign your variables with the `=` symbol before using them.
-. Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
-. Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
+. Du solltest deine Variablen durch das Symbol `=` zuweisen, bevor du sie verwendest.
+. Genau wie `fitMedia()`, startet die `makeBeat()` Funktion mit einem Kleinbuchstaben (`m`) und hat einen Großbuchstaben in der Mitte (`B`).
+. Genau wie `fitMedia()` hat die `makeBeat()` Funktion 4 durch Kommata getrennte Parameter.
 
-When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
+Wenn du deine Musik hörst und dir die erste Version nicht gefällt, ist das völlig in Ordnung. Verändere deinen Beat, damit er immer besser klingt, bis dir gefällt, was du hast.
 ****
 
 {nbsp} +
 
 .PRACTICE
 ****
-Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
-Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
+Erstelle ein neues Skript und füge zwei oder drei Sounds mit `fitMedia()` hinzu. Verwende Variablen, um deine Soundkonstanten zu speichern.
+Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzufügen. Du kannst sie entweder gleichzeitig auf zwei verschiedenen Spuren oder nacheinander auf einer einzigen Spur abspielen.
 ****
 
 [[beatsandgenres]]
-=== Create a beat based on your musical genre
+=== Erstelle einen Beat passend zu deinem Musikgenre
 
-Now that you've started working with `makeBeat()` and beat strings, let's explore some basic beat patterns that you can use.
-You've learned that a musical genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Similarly, some genres have signature beat patterns. Below are some examples:
+Nachdem du nun angefangen hast, mit `makeBeat()` und Beat-Strings zu arbeiten, lass uns einige grundlegende Beat-Patterns erkunden, die du verwenden kannst.
+Du hast gelernt, dass ein Musikgenre eine Kategorie der künstlerischen Komposition (z. B. Musik) ist, die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Genauso haben einige Genres auch charakteristische Beat-Muster. Im Folgenden findest du einige Beispiele:
 
-We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
+Wir werden drei Arten von Sounds verwenden: Kick (Spur `1`), Snare (Spur `2`) und Hihat (Spur `3`). Wir werden für jeden dieser Sounds eine `makeBeat()` Funktion auf drei verschiedenen Spuren verwenden.
 
 [role="curriculum-mp4"]
 [[video1a]]
 video::./videoMedia/3_4_beat_by_genre.mp4[]
 
-Here is the corresponding code:
+Hier ist der entsprechende Code:
 
 [role="curriculum-python"]
 [source,python]
@@ -265,75 +265,75 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
-=== Chapter 3 Summary
+=== Zusammenfassung von Kapitel 3
 
-* In EarSketch, 1 measure is divided into 4 beats, or 4 quarter notes. 1 beat is divided into 4 sixteenth notes.
-* *Variables* create a space in computer memory to store data.
-* You first need to assign the value (data) to the variable name using the sign `=`. Then you can use the variable by writing its name in the code.
-* A *string* is a data type that consists of a series of characters encapsulated by single or double quotes.
-* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
-* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
-* `makeBeat()` takes four arguments:
-** *Sound*: A sound constant
-** *Track*: The track number
-** *Start*: The starting measure
-** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
-* Different beat patterns often correspond to different musical genres.
+* In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
+* *Variablen* erstellen Sie einen Platz im Computerspeicher, um Daten zu speichern.
+* Sie müssen zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
+* Ein *string* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
+* Percussive Sounds können mit dem GENRE-Filter im Sound Browser gefunden werden: Wählen Sie den Künstler MAKEBEAT aus.
+* Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat-String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
+* `makeBeat()` verwendet vier Argumente:
+** *Sound*: Eine Soundkonstante
+** *Track*: Die Tracknummer
+** *Start*: Der Starttakt
+** *Beat*: Ein String, der aus den Zeichen `"0"`, `"+"` und `"-"` besteht.
+* Verschiedene Beat Muster entsprechen oft unterschiedlichen musikalischen Genres.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-Which of these options is a string?
+Welche dieser Optionen ist ein String?
 
 [answers]
-* "Five"
+* "Fünf"
 * 5
-* FIVE
-* Five
+* FÜNF
+* Fünf
 --
 
 [question]
 --
-What does "0" represent in a beat pattern string?
+Was bedeutet die „0“ in einer Zeichenfolge für ein Beat-Muster?
 
 [answers]
-* Start playing the clip
-* Rest
-* Extend the clip
-* End the clip
+* Wiedergabe des Clips starten
+* Pause
+* Clip verlängern
+* Clip beenden
 --
 
 [question]
 --
-In EarSketch, one measure is...
+In EarSketch ist ein Takt ...
 
 [answers]
-* 4 beats long
-* 4 sub-beats long
-* 16 beats long
-* 1 quarter note
+* 4 Schläge lang
+* 4 Sub-Beats lang
+* 16 Schläge lang
+* 1 Viertelnote
 --
 
 [question]
 --
-One sixteenth note is...
+Eine sechzehntel Note ist...
 
 [answers]
-* a quarter of a quarter note
-* half a beat
-* a quarter of a measure
-* 1 measure
+* ein Viertel einer Viertelnote
+* ein halber Schlag
+* ein Viertel eines Taktes
+* 1 Takt
 --
 
 [question]
 --
-To use the `makeBeat()` function, what is the order of parameters you need to provide?
+Um die `makeBeat()` Funktion zu verwenden, wie ist die Reihenfolge der Parameter, die du angeben musst?
 
 [answers]
-* clip name, track, start measure, beat string
-* tempo, track, start measure, end measure
-* clip name, start measure, end measure, beat string
-* beat string, track, start measure, clip name
+* Clipname, Spur, Starttakt, Beat String
+* Tempo, Spur, Starttakt, Endtakt
+* Clipname, Starttakt, Endtakt, Beat String
+* Beat String, Spur, Starttakt, Clipname
 --
