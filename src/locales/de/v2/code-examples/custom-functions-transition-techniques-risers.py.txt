@@ -1,10 +1,10 @@
-# Transition Techniques - Risers: Transitioning between sections using risers and a crash cymbal
+# Übergangstechniken - Risers: Übergänge zwischen Abschnitten mit Risern und einem Crash-Cymbal
 
 # Setup
-from earsketch import *
-setTempo(128)
+von EarSketch Import *
+setTempo (128)
 
-# Music
+# Musik
 synthRise = YG_EDM_SYNTH_RISE_1
 airRise = RD_EDM_SFX_RISER_AIR_1
 lead1 = YG_EDM_LEAD_1
