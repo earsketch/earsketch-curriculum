@@ -1,6 +1,6 @@
-// Incrementing: Creating an alternating drum beat
+// Inkrementieren: Einen wechselnden Trommelschlag erzeugen
 
-setTempo(120);
+setTempo (120);
 
 var groove1 = HIPHOP_DUSTYGROOVE_011;
 var groove2 = HIPHOP_DUSTYGROOVE_010;
