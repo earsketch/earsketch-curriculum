@@ -1,8 +1,8 @@
-// Total Atlanta Song of Summer: creating a complete song with abstractions
+// Total Atlanta Song of Summer: Erstellen eines kompletten Songs mit Abstraktionen
 
 setTempo(110);
 
-// Sound variables
+// Sound-Variablen
 var melody1 = EIGHT_BIT_ATARI_BASSLINE_005;
 var melody2 = DUBSTEP_LEAD_018;
 var melody3 = DUBSTEP_LEAD_017;
@@ -15,11 +15,11 @@ var piano = YG_RNB_PIANO_4;
 var kick = OS_KICK02;
 var hihat = OS_CLOSEDHAT03;
 
-// FUNCTION DEFINITIONS
+// FUNKTIONS-DEFINITIONEN
 
-// Adding drums:
+// Drums hinzufügen:
 function addingDrums(start, end, pattern) {
-    // first, we create beat strings, depending on the parameter pattern:
+    // Zuerst erstellen wir Beat-Strings, abhängig vom Parametermuster:
     if (pattern === "heavy") {
         var beatStringKick = "0---0---0---00--";
         var beatStringHihat = "-----000----0-00";
@@ -27,13 +27,13 @@ function addingDrums(start, end, pattern) {
         beatStringKick = "0-------0---0---";
         beatStringHihat = "--0----0---0---";
     }
-    // then we create the beat,
-    // on track 3 for the kick and track 4 for the hihat,
-    // from measures start to end:
-    for (var measure = start; measure < end; measure++) {
-    // here we will place our beat on "measure",
-    // which is first equal to "start",
-    // which is a parameter of the function
+    // dann erstellen wir den Beat,
+    // auf Track 3 für den Kick und Track 4 für den Hihat,
+    // von Anfang bis Ende der Takte:
+    für (var measure = start; Takt < End; Takt++) {
+    // Hier werden wir unseren Schlag auf "measure" platzieren
+    // was zunächst gleich „Start“ ist,
+    // das ist ein Parameter der Funktion
         makeBeat(kick, 3, measure, beatStringKick);
         makeBeat(hihat, 4, measure, beatStringHihat);
     }
@@ -44,7 +44,7 @@ function intro(start, end) {
     fitMedia(melody1, 1, start, start + 1);
     fitMedia(melody1, 1, start + 2, start + 3);
     fitMedia(bass1, 2, start, start + 3);
-    // transition:
+    // Übergang:
     fitMedia(bass2, 2, start + 3, end);
     fitMedia(shout, 3, start + 3.75, end);
 }
@@ -54,7 +54,7 @@ function sectionA(start, end) {
     fitMedia(brass1, 2, start, end);
     setEffect(2, VOLUME, GAIN, -20, start, -10, end);
     addingDrums(start, end, "heavy");
-    // Pitch modulation for transition:
+    // Pitch-Modulation für den Übergang:
     setEffect(1, BANDPASS, BANDPASS_FREQ, 200, end - 2, 1000, end);
 }
 
@@ -73,11 +73,11 @@ sectionB(9, 13);
 sectionA(13, 17);
 sectionB(17, 21);
 
-// Fade out:
+// Ausblenden:
 for (var track = 1; track < 5; track++) {
     setEffect(track, VOLUME, GAIN, 0, 19, -60, 21);
 }
 
-// Lower hihat and kick volume:
+// Lautstärke von HiHat und Kick senken:
 setEffect(4, VOLUME, GAIN, -15);
 setEffect(3, VOLUME, GAIN, -10);
