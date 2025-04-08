@@ -1,16 +1,16 @@
-// A-B-A Form: A song with A and B sections
+// A-B-A Form: Ein Song mit A und B Abschnitten
 
 // Setup
 setTempo(120);
 
-// Music
+// Musik
 
-// Create an A section
+// Einen A-Abschnitt erstellen
 
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // main
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // drums
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bass line
-setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // increasing volume of bass line
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) // Erhöhung der Lautstärke der Basslinie
 
 // Create a 4 measure B section between measures 5 and 9
 
