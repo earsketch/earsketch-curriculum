@@ -1,9 +1,9 @@
-// Multi Beat: Using several makeBeat calls with different rhythms
+// Multi Beat: Verwendung mehrerer makeBeat Calls mit unterschiedlichen Rhythmen
 
 // Setup
-setTempo(120);
+setTempo (120);
 
-// Music
+// Musik
 var synth = DUBSTEP_FILTERCHORD_002;
 var cymbal = OS_CLOSEDHAT01;
 var beat1 = "-00-00+++00--0-0";
