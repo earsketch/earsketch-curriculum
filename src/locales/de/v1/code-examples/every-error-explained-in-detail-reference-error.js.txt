@@ -1,6 +1,6 @@
-// Reference Error: Example
+// Referenz-Fehler: Beispiel
 
 setTempo(120);
 
-var today = readInput("What day is it?");
-println("Today is " + Today);
+var today = readInput("Welcher Tag ist es?");
+println("Heute ist " + heute);
