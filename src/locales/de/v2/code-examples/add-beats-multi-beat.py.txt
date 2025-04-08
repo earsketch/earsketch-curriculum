@@ -1,10 +1,10 @@
-# Multi Beat: Using several makeBeat calls with different rhythms
+# Multi Beat: Verwendung mehrerer makeBeat Calls mit unterschiedlichen Rhythmen
 
 # Setup
-from earsketch import *
+von Earsketch-Import *
 setTempo(120)
 
-# Music
+# Musik
 synth = DUBSTEP_FILTERCHORD_002
 cymbal = OS_CLOSEDHAT01
 beat1 = "-00-00+++00--0-0"
