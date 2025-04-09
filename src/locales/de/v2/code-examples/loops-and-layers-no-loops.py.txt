@@ -1,14 +1,14 @@
-# No loops: Musical repetition created without code loops
+// No loops: Musikwiederholung ohne Codeschleifen erstellt
 
 # Setup
-from earsketch import *
+von EarSketch Import *
 setTempo(120)
 
-# Music
+# Musik
 drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
-# All of these fitMedia() calls could be replaced with two calls placed in a loop.
+# Alle diese fitMedia()-Aufrufe könnten durch zwei Aufrufe in einer Schleife ersetzt werden.
 fitMedia(drums1, 1, 1, 1.5)
 fitMedia(drums2, 1, 1.5, 2)
 fitMedia(drums1, 1, 2, 2.5)
