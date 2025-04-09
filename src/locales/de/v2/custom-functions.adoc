@@ -1,5 +1,5 @@
 [[customfunctionssongstructure]]
-== Custom Functions and Song Structure
+== Benutzerdefinierte Funktionen und Songstruktur
 
 :nofooter:
 
