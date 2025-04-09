@@ -1,4 +1,4 @@
-// Return Statements 2: Returning the end measure of a section function
+// Rückgabewert 2: Gibt den Endtakt einer Abschnittsfunktion zurück
 
 // Setup
 setTempo(120);
@@ -6,7 +6,7 @@ setTempo(120);
 var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
-// Function definition
+// Funktionsdefinition
 function verse(start) {
     var end = start + 4;
     fitMedia(melody1, 1, start, end);
@@ -14,5 +14,5 @@ function verse(start) {
     return end;
 }
 // Function calls
-var endMeasure = verse(1); // calling verse function and start is measure 1
+var endMeasure = verse(1); // Aufruf der Strophenfunktion und Beginn ist Takt 1
 println(endMeasure);
