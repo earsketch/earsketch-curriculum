@@ -1,4 +1,4 @@
-// Conditional statement: Using a boolean to create variation in a function
+// Bedingte Anweisung: Verwendung eines Booleschen Wertes zur Erzeugung von Variationen in einer Funktion
 
 // Setup
 setTempo(120);
@@ -7,17 +7,17 @@ var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
 var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
 var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
 
-// Function definition
-function verse(start, variation) {
-    // variation is either equal to true or false
+// Funktionsdefinition
+function verse(start, Variation) {
+    // Variation entspricht entweder true oder false
     if (variation) {
         fitMedia(melody1, 1, start, start + 4);
     } else {
         fitMedia(melody2, 1, start, start + 4);
     }
-    fitMedia(drums1, 2, start, start + 4); // this is outside the conditional statement (no indentation)
+    fitMedia(drums1, 2, start, start + 4); // Dies liegt außerhalb der bedingten Anweisung (keine Einrückung)
 }
 
-// Function calls
+// Funktion Calls
 verse(1, true);
 verse(7, false);
