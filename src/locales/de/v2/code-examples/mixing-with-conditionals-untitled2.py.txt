@@ -1,8 +1,8 @@
 if condition1:
-    # Here write the instructions the computer needs to execute if the condition1 evaluates to True. If it's False, move to the next line
+    # Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die condition1 wahr ist Wenn es falsch ist, zur nächsten Zeile wechseln
 elif condition2:
-    # Here write the instructions if condition2 is True. If condition2 is False, move to the next line
+    # Hier schreibst du die Anweisungen, wenn condition2 wahr ist. Wenn condition2 falsch ist, zur nächsten Zeile wechseln
 elif condition3:
-    # Here write the instructions if condition3 is True. If condition3 is False, move to the next line
+    // Hier schreibst du die Anweisungen, wenn condition3 wahr ist. Wenn condition3 falsch ist, zur nächsten Zeile wechseln
 else:
-    # Here write the instructions in case all 3 conditions are False
+    # Hier schreibst du die Anweisungen für den Fall, dass alle 3 Bedingungen falsch sind
