@@ -1,4 +1,4 @@
-// Return Statements: Linking two beats together with return statements
+// Return Statements: Zwei Beats mit Return Statements verknüpfen
 
 // Setup
 setTempo(100);
@@ -6,20 +6,20 @@ setTempo(100);
 var rhythm1 = "0+++0+0+0+--0+00";
 var rhythm2 = "0+0-00++0-000+++";
 
-// Music
+// Musik
 function createBeat(startMeasure, sound, beatString) {
     var endMeasure = startMeasure + 3;
     for (var measure = startMeasure; measure < endMeasure; measure++) {
         makeBeat(sound, 1, measure, beatString);
     }
 
-    // Return ending measure so we can use it outside function
-    return endMeasure;
+    # Ending measure zurückgeben, damit wir es außerhalb Funktion verwenden können
+    return endMeasure
 }
 
 // Function calls
-// Assigning the value we return to a variable
+# Zuweisung des zurückgegebenen Wertes an eine Variable
 var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
 
-// Passing the returned value into another function
+# Übergabe des zurückgegebenen Wertes an eine andere Funktion
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
