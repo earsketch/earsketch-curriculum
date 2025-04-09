@@ -1,13 +1,13 @@
-# Return Statements: Linking two beats together with return statements
+# Return-Statements: Zwei Beats mit Rückgabewerten verknüpfen
 
 # Setup
-from earsketch import *
+von EarSketch Import *
 setTempo(100)
 
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
-# Music
+# Musik
 def createBeat(startMeasure, sound, beatString):
     endMeasure = startMeasure + 3
     for measure in range(startMeasure, endMeasure):
