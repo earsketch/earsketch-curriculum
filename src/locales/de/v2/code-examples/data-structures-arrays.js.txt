@@ -1,14 +1,14 @@
-// Arrays: Using an array to hold several sounds
+// Arrays: Benutze ein Array, um mehrere Sounds zu halten
 
 // Setup
 setTempo(130);
 
-// Music
+// Musik
 
-// Creating an array of sounds
+// Erstellen eines Arrays von Sounds
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
-// Placing sounds from measure 1 to 5
-fitMedia(myEnsemble[0], 1, 1, 5); // accessing index 0
-fitMedia(myEnsemble[1], 2, 1, 5); // accessing index 1
-fitMedia(myEnsemble[2], 3, 1, 5); // accessing index 2
+// Platziere Sounds von Takt 1 bis 5
+fitMedia(myEnsemble[0], 1, 1, 5); // auf Index 0 zugreifen
+fitMedia(myEnsemble[1], 2, 1, 5); // auf Index 1 zugreifen
+fitMedia(myEnsemble[2], 3, 1, 5); // auf Index 2 zugreifen
