@@ -1,6 +1,6 @@
-# Finding errors: Five errors below must be fixed
+# Fehler finden: Fünf Fehler unten müssen behoben werden
 
-from earsketch import *
+von EarSketch Import *
 setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
