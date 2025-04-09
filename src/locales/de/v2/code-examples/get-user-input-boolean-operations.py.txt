@@ -25,7 +25,7 @@ elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
     makeBeat(kick, 1, 1, edmKickBeat)
     makeBeat(clap, 2, 1, edmClapBeat)
 else:
-    print("Sorry we couldn't read the genre you selected. Please run the code again.")
+    print("Entschuldigung, wir konnten das von dir ausgewählte Genre nicht lesen. Bitte führe den Code erneut aus.")
 
-# Adding some reverb on track 2
+# Füge Reverb auf Track 2 hinzu
 setEffect(2, REVERB, MIX, 0.1)
