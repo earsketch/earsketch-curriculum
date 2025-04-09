@@ -37,13 +37,13 @@ include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 `for` loops in JavaScript consist of 4 basic parts:
 
 [[loop-components-PY]]
-.The basic components of a for loop
+.
 [role="curriculum-python"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 
 [[loop-components-JS]]
-.The basic components of a for loop
+.
 [role="curriculum-javascript"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
