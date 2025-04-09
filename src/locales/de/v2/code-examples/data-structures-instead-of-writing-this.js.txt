@@ -1,4 +1,4 @@
-// Instead of writing this:
+// Anstatt zu schreiben:
 var kick = OS_KICK03;
 var hihat = OS_OPENHAT01;
 var snare = OS_SNARE05;
