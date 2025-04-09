@@ -1,7 +1,7 @@
-// Intro Script: This code adds one sound to the DAW
+// Einführungsskript: Dieser Code fügt dem DAW einen Ton hinzu
 
-// Setup Section
+// Abschnitt einrichten
 setTempo(120);
 
-// Music Section
+// Musik-Abschnitt
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
