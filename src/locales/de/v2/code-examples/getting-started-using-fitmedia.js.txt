@@ -1,7 +1,7 @@
-// Using fitMedia(): Adding a sound to the DAW
+// Verwendung von fitMedia(): Füge dem DAW einen Sound hinzu
 
 // Setup
 setTempo(120);
 
-// Music
+// Musik
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
