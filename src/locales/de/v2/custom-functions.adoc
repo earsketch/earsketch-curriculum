@@ -79,10 +79,10 @@ In your current script you created for the previous practice problem:
 1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
 1. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
 1. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
-1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
+1. Definiere eine Funktion für Abschnitt B nach demselben Verfahren und rufe Abschnitt B von Takt fünf bis neun und von Takt dreizehn bis siebzehn auf.
 ****
 
-Here is what your code could look like:
+Hier ist, wie dein Code aussehen könnte:
 
 [role="curriculum-python"]
 [source,python]
@@ -107,27 +107,27 @@ video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
 video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 
 [[transitionstrategies]]
-=== Transition Strategies
+=== Übergangsstrategien
 
-Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help one section smoothly go into the next. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. The goal of a transition is to grab the listener's attention and let them know a change is about to occur.
+Jetzt, wo du weißt, wie du benutzerdefinierte Funktionen zur Strukturierung deines Songs erstellen kannst, wollen wir uns die Übergänge ansehen. *Übergänge* helfen einem Abschnitt reibungslos in den nächsten zu gehen. Sie können Strophe und Refrain verbinden, zu einem Drop aufbauen, zwischen Tracks mischen (DJing) oder die Tonart wechseln. Das Ziel eines Übergangs ist es, die Aufmerksamkeit des Zuhörers auf sich zu nehmen und ihm eine kommende Veränderung mitzuteilen.
 
-Following are some popular strategies for creating musical transitions:
+Im Folgenden findest du einige beliebte Strategien zur Gestaltung musikalischer Übergänge:
 
-. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section.
-. *Drum Fill*: A rhythmic variation to fill the gap before a new section.
-. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
-. *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
-. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
-. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
-. *Looping*: Repeating a short segment of melody before a new section.
-. *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section.
-. *Anacrusis*: When the melody of the new section starts a couple beats early.
+. *Crash Cymbal*: Platziere eine Crash-Cymbal auf den ersten Schlag eines neuen Abschnitts.
+. *Drum Fill*: Eine rhythmische Variation, um die Lücke vor einem neuen Abschnitt zu füllen.
+. *Track Silencing*: Schaltet einige Tracks für einen dramatischen Effekt vorübergehend stumm.
+. *Melody Variation*: Einführung einer Variation der Akkorde, Basslinie oder Melodie vor dem neuen Abschnitt. Oft enthält ein Ordner innerhalb der EarSketch Soundbibliothek Variationen eines ähnlichen Riffs.
+. *Steigerung*: Eine Note oder ein Geräusch, das in der Höhe zunimmt. Es ist sehr häufig in EDM (Electronic Dance Music) und schafft eine Vorfreude auf einen Drop. Sie können den Suchbegriff "riser" im Sound-Browser verwenden. Eine umgekehrte Crash-Zymbal kann als Riser verwendet werden, wie YG_EDM_REVERSE_CRASH_1.
+. *Snare Roll*: Eine Folge wiederholter Snare Hits, mit zunehmender Dichte, Tonhöhe oder Amplitude. Du kannst einen Sound wie RD_FUTURE_DUBSTEP_FILL_1 oder HOUSE_BREAK_FILL_003 oder mit `makeBeat()` verwenden.
+. *Looping*: Wiederholen eines kurzen Melodie-Segments vor einem neuen Abschnitt.
+. *Crossfading*: Das Volumen eines Abschnitts wird verringert, während das Volumen eines neuen Abschnitts erhöht wird.
+. *Anacrusis*: Wenn die Melodie der neuen Sektion beginnt, schlagen ein paar beats frühzeitig.
 
 .PRACTICE
 ****
-Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
+Wähle aus der Liste der möglichen Übergänge zwei aus und überlege dir, wie du sie mit Code umsetzen kannst. Du kannst mit einem Partner arbeiten. Sobald du darüber nachgedacht hast, kannst du dir die folgenden Beispiele ansehen.
 
-The transition should be placed one or two measures before the new section. You can use several transition techniques at the same time.
+Der Übergang sollte ein oder zwei Maßnahmen vor dem neuen Abschnitt platziert werden. Du kannst mehrere Übergangstechniken gleichzeitig benutzen.
 ****
 
 Drum fills:
@@ -144,7 +144,7 @@ include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-The track silencing technique only requires the modification of a couple `fitMedia()` calls. An example is shown below.
+Die Technik des Track Silencing erfordert nur die Änderung einiger `fitMedia()`-Aufrufe. Ein Beispiel wird unten gezeigt.
 
 [role="curriculum-python"]
 [source,python]
@@ -158,7 +158,7 @@ include::code-examples/custom-functions-transition-techniques-track-droupouts.py
 include::code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
-The next example uses multiple risers and a crash cymbal during the transition.
+Im nächsten Beispiel werden während des Übergangs mehrere Riser und ein crash cymbal verwendet.
 
 [role="curriculum-python"]
 [source,python]
@@ -175,31 +175,31 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 {nbsp} +
 
 [[yourfullsong]]
-=== Your full song
+=== Dein gesamter Song
 
-In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
+Beim Programmieren können wir *Abstraktionen* schaffen, die Bündelung von Ideen zu einem einzigen Konzept. In der Musik gruppieren wir musikalische Ideen in Abschnitte. Funktionen sind eine Art Abstraktion, die in der Informatik verwendet wird. Sie packen mehrere Anweisungen in ein Werkzeug, so dass sie leicht referenziert werden können. Abstraktionen können die Form eines Programms klarer machen.
 
 .PRACTICE
 ****
-Let's create a full song using all the tools you've discovered in EarSketch! Here is a suggestion of how to work, but you can adapt it as you like:
+Erstellen wir ein komplettes Lied mit allen Werkzeugen die du in EarSketch entdeckt hast! Hier ist ein Vorschlag zur Vorgehensweise, aber du kannst ihn nach Belieben anpassen:
 
-. Choose a theme for your song. Think about the type of sounds, instruments, or lyrics that will best convey your message.
-. Then select a simple structure.
-. And finally, start coding! Start with some `fitMedia()` functions to select sounds.
-. Use `makeBeat()` to add some percussion.
-. You can upload your own sounds.
-. Use `for` loops to reduce repetition in your code.
-. Use custom functions to define your sections and create your song structure.
-. Add one or two meaningful transitions.
-. Add effects with `setEffect()`.
-. Add one or several conditional statements.
-. Make sure you use variables to store some information such as sound constants.
-. Make sure you use comments to explain what you are doing.
-. Don't forget to regularly run your code and listen to your song. This will help you modify it until you like the sound of it.
-. Choose a name for your song.
+. Wähle ein Thema für deinen Song. Denke an die Art von Klängen, Instrumenten oder Songtexten, die deine Nachricht am besten vermitteln.
+. Wähle dann eine einfache Struktur.
+. Und dann, starte die Programmierung! Beginne mit einigen `fitMedia()` Funktionen, um Sounds auszuwählen.
+. Benutze `makeBeat()` um Percussion hinzuzufügen.
+. Du kannst deine eigenen Sounds hochladen.
+. Benutze `for` Loops, um Wiederholung in deinem Code zu reduzieren.
+. Verwende benutzerdefinierte Funktionen, um deine Abschnitte zu definieren und deine Songstruktur zu erstellen.
+. Füge ein oder zwei sinnvolle Übergänge hinzu.
+. Füge Effekte mit `setEffect()` hinzu.
+. Füge eine oder mehrere bedingte Anweisungen hinzu.
+. Du solltest darauf achten, dass du Variablen verwendest, um Informationen wie z.B. Klangkonstanten zu speichern.
+. Achte darauf, dass du Kommentare verwendest, um zu erklären, was du tust.
+. Vergiss nicht, regelmäßig deinen Code auszuführen und deinen Song zu hören. Auf diese Weise kannst du ihn ändern, bis er dir gefällt.
+. Wähle einen Namen für deinen Song.
 ****
 
-Here is an example of a full song:
+Hier ist ein Beispiel für einen vollständigen Song:
 
 [role="curriculum-python"]
 [source,python]
@@ -213,46 +213,46 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-In this example, we have used a `for` loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
+In diesem Beispiel haben wir eine `for` Schleife in einer benutzerdefinierten Funktion verwendet! Wir haben Parameter der Funktion (`start` und `end`) innerhalb der for-Schleife verwendet.
 
 [[chapter7summary]]
-=== Chapter 7 Summary
+=== Zusammenfassung von Kapitel 7
 
-* *Sections* are related musical units consisting of multiple measures. Each expresses an idea or feeling.
-* *Transitions* are passages of music used to connect consecutive musical sections.
-* The structure and variety found within a song is known as its *form*. A common musical form is A-B-A.
-* *Custom functions* are unique functions written by the programmer to accomplish a specific task. You have to create a custom function to be able to call it. You can create as many parameters as you want.
-* An *abstraction* is the bundling of ideas to form a single, often less complex, concept. Functions are an example of abstraction.
+* *Abschnitte* sind verwandte musikalische Einheiten, die aus mehreren Takten bestehen. Jeder drückt eine Idee oder ein Gefühl aus.
+* *Transitions* sind Passagen der Musik, die verwendet werden, um aufeinander folgende Musikabschnitte zu verbinden.
+* Die Struktur und Vielfalt eines Liedes wird als seine *Form* bezeichnet. Eine übliche musikalische Form ist A-B-A.
+* *Benutzerdefinierte Funktionen* sind einzigartige Funktionen, die vom Programmierer geschrieben werden, um eine bestimmte Aufgabe zu erfüllen. Du musst eine benutzerdefinierte Funktion erstellen, um sie aufrufen zu können. Du kannst beliebig viele Parameter erstellen.
+* Eine *Abstraktion* ist das Bündeln von Ideen zu einem einzelnen, oft weniger komplexen Konzept. Funktionen sind ein Beispiel für Abstraktion.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-Which of these is NOT an example of a musical section?
+Was davon ist NICHT ein Beispiel für eine musikalische Sektion?
 
 [answers]
 * Drums
 * Intro
-* Verse
+* Vers
 * Chorus
 --
 
 [question]
 --
-What is an abstraction?
+Was ist eine Abstraktion?
 
 [answers]
-* A bundling of ideas to form a single concept
-* A variety of sounds throughout sections
-* Parts of a song that are related, but also are distinct from each other
-* A statement that returns a value to the function call
+* Eine Bündelung von Ideen zu einem einzigen Konzept
+* Eine Vielzahl von Klängen in verschiedenen Bereichen
+* Teile eines Liedes, die miteinander in Beziehung stehen, sich aber auch voneinander unterscheiden
+* Eine Anweisung, die einen Wert an den Funktionsaufruf zurückgibt
 --
 
 [role="curriculum-python"]
 [question]
 --
-Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+Welche dieser Optionen definiert die Funktion `myFunction()` mit den Parametern `startMeasure` und `endMeasure` richtig ?
 
 [answers]
 * `def myFunction(startMeasure, endMeasure):`
@@ -264,18 +264,18 @@ Which of these options correctly defines the function `myFunction()` with the pa
 [role="curriculum-javascript"]
 [question]
 --
-Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+Welche dieser Optionen definiert die Funktion `myFunction()` mit den Parametern `startMeasure` und `endMeasure` richtig ?
 
 [answers]
 * `function myFunction(startMeasure, endMeasure) {}`
-* `function myFunction() {}`
+* `funktion myFunction() {}`
 * `myFunction(startMeasure, endMeasure){}`
 * `myFunction(2, 5)`
 --
 
 [question]
 --
-Which of these is NOT an example of a transition?
+Welches ist NICHT ein Beispiel für einen Übergang?
 
 [answers]
 * Melody Consistency
