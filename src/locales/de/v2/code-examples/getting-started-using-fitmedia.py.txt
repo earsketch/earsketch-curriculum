@@ -1,7 +1,7 @@
-# Using fitMedia(): Adding a sound to the DAW
+# Verwendung von fitMedia(): Füge dem DAW einen Sound hinzu
 
 # Setup
-from earsketch import *
+von EarSketch Import *
 setTempo(120)
 
 # Musik
