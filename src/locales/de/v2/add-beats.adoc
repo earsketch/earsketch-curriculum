@@ -1,12 +1,12 @@
 [[addsomebeats]]
-== Add some Beats!
+== Füge ein paar Beats hinzu!
 
 :nofooter:
 
-In this chapter you will learn how to make your own beats! We'll look at variables, a new function called `makeBeat()`, and beats from different genres.
+In diesem Kapitel lernst du, wie du deine eigenen Beats erstellst! Wir werden uns Variablen ansehen, eine neue Funktion namens `makeBeat()`, und Beats aus verschiedenen Genres.
 
 [[variables]]
-=== Variables
+=== Variablen
 
 [role="curriculum-python curriculum-mp4"]
 [[video2py]]
@@ -16,30 +16,30 @@ video::./videoMedia/002-05-Variables-PY.mp4[]
 [[video2js]]
 video::./videoMedia/002-05-Variables-JS.mp4[]
 
-What is a variable? A *variable* is a name given to a piece of data that we plan to use later in our program.
+Was ist eine Variable? Eine *Variable* ist ein Name für eine Datenmenge, die wir später in unserem Programm verwenden wollen.
 
-In EarSketch, the variables in your scripts may point to:
+In EarSketch können die Variablen in Ihren Skripten verweisen auf:
 
-* A *number*, like a track number or a measure number
-* A *file*, like an audio file
-* A *string*, like the name of a sound clip or some lyrics
-* A *character*, like `A`, `a`, `2`, or `=`
+* Eine *Zahl*, wie eine Tracknummer oder eine Taktnummer
+* Eine *Datei*, wie eine Audiodatei
+* Ein *String*, wie der Name eines Soundclips oder einiger Songtexte
+* Ein *Zeichen*, wie `A`, `a`, `2` oder `=`
 
-A *character* can be any  number, letter or symbol. A *string* is a series of characters with quotation marks around it, like `"Hello World 123!"`.
+Ein *Zeichen* kann jede Zahl, jeder Buchstabe oder jedes Symbol sein. Ein *String* ist eine Reihe von Zeichen in Anführungszeichen, wie `"Hallo Welt 123!"`.
 
-To use a variable,
+Um eine Variable zu verwenden,
 
 [role="curriculum-python"]
-. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. Writing `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
-. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
-. Then you need to call the variable: use `synth1` in your code. You can only use the variable after it has been assigned, not before. For example, write `fitMedia(synth1, 1, 1, 3)`.
-. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Das Schreiben von `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
+. Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Du kannst die Variable nur verwenden, nachdem sie zugewiesen wurde, nicht vorher. Schreibe z.B. `fitMedia(synth1, 1, 1, 3)`.
+. Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
 
 [role="curriculum-javascript"]
-. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. We also use the command `var` at the beginning of the line. Writing `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
-. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
-. Then you need to call the variable: use `synth1` in your code. For example, write `fitMedia(synth1, 1, 1, 3);`.
-. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Wir verwenden auch den Befehl `var` am Anfang der Zeile. Das Schreiben von `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
+. Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Schreibe z.B. `fitMedia(synth1, 1, 1, 3);`.
+. Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
 
 [role="curriculum-python"]
 [source,python]
@@ -55,9 +55,9 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.ÜBUNG
 ****
-In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
+Verwende in deinen vorherigen Skripten Variablen, um die Namen deiner Soundclips zu speichern. Die Beispiele unten helfen dir dabei. Stelle sicher, dass deine Variablen kurze und verständliche Namen haben (wie `bass` oder `voice_1`).
 ****
 
 {nbsp} +
@@ -74,98 +74,98 @@ include::code-examples/add-beats-variables.py.txt[]
 include::code-examples/add-beats-variables.js.txt[]
 ----
 
-Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. This way, when you or someone else reads your code, they can see what you are referring to.
+Beachte, dass es wichtig ist, deine Variable verständlich und aussagekräftig zu benennen. Gib zum Beispiel `synth1` anstelle von `music1` oder `test` an, was keine Informationen liefert. Wenn du oder jemand anderes deinen Code liest, kann er/sie so erkennen, worauf du dich beziehst.
 
-A *constant* is similar to a variable because it stores values. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. By convention, constant names are capitalized and use underscores instead of spaces.
+Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert einer Konstante ändert sich jedoch nie. Zum Beispiel ist `TECHNO_SYNTHPLUCK_001` eine Konstante in EarSketch , sie bezieht sich auf die entsprechende Soundkonstante. Konventionell werden Konstantennamen großgeschrieben und verwenden Unterstriche anstelle von Leerzeichen.
 
 [[drumbeatstrings]]
 === Beat Strings
 
-Let's first learn some basic concepts about rhythm:
+Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 
-* *Rhythm* is a pattern of sound, often repeated.
-* The *tempo* is the speed of the music in BPM (beats per minute).
-* A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
-* A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
-* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4...." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and...."
-* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
-* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
-* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
+* *Rhythm* ist ein Klangmuster, das oft wiederholt wird.
+* Das *tempo* ist die Geschwindigkeit der Musik in BPM (schlägt pro Minute).
+* Ein *Beat* ist wie der "stetige Pulse" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
+* Ein *Takt* ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
+* Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in 2 *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
+* Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e und 2 e und 3 e und 4 e und a. .."
+* 1 Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
+* Ein *Metronome* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW können Sie das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
 
 [[imediameasurepng]]
-.A measure
+.Ein Takt
 [caption="Figure 3.2.1: "]
 image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
-.A beat
+.Ein Beat
 [caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
-.A sixteenth note
+.Eine Sechzehntelnote
 [caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
-.PRACTICE
+.ÜBUNG
 ****
-Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
-****
-
-We'll compose each of our rhythms in a *beat* string.
-
-A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
-
-For example: `"0-00-00-0+++0+0+"`
-
-* `0` starts playing the percussive sound clip (one hit of the drum, for example).
-* `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
-* `-` is a rest, meaning silence.
-
-.PRACTICE
-****
-For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work.
+Höre dir deinen Lieblingssong an und versuche, im Takt zu klatschen. Du kannst diese Übung auch mit deiner Nachbarin oder deinem Nachbarn machen.
 ****
 
-Here are some examples of 1-measure beat strings:
+Wir werden jeden unserer Rhythmen in einem *beat* String zusammenstellen.
 
-Quarter notes: `"0\+++0+++0\+++0+++"`
-(read: "1, 2, 3, 4")
+Ein *Beat* String ist ein String, der die Zeichen `0`, `+` oder `-` verwendet. Als Erinnerung: Ein String ist ein Datentyp, der eine Reihe von Zeichen (wie `0` oder `+`) in Anführungszeichen enthält.
+
+Zum Beispiel: `"0-00-00-0+++0+0+"`
+
+* `0` startet die Wiedergabe des perkussiven Soundclips (z. B. ein Schlag auf die Trommel).
+* `+` erweitert den Audioclip in den nächsten Sub-Beat. Es folgt immer einem `0` oder `+`.
+* `-` ist eine Pause, also Stille.
+
+.ÜBUNG
+****
+Versuche für jede der folgenden Zeichenfolgen auf die Nullen zu klatschen. Höre dir dann das entsprechende Audio an und überprüfe, ob du richtig lagst. Diese Übung hilft dir zu verstehen, wie die Zeichenfolgen der Drumbeats funktionieren.
+****
+
+Hier sind einige Beispiele für 1-Takt Beat Strings:
+
+Viertelnoten: `"0\+++0+++0\+++0+++"`
+(gelesen: "1, 2, 3, 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
 ++++
 
-Eighth notes: `"0+0+0+0+0+0+0+0+"`
-(read: "1 and 2 and 3 and 4")
+Achtelnoten: `"0+0+0+0+0+0+0+0+"`
+(gelesen: "1 and 2 and 3 and 4")
 
 ++++
-<div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
+<0>audioMedia/beatString11.mp3</0>
 ++++
 
-Sixteenth notes: `"0000000000000000"`
-(that's very fast, depending on the tempo)
+Sechzehntel Noten: `"00000000000000"`
+(Das ist sehr schnell, je nach Tempo)
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
 ++++
 
 `"0-0-0---0-0-0---"`
-(read: "1 and 2, 3 and 4")
+(gelesen: "1 und 2, 3 und 4")
 
 ++++
-<div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
+<0>audioMedia/beatString2.mp3</0>
 ++++
 
 `"0---0---0-0-0---"`
-(read: "1, 2, 3 and 4")
+(gelesen: "1, 2, 3 and 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
 ++++
 
 `"0---0---0---0000"`
-(read: "1, 2, 3, 4 e and a")
+(gelesen: "1, 2, 3, 4 e and a")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
@@ -180,7 +180,7 @@ video revamping tab
 ////
 
 [[makebeat]]
-=== The `makeBeat()` function
+=== Die `makeBeat()` Funktion
 
 Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden wir den Begriff „Beat“ als Abkürzung für Drumbeat: ein wiederholtes rhythmisches Muster aus perkussiven Klängen. Wir werden die `makeBeat()` Funktion mit 4 Argumenten verwenden:
 
@@ -217,7 +217,7 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.ÜBUNG
 ****
 Erstellen Sie eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
 Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Spur `1` hinzuzufügen.
@@ -232,7 +232,7 @@ Wenn du deine Musik hörst und dir die erste Version nicht gefällt, ist das vö
 
 {nbsp} +
 
-.PRACTICE
+.ÜBUNG
 ****
 Erstelle ein neues Skript und füge zwei oder drei Sounds mit `fitMedia()` hinzu. Verwende Variablen, um deine Soundkonstanten zu speichern.
 Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzufügen. Du kannst sie entweder gleichzeitig auf zwei verschiedenen Spuren oder nacheinander auf einer einzigen Spur abspielen.
