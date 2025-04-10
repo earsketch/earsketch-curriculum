@@ -1,10 +1,10 @@
-// Making a drum set: Using arrays with makeBeat()
+# Erstellen eines Drum Sets: Benutze Arrays mit makeBeat()
 
 // Setup
 setTempo(100);
 
-// Music
-// Before, we had one track for every sound (measure 1):
+// Musik
+# Vorher hatten wir eine Spur für jeden Sound (measure 1):
 var kick = OS_KICK05;
 var snare = OS_SNARE01;
 var kickBeat = "0+++----0+++----";
