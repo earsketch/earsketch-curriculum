@@ -1,9 +1,9 @@
-# Boolean operations: Asking user for genre and creating beat accordingly
+# Boolesche Operationen: Benutzer nach Genre fragen und Beat entsprechend erstellen
 
-from earsketch import *
+von EarSketch Import *
 setTempo(120)
 
-# Sound variables
+# Soundvariablen
 kick = OS_KICK02
 hihat = OS_CLOSEDHAT04
 clap = OS_CLAP03
@@ -14,10 +14,10 @@ hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
-# Requesting user input
-genre = readInput("What genre is your favorite? Hip Hop or EDM?")
+# Benutzereingabe anfordern
+genre = readInput("Welches Genre ist dein Favorit? Hip Hop oder EDM?")
 
-# Creating the appropriate rhythm
+# Den passenden Rhythmus erstellen
 if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
     makeBeat(kick, 1, 1, hiphopKickBeat)
     makeBeat(hihat, 2, 1, hiphopHihatBeat)
