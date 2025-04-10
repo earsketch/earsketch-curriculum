@@ -1,10 +1,10 @@
-# Boolean Example: We analyze the loudness of our tracks
+# Boolesches Beispiel: Wir analysieren die Lautstärke unserer Tracks
 
 # Setup
-from earsketch import *
+von EarSketch Import *
 setTempo(120)
 
-# Creating 2 tracks
+# Erstellen von 2 Tracks
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
 fitMedia(melody1, 1, 1, 9)
