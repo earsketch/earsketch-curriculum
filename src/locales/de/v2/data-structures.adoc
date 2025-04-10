@@ -371,30 +371,30 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Array-Elemente werden mit Klammer-Notation referenziert, wie `myArray[1]`. Zeichen in einem String können in ähnlicher Weise referenziert werden: `myString[1]`.
 * Die Eigenschaft `length` gibt die Anzahl der Elemente in einem Array oder die Anzahl der Zeichen in einem String zurück. Die Syntax ist `array.length` oder `string.length`.
 * Arrays können mit Hilfe von *Arrayoperation*, einer Reihe von Werkzeugen zur Modifizierung eines Arrays, verkettet und gesliced werden.
-* The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
-* The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
-* Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
+* Die Syntax um ein Array aus einem größeren, existierenden Array herauszuschneiden, ist `newArray = oldArray.slice(startIndex, endIndex)`.
+* Die Syntax zum Slicing eines Substring aus einem größeren String ist `newString = oldString.substring(startIndex, endIndex)`.
+* Arrays können mit der Methode `concat()` kombiniert werden, wie `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` kann Rhythmen aus mehreren Sounds auf einmal erstellen, indem ein Beat-String übergeben wird, der sich auf verschiedene Array- Indexe bezieht. makeBeat()` kann auf Sounds in den Indexen 0 bis 9 zugreifen, sofern sie im selben Array gespeichert sind.
 * Der Austausch konstruktiver Informationen mit anderen ist eine Form von *Peer-Feedback*. Es bietet die Möglichkeit, von anderen zu lernen.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-Which of the following operations is used to join lists/arrays?
+Welche der folgenden Operationen wird verwendet, um Listen/Arrays zu verbinden?
 
 [answers]
-* Concatenation
+* Verkettung
 * Slicing
-* Combination
+* Kombination
 * Addition
 --
 
 [role="curriculum-python"]
 [question]
 --
-What is the index number of the first element of a list in Python?
+Wie lautet die Indexnummer des ersten Elements einer Liste in Python?
 
 [answers]
 * `0`
@@ -406,19 +406,19 @@ What is the index number of the first element of a list in Python?
 [role="curriculum-python"]
 [question]
 --
-What does `len(myList)` return?
+Was gibt `len(myList)` zurück?
 
 [answers]
-* The number of elements in `myList`
-* The data types of `myList`
-* The elements of `myList`
-* The width of `myList`
+* Die Anzahl der Elemente in `myList`
+* Die Datentypen von `myList`
+* Die Elemente von `myList`
+* Die Breite von `myList`
 --
 
 [role="curriculum-python"]
 [question]
 --
-What is the syntax to concatenate two lists (`listA` and `listB`)?
+Was ist die Syntax um zwei Listen zu verketten (`listA` und `listB`)?
 
 [answers]
 * `listA + listB`
@@ -430,7 +430,7 @@ What is the syntax to concatenate two lists (`listA` and `listB`)?
 [role="curriculum-python"]
 [question]
 --
-How can you get a list from oldList without the first and last elements?
+Wie kann man eine Liste aus oldList ohne das erste und letzte Element erhalten?
 
 [answers]
 * `oldList[1:len(oldList) - 1]`
@@ -442,7 +442,7 @@ How can you get a list from oldList without the first and last elements?
 [role="curriculum-javascript"]
 [question]
 --
-What is the index number of the first element of an array in Javascript?
+Was ist die Indexnummer des ersten Elements eines Arrays in Javascript?
 
 [answers]
 * `0`
@@ -454,19 +454,19 @@ What is the index number of the first element of an array in Javascript?
 [role="curriculum-javascript"]
 [question]
 --
-What does `myArray.length` return?
+Was gibt `myArray.length` zurück?
 
 [answers]
-* The number of elements in `myArray`
-* The data types of `myArray`
-* The elements of `myArray`
-* The width of `myArray`
+* Die Anzahl der Elemente in `myArray`
+* Die Datentypen von `myArray`
+* Die Elemente von `myArray`
+* Die Breite von `myArray`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+Was ist die Syntax um zwei Arrays zu verketten (`arrayA` und `arrayB`)?
 
 [answers]
 * `arrayA.concat(arrayB)`
@@ -478,7 +478,7 @@ What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
 [role="curriculum-javascript"]
 [question]
 --
-How can you get an array from `oldArray` without the first and last elements?
+Wie kann man einen Array aus `oldArray` ohne das erste und letzte Element erhalten?
 
 [answers]
 * `oldArray.slice(1, oldArray.length - 1)`
@@ -488,9 +488,9 @@ How can you get an array from `oldArray` without the first and last elements?
 --
 
 [[conclusion]]
-=== Conclusion
+=== Zusammenfassung
 
-Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
+Vielen Dank für die Teilnahme am EarSketch Abenteuer! Wir hoffen, du hattest Spaß und hast viele Dinge mit diesem Tool gelernt :)
 
 ////
 Thank you video
