@@ -1,6 +1,6 @@
 # Boolesche Ausdrücke: Ausgabe boolescher Ausdrücke
 
-from earsketch import *
+von EarSketch Import *
 
 print(not True)
 print(True and False)
