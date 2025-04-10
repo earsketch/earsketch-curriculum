@@ -1,11 +1,11 @@
-// Envelopes: Making envelopes with 7-parameter setEffect()
+// Umschläge: Erstellen von Umschlägen mit 7-Parameter setEffect()
 
 // Setup
 setTempo(120);
 
-// Music
+// Musik
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
-// Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB.
-// This is a fade in
+// Erzeugt eine Effektrampe zwischen den Takten 1 und 3, die von -60 dB bis 0 dB reicht.
+// Dies ist eine Einblendung
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
