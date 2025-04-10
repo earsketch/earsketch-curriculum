@@ -309,106 +309,106 @@ Now let's talk about the different types of tracks you can have. You might remem
 * You also have a *bass line*. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
 * Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
 
-These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
+These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
 
-Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
+Lass uns abschließend noch auf *Wiederholung* und *Kontrast* eingehen. Menschen genießen Wiederholung aufgrund dessen, was Psychologen den _mere exposure effect_ nennen. Wenn wir einen sich wiederholenden Abschnitt einer Musik hören, versucht unser Gehirn, sich die nächste Note vorzustellen, bevor sie gespielt wird und das gibt uns das Gefühl, daran beteiligt zu sein. Ebenso kann der Hörer bei jeder Wiederholung eines Musikabschnitts andere Details des Stücks wahrnehmen, da sich das Gehirn nicht mehr auf die Verarbeitung des rohen melodischen Inhalts konzentrieren muss.
 
-Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
+Der Kontrast bezieht sich auf Unterschiede in aufeinander folgenden Abschnitten der Musik, die ein wichtiges Gleichgewicht zur Wiederholung darstellen. Der Kontrast wird benutzt, um dem Zuhörer neue Elemente zu zeigen. Musiker setzen Kontraste durch rhythmische Veränderungen, neue melodische Linien und Harmonien oder Variationen bei den verwendeten Instrumenten oder Klängen.
 
 .ÜBUNG
 ****
-Create a complete song with:
+Erstelle einen kompletten Song mit:
 
-* A theme (please mention your chosen theme in your commented intro in the code)
-* The `fitMedia()` and `makeBeat()` functions
-* One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
-* At least four tracks
-* At least sixteen measures
-* At least one uploaded sound
-* Comments and variables to organize your code
+* Ein Thema (bitte gib das von dir gewählte Thema in deinem kommentierten Intro im Code an)
+* Die Funktionen `fitMedia()` und `makeBeat()`
+* Einem oder mehreren `for` loop(s) entweder mit `fitMedia()` oder `makeBeat()`
+* Mindestens vier Tracks
+* Mindestens sechzehn Takten
+* Mindestens einem hochgeladener Sound
+* Kommentaren und Variablen zum Organisieren des Codes
 
-Remember that you can try things out and keep only the sounds/ideas that you like most. Feel free to share your music!
+Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst, die dir am besten gefallen. Du kannst deine Musik teilen!
 ****
 
 {nbsp} +
 
 [[chapter4summary]]
-=== Chapter 4 Summary
+=== Zusammenfassung von Kapitel 4
 
 [role="curriculum-python"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
-* The *control flow* represents the order in which statements are executed by the computer.
-* `print()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
-* Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
-* The *pitch* of a sound determines how high or low it sounds on a relative scale.
-* The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
-* You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+* Ein *`for`-Loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. `for` Loops bestehen aus einem Loop body, Loop-Zähler und Bereich. Der Code im Loop Body muss eingerückt werden.
+* Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
+* `print()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
+* Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
+* Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Der *Pitch (Tonhöhe)* eines Klangs bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
+* Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [role="curriculum-javascript"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
-* The *control flow* represents the order in which statements are executed by the computer.
-* `println()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
-* Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
-* The *pitch* of a sound determines how high or low it sounds on a relative scale.
-* The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
-* You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
+* Ein *`for`-Loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for"-Loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im loop body sollte eingerückt werden.
+* Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
+* `println()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
+* Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
+* Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Der *Pitch (Tonhöhe)* eines Klangs bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
+* Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-Which of the following is NOT a component of a `for` loop?
+Welche der folgenden Komponenten ist KEINE Komponente eines `for`-Loops?
 
 [answers]
-* Loop interpreter
+* Loop-Interpreter
 * Loop Counter
 * Loop Body
-* Loop Range
+* Loop Bereich
 --
 
 [question]
 --
-Which of the following is NOT a good use of loops in a musical composition?
+Was von den folgenden ist KEINE gute Verwendung von Loops in einer musikalischen Komposition?
 
 [answers]
-* Creating a beat pattern than never repeats
-* Placing musical clips on every third measure
-* Repeating a beat on several consecutive measures
-* Placing musical clips on odd measures
+* Ein Beatmuster erstellen, das sich nie wiederholt
+* Platzieren von Musikclips in jedem dritten Takt
+* Wiederholung eines Beats auf mehreren aufeinanderfolgenden Takten
+* Platzieren von Musikclips auf ungeraden Takten
 --
 
 [question]
 --
-Which of the following is NOT a recommended technique for debugging?
+Welche der folgenden Methoden ist KEINE empfohlene Technik zum Debuggen?
 
 [answers]
-* Copying and pasting code into Google
-* Printing variable values to the console
-* Looking at error lines identified in the console
-* Asking others for help
+* Kopieren und Einfügen von Code in Google
+* Variablenwerte in der Konsole ausgeben
+* In der Konsole angezeigte Fehlerzeilen betrachten
+* Andere um Hilfe bitten
 --
 
 [question]
 --
-Which of the following is NOT something that can be printed to the console?
+Was von den folgenden ist NICHT etwas, das in der Konsole ausgegeben werden kann?
 
 [answers]
-* Code Comments
+* Code-Kommentare
 * Strings
-* Mathematical Expressions
-* Variables
+* Mathematische Ausdrücke
+* Variablen
 --
 
 [question]
 --
-____ is a quality of sound that determines how high or low it sounds.
+____ ist eine Tonqualität, die bestimmt, wie hoch oder niedrig es klingt.
 
 [answers]
 * Pitch
 * Tempo
-* Rhythm
-* Loudness
+* Rhythmus
+* Lautstärke
 --
