@@ -3,3 +3,4 @@
 :nofooter:
 
 link:<api>[Cliquez ici] pour ouvrir l'API de EarSketch.
+Elle recense les différentes fonctions spécifiques à EarSketch. Utile si vous avez oublié quels arguments donner à quelle fonction !
