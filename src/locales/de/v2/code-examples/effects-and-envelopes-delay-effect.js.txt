@@ -20,6 +20,6 @@ fitMedia(pad2, 2, 7, 9);
 fitMedia(drums1, 3, 3, 5);
 fitMedia(drums2, 3, 5, 9);
 
-// Effects
-// setEffect(1, DELAY, DELAY_TIME, 500); // Adds a delay (echo) effect at intervals of 500ms
-// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Lowers the relative amount of repeats (default is -3.0)
+// Effekte
+// setEffect(1, DELAY, DELAY_TIME, 500); // Fügt einen verzögerten (echo) Effekt in Abständen von 500ms hinzu
+// setEffect(1, DELAY, DELAY_FEEDBACK, -20.0); // Senkt die relative Anzahl an Wiederholungen (Standard ist -3.0)
