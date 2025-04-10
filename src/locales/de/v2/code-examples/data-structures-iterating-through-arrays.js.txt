@@ -1,14 +1,14 @@
-// Iterating through Arrays: Using an array to hold several sounds and placing them in our DAW thanks to a for loop
+// Iteration durch Arrays: Verwendung eines Arrays, um mehrere Sounds zu halten und sie dank eines 'for'-loops in unserer DAW zu platzieren
 
 // Setup
 setTempo(130);
 
-// Music
+// Musik
 
-// Creating an array of sounds
+// Einen Array von Sounds erstellen
 var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
 
-// Going through the array
+// Durchlaufen des Arrays
 for (var track = 1; track < 4; track++) {
     var index = track - 1;
     fitMedia(myEnsemble[index], track, 1, 5);
