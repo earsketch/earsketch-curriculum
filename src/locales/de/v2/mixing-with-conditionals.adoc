@@ -1,14 +1,14 @@
 [[mixingwithconditionnals]]
-== Mix with Conditionals!
+== Mix mit Bedingungen!
 
 :nofooter:
 
-In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (`if` statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+Beim Programmieren kann man Dinge automatisieren. Ein Beispiel für Automatisierung ist die Programmierung eines Roboters, der anhält, wenn ein Hindernis erkannt wird. In diesem Szenario braucht der Roboter kein menschliches Wesen, um ihn manuell zu stoppen. Stattdessen wird der Roboter einen Sensor haben, um Hindernisse zu erkennen, und wenn es eins gibt, wird er stoppen. Wir können musikalische Automatisierungen in EarSketch mit Bedingungen (`if` Statements) durchführen. Wir werden sehen, wie man das Mischen der Spuren automatisiert. Mischen bedeutet, dass wir die Lautstärke eines Tracks reduzieren, wenn er zu laut ist, und die Lautstärke erhöhen, wenn er zu leise ist.
 
 [[analyzetrack]]
-=== Use `analyzeTrack()`
+=== Verwende `analyzeTrack()`
 
-We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. We’ll use an EarSketch function called `analyzeTrack()`. Import and run the following code:
+Wir werden sehen, wie man die Lautstärke eines Tracks erkennt. Achte darauf, dass du den Unterschied zwischen der Tonhöhe (hoch oder tief) und der Lautstärke (laut oder leise) eines Geräuschs kennst. Wir verwenden eine EarSketch Funktion namens `analyzeTrack()`. Importiere und führe folgenden Code aus:
 
 [role="curriculum-python"]
 [source,python]
@@ -22,96 +22,96 @@ include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
-You can read in your console that the printed loudness is 0.10306035109110138.
+In der Konsole kannst du lesen, dass die ausgegebene Lautstärke 0.10306035109110138 ist.
 
-* The loudness can go from 0 (silence) to 1 (maximum loudness).
-* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
-* Most of the sounds will have a loudness under 0.4
+* Die Lautstärke kann von 0 (Stille) bis 1 (maximale Lautstärke) gehen.
+* Manchmal sieht eine Zahl wie folgt aus: 1.74630733714e-05. Dies wird als wissenschaftliche Notation bezeichnet: Siehst du das e-05 am Ende? Das bedeutet, dass die Dezimalstelle um 5 Stellen nach links verschoben wird (ggf. wird sie durch 0 ersetzt). Dies entspricht 0,0000174630733714.
+* Die meisten Sounds werden unter 0.4 laut sein
 
-The `analyzeTrack()` function takes 2 arguments:
+Die `analyzeTrack()` Funktion benötigt 2 Argumente:
 
-. *track*: Track number
-. *feature*: Analysis constant, like `RMS_AMPLITUDE`
+. *Track*: Die Tracknummer
+. *feature*: Analyse-Konstante, wie `RMS_AMPLITUDE`
 
-.PRACTICE
+.ÜBUNG
 ****
-. Try using the code given above with different sounds (change the variable `sound`) to see what the output is.
-. Add a second track and use the `analyzeTrack()` function to print its loudness in the console. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
+. Probiere den obigen Code mit verschiedenen Sounds aus (ändere die Variable `Sound`), um zu sehen, wie die Ausgabe ist.
+. Füge einen zweiten Track hinzu und verwende die `analyzeTrack()` Funktion, um seine Lautstärke in der Konsole auszugeben. Wenn du den Code ausführst, höre, bevor du auf die Konsole schaust, deine Musik an und versuche zu erraten, welcher Track lauter ist.
 ****
 
-The parameter for `analyzeTrack()` can either be `RMS_AMPLITUDE`, to evaluate the loudness, or `SPECTRAL_CENTROID` to analyze the brightness of the sound. We'll focus on analyzing loudness in this chapter.
+Der Parameter für `analyzeTrack()` kann entweder `RMS_AMPLITUDE` sein, um die Lautstärke zu bewerten, oder `SPECTRAL_CENTROID`, um die Helligkeit des Klangs zu analysieren. Wir werden uns in diesem Kapitel auf die Analyse der Lautstärke konzentrieren.
 
 [[booleansandcomparisons]]
-=== Booleans and comparisons
+=== Booleans und Vergleiche
 
-We will now see how *Boolean Logic* works. This will help us automate some tasks.
+Wir werden nun sehen, wie *boolesche Logik* funktioniert. Dies wird uns helfen, einige Aufgaben zu automatisieren.
 
 [role="curriculum-python"]
-*Booleans* are a data type. The boolean data type only has 2 possible values, `True` and `False`. `True` and `False` start with a capital letter and do not have quotes.
+*Booleans* sind ein Datentyp. Der boolsche Datentyp hat nur 2 mögliche Werte, `True` und `False`. `True` und `False` beginnen mit einem Großbuchstaben und haben keine Anführungszeichen.
 
 [role="curriculum-javascript"]
-*Booleans* are a data type. The boolean data type only has 2 possible values, `true` and `false`. `true` and `false` start with a lower-case letter and do not have quotes.
+*Booleans* sind ein Datentyp. Der boolsche Datentyp hat nur 2 mögliche Werte, `true` und `false`. `true` und `false` beginnen mit einem Kleinbuchstaben und haben keine Anführungszeichen.
 
 [role="curriculum-python"]
 --
-To create a boolean, you can either initialize a variable (`variable1 = True`), or you can use a comparison. To make a comparison, we use a *comparison operator*. Here are the comparison operators:
+Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialisieren (`variable1 = True`), oder du kannst einen Vergleich verwenden. Zum Vergleich verwenden wir einen *Vergleichsoperator*. Hier sind die Vergleichsoperatoren:
 
 [cols="^h,1"]
 |===
 |==
-|is equal to
+|ist gleich
 
 |!=
-|is not equal to
+|ist nicht gleich
 
 |>
-|is greater than
+|ist größer als
 
 |>=
-|is greater than or equal
+|ist größer als oder gleich
 
 |<
-|is less than
+|ist kleiner als
 
 |\<=
-|is less than or equal
+|ist kleiner als oder gleich
 |===
 
-Note the difference between:
+Beachte den Unterschied unter:
 
-1. Comparing two values to see if they are identical: `==`
-1. Assigning a value to a variable: `=`
+1. Vergleiche zwei Werte, um zu sehen, ob sie identisch sind: `==`
+1. Zuweisen eines Wertes zu einer Variable: `=`
 --
 
 [role="curriculum-javascript"]
 --
-To create a boolean, you can either initialize a variable (`var variable1 = true;`), or you can use a comparison. To make a comparison, we use a *comparison operator*. Here are the comparison operators:
+Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialisieren (`var variable1 = true;`), oder du kannst einen Vergleich verwenden. Zum Vergleich verwenden wir einen *Vergleichsoperator*. Hier sind die Vergleichsoperatoren:
 
 [cols="^h,1"]
 |===
 |===
-|is equal to
+|ist gleich
 
 |!==
-|is not equal to
+|ist nicht gleich
 
 |>
-|is greater than
+|ist größer als
 
 |>=
-|is greater than or equal
+|ist größer als oder gleich
 
 |<
-|is less than
+|ist kleiner als
 
 |\<=
-|is less than or equal
+|ist kleiner als oder gleich
 |===
 
-Note the difference between:
+Beachte den Unterschied unter:
 
-1. Comparing two values to see if they are equal: `===`
-1. Assigning a value to a variable: `=`
+1. Vergleiche zwei Werte, um zu sehen, ob sie gleich sind: `===`
+1. Zuweisen eines Wertes zu einer Variable: `=`
 --
 
 [role="curriculum-python curriculum-mp4"]
@@ -125,24 +125,24 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 // this video will be cut at 2' to delete the section about boolean operators//
 
 [role="curriculum-python"]
-.PRACTICE
+.ÜBUNG
 ****
-* Create a new script, and add sounds on two tracks.
-* Print `True` if the first track is louder than the second track, and `False` otherwise.
-* Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `True`, if not, print `False`.
-* You can use additional print statements before printing `True` or `False` so that when you read the console, you know what is `True` or `False`. For example, you can first print the track number and then 'True' or 'False'.
+* Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
+* Gib `True` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `False`.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
+* Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `True` oder `False` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `True` oder `False` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚True‘ oder ‚False‘ ausgeben.
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.ÜBUNG
 ****
-* Create a new script, and add sounds on two tracks.
-* Print `true` if the first track is louder than the second track, and `false` otherwise.
-* Use a for loop with the counter `track` to check for each track if the loudness is strictly greater than 0.01. If it is, print `true`, if not, print `false`.
-* You can use additional print statements before printing `true` or `false` so that when you read the console, you know what is `true` or `false`. For example, you can first print the track number and then 'true' or 'false'.
+* Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
+* Gib `true` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `false`.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
+* Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `true` oder `false` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `true` oder `false` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚true‘ oder ‚false‘ ausgeben.
 ****
 
-Here is an example:
+Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -157,17 +157,17 @@ include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
-In this example, we used `print()` with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings, and the function str() to convert numbers to strings.
+In diesem Beispiel haben wir `print()` mit Strings verwendet, um den Inhalt der Konsole leichter zu lesen. Wir haben den Operator `+` zum *Verketten* oder Hinzufügen von Strings und die Funktion str() zur Umwandlung von Zahlen in Strings verwendet.
 
 [role="curriculum-javascript"]
-In this example, we used `println()` with strings to help read the content of the console. We used the operator `+` to *concatenate*, or add strings.
+In diesem Beispiel haben wir `println()` mit Strings verwendet, um den Inhalt der Konsole zu lesen. Wir haben den Operator `+` benutzt, um *zu verketten* oder Strings hinzuzufügen.
 
 [[conditionalstatements]]
-=== Conditional Statements
+=== Bedingte Anweisungen
 
-What is a conditional statement? A *statement* is an instruction for the computer. A *conditional statement* is an instruction that must be executed only if a certain *condition* is true. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. If no, don't do anything (keep going).
+Was ist eine bedingte Anweisung? Ein *Statement* ist eine Anweisung für den Computer. Eine *bedingte Anweisung* ist eine Anweisung, die nur ausgeführt werden muss, wenn eine bestimmte *Bedingung* wahr ist. Wenn du zum Beispiel einen Roboter so programmierst, dass er vor einem Hindernis anhält, lautet die Bedingung „Gibt es ein Hindernis?“. Wenn ja, dann stoppen. Wenn nein, nichts tun (weiter gehen).
 
-Below is an example of conditional statement, note the similarity with a for loop:
+Unten findest du ein Beispiel für eine bedingte Anweisung, beachte die Ähnlichkeit mit einem for-loop:
 
 [role="curriculum-python"]
 [source,python]
@@ -181,14 +181,14 @@ include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
 include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
-.PRACTICE
+.ÜBUNG
 ****
-* Create a new script with two tracks.
-* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
-* You will need a negative gain (between -1dB and -60dB) to reduce the volume.
+* Erstelle ein neues Skript mit zwei Tracks.
+* Wenn der erste Titel lauter ist als der zweite, dann senke seine Lautstärke. Du brauchst die `analyzeTrack()` und `setEffect()` Funktionen sowie eine `if` Anweisung.
+* Du brauchst eine negative Verstärkung (zwischen -1dB und -60dB), um die Lautstärke zu reduzieren.
 ****
 
-Here is an example:
+Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -202,7 +202,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 
-We might want to check several conditions and execute a different set of statements depending on each condition. You can chain multiple conditions together. We use the following syntax:
+Möglicherweise möchten wir mehrere Bedingungen prüfen und je nach Bedingung einen anderen Satz von Anweisungen ausführen. Du kannst mehrere Bedingungen miteinander verketten. Wir verwenden folgende Syntax:
 
 [role="curriculum-python"]
 [source,python]
@@ -217,29 +217,29 @@ include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 ----
 
 [[mixingyourtracks]]
-=== Mix your tracks
+=== Mische deine Tracks
 
-Let's use all these tools to mix your song. Mixing is modifying the volume of tracks so that they sound well balanced together.
+Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert die Lautstärke der Tracks so dass sie gut ausgeglichen klingen.
 
 [role="curriculum-python"]
-.PRACTICE
+.ÜBUNG
 ****
-* Create a new script.
-* Add sounds on at least three tracks for at least sixteen measures.
-* You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or one track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
+* Erstelle ein neues Skript.
+* Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
+* Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use `print()` to show your process in the console. Here is an example: `print("Is track number" + str(track) + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?". The function `str()` converts a number (ex: `1`) into a string (ex: `"1"`).
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.ÜBUNG
 ****
-* Create a new script.
-* Add sounds on at least three tracks for at least sixteen measures.
-* You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or the track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
+* Erstelle ein neues Skript.
+* Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
+* Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
+* Wähle deinen "Haupt"-Track. It can be your melody, or the track that you wish to highlight.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
 * Use `println()` to show your process in the console. Here is an example: `println("Is track number" + track + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?".
 ****
 
@@ -275,7 +275,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * `==` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
 * An *operator* is a character that represents an action.
 * *Expressions* are evaluated by the computer to produce a value.
-* A *statement* is an instruction for the computer.
+* Ein *Statement* ist eine Anweisung für den Computer.
 * A *condition* is an expression that evaluates to `True` or `False`.
 * The `if` statement only executes its code block when its condition is `True`.
 * In the event that an `if` statement's condition is `False`, an optional `else` statement allows an alternative code block to be executed.
@@ -287,7 +287,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * `===` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
 * An *operator* is a character that represents an action.
 * *Expressions* are evaluated by the computer to produce a value.
-* A *statement* is an instruction for the computer.
+* Ein *Statement* ist eine Anweisung für den Computer.
 * A *condition* is an expression that evaluates to `true` or `false`.
 * The `if` statement only executes its code block when its condition is `true`.
 * In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
