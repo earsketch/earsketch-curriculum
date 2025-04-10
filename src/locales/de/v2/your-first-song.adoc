@@ -119,17 +119,17 @@ include::code-examples/your-first-song-comments.js.txt[]
 {nbsp} +
 
 [[uploadingsounds]]
-=== Uploading your own sounds
+=== Deine eigenen Sounds hochladen
 
-You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
+Du kannst deine eigenen Sounds über den Sound-Browser auf der linken Seite deines Bildschirms hochladen. Klicke unter der Registerkarte „Sounds“ auf die Schaltfläche „Sound hinzufügen“.
 
-You must be logged in to upload sounds.
+Du musst eingeloggt sein, um Töne hochzuladen.
 
-Let's explore the first three options.
+Lass uns die ersten drei Optionen erkunden.
 
-. *Upload Sound* allows you to choose audio files already on your computer.
-. *Quick Record* lets you record directly from your computer's microphone.
-. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
+. *Upload Sound* erlaubt dir Audiodateien auf Ihrem Computer auszuwählen.
+. *Quick Record* ermöglicht die Aufnahme direkt vom Mikrofon deines Computers.
+. *Freesound* erlaubt dir den Import von Sounds von http://freesound.org[freesound.org^], einer Open-Source-Audio-Datenbank. In der Suchleiste kannst du nach einem Soundtyp suchen. Wähle dann die Umschalttaste vor dem Dateinamen, um die Datei auszuwählen.
 
 [role="curriculum-mp4"]
 [[video101rec]]
@@ -137,31 +137,31 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
 .PRACTICE
 ****
-Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. It can be a feeling that you'd like to share, or a story.
+Musik und Kunst im Allgemeinen sind oft eine Möglichkeit, eine Botschaft zu vermitteln. Das kann entweder durch den Text und/oder durch die Stimmung des Liedes geschehen. Wir möchten, dass du einen kurzen Song schreibst, der etwas ausdrückt. Das kann ein Gefühl sein, das du gerne teilen möchtest, oder eine Geschichte.
 
-. Think about what you'd like to express
-. Then either:
-.. Write some lyrics and record yourself singing or reading them or
-.. Record or download some sounds that are related to your message
-. Add these recordings to your song using `fitMedia()`
-. Then add additional sounds using `fitMedia()`
-. Present your song to your friend
-. You can discuss your songs and the things you were trying to express
+. Überlege dir, was du zum Ausdruck bringen möchtest
+. Dann entweder:
+.. Schreibe einen Text und nimm dich selbst auf, wie du ihn singst oder liest oder
+.. Nimm einige Töne auf oder lade sie herunter, die mit deiner Botschaft in Verbindung stehen
+. Füge diese Aufnahmen mit `fitMedia()` zu deinem Song hinzu
+. Füge dann zusätzliche Sounds mit `fitMedia()` hinzu
+. Zeige deinen Song deinem Freund
+. Ihr könnt über eure Lieder und die Dinge, die ihr ausdrücken wolltet, diskutieren
 ****
 
-An active computer program is called a *process*.
+Ein aktives Computerprogramm wird *Prozess* genannt.
 
-When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
+Wenn du einen Prozess startest, wird der Computercode zunächst im *Arbeitsspeicher* des Computers gespeichert, um einen schnellen Zugriff zu ermöglichen. Die *CPU*, oder Central Processing Unit, greift jede Anweisung aus dem Speicher auf und führt sie aus. Die CPU wird oft als das "Gehirn" des Computers betrachtet.
 
-A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
+Der Arbeitsspeicher eines Computers wird manchmal als primärer Speicher oder RAM bezeichnet. Er ist so konzipiert, dass er schnell und temporär ist, nur für aktive Prozesse.
 
-There is a difference between memory (or short-term storage) and long-term storage. Long-term storage, like a hard-drive or cloud, is referred to as secondary storage. *Secondary storage* holds high volumes of data for long periods of time, even after a computer is shut down. The CPU does not interact directly with secondary storage. When the CPU carries a process out, data from secondary storage must first be put into memory so that the CPU can access it quickly.
+Es gibt einen Unterschied zwischen Arbeitsspeicher (oder Kurzzeitspeicher) und Langzeitspeicher. Langzeitspeicher, wie eine Festplatte oder eine Cloud, werden als Sekundärspeicher bezeichnet. *Sekundärer Speicher* hält hohe Datenmengen für lange Zeiträume, auch nach dem Herunterfahren eines Computers. Die CPU interagiert nicht direkt mit dem Sekundärspeicher. Wenn die CPU einen Prozess ausführt, müssen die Daten aus dem Sekundärspeicher erst in den Arbeitsspeicher übertragen werden, damit die CPU schnell darauf zugreifen kann.
 
-Sometimes the data in memory for the CPU to use comes from an input device instead of secondary storage. *Inputs* are the signals or data received by the computer, like audio from a microphone. Likewise, *outputs* are the signals or data sent from it, like audio through a speaker. Input/output, or I/O, is how the computer communicates with the outside world, including humans!
+Manchmal stammen die Daten im Arbeitsspeicher, die die CPU verwenden soll, nicht aus dem Sekundärspeicher, sondern von einem Eingabegerät. *Inputs* sind die Signale oder Daten, die vom Computer empfangen werden, wie Audio von einem Mikrofon. Genauso sind *Outputs* die Signale oder Daten, die von ihm gesendet werden, wie Audio über einen Lautsprecher. Input/Output oder I/O ist die Art und Weise, wie der Computer mit der Außenwelt, einschließlich Menschen, kommuniziert!
 
-Let's examine recording a sound into EarSketch as an example process. First, we record data into the computer with the input device, the microphone. The CPU stores that audio data in its memory. If you press the play button to hear your recording, the CPU accesses the data and sends it to an output, the speakers or headphones. When you press the upload button, the CPU runs a process that converts the audio data into a standard sound file format (a WAV file, or .wav) and sends it to the EarSketch server. The server is an external system that provides services to all EarSketch users, including your own computer. The EarSketch server saves the sound file from memory to the server's secondary storage so that you can access it in the future.
+Betrachten wir die Aufnahme eines Sounds in EarSketch als Beispielprozess. Zuerst nehmen wir mit dem Eingabegerät, dem Mikrofon, Daten auf dem Computer auf. Die CPU speichert diese Audiodaten in ihrem Speicher. Wenn du die Abspieltaste drückst, um deine Aufnahme zu hören, greift die CPU auf die Daten zu und sendet sie an einen Ausgang, also an die Lautsprecher oder Kopfhörer. Wenn du die Upload-Taste drückst, führt die CPU einen Prozess aus, der die Audiodaten in ein Standard-Tondateiformat (eine WAV-Datei, oder .wav) umwandelt und an den EarSketch-Server sendet. Der Server ist ein externes System, das allen EarSketch-Benutzern Dienste zur Verfügung stellt, auch deinem eigenen Computer. Der EarSketch-Server speichert die Tondatei auf dem Sekundärspeicher des Servers, damit du in Zukunft darauf zugreifen kannst.
 
-Check out the following supplementary video:
+Sieh dir das folgende Zusatzvideo an:
 
 [role="curriculum-mp4"]
 [[video11cpu]]
@@ -172,119 +172,119 @@ END OF OPTIONAL
 ////
 
 [[copyright]]
-=== Use Copyright Wisely
+=== Benutze Copyright weise
 
-*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
+*Copyright* ist der Teil des Gesetzes, der *geistiges Eigentum*, oder das Eigentum an kreativen Werken wie Musik abdeckt. Wenn du Samples (kleine Musikstücke) verwendest oder bereits vorhandene Musik remixt, musst du die Urheber nennen und kannst dies in den Kommentaren deines Codes tun. Bevor du Sounds von anderen Musikern verwendest und deine eigene Musik weitergibst, solltest du mehr über das Urheberrecht erfahren!
 
-When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
+Wenn du etwas Originelles und Wesentliches geschaffen hast, erhältst du automatisch ein Urheberrecht! In den USA bedeutet das, dass du Kopien anfertigen, Änderungen vornehmen und deine Werke weitergeben darfst.
 
-There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
+Bei einem Lied gibt es zwei Urheberrechte: die Rechte am Lied (vom Autor oder Komponisten) und die Rechte an der Tonaufnahme (oft von der Plattenfirma). Einnahmen aus öffentlichen Auftritten gehen an den Songwriter und die meisten Einnahmen aus Plattenverkäufen gehen an die Plattenfirma.
 
-*Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use disputes are determined by a judge on a case-by-case basis.
+*Urheberrechtsverletzung* ist eine Verletzung des Urheberrechts, wie zum Beispiel das illegale Herunterladen von Musik. In den Vereinigten Staaten erlaubt *fair use* die Verwendung von urheberrechtlich geschützten Inhalten unter bestimmten Bedingungen wie erzieherische oder kritische Zwecke, wobei nur geringe Mengen der Arbeit wiederverwendet werden. Streitigkeiten über eine gerechte Nutzung werden von einem Richter von Fall zu Fall entschieden.
 
-Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
+Neben der fairen Nutzung gibt es auch andere Möglichkeiten, Musik offen zu nutzen und zu teilen. EarSketch funktioniert, weil Künstlerinnen und Künstler ihre Arbeit in Form von *Samples* (also kleinen Teilen von Soundaufnahmen) in der Sound-Bibliothek mit dir geteilt haben.
 
-Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Copyright should help us make and share more art, not less. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
+Bei dem Urheberrecht geht es nicht nur darum, Menschen in Schwierigkeiten zu bringen. Wenn du einen Song ins Internet hochlädst, macht es dir vielleicht nichts aus, wenn jemand ihn ohne Fragen herunterlädt; du möchtest, dass Leute deine Musik teilen! Das Urheberrecht sollte uns helfen, mehr Kunst zu machen und zu teilen, nicht weniger. Wenn du Songs in EarSketch erstellst, möchten wir, dass du weniger an _Diebstahl_ und mehr an _Austausch_ denkst. EarSketch funktioniert, weil Künstler ihre Arbeit mit dir geteilt haben, was zu einer Bibliothek von Samples geführt hat, die du zum Erstellen neuer Musik verwendest. Wenn du deine Musik weitergibst oder anderen Mitschülern erlaubst, deinen Code zu remixen, trägst du damit dazu bei, dass neue Kunst in die Welt kommt.
 
-When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
+Wenn du Töne in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Töne zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
 
-For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^].
 
 [[chapter2summary]]
-=== Chapter 2 Summary
+=== Zusammenfassung von Kapitel 2
 
 [role="curriculum-python"]
-* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
-* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
-* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
-* `from earsketch import *` adds the EarSketch API to your project.
-* `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
-* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
-* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
-* *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
-* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
-* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it.
+* Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
+* Die Clips in der Sound-Bibliothek von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
+* `von earsketch import *` fügt die EarSketch-API zu deinem Projekt hinzu.
+* `setTempo()` lässt dich das Tempo deines Songs angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
+* Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
+* Ein *Prozess* ist ein Programm, das auf einem Computer läuft. Die Verarbeitung erfolgt durch die *CPU* eines Computers, die für die Ausführung von Programmanweisungen zuständig ist.
+* *Arbeitsspeicher* (a.k.a RAM oder Primärspeicher) enthält temporäre Daten und Verarbeitungsanweisungen, die die CPU verwenden kann.
+* *Sekundärspeicher* bezieht sich auf die langfristige Speicherung von Daten, oft in hohen Volumen. Daten aus dem Sekundärspeicher müssen in den Arbeitsspeicher übertragen werden, bevor die CPU auf sie zugreifen kann.
+* *Copyright* ist ein Teil des Gesetzes, der das Eigentum an kreativen Werken wie Musik abdeckt. Es ist wichtig für Musiker, weil es definiert, wie die Arbeit einer anderen Person verwendet und geteilt werden kann.
+* Wenn du ein musikalisches Werk erstellst, das greifbar und neu ist, hast du automatisch ein Urheberrecht. Mit anderen Worten: Du hast Rechte an dem Werk, das du geschaffen hast.
+* Die *Lizenzierung* eines Musikstücks gibt anderen die Erlaubnis, es zu verwenden.
 
 [role="curriculum-javascript"]
-* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
-* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
-* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
-* `setTempo();` lets you specify the tempo of your song. It must be included in every EarSketch script.
-* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
-* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
-* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
-* *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
-* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
-* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
-* *Licensing* a piece of music gives others permission to use it.
+* Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
+* Die Clips in der Sound-Bibliothek von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
+* `setTempo();` lässt dich das Tempo deines Liedes angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
+* Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
+* Ein *Prozess* ist ein Programm, das auf einem Computer läuft. Die Verarbeitung erfolgt durch die *CPU* eines Computers, die für die Ausführung von Programmanweisungen zuständig ist.
+* *Arbeitsspeicher* (a.k.a RAM oder Primärspeicher) enthält temporäre Daten und Verarbeitungsanweisungen, die die CPU verwenden kann.
+* *Sekundärspeicher* bezieht sich auf die langfristige Speicherung von Daten, oft in hohen Volumen. Daten aus dem Sekundärspeicher müssen in den Arbeitsspeicher übertragen werden, bevor die CPU auf sie zugreifen kann.
+* *Copyright* ist ein Teil des Gesetzes, der das Eigentum an kreativen Werken wie Musik abdeckt. Es ist wichtig für Musiker, weil es definiert, wie die Arbeit einer anderen Person verwendet und geteilt werden kann.
+* Wenn du ein musikalisches Werk erstellst, das greifbar und neu ist, hast du automatisch ein Urheberrecht. Mit anderen Worten: Du hast Rechte an dem Werk, das du geschaffen hast.
+* Die *Lizenzierung* eines Musikstücks gibt anderen die Erlaubnis, es zu verwenden.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-What does `setTempo()` allow you to do in EarSketch?
+Was kannst du mit `setTempo()` in EarSketch tun?
 
 [answers]
-* Specify the tempo of a song
-* Add a sound to a track
-* Create a drum beat
-* Change the qualities of sound within a project
---
-
-[question]
---
-What is the unit for tempo?
-
-[answers]
-* Beats Per Minute (BPM)
-* Measures
-* Decibels(dB)
-* Seconds
+* Das Tempo eines Songs festlegen
+* Einen Sound zu einem Track hinzufügen
+* Einen Drum-Beat erstellen
+* Die Soundeigenschaften in einem Projekt ändern
 --
 
 [question]
 --
-What can you use comments for?
+Was ist die Maßeinheit für das Tempo?
 
 [answers]
-* All of the above
-* Organizing your code
-* Writing a description of your script at the beginning of your script
-* Making your code easy to read for other programmers
+* Beats per Minute (BPM)
+* Takte
+* Dezibel (dB)
+* Sekunden
 --
 
 [question]
 --
-Which of the following statements is true?
+Wofür kannst du Kommentare verwenden?
 
 [answers]
-* A hard drive is an example of secondary storage
-* Audio data is saved to a computer’s CPU
-* The CPU holds instructional data for programs
-* Secondary storage stores data for short periods of time
+* Alles oben Genannte
+* Deinen Code organisieren
+* Eine Beschreibung deines Skripts am Anfang deines Skripts schreiben
+* Den Code für andere Programmierer leicht lesbar machen
 --
 
 [question]
 --
-How do you get a copyright?
+Welche der folgenden Aussagen ist richtig?
 
 [answers]
-* By creating and publishing any new work
-* By buying a patent
-* By joining a secret organization
-* By choosing a license for your work
+* Eine Festplatte ist ein Beispiel für einen Sekundärspeicher
+* Audiodaten werden in der CPU eines Computers gespeichert
+* Die CPU speichert Anweisungsdaten für Programme
+* Der Sekundärspeicher speichert Daten für kurze Zeiträume
 --
 
 [question]
 --
-What is a music license?
+Wie erhältst du ein Urheberrecht?
 
 [answers]
-* A license gives others permission to use a musical work
-* A composing process
-* A musical genre
-* A description of your song
+* Indem man ein neues Werk schafft und veröffentlicht
+* Indem du ein Patent erwirbst
+* Indem du einer Geheimorganisation beitrittst
+* Indem du eine Lizenz für dein Werk auswählst
+--
+
+[question]
+--
+Was ist eine Musiklizenz?
+
+[answers]
+* Eine Lizenz gibt anderen die Erlaubnis, ein musikalisches Werk zu verwenden
+* Ein Kompositionsprozess
+* Ein Musikgenre
+* Eine Beschreibung deines Songs
 --
