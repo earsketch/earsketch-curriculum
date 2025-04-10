@@ -1,15 +1,15 @@
-# analyzeTrack(): Using the analyzeTrack() function to print the loudness of a track
+# analyzeTrack(): Verwenden der analyzeTrack() Funktion um die Lautstärke einer Spur auszugeben
 
 # Setup
-from earsketch import *
+von EarSketch Import *
 setTempo(120)
 
-# Placing a sound on track 1
+# Einen Sound auf Track 1 platzieren
 sound = COMMON_LOVE_VOX_COMMON_1
 fitMedia(sound, 1, 1, 9)
 
-# Creating a variable to store the loudness of track 1
+# Erstellen einer Variable, um die Lautstärke von Track 1 zu speichern
 loudness1 = analyzeTrack(1, RMS_AMPLITUDE)
 
-# Showing the loudness in the console
+# Die Lautstärke in der Konsole anzeigen
 print(loudness1)
