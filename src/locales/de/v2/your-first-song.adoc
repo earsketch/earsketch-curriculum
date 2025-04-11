@@ -1,45 +1,45 @@
 [[customizeyourfirstsong]]
-== Customize your first song
+== Gestalte deinen ersten Song
 
 :nofooter:
 
-In this chapter you will learn how to change the tempo of your song, add comments to your code, and upload your own sounds to enhance the message of your song.
+In diesem Kapitel erfährst du, wie du das Tempo deines Songs änderst, Kommentare zu deinem Code hinzufügst und deine eigenen Sounds hochlädst, um die Botschaft deines Songs zu verstärken.
 
 [[settempo]]
-=== The `setTempo()` function
+=== Die `setTempo()` Funktion
 
 [role="curriculum-python"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits existierende Elemente für dich hinzugefügt werden:
 
-. Some comments starting with `#`: we'll cover that in next section
-. the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project
-. the `setTempo(120)` function, which we will see in detail below
+. Einige Kommentare, die mit `#` beginnen: Dies wird im nächsten Abschnitt behandelt
+. Die Zeile „von earsketch import*“, mit der die EarSketch-Funktionen (wie „fitMedia()“) zum Projekt hinzugefügt werden
+. Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
 --
 
 [role="curriculum-javascript"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits existierende Elemente für dich hinzugefügt werden:
 
-. Some comments starting with `//`: we'll cover that in next section
-. the `setTempo(120)` function, which we will see in detail below
+. Einige Kommentare, die mit `//` beginnen: Dies wird im nächsten Abschnitt behandelt
+. Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
 --
 
-The `setTempo()` function will determine the speed of your song. The *tempo* is a number of beats per minute (bpm) in Western music. In EarSketch, the default tempo (i.e. the initial value of the tempo) is set to 120bpm, which corresponds to a fast walk or march speed. To change the tempo, just change the number between the parentheses of the `setTempo()` function. The higher the tempo, the faster your music. You can select a tempo between _45bpm and 220bpm_.
+Die `setTempo()` Funktion bestimmt die Geschwindigkeit deines Songs. Das *tempo* ist eine Anzahl von Beats pro Minute (bpm) in westlicher Musik. In EarSketch ist das Standardtempo (d. h. der Ausgangswert des Tempos) auf 120 bpm eingestellt, was einer schnelleren Schrittgeschwindigkeit entspricht. Um das Tempo zu ändern, ändern Sie einfach die Zahl zwischen den Klammern der `setTempo()` Funktion. Je höher das Tempo, desto schneller ist deine Musik. Du kannst ein Tempo zwischen _45 und 220 bpm_ wählen.
 
-.PRACTICE
+.ÜBUNG
 ****
-. Create a new script.
-. Place sounds on two different tracks.
-. Modify your tempo and listen to the song.
-. Play your song at three different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
+. Erstelle ein neues Skript.
+. Platziere Sounds auf 2 verschiedenen Tracks
+. Ändere dein Tempo und höre dir den Song an.
+. Spiele einer Freundin oder einem Freund dein Lied in 3 verschiedenen Tempos vor. Bitte sie oder ihn dann, eine Rangfolge vom langsamsten zum schnellsten Tempo zu erstellen.
 ****
 
-A genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Different genres have different tempo ranges. For instance:
+Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Verschiedene Genres haben unterschiedliche Tempobereiche. Zum Beispiel:
 
 [cols="^3*"]
 |===
-|GENRE |BPM |EXAMPLE
+|GENRE |BPM |BEISPIEL
 
 |Pop
 |110-130
@@ -72,37 +72,37 @@ A genre is a category of artistic composition (e.g. music), characterized by sim
 "Turn Down for What" - Lil Jon
 |===
 
-.PRACTICE
+.ÜBUNG
 ****
-. Select one artist you really like and find out what genre they belong to.
-. Search that genre (on https://soundcloud.com/[Soundcloud] or something similar) and listen to a few snippets of songs in that genre.
-. Listen for similarities between the songs.
-. You can also research the genre on Wikipedia to get more information about it.
+. Wähle eine/-n Künstler/-in, den/die du wirklich magst, und finde heraus, welchem Genre er/sie angehört.
+. Suche nach diesem Genre (auf https://soundcloud.com/[Soundcloud] oder etwas Ähnlichem) und höre dir ein paar Ausschnitte von Songs in diesem Genre an.
+. Achte auf Ähnlichkeiten zwischen den Songs.
+. Du kannst auch auf Wikipedia recherchieren, um mehr Informationen über das Genre zu erhalten.
 ****
 
-Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+Die Sounds werden automatisch gestreckt und so an das Tempo deines Songs angepasst. Aus diesem Grund erscheinen im Sound-Browser angezeigte Sounds manchmal anders als in deinem Song. Die Wirkung kann extrem sein, wenn die Tempos sehr unterschiedlich sind.
 
-To find the original tempo of sound, hover over the sound constant Sound Browser.
+Um das originale Tempo des Sounds zu finden, fahre mit der Maus über die Soundkonstante Sound-Browser.
 
 [[comments]]
-=== Adding comments to your code
+=== Kommentare zu deinem Code hinzufügen
 
-*Comments* are lines of code ignored by the computer. People use comments to make notes within the code.
+*Kommentare* sind Codezeilen, die vom Computer nicht ausgeführt werden. Die Leute verwenden Kommentare, um Notizen innerhalb des Codes zu machen.
 
-EarSketch scripts begin with comments that you can use to enter a description of your song. These details make it easier for other programmers to understand what your code is about.
+EarSketch-Skripte beginnen mit Kommentaren, in die du eine Beschreibung deines Songs eingeben kannst. Das macht es für andere Programmierer einfacher, deinen Code zu verstehen.
 
 [role="curriculum-python"]
-In Python, comments are indicated by a line starting with a pound `#` symbol.
+In Python werden Kommentare durch eine Zeile gekennzeichnet, die mit einem Doppelkreuz-Symbol `#` beginnt.
 
 [role="curriculum-javascript"]
-In JavaScript, comments are indicated by a line starting with two forward slashes, `//`.
+In JavaScript werden Kommentare durch eine Zeile gekennzeichnet, die mit zwei Schrägstrichen `//` beginnt.
 
-.PRACTICE
+.ÜBUNG
 ****
-In your current script, write a comment with a description of your song on the first line.
+Schreibe in dein aktuelles Skript einen Kommentar mit einer Beschreibung deines Songs in die erste Zeile.
 ****
 
-You can also use comments to describe what different sections of your code do. Here is an example below. You can paste and run the code. Note how the comments describe the different sections:
+Du kannst auch Kommentare verwenden, um zu beschreiben, was die verschiedenen Abschnitte deines Codes tun. Hier ein Beispiel: Du kannst den Code einfügen und ausführen. Beachte, wie die Kommentare die verschiedenen Abschnitte beschreiben:
 
 [role="curriculum-python"]
 [source,python]
@@ -135,7 +135,7 @@ Lass uns die ersten drei Optionen erkunden.
 [[video101rec]]
 video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
-.PRACTICE
+.ÜBUNG
 ****
 Musik und Kunst im Allgemeinen sind oft eine Möglichkeit, eine Botschaft zu vermitteln. Das kann entweder durch den Text und/oder durch die Stimmung des Liedes geschehen. Wir möchten, dass du einen kurzen Song schreibst, der etwas ausdrückt. Das kann ein Gefühl sein, das du gerne teilen möchtest, oder eine Geschichte.
 
