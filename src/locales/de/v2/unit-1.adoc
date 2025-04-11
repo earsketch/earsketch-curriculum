@@ -3,11 +3,11 @@
 
 :nofooter:
 
-In this unit you will learn how EarSketch works, you will place sounds (clips) into your music, debug your code, customize your song, and add beats based on your musical genre.
+In dieser Einheit lernst du, wie EarSketch funktioniert, du platzierst Sounds (Clips) in deine Musik, debuggst deinen Code, passt deinen Song an und fügst Beats für dein Musikgenre hinzu.
 
-Anyone (especially you) can learn to program! Like learning a musical instrument, it takes consistent practice to make progress. Don't get discouraged if you get stuck, this is part of the process. Ask for help in your class or look online if needed.
+Jeder kann programmieren lernen (vor allem du)! Wie beim Lernen von Musikinstrumenten bedarf es ständiger Übung, um Fortschritte zu erzielen. Lass dich nicht entmutigen, wenn du nicht weiterkommst, das gehört dazu. Frage in deiner Klasse nach Hilfe oder schaue im Internet nach, falls nötig.
 
-We wish you the best of luck, and before you start here's an example of what you can do with EarSketch:
+Wir wünschen dir viel Glück, und bevor du anfängst, ist hier ein Beispiel dafür, was du mit EarSketch machen kannst:
 
 [role="curriculum-python curriculum-mp4"]
 [[video1livepy]]
