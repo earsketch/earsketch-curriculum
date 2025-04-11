@@ -1,26 +1,26 @@
 [[welcome]]
-== Welcome Students and Teachers!
+== Willkommen Schüler und Lehrer!
 
 :nofooter:
 
-Welcome to EarSketch!
+Willkommen bei EarSketch!
 
-*Teachers*: View our https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[new curriculum guide^], and visit our https://www.teachers.earsketch.org[EarSketch Teacher Site^] for additional resources.
+*Lehrer*: Schau dir unsere https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[new curriculum guide^] an und besuche unsere https://www.teachers.earsketch.org[EarSketch Teacher Site^] für zusätzliche Ressourcen.
 
-*Students*: Continue below to learn more about EarSketch
+*Schüler*: Weiter unten erfährst du mehr über EarSketch
 
-Here you will learn computer science and music technology side by side. You will use either Python or JavaScript to create your own music.
+Hier lernst du Informatik und Musikproduktion Seite an Seite. Du wirst entweder Python oder JavaScript benutzen, um deine eigene Musik zu erschaffen.
 
-Musicians and programmers write computer code to create new sounds, effects, and songs.
+Musiker und Programmierer schreiben Computercode, um neue Sounds, Effekte und Songs zu erstellen.
 
 [role="curriculum-mp4"]
 [[video0]]
 video::../landing/media/homepagevid.a1cf3d01.mp4[poster=../landing/img/homepagevid-poster.8993a985.png]
 
-Learning to write computer code is a skill that will be useful to you in a variety of career paths.
+Das Schreiben von Code ist eine Fähigkeit, die dir in einer Vielzahl von Karriere-Pfaden nützlich sein wird.
 
-Maybe you'll become a legendary music producer or the industry's most sought-after recording engineer! We wish you good luck on your EarSketch journey.
+Vielleicht wirst du ein legendärer Musikproduzent oder der begehrteste Aufnahmetechniker der Branche! Wir wünschen dir viel Glück auf deiner EarSketch-Reise.
 
-Click on the right arrow at the top of this text to get started.
+Klicke auf den rechten Pfeil oben in diesem Text, um loszulegen.
 
-Teachers, get access to free teacher materials and community https://www.teachers.earsketch.org/[here^]!
+Lehrer, erhaltet Zugang zu kostenlosen Lehrermaterialien und der Community https://www.teachers.earsketch.org/[hier^]!
