@@ -1,6 +1,6 @@
 [[reference]]
-== Effects, Errors, and EarSketch Functions
+== Effekte, Fehler und EarSketch-Funktionen
 
 :nofooter:
 
-In this unit you will find references to all effects, errors and EarSketch API functions.
+In dieser Einheit findest du Hinweise auf alle Effekte, Fehler und EarSketch-API-Funktionen.
