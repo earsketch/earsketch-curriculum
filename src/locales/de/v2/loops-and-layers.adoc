@@ -243,9 +243,9 @@ Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und
 [role="curriculum-python"]
 .. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
 .. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
-.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Insert `print()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
-. *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
+.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `print()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
+. *Squash den Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
 
 [role="curriculum-javascript"]
 . *Lies die Konsole für Hinweise*.
@@ -253,11 +253,11 @@ Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und
 [role="curriculum-javascript"]
 .. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
 .. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
-.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
-. *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
+.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `printIn()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
+. *Squash den Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
 
-Below, we walk through an example of printing variables to help debug a script:
+Im Folgenden wird ein Beispiel für die Ausgabe von Variablen zur Fehlersuche in einem Skript erläutert:
 
 [role="curriculum-python curriculum-mp4"]
 [[video15py]]
@@ -267,49 +267,49 @@ video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
 [[video15js]]
 video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
 
-You've seen a list of potential errors in Chapter 1. Here are some other errors that you might encounter:
+Du hast eine Liste möglicher Fehler in Kapitel 1 gesehen. Hier sind einige weitere Fehler, die auftreten können:
 
 [role="curriculum-python"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign a value to your variable before using it later.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python comments must start with a `#` symbol.
-. *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
+. *Initialisieren von Variablen*: Eine Variable muss initialisiert werden, bevor sie in einem Skript verwendet werden kann. Dies bedeutet, dass du der Variable einen Wert zuweisen solltest, bevor du ihn später verwendest.
+. *Kommentare:* Eine unsachgemäße Kommentierung führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python-Kommentare müssen mit einem `#` Symbol beginnen.
+. *Einrückung:* Die Einrückung ist in Python entscheidend. Fehlende Einrückung in `for` loop bodies wird eine <</en/v1/every-error-explained-in-detail#indentationerror,indentation error> > verursachen.
+. *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
+. *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
 
 [role="curriculum-javascript"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should create it with `var` before using it later.
-. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript comments must start with `//`.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
+. *Initialisieren von Variablen*: Eine Variable muss initialisiert werden, bevor sie in einem Skript verwendet werden kann. Dies bedeutet, dass du es mit `var` erstellen solltest, bevor du es später verwendest.
+. *Semikolons in der Definition eines for-loops*: Semikolons müssen verwendet werden, um die drei Teile (Initialisierung, Bedingung und Iterationsanweisung) einer for- Loop-Definition zu trennen.
+. *Kommentare:* Eine unsachgemäße Kommentierung führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript-Kommentare müssen mit `//` beginnen.
+. *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
+. *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
 
-Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
+Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine vollständige Beschreibung der verschiedenen Fehlertypen und was du tun kannst, um sie zu vermeiden.
 
 [[musicaltips]]
-=== Musical tips
+=== Musikalische Tipps
 
-Now that you have many tools to create your music, like `fitMedia()`, `makeBeat()` and `for` loops, we will look at musical ideas.
+Jetzt, wo du viele Werkzeuge zum Erstellen deiner Musik, wie `fitMedia()`, `makeBeat()` und `for`-Schleifen hast, werden wir uns musikalische Ideen ansehen.
 
-Let's start with the *key* of your song:
+Beginnen wir mit der *Tonart* deines Songs:
 
-* *Pitch* is how high or low a note sounds. We order relative musical tones on a *scale*, or set of musical notes, based on how we hear the frequency of the sound.
-* The *key* of a song indicates the scale, or group of pitches, in which the music is composed. Keys can be major (usually sounds "happier") or minor (usually sounds "darker").
-* For beginner composers, we recommend that you have just one key for your song. Selecting sounds from different keys might sound... off-key! In general, sounds within the same folder in the EarSketch sound library are all in the same key.
+* *Pitch* ist, wie hoch oder niedrig ein Ton klingt. Wir ordnen relative musikalische Töne auf einer *Skala* oder einer Reihe von Musiknoten, basierend darauf, wie wir die Frequenz des Tons hören.
+* Die *Tonart* eines Liedes bezeichnet die Tonleiter oder die Gruppe von Tonhöhen, in der die Musik komponiert ist. Tonarten können Dur (klingt normalerweise „fröhlicher“) oder Moll (klingt normalerweise „dunkler“) sein.
+* Anfängern empfehlen wir, nur eine Tonart für ihr Lied zu verwenden. Das Auswählen von Tönen aus verschiedenen Tonarten kann sich... ziemlich schief anhören! In der Regel sind alle Sounds innerhalb desselben Ordners in der EarSketch-Soundbibliothek in derselben Tonart.
 
-Listen to the audio clip below to hear the difference between major and minor keys (the major scale and chord is first):
+Hör dir den Audioclip unten an, um den Unterschied zwischen Dur und Moll zu verstehen (die Dur-Tonleiter und der Dur-Akkord stehen an erster Stelle):
 
 ++++
 <div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
 ++++
 
-Now let's talk about the different types of tracks you can have. You might remember that you can use one track of your DAW for each type of instrument. In a pop song, you can find the following basic tracks:
+Lass uns nun über die verschiedenen Arten von Tracks, die du haben kannst, sprechen. Du erinnerst dich vielleicht daran, dass du für jede Art von Instrument einen Track in deiner DAW verwenden kannst. In einem Pop Song findest du die folgenden Basistracks:
 
-* *Melody* is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar, etc.
-* *Harmony* is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
-* You also have a *bass line*. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
-* Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
+* Die *Melodie* ist der Hauptgedanke, der oft in höheren Tonlagen liegt, oder „die Noten, die der Lead singt“. Das kann eine Stimme sein, höhere Töne eines Keyboards, eine Gitarre usw.
+* *Harmony* sind die längeren Töne, die „die Melodie unterstützen“, wie die Akkorde eines Klaviers, einer Gitarre oder einer Ansammlung von Saiten.
+* Du hast auch eine *Bass-Linie*. Dies sind niedrigere Töne. Das kann ein Bass, ein Cello, die tiefen Töne eines Keyboards usw. sein.
+* Dann gibt es *Percussion*. Wenn du `makeBeat()` verwendest, kann das mehrere Spuren benötigen. Du kannst zum Beispiel eine Spur für deine Kick, eine für deine Snare und eine für deine Hi-Hat haben.
 
-These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
+Dies sind grundlegende Ideen, die die Struktur deines Songs bilden. Du kannst jedoch einige Teile deines Songs haben, die nur eine oder zwei der vier enthalten. Du kannst auch viele weitere Spuren hinzufügen: Du kannst eine zweite Melodie erstellen oder Drones (sehr lange Noten im Hintergrund), aufgenommene Geräusche, Whooshes usw. hinzufügen. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
 
 Lass uns abschließend noch auf *Wiederholung* und *Kontrast* eingehen. Menschen genießen Wiederholung aufgrund dessen, was Psychologen den _mere exposure effect_ nennen. Wenn wir einen sich wiederholenden Abschnitt einer Musik hören, versucht unser Gehirn, sich die nächste Note vorzustellen, bevor sie gespielt wird und das gibt uns das Gefühl, daran beteiligt zu sein. Ebenso kann der Hörer bei jeder Wiederholung eines Musikabschnitts andere Details des Stücks wahrnehmen, da sich das Gehirn nicht mehr auf die Verarbeitung des rohen melodischen Inhalts konzentrieren muss.
 
