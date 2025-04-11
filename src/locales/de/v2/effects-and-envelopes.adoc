@@ -225,7 +225,7 @@ include::code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
 include::code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
 ----
 
-And here is an example of fade in and fade out on all the tracks:
+Und hier ist ein Beispiel für Ein- und Ausblenden auf allen Tracks:
 
 [role="curriculum-python"]
 [source,python]
@@ -242,48 +242,48 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 {nbsp} +
 
 [[chapter5summary]]
-=== Chapter 5 Summary
+=== Zusammenfassung von Kapitel 5
 
-* *Effects* change the qualities of a sound to make them unique.
-* *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
-* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(track, type, parameter, value)`.
+* *Effekte* ändern die Eigenschaften eines Sounds, um sie einzigartig zu machen.
+* Das *Volume* bezieht sich auf die Lautstärke. *Verzögerung* erzeugt ein Echo. *Reverb* fühlt sich an, als würde der Ton in einem großen Raum gespielt. *Panning* platziert deine Musik auf der linken oder rechten Seite.
+* Effekte werden in EarSketch mit der Funktion `setEffect()` eingefügt. Seine Syntax ist `setEffect(track, type, parameter, value)`.
 . *track*: Tracknummer oder `MIX_TRACK`
 . *type*: Effektkonstante, wie `DELAY`
 . *Parameter*: Parameterkonstante, wie `DELAY_TIME`
 . *value*: Parameterwert wie `200`. Dieser Wert muss innerhalb des Effektbereichs liegen.
-* *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
-* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
-* *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
-* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
+* *Funktionen* enthalten Anweisungen zum Ausführen des Rechners. Daten werden durch *Argumente* an Funktionen gesendet, was die Ausführung der Funktion beeinflusst. Die Syntax eines *Funktions Calls* mit zwei Argumenten lautet „myFunction(argument1, argument2)“. Ein Beispiel für eine Syntax, die in einem Funktionsaufruf mit 4 Argumenten verwendet wird, ist `makeBeat(kick, 2, measure, kickBeat)`.
+* Eine vollständige Liste der EarSketch-Effekte und deren Parameter finden Sie in <</en/v1/every-effect-explained-in-detail#,effects>>, zusammen mit Beschreibungen für jeden.
+* *Umschläge* definieren, wie sich ein Effektparameter im Laufe der Zeit ändert. Sie werden mit Wertzeitpaaren wie _(Wert, Zeit, Wert, Zeit)_beschrieben.
+* Für einen Umschlag lauten die 7-Parameter-Argumente `setEffect()`: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-What does an effect allow you to do in EarSketch?
+Was kann man mit einem Effekt in EarSketch machen?
 
 [answers]
-* Change the qualities of sound within a project
-* Add a sound to a track
-* Create a drum beat
-* Change the tempo of a song
+* Die Soundeigenschaften in einem Projekt ändern
+* Einen Sound zu einem Track hinzufügen
+* Einen Drum-Beat erstellen
+* Das Tempo eines Songs ändern
 --
 
 [question]
 --
-Which of these is NOT a `setEffect()` argument?
+Welches der Folgenden ist KEIN `setEffect()` Argument?
 
 [answers]
-* Clip Name
-* Effect Name
-* Effect Value
-* Track Number
+* Clip-Name
+* Effektname
+* Effektwert
+* Tracknummer
 --
 
 [question]
 --
-How would you set the delay time of a delay effect on track 3 to 50 milliseconds?
+Wie kann man die Verzögerungszeit eines Verzögerungseffekts auf Track 3 auf 50 Millisekunden einstellen?
 
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
@@ -294,18 +294,18 @@ How would you set the delay time of a delay effect on track 3 to 50 milliseconds
 
 [question]
 --
-Which of the following is not a parameter used with `setEffect()` envelopes?
+Welcher der folgenden Parameter ist kein Parameter mit `setEffect()` Umschlägen?
 
 [answers]
-* Clip Length
-* Start Value
-* Track Number
-* Effect
+* Clip-Länge
+* Startwert
+* Tracknummer
+* Effekt
 --
 
 [question]
 --
-What would the following `setEffect()` function do?
+Was würde die folgende `setEffect()` Funktion tun?
 
 [source,python]
 ----
@@ -313,8 +313,8 @@ setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
 ----
 
 [answers]
-* Increase the amount of distortion on track 1 over 10 measures.
-* Decrease the amount of distortion on track 1 over 50 measures.
-* Increase the volume of track 1 over 10 measures.
-* Decrease the volume on track 1 over 50 measures.
+* Erhöht den Grad der Verzerrung auf Track 1 über 10 Takte.
+* Reduziert die Verzerrungsmenge auf Track 1 über 50 Takte.
+* Erhöht die Lautstärke von Track 1 über 10 Takte.
+* Reduziert die Lautstärke auf Track 1 über 50 Takte.
 --
