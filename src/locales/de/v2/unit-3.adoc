@@ -1,8 +1,8 @@
 [[unit3]]
-== Unit 3: Structure your Songs
+== Einheit 3: Strukturiere deine Songs
 
 :nofooter:
 
-Now that you have many tools to create your song, add effects and mix your tracks, we will be looking at the song's structure. We'll be using custom functions for that: these are functions that you will create yourself!
+Jetzt, wo du viele Werkzeuge zum Erstellen deines Songs, zum Hinzufügen von Effekten und zum Abmischen deiner Tracks hast, werden wir uns die Struktur des Songs ansehen. Dafür verwenden wir benutzerdefinierte Funktionen: Dies sind Funktionen, die du selbst erstellst!
 
-We will also look at user inputs and how they can be embedded in your code to create personalize songs. Finally, we'll see how you can use data structures to simplify your code.
+Wir werden uns auch die Benutzereingaben ansehen und wie sie in Ihren Code eingebettet werden können, um persönliche Songs zu erstellen. Schließlich werden wir sehen, wie du Datenstrukturen verwenden kannst, um deinen Code zu vereinfachen.
