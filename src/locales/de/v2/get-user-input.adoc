@@ -1,14 +1,14 @@
 [[getuserinput]]
-== Get User Input
+== Benutzereingabe erhalten
 
 :nofooter:
 
-In this chapter, you will learn how to ask for input from users and adapt your music accordingly. For that, we'll look at return statements and the `readInput()` function.
+In diesem Kapitel lernst du, wie du die Nutzer um ihre Meinung bitten und deine Musik entsprechend anpassen kannst. Dafür werden wir uns die Return-Statements und die `readInput()` Funktion ansehen.
 
 [[returnstatement]]
 === Return Statement
 
-Watch this video first:
+Sieh dir zuerst dieses Video an:
 
 [role="curriculum-python curriculum-mp4"]
 [[video131py]]
@@ -18,12 +18,12 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-* In addition to taking inputs (parameters), functions can output a value. In programming, we call this returning a value.
-* The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
-* To use the value that is returned by the function, create a variable and assign it the function call.
-* A return statement is not compulsory. Without a return statement a function does not output a value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
+* Funktionen können nicht nur Eingaben (Parameter) entgegennehmen, sondern auch einen Wert ausgeben. In der Programmierung nennt man dies die Rückgabe eines Wertes.
+* Das *Return-Statement* ist eine Anweisung innerhalb des Funktion Bodys, dass: A. einer Funktion sagt, dass sie einen Wert zurückgeben soll, wenn sie aufgerufen wird. B. der Funktion signalisiert, dass sie aufhören soll. Wenn du irgendwelche Anweisungen nach dem »Return«-Schlüsselwort hast, werden diese ignoriert.
+* Um den von der Funktion zurückgegebenen Wert zu verwenden, erstelle eine Variable und teile ihr den Function Call zu.
+* Ein return statement ist nicht zwingend erforderlich. Ohne return statement gibt eine Funktion keinen Wert aus. `fitMedia()` und `setEffect()` sind Beispiele für Funktionen, die nichts zurückgeben.
 
-Here is a code example:
+Hier ist ein Code-Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -37,26 +37,26 @@ include::code-examples/get-user-input-return-statements.py.txt[]
 include::code-examples/get-user-input-return-statements.js.txt[]
 ----
 
-With the return statement, the complete control flow for a function looks like this:
+Mit dem return statement sieht der komplette Kontroll-Flow für eine Funktion folgendermaßen aus:
 
 [[return]]
-.Return statement control flow
+.Return statement Kontroll-Flow
 [caption="Figure 8.1.1: "]
 image::../media/U2/Return.png[Alt Text]
 
-.PRACTICE
+.ÜBUNG
 ****
-Create a function that will implement a musical section with:
+Erstelle eine Funktion, die einen musikalischen Abschnitt implementieren wird mit:
 
-* Only one parameter, called `start`, which represents the start measure.
-* One `return` statement that returns the end measure.
-* A body function with `fitMedia()` functions.
+* Nur einem Parameter, der `start` genannt wird und den Anfangstakt darstellt.
+* Einer `return` Anweisung, die den Endtakt zurückgibt.
+* Einer Body Funktion mit `fitMedia()` Funktionen.
 
-Your section can last as many measures as you like.
-Then call the function, and print the end measure.
+Dein Abschnitt kann so viele Takte umfassen, wie du willst.
+Dann die Funktion aufrufen und den Endtakt ausgeben.
 ****
 
-Here is an example:
+Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -72,18 +72,18 @@ include::code-examples/get-user-input-return-statements-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.ÜBUNG
 ****
-Let's say you have a section A, but you want it to vary slightly when it's called at different moments of the song. You will create a function called `sectionA()` with two `fitMedia()` calls.
+Nehmen wir an, du hast einen Abschnitt A, aber du möchtest, dass er sich leicht verändert, wenn er an verschiedenen Stellen des Liedes aufgerufen wird. Du wirst eine Funktion namens `sectionA()` mit zwei `fitMedia()` Calls erstellen.
 
-The function should take two parameters: `start` and a boolean parameter `variation` that will allow the user to choose a variation when calling the function.
+Die Funktion sollte zwei Parameter beinhalten: `start` und einen booleschen Parameter `variation`, der es dem Benutzer erlaubt, beim Aufruf der Funktion eine Variation auszuwählen.
 
-In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound used in one of your `fitMedia()` calls.
+Im Funktionskörper sollte eine bedingte Anweisung vorhanden sein, die den Parameter auswertet. Je nach dem Wert des Parameters ändert sich der Sound, der in einem der Aufrufe von `fitMedia()` verwendet wird.
 
-Then call the function at different measures with different variations.
+Rufe dann die Funktion in verschiedenen Takten mit verschiedenen Variationen auf.
 ****
 
-Here is an example:
+Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -100,11 +100,11 @@ include::code-examples/get-user-input-conditional-statement.js.txt[]
 {nbsp} +
 
 [[userinput]]
-=== Get User Input
+=== Benutzereingabe erhalten
 
-We'll see how to ask for user input when the "run" button is pressed. This is possible thanks to the `readInput()` function. This function takes as a parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. The `readInput()` function returns what the user types there.
+Wir werden sehen, wie man nach Benutzereingabe fragt, wenn die "Ausführen"-Taste gedrückt wird. Dies ist möglich dank der `readInput()` Funktion. Diese Funktion benutzt als Parameter einen String (wie "Welches Tempo möchtest du für deine Musik verwenden?"). Wenn der Benutzer den Code ausführt, wird er ein neues Fenster mit dem String sehen und aufgefordert, eine Antwort zu schreiben. Die Funktion `readInput()` gibt zurück, was der Benutzer dort eingibt.
 
-For example, copy the following code in a new script, and run it:
+Kopiere zum Beispiel den folgenden Code in ein neues Skript und führe ihn aus:
 
 [role="curriculum-python"]
 [source,python]
@@ -118,18 +118,18 @@ include::code-examples/get-user-input-untitled1.py.txt[]
 include::code-examples/get-user-input-untitled1.js.txt[]
 ----
 
-We might need to convert the returned user input into a different data type. Here are useful functions:
+Möglicherweise müssen wir die zurückgegebene Benutzereingabe in einen anderen Datentyp umwandeln. Hier sind nützliche Funktionen:
 
 [role="curriculum-python"]
-* `str()` - converts any value into a string.
-* `int()` - converts a string containing digits into an integer (for example: `"3"` becomes `3`).
-* `float()` - convert a string containing digits with a decimal point into a float (for example: `"3.5"` becomes `3.5`).
+* `str()` - konvertiert jeden Wert in einen String.
+* `int()` - konvertiert einen String mit Ziffern in eine ganze Zahl (z.B. `"3"` wird `3`).
+* `float()` - wandelt einen String mit Ziffern mit einem Dezimalpunkt in einen Float um (Beispiel: `"3.5"` wird `3.5`).
 
 [role="curriculum-javascript"]
-* `String()` - converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.
-* `Number()` - converts a string into a number (for example: `"3.5"` becomes `3.5`).
+* `String()` - konvertiert jeden Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.
+* `Number()` - konvertiert einen String in eine Zahl (z. B.: `"3.5"` wird `3.5`).
 
-In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer.
+Im folgenden Beispiel wird die Konsoleneingabe verwendet, um das Tempo des Liedes zu bestimmen. Wir stellen sicher, dass Benutzereingaben in eine Ganzzahl konvertiert werden.
 
 [role="curriculum-python"]
 [source,python]
@@ -143,9 +143,9 @@ include::code-examples/get-user-input-user-input-1.py.txt[]
 include::code-examples/get-user-input-user-input-1.js.txt[]
 ----
 
-Here is another example of what you can do with user input.
+Hier ist ein weiteres Beispiel dafür, was du mit der Benutzereingabe tun kannst.
 
-*Concatenation* is a means to link strings together, using the `+` symbol.  For example, concatenating the strings `"Hello"` and `"World"` yields `"HelloWorld"`. In the following example, the user is prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name like `DUBSTEP_BASS_WOBBLE_010`.
+*Zusammensetzung* ist ein Mittel, um Zeichenketten mit dem `+` Symbol miteinander zu verknüpfen.  Zum Beispiel gibt die Verkettung der Zeichenketten `"Hello"` und `"World"` `"HelloWorld`. Im folgenden Beispiel wird der Benutzer aufgefordert, eine Clip-Nummer anzugeben. Die Nummer wird mit `DUBSTEP_BASS_WOBBLE_0` verbunden, um einen kompletten Clip-Namen wie `DUBSTEP_BASS_WOBBLE_010` zu bilden.
 
 [role="curriculum-python"]
 [source,python]
@@ -161,46 +161,46 @@ include::code-examples/get-user-input-user-input-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.ÜBUNG
 ****
-Ask for a user input to modify something in your song.
+Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 
-Here are ideas of tools you can use:
+Hier sind Ideen von Tools, die du verwenden kannst:
 
-. string concatenation,
-. data conversion,
-. creating a specific parameter in a custom function
+. string Verkettung,
+. Datenkonvertierung,
+. Erstellung eines bestimmten Parameters in einer benutzerdefinierten Funktion
 ****
 
 {nbsp} +
 
 [[booleanlogic]]
-=== Boolean Logic
+=== Boolesche Logik
 
-We will now combine boolean logic and user input for another example of user interaction.
+Wir kombinieren nun boolesche Logik und Benutzereingabe für ein weiteres Beispiel der Benutzerinteraktion.
 
 [role="curriculum-python"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if two values are equal, and if so the boolean is set to `True`.
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen Booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `==` ob zwei Werte gleich sind und ob der Boolean auf `True` gesetzt ist.
 
 [role="curriculum-javascript"]
-Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if two values are equal, and if so the boolean is set to `true`.
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen Booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `===` ob zwei Werte gleich sind und ob der Boolean auf `true` gesetzt ist.
 
-Now let's look at *boolean operators*: these help combine several booleans. There are three boolean operators:
+Sehen wir uns nun die *Booleschen Operatoren* an: Mit ihnen lassen sich mehrere Booleans kombinieren. Es gibt drei boolesche Operatoren:
 
 [role="curriculum-python"]
-* `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-* `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
-* `not`: takes one boolean input and returns the opposite (negated) boolean.
+* `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
+* `or`: nimmt zwei boolsche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+* `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and"; it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or"; it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
-* `!`: is called "not"; it takes one boolean input and returns the opposite (negated) boolean.
+* `&&`: heißt "and"; es benötigt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten `false`.
+* `||`: heißt "oder"; es benötigt zwei boolsche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
+* `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt das entgegengesetzte (negierte) Boolean zurück.
 
-For example if you are sixteen, the sentence "I'm sixteen" is true and the sentence "I'm seventeen" is false. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
+Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (wahr und falsch) ist falsch, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
 
 [role="curriculum-python"]
-.PRACTICE
+.ÜBUNG
 ****
 What do you think the following expressions evaluate to? `True` or `False`?
 
@@ -214,7 +214,7 @@ What do you think the following expressions evaluate to? `True` or `False`?
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.ÜBUNG
 ****
 What do you think the following expressions evaluate to? `true` or `false`?
 
@@ -251,14 +251,14 @@ video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
 [[video17ajs]]
 video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
-.PRACTICE
+.ÜBUNG
 ****
 Now we will combine user input and boolean operations.
 
 Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
 ****
 
-Here is an example:
+Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -291,15 +291,15 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 `int()` konvertiert einen String mit Ziffern in eine Ganzzahl. `float()` konvertiert einen String mit Ziffern und einem Dezimalpunkt in einen Fließkommawert.
 * Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
-** `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-** `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
-** `not`: takes one boolean input and returns the opposite (negated) boolean.
+** `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
+** `or`: nimmt zwei boolsche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+** `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
 * Du hast jetzt viele Werkzeuge, um Variationen in deine Musik einzubringen: Benutzereingaben können Elemente bestimmen. Du kannst in deinen benutzerdefinierten Funktionen einen Parameter hinzufügen, um eine Variante auszuwählen, wenn du deine Funktion aufrufst.
 
 [role="curriculum-javascript"]
 * *Return statements* can be included in a function definition to output a result when the function is called.
 * `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Note that, for once, it's a function name that starts with an uppercase letter.  `Number()` konvertiert einen String in eine Zahl.
+* Some functions allow you to convert data from one type to another. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.  `Number()` konvertiert einen String in eine Zahl.
 * Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
 ** `&&`: heißt "and", es nimmt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten wird `false` zurückgegeben.
