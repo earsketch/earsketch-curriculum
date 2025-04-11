@@ -228,8 +228,8 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
 * Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
-* Use `print()` to show your process in the console. Here is an example: `print("Is track number" + str(track) + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?". The function `str()` converts a number (ex: `1`) into a string (ex: `"1"`).
+* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Benutze `print()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `print(„Ist die Tracknummer“ + str(track) + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“. Die Funktion `str()` konvertiert eine Zahl (z.B.: `1`) in einen String (z.B.: `"1"`).
 ****
 
 [role="curriculum-javascript"]
@@ -238,18 +238,18 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 * Erstelle ein neues Skript.
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
-* Wähle deinen "Haupt"-Track. It can be your melody, or the track that you wish to highlight.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
-* Use `println()` to show your process in the console. Here is an example: `println("Is track number" + track + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?".
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Benutze `println()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `printIn(„Ist die Tracknummer“ + track + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“.
 ****
 
-Let's review some vocabulary:
+Lass uns ein paar Vokabeln wiederholen:
 
-1. *Operator*: a character that represents an action. We have seen arithmetic operators (`\+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `===`, `!==`).
-1. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1 + 2` (evaluated to 3) or `1 < 2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track `1`, a float between 0 and 1).
-1. *Statements*: instructions for the computer to execute.
+1. *Operator*: ein Zeichen, der eine Aktion repräsentiert. Wir haben arithmetische Operatoren (`\+`, `-`, `\*`, `=`) und Vergleichsoperatoren (`>`, `>=`, `<`, `\<=`, `===`, `!==`) gesehen.
+1. *Ausdruck*: Eine Kombination von Werten, Konstanten, Variablen, Operatoren und Funktionen. Der Computer wertet Ausdrücke aus, um ein Ergebnis zu erzeugen, in der Regel ein einziger numerischer oder boolscher Wert.  Zum Beispiel: `1 + 2` (ausgewertet zu 3) oder `1 < 2` (ausgewertet zu True) oder `analyzeTrack(1, RMS_AMPLITUDE)` (ausgewertet zur Lautstärke des Titels `1`, ein Float zwischen 0 und 1).
+1. *Statements*: Anweisungen für die Ausführung des Computers.
 
-Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
+Unten finden Sie ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Töne änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
 
 [role="curriculum-python"]
 [source,python]
@@ -266,38 +266,38 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 {nbsp} +
 
 [[chapter6summary]]
-=== Chapter 6 Summary
+=== Zusammenfassung von Kapitel 6
 
 [role="curriculum-python"]
-* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
-* The *boolean* data type has only two possible values, `True` and `False`.
-* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
-* `==` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
-* An *operator* is a character that represents an action.
-* *Expressions* are evaluated by the computer to produce a value.
+* Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
+* Der boolsche Datentyp hat nur 2 mögliche Werte, `True` und `False`.
+* Boolesche Werte werden von Vergleichsoperatoren generiert: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `==` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
+* Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
+* *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
 * Ein *Statement* ist eine Anweisung für den Computer.
-* A *condition* is an expression that evaluates to `True` or `False`.
-* The `if` statement only executes its code block when its condition is `True`.
-* In the event that an `if` statement's condition is `False`, an optional `else` statement allows an alternative code block to be executed.
+* Eine *Bedingung* ist ein Ausdruck, der zu `True` oder `False` auswertet.
+* Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `True` ist.
+* Falls eine `if` Bedingung `False` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
 
 [role="curriculum-javascript"]
-* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
-* The *boolean* data type has only two possible values, `true` and `false`.
-* Boolean values are generated by comparison operators: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
-* `===` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
-* An *operator* is a character that represents an action.
-* *Expressions* are evaluated by the computer to produce a value.
+* Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
+* Der boolsche Datentyp hat nur 2 mögliche Werte, `true` und `false`.
+* Boolesche Werte werden von Vergleichsoperatoren generiert: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
+* `===` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
+* Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
+* *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
 * Ein *Statement* ist eine Anweisung für den Computer.
-* A *condition* is an expression that evaluates to `true` or `false`.
-* The `if` statement only executes its code block when its condition is `true`.
-* In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
+* Eine *Bedingung* ist ein Ausdruck, der zu `true` oder `false` auswertet.
+* Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `true` ist.
+* Falls die Bedingung einer `if` `false` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
 
 [[chapter-questions]]
-=== Questions
+=== Fragen
 
 [question]
 --
-Which of the following elements is a boolean?
+Welche der folgenden Elemente ist ein Boolean?
 
 [answers]
 * `5+4 === 5`
@@ -309,7 +309,7 @@ Which of the following elements is a boolean?
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Wie würde die Ausgabe dieses Codeblocks aussehen (was würde auf der Konsole ausgegeben)?
 
 [source,python]
 ----
@@ -326,7 +326,7 @@ include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Wie würde die Ausgabe dieses Codeblocks aussehen (was würde auf der Konsole ausgegeben)?
 
 [source,javascript]
 ----
@@ -342,22 +342,22 @@ include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 
 [question]
 --
-What is mixing?
+Was ist Mischen?
 
 [answers]
-* adapting the volume of each track so they sound well balanced
-* adapting the pitch of each track so they sound well balanced
-* adding a fade in
-* adding a fade out
+* die Lautstärke jedes Tracks so anzupassen, dass er gut ausgewogen klingt
+* die Tonhöhe jedes Tracks so anzupassen, dass er gut ausgewogen klingt
+* ein Einblenden hinzufügen
+* ein Ausblenden hinzufügen
 --
 
 [question]
 --
-How many conditions can you check in a conditional statement?
+Wie viele Bedingungen kann man in einer bedingten Anweisung prüfen?
 
 [answers]
-* any number of conditions
-* 1 condition
-* 2 conditions
-* 3 conditions
+* beliebig viele Bedingungen
+* 1 Bedingung
+* 2 Bedingungen
+* 3 Bedingungen
 --
