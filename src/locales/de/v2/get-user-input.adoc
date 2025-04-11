@@ -197,12 +197,12 @@ Sehen wir uns nun die *Booleschen Operatoren* an: Mit ihnen lassen sich mehrere 
 * `||`: heißt "oder"; es benötigt zwei boolsche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
 * `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt das entgegengesetzte (negierte) Boolean zurück.
 
-Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (wahr und falsch) ist falsch, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
+Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (wahr und falsch) ist falsch, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. Aber der Satz "Ich bin sechzehn or siebzehn Jahre alt" (true or false) ist wahr.
 
 [role="curriculum-python"]
 .ÜBUNG
 ****
-What do you think the following expressions evaluate to? `True` or `False`?
+Was denkst du, was die folgenden Ausdrücke ergeben? `True` or `False`?
 
 * `not True`
 * `True and False`
@@ -216,7 +216,7 @@ What do you think the following expressions evaluate to? `True` or `False`?
 [role="curriculum-javascript"]
 .ÜBUNG
 ****
-What do you think the following expressions evaluate to? `true` or `false`?
+Was denkst du, was die folgenden Ausdrücke ergeben? `true` or `false`?
 
 * `!true`
 * `true && false`
@@ -227,7 +227,7 @@ What do you think the following expressions evaluate to? `true` or `false`?
 * `!(false || false)`
 ****
 
-Use the following code to print the answers:
+Benutze den folgenden Code, um die Antworten auszugeben:
 
 [role="curriculum-python"]
 [source,python]
@@ -241,7 +241,7 @@ include::code-examples/get-user-input-boolean-expressions.py.txt[]
 include::code-examples/get-user-input-boolean-expressions.js.txt[]
 ----
 
-Here is a reminder of boolean creation, and some examples of boolean operations:
+Hier ist eine Erinnerung an die Erstellung von Booleschen Werten und einige Beispiele für boolesche Operationen:
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -253,9 +253,9 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 .ÜBUNG
 ****
-Now we will combine user input and boolean operations.
+Jetzt kombinieren wir Benutzereingaben und boolesche Operationen.
 
-Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
+Schreibe ein Skript, das den Benutzer auffordert, ein Genre auszuwählen, mit einer begrenzten Anzahl von Optionen (z. B. "Hip Hop" und "klassisch"). Abhängig von der Antwort des Benutzers wähle einen Beat String, der gut mit dem Genre funktioniert. Du kannst mehrere Möglichkeiten akzeptieren. Zum Beispiel, "HIP HOP", "hip hop" und "Hip Hop" geben den gleichen Song aus.
 ****
 
 Hier ein Beispiel:
@@ -276,18 +276,18 @@ include::code-examples/get-user-input-boolean-operations.js.txt[]
 
 .CHALLENGE
 ****
-This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with three options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
+Dies ist die Jukebox- Challenge: Schreibe ein Skript, das nach Benutzereingaben in Bezug auf das Genre fragt, mit drei Optionen (zum Beispiel „Latino“, ‚Trap‘ und „Dubstep“). Je nach Antwort des Nutzers erstelle einen Song, der mit dem Genre geht.
 ****
 
 {nbsp} +
 
 [[chapter8summary]]
-=== Chapter 8 Summary
+=== Zusammenfassung von Kapitel 8
 
 [role="curriculum-python"]
-* *Return statements* can be included in a function definition to output a result when the function is called.
-* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. `str()` konvertiert jeden Wert in einen String.
+* *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
+* `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
+* Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. `str()` konvertiert jeden Wert in einen String.
 `int()` konvertiert einen String mit Ziffern in eine Ganzzahl. `float()` konvertiert einen String mit Ziffern und einem Dezimalpunkt in einen Fließkommawert.
 * Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
@@ -297,9 +297,9 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 * Du hast jetzt viele Werkzeuge, um Variationen in deine Musik einzubringen: Benutzereingaben können Elemente bestimmen. Du kannst in deinen benutzerdefinierten Funktionen einen Parameter hinzufügen, um eine Variante auszuwählen, wenn du deine Funktion aufrufst.
 
 [role="curriculum-javascript"]
-* *Return statements* can be included in a function definition to output a result when the function is called.
-* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.  `Number()` konvertiert einen String in eine Zahl.
+* *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
+* `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
+* Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.  `Number()` konvertiert einen String in eine Zahl.
 * Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
 ** `&&`: heißt "and", es nimmt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten wird `false` zurückgegeben.
