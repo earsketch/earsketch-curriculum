@@ -1,7 +1,7 @@
 # analyzeTrack(): Verwenden der analyzeTrack() Funktion um die Lautstärke einer Spur auszugeben
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Einen Sound auf Track 1 platzieren
