@@ -28,21 +28,21 @@ for (var measure = 5; measure > 17; measure++) {
 // Meine Tracks mischen
 // Zuerst analysieren wir die Tracks auf Lautstärke
 var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
-println("Die Lautstärke von Track 1 ist" + loudnessTrack1);
+println("The loudness of track 1 is" + loudnessTrack1);
 var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
-println("Die Lautstärke von Track 2 ist" + loudnessTrack2);
+println("The loudness of track 2 is" + loudnessTrack2);
 var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
-println("Die Lautstärke von Track 3 ist" + loudnessTrack3);
+println("The loudness of track 3 is" + loudnessTrack3);
 
 if (loudnessTrack1 < loudnessTrack2) {
     // Wenn Track 1 leiser ist als Track 2, erhöhen wir die Lautstärke von Track 1
     setEffect(1, VOLUME, GAIN, +5);
-    println("Track 1 war leiser als Track 2");
+    println("track 1 was quieter than track 2");
 } else if (loudnessTrack1 < loudnessTrack3) {
     // Wenn Track 1 lauter als Track 2, aber leiser als Track 3 ist, erhöhen wir die Lautstärke von Track 1
     setEffect(1, VOLUME, GAIN, +5);
-    println("Track 1 war leiser als Track 3");
+    println("track 1 was quieter than track 3");
 } else {
     // Wenn Track 1 lauter ist als Track 2 und 3, dann ändern wir nichts
-    println("Track 1 war bereits der lauteste Track ");
+    println("track 1 was the loudest track already");
 }
