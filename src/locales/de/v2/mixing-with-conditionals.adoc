@@ -226,7 +226,7 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 ****
 * Erstelle ein neues Skript.
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
-* Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
+* Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
 * Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
 * Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `print()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `print(„Ist die Tracknummer“ + str(track) + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“. Die Funktion `str()` konvertiert eine Zahl (z.B.: `1`) in einen String (z.B.: `"1"`).
@@ -237,7 +237,7 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 ****
 * Erstelle ein neues Skript.
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
-* Du kannst die `makeBeat()` Funktion und einen `for` Loop verwenden, um Percussion hinzuzufügen.
+* Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
 * Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
 * Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `println()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `printIn(„Ist die Tracknummer“ + track + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“.
