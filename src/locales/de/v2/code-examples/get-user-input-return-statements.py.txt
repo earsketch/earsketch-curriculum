@@ -1,7 +1,7 @@
 # Return-Statements: Zwei Beats mit Rückgabewerten verknüpfen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(100)
 
 rhythm1 = "0+++0+0+0+--0+00"
