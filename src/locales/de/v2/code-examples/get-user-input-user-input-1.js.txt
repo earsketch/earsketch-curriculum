@@ -3,7 +3,7 @@
 // Setup
 
 // nach Tempo fragen
-var question = "Welches Tempo möchtest du für deine Musik? Wähle eine Zahl zwischen 45 und 220";
+var question = "What tempo would you like for your music? Choose a number between 45 and 220";
 var answer = readInput(question);
 
 // In eine Zahl konvertieren
