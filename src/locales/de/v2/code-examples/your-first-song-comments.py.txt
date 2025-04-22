@@ -1,7 +1,7 @@
 # Kommentare: Mit Kommentaren beschreiben, was der Code macht
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(130)
 
 # Musik
