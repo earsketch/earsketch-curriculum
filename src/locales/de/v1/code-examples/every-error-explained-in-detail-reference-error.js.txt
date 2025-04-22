@@ -2,5 +2,5 @@
 
 setTempo(120);
 
-var today = readInput("Welcher Tag ist es?");
-println("Heute ist " + heute);
+var today = readInput("What day is it?");
+println("Today is " + Today);
