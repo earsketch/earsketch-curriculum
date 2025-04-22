@@ -250,7 +250,7 @@ Hier sind einige häufige Fehler:
 . *Falsche Rechtschreibung:* Überprüfe die Schreibweise, wenn du eine Funktion wie `fitMedia()` oder Soundkonstanten verwendest.
 . *Groß- und Kleinschreibung:* Die meisten Wörter, die in der Programmierung verwendet werden, unterscheiden Groß- und Kleinschreibung (der Computer erkennt den Unterschied zwischen groß- und kleingeschriebenen Buchstaben). Achte also auf klein- und großgeschriebene Buchstaben. Schreibe zum Beispiel `fitMedia()` und nicht `FitMedia()` oder `fitmedia()`. Die Funktionen in EarSketch verwenden einen Stil, der *Camel Case* genannt wird: Das erste Wort wird klein geschrieben, und der erste Buchstabe der folgenden Wörter wird groß geschrieben, wie in `exampleFunctionName()`.
 . *Klammern:* Das Vergessen einer öffnenden oder schließenden Klammer führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
-. *Skripteinrichtung:* EarSketch fügt einem neuen Skript automatisch etwas Code hinzu, aber es kann sein, dass Sie versehentlich `von earsketch import *` löschen.
+. *Skripteinrichtung:* EarSketch fügt einem neuen Skript automatisch etwas Code hinzu, aber es kann sein, dass Sie versehentlich `from earsketch import *` löschen.
 . *Satzzeichen:* Fehlende Kommas oder andere Satzzeichenfehler
 
 [role="curriculum-javascript"]
