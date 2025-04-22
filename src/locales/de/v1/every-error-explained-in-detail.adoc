@@ -291,7 +291,7 @@ Added solution from parse error to JS version below.
 
 [role="curriculum-javascript"]
 *Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise.
-Über die oben genannten allgemeinen Fehler hinaus solltest du auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfe auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen Ihres Skripts. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Du kannst keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
+Über die oben genannten allgemeinen Fehler hinaus solltest du auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfe auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen deines Skripts. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Du kannst keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
 
 [[typeerror]]
 === Type Error
