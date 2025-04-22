@@ -207,7 +207,7 @@ include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 
 .ÜBUNG
 ****
-Erstelle einen neuen Song. Benutze eine `for` loop, um einen Umschlag zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf der gleiche Spur zu wiederholen. Sie können jeden gewünschten Effekt verwenden.
+Erstelle einen neuen Song. Benutze einen for-loop, um einen Umschlag zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf der gleiche Spur zu wiederholen. Sie können jeden gewünschten Effekt verwenden.
 Lass deinen Nachbarn deinen Song hören, mit und ohne den Effekt (um deinen Song ohne den Effekt zu hören entkommentiere die Zeilen, die den Effekt erzeugen). Dein Nachbar muss erraten, welchen Effekt du hinzugefügt hast.
 ****
 
