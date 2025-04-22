@@ -111,7 +111,7 @@ Einrückungsfehler treten in JavaScript nicht auf, allerdings sollten Sie aus Gr
 *Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder in einer Liste oder einem String nicht existiert.
 
 [role="curriculum-javascript"]
-*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder nicht innerhalb eines Arrays oder Strings existiert. Er wird als Tippfehler in JavaScript gemeldet.  Um allgemeinere Tippfehler zu erklären, lesen Sie bitte den Abschnitt <<every-error-explained-in-detail#typeerror,type errors>>.
+*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder nicht innerhalb eines Arrays oder Strings existiert. Er wird als Type Error in JavaScript gemeldet.  Um allgemeinere Type Errors zu erklären, lies bitte den Abschnitt <<every-error-explained-in-detail#typeerror,type errors>>.
 
 [role="curriculum-python"]
 *Beispiel:* Im folgenden Code versuchen wir eine additive Struktur mit Clips aus einer Liste zu erstellen.
@@ -135,7 +135,7 @@ include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
 Es wird ein Indexfehler gemeldet und die Konsole verweist auf Zeile 19, die besagt, dass der Index außerhalb des Bereichs liegt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass die Listen-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:
 
 [role="curriculum-javascript"]
-Ein Tippfehler wird ausgelöst, und die Konsole gibt an, dass ein anderer Datentyp in Zeile 17 erwartet wurde. Beim letzten Aufruf von `fitMedia()` wurde ein Wert außerhalb des Bereichs zur Verfügung gestellt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass Array-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:
+Ein Type Error wird ausgelöst, und die Konsole gibt an, dass ein anderer Datentyp in Zeile 17 erwartet wurde. Beim letzten Aufruf von `fitMedia()` wurde ein Wert außerhalb des Bereichs zur Verfügung gestellt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass Array-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:ear
 
 [role="curriculum-python"]
 [source,python]
@@ -153,7 +153,7 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 *Lösung:* Notiere den Namen jedes Clips in Ihrer Liste und benennen Sie jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft Ihnen, die Struktur der Liste zu verstehen und was einen Indexfehler verursachen kann.
 
 [role="curriculum-javascript"]
-*Lösung:* Notieren Sie den Namen jedes Clips in Ihrem Array und benennen Sie jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft Ihnen, die Struktur des Arrays zu verstehen und was einen Indexfehler verursachen kann.
+*Lösung:* Notiere den Namen jedes Clips in Ihrem Array und benenne jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft dir, die Struktur des Arrays zu verstehen und was einen Indexfehler verursachen kann.
 
 [[nameerror]]
 === Namensfehler
@@ -190,7 +190,7 @@ include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
 include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
 ----
 
-In diesem Fall wurde die Variable, die die zu verkettende Zeichenkette enthält, nicht durch den richtigen Namen referenziert; ein Kleinbuchstaben "t" hätte verwendet werden sollen.
+In diesem Fall wurde die Variable, die den zu verkettenden String enthält, nicht durch den richtigen Namen referenziert; ein Kleinbuchstaben "t" hätte verwendet werden sollen.
 
 [role="curriculum-python"]
 [source,python]
@@ -204,7 +204,7 @@ include::code-examples/every-error-explained-in-detail-name-error-correction.py.
 include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
-*Lösung:* Überprüfen Sie die Schreibweise und Groß- und Kleinschreibung Ihrer Variablen und Funktionen. Wenn Sie eine Variable verwenden oder eine Funktion aufrufen, stellen Sie sicher, dass jede zuvor definiert wurde. Stellen Sie sicher, dass Sie eine Funktion definieren, bevor sie aufgerufen wird. Obwohl Sie die Namen direkt einfügen können, stellen Sie sicher, dass Ihre Soundkonstanten-Namen sich an die Clip-Namen im Sound Browser angleichen.
+*Lösung:* Überprüfe die Schreibweise und Groß- und Kleinschreibung Ihrer Variablen und Funktionen. Wenn du eine Variable verwendest oder eine Funktion aufrufst, stelle sicher, dass jede zuvor definiert wurde. Stelle sicher, dass du eine Funktion definierst, bevor sie aufgerufen wird. Obwohl du die Namen direkt einfügen kannst, stelle sicher, dass deine Soundkonstanten-Namen sich an die Clip-Namen im Sound Browser angleichen.
 
 [[parseerror]]
 === Parse-Fehler
@@ -238,7 +238,7 @@ include::code-examples/every-error-explained-in-detail-parse-error-correction.py
 ----
 
 [role="curriculum-python"]
-*Lösung:* Überprüfen Sie die Konsole, um festzustellen, wo die fehlerhafte Zeile sein könnte. Stellen Sie sicher, dass alle Funktionsdefinitionen, Funktionsaufrufe und andere Ausdrücke offene und schließende Klammern haben. Prüfen Sie in anderen Bereichen Ihres Skripts auf fehlende oder zusätzliche Satzzeichen. Überprüfen Sie zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Schließlich, überprüfen Sie die Rechtschreibung der Argumente, die Sie an Funktionen übergeben.
+*Lösung:* Überprüfe die Konsole, um festzustellen, wo die fehlerhafte Zeile sein könnte. Stelle sicher, dass alle Funktionsdefinitionen, Funktionsaufrufe und andere Ausdrücke offene und schließende Klammern haben. Prüfe in anderen Bereichen deines Skripts auf fehlende oder zusätzliche Satzzeichen. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
 
 [role="curriculum-javascript"]
 Parse-Fehler werden in JavaScript weitgehend als Syntaxfehler interpretiert, was <<every-error-explained-in-detail#syntaxerror,next>> behandelt wird.
@@ -283,7 +283,7 @@ include::code-examples/every-error-explained-in-detail-syntax-error-correction.j
 ----
 
 [role="curriculum-python"]
-*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise. Außer den obigen häufigen Fehlern überprüfen Sie das Öffnen und Schließen von Zitaten und stellen Sie sicher, dass Sie Python-Keywords nicht als Variablennamen verwenden.
+*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise. Außer den obigen häufigen Fehlern überprüfe das Öffnen und Schließen von Zitaten und stell sicher, dass du Python-Keywords nicht als Variablennamen verwendest.
 
 ////
 Added solution from parse error to JS version below.
@@ -291,14 +291,14 @@ Added solution from parse error to JS version below.
 
 [role="curriculum-javascript"]
 *Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise.
-Über die oben genannten allgemeinen Fehler hinaus sollten Sie auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfen Sie auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen Ihres Skripts. Überprüfen Sie zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Sie können keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfen Sie die Rechtschreibung der Argumente, die Sie an Funktionen übergeben.
+Über die oben genannten allgemeinen Fehler hinaus solltest du auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfe auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen Ihres Skripts. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Du kannst keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
 
 [[typeerror]]
-=== Typfehler
+=== Type Error
 
-*Konsolenmeldung:* Typfehler: Es gibt einen Fehler mit dem erwarteten Datentyp.
+*Konsolenmeldung:* Type Error: Es gibt einen Fehler mit dem erwarteten Datentyp.
 
-*Beschreibung:* Ein Typfehler tritt auf, wenn eine bestimmte Operation oder Funktion einen Datentyp erwartet, aber einen anderen empfängt.
+*Beschreibung:* Ein Type Error tritt auf, wenn eine bestimmte Operation oder Funktion einen Datentyp erwartet, aber einen anderen empfängt.
 
 [role="curriculum-python"]
 *Beispiel:* Angenommen, du hast ein Skript geschrieben, das die insgesamt verwendeten Maßnahmen mit einer Aktualisierungsvariablen erfasst. Im Snippet unten versuchen wir eine Nachricht mit der Länge eines Liedes zu drucken.
@@ -319,7 +319,7 @@ include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-Es wird ein Typfehler ausgelöst, weil der Zahlentyp nicht in eine Zeichenkette verkettet werden kann. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` Wert in einen String zu konvertieren:
+Es wird ein Type Error ausgelöst, weil der Zahlentyp nicht in eine Zeichenkette verkettet werden kann. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` Wert in einen String zu konvertieren:
 
 [role="curriculum-javascript"]
 Ein Typfehler wird ausgelöst, weil wir versehentlich einen String als letztes `fitMedia()` Argument übergeben haben. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` String in eine Nummer zu konvertieren:
