@@ -1,14 +1,14 @@
 # Tippfehler: Beispiel
 
-aus Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
 soundClip = DUBSTEP_DRUMLOOP_MAIN_006
 beatString = "0+000+++0--0-0--"
 measureTotal = 0
 
-für Takte im Bereich(1, 9):
+for measure in range(1, 9):
     makeBeat(soundClip, 1, measure, beatString)
-    Messwert += 1
+    measureTotal += 1
 
-print("Dein Beat ist " + Messwert + " lang ")
+print("Your beat is " + measureTotal + " measures long.")
