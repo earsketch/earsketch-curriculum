@@ -30,7 +30,7 @@ function addingDrums(start, end, pattern) {
     // dann erstellen wir den Beat,
     // auf Track 3 für den Kick und Track 4 für den Hihat,
     // von Anfang bis Ende der Takte:
-    für (var measure = start; Takt < End; Takt++) {
+    for (var measure = start; measure < end; measure++) {
     // Hier werden wir unseren Schlag auf "measure" platzieren
     // was zunächst gleich „Start“ ist,
     // das ist ein Parameter der Funktion
