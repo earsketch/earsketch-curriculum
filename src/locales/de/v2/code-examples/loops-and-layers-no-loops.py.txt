@@ -1,7 +1,7 @@
 // No loops: Musikwiederholung ohne Codeschleifen erstellt
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
