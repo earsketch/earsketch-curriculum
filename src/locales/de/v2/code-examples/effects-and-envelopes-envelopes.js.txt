@@ -1,4 +1,4 @@
-// Umschläge: Erstellen von Umschlägen mit 7-Parameter setEffect()
+// Envelopes: Erstellen von Envelopes mit 7-Parameter setEffect()
 
 // Setup
 setTempo(120);
