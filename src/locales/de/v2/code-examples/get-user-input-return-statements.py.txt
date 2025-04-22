@@ -13,7 +13,7 @@ def createBeat(startMeasure, sound, beatString):
     for measure in range(startMeasure, endMeasure):
         makeBeat(sound, 1, measure, beatString)
 
-    # Ending measure zurückgeben, damit wir es außerhalb Funktion verwenden können
+    # Endtakt zurückgeben, damit wir es außerhalb Funktion verwenden können
     return endMeasure
 
 # Function calls
