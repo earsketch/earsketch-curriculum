@@ -6,7 +6,7 @@ setTempo(120)
 
 # Musik
 
-// Einen A-Abschnitt erstellen
+# Einen A-Abschnitt erstellen
 
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # main
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # drums
