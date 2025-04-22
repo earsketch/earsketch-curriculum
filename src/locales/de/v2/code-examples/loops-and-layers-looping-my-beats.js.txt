@@ -1,4 +1,4 @@
-// Looping meiner Beats: Wiederholung einer makeBeat()-Anweisung mit einem for loop
+// Looping meiner Beats: Wiederholung einer makeBeat()-Anweisung mit einem for-loop
 
 // Setup
 setTempo (120);
