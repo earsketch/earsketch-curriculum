@@ -1,7 +1,7 @@
 // Verzögerungseffekt: Verzögerung zu einer Spur hinzufügen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
