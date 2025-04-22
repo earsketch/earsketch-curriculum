@@ -21,27 +21,27 @@ beatKick = "0---0-----0-0---"
 beatSnare = "--0-0------000-"
 soundKick = OS_KICK02
 soundSnare = OS_SNARE06
-für Takte im Bereich(5, 17):
+for measure in range(5, 17):
     makeBeat(soundKick, 4, measure, beatKick)
     makeBeat(soundSnare, 5, measure, beatSnare)
 
 # Meine Tracks mischen
 # Zuerst analysieren wir die Tracks auf Lautstärke
 loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
-print("Die Lautstärke von Track 1 ist" + str(loudnessTrack1))
+print("The loudness of track 1 is" + str(loudnessTrack1))
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
-print("Die Lautstärke von Track 2 ist" + str(loudnessTrack2))
+print("The loudness of track 2 is" + str(loudnessTrack2))
 loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE)
-print("Die Lautstärke von Track 3 ist" + str(loudnessTrack3))
+print("The loudness of track 3 is" + str(loudnessTrack3))
 
-wenn loudnessTrack1 < loudnessTrack2:
-    # wenn Track 1 leiser ist als Track 2 dann erhöhen wir die Lautstärke von Track 1
+if loudnessTrack1 < loudnessTrack2:
+    # wenn Track 1 leiser ist als Track 2 erhöhen wir die Lautstärke von Track 1
     setEffect(1, VOLUME, GAIN, +5)
-    print("Track 1 war leiser als Track 2")
+    print("track 1 was quieter than track 2")
 elif loudnessTrack1 < loudnessTrack3:
     # wenn Track 1 lauter als Track 2, aber leiser als Track 3 ist, erhöhen wir das Volumen von Track 1
     setEffect(1, VOLUME, GAIN, +5)
-    print("Track 1 war leiser als Track 3")
+    print("track 1 was quieter than track 3")
 else:
     # wenn Track 1 lauter als Track 2 und 3 ist, dann ändern wir nichts
-    print("Track 1 war bereits der lauteste Track ")
+    print("track 1 was the loudest track already")
