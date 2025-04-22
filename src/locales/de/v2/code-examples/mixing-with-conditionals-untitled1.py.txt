@@ -1,3 +1,3 @@
-if Bedingung:
-    # Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die Bedingung wahr ist
-    # Beachte, dass die Anweisungen eingerückt sind, genau wie bei Schleifen
+if condition:
+    # Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die Bedingung True ist
+    # Beachte, dass die Anweisungen eingerückt sind, genau wie bei for-loops
