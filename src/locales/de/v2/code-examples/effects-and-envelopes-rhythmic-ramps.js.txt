@@ -1,4 +1,4 @@
-# Rhythmische Rampen: Automatisieren von Effekten mit einem for loop
+// Rhythmische Rampen: Automatisieren von Effekten mit einem for-loop
 
 // Setup
 setTempo (120);
