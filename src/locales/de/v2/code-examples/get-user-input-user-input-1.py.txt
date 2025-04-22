@@ -1,7 +1,7 @@
 # Benutzereingabe 1: Den Benutzer nach dem Tempo fragen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 
 # nach Tempo fragen
 question = "Welches Tempo möchtest du für deine Musik? Wähle eine Zahl zwischen 45 und 220"
