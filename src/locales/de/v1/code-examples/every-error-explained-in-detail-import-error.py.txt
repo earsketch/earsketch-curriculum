@@ -1,1 +1,1 @@
-von EarSketch Import *
+from earsketch import *
