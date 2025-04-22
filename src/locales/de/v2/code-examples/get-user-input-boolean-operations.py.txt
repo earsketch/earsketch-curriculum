@@ -15,7 +15,7 @@ edmKickBeat = "0+++----0+++----"
 edmClapBeat = "----0-------0---"
 
 # Benutzereingabe anfordern
-genre = readInput("Welches Genre ist dein Favorit? Hip Hop oder EDM?")
+genre = readInput("What genre is your favorite? Hip Hop or EDM?")
 
 # Den passenden Rhythmus erstellen
 if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
@@ -25,7 +25,7 @@ elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
     makeBeat(kick, 1, 1, edmKickBeat)
     makeBeat(clap, 2, 1, edmClapBeat)
 else:
-    print("Entschuldigung, wir konnten das von dir ausgewählte Genre nicht lesen. Bitte führe den Code erneut aus.")
+    print("Sorry we couldn't read the genre you selected. Please run the code again.")
 
 # Füge Reverb auf Track 2 hinzu
 setEffect(2, REVERB, MIX, 0.1)
