@@ -1,7 +1,7 @@
 # Multi Beat: Verwendung mehrerer makeBeat Calls mit unterschiedlichen Rhythmen
 
 # Setup
-von Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
