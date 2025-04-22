@@ -1,7 +1,7 @@
 # Rückgabewert 2: Gibt den Endtakt einer Abschnittsfunktion zurück
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
