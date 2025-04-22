@@ -1,7 +1,7 @@
 # Namensfehler: Korrektur
 
-von Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
-heute = readInput("Welcher Tag ist es?")
-print("Heute ist " + heute)
+today = readInput("What day is it?")
+print("Today is " + today)
