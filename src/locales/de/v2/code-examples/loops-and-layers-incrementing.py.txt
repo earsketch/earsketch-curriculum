@@ -1,6 +1,6 @@
 # Inkrementieren: Einen wechselnden Trommelschlag erzeugen
 
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 groove1 = HIPHOP_DUSTYGROOVE_011
