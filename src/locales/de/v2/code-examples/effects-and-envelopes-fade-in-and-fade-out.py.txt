@@ -1,7 +1,7 @@
 # Einblenden und ausblenden: Looping auf allen Tracks, um einen Ein- und Ausblenden hinzuzufügen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(100)
 
 # Variablen
