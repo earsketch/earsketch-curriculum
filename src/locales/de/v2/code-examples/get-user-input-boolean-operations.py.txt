@@ -1,6 +1,6 @@
 # Boolesche Operationen: Benutzer nach Genre fragen und Beat entsprechend erstellen
 
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Soundvariablen
