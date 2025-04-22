@@ -13,7 +13,7 @@ function createBeat(startMeasure, sound, beatString) {
         makeBeat(sound, 1, measure, beatString);
     }
 
-    # Ending measure zurückgeben, damit wir es außerhalb Funktion verwenden können
+    # Ending measure zurückgeben, damit wir es außerhalb der Funktion verwenden können
     return endMeasure
 }
 
