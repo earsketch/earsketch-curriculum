@@ -1,10 +1,10 @@
 if (condition1) {
-    // Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die condition1 wahr ist
+    // Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die condition1 True ist
 } else if (condition2) {
-    // Hier schreibst du die Anweisungen, wenn condition2 wahr ist. Wenn condition2 falsch ist, zur nächsten Zeile wechseln
+    // Hier schreibst du die Anweisungen, wenn condition2 True ist. If condition2 is False, move to the next line
     // elif ist kurz für else if
 } else if (condition3) {
-    // Hier schreibst du die Anweisungen, wenn condition3 wahr ist. Wenn condition3 falsch ist, zur nächsten Zeile wechseln
+    // Hier schreibst du die Anweisungen, wenn condition3 True ist. If condition3 is False, move to the next line
 } else {
-    // Hier schreibst du die Anweisungen für den Fall, dass alle 3 Bedingungen falsch sind
+    // Hier schreibst du die Anweisungen für den Fall, dass alle 3 Bedingungen False sind
 }
