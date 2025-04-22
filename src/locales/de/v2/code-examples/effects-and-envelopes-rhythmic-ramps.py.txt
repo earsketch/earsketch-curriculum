@@ -1,7 +1,7 @@
 # Rhythmische Rampen: Automatisieren von Effekten mit einem for loop
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
