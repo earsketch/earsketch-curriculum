@@ -1,7 +1,7 @@
 # String- und Listen-Operationen: Zeigt, was wir mit Listen und Strings tun können
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Meine Beat-Strings und Arrays erstellen
