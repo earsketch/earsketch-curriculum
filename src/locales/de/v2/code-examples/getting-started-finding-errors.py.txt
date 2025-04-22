@@ -1,6 +1,6 @@
 # Fehler finden: Fünf Fehler unten müssen behoben werden
 
-von EarSketch Import *
+from earsketch import *
 setTempo(88
 
 fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
