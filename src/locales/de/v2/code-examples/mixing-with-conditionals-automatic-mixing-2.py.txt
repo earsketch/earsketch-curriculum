@@ -1,7 +1,7 @@
 # Automatisches Mischen 2: Benutze bedingte Anweisungen, um die Tracks zu mischen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Hinzufügen von Melodie und Bass
