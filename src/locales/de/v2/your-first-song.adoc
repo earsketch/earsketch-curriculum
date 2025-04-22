@@ -13,7 +13,7 @@ In diesem Kapitel erfährst du, wie du das Tempo deines Songs änderst, Kommenta
 Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits existierende Elemente für dich hinzugefügt werden:
 
 . Einige Kommentare, die mit `#` beginnen: Dies wird im nächsten Abschnitt behandelt
-. Die Zeile „von earsketch import*“, mit der die EarSketch-Funktionen (wie „fitMedia()“) zum Projekt hinzugefügt werden
+. Die Zeile „from earsketch import *“, mit der die EarSketch-Funktionen (wie „fitMedia()“) zum Projekt hinzugefügt werden
 . Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
 --
 
@@ -197,7 +197,7 @@ Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^]
 * Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
 * Die Clips in der Sound-Bibliothek von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
 * Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
-* `von earsketch import *` fügt die EarSketch-API zu deinem Projekt hinzu.
+* `from earsketch import *` fügt die EarSketch-API zu deinem Projekt hinzu.
 * `setTempo()` lässt dich das Tempo deines Songs angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
 * Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
 * Ein *Prozess* ist ein Programm, das auf einem Computer läuft. Die Verarbeitung erfolgt durch die *CPU* eines Computers, die für die Ausführung von Programmanweisungen zuständig ist.
