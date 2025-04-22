@@ -188,7 +188,7 @@ Erstellen wir ein komplettes Lied mit allen Werkzeugen die du in EarSketch entde
 . Und dann, starte die Programmierung! Beginne mit einigen `fitMedia()` Funktionen, um Sounds auszuwählen.
 . Benutze `makeBeat()` um Percussion hinzuzufügen.
 . Du kannst deine eigenen Sounds hochladen.
-. Benutze `for` Loops, um Wiederholung in deinem Code zu reduzieren.
+. Benutze for-loop, um Wiederholung in deinem Code zu reduzieren.
 . Verwende benutzerdefinierte Funktionen, um deine Abschnitte zu definieren und deine Songstruktur zu erstellen.
 . Füge ein oder zwei sinnvolle Übergänge hinzu.
 . Füge Effekte mit `setEffect()` hinzu.
@@ -213,7 +213,7 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-In diesem Beispiel haben wir eine `for` Schleife in einer benutzerdefinierten Funktion verwendet! Wir haben Parameter der Funktion (`start` und `end`) innerhalb der for-Schleife verwendet.
+In diesem Beispiel haben wir einen for-loop in einer benutzerdefinierten Funktion verwendet! Wir haben Parameter der Funktion (`start` und `end`) innerhalb des for-loops verwendet.
 
 [[chapter7summary]]
 === Zusammenfassung von Kapitel 7
