@@ -1,7 +1,7 @@
 # Übergangstechniken - Track-Silencing: Übergang zwischen Abschnitten mit Track-Silencing
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
