@@ -9,7 +9,7 @@ var melody2 = RD_UK_HOUSE__5THCHORD_1;
 fitMedia(melody1, 1, 1, 9);
 fitMedia(melody2, 2, 1, 9);
 
-# Auswertung der Lautstärke der Tracks
+// Auswertung der Lautstärke der Tracks
 var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
 var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
 
