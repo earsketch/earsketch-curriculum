@@ -3,14 +3,14 @@
 
 :nofooter:
 
-In diesem Kapitel lernst du `for` Loops kennen und erfährst, wie du Wiederholungen in deinem Code und deiner Musik erzeugen kannst. Außerdem behandeln wir musikalische Schichten und Texturen sowie einige Tipps zur Fehlersuche.
+In diesem Kapitel lernst du for-loops kennen und erfährst, wie du Wiederholungen in deinem Code und deiner Musik erzeugen kannst. Außerdem behandeln wir musikalische Schichten und Texturen sowie einige Tipps zur Fehlersuche.
 
 [[forloops]]
-=== `for` Loops
+=== for-loop
 
-So wie Musiker in einer *Schleif* immer wieder ein Muster spielen können, können Programmierer den Computer immer wieder auffordern, Aufgaben zu erledigen. in einem *loop*! Das ist effizienter: Anstatt eine Anweisung mehrmals zu schreiben, schreibst du einen Loop mit den Anweisungen, und der Computer weiß, dass er sie wiederholen soll.
+So wie Musiker in einem *for-loop* immer wieder ein Muster spielen können, können Programmierer den Computer immer wieder auffordern, Aufgaben zu erledigen. in einem *loop*! Das ist effizienter: Anstatt eine Anweisung mehrmals zu schreiben, schreibst du einen Loop mit den Anweisungen, und der Computer weiß, dass er sie wiederholen soll.
 
-Wenn du zum Beispiel eine von dir erstellte `makeBeat()`-Funktion wiederholen möchtest, kannst du, anstatt mehrere Zeilen mit `makeBeat()` zu schreiben, einen `for` Loop erstellen.
+Wenn du zum Beispiel eine von dir erstellte `makeBeat()`-Funktion wiederholen möchtest, kannst du, anstatt mehrere Zeilen mit `makeBeat()` zu schreiben, einen for-loop erstellen.
 
 ////
 add new video
@@ -31,25 +31,25 @@ include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
 [role="curriculum-python"]
-`for` Loops in Python bestehen aus 3 grundlegenden Teilen:
+for-loops in Python bestehen aus 3 grundlegenden Teilen:
 
 [role="curriculum-javascript"]
-`for` Loops in JavaScript bestehen aus 4 grundlegenden Teilen:
+for-loops in JavaScript bestehen aus 4 grundlegenden Teilen:
 
 [[loop-components-PY]]
-.
+.Die grundlegenden Bestandteile eines for-loops
 [role="curriculum-python"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 
 [[loop-components-JS]]
-.
+.Die grundlegenden Bestandteile eines for-loops
 [role="curriculum-javascript"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
-* *Loop-Zähler*: Erstellt eine Variable zur Verwendung als Loopzähler. Du kannst mehr als eine Zeile von Anweisungen im `for` Loop haben.
+* *Loop-Zähler*: Erstellt eine Variable zur Verwendung als Loopzähler. Du kannst mehr als eine Zeile von Anweisungen im for-loop haben.
 * *Bereich*: Eine Funktion, die eine Liste von Zahlen erstellt, die der Loop-Zähler durchzählen soll. Das Schlüsselwort `in` verbindet den Schleifenzähler mit dem Bereich. `range()` benötigt zwei Argumente, einen Startpunkt (inklusive) und einen Endpunkt (exklusive): `range(startingNumber, endingNumber)`.
 * *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Dazu gehört alles, was direkt nach dem Doppelpunkt `:` (mit der Tabulatortaste) *eingerückt* wird.
 
@@ -57,15 +57,15 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 * *Initialisierung*: Erstellt eine Variable, die als *Loop-Zähler* vor der ersten Schleife verwendet werden soll.
 * *Loop Bedingung*: Diese prüft, ob die Schleife erneut ausgeführt werden soll. Wenn die Anweisung wahr ist, wird der Schleifenkörper erneut ausgeführt. Wenn der Zähler zu hoch wird, ist die Aussage false, und wir verlassen den Loop. Der Computer führt dann den Code nach dem Loop weiter aus.
 * *Iteration Statement*: Eine Anweisung, die den Loopzähler aktualisiert. Es zählt jedes Mal, wenn sich die Schleife wiederholt.
-* *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Es ist umgeben von geschweiften Klammern `{ }` und ist *eingerückt* (mit dem _tab_ Schlüssel). Du kannst mehr als eine Zeile von Anweisungen im `for` Loop haben.
+* *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Es ist umgeben von geschweiften Klammern `{ }` und ist *eingerückt* (mit dem _tab_ Schlüssel). Du kannst mehr als eine Zeile von Anweisungen im for-loop haben.
 
 .ÜBUNG
 ****
-. Erstelle einen `for` loop mit dem Zähler `measure`, um dein „'makeBeat()“ von Takt 1 bis 4 zu haben.
+. Erstelle einen for-loop mit dem Zähler `measure`, um dein „'makeBeat()“ von Takt 1 bis 4 zu haben.
 . Ändere deinen Code, damit er von Takt `3` bis `7` geht
 . Ändere dann deinen Code, um deine Beats auf Track `2` anstelle von Track `1` zu haben, immer noch von Takt `3` bis `7`
-. Ändere dann deinen Zählernamen, wähle einen Track und Takte und erstelle den passenden `for` loop
-. Zeige deinen Nachbarn deine letzte `for` loop und lass sie finden, auf welchem Track dein Beat ist, auf welchen Takten es sein wird und was der Name deines Counters ist.
+. Ändere dann deinen Zählernamen, wähle einen Track und Takte und erstelle den passenden for-loop
+. Zeige deinen Nachbarn deine letzte for-loop und lass sie finden, auf welchem Track dein Beat ist, auf welchen Takten es sein wird und was der Name deines Counters ist.
 ****
 
 {nbsp} +
@@ -128,7 +128,7 @@ und es endet dort, da die Messung kleiner als 5 sein muss, also 4 ist Ihr Limit.
 [[controlflow]]
 === Kontroll-Flow
 
-Hier ist ein weiteres Beispiel dafür, wie du `for` loops verwenden kannst:
+Hier ist ein weiteres Beispiel dafür, wie du for-loops verwenden kannst:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12bpy]]
@@ -152,7 +152,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-Wir können einen `for` loop verwenden, um genau die gleiche Musik mit weniger Code zu erstellen. Unser Zähler hier ist "measure". Beachten Sie, dass der Loop Body zwei Codezeilen enthält, die beide den Zähler `measure` verwenden.
+Wir können einen for-loop verwenden, um genau die gleiche Musik mit weniger Code zu erstellen. Unser Zähler hier ist "measure". Beachten Sie, dass der Loop Body zwei Codezeilen enthält, die beide den Zähler `measure` verwenden.
 
 [role="curriculum-python"]
 [source,python]
@@ -170,15 +170,15 @@ Der *Interpreter* liest und führt ein Skript aus. Die Reihenfolge, in der er au
 
 Eine Schleife ist eine *Kontroll-Flow-Anweisung*, die die Reihenfolge ändert. Am Ende eines loop bodys springt er zurück nach oben in die Schleife.
 
-Diese Animation zeigt, wie sich der Kontrollfluss in einem `for` loop bewegt, und wie sich der Wert des loop counters bei jeder *iteration*, oder Wiederholung des Schleifenkörpers ändert:
+Diese Animation zeigt, wie sich der Kontrollfluss in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *iteration*, oder Wiederholung des Schleifenkörpers ändert:
 
 [[loop-py]]
-.Schritt für Schritt durch einen for-Loop
+.Schritt für Schritt durch einen for-loop
 [role="curriculum-python"]
 [caption="Figure 4.2.1: "]
 image::../media/U1P2/LoopPy_updated.gif[Alt Text]
 
-.Schritt für Schritt durch einen for-Loop
+.Schritt für Schritt durch einen for-loop
 [role="curriculum-javascript"]
 [caption="Figure 4.2.1: "]
 [[loop-js]]
@@ -190,13 +190,13 @@ Although it is valid syntax, a `*monospace bold phrase*` causes a build error in
 BMW
 ////
 
-Eine letzte interessante Sache an `for` Loops ist die Inkrementierung.
+Eine letzte interessante Sache an for-loops ist die Inkrementierung.
 
 [role="curriculum-python"]
-Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In `for` Loops haben wir die `range()` Funktion verwendet, um den Zähler zu erhöhen. Wir haben zwei Parameter für den Bereich gesehen: `startingNumber` und `endingNumber`. Es gibt einen optionalen dritten Parameter: `increment`. Standardmäßig ist `increment` gleich eins, aber du kannst es verwenden, um mehr als eins zu erhöhen. Zum Beispiel würde range(0, 10, 4) den Wert zwischen 0 und 10 um 4 erhöhen.
+Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In for-loops haben wir die `range()` Funktion verwendet, um den Zähler zu erhöhen. Wir haben zwei Parameter für den Bereich gesehen: `startingNumber` und `endingNumber`. Es gibt einen optionalen dritten Parameter: `increment`. Standardmäßig ist `increment` gleich eins, aber du kannst es verwenden, um mehr als eins zu erhöhen. Zum Beispiel würde range(0, 10, 4) den Wert zwischen 0 und 10 um 4 erhöhen.
 
 [role="curriculum-javascript"]
-Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In `for` Loops haben wir die Begriffe `measure = measure + 1` verwendet. Dies erhöht den Zähler `measure` um `1` für jede Wiederholung. Es ist möglich, sie um mehr als eins zu erhöhen, wie `measure = measure + 4`.
+Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In for-loops haben wir die Begriffe `measure = measure + 1` verwendet. Dies erhöht den Zähler `measure` um `1` für jede Wiederholung. Es ist möglich, sie um mehr als eins zu erhöhen, wie `measure = measure + 4`.
 
 .ÜBUNG
 ****
@@ -272,7 +272,7 @@ Du hast eine Liste möglicher Fehler in Kapitel 1 gesehen. Hier sind einige weit
 [role="curriculum-python"]
 . *Initialisieren von Variablen*: Eine Variable muss initialisiert werden, bevor sie in einem Skript verwendet werden kann. Dies bedeutet, dass du der Variable einen Wert zuweisen solltest, bevor du ihn später verwendest.
 . *Kommentare:* Eine unsachgemäße Kommentierung führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python-Kommentare müssen mit einem `#` Symbol beginnen.
-. *Einrückung:* Die Einrückung ist in Python entscheidend. Fehlende Einrückung in `for` loop bodies wird eine <</en/v1/every-error-explained-in-detail#indentationerror,indentation error> > verursachen.
+. *Einrückung:* Die Einrückung ist in Python entscheidend. Fehlende Einrückung in for-loop-bodies wird eine <</en/v1/every-error-explained-in-detail#indentationerror,indentation error> > verursachen.
 . *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
 . *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
 
@@ -288,7 +288,7 @@ Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>
 [[musicaltips]]
 === Musikalische Tipps
 
-Jetzt, wo du viele Werkzeuge zum Erstellen deiner Musik, wie `fitMedia()`, `makeBeat()` und `for`-Schleifen hast, werden wir uns musikalische Ideen ansehen.
+Jetzt, wo du viele Werkzeuge zum Erstellen deiner Musik, wie `fitMedia()`, `makeBeat()` und for-loops hast, werden wir uns musikalische Ideen ansehen.
 
 Beginnen wir mit der *Tonart* deines Songs:
 
@@ -321,7 +321,7 @@ Erstelle einen kompletten Song mit:
 
 * Ein Thema (bitte gib das von dir gewählte Thema in deinem kommentierten Intro im Code an)
 * Die Funktionen `fitMedia()` und `makeBeat()`
-* Einem oder mehreren `for` loop(s) entweder mit `fitMedia()` oder `makeBeat()`
+* Einem oder mehreren for-loop(s) entweder mit `fitMedia()` oder `makeBeat()`
 * Mindestens vier Tracks
 * Mindestens sechzehn Takten
 * Mindestens einem hochgeladener Sound
@@ -336,7 +336,7 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 === Zusammenfassung von Kapitel 4
 
 [role="curriculum-python"]
-* Ein *`for`-Loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. `for` Loops bestehen aus einem Loop body, Loop-Zähler und Bereich. Der Code im Loop Body muss eingerückt werden.
+* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop body, Loop-Zähler und Bereich. Der Code im Loop Body muss eingerückt werden.
 * Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
 * `print()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
 * Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
@@ -346,7 +346,7 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 * Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [role="curriculum-javascript"]
-* Ein *`for`-Loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for"-Loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im loop body sollte eingerückt werden.
+* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im loop body sollte eingerückt werden.
 * Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
 * `println()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
 * Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
@@ -360,7 +360,7 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 
 [question]
 --
-Welche der folgenden Komponenten ist KEINE Komponente eines `for`-Loops?
+Welche der folgenden Komponenten ist KEINE Komponente eines for-loops?
 
 [answers]
 * Loop-Interpreter
