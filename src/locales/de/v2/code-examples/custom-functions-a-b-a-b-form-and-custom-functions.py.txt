@@ -1,7 +1,7 @@
 # A-B-A-B Form und benutzerdefinierte Funktionen: Ein Song mit A und B Abschnitten, mit benutzerdefinierten Funktionen
 
 # Setup
-von Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
