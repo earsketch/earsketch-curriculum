@@ -15,5 +15,5 @@ def verse(start):
     return end
 
 # Function calls
-var endMeasure = verse(1); # Aufruf der Strophenfunktion und Beginn ist Takt 1
+endMeasure = verse(1); # Aufruf der Strophenfunktion und Beginn ist Takt 1
 print(endMeasure)
