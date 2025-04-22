@@ -1,7 +1,7 @@
 # Boolesches Beispiel: Wir analysieren die Lautstärke unserer Tracks
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Erstellen von 2 Tracks
