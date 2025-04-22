@@ -1,4 +1,4 @@
-// No loops: Musikwiederholung ohne Codeschleifen erstellt
+# No loops: Musikwiederholung ohne Codeschleifen erstellt
 
 # Setup
 from earsketch import *
