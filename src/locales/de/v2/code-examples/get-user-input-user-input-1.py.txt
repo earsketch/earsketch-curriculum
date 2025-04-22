@@ -4,7 +4,7 @@
 from earsketch import *
 
 # nach Tempo fragen
-question = "Welches Tempo möchtest du für deine Musik? Wähle eine Zahl zwischen 45 und 220"
+question = "What tempo would you like for your music? Choose a number between 45 and 220"
 answer = readInput(question)
 
 # in eine Ganzzahl konvertieren
