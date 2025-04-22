@@ -1,6 +1,6 @@
 # Indexfehler: Beispiel
 
-von Earsketch-Import *
+from earsketch import *
 setTempo(100)
 
 orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
