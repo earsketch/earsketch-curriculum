@@ -5,7 +5,7 @@ from earsketch import *
 setTempo(120)
 
 # Musik
-var soundNumber = readInput("Gib eine Soundnummer zwischen 10 und 46 ein: ");
+soundNumber = readInput("Type a sound number between 10 and 46: ")
 dubstepSound = "DUBSTEP_BASS_WOBBLE_0"
 finalSound = dubstepSound + soundNumber
 
