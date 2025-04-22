@@ -15,7 +15,7 @@ var hihatBeat = "---0---0--00----";
 fitMedia(melody1, 1, 1, 5);
 fitMedia(melody2, 1, 5, 9);
 
-// Platzierung der Beats auf den Tracks 2 (Kick) und 3 (HiHat) dank eines for-Loops auf Takt
+// Platzierung der Beats auf den Tracks 2 (Kick) und 3 (HiHat) dank eines for-loop auf Takt
 for (var measure = 1; measure < 9; measure++) {
     makeBeat(kick, 2, measure, kickBeat);
     makeBeat(hihat, 3, measure, hihatBeat);
