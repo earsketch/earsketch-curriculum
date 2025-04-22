@@ -1,4 +1,4 @@
-// Verwendung von fitMedia(): Füge dem DAW einen Sound hinzu
+// Verwendung von fitMedia(): Füge der DAW einen Sound hinzu
 
 // Setup
 setTempo(120);
