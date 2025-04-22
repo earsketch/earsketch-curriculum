@@ -1,7 +1,7 @@
 # Einführungsskript: Dieser Code fügt dem DAW einen Ton hinzu
 
 # Abschnitt einrichten
-von Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
 # Musik-Abschnitt
