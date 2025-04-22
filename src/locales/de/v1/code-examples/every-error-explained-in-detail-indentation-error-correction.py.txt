@@ -1,6 +1,6 @@
 für Takte im Bereich(1, 9, 2):
-    fitMedia(Melodie, 1, Takt, Takt+ 2)
-    makeBeat(kick, 2, Takt, beatString)
-    makeBeat(kick, 2, Takt + 1, beatString)
+    fitMedia(melody, 1, measure, measure + 2)
+    makeBeat(kick, 2, measure, beatString)
+    makeBeat(kick, 2, measure + 1, beatString)
 
 fitMedia(beat, 3, 3, 9)
