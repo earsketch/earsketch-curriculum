@@ -1,4 +1,4 @@
-// Iteration durch Arrays: Verwendung eines Arrays, um mehrere Sounds zu halten und sie dank eines 'for'-loops in unserer DAW zu platzieren
+// Iteration durch Arrays: Verwendung eines Arrays, um mehrere Sounds zu halten und sie dank eines for-loops in unserer DAW zu platzieren
 
 // Setup
 setTempo(130);
