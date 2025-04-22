@@ -12,6 +12,6 @@ percussions1 = HOUSE_BREAK_FILL_002
 fitMedia(piano1, 1, 1, 5)
 fitMedia(percussions1, 2, 3, 5)
 
-// Abmischen: Erhöhen Sie die Lautstärke der Klavierspur und reduzieren Sie die Lautstärke der Schlagzeugspur.
+# Abmischen: Erhöhen Sie die Lautstärke der Klavierspur und reduzieren Sie die Lautstärke der Schlagzeugspur.
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
