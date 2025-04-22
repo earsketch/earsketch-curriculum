@@ -1,7 +1,7 @@
 # Erstellen eines Drum Sets: Benutze Listen mit makeBeat()
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(100)
 
 # Vorher hatten wir eine Spur für jeden Sound (measure 1):
