@@ -20,18 +20,18 @@ hihat = OS_CLOSEDHAT03
 # FUNKTIONSDEFINITIONEN
 
 # Drums hinzufügen:
-def addingDrums(Anfang, Ende, Muster):
+def addingDrums(start, end, pattern):
     # Zuerst erstellen wir Beat Strings, abhängig vom Parametermuster:
     if pattern == "heavy":
         beatStringKick = "0---0---0---00--"
         beatStringHihat = "-----000----0-00"
-    if pattern == "light":
+    elif pattern == "light":
         beatStringKick = "0-------0---0---"
         beatStringHihat = "--0----0---0---"
     # dann erstellen wir den Beat,
     # auf Track 3 für den Kick und Track 4 für den Hihat,
     # von den Takten beginnend bis Ende:
-    für Takte im Bereich(Anfang, Ende):
+    for measure in range(start, end):
         # Hier werden wir unseren Schlag auf "measure" setzen
         # was zunächst gleich „start“ ist,
         # welches ein Parameter der Funktion ist
