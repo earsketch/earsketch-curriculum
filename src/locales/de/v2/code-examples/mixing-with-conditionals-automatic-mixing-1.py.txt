@@ -1,7 +1,7 @@
 # Automatisches Mixen 1: Wenn Track 1 lauter ist als Track 2, werden wir die Lautstärke reduzieren
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Erstellen von 2 Tracks
