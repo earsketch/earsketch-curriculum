@@ -1,7 +1,7 @@
 // A-B-A Form: Ein Song mit A und B Abschnitten
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Musik
