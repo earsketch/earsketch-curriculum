@@ -84,7 +84,7 @@ include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[
 ----
 
 [role="curriculum-python"]
-Ein richtig eingerückter Körper sollte stattdessen wie ein Snippet unten aussehen. Der For-Loop-Körper wird von einem Tab eingerückt und es ist klar, dass der letzte `fitMedia()` Aufruf außerhalb der Schleife liegt.
+Ein richtig eingerückter Körper sollte stattdessen wie ein Snippet unten aussehen. Der for-loop-body wird von einem Tab eingerückt und es ist klar, dass der letzte `fitMedia()` Aufruf außerhalb der Schleife liegt.
 
 [role="curriculum-python"]
 [source,python]
