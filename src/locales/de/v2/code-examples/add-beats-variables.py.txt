@@ -1,7 +1,7 @@
 # Variablen: Verwende Variablen, um Sounds zu speichern und zu vereinfachen
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(100)
 
 # Sounds
