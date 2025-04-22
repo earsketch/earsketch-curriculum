@@ -1,2 +1,2 @@
-answer = readInput("Welches Tempo möchtest du für deine Musik?")
+answer = readInput("What tempo would you like for your music?")
 print(answer)
