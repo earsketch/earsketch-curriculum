@@ -1,4 +1,4 @@
-für Takte im Bereich(1, 9, 2):
+for measure in range(1, 9, 2):
     fitMedia(melody, 1, measure, measure + 2)
     makeBeat(kick, 2, measure, beatString)
     makeBeat(kick, 2, measure + 1, beatString)
