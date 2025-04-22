@@ -4,19 +4,19 @@
 :nofooter:
 
 [role="curriculum-python"]
-Jetzt stehen Ihnen zahlreiche Tools zur Verfügung, um Lieder mit EarSketch zu erstellen. Die Skripte, die du schreibst, können sehr vielfältig und lang werden. Dieses Kapitel hilft dir, deinen Code weiter zu organisieren, insbesondere mit Hilfe einer speziellen Abstraktion namens Listen, und einer neuen Funktionalität von `makeBeat()`.
+Jetzt stehen dir zahlreiche Tools zur Verfügung, um Lieder mit EarSketch zu erstellen. Die Skripte, die du schreibst, können sehr vielfältig und lang werden. Dieses Kapitel hilft dir, deinen Code weiter zu organisieren, insbesondere mit Hilfe einer speziellen Abstraktion namens Listen, und einer neuen Funktionalität von `makeBeat()`.
 
 [role="curriculum-javascript"]
-Jetzt stehen Ihnen zahlreiche Tools zur Verfügung, um Lieder mit EarSketch zu erstellen. Die Skripte, die du schreibst, können sehr vielfältig und lang werden. Dieses Kapitel hilft dir, deinen Code weiter zu organisieren, insbesondere mit Hilfe einer speziellen Abstraktion namens Arrays und einer neuen Funktionalität von `makeBeat()`.
+Jetzt stehen dir zahlreiche Tools zur Verfügung, um Lieder mit EarSketch zu erstellen. Die Skripte, die du schreibst, können sehr vielfältig und lang werden. Dieses Kapitel hilft dir, deinen Code weiter zu organisieren, insbesondere mit Hilfe einer speziellen Abstraktion namens Arrays und einer neuen Funktionalität von `makeBeat()`.
 
 [[datastructures]]
 === Was ist eine Datenstruktur
 
 [role="curriculum-python"]
-Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *listen* zu organisieren. Eine *Liste*, in manchen Programmiersprachen auch ein Array genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
+Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *Listen* zu organisieren. Eine *Liste*, in manchen Programmiersprachen auch ein Array genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
 
 [role="curriculum-javascript"]
-Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *arrays* zu organisieren. Ein *array*, auch in einigen Programmiersprachen eine Liste genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
+Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *Arrays* zu organisieren. Ein *Array*, auch in einigen Programmiersprachen eine Liste genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -70,8 +70,8 @@ Wir haben gesehen, dass `array[index]` auf ein Element des Arrays verweisen wird
 
 .ÜBUNG
 ****
-Verwende im vorherigen Beispiel einen `for` loop, anstatt `fitMedia()` dreimal aufzurufen. Du kannst die Tracknummer als Zähler verwenden.
-Die Indexnummer muss bei `0` beginnen, während der Track bei `1` beginnt. Innerhalb deines for loops musst du eine `index` Variable erstellen, die der Tracknummer minus 1 entspricht.
+Verwende im vorherigen Beispiel einen for-loop, anstatt `fitMedia()` dreimal aufzurufen. Du kannst die Tracknummer als Zähler verwenden.
+Die Indexnummer muss bei `0` beginnen, während der Track bei `1` beginnt. Innerhalb deines for-loops musst du eine `index` Variable erstellen, die der Tracknummer minus 1 entspricht.
 ****
 
 Unten ein Beispiel. Du kannst einen Blick in die Konsole werfen, um zu sehen, was beim Ausführen des Codes ausgegeben wird.
@@ -97,17 +97,17 @@ Ein nützlicher Tipp: Die Eigenschaft `length` (`array.length`) gibt die Anzahl 
 [role="curriculum-python"]
 .ÜBUNG
 ****
-Wir werden eine additive Einführung in EarSketch erstellen, in der Instrumente (Tracks) im Laufe der Zeit einzeln der Musik hinzugefügt werden. Zum Beispiel beginnt der erste Track bei Maß `1`, dann beginnt der zweite Track bei Maß `2`, und so weiter. Dies wird häufig für die Einleitung eines Songs verwendet.
+Wir werden eine additive Einführung in EarSketch erstellen, in der Instrumente (Tracks) im Laufe der Zeit einzeln der Musik hinzugefügt werden. Zum Beispiel beginnt der erste Track bei Takt `1`, dann beginnt der zweite Track bei Takt `2`, und so weiter. Dies wird häufig für die Einleitung eines Songs verwendet.
 
-Erstelle eine solche Einführung mit einer Liste und einem `for` Loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `measure` Variable mit der `len()` Funktion erstellen.
+Erstelle eine solche Einführung mit einer Liste und einem for-loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `measure` Variable mit der `len()` Funktion erstellen.
 ****
 
 [role="curriculum-javascript"]
 .ÜBUNG
 ****
-Wir werden eine additive Einführung in EarSketch erstellen, in der Instrumente (Tracks) im Laufe der Zeit einzeln der Musik hinzugefügt werden. Zum Beispiel beginnt der erste Track bei Maß `1`, dann beginnt der zweite Track bei Maß `2`, und so weiter. Dies wird häufig für die Einleitung eines Songs verwendet.
+Wir werden eine additive Einführung in EarSketch erstellen, in der Instrumente (Tracks) im Laufe der Zeit einzeln der Musik hinzugefügt werden. Zum Beispiel beginnt der erste Track bei Takt `1`, dann beginnt der zweite Track bei Takt `2`, und so weiter. Dies wird häufig für die Einleitung eines Songs verwendet.
 
-Erstelle eine solche Einführung mit einem array und einem `for` Loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `Measure` Variable mit der `length` Eigenschaft erstellen.
+Erstelle eine solche Einführung mit einem array und einem for-loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `measure` Variable mit der `length` Eigenschaft erstellen.
 ****
 
 Hier ein Beispiel:
@@ -330,7 +330,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
-* Wann immer es nützlich ist, erstelle for Loops und benutzerdefinierte Funktionen.
+* Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu. Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Spuren an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
@@ -344,7 +344,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
-* Wann immer es nützlich ist, erstelle for Loops und benutzerdefinierte Funktionen.
+* Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu.  Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Spuren an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
