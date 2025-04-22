@@ -1,6 +1,6 @@
 # Wert-Fehler: Korrektur
 
-aus Earsketch-Import *
+from earsketch import *
 setTempo(120)
 
 drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
