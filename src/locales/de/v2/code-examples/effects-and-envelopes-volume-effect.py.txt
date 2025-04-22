@@ -1,7 +1,7 @@
 # Lautstärkeeffekt: Änderung der Lautstärke von 2 Tracks
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Variablen
