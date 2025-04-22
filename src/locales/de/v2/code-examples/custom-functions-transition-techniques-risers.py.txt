@@ -1,7 +1,7 @@
 # Übergangstechniken - Risers: Übergänge zwischen Abschnitten mit Risern und einem Crash-Cymbal
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo (128)
 
 # Musik
