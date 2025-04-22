@@ -83,14 +83,14 @@ Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert e
 
 Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 
-* *Rhythm* ist ein Klangmuster, das oft wiederholt wird.
-* Das *tempo* ist die Geschwindigkeit der Musik in BPM (schlägt pro Minute).
-* Ein *Beat* ist wie der "stetige Pulse" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
+* *Rhythmus* ist ein Klangmuster, das oft wiederholt wird.
+* Das *Tempo* ist die Geschwindigkeit der Musik in BPM (beats per minute).
+* Ein *Beat* ist wie der "stetige Puls" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
 * Ein *Takt* ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
 * Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in 2 *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
-* Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e und 2 e und 3 e und 4 e und a. .."
+* Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e and a 2 e and a 3 e and a 4 e and a. .."
 * 1 Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
-* Ein *Metronome* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW können Sie das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
+* Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW können Sie das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
 
 [[imediameasurepng]]
 .Ein Takt
@@ -158,7 +158,7 @@ Sechzehntel Noten: `"00000000000000"`
 ++++
 
 `"0---0---0-0-0---"`
-(gelesen: "1, 2, 3 and 4")
+(gelesen: "1, 2, 3 und 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
@@ -219,7 +219,7 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 
 .ÜBUNG
 ****
-Erstellen Sie eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
+Erstelle eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
 Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Spur `1` hinzuzufügen.
 Bitte beachte Folgendes:
 
@@ -268,7 +268,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 === Zusammenfassung von Kapitel 3
 
 * In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
-* *Variablen* erstellen Sie einen Platz im Computerspeicher, um Daten zu speichern.
+* *Variablen* erstellen einen Platz im Computerspeicher, um Daten zu speichern.
 * Sie müssen zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
 * Ein *string* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
 * Percussive Sounds können mit dem GENRE-Filter im Sound Browser gefunden werden: Wählen Sie den Künstler MAKEBEAT aus.
