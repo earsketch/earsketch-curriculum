@@ -18,6 +18,6 @@ function verse(start, Variation) {
     fitMedia(drums1, 2, start, start + 4); // Dies liegt außerhalb der bedingten Anweisung (keine Einrückung)
 }
 
-// Funktion Calls
+// Function Calls
 verse(1, true);
 verse(7, false);
