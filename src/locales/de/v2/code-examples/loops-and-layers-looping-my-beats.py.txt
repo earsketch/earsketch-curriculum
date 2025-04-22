@@ -1,7 +1,7 @@
 # Looping meiner Beats: Wiederholung einer makeBeat()-Anweisung mit einem for loop
 
 # Setup
-von EarSketch Import *
+from earsketch import *
 setTempo(120)
 
 # Variablen
