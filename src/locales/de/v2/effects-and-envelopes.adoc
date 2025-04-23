@@ -1,5 +1,5 @@
 [[effectsandenvelopes]]
-== Effekte und Umschläge
+== Effekte und Envelopes
 
 :nofooter:
 
@@ -10,7 +10,7 @@ Mit EarSketch kann der Komponist bestehende Sounds ändern, um neue und einzigar
 
 :nofooter:
 
-*Effekte* ermöglichen es uns, die Songqualitäten zu ändern. Ähnlich wie das Hinzufügen eines Filters ein Foto verändert, verändert das Hinzufügen eines Audioeffekts den Sound. Du kannst zum Beispiel die Lautstärke ändern, ein Echo oder einen Hall hinzufügen usw.
+*Effekte* ermöglichen es uns, die Soundqualitäten zu ändern. Ähnlich wie das Hinzufügen eines Filters ein Foto verändert, verändert das Hinzufügen eines Audioeffekts den Sound. Du kannst zum Beispiel die Lautstärke ändern, ein Echo oder einen Hall hinzufügen usw.
 
 [role="curriculum-python curriculum-mp4"]
 [[video4py]]
@@ -118,7 +118,7 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-*Reverb* (Nachhall) ist Schall, der von Wänden abprallt und zu den Ohren zurückkehrt. Es gibt Ihrem Sound ein Gefühl von Raum. Denke an den Unterschied zwischen einem Gespräch in einem kleinen Schlafzimmer und einem Gespräch in einer großen Kirche. Je größer und „flacher“ der Raum ist, desto länger dauert es, bis die Wellen zu Ihren Ohren zurückkehren, deshalb der „große, hallige Raum“. Der Effekt `REVERB` hat Parameter, um die Abklingzeit (`REVERB_DECAY`) und die Menge des vorhandenen Effekts (`MIX`) zu steuern.
+*Reverb* (Nachhall) ist Schall, der von Wänden abprallt und zu den Ohren zurückkehrt. Es gibt deinem Sound ein Gefühl von Raum. Denke an den Unterschied zwischen einem Gespräch in einem kleinen Schlafzimmer und einem Gespräch in einer großen Kirche. Je größer und „flacher“ der Raum ist, desto länger dauert es, bis die Wellen zu Ihren Ohren zurückkehren, deshalb der „große, hallige Raum“. Der Effekt `REVERB` hat Parameter, um die Abklingzeit (`REVERB_DECAY`) und die Menge des vorhandenen Effekts (`MIX`) zu steuern.
 
 Höre dir die folgenden Clips an, um das Ergebnis des Hinzufügens von Hall zu einer Spur zu hören:
 
@@ -143,23 +143,23 @@ Erstelle einen Song mit einem Lautstärkeeffekt und zwei weiteren Effekten. Verg
 ****
 
 [[effectsandenvelopes2]]
-=== Effekte und Umschläge
+=== Effekte und Envelopes
 
 Du hast mit der Verwendung von Effekten begonnen und möchtest vielleicht, dass sich ein Effekt mit der Zeit verändert. Zum Beispiel könntest du am Anfang deines Songs eine Einblendung (Lautstärke steigt an) haben wollen.
 
-Mit *Umschlägen* können wir definieren, wie sich eine Wirkung eines Effekts im Laufe der Zeit verändert.
+Mit *Envelopes* können wir definieren, wie sich eine Wirkung eines Effekts im Laufe der Zeit verändert.
 
-Wir werden zwei Wert-Zeit-Paare verwenden. Jedes Paar enthält einen Effektwert und einen entsprechenden Takt. Zum Beispiel bedeutet „-60, 1, 0, 3“, dass ein Punkt mit dem Wert „-60“ bei Takt „1“ und ein anderer Punkt mit dem Wert ‚0‘ bei Takt „3“ platziert wird. Der Umschlag erzeugt eine Linie zwischen diesen Punkten, genannt *ramp*:
+Wir werden zwei Wert-Zeit-Paare verwenden. Jedes Paar enthält einen Effektwert und einen entsprechenden Takt. Zum Beispiel bedeutet „-60, 1, 0, 3“, dass ein Punkt mit dem Wert „-60“ bei Takt „1“ und ein anderer Punkt mit dem Wert ‚0‘ bei Takt „3“ platziert wird. Die Envelope erzeugt eine Linie zwischen diesen Punkten, genannt *ramp*:
 
 [[envelopepoints]]
-.Ein kommentierter Umschlag in EarSketch
+.Eine kommentierte Envelope in EarSketch
 [caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-Um einen Umschlag zu ändern, brauchst du nur die `setEffect()` Funktion mit sieben Argumenten (die letzten vier Argumente sind die beiden Wertzeitpaare):
+Um eine Envelope zu ändern, brauchst du nur die `setEffect()` Funktion mit sieben Argumenten (die letzten vier Argumente sind die beiden Wertzeitpaare):
 
 . track
-. typ
+. type
 . parameter
 . startValue
 . start
@@ -182,7 +182,7 @@ include::code-examples/effects-and-envelopes-envelopes.py.txt[]
 include::code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
-Sieh dir nun dieses Video für andere Umschlagbeispiele an
+Sieh dir nun dieses Video für andere Envelope-Beispiele an
 
 [role="curriculum-python curriculum-mp4"]
 [[video5b]]
@@ -207,7 +207,7 @@ include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 
 .ÜBUNG
 ****
-Erstelle einen neuen Song. Benutze einen for-loop, um einen Umschlag zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf der gleiche Spur zu wiederholen. Sie können jeden gewünschten Effekt verwenden.
+Erstelle einen neuen Song. Benutze einen for-loop, um eine Envelope zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf der gleiche Spur zu wiederholen. Du kannst jeden gewünschten Effekt verwenden.
 Lass deinen Nachbarn deinen Song hören, mit und ohne den Effekt (um deinen Song ohne den Effekt zu hören entkommentiere die Zeilen, die den Effekt erzeugen). Dein Nachbar muss erraten, welchen Effekt du hinzugefügt hast.
 ****
 
@@ -245,7 +245,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 === Zusammenfassung von Kapitel 5
 
 * *Effekte* ändern die Eigenschaften eines Sounds, um sie einzigartig zu machen.
-* Das *Volume* bezieht sich auf die Lautstärke. *Verzögerung* erzeugt ein Echo. *Reverb* fühlt sich an, als würde der Ton in einem großen Raum gespielt. *Panning* platziert deine Musik auf der linken oder rechten Seite.
+* Das *Volume* bezieht sich auf die Lautstärke. *Delay* erzeugt ein Echo. *Reverb* fühlt sich an, als würde der Ton in einem großen Raum gespielt. *Panning* platziert deine Musik auf der linken oder rechten Seite.
 * Effekte werden in EarSketch mit der Funktion `setEffect()` eingefügt. Seine Syntax ist `setEffect(track, type, parameter, value)`.
 . *track*: Tracknummer oder `MIX_TRACK`
 . *type*: Effektkonstante, wie `DELAY`
@@ -253,8 +253,8 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 . *value*: Parameterwert wie `200`. Dieser Wert muss innerhalb des Effektbereichs liegen.
 * *Funktionen* enthalten Anweisungen zum Ausführen des Rechners. Daten werden durch *Argumente* an Funktionen gesendet, was die Ausführung der Funktion beeinflusst. Die Syntax eines *Funktions Calls* mit zwei Argumenten lautet „myFunction(argument1, argument2)“. Ein Beispiel für eine Syntax, die in einem Funktionsaufruf mit 4 Argumenten verwendet wird, ist `makeBeat(kick, 2, measure, kickBeat)`.
 * Eine vollständige Liste der EarSketch-Effekte und deren Parameter finden Sie in <</en/v1/every-effect-explained-in-detail#,effects>>, zusammen mit Beschreibungen für jeden.
-* *Umschläge* definieren, wie sich ein Effektparameter im Laufe der Zeit ändert. Sie werden mit Wertzeitpaaren wie _(Wert, Zeit, Wert, Zeit)_beschrieben.
-* Für einen Umschlag lauten die 7-Parameter-Argumente `setEffect()`: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
+* *Envelopes* definieren, wie sich ein Effektparameter im Laufe der Zeit ändert. Sie werden mit Wertzeitpaaren wie _(Wert, Zeit, Wert, Zeit)_beschrieben.
+* Für eine Envelope lauten die 7-Parameter-Argumente `setEffect()`: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 [[chapter-questions]]
 === Fragen
