@@ -1,4 +1,4 @@
-// Einführungsskript: Dieser Code fügt dem DAW einen Ton hinzu
+// Einführungsskript: Dieser Code fügt dem DAW einen Sound hinzu
 
 // Abschnitt einrichten
 setTempo(120);
