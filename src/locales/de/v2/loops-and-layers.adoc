@@ -123,7 +123,7 @@ ok
 ok
 ----
 
-und es endet dort, da die Messung kleiner als 5 sein muss, also 4 ist Ihr Limit.
+und es endet dort, da der Takt kleiner als 5 sein muss, also 4 ist dein Limit.
 
 [[controlflow]]
 === Kontroll-Flow
@@ -152,7 +152,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-Wir können einen for-loop verwenden, um genau die gleiche Musik mit weniger Code zu erstellen. Unser Zähler hier ist "measure". Beachten Sie, dass der Loop Body zwei Codezeilen enthält, die beide den Zähler `measure` verwenden.
+Wir können einen for-loop verwenden, um genau die gleiche Musik mit weniger Code zu erstellen. Unser Zähler hier ist "measure". Beachte, dass der Loop Body zwei Codezeilen enthält, die beide den Zähler `measure` verwenden.
 
 [role="curriculum-python"]
 [source,python]
@@ -218,7 +218,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
 [role="curriculum-python"]
-Hier haben wir die `range()`-Funktion verwendet, aber du kannst eine Variable auch mit dieser Art von Ausdruck erhöhen oder verringern: „Maß = Maß + 1“. Das bedeutet, dass die Maßnahme nun ihrem früheren Wert plus eins entspricht. Du kannst den Kurzbefehl `+=` verwenden um zu erhöhen oder `-=` zum Dekretieren. Hier ist wie: `measure += 1` entspricht `measure = measure + 1`. Und `measure -=1` entspricht `measure = measure - 1`
+Hier haben wir die `range()`-Funktion verwendet, aber du kannst eine Variable auch mit dieser Art von Ausdruck erhöhen oder verringern: „measure = measure+ 1“. Das bedeutet, dass der Takt nun seinem früheren Wert plus eins entspricht. Du kannst den Kurzbefehl `+=` verwenden um zu erhöhen oder `-=` zum Dekretieren. Hier ist wie: `measure += 1` entspricht `measure = measure + 1`. Und `measure -=1` entspricht `measure = measure - 1`
 
 [role="curriculum-python"]
 * `measure += 1` erhöht measure um 1. Wenn du um mehr als einen Wert erhöhen willst, verwende `measure += 2`.
@@ -292,9 +292,9 @@ Jetzt, wo du viele Werkzeuge zum Erstellen deiner Musik, wie `fitMedia()`, `make
 
 Beginnen wir mit der *Tonart* deines Songs:
 
-* *Pitch* ist, wie hoch oder niedrig ein Ton klingt. Wir ordnen relative musikalische Töne auf einer *Skala* oder einer Reihe von Musiknoten, basierend darauf, wie wir die Frequenz des Tons hören.
+* *Pitch* ist, wie hoch oder niedrig ein Ton klingt. Wir ordnen relative musikalische Töne auf einer *Skala* oder einer Reihe von Musiknoten, basierend darauf, wie wir die Frequenz des Sounds hören.
 * Die *Tonart* eines Liedes bezeichnet die Tonleiter oder die Gruppe von Tonhöhen, in der die Musik komponiert ist. Tonarten können Dur (klingt normalerweise „fröhlicher“) oder Moll (klingt normalerweise „dunkler“) sein.
-* Anfängern empfehlen wir, nur eine Tonart für ihr Lied zu verwenden. Das Auswählen von Tönen aus verschiedenen Tonarten kann sich... ziemlich schief anhören! In der Regel sind alle Sounds innerhalb desselben Ordners in der EarSketch-Soundbibliothek in derselben Tonart.
+* Anfängern empfehlen wir, nur eine Tonart für ihr Lied zu verwenden. Das Auswählen von Sounds aus verschiedenen Tonarten kann sich... ziemlich schief anhören! In der Regel sind alle Sounds innerhalb desselben Ordners in der EarSketch-Soundbibliothek in derselben Tonart.
 
 Hör dir den Audioclip unten an, um den Unterschied zwischen Dur und Moll zu verstehen (die Dur-Tonleiter und der Dur-Akkord stehen an erster Stelle):
 
@@ -307,13 +307,13 @@ Lass uns nun über die verschiedenen Arten von Spuren, die du haben kannst, spre
 * Die *Melodie* ist der Hauptgedanke, der oft in höheren Tonlagen liegt, oder „die Noten, die der Lead singt“. Das kann eine Stimme sein, höhere Töne eines Keyboards, eine Gitarre usw.
 * *Harmony* sind die längeren Töne, die „die Melodie unterstützen“, wie die Akkorde eines Klaviers, einer Gitarre oder einer Ansammlung von Saiten.
 * Du hast auch eine *Bass-Linie*. Dies sind niedrigere Töne. Das kann ein Bass, ein Cello, die tiefen Töne eines Keyboards usw. sein.
-* Dann gibt es *Percussion*. Wenn du `makeBeat()` verwendest, kann das mehrere Spuren benötigen. Du kannst zum Beispiel eine Spur für deine Kick, eine für deine Snare und eine für deine Hi-Hat haben.
+* Dann gibt es *Percussion*. Wenn du `makeBeat()` verwendest, kann das mehrere Tracks benötigen. Du kannst zum Beispiel einen Track für deinen Kick, eine für deine Snare und eine für deine Hi-Hat haben.
 
-Dies sind grundlegende Ideen, die die Struktur deines Songs bilden. Du kannst jedoch einige Teile deines Songs haben, die nur eine oder zwei der vier enthalten. Du kannst auch viele weitere Spuren hinzufügen: Du kannst eine zweite Melodie erstellen oder Drones (sehr lange Noten im Hintergrund), aufgenommene Geräusche, Whooshes usw. hinzufügen. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
+Dies sind grundlegende Ideen, die die Struktur deines Songs bilden. Du kannst jedoch einige Teile deines Songs haben, die nur eine oder zwei der vier enthalten. Du kannst auch viele weitere Tracks hinzufügen: Du kannst eine zweite Melodie erstellen oder Drones (sehr lange Noten im Hintergrund), aufgenommene Sounds, Whooshes usw. hinzufügen. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
 
 Lass uns abschließend noch auf *Wiederholung* und *Kontrast* eingehen. Menschen genießen Wiederholung aufgrund dessen, was Psychologen den _mere exposure effect_ nennen. Wenn wir einen sich wiederholenden Abschnitt einer Musik hören, versucht unser Gehirn, sich die nächste Note vorzustellen, bevor sie gespielt wird und das gibt uns das Gefühl, daran beteiligt zu sein. Ebenso kann der Hörer bei jeder Wiederholung eines Musikabschnitts andere Details des Stücks wahrnehmen, da sich das Gehirn nicht mehr auf die Verarbeitung des rohen melodischen Inhalts konzentrieren muss.
 
-Der Kontrast bezieht sich auf Unterschiede in aufeinander folgenden Abschnitten der Musik, die ein wichtiges Gleichgewicht zur Wiederholung darstellen. Der Kontrast wird benutzt, um dem Zuhörer neue Elemente zu zeigen. Musiker setzen Kontraste durch rhythmische Veränderungen, neue melodische Linien und Harmonien oder Variationen bei den verwendeten Instrumenten oder Klängen.
+Der Kontrast bezieht sich auf Unterschiede in aufeinander folgenden Abschnitten der Musik, die ein wichtiges Gleichgewicht zur Wiederholung darstellen. Der Kontrast wird benutzt, um dem Zuhörer neue Elemente zu zeigen. Musiker setzen Kontraste durch rhythmische Veränderungen, neue melodische Linien und Harmonien oder Variationen bei den verwendeten Instrumenten oder Sounds.
 
 .ÜBUNG
 ****
@@ -323,8 +323,8 @@ Erstelle einen kompletten Song mit:
 * Die Funktionen `fitMedia()` und `makeBeat()`
 * Einem oder mehreren for-loop(s) entweder mit `fitMedia()` oder `makeBeat()`
 * Mindestens vier Tracks
-* Mindestens sechzehn Takten
-* Mindestens einem hochgeladener Sound
+* Mindestens sechzehn Takte
+* Mindestens einen hochgeladenen Sound
 * Kommentaren und Variablen zum Organisieren des Codes
 
 Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst, die dir am besten gefallen. Du kannst deine Musik teilen!
@@ -341,9 +341,9 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 * `print()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
 * Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
 * Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
-* Der *Pitch (Tonhöhe)* eines Klangs bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Der *Pitch (Tonhöhe)* eines Sounds bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
 * Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
-* Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
+* Du kannst 3 Grundtracks für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [role="curriculum-javascript"]
 * Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im Loop Body sollte eingerückt werden.
@@ -351,9 +351,9 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 * `println()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
 * Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
 * Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
-* Der *Pitch (Tonhöhe)* eines Klangs bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Der *Pitch (Tonhöhe)* eines Sounds bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
 * Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
-* Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
+* Du kannst 3 Grundtracks für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [[chapter-questions]]
 === Fragen
@@ -404,7 +404,7 @@ Was von den folgenden ist NICHT etwas, das in der Konsole ausgegeben werden kann
 
 [question]
 --
-____ ist eine Tonqualität, die bestimmt, wie hoch oder niedrig es klingt.
+____ ist eine Soundqualität, die bestimmt, wie hoch oder niedrig es klingt.
 
 [answers]
 * Pitch
