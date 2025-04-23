@@ -1,4 +1,4 @@
-// Komplexe Envelopes: Mehrere setEffect()-Aufrufe auf einer Spur verwenden, um Änderungen an der Effekt-Envelope vorzunehmen
+// Komplexe Envelopes: Mehrere setEffect()-Aufrufe auf einem Track verwenden, um Änderungen an der Effekt-Envelope vorzunehmen
 
 // Setup
 setTempo (120);
