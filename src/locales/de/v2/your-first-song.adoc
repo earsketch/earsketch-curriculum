@@ -25,14 +25,14 @@ Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits exis
 . Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
 --
 
-Die `setTempo()` Funktion bestimmt die Geschwindigkeit deines Songs. Das *tempo* ist eine Anzahl von Beats pro Minute (bpm) in westlicher Musik. In EarSketch ist das Standardtempo (d. h. der Ausgangswert des Tempos) auf 120 bpm eingestellt, was einer schnelleren Schrittgeschwindigkeit entspricht. Um das Tempo zu ändern, ändern Sie einfach die Zahl zwischen den Klammern der `setTempo()` Funktion. Je höher das Tempo, desto schneller ist deine Musik. Du kannst ein Tempo zwischen _45 und 220 bpm_ wählen.
+Die `setTempo()` Funktion bestimmt die Geschwindigkeit deines Songs. Das *tempo* ist eine Anzahl von Beats pro Minute (bpm) in westlicher Musik. In EarSketch ist das Standardtempo (d. h. der Ausgangswert des Tempos) auf 120 bpm eingestellt, was einer schnelleren Schrittgeschwindigkeit entspricht. Um das Tempo zu ändern, ändere einfach die Zahl zwischen den Klammern der `setTempo()` Funktion. Je höher das Tempo, desto schneller ist deine Musik. Du kannst ein Tempo zwischen _45 und 220 bpm_ wählen.
 
 .ÜBUNG
 ****
 . Erstelle ein neues Skript.
-. Platziere Sounds auf 2 verschiedenen Tracks
+. Platziere Sounds auf zwei verschiedenen Tracks
 . Ändere dein Tempo und höre dir den Song an.
-. Spiele einer Freundin oder einem Freund dein Lied in 3 verschiedenen Tempos vor. Bitte sie oder ihn dann, eine Rangfolge vom langsamsten zum schnellsten Tempo zu erstellen.
+. Spiele einer Freundin oder einem Freund dein Lied in drei verschiedenen Tempos vor. Bitte sie oder ihn dann, eine Rangfolge vom langsamsten zum schnellsten Tempo zu erstellen.
 ****
 
 Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Verschiedene Genres haben unterschiedliche Tempobereiche. Zum Beispiel:
@@ -74,7 +74,7 @@ Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die si
 
 .ÜBUNG
 ****
-. Wähle eine/-n Künstler/-in, den/die du wirklich magst, und finde heraus, welchem Genre er/sie angehört.
+. Wähle einen Künstler den du wirklich magst, und finde heraus, welchem Genre er angehört.
 . Suche nach diesem Genre (auf https://soundcloud.com/[Soundcloud] oder etwas Ähnlichem) und höre dir ein paar Ausschnitte von Songs in diesem Genre an.
 . Achte auf Ähnlichkeiten zwischen den Songs.
 . Du kannst auch auf Wikipedia recherchieren, um mehr Informationen über das Genre zu erhalten.
@@ -82,7 +82,7 @@ Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die si
 
 Die Sounds werden automatisch gestreckt und so an das Tempo deines Songs angepasst. Aus diesem Grund erscheinen im Sound-Browser angezeigte Sounds manchmal anders als in deinem Song. Die Wirkung kann extrem sein, wenn die Tempos sehr unterschiedlich sind.
 
-Um das originale Tempo des Sounds zu finden, fahre mit der Maus über die Soundkonstante Sound-Browser.
+Um das originale Tempo des Sounds zu finden, fahre mit der Maus über den Soundkonstante Sound-Browser.
 
 [[comments]]
 === Kommentare zu deinem Code hinzufügen
@@ -142,7 +142,7 @@ Musik und Kunst im Allgemeinen sind oft eine Möglichkeit, eine Botschaft zu ver
 . Überlege dir, was du zum Ausdruck bringen möchtest
 . Dann entweder:
 .. Schreibe einen Text und nimm dich selbst auf, wie du ihn singst oder liest oder
-.. Nimm einige Töne auf oder lade sie herunter, die mit deiner Botschaft in Verbindung stehen
+.. Nimm einige Töne, die mit deiner Botschaft in Verbindung stehen auf oder lade sie herunter
 . Füge diese Aufnahmen mit `fitMedia()` zu deinem Song hinzu
 . Füge dann zusätzliche Sounds mit `fitMedia()` hinzu
 . Zeige deinen Song deinem Freund
@@ -155,7 +155,7 @@ Wenn du einen Prozess startest, wird der Computercode zunächst im *Arbeitsspeic
 
 Der Arbeitsspeicher eines Computers wird manchmal als primärer Speicher oder RAM bezeichnet. Er ist so konzipiert, dass er schnell und temporär ist, nur für aktive Prozesse.
 
-Es gibt einen Unterschied zwischen Arbeitsspeicher (oder Kurzzeitspeicher) und Langzeitspeicher. Langzeitspeicher, wie eine Festplatte oder eine Cloud, werden als Sekundärspeicher bezeichnet. *Sekundärer Speicher* hält hohe Datenmengen für lange Zeiträume, auch nach dem Herunterfahren eines Computers. Die CPU interagiert nicht direkt mit dem Sekundärspeicher. Wenn die CPU einen Prozess ausführt, müssen die Daten aus dem Sekundärspeicher erst in den Arbeitsspeicher übertragen werden, damit die CPU schnell darauf zugreifen kann.
+Es gibt einen Unterschied zwischen Arbeitsspeicher (oder Kurzzeitspeicher) und Langzeitspeicher. Langzeitspeicher, wie eine Festplatte oder eine Cloud, werden als Sekundärspeicher bezeichnet. *Sekundärspeicher* hält hohe Datenmengen für lange Zeiträume, auch nach dem Herunterfahren eines Computers. Die CPU interagiert nicht direkt mit dem Sekundärspeicher. Wenn die CPU einen Prozess ausführt, müssen die Daten aus dem Sekundärspeicher erst in den Arbeitsspeicher übertragen werden, damit die CPU schnell darauf zugreifen kann.
 
 Manchmal stammen die Daten im Arbeitsspeicher, die die CPU verwenden soll, nicht aus dem Sekundärspeicher, sondern von einem Eingabegerät. *Inputs* sind die Signale oder Daten, die vom Computer empfangen werden, wie Audio von einem Mikrofon. Genauso sind *Outputs* die Signale oder Daten, die von ihm gesendet werden, wie Audio über einen Lautsprecher. Input/Output oder I/O ist die Art und Weise, wie der Computer mit der Außenwelt, einschließlich Menschen, kommuniziert!
 
@@ -272,7 +272,7 @@ Welche der folgenden Aussagen ist richtig?
 Wie erhältst du ein Urheberrecht?
 
 [answers]
-* Indem man ein neues Werk schafft und veröffentlicht
+* Indem du ein neues Werk schaffst und veröffentlichst
 * Indem du ein Patent erwirbst
 * Indem du einer Geheimorganisation beitrittst
 * Indem du eine Lizenz für dein Werk auswählst
