@@ -3,12 +3,12 @@
 
 :nofooter:
 
-Beim Programmieren kann man Dinge automatisieren. Ein Beispiel für Automatisierung ist die Programmierung eines Roboters, der anhält, wenn ein Hindernis erkannt wird. In diesem Szenario braucht der Roboter kein menschliches Wesen, um ihn manuell zu stoppen. Stattdessen wird der Roboter einen Sensor haben, um Hindernisse zu erkennen, und wenn es eins gibt, wird er stoppen. Wir können musikalische Automatisierungen in EarSketch mit Bedingungen (`if` Statements) durchführen. Wir werden sehen, wie man das Mischen der Spuren automatisiert. Mischen bedeutet, dass wir die Lautstärke eines Tracks reduzieren, wenn er zu laut ist, und die Lautstärke erhöhen, wenn er zu leise ist.
+Beim Programmieren kann man Dinge automatisieren. Ein Beispiel für Automatisierung ist die Programmierung eines Roboters, der anhält, wenn ein Hindernis erkannt wird. In diesem Szenario braucht der Roboter kein menschliches Wesen, um ihn manuell zu stoppen. Stattdessen wird der Roboter einen Sensor haben, um Hindernisse zu erkennen, und wenn es eins gibt, wird er stoppen. Wir können musikalische Automatisierungen in EarSketch mit Bedingungen (`if` Statements) durchführen. Wir werden sehen, wie man das Mischen der Tracks automatisiert. Mischen bedeutet, dass wir die Lautstärke eines Tracks reduzieren, wenn er zu laut ist, und die Lautstärke erhöhen, wenn er zu leise ist.
 
 [[analyzetrack]]
 === Verwende `analyzeTrack()`
 
-Wir werden sehen, wie man die Lautstärke eines Tracks erkennt. Achte darauf, dass du den Unterschied zwischen der Tonhöhe (hoch oder tief) und der Lautstärke (laut oder leise) eines Geräuschs kennst. Wir verwenden eine EarSketch Funktion namens `analyzeTrack()`. Importiere und führe folgenden Code aus:
+Wir werden sehen, wie man die Lautstärke eines Tracks erkennt. Achte darauf, dass du den Unterschied zwischen der Tonhöhe (hoch oder tief) und der Lautstärke (laut oder leise) eines Sounds kennst. Wir verwenden eine EarSketch Funktion namens `analyzeTrack()`. Importiere und führe folgenden Code aus:
 
 [role="curriculum-python"]
 [source,python]
@@ -39,7 +39,7 @@ Die `analyzeTrack()` Funktion benötigt 2 Argumente:
 . Füge einen zweiten Track hinzu und verwende die `analyzeTrack()` Funktion, um seine Lautstärke in der Konsole auszugeben. Wenn du den Code ausführst, höre, bevor du auf die Konsole schaust, deine Musik an und versuche zu erraten, welcher Track lauter ist.
 ****
 
-Der Parameter für `analyzeTrack()` kann entweder `RMS_AMPLITUDE` sein, um die Lautstärke zu bewerten, oder `SPECTRAL_CENTROID`, um die Helligkeit des Klangs zu analysieren. Wir werden uns in diesem Kapitel auf die Analyse der Lautstärke konzentrieren.
+Der Parameter für `analyzeTrack()` kann entweder `RMS_AMPLITUDE` sein, um die Lautstärke zu bewerten, oder `SPECTRAL_CENTROID`, um die Helligkeit des Sounds zu analysieren. Wir werden uns in diesem Kapitel auf die Analyse der Lautstärke konzentrieren.
 
 [[booleansandcomparisons]]
 === Booleans und Vergleiche
@@ -129,7 +129,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 * Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
 * Gib `True` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `False`.
-* Verwende einen for-loop mit dem Zähler `track`, um für jede Spur zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautstärke größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
 * Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `True` oder `False` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `True` oder `False` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚True‘ oder ‚False‘ ausgeben.
 ****
 
@@ -138,7 +138,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 * Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
 * Gib `true` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `false`.
-* Verwende einen for-loop mit dem Zähler `track`, um für jede Spur zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautstärke größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
 * Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `true` oder `false` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `true` oder `false` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚true‘ oder ‚false‘ ausgeben.
 ****
 
@@ -184,7 +184,7 @@ include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 .ÜBUNG
 ****
 * Erstelle ein neues Skript mit zwei Tracks.
-* Wenn der erste Titel lauter ist als der zweite, dann senke seine Lautstärke. Du brauchst die `analyzeTrack()` und `setEffect()` Funktionen sowie eine `if` Anweisung.
+* Wenn der erste Track lauter ist als der zweite, dann senke seine Lautstärke. Du brauchst die `analyzeTrack()` und `setEffect()` Funktionen sowie eine `if` Anweisung.
 * Du brauchst eine negative Verstärkung (zwischen -1dB und -60dB), um die Lautstärke zu reduzieren.
 ****
 
@@ -225,10 +225,10 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 .ÜBUNG
 ****
 * Erstelle ein neues Skript.
-* Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
+* Füge Sounds auf mindestens drei Tracks für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
-* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder eine Spur den du hervorheben möchtest.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder einen Track, den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Der percussive Track wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Soundimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `print()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `print(„Ist die Tracknummer“ + str(track) + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“. Die Funktion `str()` konvertiert eine Zahl (z.B.: `1`) in einen String (z.B.: `"1"`).
 ****
 
@@ -236,10 +236,10 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 .ÜBUNG
 ****
 * Erstelle ein neues Skript.
-* Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
+* Füge Sounds auf mindestens drei Tracks für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
 * Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Der percussive Track wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Soundimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `println()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `printIn(„Ist die Tracknummer“ + track + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“.
 ****
 
@@ -249,7 +249,7 @@ Lass uns ein paar Vokabeln wiederholen:
 1. *Ausdruck*: Eine Kombination von Werten, Konstanten, Variablen, Operatoren und Funktionen. Der Computer wertet Ausdrücke aus, um ein Ergebnis zu erzeugen, in der Regel ein einziger numerischer oder boolescher Wert.  Zum Beispiel: `1 + 2` (ausgewertet zu 3) oder `1 < 2` (ausgewertet zu True) oder `analyzeTrack(1, RMS_AMPLITUDE)` (ausgewertet zur Lautstärke des Titels `1`, ein Float zwischen 0 und 1).
 1.  *Anweisung*: Anleitung für die Ausführung des Computers.
 
-Unten findest du ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Töne änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
+Unten findest du ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Sounds änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
 
 [role="curriculum-python"]
 [source,python]
