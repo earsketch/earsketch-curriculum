@@ -192,7 +192,7 @@ In einem neuen Skript:
 . Gib das letzte Element deiner Listen aus.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erneut erstellen und ausgeben.
-. StringD, das Slice von StringC vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
+. `stringD`, das Slice von `stringC` vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
 . `soundsD`, das Slice von `soundsC` vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 ****
 
@@ -206,7 +206,7 @@ In einem neuen Skript:
 . Das letzte Element deiner Arrays ausgeben.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erneut erstellen und ausgeben.
-. StringD, das Slice von StringC vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
+. `stringD`, das Slice von `stringC` vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
 . `soundsD`, das Slice von `soundsC` vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 ****
 
@@ -247,10 +247,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle Percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-javascript"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle Percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in Ihrem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in Ihrem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-python"]
 [source,python]
@@ -297,7 +297,7 @@ Mit dem was du in diesem Kapitel gelernt hast, erstelle Rhythmen mit `makeBeat()
 [[evaluatingcorrectness]]
 === Korrektheit bewerten
 
-Herzlichen Glückwunsch, jetzt hast du musikalische und programmiertechnische Fähigkeiten erworben, die es dir ermöglichen, mit EarSketch kreativ zu sein! Eine letzte Sache, die wir sicherstellen wollen, ist, dass Ihr Code so sauber wie möglich ist. Hier sind einige Elemente, die du überprüfen kannst:
+Herzlichen Glückwunsch, jetzt hast du musikalische und programmiertechnische Fähigkeiten erworben, die es dir ermöglichen, mit EarSketch kreativ zu sein! Eine letzte Sache, die wir sicherstellen wollen, ist, dass dein Code so sauber wie möglich ist. Hier sind einige Elemente, die du überprüfen kannst:
 
 * *Conciseness* bedeutet einen kurzen Code, der sein Ziel mit weniger Zeilen erreicht. Hier sind einige Fragen, die dir helfen können, deinen Code prägnanter zu machen:
 ** Habe ich Function Calls mehrmals hintereinander kopiert? Wenn ja, vereinfache mit einem Loop!
