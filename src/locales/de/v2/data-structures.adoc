@@ -13,10 +13,10 @@ Jetzt stehen dir zahlreiche Tools zur Verfügung, um Lieder mit EarSketch zu ers
 === Was ist eine Datenstruktur
 
 [role="curriculum-python"]
-Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *Listen* zu organisieren. Eine *Liste*, in manchen Programmiersprachen auch ein Array genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
+Wenn du sehr lange Listen von Soundvariablen hast, ist es möglich, diese mit *Listen* zu organisieren. Eine *Liste*, in manchen Programmiersprachen auch ein Array genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
 
 [role="curriculum-javascript"]
-Wenn du sehr lange Listen von Klangvariablen hast, ist es möglich, diese mit *Arrays* zu organisieren. Ein *Array*, auch in einigen Programmiersprachen eine Liste genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
+Wenn du sehr lange Listen von Soundvariablen hast, ist es möglich, diese mit *Arrays* zu organisieren. Ein *Array*, auch in einigen Programmiersprachen eine Liste genannt, ist eine Sammlung von Werten, oder *Elementen*, zwischen Klammern (`[]`) und durch Kommata getrennt. Hier ein Beispiel:
 
 [role="curriculum-python"]
 [source,python]
@@ -39,7 +39,7 @@ Wenn du Variablen durch einen Array ersetzt hast, wie referenzierst du dann den 
 .ÜBUNG
 ****
 Erstelle eine Liste/ein Array mit drei Sounds.
-Mit drei `fitMedia()` werden dann drei Sounds auf die Titel `1`, `2` und `3` von Takt `1` bis `5` platziert.
+Mit drei `fitMedia()` werden dann drei Sounds auf die Tracks `1`, `2` und `3` von Takt `1` bis `5` platziert.
 ****
 
 Hier ein Beispiel:
@@ -191,7 +191,7 @@ In einem neuen Skript:
 . Gib das zweite Zeichen jedes Strings aus.
 . Gib das letzte Element deiner Listen aus.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
-. `stringC`, die Verkettung von `stringA` und `stringB`, erneut erstellen und ausgeben.
+. `soundsC`, die Verkettung von `soundsA` und `soundsB`, erneut erstellen und ausgeben.
 . `stringD`, das Slice von `stringC` vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
 . `soundsD`, das Slice von `soundsC` vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 ****
@@ -205,7 +205,7 @@ In einem neuen Skript:
 . Gib das zweite Zeichen jedes Strings aus.
 . Das letzte Element deiner Arrays ausgeben.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
-. `stringC`, die Verkettung von `stringA` und `stringB`, erneut erstellen und ausgeben.
+. `soundsC`, die Verkettung von `soundsA` und `soundsB`, erneut erstellen und ausgeben.
 . `stringD`, das Slice von `stringC` vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
 . `soundsD`, das Slice von `soundsC` vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 ****
@@ -247,10 +247,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-javascript"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Ton abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in Ihrem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deinem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-python"]
 [source,python]
@@ -332,7 +332,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu. Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
-* Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Spuren an).
+* Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 * Wenn nötig, füge einige Elemente in eine Liste.
 ****
@@ -346,7 +346,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu.  Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
-* Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Spuren an).
+* Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 * Wenn nötig, füge einige Elemente in einen Array.
 ****
@@ -362,7 +362,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Listen und Arrays können mit *Listenoperation*, einem Set von Tools zur Änderung einer Liste, verkettet und gesliced werden.
 * Die Syntax für das Erstellen einer Teilmenge einer Liste aus einer größeren, vorhandenen Liste ist `newList = oldList[startIndex: endIndex]`.
 * Listen können mit dem Verkettungsoperator, `+`, wie `newList = listA + listB` kombiniert werden.
-* `makeBeat()` kann Rhythmen aus mehreren Klängen gleichzeitig konstruieren, indem er in einem Beat-String übergeht, der auf verschiedene Listenindizes verweist. `makeBeat()` kann auf Sounds in Indizes 0 bis 9 zugreifen, vorausgesetzt, sie werden in der gleichen Liste gespeichert.
+* `makeBeat()` kann Rhythmen aus mehreren Sounds gleichzeitig konstruieren, indem er in einem Beat-String übergeht, der auf verschiedene Listenindizes verweist. `makeBeat()` kann auf Sounds in Indizes 0 bis 9 zugreifen, vorausgesetzt, sie werden in der gleichen Liste gespeichert.
 * Der Austausch konstruktiver Informationen mit anderen ist eine Form von *Peer-Feedback*. Es bietet die Möglichkeit, von anderen zu lernen.
 
 [role="curriculum-javascript"]
@@ -374,7 +374,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Die Syntax um ein Array aus einem größeren, existierenden Array herauszuschneiden, ist `newArray = oldArray.slice(startIndex, endIndex)`.
 * Die Syntax zum Slicing eines Substring aus einem größeren String ist `newString = oldString.substring(startIndex, endIndex)`.
 * Arrays können mit der Methode `concat()` kombiniert werden, wie `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` kann Rhythmen aus mehreren Sounds auf einmal erstellen, indem ein Beat-String übergeben wird, der sich auf verschiedene Array- Indexe bezieht. makeBeat()` kann auf Sounds in den Indexen 0 bis 9 zugreifen, sofern sie im selben Array gespeichert sind.
+* `makeBeat()` kann Rhythmen aus mehreren Sounds auf einmal erstellen, indem ein Beat-String übergeben wird, der sich auf verschiedene Array-Indexe bezieht. makeBeat()` kann auf Sounds in den Indexen 0 bis 9 zugreifen, sofern sie im selben Array gespeichert sind.
 * Der Austausch konstruktiver Informationen mit anderen ist eine Form von *Peer-Feedback*. Es bietet die Möglichkeit, von anderen zu lernen.
 
 [[chapter-questions]]
