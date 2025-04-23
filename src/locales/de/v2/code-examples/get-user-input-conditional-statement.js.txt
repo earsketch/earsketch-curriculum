@@ -1,4 +1,4 @@
-// Bedingte Anweisung: Verwendung eines Booleschen Wertes zur Erzeugung von Variationen in einer Funktion
+// Bedingte Anweisung: Verwendung eines booleschen Wertes zur Erzeugung von Variationen in einer Funktion
 
 // Setup
 setTempo(120);
