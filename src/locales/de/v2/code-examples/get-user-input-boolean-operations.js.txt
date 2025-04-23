@@ -3,7 +3,7 @@
 // Setup
 setTempo (120);
 
-// Sound-Variablen
+// Soundvariablen
 var kick = OS_KICK02;
 var hihat = OS_CLOSEDHAT04;
 var clap = OS_CLAP03;
