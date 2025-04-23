@@ -21,7 +21,7 @@ println(soundsB[soundsB.length - 1]);
 var stringC = stringA + stringB;
 println(stringC);
 
-// StringC, die Verkettung von StringA und StringB, nochmal erstellen und ausgeben.
+// soundsC, die Verkettung von soundsA und soundsB, nochmal erstellen und ausgeben.
 var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
 println(soundsC);
 
@@ -29,6 +29,6 @@ println(soundsC);
 var stringD = stringC.substring(1, 5);
 println(stringD);
 
-// StringD, das Stück von StringC vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
+// soundsD, das Stück von soundsC vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
 var soundsD = soundsC.slice(2, soundsC.length);
 println(soundsD);
