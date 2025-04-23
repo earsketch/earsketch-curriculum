@@ -1,4 +1,4 @@
-# Tippfehler: Korrektur
+# Type Error: Korrektur
 
 from earsketch import *
 setTempo(120)
