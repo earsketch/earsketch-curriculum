@@ -2,7 +2,7 @@
 
 setTempo(110);
 
-// Sound-Variablen
+// Soundvariablen
 var melody1 = EIGHT_BIT_ATARI_BASSLINE_005;
 var melody2 = DUBSTEP_LEAD_018;
 var melody3 = DUBSTEP_LEAD_017;
