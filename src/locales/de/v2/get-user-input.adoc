@@ -19,7 +19,7 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
 * Funktionen können nicht nur Eingaben (Parameter) entgegennehmen, sondern auch einen Wert ausgeben. In der Programmierung nennt man dies die Rückgabe eines Wertes.
-* Das *Return-Statement* ist eine Anweisung innerhalb des Funktion Bodys, dass: A. einer Funktion sagt, dass sie einen Wert zurückgeben soll, wenn sie aufgerufen wird. B. der Funktion signalisiert, dass sie aufhören soll. Wenn du irgendwelche Anweisungen nach dem »Return«-Schlüsselwort hast, werden diese ignoriert.
+* Das *Return-Statement* ist eine Anweisung innerhalb des Funktion Bodys, die: A. einer Funktion sagt, dass sie einen Wert zurückgeben soll, wenn sie aufgerufen wird. B. der Funktion signalisiert, dass sie aufhören soll. Wenn du irgendwelche Anweisungen nach dem »Return«-Schlüsselwort hast, werden diese ignoriert.
 * Um den von der Funktion zurückgegebenen Wert zu verwenden, erstelle eine Variable und teile ihr den Function Call zu.
 * Ein return statement ist nicht zwingend erforderlich. Ohne return statement gibt eine Funktion keinen Wert aus. `fitMedia()` und `setEffect()` sind Beispiele für Funktionen, die nichts zurückgeben.
 
@@ -167,7 +167,7 @@ Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 
 Hier sind Ideen von Tools, die du verwenden kannst:
 
-. string Verkettung,
+. String-Verkettung,
 . Datenkonvertierung,
 . Erstellung eines bestimmten Parameters in einer benutzerdefinierten Funktion
 ****
@@ -197,7 +197,7 @@ Sehen wir uns nun die *Booleschen Operatoren* an: Mit ihnen lassen sich mehrere 
 * `||`: heißt "oder"; es benötigt zwei boolsche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
 * `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt das entgegengesetzte (negierte) Boolean zurück.
 
-Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (wahr und falsch) ist falsch, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. Aber der Satz "Ich bin sechzehn or siebzehn Jahre alt" (true or false) ist wahr.
+Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (true and false) ist false, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. Aber der Satz "Ich bin sechzehn or siebzehn Jahre alt" (true or false) ist true.
 
 [role="curriculum-python"]
 .ÜBUNG
@@ -369,7 +369,7 @@ Welches der folgenden ist ein Beispiel für eine Verkettung?
 [role="curriculum-python"]
 [question]
 --
-Wie würden Sie die boolesche Wahrheit mit den Booleans True and False erhalten?
+Wie würdest du die boolesche Wahrheit mit den Booleans True and False erhalten?
 
 [answers]
 * `True or False`
@@ -381,7 +381,7 @@ Wie würden Sie die boolesche Wahrheit mit den Booleans True and False erhalten?
 [role="curriculum-javascript"]
 [question]
 --
-Wie würden Sie die boolesche Wahrheit mit den Booleans True and False erhalten?
+Wie würdest du die boolesche Wahrheit mit den Booleans True and False erhalten?
 
 [answers]
 * `true||false`
