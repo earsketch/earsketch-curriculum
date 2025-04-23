@@ -27,5 +27,5 @@ elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
 else:
     print("Sorry we couldn't read the genre you selected. Please run the code again.")
 
-# Füge Reverb auf Track 2 hinzu
+# Reverb auf Track 2 hinzufügen
 setEffect(2, REVERB, MIX, 0.1)
