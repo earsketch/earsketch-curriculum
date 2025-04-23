@@ -19,5 +19,5 @@ def expander(beatString):
 finalBeat = expander(initialBeat)
 print(finalBeat)
 
-# makeBeat(drumInstr, 1, 1, initialBeat) # ursprünglicher beat string
+# makeBeat(drumInstr, 1, 1, initialBeat) # ursprünglicher Beat String
 makeBeat(drumInstr, 1, 1, finalBeat)
