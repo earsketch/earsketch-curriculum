@@ -29,7 +29,7 @@ Wir verwenden die Funktion `setEffect()`, die vier Argumente enthält, ähnlich 
 
 .ÜBUNG
 ****
-Schreibe einen neuen Song mit zwei Titeln und ändere die Lautstärke für beide Titel mit der `setEffect()` Funktion.
+Schreibe einen neuen Song mit zwei Tracks und ändere die Lautstärke für beide Tracks mit der `setEffect()` Funktion.
 In diesem Fall ist der Effekt-Name (zweites Argument) `VOLUME`, und der Effekt-Parameter (drittes Argument) ist `GAIN`. Der Effektwert (viertes Argument) ist eine Anzahl von Dezibel (dB), zwischen `-60` und `+12`.
 ****
 
@@ -63,7 +63,7 @@ Verzögerungseffekt:
 
 In diesem Fall lautet der Effektname (zweites Argument) `DELAY`, und der Effektparameter (drittes Argument) kann entweder `DELAY_TIME` (wie lange, bevor das Echo „antwortet“) oder `DELAY_FEEDBACK` (wie laut Ihr Echo ist) sein. Der Wert von `DELAY_TIME` ist in Millisekunden (1000 Millisekunden ist eine Sekunde) und der Wert von `DELAY_FEEDBACK` ist eine Zahl zwischen `-120` und `-1`.
 
-Zum Beispiel setzt `setEffect(1, DELAY, DELAY_TIME, 500)` eine Verzögerung auf Spur 1, wobei die Verzögerung/das Echo 500 ms dauert.
+Zum Beispiel setzt `setEffect(1, DELAY, DELAY_TIME, 500)` eine Verzögerung auf Track 1, wobei die Verzögerung/das Echo 500 ms dauert.
 
 .ÜBUNG
 ****
@@ -118,9 +118,9 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-*Reverb* (Nachhall) ist Schall, der von Wänden abprallt und zu den Ohren zurückkehrt. Es gibt deinem Sound ein Gefühl von Raum. Denke an den Unterschied zwischen einem Gespräch in einem kleinen Schlafzimmer und einem Gespräch in einer großen Kirche. Je größer und „flacher“ der Raum ist, desto länger dauert es, bis die Wellen zu Ihren Ohren zurückkehren, deshalb der „große, hallige Raum“. Der Effekt `REVERB` hat Parameter, um die Abklingzeit (`REVERB_DECAY`) und die Menge des vorhandenen Effekts (`MIX`) zu steuern.
+*Reverb* (Nachhall) ist Schall, der von Wänden abprallt und zu den Ohren zurückkehrt. Es gibt deinem Sound ein Gefühl von Raum. Denke an den Unterschied zwischen einem Gespräch in einem kleinen Schlafzimmer und einem Gespräch in einer großen Kirche. Je größer und „flacher“ der Raum ist, desto länger dauert es, bis die Wellen zu deinen Ohren zurückkehren, deshalb der „große, hallige Raum“. Der Effekt `REVERB` hat Parameter, um die Abklingzeit (`REVERB_DECAY`) und die Menge des vorhandenen Effekts (`MIX`) zu steuern.
 
-Höre dir die folgenden Clips an, um das Ergebnis des Hinzufügens von Hall zu einer Spur zu hören:
+Höre dir die folgenden Clips an, um das Ergebnis des Hinzufügens von Hall zu einem Track zu hören:
 
 Kein Effekt:
 
@@ -158,7 +158,7 @@ image::../media/U2/NewEnvelope.png[Alt Text]
 
 Um eine Envelope zu ändern, brauchst du nur die `setEffect()` Funktion mit sieben Argumenten (die letzten vier Argumente sind die beiden Wertzeitpaare):
 
-. track
+. Track
 . type
 . parameter
 . startValue
@@ -207,7 +207,7 @@ include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 
 .ÜBUNG
 ****
-Erstelle einen neuen Song. Benutze einen for-loop, um eine Envelope zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf der gleiche Spur zu wiederholen. Du kannst jeden gewünschten Effekt verwenden.
+Erstelle einen neuen Song. Benutze einen for-loop, um eine Envelope zu allen Tracks hinzuzufügen (z.B. Ein- und Ausblenden für alle Tracks möglich), oder um einen Effekt auf dem gleichen Track zu wiederholen. Du kannst jeden gewünschten Effekt verwenden.
 Lass deinen Nachbarn deinen Song hören, mit und ohne den Effekt (um deinen Song ohne den Effekt zu hören entkommentiere die Zeilen, die den Effekt erzeugen). Dein Nachbar muss erraten, welchen Effekt du hinzugefügt hast.
 ****
 
@@ -245,7 +245,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 === Zusammenfassung von Kapitel 5
 
 * *Effekte* ändern die Eigenschaften eines Sounds, um sie einzigartig zu machen.
-* Das *Volume* bezieht sich auf die Lautstärke. *Delay* erzeugt ein Echo. *Reverb* fühlt sich an, als würde der Ton in einem großen Raum gespielt. *Panning* platziert deine Musik auf der linken oder rechten Seite.
+* Das *Volume* bezieht sich auf die Lautstärke. *Delay* erzeugt ein Echo. *Reverb* fühlt sich an, als würde der Sound in einem großen Raum gespielt. *Panning* platziert deine Musik auf der linken oder rechten Seite.
 * Effekte werden in EarSketch mit der Funktion `setEffect()` eingefügt. Seine Syntax ist `setEffect(track, type, parameter, value)`.
 . *track*: Tracknummer oder `MIX_TRACK`
 . *type*: Effektkonstante, wie `DELAY`
