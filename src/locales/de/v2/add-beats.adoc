@@ -270,7 +270,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
 * *Variablen* erstellen einen Platz im Computerspeicher, um Daten zu speichern.
 * Sie müssen zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
-* Ein *string* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
+* Ein *String* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
 * Percussive Sounds können mit dem GENRE-Filter im Sound Browser gefunden werden: Wählen Sie den Künstler MAKEBEAT aus.
 * Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat-String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
 * `makeBeat()` verwendet vier Argumente:
@@ -296,7 +296,7 @@ Welche dieser Optionen ist ein String?
 
 [question]
 --
-Was bedeutet die „0“ in einer Zeichenfolge für ein Beat-Muster?
+Was bedeutet die „0“ in einem Beat-Muster-String?
 
 [answers]
 * Wiedergabe des Clips starten
