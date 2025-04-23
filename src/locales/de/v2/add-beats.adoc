@@ -18,7 +18,7 @@ video::./videoMedia/002-05-Variables-JS.mp4[]
 
 Was ist eine Variable? Eine *Variable* ist ein Name für eine Datenmenge, die wir später in unserem Programm verwenden wollen.
 
-In EarSketch können die Variablen in Ihren Skripten verweisen auf:
+In EarSketch können die Variablen in deinen Skripten verweisen auf:
 
 * Eine *Zahl*, wie eine Tracknummer oder eine Taktnummer
 * Eine *Datei*, wie eine Audiodatei
@@ -74,7 +74,7 @@ include::code-examples/add-beats-variables.py.txt[]
 include::code-examples/add-beats-variables.js.txt[]
 ----
 
-Beachte, dass es wichtig ist, deine Variable verständlich und aussagekräftig zu benennen. Gib zum Beispiel `synth1` anstelle von `music1` oder `test` an, was keine Informationen liefert. Wenn du oder jemand anderes deinen Code liest, kann er/sie so erkennen, worauf du dich beziehst.
+Beachte, dass es wichtig ist, deine Variable verständlich und aussagekräftig zu benennen. Gib zum Beispiel `synth1` anstelle von `music1` oder `test` an, was keine Informationen liefert. Wenn du oder jemand anderes deinen Code liest, kann er so erkennen, worauf du dich beziehst.
 
 Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert einer Konstante ändert sich jedoch nie. Zum Beispiel ist `TECHNO_SYNTHPLUCK_001` eine Konstante in EarSketch , sie bezieht sich auf die entsprechende Soundkonstante. Konventionell werden Konstantennamen großgeschrieben und verwenden Unterstriche anstelle von Leerzeichen.
 
@@ -83,17 +83,17 @@ Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert e
 
 Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 
-* *Rhythmus* ist ein Klangmuster, das oft wiederholt wird.
+* *Rhythmus* ist ein Soundmuster, das oft wiederholt wird.
 * Das *Tempo* ist die Geschwindigkeit der Musik in BPM (beats per minute).
 * Ein *Beat* ist wie der "stetige Puls" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
-* Ein *Takt* ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
+* Ein *Takt* (measure) ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
 * Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in 2 *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
 * Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e and a 2 e and a 3 e and a 4 e and a. .."
 * 1 Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
-* Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW können Sie das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
+* Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW kannst du das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
 
 [[imediameasurepng]]
-.Ein Takt
+.Ein Takt (measure)
 [caption="Figure 3.2.1: "]
 image::../media/U1P1/measure.png[A measure]
 
@@ -182,7 +182,7 @@ video revamping tab
 [[makebeat]]
 === Die `makeBeat()` Funktion
 
-Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden wir den Begriff „Beat“ als Abkürzung für Drumbeat: ein wiederholtes rhythmisches Muster aus perkussiven Klängen. Wir werden die `makeBeat()` Funktion mit 4 Argumenten verwenden:
+Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden wir den Begriff „Beat“ als Abkürzung für Drumbeat: ein wiederholtes rhythmisches Muster aus perkussiven Sounds. Wir werden die `makeBeat()` Funktion mit 4 Argumenten verwenden:
 
 . *Sound*: Eine Soundkonstante. Sie können den Genrefilter im Sound-Browser verwenden, um "MAKEBEAT" auszuwählen. Dies sind kurze Klänge passend für Beat Patterns.
 . *Track*: Die Tracknummer
@@ -220,7 +220,7 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 .ÜBUNG
 ****
 Erstelle eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
-Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Spur `1` hinzuzufügen.
+Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Track `1` hinzuzufügen.
 Bitte beachte Folgendes:
 
 . Du solltest deine Variablen durch das Symbol `=` zuweisen, bevor du sie verwendest.
@@ -235,7 +235,7 @@ Wenn du deine Musik hörst und dir die erste Version nicht gefällt, ist das vö
 .ÜBUNG
 ****
 Erstelle ein neues Skript und füge zwei oder drei Sounds mit `fitMedia()` hinzu. Verwende Variablen, um deine Soundkonstanten zu speichern.
-Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzufügen. Du kannst sie entweder gleichzeitig auf zwei verschiedenen Spuren oder nacheinander auf einer einzigen Spur abspielen.
+Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzufügen. Du kannst sie entweder gleichzeitig auf zwei verschiedenen Tracks oder nacheinander auf einem einzigen Track abspielen.
 ****
 
 [[beatsandgenres]]
@@ -244,7 +244,7 @@ Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzu
 Nachdem du nun angefangen hast, mit `makeBeat()` und Beat-Strings zu arbeiten, lass uns einige grundlegende Beat-Patterns erkunden, die du verwenden kannst.
 Du hast gelernt, dass ein Musikgenre eine Kategorie der künstlerischen Komposition (z. B. Musik) ist, die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Genauso haben einige Genres auch charakteristische Beat-Muster. Im Folgenden findest du einige Beispiele:
 
-Wir werden drei Arten von Sounds verwenden: Kick (Spur `1`), Snare (Spur `2`) und Hihat (Spur `3`). Wir werden für jeden dieser Sounds eine `makeBeat()` Funktion auf drei verschiedenen Spuren verwenden.
+Wir werden drei Arten von Sound verwenden: Kick (Spur `1`), Snare (Spur `2`) und Hihat (Spur `3`). Wir werden für jeden dieser Sounds eine `makeBeat()` Funktion auf drei verschiedenen Tracks verwenden.
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -269,9 +269,9 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 
 * In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
 * *Variablen* erstellen einen Platz im Computerspeicher, um Daten zu speichern.
-* Sie müssen zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
+* Du musst zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
 * Ein *String* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
-* Percussive Sounds können mit dem GENRE-Filter im Sound Browser gefunden werden: Wählen Sie den Künstler MAKEBEAT aus.
+* Percussive Sounds können mit dem GENRE-Filter im Sound-Browser gefunden werden: Wähle den Künstler MAKEBEAT aus.
 * Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat-String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
 * `makeBeat()` verwendet vier Argumente:
 ** *Sound*: Eine Soundkonstante
@@ -324,7 +324,7 @@ Eine sechzehntel Note ist...
 * ein Viertel einer Viertelnote
 * ein halber Schlag
 * ein Viertel eines Taktes
-* 1 Takt
+* 1 Takt (measure)
 --
 
 [question]
@@ -332,8 +332,8 @@ Eine sechzehntel Note ist...
 Um die `makeBeat()` Funktion zu verwenden, wie ist die Reihenfolge der Parameter, die du angeben musst?
 
 [answers]
-* Clipname, Spur, Starttakt, Beat String
-* Tempo, Spur, Starttakt, Endtakt
+* Clipname, Track, Starttakt, Beat String
+* Tempo, Track, Starttakt, Endtakt
 * Clipname, Starttakt, Endtakt, Beat String
-* Beat String, Spur, Starttakt, Clipname
+* Beat String, Track, Starttakt, Clipname
 --
