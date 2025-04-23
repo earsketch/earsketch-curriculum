@@ -1,4 +1,4 @@
-// analyzeTrack(): Benutze die Funktion analyzeTrack() um die Lautstärke einer Spur auszugeben
+// analyzeTrack(): Benutze die Funktion analyzeTrack() um die Lautstärke eines Tracks auszugeben
 
 // Setup
 setTempo(120);
