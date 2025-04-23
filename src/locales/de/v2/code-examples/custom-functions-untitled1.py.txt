@@ -4,4 +4,4 @@ def AbschnittA():
     fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # drums
     fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # bass line
     setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); # zunehmende Lautstärke der Basslinie
-    # Dieser Code ist eingerückt. Wenn Sie den Rest Ihres Skripts schreiben, stellen Sie sicher, dass Sie nicht mehr einrücken.
+    # Dieser Code ist eingerückt. Wenn du den Rest deines Skripts schreibst, stelle sicher, dass du nicht mehr einrückst.
