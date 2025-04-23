@@ -31,7 +31,7 @@ In der Konsole kannst du lesen, dass die ausgegebene Lautstärke 0.1030603510911
 Die `analyzeTrack()` Funktion benötigt 2 Argumente:
 
 . *Track*: Die Tracknummer
-. *feature*: Analyse-Konstante, wie `RMS_AMPLITUDE`
+. *Feature*: Analyse-Konstante, wie `RMS_AMPLITUDE`
 
 .ÜBUNG
 ****
