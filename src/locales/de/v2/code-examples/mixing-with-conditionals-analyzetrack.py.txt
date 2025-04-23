@@ -1,4 +1,4 @@
-# analyzeTrack(): Verwenden der analyzeTrack() Funktion um die Lautstärke einer Spur auszugeben
+# analyzeTrack(): Verwenden der analyzeTrack() Funktion um die Lautstärke eines Tracks auszugeben
 
 # Setup
 from earsketch import *
