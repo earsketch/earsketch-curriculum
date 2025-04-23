@@ -281,7 +281,7 @@ OPTIONAL
 Hier ist die Lösung
 
 . Der `setTempo()` Funktion fehlt eine Klammer
-. Der ersten `fitMedia()` fehlt ein `e`
+. Der ersten `fitMedia()` fehlt ein `env
 . Dem ersten `fitMedia()` fehlt ein Komma zwischen dem dritten und dem vierten Parameter
 . Dem zweiten `fitMedia()` fehlt ein Großbuchstaben `M`
 . In der zweiten `fitMedia()` ist die Reihenfolge der Parameter nicht korrekt: Es sollte der Name des Soundclips sein und dann die Tracknummer
