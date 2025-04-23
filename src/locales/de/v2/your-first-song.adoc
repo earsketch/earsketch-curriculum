@@ -123,11 +123,11 @@ include::code-examples/your-first-song-comments.js.txt[]
 
 Du kannst deine eigenen Sounds über den Sound-Browser auf der linken Seite deines Bildschirms hochladen. Klicke unter der Registerkarte „Sounds“ auf die Schaltfläche „Sound hinzufügen“.
 
-Du musst eingeloggt sein, um Töne hochzuladen.
+Du musst eingeloggt sein, um Sound hochzuladen.
 
 Lass uns die ersten drei Optionen erkunden.
 
-. *Upload Sound* erlaubt dir Audiodateien auf Ihrem Computer auszuwählen.
+. *Upload Sound* erlaubt dir Audiodateien auf deinem Computer auszuwählen.
 . *Quick Record* ermöglicht die Aufnahme direkt vom Mikrofon deines Computers.
 . *Freesound* erlaubt dir den Import von Sounds von http://freesound.org[freesound.org^], einer Open-Source-Audio-Datenbank. In der Suchleiste kannst du nach einem Soundtyp suchen. Wähle dann die Umschalttaste vor dem Dateinamen, um die Datei auszuwählen.
 
@@ -142,7 +142,7 @@ Musik und Kunst im Allgemeinen sind oft eine Möglichkeit, eine Botschaft zu ver
 . Überlege dir, was du zum Ausdruck bringen möchtest
 . Dann entweder:
 .. Schreibe einen Text und nimm dich selbst auf, wie du ihn singst oder liest oder
-.. Nimm einige Töne, die mit deiner Botschaft in Verbindung stehen auf oder lade sie herunter
+.. Nimm einige Sounds auf, die mit deiner Botschaft in Verbindung stehen oder lade welche herunter
 . Füge diese Aufnahmen mit `fitMedia()` zu deinem Song hinzu
 . Füge dann zusätzliche Sounds mit `fitMedia()` hinzu
 . Zeige deinen Song deinem Freund
@@ -159,7 +159,7 @@ Es gibt einen Unterschied zwischen Arbeitsspeicher (oder Kurzzeitspeicher) und L
 
 Manchmal stammen die Daten im Arbeitsspeicher, die die CPU verwenden soll, nicht aus dem Sekundärspeicher, sondern von einem Eingabegerät. *Inputs* sind die Signale oder Daten, die vom Computer empfangen werden, wie Audio von einem Mikrofon. Genauso sind *Outputs* die Signale oder Daten, die von ihm gesendet werden, wie Audio über einen Lautsprecher. Input/Output oder I/O ist die Art und Weise, wie der Computer mit der Außenwelt, einschließlich Menschen, kommuniziert!
 
-Betrachten wir die Aufnahme eines Sounds in EarSketch als Beispielprozess. Zuerst nehmen wir mit dem Eingabegerät, dem Mikrofon, Daten auf dem Computer auf. Die CPU speichert diese Audiodaten in ihrem Speicher. Wenn du die Abspieltaste drückst, um deine Aufnahme zu hören, greift die CPU auf die Daten zu und sendet sie an einen Ausgang, also an die Lautsprecher oder Kopfhörer. Wenn du die Upload-Taste drückst, führt die CPU einen Prozess aus, der die Audiodaten in ein Standard-Tondateiformat (eine WAV-Datei, oder .wav) umwandelt und an den EarSketch-Server sendet. Der Server ist ein externes System, das allen EarSketch-Benutzern Dienste zur Verfügung stellt, auch deinem eigenen Computer. Der EarSketch-Server speichert die Tondatei auf dem Sekundärspeicher des Servers, damit du in Zukunft darauf zugreifen kannst.
+Betrachten wir die Aufnahme eines Sounds in EarSketch als Beispielprozess. Zuerst nehmen wir mit dem Eingabegerät, dem Mikrofon, Daten auf dem Computer auf. Die CPU speichert diese Audiodaten in ihrem Speicher. Wenn du die Abspieltaste drückst, um deine Aufnahme zu hören, greift die CPU auf die Daten zu und sendet sie an einen Ausgang, also an die Lautsprecher oder Kopfhörer. Wenn du die Upload-Taste drückst, führt die CPU einen Prozess aus, der die Audiodaten in ein Standard-Tondateiformat (eine WAV-Datei, oder .wav) umwandelt und an den EarSketch-Server sendet. Der Server ist ein externes System, das allen EarSketch-Benutzern Dienste zur Verfügung stellt, auch deinem eigenen Computer. Der EarSketch-Server speichert die Sounddatei auf dem Sekundärspeicher des Servers, damit du in Zukunft darauf zugreifen kannst.
 
 Sieh dir das folgende Zusatzvideo an:
 
@@ -182,11 +182,11 @@ Bei einem Lied gibt es zwei Urheberrechte: die Rechte am Lied (vom Autor oder Ko
 
 *Urheberrechtsverletzung* ist eine Verletzung des Urheberrechts, wie zum Beispiel das illegale Herunterladen von Musik. In den Vereinigten Staaten erlaubt *fair use* die Verwendung von urheberrechtlich geschützten Inhalten unter bestimmten Bedingungen wie erzieherische oder kritische Zwecke, wobei nur geringe Mengen der Arbeit wiederverwendet werden. Streitigkeiten über eine gerechte Nutzung werden von einem Richter von Fall zu Fall entschieden.
 
-Neben der fairen Nutzung gibt es auch andere Möglichkeiten, Musik offen zu nutzen und zu teilen. EarSketch funktioniert, weil Künstlerinnen und Künstler ihre Arbeit in Form von *Samples* (also kleinen Teilen von Soundaufnahmen) in der Sound-Bibliothek mit dir geteilt haben.
+Neben der fairen Nutzung gibt es auch andere Möglichkeiten, Musik offen zu nutzen und zu teilen. EarSketch funktioniert, weil Künstlerinnen und Künstler ihre Arbeit in Form von *Samples* (also kleinen Teilen von Soundaufnahmen) im Sound-Browser mit dir geteilt haben.
 
 Bei dem Urheberrecht geht es nicht nur darum, Menschen in Schwierigkeiten zu bringen. Wenn du einen Song ins Internet hochlädst, macht es dir vielleicht nichts aus, wenn jemand ihn ohne Fragen herunterlädt; du möchtest, dass Leute deine Musik teilen! Das Urheberrecht sollte uns helfen, mehr Kunst zu machen und zu teilen, nicht weniger. Wenn du Songs in EarSketch erstellst, möchten wir, dass du weniger an _Diebstahl_ und mehr an _Austausch_ denkst. EarSketch funktioniert, weil Künstler ihre Arbeit mit dir geteilt haben, was zu einer Bibliothek von Samples geführt hat, die du zum Erstellen neuer Musik verwendest. Wenn du deine Musik weitergibst oder anderen Mitschülern erlaubst, deinen Code zu remixen, trägst du damit dazu bei, dass neue Kunst in die Welt kommt.
 
-Wenn du Töne in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Töne zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
+Wenn du Sounds in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Sounds zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
 
 Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^].
 
@@ -195,7 +195,7 @@ Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^]
 
 [role="curriculum-python"]
 * Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
-* Die Clips in der Sound-Bibliothek von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Die Clips im Sound-Browser von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
 * Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
 * `from earsketch import *` fügt die EarSketch-API zu deinem Projekt hinzu.
 * `setTempo()` lässt dich das Tempo deines Songs angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
@@ -209,7 +209,7 @@ Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^]
 
 [role="curriculum-javascript"]
 * Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
-* Die Clips in der Sound-Bibliothek von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Die Clips im Sound-Browser von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
 * Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
 * `setTempo();` lässt dich das Tempo deines Liedes angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
 * Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
@@ -240,7 +240,7 @@ Was ist die Maßeinheit für das Tempo?
 
 [answers]
 * Beats per Minute (BPM)
-* Takte
+* Takte (measures)
 * Dezibel (dB)
 * Sekunden
 --
