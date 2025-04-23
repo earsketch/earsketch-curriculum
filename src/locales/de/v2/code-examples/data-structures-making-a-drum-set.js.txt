@@ -4,7 +4,7 @@
 setTempo(100);
 
 // Musik
-# Vorher hatten wir eine Spur für jeden Sound (measure 1):
+# Vorher hatten wir einen Track für jeden Sound (Takt 1):
 var kick = OS_KICK05;
 var snare = OS_SNARE01;
 var kickBeat = "0+++----0+++----";
