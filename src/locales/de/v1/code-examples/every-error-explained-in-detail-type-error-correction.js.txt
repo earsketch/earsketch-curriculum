@@ -1,4 +1,4 @@
-// Tippfehler: Korrektur
+// Type Error: Korrektur
 
 setTempo (120);
 
