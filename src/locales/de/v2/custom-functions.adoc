@@ -3,7 +3,7 @@
 
 :nofooter:
 
-Die Songstruktur ist die Organisation des Songs im Laufe der Zeit. Das Ziel ist es, sinnvolle Abschnitte und Übergänge für den Fluss Ihrer Musik zu erstellen. In diesem Kapitel wirst du deine eigene Funktionen, benutzerdefinierte Funktionen, erstellen, um deine Songs zu strukturieren!
+Die Songstruktur ist die Organisation des Songs im Laufe der Zeit. Das Ziel ist es, sinnvolle Abschnitte und Übergänge für den Fluss deiner Musik zu erstellen. In diesem Kapitel wirst du deine eigene Funktionen, benutzerdefinierte Funktionen, erstellen, um deine Songs zu strukturieren!
 
 [[asongsstructure]]
 === Struktur eines Songs
@@ -12,7 +12,7 @@ Die Songstruktur ist die Organisation des Songs im Laufe der Zeit. Das Ziel ist 
 
 Ein Song kann in *Abschnitte* unterteilt werden. Ein Abschnitt besteht aus mehreren Takten (musikalische Zeiteinheiten) und drückt eine Idee oder ein Gefühl aus. In der Regel versuchen Musiker einen Kontrast zwischen verschiedenen Abschnitten hinzuzufügen. _Intro, Verse, Chorus_, und _Outro_ sind Beispiele für Abschnitte.
 
-Eine übliche und einfache *Form*, oder Liedstruktur, ist ABA. A und B sind zwei verschiedene Abschnitte, zum Beispiel Chorus und Vers. Der B-Teil sorgt für Abwechslung, während die Rückkehr zum A-Teil Vertrautheit hervorruft. Der folgende Code erstellt eine ABA-Form. Abschnitt B bietet Kontrastgeräusche zu Abschnitt A - einen langsameren und lauteren Bass und ein zusätzliches Rasseln:
+Eine übliche und einfache *Form*, oder Liedstruktur, ist ABA. A und B sind zwei verschiedene Abschnitte, zum Beispiel Chorus und Vers. Der B-Teil sorgt für Abwechslung, während die Rückkehr zum A-Teil Vertrautheit hervorruft. Der folgende Code erstellt eine ABA-Form. Abschnitt B bietet Kontrastsounds zu Abschnitt A - einen langsameren und lauteren Bass und ein zusätzliches Rasseln:
 
 [[imediau2sections_052016png]]
 .Eine ABA-Form innerhalb der EarSketch DAW
@@ -69,7 +69,7 @@ Das liegt daran, dass du eine Funktion *aufrufen* musst, um sie zu verwenden.
 Um deine Funktion aufzurufen, füge die Zeile `sectionA()`, nicht eingerückt, nach deiner Funktionsdefinition ein. Beim Ausführen des Codes solltest du Abschnitt A in deiner DAW sehen
 ****
 
-Nun wollen wir Abschnitt A von den Takten neun bis dreizehn hinzufügen. Wenn wir jedoch `sectionA()` aufrufen, werden die Töne von Takt eins bis fünf platziert. Um dieses Problem zu beheben, erstellen wir *Parameter* für unsere Funktion.
+Nun wollen wir Abschnitt A von den Takten neun bis dreizehn hinzufügen. Wenn wir jedoch `sectionA()` aufrufen, werden die Sounds von Takt eins bis fünf platziert. Um dieses Problem zu beheben, erstellen wir *Parameter* für unsere Funktion.
 
 .ÜBUNG
 ****
@@ -109,7 +109,7 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Übergangsstrategien
 
-Jetzt, wo du weißt, wie du benutzerdefinierte Funktionen zur Strukturierung deines Songs erstellen kannst, wollen wir uns die Übergänge ansehen. *Übergänge* helfen einem Abschnitt reibungslos in den nächsten zu gehen. Sie können Strophe und Refrain verbinden, zu einem Drop aufbauen, zwischen Tracks mischen (DJing) oder die Tonart wechseln. Das Ziel eines Übergangs ist es, die Aufmerksamkeit des Zuhörers auf sich zu nehmen und ihm eine kommende Veränderung mitzuteilen.
+Jetzt, wo du weißt, wie du benutzerdefinierte Funktionen zur Strukturierung deines Songs erstellen kannst, wollen wir uns die Übergänge ansehen. *Übergänge* helfen einem Abschnitt reibungslos in den nächsten zu gehen. Du kannst Strophe und Refrain verbinden, zu einem Drop aufbauen, zwischen Tracks mischen (DJing) oder die Tonart wechseln. Das Ziel eines Übergangs ist es, die Aufmerksamkeit des Zuhörers auf sich zu nehmen und ihm eine kommende Veränderung mitzuteilen.
 
 Im Folgenden findest du einige beliebte Strategien zur Gestaltung musikalischer Übergänge:
 
@@ -117,7 +117,7 @@ Im Folgenden findest du einige beliebte Strategien zur Gestaltung musikalischer 
 . *Drum Fill*: Eine rhythmische Variation, um die Lücke vor einem neuen Abschnitt zu füllen.
 . *Track Silencing*: Schaltet einige Tracks für einen dramatischen Effekt vorübergehend stumm.
 . *Melody Variation*: Einführung einer Variation der Akkorde, Basslinie oder Melodie vor dem neuen Abschnitt. Oft enthält ein Ordner innerhalb der EarSketch Soundbibliothek Variationen eines ähnlichen Riffs.
-. *Steigerung*: Eine Note oder ein Geräusch, das in der Höhe zunimmt. Es ist sehr häufig in EDM (Electronic Dance Music) und schafft eine Vorfreude auf einen Drop. Sie können den Suchbegriff "riser" im Sound-Browser verwenden. Eine umgekehrte Crash-Zymbal kann als Riser verwendet werden, wie YG_EDM_REVERSE_CRASH_1.
+. *Steigerung*: Eine Note oder ein Geräusch, das in der Höhe zunimmt. Es ist sehr häufig in EDM (Electronic Dance Music) und schafft eine Vorfreude auf einen Drop. Du kannst den Suchbegriff "riser" im Sound-Browser verwenden. Eine umgekehrte Crash-Zymbal kann als Riser verwendet werden, wie YG_EDM_REVERSE_CRASH_1.
 . *Snare Roll*: Eine Folge wiederholter Snare Hits, mit zunehmender Dichte, Tonhöhe oder Amplitude. Du kannst einen Sound wie RD_FUTURE_DUBSTEP_FILL_1 oder HOUSE_BREAK_FILL_003 oder mit `makeBeat()` verwenden.
 . *Looping*: Wiederholen eines kurzen Melodie-Segments vor einem neuen Abschnitt.
 . *Crossfading*: Das Volumen eines Abschnitts wird verringert, während das Volumen eines neuen Abschnitts erhöht wird.
@@ -127,7 +127,7 @@ Im Folgenden findest du einige beliebte Strategien zur Gestaltung musikalischer 
 ****
 Wähle aus der Liste der möglichen Übergänge zwei aus und überlege dir, wie du sie mit Code umsetzen kannst. Du kannst mit einem Partner arbeiten. Sobald du darüber nachgedacht hast, kannst du dir die folgenden Beispiele ansehen.
 
-Der Übergang sollte ein oder zwei Maßnahmen vor dem neuen Abschnitt platziert werden. Du kannst mehrere Übergangstechniken gleichzeitig benutzen.
+Der Übergang sollte ein oder zwei Takte vor dem neuen Abschnitt platziert werden. Du kannst mehrere Übergangstechniken gleichzeitig benutzen.
 ****
 
 Drum fills:
@@ -183,7 +183,7 @@ Beim Programmieren können wir *Abstraktionen* schaffen, die Bündelung von Idee
 ****
 Erstellen wir ein komplettes Lied mit allen Werkzeugen die du in EarSketch entdeckt hast! Hier ist ein Vorschlag zur Vorgehensweise, aber du kannst ihn nach Belieben anpassen:
 
-. Wähle ein Thema für deinen Song. Denke an die Art von Klängen, Instrumenten oder Songtexten, die deine Nachricht am besten vermitteln.
+. Wähle ein Thema für deinen Song. Denke an die Art von Sounds, Instrumenten oder Songtexten, die deine Nachricht am besten vermitteln.
 . Wähle dann eine einfache Struktur.
 . Und dann, starte die Programmierung! Beginne mit einigen `fitMedia()` Funktionen, um Sounds auszuwählen.
 . Benutze `makeBeat()` um Percussion hinzuzufügen.
@@ -193,7 +193,7 @@ Erstellen wir ein komplettes Lied mit allen Werkzeugen die du in EarSketch entde
 . Füge ein oder zwei sinnvolle Übergänge hinzu.
 . Füge Effekte mit `setEffect()` hinzu.
 . Füge eine oder mehrere bedingte Anweisungen hinzu.
-. Du solltest darauf achten, dass du Variablen verwendest, um Informationen wie z.B. Klangkonstanten zu speichern.
+. Du solltest darauf achten, dass du Variablen verwendest, um Informationen wie z.B. Soundkonstanten zu speichern.
 . Achte darauf, dass du Kommentare verwendest, um zu erklären, was du tust.
 . Vergiss nicht, regelmäßig deinen Code auszuführen und deinen Song zu hören. Auf diese Weise kannst du ihn ändern, bis er dir gefällt.
 . Wähle einen Namen für deinen Song.
@@ -244,7 +244,7 @@ Was ist eine Abstraktion?
 
 [answers]
 * Eine Bündelung von Ideen zu einem einzigen Konzept
-* Eine Vielzahl von Klängen in verschiedenen Bereichen
+* Eine Vielzahl von Sounds in verschiedenen Bereichen
 * Teile eines Liedes, die miteinander in Beziehung stehen, sich aber auch voneinander unterscheiden
 * Eine Anweisung, die einen Wert an den Funktionsaufruf zurückgibt
 --
