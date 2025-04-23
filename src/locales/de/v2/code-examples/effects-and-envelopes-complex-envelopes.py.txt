@@ -1,4 +1,4 @@
-# Komplexe Envelopes: Mehrere setEffect()-Aufrufe auf einer Spur verwenden, um Änderungen an der Effekt-Envelope vorzunehmen
+# Komplexe Envelopes: Mehrere setEffect()-Aufrufe auf einem Track verwenden, um Änderungen an der Effekt-Envelope vorzunehmen
 
 # Setup
 from earsketch import *
@@ -7,7 +7,7 @@ setTempo(120)
 # Musik
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Envelope Zeitpunkte (in measures)
+# Envelope Zeitpunkte (in Takten)
 pointA = 1
 pointB = 4
 pointC = 6.5
