@@ -55,7 +55,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-javascript"]
 * *Initialisierung*: Erstellt eine Variable, die als *Loop-Zähler* vor der ersten Schleife verwendet werden soll.
-* *Loop Bedingung*: Diese prüft, ob die Schleife erneut ausgeführt werden soll. Wenn die Anweisung wahr ist, wird der Schleifenkörper erneut ausgeführt. Wenn der Zähler zu hoch wird, ist die Aussage false, und wir verlassen den Loop. Der Computer führt dann den Code nach dem Loop weiter aus.
+* *Loop Bedingung*: Diese prüft, ob die Schleife erneut ausgeführt werden soll. Wenn die Anweisung true ist, wird der Schleifenkörper erneut ausgeführt. Wenn der Zähler zu hoch wird, ist die Aussage false, und wir verlassen den Loop. Der Computer führt dann den Code nach dem Loop weiter aus.
 * *Iteration Statement*: Eine Anweisung, die den Loopzähler aktualisiert. Es zählt jedes Mal, wenn sich die Schleife wiederholt.
 * *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Es ist umgeben von geschweiften Klammern `{ }` und ist *eingerückt* (mit dem _tab_ Schlüssel). Du kannst mehr als eine Zeile von Anweisungen im for-loop haben.
 
@@ -170,7 +170,7 @@ Der *Interpreter* liest und führt ein Skript aus. Die Reihenfolge, in der er au
 
 Eine Schleife ist eine *Kontroll-Flow-Anweisung*, die die Reihenfolge ändert. Am Ende eines loop bodys springt er zurück nach oben in die Schleife.
 
-Diese Animation zeigt, wie sich der Kontrollfluss in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *iteration*, oder Wiederholung des Schleifenkörpers ändert:
+Diese Animation zeigt, wie sich der Kontroll-Flow in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *iteration*, oder Wiederholung des Schleifenkörpers ändert:
 
 [[loop-py]]
 .Schritt für Schritt durch einen for-loop
@@ -235,7 +235,7 @@ Hier haben wir `measure = measure + 4` geschrieben, was bedeutet, dass measure j
 [[debuggingtips]]
 === Debugging-Hinweise
 
-Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und Pflege davon. Debuggen bedeutet, Fehler zu finden und zu lösen. Bugs sind ein anderer Begriff für Fehler in Ihrem Code. Versuche diesen Schritten zu folgen, wenn du einen Fehler hast:
+Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und Pflege davon. Debuggen bedeutet, Fehler zu finden und zu lösen. Bugs sind ein anderer Begriff für Fehler in deinem Code. Versuche diesen Schritten zu folgen, wenn du einen Fehler hast:
 
 [role="curriculum-python"]
 . *Lies die Konsole für Hinweise*.
@@ -244,7 +244,7 @@ Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und
 .. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
 .. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
 .. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `print()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
-. *Squash den Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Squash the Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
 . *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
 
 [role="curriculum-javascript"]
@@ -254,7 +254,7 @@ Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und
 .. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
 .. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
 .. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `printIn()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
-. *Squash den Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Squash the Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
 . *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
 
 Im Folgenden wird ein Beispiel für die Ausgabe von Variablen zur Fehlersuche in einem Skript erläutert:
@@ -302,7 +302,7 @@ Hör dir den Audioclip unten an, um den Unterschied zwischen Dur und Moll zu ver
 <div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
 ++++
 
-Lass uns nun über die verschiedenen Arten von Tracks, die du haben kannst, sprechen. Du erinnerst dich vielleicht daran, dass du für jede Art von Instrument einen Track in deiner DAW verwenden kannst. In einem Pop Song findest du die folgenden Basistracks:
+Lass uns nun über die verschiedenen Arten von Spuren, die du haben kannst, sprechen. Du erinnerst dich vielleicht daran, dass du für jede Art von Instrument eine Spur in deiner DAW verwenden kannst. In einem Pop Song findest du die folgenden Basistracks:
 
 * Die *Melodie* ist der Hauptgedanke, der oft in höheren Tonlagen liegt, oder „die Noten, die der Lead singt“. Das kann eine Stimme sein, höhere Töne eines Keyboards, eine Gitarre usw.
 * *Harmony* sind die längeren Töne, die „die Melodie unterstützen“, wie die Akkorde eines Klaviers, einer Gitarre oder einer Ansammlung von Saiten.
@@ -346,7 +346,7 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 * Du kannst 3 Grundspuren für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
 
 [role="curriculum-javascript"]
-* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im loop body sollte eingerückt werden.
+* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im Loop Body sollte eingerückt werden.
 * Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
 * `println()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
 * Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
@@ -363,7 +363,7 @@ Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst,
 Welche der folgenden Komponenten ist KEINE Komponente eines for-loops?
 
 [answers]
-* Loop-Interpreter
+* Loop Interpreter
 * Loop Counter
 * Loop Body
 * Loop Bereich
