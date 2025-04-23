@@ -1,4 +1,4 @@
-# Tippfehler: Beispiel
+# Type Error: Beispiel
 
 from earsketch import *
 setTempo(120)
