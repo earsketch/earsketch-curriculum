@@ -122,14 +122,14 @@ Möglicherweise müssen wir die zurückgegebene Benutzereingabe in einen anderen
 
 [role="curriculum-python"]
 * `str()` - konvertiert jeden Wert in einen String.
-* `int()` - konvertiert einen String mit Ziffern in eine ganze Zahl (z.B. `"3"` wird `3`).
+* `int()` - konvertiert einen String mit Ziffern in einen Integer (z.B. `"3"` wird `3`).
 * `float()` - wandelt einen String mit Ziffern mit einem Dezimalpunkt in einen Float um (Beispiel: `"3.5"` wird `3.5`).
 
 [role="curriculum-javascript"]
 * `String()` - konvertiert jeden Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.
 * `Number()` - konvertiert einen String in eine Zahl (z. B.: `"3.5"` wird `3.5`).
 
-Im folgenden Beispiel wird die Konsoleneingabe verwendet, um das Tempo des Liedes zu bestimmen. Wir stellen sicher, dass Benutzereingaben in eine Ganzzahl konvertiert werden.
+Im folgenden Beispiel wird die Konsoleneingabe verwendet, um das Tempo des Liedes zu bestimmen. Wir stellen sicher, dass Benutzereingaben in einen Integer konvertiert werden.
 
 [role="curriculum-python"]
 [source,python]
@@ -145,7 +145,7 @@ include::code-examples/get-user-input-user-input-1.js.txt[]
 
 Hier ist ein weiteres Beispiel dafür, was du mit der Benutzereingabe tun kannst.
 
-*Zusammensetzung* ist ein Mittel, um Zeichenketten mit dem `+` Symbol miteinander zu verknüpfen.  Zum Beispiel gibt die Verkettung der Zeichenketten `"Hello"` und `"World"` `"HelloWorld`. Im folgenden Beispiel wird der Benutzer aufgefordert, eine Clip-Nummer anzugeben. Die Nummer wird mit `DUBSTEP_BASS_WOBBLE_0` verbunden, um einen kompletten Clip-Namen wie `DUBSTEP_BASS_WOBBLE_010` zu bilden.
+*Zusammensetzung* ist ein Mittel, um Strings mit dem `+` Symbol miteinander zu verknüpfen.  Zum Beispiel gibt die Verkettung der Strings `"Hello"` und `"World"` `"HelloWorld`. Im folgenden Beispiel wird der Benutzer aufgefordert, eine Clip-Nummer anzugeben. Die Nummer wird mit `DUBSTEP_BASS_WOBBLE_0` verbunden, um einen kompletten Clip-Namen wie `DUBSTEP_BASS_WOBBLE_010` zu bilden.
 
 [role="curriculum-python"]
 [source,python]
@@ -180,22 +180,22 @@ Hier sind Ideen von Tools, die du verwenden kannst:
 Wir kombinieren nun boolesche Logik und Benutzereingabe für ein weiteres Beispiel der Benutzerinteraktion.
 
 [role="curriculum-python"]
-Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen Booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `==` ob zwei Werte gleich sind und ob der Boolean auf `True` gesetzt ist.
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `==` ob zwei Werte gleich sind und ob der Boolean auf `True` gesetzt ist.
 
 [role="curriculum-javascript"]
-Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen Booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `===` ob zwei Werte gleich sind und ob der Boolean auf `true` gesetzt ist.
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `===` ob zwei Werte gleich sind und ob der Boolean auf `true` gesetzt ist.
 
-Sehen wir uns nun die *Booleschen Operatoren* an: Mit ihnen lassen sich mehrere Booleans kombinieren. Es gibt drei boolesche Operatoren:
+Sehen wir uns nun die *booleschen Operatoren* an: Mit ihnen lassen sich mehrere Booleans kombinieren. Es gibt drei boolesche Operatoren:
 
 [role="curriculum-python"]
 * `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
-* `or`: nimmt zwei boolsche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+* `or`: nimmt zwei boolesche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
 * `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
 
 [role="curriculum-javascript"]
 * `&&`: heißt "and"; es benötigt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten `false`.
-* `||`: heißt "oder"; es benötigt zwei boolsche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
-* `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt das entgegengesetzte (negierte) Boolean zurück.
+* `||`: heißt "oder"; es benötigt zwei boolesche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
+* `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt den gegenteiligen (negierten) Boolean zurück.
 
 Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (true and false) ist false, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. Aber der Satz "Ich bin sechzehn or siebzehn Jahre alt" (true or false) ist true.
 
@@ -241,7 +241,7 @@ include::code-examples/get-user-input-boolean-expressions.py.txt[]
 include::code-examples/get-user-input-boolean-expressions.js.txt[]
 ----
 
-Hier ist eine Erinnerung an die Erstellung von Booleschen Werten und einige Beispiele für boolesche Operationen:
+Hier ist eine Erinnerung an die Erstellung von booleschen Werten und einige Beispiele für boolesche Operationen:
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -288,11 +288,11 @@ Dies ist die Jukebox- Challenge: Schreibe ein Skript, das nach Benutzereingaben 
 * *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
 * `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
 * Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. `str()` konvertiert jeden Wert in einen String.
-`int()` konvertiert einen String mit Ziffern in eine Ganzzahl. `float()` konvertiert einen String mit Ziffern und einem Dezimalpunkt in einen Fließkommawert.
-* Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
+`int()` konvertiert einen String mit Ziffern in einen Integer. `float()` konvertiert einen String mit Ziffern und einem Dezimalpunkt in einen Float.
+* Sie können Strings miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
 ** `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
-** `or`: nimmt zwei boolsche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+** `or`: nimmt zwei boolesche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
 ** `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
 * Du hast jetzt viele Werkzeuge, um Variationen in deine Musik einzubringen: Benutzereingaben können Elemente bestimmen. Du kannst in deinen benutzerdefinierten Funktionen einen Parameter hinzufügen, um eine Variante auszuwählen, wenn du deine Funktion aufrufst.
 
@@ -300,7 +300,7 @@ Dies ist die Jukebox- Challenge: Schreibe ein Skript, das nach Benutzereingaben 
 * *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
 * `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
 * Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.  `Number()` konvertiert einen String in eine Zahl.
-* Sie können Zeichenketten miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
+* Sie können Strings miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
 * *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
 ** `&&`: heißt "and", es nimmt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten wird `false` zurückgegeben.
 ** `|`: heißt "oder": es nimmt zwei boolesche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls wird `false` zurückgegeben.
@@ -381,7 +381,7 @@ Wie würdest du die boolesche Wahrheit mit den Booleans True and False erhalten?
 [role="curriculum-javascript"]
 [question]
 --
-Wie würdest du die boolesche Wahrheit mit den Booleans True and False erhalten?
+Wie würdest du die boolesche Wahrheit mit den Booleans true and false erhalten?
 
 [answers]
 * `true||false`
