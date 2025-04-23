@@ -211,7 +211,7 @@ Erstelle einen neuen Song. Benutze einen for-loop, um eine Envelope zu allen Tra
 Lass deinen Nachbarn deinen Song hören, mit und ohne den Effekt (um deinen Song ohne den Effekt zu hören entkommentiere die Zeilen, die den Effekt erzeugen). Dein Nachbar muss erraten, welchen Effekt du hinzugefügt hast.
 ****
 
-Unten ist ein Beispiel der oben genannten Praxis. Bei jeder Iteration der Schleife wird ein eintaktiges Segment des Umschlags hinzugefügt. Die Automatisierung des GAIN-Parameters erzeugt rhythmische Lautstärkeeinblendungen. Versuche, den Effekt-Bypass in der DAW umzuschalten, um den Unterschied zu hören (die „Bypass“-Schaltfläche links neben der Effektspur in Ihrer DAW).
+Unten ist ein Beispiel der oben genannten Praxis. Bei jeder Iteration der Schleife wird ein eintaktiges Segment der Envelope hinzugefügt. Die Automatisierung des GAIN-Parameters erzeugt rhythmische Lautstärkeeinblendungen. Versuche, den Effekt-Bypass in der DAW umzuschalten, um den Unterschied zu hören (die „Bypass“-Schaltfläche links neben der Effektspur in Ihrer DAW).
 
 [role="curriculum-python"]
 [source,python]
@@ -294,7 +294,7 @@ Wie kann man die Verzögerungszeit eines Verzögerungseffekts auf Track 3 auf 50
 
 [question]
 --
-Welcher der folgenden Parameter ist kein Parameter mit `setEffect()` Umschlägen?
+Welcher der folgenden Parameter ist kein Parameter mit `setEffect()` Envelopes?
 
 [answers]
 * Clip-Länge
