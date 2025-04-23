@@ -1,4 +1,4 @@
-// Verzögerungseffekt: Verzögerung zu einer Spur hinzufügen
+// Verzögerungseffekt: Verzögerung zu einem Track hinzufügen
 
 // Setup
 setTempo (120);
