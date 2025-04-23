@@ -8,10 +8,10 @@ setTempo(120)
 piano1 = COMMON_LOVE_THEME_PIANO_2
 percussions1 = HOUSE_BREAK_FILL_002
 
-# Platzieren der Sounds:
+# Platzieren der Sounds
 fitMedia(piano1, 1, 1, 5)
 fitMedia(percussions1, 2, 3, 5)
 
-# Abmischen: Erhöhen Sie die Lautstärke der Klavierspur und reduzieren Sie die Lautstärke der Schlagzeugspur.
+# Abmischen: Erhöhe die Lautstärke des Klaviertracks und reduziere die Lautstärke des Schlagzeugtracks.
 setEffect(1, VOLUME, GAIN, 2)
 setEffect(2, VOLUME, GAIN, -15)
