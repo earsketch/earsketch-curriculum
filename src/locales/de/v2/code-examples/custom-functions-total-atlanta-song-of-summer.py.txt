@@ -30,7 +30,7 @@ def addingDrums(start, end, pattern):
         beatStringHihat = "--0----0---0---"
     # dann erstellen wir den Beat,
     # auf Track 3 für den Kick und Track 4 für den Hihat,
-    # von den Takten beginnend bis Ende:
+    # von Anfang bis Ende der Takte:
     for measure in range(start, end):
         # Hier werden wir unseren Schlag auf "measure" setzen
         # was zunächst gleich „start“ ist,
@@ -71,7 +71,7 @@ sectionA(13, 17)
 sectionB(17, 21)
 
 # Ausblenden:
-für Spur im Bereich(1, 5):
+for track in range(1, 5):
     setEffect(track, VOLUME, GAIN, 0, 19, -60, 21)
 # Lautstärke von HiHat und Kick senken:
 setEffect(4, VOLUME, GAIN, -15)
