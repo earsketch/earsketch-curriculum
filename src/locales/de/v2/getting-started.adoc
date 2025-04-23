@@ -146,7 +146,7 @@ OPTIONAL
 
 {nbsp} +
 
-*_Der Sound Browser_*
+*_Der Sound-Browser_*
 
 Der *Sound-Browser* bietet eine Bibliothek von über viertausend Sounds, die du in deiner Musik verwenden kannst.
 Zu den Mitwirkenden gehören prominente Musiker
@@ -158,7 +158,7 @@ https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
 https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
 und https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
 
-Du kannst den Soundbrowser im *Content Manager* (links) erkunden, indem du auf „Sounds“ klickst. Versuche es mit verschiedenen Soundkonstanten innerhalb von `fitMedia()`.
+Du kannst den Sound-Browser im *Content Manager* (links) erkunden, indem du auf „Sounds“ klickst. Versuche es mit verschiedenen Soundkonstanten innerhalb von `fitMedia()`.
 
 Hinweis: Das https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] deckt die faire Nutzung von Stock Sounds ab.
 
@@ -303,7 +303,7 @@ TODO: when options are ready, modify the link
 * Ein *Skript* ist ein Spitzname für ein kurzes Programm.
 * Ein *DAW*, oder Digital Audio Workstation, ist eine Art Computersoftware zur Aufnahme und Bearbeitung von Audio. EarSketch ist ein DAW, mit dem du Musik mit Code machen kannst.
 * Um Musik zu machen, gib den Code in den *Editor* ein, klicke auf „Ausführen“ und dann auf „Abspielen“, um ihn anzuhören.
-* *Sounds* kannst du im Sound-Browser finden. Du kannst Klänge zu deinem Code hinzufügen, indem du die *Soundkonstante* in einer Funktion wie `fitMedia()` benutzt.
+* *Sounds* kannst du im Sound-Browser finden. Du kannst Sounds zu deinem Code hinzufügen, indem du die *Soundkonstante* in einer Funktion wie `fitMedia()` benutzt.
 * *Programmiersprachen* sind eine Sammlung von Wörtern und Symbolen, die vom Computer verstanden werden.
 * Die Regeln von *syntax* legen fest, wie Code geschrieben werden muss und wie Satzzeichen (`.`, `,`) verwendet werden.
 * Erstelle ein neues Skript, indem du auf den großen blauen Link „Click here to create...“ oder das „+“-Symbol auf den Editor-Registerkarten klickst.
