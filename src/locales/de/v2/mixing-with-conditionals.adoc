@@ -47,10 +47,10 @@ Der Parameter für `analyzeTrack()` kann entweder `RMS_AMPLITUDE` sein, um die L
 Wir werden nun sehen, wie *boolesche Logik* funktioniert. Dies wird uns helfen, einige Aufgaben zu automatisieren.
 
 [role="curriculum-python"]
-*Booleans* sind ein Datentyp. Der boolsche Datentyp hat nur 2 mögliche Werte, `True` und `False`. `True` und `False` beginnen mit einem Großbuchstaben und haben keine Anführungszeichen.
+*Booleans* sind ein Datentyp. Der boolesche Datentyp hat nur 2 mögliche Werte, `True` und `False`. `True` und `False` beginnen mit einem Großbuchstaben und haben keine Anführungszeichen.
 
 [role="curriculum-javascript"]
-*Booleans* sind ein Datentyp. Der boolsche Datentyp hat nur 2 mögliche Werte, `true` und `false`. `true` und `false` beginnen mit einem Kleinbuchstaben und haben keine Anführungszeichen.
+*Booleans* sind ein Datentyp. Der boolesche Datentyp hat nur 2 mögliche Werte, `true` und `false`. `true` und `false` beginnen mit einem Kleinbuchstaben und haben keine Anführungszeichen.
 
 [role="curriculum-python"]
 --
@@ -79,8 +79,8 @@ Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialis
 
 Beachte den Unterschied unter:
 
-1. Vergleiche zwei Werte, um zu sehen, ob sie identisch sind: `==`
-1. Zuweisen eines Wertes zu einer Variable: `=`
+1. Dem Vergleichen zweier Werte, um zu sehen, ob sie identisch sind: `==`
+1. Dem Zuweisen eines Wertes zu einer Variable: `=`
 --
 
 [role="curriculum-javascript"]
@@ -111,7 +111,7 @@ Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialis
 Beachte den Unterschied unter:
 
 1. Vergleiche zwei Werte, um zu sehen, ob sie gleich sind: `===`
-1. Zuweisen eines Wertes zu einer Variable: `=`
+1. Dem Zuweisen eines Wertes zu einer Variable: `=`
 --
 
 [role="curriculum-python curriculum-mp4"]
@@ -129,7 +129,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 * Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
 * Gib `True` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `False`.
-* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
+* Verwende einen for-loop mit dem Zähler `track`, um für jede Spur zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
 * Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `True` oder `False` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `True` oder `False` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚True‘ oder ‚False‘ ausgeben.
 ****
 
@@ -138,7 +138,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 * Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
 * Gib `true` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `false`.
-* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
+* Verwende einen for-loop mit dem Zähler `track`, um für jede Spur zu prüfen, ob die Lautheit größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
 * Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `true` oder `false` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `true` oder `false` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚true‘ oder ‚false‘ ausgeben.
 ****
 
@@ -165,7 +165,7 @@ In diesem Beispiel haben wir `println()` mit Strings verwendet, um den Inhalt de
 [[conditionalstatements]]
 === Bedingte Anweisungen
 
-Was ist eine bedingte Anweisung? Ein *Statement* ist eine Anweisung für den Computer. Eine *bedingte Anweisung* ist eine Anweisung, die nur ausgeführt werden muss, wenn eine bestimmte *Bedingung* wahr ist. Wenn du zum Beispiel einen Roboter so programmierst, dass er vor einem Hindernis anhält, lautet die Bedingung „Gibt es ein Hindernis?“. Wenn ja, dann stoppen. Wenn nein, nichts tun (weiter gehen).
+Was ist eine bedingte Anweisung? Ein *Anweisung* ist eine Anleitung für den Computer. Eine *bedingte Anweisung* ist eine Anweisung, die nur ausgeführt werden muss, wenn eine bestimmte *Bedingung* wahr ist. Wenn du zum Beispiel einen Roboter so programmierst, dass er vor einem Hindernis anhält, lautet die Bedingung „Gibt es ein Hindernis?“. Wenn ja, dann stoppen. Wenn nein, nichts tun (weiter gehen).
 
 Unten findest du ein Beispiel für eine bedingte Anweisung, beachte die Ähnlichkeit mit einem for-loop:
 
@@ -227,8 +227,8 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 * Erstelle ein neues Skript.
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
-* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder eine Spur den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `print()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `print(„Ist die Tracknummer“ + str(track) + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“. Die Funktion `str()` konvertiert eine Zahl (z.B.: `1`) in einen String (z.B.: `"1"`).
 ****
 
@@ -239,17 +239,17 @@ Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert
 * Füge Sounds auf mindestens drei Spuren für mindestens sechzehn Takte hinzu.
 * Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
 * Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
-* Wenn dein Haupttrack nicht lauter ist als die anderen Tracks, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Die perkussive Spur wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Klangimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
 * Benutze `println()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `printIn(„Ist die Tracknummer“ + track + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“.
 ****
 
 Lass uns ein paar Vokabeln wiederholen:
 
 1. *Operator*: ein Zeichen, der eine Aktion repräsentiert. Wir haben arithmetische Operatoren (`\+`, `-`, `\*`, `=`) und Vergleichsoperatoren (`>`, `>=`, `<`, `\<=`, `===`, `!==`) gesehen.
-1. *Ausdruck*: Eine Kombination von Werten, Konstanten, Variablen, Operatoren und Funktionen. Der Computer wertet Ausdrücke aus, um ein Ergebnis zu erzeugen, in der Regel ein einziger numerischer oder boolscher Wert.  Zum Beispiel: `1 + 2` (ausgewertet zu 3) oder `1 < 2` (ausgewertet zu True) oder `analyzeTrack(1, RMS_AMPLITUDE)` (ausgewertet zur Lautstärke des Titels `1`, ein Float zwischen 0 und 1).
-1. *Statements*: Anweisungen für die Ausführung des Computers.
+1. *Ausdruck*: Eine Kombination von Werten, Konstanten, Variablen, Operatoren und Funktionen. Der Computer wertet Ausdrücke aus, um ein Ergebnis zu erzeugen, in der Regel ein einziger numerischer oder boolescher Wert.  Zum Beispiel: `1 + 2` (ausgewertet zu 3) oder `1 < 2` (ausgewertet zu True) oder `analyzeTrack(1, RMS_AMPLITUDE)` (ausgewertet zur Lautstärke des Titels `1`, ein Float zwischen 0 und 1).
+1.  *Anweisung*: Anleitung für die Ausführung des Computers.
 
-Unten finden Sie ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Töne änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
+Unten findest du ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Töne änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
 
 [role="curriculum-python"]
 [source,python]
@@ -270,24 +270,24 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 
 [role="curriculum-python"]
 * Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
-* Der boolsche Datentyp hat nur 2 mögliche Werte, `True` und `False`.
+* Der boolesche Datentyp hat nur 2 mögliche Werte, `True` und `False`.
 * Boolesche Werte werden von Vergleichsoperatoren generiert: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
 * `==` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
 * Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
 * *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
-* Ein *Statement* ist eine Anweisung für den Computer.
+* Ein *Anweisung* ist eine Anleitung für den Computer.
 * Eine *Bedingung* ist ein Ausdruck, der zu `True` oder `False` auswertet.
 * Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `True` ist.
 * Falls eine `if` Bedingung `False` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
 
 [role="curriculum-javascript"]
 * Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
-* Der boolsche Datentyp hat nur 2 mögliche Werte, `true` und `false`.
+* Der boolesche Datentyp hat nur 2 mögliche Werte, `true` und `false`.
 * Boolesche Werte werden von Vergleichsoperatoren generiert: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
 * `===` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
 * Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
 * *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
-* Ein *Statement* ist eine Anweisung für den Computer.
+* Ein *Anweisung* ist eine Anleitung für den Computer.
 * Eine *Bedingung* ist ein Ausdruck, der zu `true` oder `false` auswertet.
 * Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `true` ist.
 * Falls die Bedingung einer `if` `false` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
