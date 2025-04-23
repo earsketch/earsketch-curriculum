@@ -19,7 +19,7 @@ def sectionB(startMeasure, endMeasure):
     fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure) # Drums variieren
     fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # Kontrastbass: langsamer und lauter
     setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure) # Steigerung der Basslautstärke
-    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); // Rasseln: Hinzufügen eines neuen Elements
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); # Rasseln: Hinzufügen eines neuen Elements
 
 # Meine Funktionen aufrufen
 sectionA(1, 5)
