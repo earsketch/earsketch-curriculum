@@ -13,7 +13,7 @@ var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
 var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
 
 # Überprüfe, ob Track 1 lauter ist als Track 2
-# Wir erstellen den booleschen Vergleich1
+// Wir erstellen den booleschen Vergleich1
 var comparison1 = (loudnessTrack1 > loudnessTrack2);
 println("Is track 1 louder than track 2?");
 println(comparison1);
