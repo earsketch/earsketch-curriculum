@@ -1,4 +1,4 @@
-// Tippfehler: Beispiel
+// Type Error: Beispiel
 
 setTempo(120);
 
