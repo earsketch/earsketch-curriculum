@@ -107,7 +107,7 @@ Erstelle eine solche Einführung mit einer Liste und einem for-loop von Takt `1`
 ****
 Wir werden eine additive Einführung in EarSketch erstellen, in der Instrumente (Tracks) im Laufe der Zeit einzeln der Musik hinzugefügt werden. Zum Beispiel beginnt der erste Track bei Takt `1`, dann beginnt der zweite Track bei Takt `2`, und so weiter. Dies wird häufig für die Einleitung eines Songs verwendet.
 
-Erstelle eine solche Einführung mit einem array und einem for-loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `measure` Variable mit der `length` Eigenschaft erstellen.
+Erstelle eine solche Einführung mit einem Array und einem for-loop von Takt `1` bis `5`. Wie im vorherigen Beispiel kannst du `track` als Zähler verwenden und du musst eine `index` Variable erstellen. Zusätzlich kannst du eine `measure` Variable mit der `length` Eigenschaft erstellen.
 ****
 
 Hier ein Beispiel:
@@ -136,12 +136,12 @@ Wir werden zwei Möglichkeiten sehen, wie man Datenstrukturen mit `makeBeat()` v
 Wir werden zwei Möglichkeiten sehen, wie man Datenstrukturen mit `makeBeat()` verwenden kann. Schauen wir uns zuerst an, wie ähnlich Strings und Arrays sind:
 
 [role="curriculum-python"]
-* Wie Listen haben Strings Indexe. Ein *index* repräsentiert die Position eines bestimmten Zeichens in einem String, beginnend bei 0. Zum Beispiel `"Sarah"[3]` gibt `a` zurück.
+* Wie Listen haben Strings Indexe. Ein *Index* repräsentiert die Position eines bestimmten Zeichens in einem String, beginnend bei 0. Zum Beispiel `"Sarah"[3]` gibt `a` zurück.
 * Du kannst die Funktion `len()` bei Strings verwenden, die die Anzahl der Zeichen im String zurückgibt. Das letzte Zeichen ist der Index `len(string) - 1`.
 Die Indexe des Strings `"EarSketch"` werden in der unten stehenden Tabelle angezeigt.
 
 [role="curriculum-javascript"]
-* Wie Arrays haben Strings Indexe. Ein *index* repräsentiert die Position eines bestimmten Zeichens in einem String, beginnend bei 0. Zum Beispiel `"Sarah"[3]` gibt `a` zurück.
+* Wie Arrays haben Strings Indexe. Ein *Index* repräsentiert die Position eines bestimmten Zeichens in einem String, beginnend bei 0. Zum Beispiel `"Sarah"[3]` gibt `a` zurück.
 * Du kannst die Eigenschaft `.length` bei Strings verwenden, die die Anzahl der Zeichen im String zurückgibt. Das letzte Zeichen ist der Index `string.length - 1`.
 Die Indexe des Strings `"EarSketch"` werden in der unten stehenden Tabelle angezeigt.
 
@@ -177,10 +177,10 @@ Die Indexe des Strings `"EarSketch"` werden in der unten stehenden Tabelle angez
 * Du kannst Arrays miteinander verketten, wie du es mit Strings tust. Wir verwenden die `concat` *Methode*. Eine Methode ist einer Funktion ähnlich, da sie Klammern enthält, die Parameter enthalten. Um es zu verwenden, platziere es hinter deinem Array-Namen, mit einem Punkt: die Syntax ist `newArray = arrayA.concat(arrayB)`. Dies nennt man *Punkt-Notation*.
 
 [role="curriculum-python"]
-* Sie können einen *Substring*, auch bekannt als Slice, eines größeren Strings erhalten. Dadurch kann ein Beat gesliced werden, eine bekannte Technik in elektronischer Musik und remixing. Die Syntax ist `newString = oldString[startIndex: endIndex]`. Der Substring enthält das Zeichen bei `startIndex` aber nicht das Zeichen bei `endIndex`. Zum Beispiel wird `"Sarah[1:4]"` `"ara` zurückgeben. Du kannst das Gleiche mit den Listen machen: `newList = oldList[startIndex: endIndex]`.
+* Du kannst einen *Substring*, auch bekannt als Slice, eines größeren Strings erhalten. Dadurch kann ein Beat gesliced werden, eine bekannte Technik in elektronischer Musik und remixing. Die Syntax ist `newString = oldString[startIndex: endIndex]`. Der Substring enthält das Zeichen bei `startIndex` aber nicht das Zeichen bei `endIndex`. Zum Beispiel wird `"Sarah[1:4]"` `"ara` zurückgeben. Du kannst das Gleiche mit den Listen machen: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
-* Sie können einen *Substring*, auch bekannt als Slice, eines größeren Strings erhalten. Dadurch kann ein Beat gesliced werden, eine bekannte Technik in elektronischer Musik und remixing. Die Syntax ist `newString = oldString.substring(startIndex, endIndex)`. Der Substring enthält das Zeichen bei `startIndex` aber nicht das Zeichen bei `endIndex`.Zum Beispiel, `"Sarah.substring(1, 4)"` wird `"ara"` zurückgeben. Du kannst dasselbe mit Arrays tun, indem du die `slice()` Methode verwendest: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` und `slice()` sind Methoden und alle benutzen die Punktnotation.
+* Du kannst einen *Substring*, auch bekannt als Slice, eines größeren Strings erhalten. Dadurch kann ein Beat gesliced werden, eine bekannte Technik in elektronischer Musik und remixing. Die Syntax ist `newString = oldString.substring(startIndex, endIndex)`. Der Substring enthält das Zeichen bei `startIndex` aber nicht das Zeichen bei `endIndex`.Zum Beispiel, `"Sarah.substring(1, 4)"` wird `"ara"` zurückgeben. Du kannst dasselbe mit Arrays tun, indem du die `slice()` Methode verwendest: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` und `slice()` sind Methoden und alle benutzen die Punktnotation.
 
 [role="curriculum-python"]
 .ÜBUNG
@@ -356,7 +356,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 
 [role="curriculum-python"]
 * Eine *Liste* ist eine Sammlung von Werten, die zu einer einzigen Einheit kombiniert werden, eine gute Möglichkeit, Daten zu organisieren. In einer Liste gespeicherte Elemente können beliebige Datentypen sein.
-* Ähnlich wie Strings, werden Listenelemente einem Index zugewiesen. Listenindexe beginnen bei 0.
+* Ähnlich wie Strings werden Listenelemente einem Index zugewiesen. Listenindexe beginnen bei 0.
 * Listenelemente werden mit Klammer-Notation wie `myList[1] ` referenziert. Zeichen in einem String können in ähnlicher Weise referenziert werden: `myString[1]`.
 * Die Funktion `len()` gibt die Anzahl der Elemente in einer Liste oder die Anzahl der Zeichen in einem String zurück. Die Syntax ist `len(list)`.
 * Listen und Arrays können mit *Listenoperation*, einem Set von Tools zur Änderung einer Liste, verkettet und gesliced werden.
