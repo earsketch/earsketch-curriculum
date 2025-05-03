@@ -1,0 +1,571 @@
+[[getstartedwithearsketch]]
+== EarSketch Bilan Ishlashni Boshlang
+:nofooter:
+
+Ushbu bobda siz EarSketch qanday ishlashini bilib olasiz, musiqangizga tovushlarni (kliplarni) joylashtirasiz va kodingizdagi nosozliklarni qanday tuzatishni ko'rasiz.
+
+
+[[discoverearsketch]]
+=== EarSketch Bilan Tanishing
+:nofooter:
+
+EarSketch-da siz kod yozish orqali kompyuterga ko'rsatmalar berasiz. Kodning bir qatori - bir ko'rsatma hisoblanadi. Barcha ko'rsatmalar birgalikda dastur deb ataladi (bu ko'rsatmalarni algoritm deb ham atash mumkin). Oshpaz kitobidagi retseptga rioya qilish ovqat pishirilishiga olib kelishi kabi, EarSketch-da dasturni bajarish qo'shiqqa olib kelishi mumkin. Kod dasturning qayeriga tushadi? Buni quyidagi videoda bilib oling!
+
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/1_1_Discover_EarSketch.mp4[]
+
+////
+TODO: upload video
+////
+
+EarSketch-dan foydalanish uchun
+
+. Siz *ovoz brauzerida* tovushlarni koʻrib chiqishingiz va tanlashingiz mumkin.
+. Siz *kod muharriri* da kod yozasiz.
+. *Ishga tushirish* tugmasini bosganingizda musiqangiz *Raqamli Audio Ish Stantsiyasi* (yoki *RAIS*) da ko'rsatiladi.
+. Keyin musiqangizni tinglash uchun *ijro* tugmasini bosishingiz mumkin.
+. Keyin eshitganingizdan qoniqmaguningizcha kodingizni o'zgartiring!
+. Panelning yuqori qismidagi oʻzgartirish tugmasi yordamida ushbu oʻquv panelini ochishingiz va yopishingiz mumkin.
+
+_RAIS nima?_
+
+*Raqamli Audio Ish Stantsiyasi* yoki *RAIS* - bu xoh professional studiyada, xoh uy noutbukida bo'lsin, kompyuterda audio yoki ovozli kliplarni yaratadigan yoki tahrirlaydigan dasturiy ta'minotning bir bo'lagi.
+
+Quyidagilar ommaga tanilgan RAIS hisoblanadi: https://www.ableton.com/[Ableton^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], and http://www.reaper.fm/[Reaper^].
+
+RAIS yordamida siz audio fayllarni yozib olishingiz, tahrirlashingiz, vizualizatsiya qilishingiz va ijro etishingiz mumkin. Ushbu audio fayllar *kliplar* deb ataladi.
+
+EarSketch xuddi RAIS-ga o'xshaydi, faqat siz musiqiy elementlarni kod yordamida bevosita dasturlashingiz mumkin.
+
+RAIS-dan qanday qilib to'liq foydalanish mumkin:
+
+[role="curriculum-mp4"]
+[[video1b]]
+video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
+
+////
+TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+////
+
+
+Keling, EarSketch-da kod misolini ishga tushirishga harakat qilaylik! Quyidagi oynada yuqori o'ng burchakdagi ko'k tugmachani bosing. Bu misol kodini *kod muharriri*dagi yangi faylga joylashtiradi. Hali kodni tushunishning hojati yo'q, shunchaki _Ishga tushirish_ tugmasini bosing va musiqangiz RAIS da ko'rinadi. Uni tinglash uchun _ijro_ tugmasini bosishingiz mumkin.
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Kirish skripti
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Ushbu kod RAIS-ga bir dona audio klip qo'shadi
+#
+#
+#
+
+#Sozlash boʻlimi
+from earsketch import *
+init()
+setTempo(120)
+
+#Musiqa bo'limi
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
+
+#Yakunlash bo'limi
+finish()
+
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: Kirish Skripti
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Ushbu kod RAIS-ga bir dona audio klip qo'shadi
+//
+//
+//
+
+//Sozlash Bo'limi
+init();
+setTempo(120);
+
+//Musiqa Bo'limi
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);
+
+//Yakunlash Bo'limi
+finish();
+
+----
+
+{nbsp} +
+
+
+
+[[createanewscript]]
+=== Birinchi skriptingizni yarating!
+
+EarSketch-da siz yozgan har bir skript bitta qo'shiqqa mos keladi. Keling, skriptni qanday yaratishni ko'rib chiqaylik:
+
+. Ekranning yuqori o'ng burchagida *Tizimga kiring yoki yangi hisob yarating*. Agar siz “Hisob Yaratish/Qayta O‘rnatish” degan oq tugmani bossangiz, yo‘qolgan parolni tiklashingiz yoki yangi hisob yaratishingiz mumkin (“Yangi Hisob Ro'yxatdan O'tkazish”). _Diqqat:_ umuman internetda barcha hisoblaringiz uchun bir xil paroldan foydalanmang va hech qachon parollaringizni baham ko'rmang.
+
+. *Yaratish uchun bosing.* Agar sizda hech qanday skript ochilmagan bo'lsa, kod muharriridagi “Yangi skript yaratish uchun shu yerni bosing!” degan koʻk rangdagi katta havolani bosing
++
+Agar sizda bir yoki bir nechta skript allaqachon ochiq bo'lsa, eng o'ng yorliq yonidagi oq "+" belgisini bosing.
++
+[[newscriptplus]]
+.Yangi skript yarating, skriptlarni oching
+[caption="Figure 1.2.1: "]
+image::../media/U1P1/NewScriptPlus.png[Alt Text]
+
+
+. *Ism va tilni tanlang:* “Yangi skript yaratish” muloqot oynasi ochiladi. Yangi skriptingizga qo'shiq nomi bo'ladigan ism bering. Keyin dasturlash tilini tanlang (Python yoki Javascript). Nihoyat, "Yaratish" tugmasini bosing.
++
+[[newscriptpromptpy]]
+.Yangi skript yaratish muloqot oynasi
+[role="curriculum-python"]
+[caption="Figure 1.2.2: "]
+image::../media/U1P1/newScriptPromptPY.png[Alt Text]
+[[newscriptpromptjs]]
+.Yangi skript yaratish muloqot oynasi
+[role="curriculum-javascript"]
+[caption="Figure 1.2.2: "]
+image::../media/U1P1/newScriptPromptJS.png[Alt Text]
+
+
+*_Dasturlash tili nima?_*
+
+Kod oddiy til kabi lug'at va sintaksisni o'z ichiga olgan *dasturlash tilida* yozilgan. Siz dasturlash tilingizning grammatika qoidalarini bilishingiz kerak, aks holda kompyuter sizning ko'rsatmalaringizni bajara olmaydi. 
+
+EarSketch-da siz Python yoki JavaScript orqali dasturlashingiz mumkin.
+
+[role="curriculum-python"]
+_Siz Python rejimidasiz. Python Google, Yahoo, NASA, Disney kabi kompaniyalar tomonidan va Civilization 4, Battlefield 2 va Crystal Space kabi o'yinlarni dasturlash uchun ishlatiladi._
+
+[role="curriculum-javascript"]
+_Siz JavaScript rejimidasiz. JavaScript dunyodagi eng mashhur o'nta dasturlash tillaridan biridir. Deyarli har bir veb-sayt JavaScript-dan foydalanadi._
+
+Eng chuqur darajada kompyuterlar 1 va 0 birikmalarida ishlaydi: ikkilik sonlar. Buning sababi, agar elektr toki mavjud bo'lsa (1) yoki elektr toki bo'lmasa (0), elektron tarkibiy qismlar farqli reaktsiya bildirishi mumkin. *Ishga tushirish* tugmasini bosganingizda, kompyuter Python yoki JavaScript ko'rsatmalarini ikkilik kodga tarjima qiladi. Keyin kod kompyuter tomonidan *bajariladi* va musiqangiz RAIS-da paydo bo'lishini ko'rishingiz mumkin.
+
+[[fitmedia]]
+=== `fitMedia()` funktsiyasi
+
+Endi siz birinchi skriptingizni yaratdingiz, keling, musiqangiz ustida ishlashni boshlaylik!
+
+[role="curriculum-python"]
+`setTempo(120)` va `finish()` qatorlari orasida kodingizni yozishni boshlang.
+[role="curriculum-javascript"]
+`setTempo(120);` va `finish();` qatorlari orasida kodingizni yozishni boshlang.
+
+Qo'shiqqa qanday audio klip qo'shishni ko'rish uchun ushbu videoni tomosha qiling:
+
+[role="curriculum-python curriculum-mp4"]
+[[video110py]]
+video::./videoMedia/1_3_fitmedia_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video110js]]
+video::./videoMedia/1_3_fitmedia_js.mp4[]
+
+RAIS-ga ovozli klip qo'shish uchun biz `fitMedia()` ni yozishdan boshlaymiz. Qavslar orasida biz vergul bilan ajratilgan 4 ta parametrga ega bo'lamiz:
+
+. *Klip nomi*: kursorni qavs orasiga qo'ying, tovush brauzeriga o'ting, klipni tanlang va ko'k joylashtirish belgisidan foydalanib uni joylashtiring.
+. *Trek raqami*: treklar RAIS bo'ylab o'tadigan qatorlardir; ular sizning tovushlaringizni uskuna turi (vokal, bosh gitara, ritm gitara, bas, baraban va boshqalar) bo'yicha tartibga solishga yordam beradi. Birinchi tovushingiz uchun birinchi trekdan boshlashingiz mumkin.
+. *Boshlang'ich o'lchov*: tovushingiz ijrosi boshlanadigan o'lchov. O'lchovlar musiqiy vaqt birliklari. Bir o'lchov - 4 zarba. Siz birinchi tovushingiz bilan birinchi o'lchovdan boshlashingiz mumkin.
+. *Yakuniy o'lchov*: tovishingiz ijrosi to'xtaydigan vaqtdagi o'lchov.
+
+_Misol:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` - `Y18_DRUM_SAMPLES_2` tovushini 1-oʻlchovdan 5-oʻlchovgacha 1-trekka joylashtiradi.
+
+Keyin _Ishga tushirish_ tugmasini bosing: tovushingizni RAIS-da vizualizatsiya qilishingiz kerak. _ijro_ tugmasini bosganingizda uni tinglashingiz mumkin.
+
+[role="curriculum-javascript"]
+*bayonot* kompyuterga biror amalni bajarishni buyuradi. Masalan, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` - bu bayonot. JavaScript-dagi har bir bayonot *_nuqtali vergul bilan tugashi kerak_*.
+
+
+////
+OPTIONAL
+////
+
+*Ovoz Brauzeri*: Musiqangizda foydalanish uchun ushbu bastakorlar/prodyuserlar tomonidan yaratilgan 4000 ta audio kliplarni koʻrib chiqing yoki qidiring: https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo, va https://www.sndbrd.com/[Milknsizz^].
+
+
+////
+END OF OPTIONAL
+////
+
+////
+OPTIONAL
+////
+ 
+`fitMedia()` yordamida kodning ba'zi misollarini ko'ring (Kodni yangi faylga joylashtirish uchun oynaning yuqori o'ng burchagidagi ko'k tugmachani bosishingiz mumkinligini unutmang):
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: EarSketch Demo
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: RAIS-ga klip qo'shish uchun fitMedia() dan foydalanish
+#
+#
+#
+
+#Sozlash
+from earsketch import *
+init()
+setTempo(120)
+
+#Musiqa
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)
+
+
+#Yakunlash
+finish()
+
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// skript_nomi: EarSketch Demo
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: RAIS-ga klip qo'shish uchun fitMedia() dan foydalanish
+//
+//
+//
+
+//Sozlash
+init();
+setTempo(120);
+
+//Musiqa
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
+
+// Yakunlash
+finish();
+
+----
+
+Qo'shimcha vazifa uchun, quyida qilganimizdek, skriptingizga ko'proq `fitMedia()` chaqiruvlarini qo'shing. E'tibor bering, biz har bir `fitMedia()` chaqiruvi uchun farqli trek raqamidan foydalanamiz:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: Opus 1
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Turli treklarda va turli kliplar bilan bir nechta fitMedia() chaqiruvlaridan foydalanish
+#
+#
+#
+
+# Sozlash Bo'limi
+from earsketch import *
+
+init()
+setTempo(100)
+
+# Musiqa Bo'limi
+
+fitMedia(Y01_DRUMS_1, 1, 1, 9)
+fitMedia(Y11_BASS_1, 2, 1, 9)
+fitMedia(Y11_GUITAR_1, 3, 1, 9)
+
+# Yakunlash Bo'limi
+
+finish()
+
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+
+// javascript kodi
+//
+// skript_nomi: Opus 1
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Turli treklarda va turli kliplar bilan bir nechta fitMedia() chaqiruvlaridan foydalanish
+//
+//
+//
+
+// Sozlash Bo'limi
+
+init();
+setTempo(100);
+
+// Musiqa Bo'limi
+
+fitMedia(Y01_DRUMS_1, 1, 1, 9);
+fitMedia(Y11_BASS_1, 2, 1, 9);
+fitMedia(Y11_GUITAR_1, 3, 1, 9);
+
+// Yakunlash Bo'limi
+
+finish();
+
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Sizga yoqqan tovushlardan foydalanish:
+
+. Tovushlarni 2 xil trekka joylashtiring 
+. Tovushlarni 2 dan 12 gacha o'lchovlardan joylashtiring
+. 8 o'lchov yoki undan ortiq uzunlikdagi 3 ta trekdan iborat qisqa qo'shiq yarating
+
+Har bir mashq uchun siz qo'shningizga qo'shiqni tinglatishingiz mumkin.
+
+Agar kodingizni ishga tushirishda xatolaringiz bo'lsa, nosozliklarni tuzatish haqida keyingi bobni ko'rib chiqing.
+****
+
+
+[[debugging]]
+=== Kodingizdagi nosozliklarni tuzating
+
+Ba'zida dasturchilar kodning noto'g'ri ishlashiga yoki umuman ishlamasligiga olib keladigan xatolarga yo'l qo'yishadi. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi. Nosozliklarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi. Konsoldan foydalanib, nosozliklarni tuzatish strategiyalaridan foydalanishingiz mumkin.
+
+[role="curriculum-python curriculum-mp4"]
+[[video3py]]
+video::./videoMedia/1_4_Debugging_Console_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video3js]]
+video::./videoMedia/1_4_Debugging_Console_js.mp4[]
+
+////
+TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+////
+
+////
+OPTIONAL
+////
+
+Xatolarning har xil turlari qanday?
+
+. *Sintaksis xatolar*: Dasturingiz ishlamaydi, chunki kodingiz tilning *sintaksis* qoidalarini buzgan (masalan: qavsni yopishni unutdingiz yoki fitMedia-ni noto‘g'ri yozdingiz).
+. *Ijro etish xatolari*: Dasturingiz ishlay boshlaydi, lekin xato tufayli toʻxtab qoladi.
+. *Mantiqiy xatolar*: Dasturingiz ishlaydi, lekin u kutilgan ishni bajarmaydi. Siz qo'shmoqchi bo'lgan kliplar haqiqatan ham to'g'ri joyga qo'shilganligini tekshirish uchun RAIS-ga qarab ularni tuzatishingiz mumkin. 
+
+////
+END OF OPTIONAL
+////
+
+
+Bu yerda bir nechta keng tarqalgan xatolar mavjud:
+
+[role="curriculum-python"]
+. *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Kichik va bosh harflarga e'tibor bering. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. Skriptdagi aksariyat elementlar *camel-caps* deb nomlangan qoidaga amal qiladi: birinchi so'z kichik harf va keyingi so'zlarning birinchi harfi, `exampleFunctionName()` da bo'lgani kabi bosh harf bilan yoziladi.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
+. *Skriptni sozlash:* EarSketch avtomatik ravishda yangi skriptga sozlash funktsiyalarini qoʻshadi, lekin siz tasodifan `from earsketch import *`, `init()`, `setTempo()` yoki `finish()` funktsiyalarini oʻchirib tashlashingiz mumkin. Ushbu funktsiyalar har bir skriptda hosil bo'lishiga ishonch hosil qiling.
+. *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
+
+[role="curriculum-javascript"]
+. *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Kichik va bosh harflarga e'tibor bering. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. Skriptdagi aksariyat elementlar *camel-caps* deb nomlangan qoidaga amal qiladi: birinchi so'z kichik harf va keyingi so'zlarning birinchi harfi, `exampleFunctionName()` da bo'lgani kabi bosh harf bilan yoziladi.
+. *Parentheses:* Forgetting an opening or closing parenthesis where needed will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
+. *Skriptni sozlash:* EarSketch avtomatik ravishda yangi skriptga sozlash funktsiyalarini qoʻshadi, lekin siz tasodifan `init()`, `setTempo()` yoki `finish()` funktsiyalarini oʻchirib tashlashingiz mumkin. Ushbu funktsiyalar har bir skriptda hosil bo'lishiga ishonch hosil qiling.
+. *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
+
+Mashq qilish vaqti!
+Quyidagi koddan 5 ta xatoni toping:
+
+[role="curriculum-python"]
+[source,python]
+----
+# python kodi
+#
+# skript_nomi: 5 ta Xatoni Toping
+#
+# muallif: EarSketch Jamoasi
+#
+# izoh: Ushbu skriptdagi xatolarni toping va tuzating
+#
+
+from earsketch import *
+
+init)
+setTempo(88)
+
+fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9)
+fitmedia(2, HIPHOP_DUSTYGROOVEPART_003, 1, 9)
+
+
+finish()
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+// javascript kodi
+//
+// script_name: 5 ta Xatoni Toping
+//
+// muallif: EarSketch Jamoasi
+//
+// izoh: Ushbu skriptdagi xatolarni toping va tuzating
+//
+
+init);
+setTempo(88);
+
+fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
+fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);
+
+
+finish();
+----
+////
+OPTIONAL
+////
+
+Javob quyidagicha
+
+. `init()` funktsiyasida qavslar mavjud emas
+. Birinchi `fitMedia()` da 'e' belgisi yo'q
+. Birinchi `fitMedia()`da uchinchi va toʻrtinchi parametrlar orasida vergul yoʻq
+. Ikkinchi `fitMedia()` da katta “M” harfi yoʻq
+. Ikkinchi `fitMedia()`da parametrlar tartibi toʻgʻri emas: u ovozli klip nomi, so'ng trek raqami boʻlishi kerak
+
+////
+END OF OPTIONAL
+////
+
+Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a description of different error types and what you can do to prevent them.
+
+
+////
+TODO: when options are ready, modify the link
+////
+
+
+
+
+
+
+[[chapter1summary]]
+=== 1-Bob Xulosa
+
+[role="curriculum-python"]
+* Kod qatori - bu kompyuter tomonidan bajarilishi kerak bo'lgan ko'rsatma. Barcha ko'rsatmalar birgalikda dasturni tashkil qiladi.
+* *RAIS'lar* raqamli audio fayllar yoki *kliplarni* qayd etish, tahrirlash va ijro etish uchun maxsus kompyuter dasturidir. EarSketch - bu audio kliplarni kodli vaqt jadvaliga joylashtirish imkonini beruvchi RAIS. 
+* EarSketch-da musiqa yaratish uchun kod avval kod muharriri paneliga kiritiladi. Ishga tushirish tugmasi bosilgandan so'ng, musiqa RAIS panelida ijro etiladi.
+* Ovozli kliplarni Ovoz Brauzerida topish mumkin. Ular nomini to'liq bosh harflar bilan yozish yoki joylashtirish orqali aytiladi.
+* Kompyuter *dasturi* - bu kompyuter muayyan vazifani ijro etishi uchun bajaradigan ko'rsatmalar ketma-ketligi. 
+* *Dasturlash tillari* - bu kompyuter tushunadigan so'zlar va belgilar to'plami. Dasturlash tili kodni tartibga solish uchun sintaksisga amal qiladi.
+* EarSketch skripti sharhlar bo'limi, sozlash bo'limi, musiqa bo'limi va yakunlash bo'limidan iborat.
+* Katta ko'k havolani bosish orqali yangi skript yarating yoki boshqa skript allaqachon ochiq bo'lsa, "+" belgisini bosing.
+* `fitMedia()` - bu RAIS-ga tovush qo'shishning asosiy usuli. Unda to'rtta argument bor, musiqa yaratish uchun zarur bo'lgan ma'lumotlar:
+** *fileName:* RAIS-ga joylashtirilgan ovozli klip.
+** *trackNumber:* Musiqa joylashtirilgan trek.
+** *startLocation:* Ovozli klip boshlanadigan oʻlchov.
+** *endLocation:* Ovozli klip tugaydigan oʻlchov.
+* *Nosozliklarni tuzatish* - bu dasturchi tomonidan yo'l qo'yilgan *nosozliklarni*, xatolarni topish va tuzatish jarayoni.
+* *sintaksis* qoidalari kodni ma'lum bir dasturlash tilida qanday yozish kerakligini belgilaydi.
+* *Konsol* dasturning holati haqidagi ma'lumotlarni ko'rsatadi, bu esa sintaksis xatolarni tuzatish uchun foydalidir. 
+* Boshlang'ich dasturchilar uchun keng tarqalgan xatolar orasida matn terish xatolari, noto'g'ri harflar, yetishmayotgan qavslar, noto'g'ri skript sozlamalari...
+
+[role="curriculum-javascript"]
+* Kod qatori - bu kompyuter tomonidan bajarilishi kerak bo'lgan ko'rsatma. Barcha ko'rsatmalar birgalikda dasturni tashkil qiladi.
+* *RAIS'lar* raqamli audio fayllar yoki *kliplarni* qayd etish, tahrirlash va ijro etish uchun maxsus kompyuter dasturidir. EarSketch - bu audio kliplarni kodli vaqt jadvaliga joylashtirish imkonini beruvchi RAIS. 
+* EarSketch-da musiqa yaratish uchun kod avval kod muharriri paneliga kiritiladi. Ishga tushirish tugmasi bosilgandan so'ng, musiqa RAIS panelida ijro etiladi.
+* Ovozli kliplarni Ovoz Brauzerida topish mumkin. Ularning barchasi to'liq bosh harflar bilan yozish yoki ismlari joylashtirish orqali tilga olinadi.
+* Kompyuter *dasturi* - bu kompyuter muayyan vazifani ijro etishi uchun bajaradigan ko'rsatmalar ketma-ketligi. 
+* *Dasturlash tillari* - bu kompyuter tushunadigan so'zlar va belgilar to'plami. Dasturlash tili kodni tartibga solish uchun sintaksisga amal qiladi.
+* EarSketch skripti sharhlar bo'limi, sozlash bo'limi, musiqa bo'limi va yakunlash bo'limidan iborat.
+* Katta ko'k havolani bosish orqali yangi skript yarating yoki boshqa skript allaqachon ochiq bo'lsa, "+" belgisini bosing.
+* `fitMedia()` - bu RAIS-ga tovush qo'shishning asosiy usuli. Unda to'rtta argument bor, musiqa yaratish uchun zarur bo'lgan ma'lumotlar:
+** *fileName:* RAIS-ga joylashtirilgan ovozli klip.
+** *trackNumber:* Musiqa joylashtirilgan trek.
+** *startLocation:* Ovozli klip boshlanadigan oʻlchov.
+** *endLocation:* Ovozli klip tugaydigan oʻlchov.
+* *Nosozliklarni tuzatish* - bu dasturchi tomonidan yo'l qo'yilgan *nosozliklarni*, xatolarni topish va tuzatish jarayoni.
+* *sintaksis* qoidalari kodni ma'lum bir dasturlash tilida qanday yozish kerakligini belgilaydi.
+* *Konsol* dasturning holati haqidagi ma'lumotlarni ko'rsatadi, bu esa sintaksis xatolarni tuzatish uchun foydalidir. 
+* Boshlang'ich dasturchilar uchun keng tarqalgan xatolar orasida matn terish xatolari, noto'g'ri harflar, yetishmayotgan qavslar, noto'g'ri skript sozlamalari...
+
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Quyidagilardan qaysi biri EarSketch ish maydonidagi panel EMAS?
+[answers]
+* Effektlar brauzeri
+* Kod muharriri
+* RAIS
+* Konsol
+--
+
+[question]
+--
+`fitMedia()` funktsiyasi uchun sizga nechta parametr kerak?
+[answers]
+* 4
+* 6
+* 2
+* 3
+--
+
+[question]
+--
+Bitta skript ... ga mos keladi
+[answers]
+* Bir EarSketch qo'shig'i
+* Bir qator kod
+* Bir dasturlash tili
+* Bitta dasturchi
+--
+
+[question]
+--
+O'lchov nima?
+[answers]
+* Musiqiy vaqt birligi
+* Ovoz balandligi birligi
+* RAIS-dagi chiziq
+* Tovush pardasi birligi
+--
+
+[question]
+--
+Quyidagilardan qaysi biri kodda uchraydigan xatolikning keng tarqalgan turi EMAS?
+[answers]
+* Grammatik xatolar
+* Ijro Etish Xatolari
+* Mantiqiy Xatolar
+* Sintaksis Xatolari
+--
+
+[question]
+--
+EarSketch ish maydonida nosozliklaringiz haqida ma'lumotni qayerdan olishingiz mumkin?
+[answers]
+* Konsol
+* Ovoz brauzeri
+* Skript brauzeri
+* RAIS
+--
