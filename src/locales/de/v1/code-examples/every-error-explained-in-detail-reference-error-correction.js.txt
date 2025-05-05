@@ -1,0 +1,6 @@
+// Referenzfehler: Korrektur
+
+setTempo(120);
+
+var today = readInput("What day is it?");
+println("Today is " + today);
