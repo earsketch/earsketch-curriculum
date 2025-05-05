@@ -10,31 +10,25 @@ var sonidosA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD
 var sonidosB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
 
 // Imprime el segundo carácter de cada cadena.
-
 println(cadenaA[1]);
 println(cadenaB[1]);
 
 // Imprime el último elemento de tus arreglos.
-
 println(sonidosA[sonidosA.length - 1]);
 println(sonidosB[sonidosB.length - 1]);
 
 // Crea e imprime cadenaC, la concatenación de cadenaA y cadenaB.
-
 var cadenaC = cadenaA + cadenaB;
 println(cadenaC);
 
 // Crea e imprime sonidosC, la concatenación de tus sonidosA, sonidosB y sonidosA otra vez.
-
 var sonidosC = (sonidosA.concat(sonidosB)).concat(sonidosA);
 println(sonidosC);
 
 // Crea e imprime cadenaD, la porción de cadenaC del segundo al quinto carácter inclusive.
-
 var cadenaD = cadenaC.substring(1, 5);
 println(cadenaD);
 
 // Crea e imprime sonidosD, la porción de cadenaC del tercer al último elemento inclusive.
-
 var sonidosD = sonidosC.slice(2, sonidosC.length);
 println(sonidosD);
