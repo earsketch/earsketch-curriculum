@@ -1,0 +1,19 @@
+// Printing: Using println() to print messages in the console
+
+// Sozlash
+setTempo(120);
+
+// Variables
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
+
+// First print statement
+println(1 + 3);
+
+// Looping our beat
+// Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
+    println(measure);
+    println("ok");
+}
