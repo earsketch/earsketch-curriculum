@@ -1,13 +1,16 @@
 [[effectsandenvelopes]]
 == Effets et enveloppes
+
 :nofooter:
 
-EarSketch permet au compositeur de modifier des clips audio pour produire des sons nouveaux et uniques. Ceci est réalisé grâce à la fonction `setEffect()`, soit l'objet de ce chapitre.
+EarSketch lets the composer alter existing sounds to produce new and unique sounds. This is achieved through the `setEffect()` function, the focus of this chapter.
 
 [[effectsinearsketch]]
-=== Utiliser les effets dans EarSketch
+=== Use Effects in EarSketch
 
-Les *effets* nous permettent de modifier la qualité des sons. Tout comme ajouter un filtre permet de modifier une photo, ajouter un effet permet de modifier un son. Par exemple, vous pouvez modifier le volume, ajouter un écho ou une réverbération, etc.
+:nofooter:
+
+*Effects* allow us to change qualities of sounds. Tout comme ajouter un filtre permet de modifier une photo, ajouter un effet permet de modifier un son. For example, you can change the volume, add some echo or reverb, etc.
 
 [role="curriculum-python curriculum-mp4"]
 [[video4py]]
@@ -17,17 +20,17 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-Nous utiliserons la fonction `setEffect()`, qui nécessite quatre arguments, comme `fitMedia()` :
+We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
 
-. *trackNumber* : La piste à laquelle l'effet est ajouté.
-. *Nom de l'effet* : L'effet spécifique qui est utilisé.
-. *Paramètre de l'effet*: Le paramètre pour l'effet.
-. *Valeur de l'effet* : La valeur du paramètre, un nombre dans une plage spécifique. La plage dépend du paramètre de l'effet.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 
 .ENTRAÎNEZ-VOUS
 ****
-Écrivez une nouvelle chanson comprenant deux pistes et modifiez le volume de celles-ci en utilisant la fonction `setEffect()`. 
-Dans ce cas, le nom de l'effet (2ᵉ argument) est VOLUME et le paramètre de l'effet (3ᵉ argument) est GAIN. La valeur de l'effet (4ᵉ argument) est un nombre de décibels (dB), entre -60 et +12. 
+Write a new song with two tracks and modify the volume for both of the tracks using the `setEffect()` function.
+In that case, the effect name (second argument) is `VOLUME`, and the effect parameter (third argument) is `GAIN`. The effect value (fourth argument) is a number of decibels (dB), between `-60` and `+12`.
 ****
 
 Voyez l'exemple ci-dessous :
@@ -44,29 +47,35 @@ include::code-examples/effects-and-envelopes-volume-effect.py.txt[]
 include::code-examples/effects-and-envelopes-volume-effect.js.txt[]
 ----
 
-Nous avons vu l'effet `VOLUME`. Voyons maintenant l'effet `DELAY`. Écoutez les deux clips ci-dessous. Un des clips comprend l'effet *delay* appliqué et l'autre non.
+We've seen the `VOLUME` effect. Let's now look at `DELAY`. Listen to the 2 clips below, one without and one with a *delay* effect applied.
 
 Aucun effet :
+
 ++++
 <div class="curriculum-mp3">audioMedia/reference.mp3</div>
 ++++
 
 Effet de délai :
+
 ++++
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-Dans ce cas, le nom de l'effet (2ᵉ argument) est `DELAY` et le paramètre de l'effet (3ᵉ argument) peut être soit `DELAY_TIME` (le temps avant que l'écho ne « réponde ») ou `DELAY_FEEDBACK` (le niveau ou force de l'écho). La valeur de `DELAY_TIME` est en millisecondes (1000 millisecondes correspond à une seconde) et la valeur de `DELAY_FEEDBACK` est un nombre compris entre -120 et -1.
+In that case, the effect name (second argument) is `DELAY`, and the effect parameter (third argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between `-120` and `-1`.
+
+For example, `setEffect(1, DELAY, DELAY_TIME, 500)` puts a delay onto track 1 with the delay/echo lasting for 500 ms.
 
 .ENTRAÎNEZ-VOUS
 ****
-. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#, effects>>
+. Read about the delay effect in the list of effects chapter here: <</en/v1/every-effect-explained-in-detail#,effects>>
 . Exécutez ensuite le code ci-dessous et écoutez la musique sans les effets.
-. Puis, décommentez (« décommenter » signifie supprimer la syntaxe du commentaire, `#` ou <0>//</0> dans un bloc de code) la première ligne <0>setEffect()</0> et observez la différence.
-. Puis, décommentez la deuxième ligne `setEffect()` et écoutez la différence. 
-Notez que le délai, soit 500 ms, correspond à la longueur d'un beat. Comme le tempo correspond à 120 battements par minute, il y a un battement tous les 60/120 = 1/2 seconde. 1 seconde correspond à 1000 ms, donc 1/2 seconde correspond à 1000/2 = 500 ms.
+. Then uncomment the first `setEffect()` line and listen to the difference
+. Then uncomment the second `setEffect()` line and listen to the difference ("uncomment" means to erase the comment syntax, `#` or `//` from a block of code)
+Note that the delay time, 500ms, is the length of one beat. Comme le tempo correspond à 120 battements par minute, il y a un battement tous les 60/120 = 1/2 seconde. 1 seconde correspond à 1000 ms, donc 1/2 seconde correspond à 1000/2 = 500 ms.
 Vous pouvez essayer de modifier le délai et d'évaluer si votre musique sonne mieux ou pas.
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
@@ -80,25 +89,29 @@ include::code-examples/effects-and-envelopes-delay-effect.py.txt[]
 include::code-examples/effects-and-envelopes-delay-effect.js.txt[]
 ----
 
+{nbsp} +
+
 [[functionsandmoreeffects]]
 === Fonctions et autres effets
 
-Jusqu'à présent, vous avez utilisé plusieurs fonctions dans EarSketch comme `fitMedia()` ou `setEffect()`. Notez que les noms des fonctions commencent toujours par une lettre minuscule et sont souvent un verbe. Les parenthèses indiquent à l'ordinateur d’*appeler* ou d'*exécuter* la fonction. Les *arguments*, ou paramètres, entre les parenthèses sont séparés par des virgules.
+So far, you've been using several functions in EarSketch like `fitMedia()` or `setEffect()`. Notez que les noms des fonctions commencent toujours par une lettre minuscule et sont souvent un verbe. The parentheses tell the computer to *call*, or *execute*, the function. *Arguments*, or parameters, between the parentheses are separated by commas.
 
 [role="curriculum-python"]
-* Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API EarSketch, ajoute des fonctionnalités musicales à Python. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
-* Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. EarSketch, ou l'API EarSketch, ajoute des fonctionnalités musicales à Python. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
 [role="curriculum-javascript"]
-* Les fonctions `setTempo()`, `fitMedia()`, `makeBeat()` et maintenant `setEffect()` nécessitent des arguments. Elles font partie de l'*interface de programmation d'applications* ou *API* de EarSketch. EarSketch, ou l'API de EarSketch, ajoute des fonctionnalités musicales à JavaScript. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
-* Dans un chapitre ultérieur, vous apprendrez également à créer vos propres fonctions personnalisées.
+* `setTempo()`, `fitMedia()`, `makeBeat()`, and now `setEffect()` take arguments. They are part of the EarSketch *Application Programming Interface*, or *API*. EarSketch, ou l'API de EarSketch, ajoute des fonctionnalités musicales à JavaScript. Un autre exemple d'API est l'API de Google Maps : un ensemble d'outils pour intégrer des cartes dans des sites Web ou des applications.
+* In a later chapter, you'll also learn how to create your own custom functions.
 
 Chacun des arguments de la fonction peut avoir un type de données spécifique. L'ordre des arguments est également important. Voyez ci-dessous quelques exemples de type de données :
 
-* *Nombres*. *Les entiers* (ou « int ») sont des nombres entiers comme 0, 5 ou -26. *Les nombres en virgules flottantes* sont des nombres rationnels comme 0.125 ou -21.0. Par exemple, les arguments de la fonction `fitMedia()` « track number », « start measure » et « end measure » sont tous des nombres.
-* *Chaînes de caractères*. Une chaîne de caractères de beat comme `"0000----0000----"` est utilisée comme argument dans la fonction `makeBeat()`.
+* *Numbers*
+** *Integers* are whole numbers, like 0, 5, or -26. Example: track numbers
+** *Floating point* numbers are rational numbers like 0.125 or -21.0. Example: volume of -4.2dB
+* *Strings* represent text. Example: `"0000----0000----"`
 
-Maintenant, amusons-nous davantage avec la fonction `setEffect()`. La vidéo suivante montre comment utiliser certains effets :
+Now, let's play more with the `setEffect()` function. La vidéo suivante montre comment utiliser certains effets :
 
 ////
 VIDEO IS BEEING MADE
@@ -106,52 +119,55 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-La *réverbération* (ou « reverb ») est un son qui rebondit sur les murs et revient à vos oreilles. Cela donne un sens de l'espace à votre son. Pensez à la différence entre le fait de parler dans une petite chambre et parler dans une grande église. Plus la pièce est grande, plus les ondes mettent de temps à revenir vers vos oreilles, d'où ce son d'« écho de grande pièce ». L'effet `REVERB` possède des paramètres pour contrôler le temps de réverbération (`REVERB_DECAY`) et le niveau d'effet présent (`MIX`).
+*Reverb* (short for reverberation) is sound bouncing off walls and returning to your ears. Cela donne un sens de l'espace à votre son. Pensez à la différence entre le fait de parler dans une petite chambre et parler dans une grande église. Plus la pièce est grande, plus les ondes mettent de temps à revenir vers vos oreilles, d'où ce son d'« écho de grande pièce ». The `REVERB` effect has parameters to control the decay time (`REVERB_DECAY`) and amount of the effect present (`MIX`).
 
 Écoutez les clips ci-dessous pour découvrir le résultat de l'ajout de réverbération à une piste :
 
 Aucun effet :
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
 Effet de réverbération :
+
 ++++
 <div class="curriculum-mp3">audioMedia/reverbEffect.mp3</div>
 ++++
 
+{nbsp} +
+
 .ENTRAÎNEZ-VOUS
 ****
-Go to this chapter for a complete list of effects: <</en/v1/every-effect-explained-in-detail#, effects>>.
-Créez une chanson avec un effet de volume et deux autres effets. N'oubliez pas d'inscrire ce que vous souhaitez faire dans les commentaires et de créer des variables si nécessaire.
+Go to <</en/v1/every-effect-explained-in-detail#,this chapter>> for a complete list of effects.
+Create a song with a volume effect and two other effects. Don't forget to write what you are doing in the comments and to create variables when necessary.
 ****
 
-
-[[effectsandenvelopes]]
+[[effectsandenvelopes2]]
 === Effets et enveloppes
 
-Vous avez maintenant commencé à utiliser des effets et peut-être que vous souhaiterez modifier un effet au fil du temps ; par exemple, vous voudrez peut-être ajouter un fondu d'ouverture (lorsque le volume devient plus élevé) au début de votre chanson.
+You've started using effects, and maybe you'd like for one effect to change over time. For example, you might want a fade in (volume getting higher) at the beginning of your song.
 
-Les *enveloppes* nous permettent de définir comment un effet change au fil du temps. 
+*Envelopes* allow us to define how an effect changes over time.
 
-Nous utiliserons deux paires de valeur-temps (value-time). Chaque paire contient une valeur d'effet et une mesure correspondante. Par exemple, (-60, 1, 0, 3) signifie qu'un point est placé à la valeur -60 à la mesure 1 et un autre point est placé à la valeur 0 à la mesure 3. L'enveloppe crée une ligne entre ces points appelée *rampe* :
+We will use two value-time pairs. Chaque paire contient une valeur d'effet et une mesure correspondante. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. The envelope creates a line between these points, called a *ramp*:
 
 [[envelopepoints]]
 .Une enveloppe annotée dans EarSketch
-[caption="Figure 5.1: "]
+[caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-Pour modifier une enveloppe, vous avez uniquement besoin de la fonction `setEffect()` avec sept arguments. Les quatre derniers arguments sont les deux paires de valeur-temps.
+To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
 
-. Numéro de piste
-. Nom de l'effet
-. Paramètre de l'effet
-. Valeur de départ
-. Mesure de départ
-. Valeur de fin
-. Mesure de fin
+. track
+. type
+. parameter
+. startValue
+. start
+. endValue
+. end
 
-Les trois derniers paramètres sur sept sont des *paramètres facultatifs*. S'ils ne sont pas spécifiés, comme c'était le cas lorsque nous avons utilisé `setEffect()` avec seulement quatre paramètres, l'effet doit être appliqué à la piste entière.
+The last three out of seven parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only four parameters, the effect is applied to the entire track.
 
 Voici un exemple de fondu d'ouverture :
 
@@ -173,13 +189,11 @@ Maintenant, visualisez la vidéo suivante pour voir d'autres exemples d'envelopp
 [[video5b]]
 video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
 
-
 [role="curriculum-python"]
 [source,python]
 ----
 include::code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
 ----
-
 
 [role="curriculum-javascript curriculum-mp4"]
 video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
@@ -190,14 +204,15 @@ video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
 include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 ----
 
+{nbsp} +
+
 .ENTRAÎNEZ-VOUS
 ****
-Créez une nouvelle chanson. Utilisez une boucle « for » pour ajouter une enveloppe à toutes les pistes (par exemple : un fondu d'ouverture et de fermeture pour toutes vos pistes) ou répéter un effet sur la même piste. Il vous est possible d'utiliser n'importe quel effet de votre choix. 
+Créez une nouvelle chanson. Use one `for` loop to add an envelope to all the tracks (for example: fade in and fade out for all your tracks), or to repeat an effect on the same track. Il vous est possible d'utiliser n'importe quel effet de votre choix.
 Faites ensuite écouter votre chanson avec et sans effet à votre voisin.e (pour écouter votre chanson sans effet, veuillez commenter les lignes qui créent l'effet). Votre voisin.e doit deviner quel effet vous avez ajouté.
 ****
 
-Voyez l'exemple ci-dessous. Chaque itération de la boucle ajoute un segment (durée du segment : une mesure) de l'enveloppe. L'automatisation du paramètre GAIN crée des fondus de volume rythmique, un effet populaire en musique de dance électronique (EDM) illustré dans la chanson https://www.youtube.com/watch?v=Us_U-d2YN5Y[Rhythm] par Lvly. Essayez d'activer le contournement des effets dans le DAW pour entendre la différence que fait l'ajout d'effet (le bouton « bypass » à gauche de la piste d'effet dans votre DAW).
-
+Below is an example of the above practice. Chaque itération de la boucle ajoute un segment (durée du segment : une mesure) de l'enveloppe. Automating the GAIN parameter creates rhythmic volume fades. Essayez d'activer le contournement des effets dans le DAW pour entendre la différence que fait l'ajout d'effet (le bouton « bypass » à gauche de la piste d'effet dans votre DAW).
 
 [role="curriculum-python"]
 [source,python]
@@ -218,28 +233,29 @@ Et voici un exemple de fondus d'ouverture et de fermeture sur toutes les pistes 
 ----
 include::code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
 ----
+
 [role="curriculum-javascript"]
 [source,javascript]
 ----
 include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 ----
 
+{nbsp} +
 
 [[chapter5summary]]
 === Résumé du chapitre 5
 
-* Les *effets* permettent de modifier la qualité d'un son pour le rendre plus unique.
-* Le *volume* est lié à l'intensité sonore. Le *délai ou « Delay »* permet de créer un écho. La *réverbération ou « Reverb »* donne l'impression que le son est produit dans une grande pièce. Le réglage *panoramique ou « panning »* consiste à placer votre musique à gauche ou à droite dans l'espace sonore tout en conservant le volume.
-* Les effets sont créés dans EarSketch à l'aide de la fonction `setEffect()`. La syntaxe à utiliser est `setEffect(Numéro de piste, Nom de l'effet, Paramètre de l'effet, Valeur de l'effet)`.
-** *Numéro de piste* : La piste à laquelle l'effet est ajouté.
-** *Nom de l'effet* : L'effet spécifique qui est utilisé.
-** *Paramètre de l'effet* : Le paramètre utilisé pour l'effet.
-** *Valeur de l'effet* : La valeur du paramètre, un nombre dans une plage spécifique.
-* Les *fonctions* contiennent des instructions que l'ordinateur exécute. Les données sont envoyées aux fonctions par les *arguments*, qui affectent la façon dont la fonction s'exécute. Par exemple, la syntaxe d'un *appel* de fonction à deux arguments est `myFunction(argument1, argument2)` et pour un *appel* de fontion à quatre arguments on a `makeBeat(kick, 2, measure, kickBeat)`.
-* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#, effects>>, along with descriptions for each.
-* Les *enveloppes* nous permettent de définir comment un paramètre d'effet change au fil du temps. Elles sont décrites avec des paires de valeur-temps, comme _(valeur, temps, valeur, temps)_.
-* Pour une enveloppe, les arguments de la fonction `setEffect()` à sept paramètres sont : `setEffect(Numéro de piste, Nom de l'effet, Paramètre de l'effet, Valeur de départ, Mesure de départ, Valeur de fin, Mesure de fin)`.
-
+* *Effects* change the qualities of a sound to make them unique.
+* *Volume* is related to loudness. *Delay* creates an echo. *Reverb* makes it feel like the sound is played in a large room. *Panning* places your music on the left or right side.
+* Effects are implemented in EarSketch with the `setEffect()` function. Its syntax is `setEffect(track, type, parameter, value)`.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
+* *Functions* contain instructions for the computer to execute. Data is sent to functions by *arguments*, which affect how the function executes. The syntax of a function *call* with two arguments is `myFunction(argument1, argument2)`. An example of syntax used in a function *call* with 4 arguments is `makeBeat(kick, 2, measure, kickBeat)`.
+* A complete list of EarSketch effects and their parameters can be found in <</en/v1/every-effect-explained-in-detail#,effects>>, along with descriptions for each.
+* *Envelopes* define how an effect parameter changes over time. They are described with value-time pairs, like _(value, time, value, time)_.
+* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
 
 [[chapter-questions]]
 === Questions
@@ -247,6 +263,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 [question]
 --
 Qu'est-ce qu'un effet vous permet de faire dans EarSketch ?
+
 [answers]
 * Modifier les qualités sonores d'un projet
 * Ajouter un son à une piste
@@ -256,7 +273,8 @@ Qu'est-ce qu'un effet vous permet de faire dans EarSketch ?
 
 [question]
 --
-Parmi les arguments suivants, lequel n'est PAS un argument de la fonction `setEffect()` ?
+Which of these is NOT a `setEffect()` argument?
+
 [answers]
 * Nom de clip
 * Nom de l'effet
@@ -267,6 +285,7 @@ Parmi les arguments suivants, lequel n'est PAS un argument de la fonction `setEf
 [question]
 --
 Comment régleriez-vous le délai d'un effet de délai sur la piste 3 à 50 millisecondes ?
+
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
 * `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
@@ -276,7 +295,8 @@ Comment régleriez-vous le délai d'un effet de délai sur la piste 3 à 50 mill
 
 [question]
 --
-Parmi les éléments suivants, lequel n'est pas un paramètre utilisé dans les enveloppes `setEffect()` ?
+Which of the following is not a parameter used with `setEffect()` envelopes?
+
 [answers]
 * Longueur du clip
 * Valeur de départ
@@ -286,11 +306,13 @@ Parmi les éléments suivants, lequel n'est pas un paramètre utilisé dans les 
 
 [question]
 --
-Quel serait l'effet de la fonction suivante `setEffect()` ?
+What would the following `setEffect()` function do?
+
 [source,python]
 ----
-setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 10)
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
 ----
+
 [answers]
 * Augmenter la quantité de distorsion sur la piste 1 pendant 10 mesures.
 * Diminuer la quantité de distorsion sur la piste 1 pendant 50 mesures.
