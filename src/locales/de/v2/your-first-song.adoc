@@ -1,0 +1,290 @@
+[[customizeyourfirstsong]]
+== Gestalte deinen ersten Song
+
+:nofooter:
+
+In diesem Kapitel erfährst du, wie du das Tempo deines Songs änderst, Kommentare zu deinem Code hinzufügst und deine eigenen Sounds hochlädst, um die Botschaft deines Songs zu verstärken.
+
+[[settempo]]
+=== Die `setTempo()` Funktion
+
+[role="curriculum-python"]
+--
+Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits existierende Elemente für dich hinzugefügt werden:
+
+. Einige Kommentare, die mit `#` beginnen: Dies wird im nächsten Abschnitt behandelt
+. Die Zeile „from earsketch import *“, mit der die EarSketch-Funktionen (wie „fitMedia()“) zum Projekt hinzugefügt werden
+. Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
+--
+
+[role="curriculum-javascript"]
+--
+Inzwischen hast du bemerkt, dass beim Erstellen eines neuen Skripts bereits existierende Elemente für dich hinzugefügt werden:
+
+. Einige Kommentare, die mit `//` beginnen: Dies wird im nächsten Abschnitt behandelt
+. Die `setTempo(120)` Funktion, die wir im Detail unten sehen werden
+--
+
+Die `setTempo()` Funktion bestimmt die Geschwindigkeit deines Songs. Das *tempo* ist eine Anzahl von Beats pro Minute (bpm) in westlicher Musik. In EarSketch ist das Standardtempo (d. h. der Ausgangswert des Tempos) auf 120 bpm eingestellt, was einer schnelleren Schrittgeschwindigkeit entspricht. Um das Tempo zu ändern, ändere einfach die Zahl zwischen den Klammern der `setTempo()` Funktion. Je höher das Tempo, desto schneller ist deine Musik. Du kannst ein Tempo zwischen _45 und 220 bpm_ wählen.
+
+.ÜBUNG
+****
+. Erstelle ein neues Skript.
+. Platziere Sounds auf zwei verschiedenen Tracks
+. Ändere dein Tempo und höre dir den Song an.
+. Spiele einer Freundin oder einem Freund dein Lied in drei verschiedenen Tempos vor. Bitte sie oder ihn dann, eine Rangfolge vom langsamsten zum schnellsten Tempo zu erstellen.
+****
+
+Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Verschiedene Genres haben unterschiedliche Tempobereiche. Zum Beispiel:
+
+[cols="^3*"]
+|===
+|GENRE |BPM |BEISPIEL
+
+|Pop
+|110-130
+|"Thriller" - Michael Jackson
+
+"I Wanna Dance With Somebody" - Whitney Houston
+
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
+
+"Fight the Power" - Public Enemy
+
+|Country
+|90-110
+|"I Walk the Line" - Johnny Cash
+
+"Jolene" - Dolly Parton
+
+|House / EDM
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dubstep / Trap
+|140-150
+|"Scary Monsters and Nice Sprites" - Skrillex
+
+"Turn Down for What" - Lil Jon
+|===
+
+.ÜBUNG
+****
+. Wähle einen Künstler den du wirklich magst, und finde heraus, welchem Genre er angehört.
+. Suche nach diesem Genre (auf https://soundcloud.com/[Soundcloud] oder etwas Ähnlichem) und höre dir ein paar Ausschnitte von Songs in diesem Genre an.
+. Achte auf Ähnlichkeiten zwischen den Songs.
+. Du kannst auch auf Wikipedia recherchieren, um mehr Informationen über das Genre zu erhalten.
+****
+
+Die Sounds werden automatisch gestreckt und so an das Tempo deines Songs angepasst. Aus diesem Grund erscheinen im Sound-Browser angezeigte Sounds manchmal anders als in deinem Song. Die Wirkung kann extrem sein, wenn die Tempos sehr unterschiedlich sind.
+
+Um das originale Tempo des Sounds zu finden, fahre mit der Maus über den Soundkonstante Sound-Browser.
+
+[[comments]]
+=== Kommentare zu deinem Code hinzufügen
+
+*Kommentare* sind Codezeilen, die vom Computer nicht ausgeführt werden. Die Leute verwenden Kommentare, um Notizen innerhalb des Codes zu machen.
+
+EarSketch-Skripte beginnen mit Kommentaren, in die du eine Beschreibung deines Songs eingeben kannst. Das macht es für andere Programmierer einfacher, deinen Code zu verstehen.
+
+[role="curriculum-python"]
+In Python werden Kommentare durch eine Zeile gekennzeichnet, die mit einem Doppelkreuz-Symbol `#` beginnt.
+
+[role="curriculum-javascript"]
+In JavaScript werden Kommentare durch eine Zeile gekennzeichnet, die mit zwei Schrägstrichen `//` beginnt.
+
+.ÜBUNG
+****
+Schreibe in dein aktuelles Skript einen Kommentar mit einer Beschreibung deines Songs in die erste Zeile.
+****
+
+Du kannst auch Kommentare verwenden, um zu beschreiben, was die verschiedenen Abschnitte deines Codes tun. Hier ein Beispiel: Du kannst den Code einfügen und ausführen. Beachte, wie die Kommentare die verschiedenen Abschnitte beschreiben:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/your-first-song-comments.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/your-first-song-comments.js.txt[]
+----
+
+{nbsp} +
+
+[[uploadingsounds]]
+=== Deine eigenen Sounds hochladen
+
+Du kannst deine eigenen Sounds über den Sound-Browser auf der linken Seite deines Bildschirms hochladen. Klicke unter der Registerkarte „Sounds“ auf die Schaltfläche „Sound hinzufügen“.
+
+Du musst eingeloggt sein, um Sound hochzuladen.
+
+Lass uns die ersten drei Optionen erkunden.
+
+. *Upload Sound* erlaubt dir Audiodateien auf deinem Computer auszuwählen.
+. *Quick Record* ermöglicht die Aufnahme direkt vom Mikrofon deines Computers.
+. *Freesound* erlaubt dir den Import von Sounds von http://freesound.org[freesound.org^], einer Open-Source-Audio-Datenbank. In der Suchleiste kannst du nach einem Soundtyp suchen. Wähle dann die Umschalttaste vor dem Dateinamen, um die Datei auszuwählen.
+
+[role="curriculum-mp4"]
+[[video101rec]]
+video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
+
+.ÜBUNG
+****
+Musik und Kunst im Allgemeinen sind oft eine Möglichkeit, eine Botschaft zu vermitteln. Das kann entweder durch den Text und/oder durch die Stimmung des Liedes geschehen. Wir möchten, dass du einen kurzen Song schreibst, der etwas ausdrückt. Das kann ein Gefühl sein, das du gerne teilen möchtest, oder eine Geschichte.
+
+. Überlege dir, was du zum Ausdruck bringen möchtest
+. Dann entweder:
+.. Schreibe einen Text und nimm dich selbst auf, wie du ihn singst oder liest oder
+.. Nimm einige Sounds auf, die mit deiner Botschaft in Verbindung stehen oder lade welche herunter
+. Füge diese Aufnahmen mit `fitMedia()` zu deinem Song hinzu
+. Füge dann zusätzliche Sounds mit `fitMedia()` hinzu
+. Zeige deinen Song deinem Freund
+. Ihr könnt über eure Lieder und die Dinge, die ihr ausdrücken wolltet, diskutieren
+****
+
+Ein aktives Computerprogramm wird *Prozess* genannt.
+
+Wenn du einen Prozess startest, wird der Computercode zunächst im *Arbeitsspeicher* des Computers gespeichert, um einen schnellen Zugriff zu ermöglichen. Die *CPU*, oder Central Processing Unit, greift jede Anweisung aus dem Speicher auf und führt sie aus. Die CPU wird oft als das "Gehirn" des Computers betrachtet.
+
+Der Arbeitsspeicher eines Computers wird manchmal als primärer Speicher oder RAM bezeichnet. Er ist so konzipiert, dass er schnell und temporär ist, nur für aktive Prozesse.
+
+Es gibt einen Unterschied zwischen Arbeitsspeicher (oder Kurzzeitspeicher) und Langzeitspeicher. Langzeitspeicher, wie eine Festplatte oder eine Cloud, werden als Sekundärspeicher bezeichnet. *Sekundärspeicher* hält hohe Datenmengen für lange Zeiträume, auch nach dem Herunterfahren eines Computers. Die CPU interagiert nicht direkt mit dem Sekundärspeicher. Wenn die CPU einen Prozess ausführt, müssen die Daten aus dem Sekundärspeicher erst in den Arbeitsspeicher übertragen werden, damit die CPU schnell darauf zugreifen kann.
+
+Manchmal stammen die Daten im Arbeitsspeicher, die die CPU verwenden soll, nicht aus dem Sekundärspeicher, sondern von einem Eingabegerät. *Inputs* sind die Signale oder Daten, die vom Computer empfangen werden, wie Audio von einem Mikrofon. Genauso sind *Outputs* die Signale oder Daten, die von ihm gesendet werden, wie Audio über einen Lautsprecher. Input/Output oder I/O ist die Art und Weise, wie der Computer mit der Außenwelt, einschließlich Menschen, kommuniziert!
+
+Betrachten wir die Aufnahme eines Sounds in EarSketch als Beispielprozess. Zuerst nehmen wir mit dem Eingabegerät, dem Mikrofon, Daten auf dem Computer auf. Die CPU speichert diese Audiodaten in ihrem Speicher. Wenn du die Abspieltaste drückst, um deine Aufnahme zu hören, greift die CPU auf die Daten zu und sendet sie an einen Ausgang, also an die Lautsprecher oder Kopfhörer. Wenn du die Upload-Taste drückst, führt die CPU einen Prozess aus, der die Audiodaten in ein Standard-Tondateiformat (eine WAV-Datei, oder .wav) umwandelt und an den EarSketch-Server sendet. Der Server ist ein externes System, das allen EarSketch-Benutzern Dienste zur Verfügung stellt, auch deinem eigenen Computer. Der EarSketch-Server speichert die Sounddatei auf dem Sekundärspeicher des Servers, damit du in Zukunft darauf zugreifen kannst.
+
+Sieh dir das folgende Zusatzvideo an:
+
+[role="curriculum-mp4"]
+[[video11cpu]]
+video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
+
+////
+END OF OPTIONAL
+////
+
+[[copyright]]
+=== Benutze Copyright weise
+
+*Copyright* ist der Teil des Gesetzes, der *geistiges Eigentum*, oder das Eigentum an kreativen Werken wie Musik abdeckt. Wenn du Samples (kleine Musikstücke) verwendest oder bereits vorhandene Musik remixt, musst du die Urheber nennen und kannst dies in den Kommentaren deines Codes tun. Bevor du Sounds von anderen Musikern verwendest und deine eigene Musik weitergibst, solltest du mehr über das Urheberrecht erfahren!
+
+Wenn du etwas Originelles und Wesentliches geschaffen hast, erhältst du automatisch ein Urheberrecht! In den USA bedeutet das, dass du Kopien anfertigen, Änderungen vornehmen und deine Werke weitergeben darfst.
+
+Bei einem Lied gibt es zwei Urheberrechte: die Rechte am Lied (vom Autor oder Komponisten) und die Rechte an der Tonaufnahme (oft von der Plattenfirma). Einnahmen aus öffentlichen Auftritten gehen an den Songwriter und die meisten Einnahmen aus Plattenverkäufen gehen an die Plattenfirma.
+
+*Urheberrechtsverletzung* ist eine Verletzung des Urheberrechts, wie zum Beispiel das illegale Herunterladen von Musik. In den Vereinigten Staaten erlaubt *fair use* die Verwendung von urheberrechtlich geschützten Inhalten unter bestimmten Bedingungen wie erzieherische oder kritische Zwecke, wobei nur geringe Mengen der Arbeit wiederverwendet werden. Streitigkeiten über eine gerechte Nutzung werden von einem Richter von Fall zu Fall entschieden.
+
+Neben der fairen Nutzung gibt es auch andere Möglichkeiten, Musik offen zu nutzen und zu teilen. EarSketch funktioniert, weil Künstlerinnen und Künstler ihre Arbeit in Form von *Samples* (also kleinen Teilen von Soundaufnahmen) im Sound-Browser mit dir geteilt haben.
+
+Bei dem Urheberrecht geht es nicht nur darum, Menschen in Schwierigkeiten zu bringen. Wenn du einen Song ins Internet hochlädst, macht es dir vielleicht nichts aus, wenn jemand ihn ohne Fragen herunterlädt; du möchtest, dass Leute deine Musik teilen! Das Urheberrecht sollte uns helfen, mehr Kunst zu machen und zu teilen, nicht weniger. Wenn du Songs in EarSketch erstellst, möchten wir, dass du weniger an _Diebstahl_ und mehr an _Austausch_ denkst. EarSketch funktioniert, weil Künstler ihre Arbeit mit dir geteilt haben, was zu einer Bibliothek von Samples geführt hat, die du zum Erstellen neuer Musik verwendest. Wenn du deine Musik weitergibst oder anderen Mitschülern erlaubst, deinen Code zu remixen, trägst du damit dazu bei, dass neue Kunst in die Welt kommt.
+
+Wenn du Sounds in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Sounds zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
+
+Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+
+[[chapter2summary]]
+=== Zusammenfassung von Kapitel 2
+
+[role="curriculum-python"]
+* Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
+* Die Clips im Sound-Browser von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
+* `from earsketch import *` fügt die EarSketch-API zu deinem Projekt hinzu.
+* `setTempo()` lässt dich das Tempo deines Songs angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
+* Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
+* Ein *Prozess* ist ein Programm, das auf einem Computer läuft. Die Verarbeitung erfolgt durch die *CPU* eines Computers, die für die Ausführung von Programmanweisungen zuständig ist.
+* *Arbeitsspeicher* (a.k.a RAM oder Primärspeicher) enthält temporäre Daten und Verarbeitungsanweisungen, die die CPU verwenden kann.
+* *Sekundärspeicher* bezieht sich auf die langfristige Speicherung von Daten, oft in hohen Volumen. Daten aus dem Sekundärspeicher müssen in den Arbeitsspeicher übertragen werden, bevor die CPU auf sie zugreifen kann.
+* *Copyright* ist ein Teil des Gesetzes, der das Eigentum an kreativen Werken wie Musik abdeckt. Es ist wichtig für Musiker, weil es definiert, wie die Arbeit einer anderen Person verwendet und geteilt werden kann.
+* Wenn du ein musikalisches Werk erstellst, das greifbar und neu ist, hast du automatisch ein Urheberrecht. Mit anderen Worten: Du hast Rechte an dem Werk, das du geschaffen hast.
+* Die *Lizenzierung* eines Musikstücks gibt anderen die Erlaubnis, es zu verwenden.
+
+[role="curriculum-javascript"]
+* Das *Tempo* ist die Geschwindigkeit, mit der ein Musikstück gespielt wird, angegeben in Schlägen pro Minute (bpm). Das Tempo ist an ein Genre gebunden.
+* Die Clips im Sound-Browser von EarSketch sind in Ordnern mit verwandten Sounds organisiert. Um das genaue Tempo eines Clips zu sehen, bewege den Mauszeiger über den Namen im Sound-Browser.
+* Kommentare sind Codezeilen, die vom Computer nicht ausgeführt werden. Sie sind aber nützlich, um Notizen innerhalb eines Skripts zu machen.
+* `setTempo();` lässt dich das Tempo deines Liedes angeben. Dies muss in jedem EarSketch-Skript enthalten sein.
+* Du kannst deine eigenen Sounds über den Sound-Browser in EarSketch hochladen. Klicke einfach auf „Sound hinzufügen“.
+* Ein *Prozess* ist ein Programm, das auf einem Computer läuft. Die Verarbeitung erfolgt durch die *CPU* eines Computers, die für die Ausführung von Programmanweisungen zuständig ist.
+* *Arbeitsspeicher* (a.k.a RAM oder Primärspeicher) enthält temporäre Daten und Verarbeitungsanweisungen, die die CPU verwenden kann.
+* *Sekundärspeicher* bezieht sich auf die langfristige Speicherung von Daten, oft in hohen Volumen. Daten aus dem Sekundärspeicher müssen in den Arbeitsspeicher übertragen werden, bevor die CPU auf sie zugreifen kann.
+* *Copyright* ist ein Teil des Gesetzes, der das Eigentum an kreativen Werken wie Musik abdeckt. Es ist wichtig für Musiker, weil es definiert, wie die Arbeit einer anderen Person verwendet und geteilt werden kann.
+* Wenn du ein musikalisches Werk erstellst, das greifbar und neu ist, hast du automatisch ein Urheberrecht. Mit anderen Worten: Du hast Rechte an dem Werk, das du geschaffen hast.
+* Die *Lizenzierung* eines Musikstücks gibt anderen die Erlaubnis, es zu verwenden.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Was kannst du mit `setTempo()` in EarSketch tun?
+
+[answers]
+* Das Tempo eines Songs festlegen
+* Einen Sound zu einem Track hinzufügen
+* Einen Drum-Beat erstellen
+* Die Soundeigenschaften in einem Projekt ändern
+--
+
+[question]
+--
+Was ist die Maßeinheit für das Tempo?
+
+[answers]
+* Beats per Minute (BPM)
+* Takte (measures)
+* Dezibel (dB)
+* Sekunden
+--
+
+[question]
+--
+Wofür kannst du Kommentare verwenden?
+
+[answers]
+* Alles oben Genannte
+* Deinen Code organisieren
+* Eine Beschreibung deines Skripts am Anfang deines Skripts schreiben
+* Den Code für andere Programmierer leicht lesbar machen
+--
+
+[question]
+--
+Welche der folgenden Aussagen ist richtig?
+
+[answers]
+* Eine Festplatte ist ein Beispiel für einen Sekundärspeicher
+* Audiodaten werden in der CPU eines Computers gespeichert
+* Die CPU speichert Anweisungsdaten für Programme
+* Der Sekundärspeicher speichert Daten für kurze Zeiträume
+--
+
+[question]
+--
+Wie erhältst du ein Urheberrecht?
+
+[answers]
+* Indem du ein neues Werk schaffst und veröffentlichst
+* Indem du ein Patent erwirbst
+* Indem du einer Geheimorganisation beitrittst
+* Indem du eine Lizenz für dein Werk auswählst
+--
+
+[question]
+--
+Was ist eine Musiklizenz?
+
+[answers]
+* Eine Lizenz gibt anderen die Erlaubnis, ein musikalisches Werk zu verwenden
+* Ein Kompositionsprozess
+* Ein Musikgenre
+* Eine Beschreibung deines Songs
+--
