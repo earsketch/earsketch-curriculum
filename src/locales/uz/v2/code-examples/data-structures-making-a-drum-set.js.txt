@@ -1,0 +1,18 @@
+// Making a drum set: Using arrays with makeBeat()
+
+// Sozlash
+setTempo(100);
+
+// Music
+// Before, we had one track for every sound (measure 1):
+var kick = OS_KICK05;
+var snare = OS_SNARE01;
+var kickBeat = "0+++----0+++----";
+var snareBeat = "----0+++----0+++";
+makeBeat(kick, 1, 1, kickBeat);
+makeBeat(snare, 2, 1, snareBeat);
+
+// Now, we can combine them (measure 3):
+var drums = [OS_KICK05, OS_SNARE01];
+var beat = "0+++1+++0+++1+++";
+makeBeat(drums, 1, 3, beat);
