@@ -1,0 +1,27 @@
+# No loops: Musikwiederholung ohne Codeschleifen erstellt
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Musik
+drums1 = ELECTRO_DRUM_MAIN_BEAT_008
+drums2 = ELECTRO_DRUM_MAIN_BEAT_007
+
+# Alle diese fitMedia()-Aufrufe könnten durch zwei Aufrufe in einer Schleife ersetzt werden.
+fitMedia(drums1, 1, 1, 1.5)
+fitMedia(drums2, 1, 1.5, 2)
+fitMedia(drums1, 1, 2, 2.5)
+fitMedia(drums2, 1, 2.5, 3)
+fitMedia(drums1, 1, 3, 3.5)
+fitMedia(drums2, 1, 3.5, 4)
+fitMedia(drums1, 1, 4, 4.5)
+fitMedia(drums2, 1, 4.5, 5)
+fitMedia(drums1, 1, 5, 5.5)
+fitMedia(drums2, 1, 5.5, 6)
+fitMedia(drums1, 1, 6, 6.5)
+fitMedia(drums2, 1, 6.5, 7)
+fitMedia(drums1, 1, 7, 7.5)
+fitMedia(drums2, 1, 7.5, 8)
+fitMedia(drums1, 1, 8, 8.5)
+fitMedia(drums2, 1, 8.5, 9)
