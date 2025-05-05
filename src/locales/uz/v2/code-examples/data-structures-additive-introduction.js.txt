@@ -1,0 +1,14 @@
+// Additive Introduction: Creating an additive introduction with array iteration
+
+// Sozlash
+setTempo(120);
+
+// Music
+var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
+
+for (var measure = 1; measure < introSounds.length + 1; measure++) {
+    // we add 1 to introSounds.length since we want measure to go up to introSounds.length
+    var index = measure - 1; // zero-based array index
+    var track = measure; // change track with measure
+    fitMedia(introSounds[index], track, measure, 5);
+}
