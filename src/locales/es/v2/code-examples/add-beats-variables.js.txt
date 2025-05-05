@@ -9,12 +9,10 @@ var synth2 = HIPHOP_SOLOMOOGLEAD_001;
 var tambores = HIPHOP_TRAPHOP_BEAT_008;
 
 // fitMedia() añade los clips synth1 and synth2 alternativamente a la pista musical 1 (track 1).
-
 fitMedia(synth1, 1, 1, 2);
 fitMedia(synth2, 1, 2, 3);
 fitMedia(synth1, 1, 3, 4);
 fitMedia(synth2, 1, 4, 5);
 
 // fitMedia() añade la batería a la pista musical 2.
-
 fitMedia(bateria, 2, 1, 9);
