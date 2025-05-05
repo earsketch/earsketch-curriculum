@@ -1,0 +1,83 @@
+// Total Atlanta Song of Summer: Erstellen eines kompletten Songs mit Abstraktionen
+
+setTempo(110);
+
+// Soundvariablen
+var melody1 = EIGHT_BIT_ATARI_BASSLINE_005;
+var melody2 = DUBSTEP_LEAD_018;
+var melody3 = DUBSTEP_LEAD_017;
+var melody4 = DUBSTEP_LEAD_013;
+var bass1 = HIPHOP_BASSSUB_001;
+var bass2 = RD_TRAP_BASSDROPS_2;
+var brass1 = Y30_BRASS_4;
+var shout = CIARA_SET_TALK_ADLIB_AH_4;
+var piano = YG_RNB_PIANO_4;
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT03;
+
+// FUNKTIONS-DEFINITIONEN
+
+// Drums hinzufügen:
+function addingDrums(start, end, pattern) {
+    // Zuerst erstellen wir Beat-Strings, abhängig vom Parametermuster:
+    if (pattern === "heavy") {
+        var beatStringKick = "0---0---0---00--";
+        var beatStringHihat = "-----000----0-00";
+    } else if (pattern === "light") {
+        beatStringKick = "0-------0---0---";
+        beatStringHihat = "--0----0---0---";
+    }
+    // dann erstellen wir den Beat,
+    // auf Track 3 für den Kick und Track 4 für den Hihat,
+    // von Anfang bis Ende der Takte:
+    for (var measure = start; measure < end; measure++) {
+    // Hier werden wir unseren Schlag auf "measure" platzieren
+    // was zunächst gleich „Start“ ist,
+    // das ist ein Parameter der Funktion
+        makeBeat(kick, 3, measure, beatStringKick);
+        makeBeat(hihat, 4, measure, beatStringHihat);
+    }
+}
+
+// Intro:
+function intro(start, end) {
+    fitMedia(melody1, 1, start, start + 1);
+    fitMedia(melody1, 1, start + 2, start + 3);
+    fitMedia(bass1, 2, start, start + 3);
+    // Übergang:
+    fitMedia(bass2, 2, start + 3, end);
+    fitMedia(shout, 3, start + 3.75, end);
+}
+// SectionA:
+function sectionA(start, end) {
+    fitMedia(melody2, 1, start, end);
+    fitMedia(brass1, 2, start, end);
+    setEffect(2, VOLUME, GAIN, -20, start, -10, end);
+    addingDrums(start, end, "heavy");
+    // Pitch-Modulation für den Übergang:
+    setEffect(1, BANDPASS, BANDPASS_FREQ, 200, end - 2, 1000, end);
+}
+
+// SectionB:
+function sectionB(start, end) {
+    fitMedia(melody3, 1, start, start + 2);
+    fitMedia(melody4, 1, start + 2, end);
+    fitMedia(piano, 2, start, end);
+    addingDrums(start, end, "light");
+}
+
+// FUNCTION CALLS
+intro(1, 5);
+sectionA(5, 9);
+sectionB(9, 13);
+sectionA(13, 17);
+sectionB(17, 21);
+
+// Ausblenden:
+for (var track = 1; track < 5; track++) {
+    setEffect(track, VOLUME, GAIN, 0, 19, -60, 21);
+}
+
+// Lautstärke von HiHat und Kick senken:
+setEffect(4, VOLUME, GAIN, -15);
+setEffect(3, VOLUME, GAIN, -10);
