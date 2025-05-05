@@ -25,7 +25,7 @@ elif (genero == "edm") or (genero == "Edm") or (genero == "EDM"):
     makeBeat(bombo, 1, 1, ritmoDeBomboDeEdm)
     makeBeat(palmada, 2, 1, ritmoDePalmadasEdm)
 else:
-    print("Lo siento. No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
+    No se pudo leer el genero que seleccionaste. Por favor, ejecuta el código otra vez.")
 
 # Añadir alguna reverberación en la pista 2 (track 2)
 setEffect(2, REVERB, MIX, 0.1)
