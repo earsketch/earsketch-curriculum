@@ -1,0 +1,6 @@
+// Referenz-Fehler: Beispiel
+
+setTempo(120);
+
+var today = readInput("What day is it?");
+println("Today is " + Today);
