@@ -1,0 +1,32 @@
+// Boolesche Operationen: Benutzer nach Genre fragen und Takt entsprechend erstellen
+
+// Setup
+setTempo (120);
+
+// Soundvariablen
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT04;
+var clap = OS_CLAP03;
+
+// Beat String Variablen
+var hiphopKickBeat = "0++++---0+++0+++";
+var hiphopHihatBeat = "----0---00---000";
+var edmKickBeat = "0+++----0+++----";
+var edmClapBeat = "----0-------0---";
+
+// Benutzereingabe anfordern
+var genre = readInput("What genre is your favorite? Hip Hop or EDM?");
+
+// Den passenden Rhythmus erstellen
+if ((genre === "Hip Hop") || (genre === "hip hop") || (genre === "HIP HOP")) {
+    makeBeat(kick, 1, 1, hiphopKickBeat);
+    makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if ((genre === "edm") || (genre === "Edm") || (genre === "EDM")) {
+    makeBeat(kick, 1, 1, edmKickBeat);
+    makeBeat(clap, 2, 1, edmClapBeat);
+} else {
+    println("Sorry we couldn't read the genre you selected. Please run the code again.");
+}
+
+// Reverb auf Track 2 hinzufügen
+setEffect(2, REVERB, MIX, 0.1);
