@@ -1,0 +1,17 @@
+# Benutzereingabe 1: Den Benutzer nach dem Tempo fragen
+
+# Setup
+from earsketch import *
+
+# nach Tempo fragen
+question = "What tempo would you like for your music? Choose a number between 45 and 220"
+answer = readInput(question)
+
+# in einen Integer konvertieren
+tempo = int(answer)
+
+# Tempo festlegen
+setTempo(tempo)
+
+# Musik
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)

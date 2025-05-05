@@ -1,0 +1,36 @@
+// Übergangstechniken - Risers: Übergänge zwischen Abschnitten mit Risern und einem Crash-Cymbal
+
+// Setup
+setTempo(128);
+
+// Musik
+var synthRise = YG_EDM_SYNTH_RISE_1;
+var airRise = RD_EDM_SFX_RISER_AIR_1;
+var lead1 = YG_EDM_LEAD_1;
+var lead2 = YG_EDM_LEAD_2;
+var kick1 = YG_EDM_KICK_LIGHT_1;
+var kick2 = ELECTRO_DRUM_MAIN_LOOPPART_001;
+var snare = ELECTRO_DRUM_MAIN_LOOPPART_003;
+var crash = Y50_CRASH_2;
+var reverseFX = YG_EDM_REVERSE_FX_1;
+
+// Abschnitt 1
+fitMedia(lead1, 1, 1, 17);
+fitMedia(kick1, 2, 9, 17);
+
+// Übergang
+fitMedia(reverseFX, 3, 16, 17);
+fitMedia(synthRise, 4, 13, 17);
+fitMedia(airRise, 5, 13, 17);
+fitMedia(crash, 6, 17, 19);
+
+// Abschnitt 2
+fitMedia(lead2, 1, 17, 33);
+fitMedia(kick2, 7, 25, 33);
+fitMedia(snare, 8, 29, 33);
+
+// Effekte
+setEffect(1, VOLUME, GAIN, 0, 16, 1, 17); // Lautstärke anpassen für eine bessere Übereinstimmung
+setEffect(4, VOLUME, GAIN, -10);
+setEffect(7, VOLUME, GAIN, -20);
+setEffect(8, VOLUME, GAIN, -20);

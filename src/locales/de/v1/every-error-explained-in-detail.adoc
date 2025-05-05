@@ -1,0 +1,396 @@
+[[ch_29]]
+== Jeder Fehler im Detail erklärt
+
+:nofooter:
+
+[[othererrors]]
+=== Übersicht
+
+Manchmal macht man beim Programmieren Fehler, die dazu führen, dass der Code nicht richtig oder gar nicht funktioniert. Bei der Programmierung werden Fehler *errors* oder *bugs* genannt.
+
+Der Prozess der Fehlersuche und -behebung nennt sich *debugging*.
+
+Überprüfe die Konsole für Details und die Zeilennummer. In einigen Fällen musst du  _die vorige Zeile_ beheben, um den Fehler zu beheben.
+
+In den folgenden Abschnitten werden Hinweise zur Behebung der häufigsten Fehler gegeben.
+
+[role="curriculum-python"]
+In der offiziellen https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python-Dokumentation^] findest du eine vollständige Liste der Fehler.
+
+[role="curriculum-javascript"]
+Eine vollständige Liste aller Fehler findest du unter Mozillas https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript-Dokumentation^] .
+
+[[modulenotfounderror]]
+=== ModuleNotFoundError
+
+//Python only
+
+[role="curriculum-python"]
+*Konsolenmeldung:* ModuleNotFoundError: Kein Modul namens 'missing_module_name'
+
+[role="curriculum-python"]
+*Beschreibung:* Ein ModuleNotFoundError tritt auf, wenn ein Programm das in einer `from...import`-Anweisung angegebene Modul nicht laden kann, z.B. `from module import *`. Dies kann auf eine falsche Schreibweise zurückzuführen sein, oder vielleicht existiert das zu importierende Modul nicht.
+
+[role="curriculum-python"]
+*Beispiel:* Obwohl das unten stehende Snippet das Wort "EarSketch" mit seinem üblichen Styling zeigt, werden Python-Module komplett in Kleinbuchstaben angegeben.
+
+////
+Can't turn off pasted without this appearing in JS mode.
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-import-error.py.txt[]
+----
+
+[role="curriculum-python"]
+Stattdessen sollte unsere Aussage lauten:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-import-error-correction.py.txt[]
+----
+
+[role="curriculum-python"]
+*Lösung:* Überprüfe deine `from...import` Anweisungen oben in deinem Skript auf Tipp- und Großschreibungsfehler.
+
+[role="curriculum-javascript"]
+ModuleNotFoundErrors treten nicht in JavaScript auf. Öffne ein Python-Skript für eine Erklärung dieses Fehlertyps oder gehe weiter zu <<every-error-explained-in-detail#othererrors>>.
+
+[[indentationerror]]
+=== Einrückfehler
+
+//Python only
+
+[role="curriculum-python"]
+*Konsolenmeldung:* IndentationError: Es gibt einen Einrückungsfehler im Code (fehlende oder zusätzliche Leerzeichen).
+
+[role="curriculum-python"]
+*Beschreibung:* Ruft auf, dass in Python richtige Einrückung benötigt wird, wenn Schleifen, Funktionen und bedingte Anweisungen verwendet werden - jede Anweisung, die mit einem Doppelpunkt endet (`:`). Es wird ein Einrückungsfehler erzeugt, wenn eine falsche Einrückungsmenge verwendet wird, entweder nicht genug oder zu viel.
+
+[role="curriculum-python"]
+*Beispiel:* Der EarSketch-Code-Editor rückt Codezeilen nach einem Doppelpunkt automatisch ein, aber der Programmierer kann die Einrückung versehentlich manuell ändern, z. B. wenn er Änderungen an einem Codeteil vornimmt. Im Snippet unten ist unklar, welche Zeilen in die Schleife fallen sollen, sowohl für Benutzer als auch für den Interpreter.
+
+////
+Can't turn off pasting without this appearing in JS mode
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[]
+----
+
+[role="curriculum-python"]
+Ein richtig eingerückter Körper sollte stattdessen wie ein Snippet unten aussehen. Der for-loop-body wird von einem Tab eingerückt und es ist klar, dass der letzte `fitMedia()` Aufruf außerhalb der Schleife liegt.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-indentation-error-correction.py.txt[]
+----
+
+[role="curriculum-python"]
+*Lösung:* Versuche alle Leerzeichen vor dem Code im Körper zu löschen, so dass jede Zeile am linken Rand des Code-Editors ist. Anschließend wird der Textkörper zeilenweise eingerückt, wobei darauf zu achten ist, dass alle Einrückungen gleich bleiben..
+
+[role="curriculum-javascript"]
+Einrückungsfehler treten in JavaScript nicht auf, allerdings solltest du aus Gründen der Lesbarkeit trotzdem eine korrekte Einrückung verwenden. Öffne ein Python-Skript für eine Erklärung dieses Fehlertyps oder gehe zu <<every-error-explained-in-detail#indexerror,index errors>>.
+
+[[indexerror]]
+=== Index-Fehler
+
+[role="curriculum-python"]
+*Konsolenmeldung:* IndexError: Es ist ein Fehler bei der Verwendung eines Index außerhalb des Bereichs aufgetreten.
+
+[role="curriculum-javascript"]
+*Konsolenmeldung:* TypeError: Es ist ein Fehler bei der Verwendung eines Index außerhalb des Bereichs aufgetreten.
+
+[role="curriculum-python"]
+*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder in einer Liste oder einem String nicht existiert.
+
+[role="curriculum-javascript"]
+*Beschreibung:* Ein Indexfehler wird ausgelöst, wenn versucht wird, auf einen Index zuzugreifen, der außerhalb des Bereichs liegt oder nicht innerhalb eines Arrays oder Strings existiert. Er wird als Type Error in JavaScript gemeldet.  Um allgemeinere Type Errors zu erklären, lies bitte den Abschnitt <<every-error-explained-in-detail#typeerror,type errors>>.
+
+[role="curriculum-python"]
+*Beispiel:* Im folgenden Code versuchen wir eine additive Struktur mit Clips aus einer Liste zu erstellen.
+
+[role="curriculum-javascript"]
+*Beispiel:* Im folgenden Code versuchen wir eine additive Struktur mit Clips aus einem Array zu erstellen.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-index-error.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
+----
+
+[role="curriculum-python"]
+Es wird ein Indexfehler gemeldet und die Konsole verweist auf Zeile 19, die besagt, dass der Index außerhalb des Bereichs liegt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass die Listen-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:
+
+[role="curriculum-javascript"]
+Ein Type Error wird ausgelöst, und die Konsole gibt an, dass ein anderer Datentyp in Zeile 17 erwartet wurde. Beim letzten Aufruf von `fitMedia()` wurde ein Wert außerhalb des Bereichs zur Verfügung gestellt. Wir haben drei Sound-Clips, aber wir haben vergessen, dass Array-Indizes bei 0 beginnen. Der letzte Index, auf den wir zugreifen sollten, ist Index 2:ear
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-index-error-correction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-index-error-correction.js.txt[]
+----
+
+[role="curriculum-python"]
+*Lösung:* Notiere den Namen jedes Clips in deiner Liste und benenne jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft Ihnen, die Struktur der Liste zu verstehen und was einen Indexfehler verursachen kann.
+
+[role="curriculum-javascript"]
+*Lösung:* Notiere den Namen jedes Clips in deinem Array und benenne jeden mit dem zugehörigen Index, beginnend bei 0. Dies hilft dir, die Struktur des Arrays zu verstehen und was einen Indexfehler verursachen kann.
+
+[[nameerror]]
+=== Namensfehler
+
+[role="curriculum-python"]
+*Konsolenmeldung:* NameError: Es gibt einen Fehler mit einem nicht definierten Variablen- oder Funktionsnamen.
+
+[role="curriculum-javascript"]
+*Konsolenmeldung:* Referenzfehler: Es gibt einen Fehler mit einem nicht definierten Variablen- oder Funktionsnamen.
+
+[role="curriculum-python"]
+*Beschreibung:* Ein Namensfehler tritt auf, wenn ein Programm versucht, eine Variable zu verwenden oder eine Funktion aufzurufen, die nie definiert wurde, am häufigsten durch einen Tippfehler.
+
+Oft fehlt eine `from earsketch import *` Anweisung oben am Skript.
+
+[role="curriculum-javascript"]
+*Beschreibung:* Ein Namensfehler tritt auf, wenn ein Programm versucht, eine Variable zu verwenden oder eine Funktion aufzurufen, die nie definiert wurde, am häufigsten durch einen Tippfehler. JavaScript bezieht sich speziell auf diese Art von Fehler als Referenzfehler.
+
+[role="curriculum-python"]
+*Beispiel:* Unten ist ein einfaches Skript, um den String auszugeben, der der `today` Variable zugewiesen ist. Ein Fehler mit der Print-Anweisung verhindert jedoch das Ausführen des Skripts.
+
+[role="curriculum-javascript"]
+*Beispiel:* Unten ist ein einfaches Skript, um den String auszugeben, der der `today` Variable zugewiesen ist. Ein Fehler innerhalb der `println()` Funktion verhindert jedoch das Ausführen des Skripts.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
+----
+
+In diesem Fall wurde die Variable, die den zu verkettenden String enthält, nicht durch den richtigen Namen referenziert; ein Kleinbuchstaben "t" hätte verwendet werden sollen.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-name-error-correction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
+----
+
+*Lösung:* Überprüfe die Schreibweise und Groß- und Kleinschreibung deiner Variablen und Funktionen. Wenn du eine Variable verwendest oder eine Funktion aufrufst, stelle sicher, dass jede zuvor definiert wurde. Stelle sicher, dass du eine Funktion definierst, bevor sie aufgerufen wird. Obwohl du die Namen direkt einfügen kannst, stelle sicher, dass deine Soundkonstanten-Namen sich an die Clip-Namen im Sound-Browser angleichen.
+
+[[parseerror]]
+=== Parse-Fehler
+
+[role="curriculum-python"]
+*Konsolenmeldung:* ParseError: Beim Lesen des Codes ist ein Fehler aufgetreten.
+
+[role="curriculum-python"]
+*Beschreibung:* *Parsing* bedeutet, eine Form von Information in eine andere umzuwandeln. Daher tritt ein Parse-Fehler auf, wenn der Interpreter nicht in der Lage ist, deinen Code in Informationen umzuwandeln, die der Computer verwenden kann, um Musik zu machen. Die Formatierung von Code, wie z. B. Klammern, ist oft die Ursache für einen Parse-Fehler.
+
+[role="curriculum-python"]
+*Beispiel:* Im folgenden Beispiel versuchen wir etwas Spaß zu haben, indem wir zufällige Beats auswählen, um über eine Melodie zu spielen, aber etwas hindert den Code am Laufen.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-parse-error.py.txt[]
+----
+
+////
+The parse error included in the example above breaks AsciiDoc syntax highlighting here for some reason. Same happens in Ch. 3. If removed while editing, the closing parentheses of selectRandomFile() should be omitted.
+////
+
+[role="curriculum-python"]
+Beim Ausführen des Codes verweist die Konsole auf die Linie 26. Diese Zeile sieht gut aus, aber der Funktion `selectRandomFile()` in der vorherigen Zeile fehlt ihre schließenden Klammern. In vielen Fällen können Parse-Fehler schnell behoben werden.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-parse-error-correction.py.txt[]
+----
+
+[role="curriculum-python"]
+*Lösung:* Überprüfe die Konsole, um festzustellen, wo die fehlerhafte Zeile sein könnte. Stelle sicher, dass alle Funktionsdefinitionen, Funktionsaufrufe und andere Ausdrücke offene und schließende Klammern haben. Prüfe in anderen Bereichen deines Skripts auf fehlende oder zusätzliche Satzzeichen. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
+
+[role="curriculum-javascript"]
+Parse-Fehler werden in JavaScript weitgehend als Syntaxfehler interpretiert, was <<every-error-explained-in-detail#syntaxerror,next>> behandelt wird.
+
+[[syntaxerror]]
+=== Syntax-Fehler
+
+*Konsolenmeldung:* SyntaxError: Es gibt einen Fehler mit der Syntax (oder Anordnung) des Codes.
+
+*Beschreibung:* Ein Syntaxfehler tritt auf, wenn ein Programm auf einen Fehler in der Syntax des Skripts, den Regeln einer bestimmten Sprache, stößt.
+
+*Beispiel:* Das folgende Skript soll dynamisch wechselnde futuristische Pieptöne erzeugen. Es enthält jedoch zwei häufige Fehler, die zu Syntaxfehlern führen.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-syntax-error.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
+----
+
+[role="curriculum-python"]
+Bei diesem Skript markiert der Code-Editor die fehlerhafte Zeile für uns. Beachte, dass wir vergessen haben, unsere _if_ Anweisung mit einem Doppelpunkt zu beenden. In der gleichen Zeile haben wir auch eine ungültige Bedingung angegeben; wir sollten den Gleichstellungs-Operator `==` anstelle des Zuweisungsoperators `=` verwenden.
+
+[role="curriculum-javascript"]
+Bei diesem Skript markiert der Code-Editor die fehlerhafte Zeile für uns. Beachte, dass wir vergessen haben, unseren _if_ Statement-Körper mit einer geschweiften Klammer zu öffnen. In der gleichen Zeile haben wir auch eine ungültige Bedingung angegeben; wir sollten den strengen Gleichstellungs-Operator `===` anstelle des Zuweisungsoperators `=` verwenden.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-syntax-error-correction.js.txt[]
+----
+
+[role="curriculum-python"]
+*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise. Außer den obigen häufigen Fehlern überprüfe das Öffnen und Schließen von Zitaten und stell sicher, dass du Python-Keywords nicht als Variablennamen verwendest.
+
+////
+Added solution from parse error to JS version below.
+////
+
+[role="curriculum-javascript"]
+*Lösung:* Überprüfe immer den Konsolen- und Code-Editor auf Hinweise.
+Über die oben genannten allgemeinen Fehler hinaus solltest du auf öffnende und schließende Anführungszeichen achten und sicherstellen, dass alle Funktionsdefinitionen, Funktionsaufrufe und anderen Ausdrücke öffnende und schließende Klammern haben. Überprüfe auch die fehlenden oder zusätzlichen Satzzeichen in anderen Bereichen deines Skripts. Überprüfe zusätzlich die fehlenden Funktionsdefinitionen und Argumente. Du kannst keine für JavaScript vorbehaltenen Wörter als Variablennamen verwenden. Schließlich, überprüfe die Rechtschreibung der Argumente, die du an Funktionen übergibst.
+
+[[typeerror]]
+=== Type Error
+
+*Konsolenmeldung:* Type Error: Es gibt einen Fehler mit dem erwarteten Datentyp.
+
+*Beschreibung:* Ein Type Error tritt auf, wenn eine bestimmte Operation oder Funktion einen Datentyp erwartet, aber einen anderen empfängt.
+
+[role="curriculum-python"]
+*Beispiel:* Angenommen, du hast ein Skript geschrieben, das die insgesamt verwendeten Takte mit einer Aktualisierungsvariablen erfasst. Im Snippet unten versuchen wir eine Nachricht mit der Länge eines Liedes zu drucken.
+
+[role="curriculum-javascript"]
+*Beispiel:* Nehmen wir an, du hast ein Skript geschrieben, das Benutzereingaben entgegennimmt, um die Länge des Liedes zu bestimmen. Der Wert des Benutzers wird an `fitMedia()` übergeben.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-type-error.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
+----
+
+[role="curriculum-python"]
+Es wird ein Type Error ausgelöst, weil der Zahlentyp nicht in eine Zeichenkette verkettet werden kann. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` Wert in einen String zu konvertieren:
+
+[role="curriculum-javascript"]
+Ein Type Error wird ausgelöst, weil wir versehentlich einen String als letztes `fitMedia()` Argument übergeben haben. Stattdessen können wir die Konvertierung von Datentypen verwenden, um zuerst den `measureTotal` String in eine Nummer zu konvertieren:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-type-error-correction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
+----
+
+*Lösung:* Die EarSketch Konsole gibt den fehlerhaften Datentyp und verweist auf eine bestimmte Zeilennummer. Prüfe auf konsistente Datentypen in arithmetischen Ausdrücken, Datenstrukturoperationen und Funktionsargumenten. Stelle außerdem sicher, dass deine Funktionsaufrufe die richtige Anzahl an Argumenten haben.
+
+////
+(ex. trying to concatenate something into string that isn't string, modifying a string value instead of concatenating something in, function call with too few arguments)
+////
+
+[[valueerror]]
+=== Wertfehler
+
+[role="curriculum-python"]
+*Konsolenmeldung:* ValueError: Ein angegebenes Argument liegt nicht im Bereich der zulässigen Werte für eine Funktion.
+
+[role="curriculum-javascript"]
+*Konsolenmeldung:* RangeError: Ein angegebenes Argument liegt nicht im Bereich der zulässigen Werte für eine Funktion.
+
+[role="curriculum-python"]
+*Beschreibung:* Ein "Value Error"  tritt auf, wenn eine Funktion ein Argument des korrekten Typs aber unangemessenen Wertes erhält.
+
+[role="curriculum-javascript"]
+*Beschreibung:* Ein "Value Error"  tritt auf, wenn eine Funktion ein Argument des korrekten Typs aber unangemessenen Wertes erhält. JavaScript bezeichnet diese Art von Fehler ausdrücklich als „Range Error“.
+
+[role="curriculum-python"]
+*Beispiel:* Der folgende Snippet versucht, einen interessanten Beat zu erstellen, indem er `makeBeat()` mit Listen benutzt.
+
+[role="curriculum-javascript"]
+*Beispiel:* Der folgende Snippet versucht, einen interessanten Beat zu erstellen, indem er `makeBeat()` mit Arrays benutzt.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-value-error.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
+----
+
+[role="curriculum-python"]
+Das vierte Argument von `makeBeat()` ist der passende Typ, aber einer der Indexwerte, auf die es zugreifen muss, ist ungültig. In diesem Szenario ist es wahrscheinlich, dass der Programmierer vergessen hat, dass die Listenindizes bei Null beginnen.
+
+[role="curriculum-javascript"]
+Das vierte Argument von `makeBeat()` ist der passende Typ, aber einer der Indexwerte, auf die es zugreifen muss, ist ungültig. In diesem Szenario ist es wahrscheinlich, dass der Programmierer vergessen hat, dass Array-Indizes bei Null beginnen.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/every-error-explained-in-detail-value-error-correction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
+----
+
+*Lösung:* Überprüfe deine Beat Strings, um sicherzustellen, dass die Werte in den richtigen Bereich fallen. Bestätige auch, dass alle Argumente von `setEffect()` innerhalb des benötigten Bereichs des Effekts sind.

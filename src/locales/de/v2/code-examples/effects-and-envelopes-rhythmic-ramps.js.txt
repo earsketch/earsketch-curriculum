@@ -1,0 +1,12 @@
+// Rhythmische Rampen: Automatisieren von Effekten mit einem for-loop
+
+// Setup
+setTempo (120);
+
+// Musik
+fitMedia(Y33_CHOIR_1, 1, 1, 9);
+fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9);
+
+for (var measure = 1; measure < 9; measure++) {
+    setEffect(1, VOLUME, GAIN, -60, measure, 0, measure + 1);
+}

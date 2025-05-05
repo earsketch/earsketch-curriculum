@@ -1,0 +1,14 @@
+# Additive Einführung: Erstellen einer additiven Einführung mit Listen-Iteration
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Musik
+introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
+
+for measure in range(1, len(introSounds) + 1):
+    # wir fügen 1 zu len(introSounds) hinzu, da das zweite Argument im Bereich exklusiv ist
+    index = measure - 1 # null-basierter Listenindex
+    track = measure  # Track mit Takt ändern
+    fitMedia(introSounds[index], track, measure, 5)

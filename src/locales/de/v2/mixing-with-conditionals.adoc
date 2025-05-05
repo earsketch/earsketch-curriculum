@@ -1,0 +1,363 @@
+[[mixingwithconditionnals]]
+== Mix mit Bedingungen!
+
+:nofooter:
+
+Beim Programmieren kann man Dinge automatisieren. Ein Beispiel für Automatisierung ist die Programmierung eines Roboters, der anhält, wenn ein Hindernis erkannt wird. In diesem Szenario braucht der Roboter kein menschliches Wesen, um ihn manuell zu stoppen. Stattdessen wird der Roboter einen Sensor haben, um Hindernisse zu erkennen, und wenn es eins gibt, wird er stoppen. Wir können musikalische Automatisierungen in EarSketch mit Bedingungen (`if` Statements) durchführen. Wir werden sehen, wie man das Mischen der Tracks automatisiert. Mischen bedeutet, dass wir die Lautstärke eines Tracks reduzieren, wenn er zu laut ist, und die Lautstärke erhöhen, wenn er zu leise ist.
+
+[[analyzetrack]]
+=== Verwende `analyzeTrack()`
+
+Wir werden sehen, wie man die Lautstärke eines Tracks erkennt. Achte darauf, dass du den Unterschied zwischen der Tonhöhe (hoch oder tief) und der Lautstärke (laut oder leise) eines Sounds kennst. Wir verwenden eine EarSketch Funktion namens `analyzeTrack()`. Importiere und führe folgenden Code aus:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
+----
+
+In der Konsole kannst du lesen, dass die ausgegebene Lautstärke 0.10306035109110138 ist.
+
+* Die Lautstärke kann von 0 (Stille) bis 1 (maximale Lautstärke) gehen.
+* Manchmal sieht eine Zahl wie folgt aus: 1.74630733714e-05. Dies wird als wissenschaftliche Notation bezeichnet: Siehst du das e-05 am Ende? Das bedeutet, dass die Dezimalstelle um 5 Stellen nach links verschoben wird (ggf. wird sie durch 0 ersetzt). Dies entspricht 0,0000174630733714.
+* Die meisten Sounds werden unter 0.4 laut sein
+
+Die `analyzeTrack()` Funktion benötigt 2 Argumente:
+
+. *Track*: Die Tracknummer
+. *Feature*: Analyse-Konstante, wie `RMS_AMPLITUDE`
+
+.ÜBUNG
+****
+. Probiere den obigen Code mit verschiedenen Sounds aus (ändere die Variable `Sound`), um zu sehen, wie die Ausgabe ist.
+. Füge einen zweiten Track hinzu und verwende die `analyzeTrack()` Funktion, um seine Lautstärke in der Konsole auszugeben. Wenn du den Code ausführst, höre, bevor du auf die Konsole schaust, deine Musik an und versuche zu erraten, welcher Track lauter ist.
+****
+
+Der Parameter für `analyzeTrack()` kann entweder `RMS_AMPLITUDE` sein, um die Lautstärke zu bewerten, oder `SPECTRAL_CENTROID`, um die Helligkeit des Sounds zu analysieren. Wir werden uns in diesem Kapitel auf die Analyse der Lautstärke konzentrieren.
+
+[[booleansandcomparisons]]
+=== Booleans und Vergleiche
+
+Wir werden nun sehen, wie *boolesche Logik* funktioniert. Dies wird uns helfen, einige Aufgaben zu automatisieren.
+
+[role="curriculum-python"]
+*Booleans* sind ein Datentyp. Der boolesche Datentyp hat nur 2 mögliche Werte, `True` und `False`. `True` und `False` beginnen mit einem Großbuchstaben und haben keine Anführungszeichen.
+
+[role="curriculum-javascript"]
+*Booleans* sind ein Datentyp. Der boolesche Datentyp hat nur 2 mögliche Werte, `true` und `false`. `true` und `false` beginnen mit einem Kleinbuchstaben und haben keine Anführungszeichen.
+
+[role="curriculum-python"]
+--
+Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialisieren (`variable1 = True`), oder du kannst einen Vergleich verwenden. Zum Vergleich verwenden wir einen *Vergleichsoperator*. Hier sind die Vergleichsoperatoren:
+
+[cols="^h,1"]
+|===
+|==
+|ist gleich
+
+|!=
+|ist nicht gleich
+
+|>
+|ist größer als
+
+|>=
+|ist größer als oder gleich
+
+|<
+|ist kleiner als
+
+|\<=
+|ist kleiner als oder gleich
+|===
+
+Beachte den Unterschied unter:
+
+1. Dem Vergleichen zweier Werte, um zu sehen, ob sie identisch sind: `==`
+1. Dem Zuweisen eines Wertes zu einer Variable: `=`
+--
+
+[role="curriculum-javascript"]
+--
+Um einen booleschen Wert zu erzeugen, kannst du entweder eine Variable initialisieren (`var variable1 = true;`), oder du kannst einen Vergleich verwenden. Zum Vergleich verwenden wir einen *Vergleichsoperator*. Hier sind die Vergleichsoperatoren:
+
+[cols="^h,1"]
+|===
+|===
+|ist gleich
+
+|!==
+|ist nicht gleich
+
+|>
+|ist größer als
+
+|>=
+|ist größer als oder gleich
+
+|<
+|ist kleiner als
+
+|\<=
+|ist kleiner als oder gleich
+|===
+
+Beachte den Unterschied unter:
+
+1. Vergleiche zwei Werte, um zu sehen, ob sie gleich sind: `===`
+1. Dem Zuweisen eines Wertes zu einer Variable: `=`
+--
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
+
+// this video will be cut at 2' to delete the section about boolean operators//
+
+[role="curriculum-python"]
+.ÜBUNG
+****
+* Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
+* Gib `True` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `False`.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautstärke größer als 0,01 ist. Wenn ja, wird `True` ausgegeben, wenn nicht, wird `False` ausgegeben.
+* Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `True` oder `False` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `True` oder `False` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚True‘ oder ‚False‘ ausgeben.
+****
+
+[role="curriculum-javascript"]
+.ÜBUNG
+****
+* Erstelle ein neues Skript und füge Sounds auf zwei Tracks hinzu.
+* Gib `true` aus, wenn der erste Track lauter ist als der zweite Track und andernfalls `false`.
+* Verwende einen for-loop mit dem Zähler `track`, um für jeden Track zu prüfen, ob die Lautstärke größer als 0,01 ist. Wenn ja, wird `true` ausgegeben, wenn nicht, wird `false` ausgegeben.
+* Du kannst zusätzliche Ausgabeanweisungen verwenden, bevor du `true` oder `false` ausgibst, so dass du, wenn du die Konsole liest, weißt, was `true` oder `false` ist. Du kannst zum Beispiel zuerst die Tracknummer und dann ‚true‘ oder ‚false‘ ausgeben.
+****
+
+Hier ein Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-boolean-example.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
+----
+
+[role="curriculum-python"]
+In diesem Beispiel haben wir `print()` mit Strings verwendet, um den Inhalt der Konsole leichter zu lesen. Wir haben den Operator `+` zum *Verketten* oder Hinzufügen von Strings und die Funktion str() zur Umwandlung von Zahlen in Strings verwendet.
+
+[role="curriculum-javascript"]
+In diesem Beispiel haben wir `println()` mit Strings verwendet, um den Inhalt der Konsole zu lesen. Wir haben den Operator `+` benutzt, um *zu verketten* oder Strings hinzuzufügen.
+
+[[conditionalstatements]]
+=== Bedingte Anweisungen
+
+Was ist eine bedingte Anweisung? Ein *Anweisung* ist eine Anleitung für den Computer. Eine *bedingte Anweisung* ist eine Anweisung, die nur ausgeführt werden muss, wenn eine bestimmte *Bedingung* wahr ist. Wenn du zum Beispiel einen Roboter so programmierst, dass er vor einem Hindernis anhält, lautet die Bedingung „Gibt es ein Hindernis?“. Wenn ja, dann stoppen. Wenn nein, nichts tun (weiter gehen).
+
+Unten findest du ein Beispiel für eine bedingte Anweisung, beachte die Ähnlichkeit mit einem for-loop:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
+----
+
+.ÜBUNG
+****
+* Erstelle ein neues Skript mit zwei Tracks.
+* Wenn der erste Track lauter ist als der zweite, dann senke seine Lautstärke. Du brauchst die `analyzeTrack()` und `setEffect()` Funktionen sowie eine `if` Anweisung.
+* Du brauchst eine negative Verstärkung (zwischen -1dB und -60dB), um die Lautstärke zu reduzieren.
+****
+
+Hier ein Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
+----
+
+Möglicherweise möchten wir mehrere Bedingungen prüfen und je nach Bedingung einen anderen Satz von Anweisungen ausführen. Du kannst mehrere Bedingungen miteinander verketten. Wir verwenden folgende Syntax:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
+----
+
+[[mixingyourtracks]]
+=== Mische deine Tracks
+
+Lass uns all diese Tools nutzen, um deinen Song zu mischen. Das Mixen verändert die Lautstärke der Tracks so dass sie gut ausgeglichen klingen.
+
+[role="curriculum-python"]
+.ÜBUNG
+****
+* Erstelle ein neues Skript.
+* Füge Sounds auf mindestens drei Tracks für mindestens sechzehn Takte hinzu.
+* Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder einen Track, den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Der percussive Track wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Soundimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Benutze `print()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `print(„Ist die Tracknummer“ + str(track) + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“. Die Funktion `str()` konvertiert eine Zahl (z.B.: `1`) in einen String (z.B.: `"1"`).
+****
+
+[role="curriculum-javascript"]
+.ÜBUNG
+****
+* Erstelle ein neues Skript.
+* Füge Sounds auf mindestens drei Tracks für mindestens sechzehn Takte hinzu.
+* Du kannst die `makeBeat()` Funktion und einen for-loop verwenden, um Percussion hinzuzufügen.
+* Wähle deinen "Haupt"-Track. Es kann deine Melodie sein, oder ein Track den du hervorheben möchtest.
+* Wenn dein Haupttrack nicht lauter ist als die anderen Spuren, solltest du seine Lautstärke mit der Funktion `setEffect()` erhöhen. Der percussive Track wird nicht berücksichtigt, da `analyzeTrack()` für Percussion nicht relevant ist. Die Funktion `analyzeTrack()` gibt einen Mittelwert zurück, während es sich bei Percussions um Soundimpulse handelt, so dass ein Mittelwert nicht wirklich die Lautstärke bewertet.
+* Benutze `println()` um deinen Prozess in der Konsole anzuzeigen. Hier ein Beispiel: `printIn(„Ist die Tracknummer“ + track + „größer als 0.01?“)`, wenn der Zähler `track` gleich `1` ist, wird dies ausgeben „Ist Tracknummer 1 größer als 0.01?“.
+****
+
+Lass uns ein paar Vokabeln wiederholen:
+
+1. *Operator*: ein Zeichen, der eine Aktion repräsentiert. Wir haben arithmetische Operatoren (`\+`, `-`, `\*`, `=`) und Vergleichsoperatoren (`>`, `>=`, `<`, `\<=`, `===`, `!==`) gesehen.
+1. *Ausdruck*: Eine Kombination von Werten, Konstanten, Variablen, Operatoren und Funktionen. Der Computer wertet Ausdrücke aus, um ein Ergebnis zu erzeugen, in der Regel ein einziger numerischer oder boolescher Wert.  Zum Beispiel: `1 + 2` (ausgewertet zu 3) oder `1 < 2` (ausgewertet zu True) oder `analyzeTrack(1, RMS_AMPLITUDE)` (ausgewertet zur Lautstärke des Titels `1`, ein Float zwischen 0 und 1).
+1.  *Anweisung*: Anleitung für die Ausführung des Computers.
+
+Unten findest du ein Beispiel für automatisches Mischen. Man kann sagen, dass es automatisiert ist, denn wenn du einen oder mehrere Sounds änderst, musst du nicht selbst die Lautstärke überprüfen und entsprechend anpassen, da dies bereits im Code enthalten ist.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
+----
+
+{nbsp} +
+
+[[chapter6summary]]
+=== Zusammenfassung von Kapitel 6
+
+[role="curriculum-python"]
+* Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
+* Der boolesche Datentyp hat nur 2 mögliche Werte, `True` und `False`.
+* Boolesche Werte werden von Vergleichsoperatoren generiert: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `==` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
+* Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
+* *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
+* Ein *Anweisung* ist eine Anleitung für den Computer.
+* Eine *Bedingung* ist ein Ausdruck, der zu `True` oder `False` auswertet.
+* Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `True` ist.
+* Falls eine `if` Bedingung `False` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
+
+[role="curriculum-javascript"]
+* Die `analyzeTrack()` Funktion verwendet zwei Argumente: Track und Feature. Wenn die Funktion `RMS_AMPLITUDE` ist, gibt die Funktion die Lautstärke des Tracks zurück (eine Zahl zwischen 0 und 1). Wenn die Funktion `SPECTRAL_CENTROID` ist, gibt die Funktion die Helligkeit des Tracks zurück.
+* Der boolesche Datentyp hat nur 2 mögliche Werte, `true` und `false`.
+* Boolesche Werte werden von Vergleichsoperatoren generiert: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
+* `===` wertet aus, ob 2 Werte gleich sind, wohingegen `=` einer Variable einen Wert zuweist.
+* Ein *Operator* ist ein Zeichen, das eine Aktion darstellt.
+* *Ausdrücke* werden vom Computer ausgewertet, um einen Wert zu erzeugen.
+* Ein *Anweisung* ist eine Anleitung für den Computer.
+* Eine *Bedingung* ist ein Ausdruck, der zu `true` oder `false` auswertet.
+* Die `if` Anweisung führt den Code-Block nur aus, wenn die Bedingung `true` ist.
+* Falls die Bedingung einer `if` `false` ist, erlaubt eine optionale `else` Anweisung einen alternativen Code-Block auszuführen.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Welche der folgenden Elemente ist ein Boolean?
+
+[answers]
+* `5+4 === 5`
+* `measure = 1`
+* `2<3<4`
+* `False()`
+--
+
+[role="curriculum-python"]
+[question]
+--
+Wie würde die Ausgabe dieses Codeblocks aussehen (was würde auf der Konsole ausgegeben)?
+
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
+----
+
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Wie würde die Ausgabe dieses Codeblocks aussehen (was würde auf der Konsole ausgegeben)?
+
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
+----
+
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[question]
+--
+Was ist Mischen?
+
+[answers]
+* die Lautstärke jedes Tracks so anzupassen, dass er gut ausgewogen klingt
+* die Tonhöhe jedes Tracks so anzupassen, dass er gut ausgewogen klingt
+* ein Einblenden hinzufügen
+* ein Ausblenden hinzufügen
+--
+
+[question]
+--
+Wie viele Bedingungen kann man in einer bedingten Anweisung prüfen?
+
+[answers]
+* beliebig viele Bedingungen
+* 1 Bedingung
+* 2 Bedingungen
+* 3 Bedingungen
+--

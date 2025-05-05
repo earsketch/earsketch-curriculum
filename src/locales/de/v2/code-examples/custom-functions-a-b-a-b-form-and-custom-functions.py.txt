@@ -1,0 +1,28 @@
+# A-B-A-B Form und benutzerdefinierte Funktionen: Ein Song mit A und B Abschnitten, mit benutzerdefinierten Funktionen
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Musik
+
+# Erstellen einer Funktion im Abschnitt A
+def sectionA(startMeasure, endMeasure):
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure)  # main
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure)  # drums
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure)  # bass line
+    setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure) # Erhöhung der Lautstärke der Basslinie
+
+# Erstellen einer Funktion im Abschnitt B
+def sectionB(startMeasure, endMeasure):
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure) # Hauptmelodie variiert
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure) # Drums variieren
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure) # Kontrastbass: langsamer und lauter
+    setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure) # Steigerung der Basslautstärke
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); # Rasseln: Hinzufügen eines neuen Elements
+
+# Meine Funktionen aufrufen
+sectionA(1, 5)
+sectionB(5, 9)
+sectionA(9, 13)
+sectionB(13, 17)

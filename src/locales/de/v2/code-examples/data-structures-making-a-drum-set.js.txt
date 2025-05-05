@@ -1,0 +1,18 @@
+# Erstellen eines Drum Sets: Benutze Arrays mit makeBeat()
+
+// Setup
+setTempo(100);
+
+// Musik
+# Vorher hatten wir einen Track für jeden Sound (Takt 1):
+var kick = OS_KICK05;
+var snare = OS_SNARE01;
+var kickBeat = "0+++----0+++----";
+var snareBeat = "----0+++----0+++";
+makeBeat(kick, 1, 1, kickBeat);
+makeBeat(snare, 2, 1, snareBeat);
+
+// Jetzt können wir sie kombinieren (Takt 3):
+var drums = [OS_KICK05, OS_SNARE01];
+var beat = "0+++1+++0+++1+++";
+makeBeat(drums, 1, 3, beat);
