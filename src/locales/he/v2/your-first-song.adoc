@@ -1,124 +1,135 @@
 [[customizeyourfirstsong]]
 == שנו, לפי טעמכם/ן, את השיר הראשון שלכן/ם
+
 :nofooter:
 
 בפרק זה תלמדו איך לשנות את הקצב של השיר שלכם, להוסיף הערות לקוד ולטעון צלילים משלכם כדי להדגיש את המסר של השיר.
 
 [[settempo]]
-=== הפונקציה `()setTempo`
+=== The `setTempo()` function
 
 [role="curriculum-python"]
 --
-בוודאי כבר שמתם לב לכך, שכאשר אתם יוצרים סקריפט חדש, יש אלמנטים עליהם עליכם לשמור כדי שהקוד שלכם ירוץ:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
-. יש הערות שמתחילות ב-`#` באפור: נדון בהן בסעיף הבא
-. השורה `*from earsketch import`, שמוסיפה פונקציות (כמו `()fitMedia`) לפרויקט
-. הפונקציה `setTempo(120)` בה נדון בפירוט בהמשך
+. Some comments starting with `#`: we'll cover that in next section
+. the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project
+. the `setTempo(120)` function, which we will see in detail below
 --
 
 [role="curriculum-javascript"]
 --
-בוודאי כבר שמתם לב לכך, שכאשר אתם יוצרים סקריפט חדש, יש אלמנטים עליהם עליכם לשמור כדי שהקוד שלכם ירוץ:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
-. יש הערות שמתחילות ב-`//` באפור: נדון בהן בסעיף הבא
-. הפונקציה `setTempo(120)` בה נדון בפירוט בהמשך
+. Some comments starting with `//`: we'll cover that in next section
+. the `setTempo(120)` function, which we will see in detail below
 --
 
-הפונקציה `()setTempo` קובעת את המהירות של השיר. *tempo* (בעברית: מפעם) מציין במוזיקה המערבית, את מספר הפעימות לדקה (bpm). ב-EarSketch ערך ברירת המחדל של הטמפו (כלומר, הערך הראשוני של המפעם) הוא 120bpm, שמתואם להליכה מהירה או מהירות צעידה. כדי לשנות את הטמפו, שנו את הערך שבסוגריים של הפונקציה `()setTempo`. ככל שהטמפו יותר גבוה, המוסיקה יותר מהירה. מותר להציב בפונקציה ערכים בין 45 ל-220.
+The `setTempo()` function will determine the speed of your song. The *tempo* is a number of beats per minute (bpm) in Western music. ב-EarSketch' ערך ברירת המחדל של הטמפו (כלומר, הערך הראשוני של המפעם) הוא 120bpm, שמתואם להליכה מהירה או מהירות צעידה. To change the tempo, just change the number between the parentheses of the `setTempo()` function. ככל שהטמפו יותר גבוה, המוסיקה יותר מהירה. You can select a tempo between _45bpm and 220bpm_.
 
 .תרגלו
 ****
-. צרו סקריפט חדש, 
-. מקמו שני צלילים בשני ערוצים שונים,
-. שנו את הטמפו והאזינו לשיר,
-. השמיעו, לחבר/ה, את השיר בשלושה ערכי טמפו שונים. בקשו מהחבר/ה לדרג את השירים לפי הטמפו, מהנמוך לגבוה.
+. צרו סקריפט חדש.
+. Place sounds on two different tracks.
+. Modify your tempo and listen to the song.
+. Play your song at three different tempos for a friend. בקשו מהחבר/ה לדרג את השירים לפי הטמפו, מהנמוך לגבוה.
 ****
 
 סוגה (ז'אנר) היא קטגוריה של יצירה אומנותית (לדוגמה: מוסיקה) שמאופיינת בדמיון בצורה, בסגנון ובתוכן. לסוגות שונות של מוזיקה אלקטרונית טווחים שונים של טמפו אופייני. לדוגמה:
 
 [cols="^3*"]
 |===
-|סוגה|BPM|דוגמה
+|סוגה |BPM |דוגמה
 
-|Hip Hop
-|85-95
-|Coolio - Gangsta's Paradise (feat. L.V.)
 |Pop (פופ)
 |110-130
-|Lizzo - Juice 
-|Techno
-|120-125
-|Boris Brejcha - Schleierwolken
-|Electro (אלקטרו)
-|100-130
-|Apashe - Behind My Eyes (feat. LIA)
-|House (האוס)
-|115-130
-|DJ Breezy - Kimpinstik (feat. Dahlin Gage & Medikal)
-|Dubstep and Trap (דאבסטפ אנד טראפ)
+|"Thriller" - Michael Jackson
+
+"I Wanna Dance With Somebody" - Whitney Houston
+
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
+
+"Fight the Power" - Public Enemy
+
+|Country
+|90-110
+|"I Walk the Line" - Johnny Cash
+
+"Jolene" - Dolly Parton
+
+|House / EDM
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dubstep / Trap
 |140-150
-|Jessica Audiffred & Walshy Fire - Stupid Love (feat. Nia V)
-|Drum & Bass (דראם אנ'בייס)
-|160-180
-|Mollie Collins - Lost & Found
+|"Scary Monsters and Nice Sprites" - Skrillex
+
+"Turn Down for What" - Lil Jon
 |===
 
 .תרגלו
 ****
 . בחרו אמן או אמנית שאתם מאוד אוהבים. בררו לאיזו סוגה (ז'אנר) הוא/היא שייכים.
-. חפשו את הסוגה הזו (ב-Soundcloud או באתר דומה) והקשיבו למספר קטעי שירים מסוגה זו.
+. Search that genre (on https://soundcloud.com/[Soundcloud] or something similar) and listen to a few snippets of songs in that genre.
 . נסו למצוא קווי דמיון בין השירים.
 . אתם יכולים לחקור וללמוד על סוגה זו בעזרת וויקיפדיה ומקורות אחרים.
 ****
- 
-שימו לב לכך שקליפ יכול להישמע אחרת כשאתם שומעים אותו כמו שהוא וכשהוא משולב בשיר שלכם. סיבה אפשרית לכך היא שהטמפו של הקליפ שונה מהטמפו של השיר שלכם. כדי לדעת מהו הטמפו של קליפ בספרית הצלילים, עברו עם העכבר מעל השם שלו ברשימה. תוכלו לשנות את הטמפו של השיר שלכם לטמפו של הקליפ או לבחור קליפ אחר שמתאים לטמפו של השיר שלכם.
 
+Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+
+To find the original tempo of sound, hover over the sound constant Sound Browser.
 
 [[comments]]
-=== הוספת הערות לקוד
+=== Adding comments to your code
+
+*Comments* are lines of code ignored by the computer. People use comments to make notes within the code.
+
+EarSketch scripts begin with comments that you can use to enter a description of your song. These details make it easier for other programmers to understand what your code is about.
 
 [role="curriculum-python"]
-*הערות* הן שורות קוד שלא מבוצעות על-ידי המחשב. הן משמשות אותנו, בני-אדם, להפיכת הקוד לקריא ומובן, לארגון הקוד וכדי לכתוב תזכורות לשימוש עתידי. Iבפייתון, הערות הן שורות המתחילות בסולמית `#`. 
+In Python, comments are indicated by a line starting with a pound `#` symbol.
 
 [role="curriculum-javascript"]
-*הערות* הן שורות קוד שלא מבוצעות על-ידי המחשב. הן משמשות אותנו, בני-אדם, להפיכת הקוד לקריא ומובן, לארגון הקוד וכדי לכתוב תזכורות לשימוש עתידי. ב-JavaScript, הערות הן שורות המתחילות בשני "סלאשים" `//`.
-
-שימו לב לכך ששורות הפתיחה בכל סקריפט הן הערות המתארות את הסקריפט. בכל סקריפט שתכתבו, יהיה עליכם/ן למלא שורות אלה בהערות המתאימות. זה מקל על מתכנתים אחרים להבין על מה הקוד שלכם.
+In JavaScript, comments are indicated by a line starting with two forward slashes, `//`.
 
 .תרגלו
 ****
-בסקריפט שאתם/ן עובדים/ות עליו, מלאו את הפרטים הבאים בהערות בתחילת הקוד:
-
-. שם הסקריפט: שם השיר
-. המחבר: השם שלכם/ן
-. תיאור: תיאור קצר של הפרויקט
+In your current script, write a comment with a description of your song on the first line.
 ****
 
-אפשר להשתמש בהערות כדי לציין מה עושים חלקים שונים בקוד. הנה דוגמה. אפשר להריץ את הקוד. שימו לב שההערות מתארות את החלקים השונים בקוד:
+אפשר להשתמש בהערות כדי לציין מה עושים חלקים שונים בקוד. הנה דוגמה. אתם יכולים להריץ את הקוד. שימו לב שההערות מתארות את החלקים השונים בקוד:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/your-first-song-comments.py.txt[]
+include::code-examples/your-first-song-comments.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/your-first-song-comments.js.txt[]
+include::code-examples/your-first-song-comments.js.txt[]
 ----
 
+{nbsp} +
 
 [[uploadingsounds]]
-=== טעינת קליפים של צלילים
+=== Uploading your own sounds
 
-ניתן להעלות לספריית הצלילים קליפים של צלילים בעזרת דפדפן הצלילים. פתחו את דפדפן הצלילים ולחצו על "add sound" מתחת לפילטרים (אם הכפתור לא קיים, ודאו שבצעתם log in). ייפתח חלון. נבדוק את שלוש האפשרויות הראשונות:
+You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
 
-. *Upload new Sound*  מאפשר לכם לבחור קובץ שמע שנמצא במחשב שלכם. שנו את שם הקובץ, אם יש צורך בכך ("constant value(required)"), ולחצו "UPLOAD".
-. *Quick Record* מאפשרת לכם להקליט קטע קצר ישירות לספרייה של EarSketch. צפו בווידאו בהמשך למידע נוסף.
-. *Freesound* מאפשרת יבוא של צלילים מ-Freesound.org, מאגר של קבצי שמע. אתם יכולים לחפש במאגר סוג מסוים של צלילים (כמו: ציוץ ציפורים, גשם, רחוב סואן וכו'). תחת "Results", תופיע רשימה של קליפים. אתם יכולים לשמוע את הקליפ על-ידי לחיצה על play. אם הקליפ מוצא חן בעיניכם, תוכלו להעלות אותו על-ידי לחיצה על "UPLOAD".
+You must be logged in to upload sounds.
 
-כדי למצוא את הצליל שהעליתם או הקלטתם, הקלידו את שם הקובץ בסרגל החיפוש בדפדפן הצלילים.
+Let's explore the first three options.
+
+. *Upload Sound* allows you to choose audio files already on your computer.
+. *Quick Record* lets you record directly from your computer's microphone.
+. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
 
 [role="curriculum-mp4"]
 [[video101rec]]
@@ -126,29 +137,29 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
 .תרגלו
 ****
-מוסיקה, ואמנות בכלל, היא, לעיתים קרובות, אמצעי להעברת מסר. המסר מועבר בעזרת המילים ו/או האופי של השיר. כתבו שיר קצר שמבטא משהו. זה יכול להיות הרגשה, שתרצו לשתף, או סיפור.
+מוסיקה, ואמנות בכלל, היא, לעיתים קרובות, אמצעי להעברת מסר. המסר מועבר בעזרת המילים ו/או האופי של השיר. כתבו שיר קצר שמבטא משהו. It can be a feeling that you'd like to share, or a story.
 
-. החליטו מה תרצו להביע בשיר 
-. ואז, או שתכתבו מילים ותקליטו את עצמכם שרים או קוראים אותן או שתקליטו או תעלו צלילים שקשורים למסר
-. הוסיפו את ההקלטות לשיר בעזרת הפונקציה `()fitMedia`
-. הוסיפו צלילים מספריית הצלילים של EarSketch בעזרת הפונקציה `()fitMedia`
+. Think about what you'd like to express
+. Then either:
+.. Write some lyrics and record yourself singing or reading them or
+.. Record or download some sounds that are related to your message
+. Add these recordings to your song using `fitMedia()`
+. Then add additional sounds using `fitMedia()`
 . השמיעו את השיר לחבר/ה
 . שוחחו על השיר ועל הדברים שניסיתם להביע בו
 ****
 
-////
-OPTIONAL
-////
+An active computer program is called a *process*.
 
-*Processes*, או תהליכים, הם תוכניות מחשב שרצות במחשב שלכם. יחידת העיבוד המרכזית של המחשב או ה-*Central Processing Unit*, מבצעת אותן. יחידת העיבוד המרכזית נקראת, בקיצור, ה-CPU. 
+When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
 
-ה- *זיכרון* של המחשב מאחסן נתונים והוראות עיבוד בהן משתמש ה-CPU. הזיכרון, שנקרא גם אחסון ראשי או RAM (Random Access Memory), מאחסן נתונים באופן זמני. רק מידע של תהליכים, שרצים כרגע, מאוחסן ב-RAM. זה מאפשר ל-CPU לגשת במהירות להוראות ולנתונים.
+A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
 
-יש הבדל בין זיכרון (או אחסון קצר טווח) לבין אחסון ארוך טווח. אחסון ארוך טווח, כמו דיסק קשיח או ענן, נקרא גם אחסון משני. *האחסון המשני* מכיל כמויות גדולות של נתונים לתקופות ארוכות, גם אחרי שהמחשב מכובה. ה-CPU לא מתקשר ישירות עם האחסון המשני. כשה-CPU מריץ תהליך, קודם כל, נטענים נתונים מהאחסון המשני אל הזיכרון כך שה-CPU יוכל לגשת אליהם במהירות.
+יש הבדל בין זיכרון (או אחסון קצר טווח) לבין אחסון ארוך טווח. אחסון ארוך טווח, כמו דיסק קשיח או ענן, נקרא גם אחסון משני. *Secondary storage* holds high volumes of data for long periods of time, even after a computer is shut down. ה-CPU לא מתקשר ישירות עם האחסון המשני. כשה-CPU מריץ תהליך, קודם כל, נטענים נתונים מהאחסון המשני אל הזיכרון כך שה-CPU יוכל לגשת אליהם במהירות.
 
-לפעמים הנתונים בזיכרון, בהם משתמש ה-CPU, מגיעים מאמצעי קלט ולא מהאחסון המשני. *קלטים* הם האותות או הנתונים הנקלטים על-ידי המחשב, כמו שמע ממיקרופון, למשל. בדומה לכך, *פלטים* הם אותות או נתונים הנשלחים מהמחשב, כמו אות שמע דרך הרמקול, למשל. קלט/פלט או I/O, היא הדרך בה המחשב מתקשר עם העולם החיצוני, כולל בני אדם!
+לפעמים הנתונים בזיכרון, בהם משתמש ה-CPU, מגיעים מאמצעי קלט ולא מהאחסון המשני. *Inputs* are the signals or data received by the computer, like audio from a microphone. Likewise, *outputs* are the signals or data sent from it, like audio through a speaker. קלט/פלט או I/O, היא הדרך בה המחשב מתקשר עם העולם החיצוני, כולל בני אדם!
 
-נסתכל על הקלטת צליל לתוך EarSketch כדוגמה לתהליך. ראשית, אנחנו מקליטים נתונים לתוך המחשב בעזרת אמצעי קלט - המיקרופון. ה-CPU מאחסן את נתוני השמע בזיכרון. כשנלחץ "play" כדי לשמוע את ההקלטה, ה-CPU ניגש לנתונים ושולח אותם לאמצעי פלט - אזניות או רמקול. כשנלחץ על upload, ה-CPU יריץ את התהליך שממיר את נתוני השמע לקובץ בפורמט שמע סטנדרטי (wav), וישלח את הקובץ לשרת EarSketch. השרת הוא מערכת חיצונית שמספקת שירותים לכל משתמשי EarSketch, כולל המחשב שלנו. שרת EarSketch יעביר את קובץ השמע מהזיכרון אל הזיכרון המשני כך שיוכל לגשת אליו בעתיד.
+Let's examine recording a sound into EarSketch as an example process. ראשית, אנחנו מקליטים נתונים לתוך המחשב בעזרת אמצעי קלט - המיקרופון. ה-CPU מאחסן את נתוני השמע בזיכרון. כשנלחץ "play" כדי לשמוע את ההקלטה, ה-CPU ניגש לנתונים ושולח אותם לאמצעי פלט - אזניות או רמקול. כשנלחץ על upload, ה-CPU יריץ את התהליך שממיר את נתוני השמע לקובץ בפורמט שמע סטנדרטי (wav), וישלח את הקובץ לשרת EarSketch. השרת הוא מערכת חיצונית שמספקת שירותים לכל משתמשי EarSketch, כולל המחשב שלנו. The EarSketch server saves the sound file from memory to the server's secondary storage so that you can access it in the future.
 
 צפו בווידאו הבא:
 
@@ -163,68 +174,59 @@ END OF OPTIONAL
 [[copyright]]
 === זכויות יוצרים
 
-*זכויות יוצרים* זה החלק של החוק שדן ב*קניין רוחני*, או הבעלות על יצירות, כמו מוסיקה. כשמשתמשים בסימפולים או עושים רמיקס למוסיקה קיימת, צריך לתת קרדיט למחברים. בסקריפט של EarSketch אפשר לעשות זאת בהערות בקוד. לפני שמשתמשים בצלילים של מוסיקאים אחרים וחולקים מוסיקה, יש ללמוד על זכויות יוצרים!
-
-*זכויות יוצרים* זה החלק של החוק שדן ב*קניין רוחני*, או הבעלות על יצירות, כמו מוסיקה. 
+*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. כשמשתמשים בסימפולים או עושים רמיקס למוסיקה קיימת, צריך לתת קרדיט למחברים. בסקריפט של EarSketch אפשר לעשות זאת בהערות בקוד. לפני שמשתמשים בצלילים של מוסיקאים אחרים וחולקים מוסיקה, יש ללמוד על זכויות יוצרים!
 
 כשאתם יוצרים משהו מקורי וממשי, יש לכם זכויות יוצרים עליו באופן אוטומטי! זה אומר שאתם יכולים להכין ממנו עותקים, לשנות אותו ולחלוק אותו.
 
-יש שתי זכויות יוצרים הקשורות לשיר: זכויות על השיר עצמו (של המחבר/ת) וזכויות על הביצוע, כלומר ההקלטה של השיר (בדרך כלל של חברת התקליטים). תמלוגים מביצועים פומביים של השיר משולמים למחבר/ת, ורוב התמלוגים ממכירת הקלטות של השיר משולמים לחברת התקליטים. 
+יש שתי זכויות יוצרים הקשורות לשיר: זכויות על השיר עצמו (של המחבר/ת) וזכויות על הביצוע, כלומר ההקלטה של השיר (בדרך כלל של חברת התקליטים). תמלוגים מביצועים פומביים של השיר משולמים למחבר/ת, ורוב התמלוגים ממכירת הקלטות של השיר משולמים לחברת התקליטים.
 
-*הפרת זכויות יוצרים* היא פגיעה בזכויות היוצרים, כמו הורדה לא חוקית של מוסיקה, למשל. *שימוש סביר* מתיר שימוש בתוכן מוגן בזכויות יוצרים תחת מגבלות מסוימות, כמו שימוש לצרכי הוראה או שימוש לצרכי ביקורת, בהם משתמשים רק בקטעים קצרים מהיצירה. שימוש סביר נקבע לכל מקרה לגופו.
+*Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use disputes are determined by a judge on a case-by-case basis.
 
-בזכות השימוש הסביר, ישנה דרך לשימוש במוסיקה ושיתופה. זכויות יוצרים אמורות להקל על יצירה ושיתוף, ולא להכביד עליהן. EarSketch אפשרית בזכות אמניות ואמנים שמשתפים את עבודתם אתכם באמצעות *סימפולים* (קטעים קצרים של הקלטות) בספריית הצלילים. אמניות ואמנים אלה משתפים את הסימפולים תחת רישיון *Creative Commons*, שנותן הרשאה להשתמש ביצירות שלהם. ב-EarSketch יש לכם גישה חופשית לכל הסימפולים האלה. אתם יכולים לשתף אחרים במוסיקה שאתם יוצרים, אבל אסור לכם למכור אותה. שיתוף המוסיקה שיצרתם ולאפשר לאחרים להשתמש בקוד שלכם, היא הדרך שלכם להעביר את זה הלאה, ולתרום ליצירת עוד אמנות.
+Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
 
-רישיון*Creative Commons* (או CC) מאפשר ליוצרים לקבוע על אילו זכויות הם שומרים ועל אילו הם מוותרים. הנה כמה אפשרויות לרישיון CC: "מותר להשתמש ביצירה זו בכל אופן שתרצו ובלבד ש
+Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! זכויות יוצרים אמורות להקל על יצירה ושיתוף, ולא להכביד עליהן. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. שיתוף המוסיקה שיצרתם ולאפשר לאחרים להשתמש בקוד שלכם, היא הדרך שלכם להעביר את זה הלאה, ולתרום ליצירת עוד אמנות.
 
-* שמי יופיע עליה." - Attribution (BY)
-* לא תשנו אותה בכלל." - No Derivatives (ND)
-* לא תרוויחו כסף ממנה." - Non-Commercial (NC)
-* תחלקו כל מה שתיצרו בעזרתה, תחת רישיון זהה." - Share-Alike (SA)
+When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
 
-כדי לקבוע את הרשאות ה-Creative Commons יש לבחור את סוג הרישיון ולכלול אותו ביצירה. לסקריפט, שמשותף ב-EarSketch, יש לציין את הרישיון. 
-
-
+For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
 
 [[chapter2summary]]
 === סיכום פרק שני
 
 [role="curriculum-python"]
-* *טמפו* הוא המהירות בה קטע מוסיקה מנוגן. הטמפו נתון בביטים לדקה (bpm). טמפו קשור לסוגה (ז'אנר).
-* הקליפים בספריית הצלילים של EarSketch מאורגנים בתיקיות של צלילים דומים. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
-* הערות הן שורות קוד שלא מבוצעות על-ידי המחשב. למרות שהן לא מבוצעות, הן מועילות לכתיבת הערות, הארות ותזכורות בתוך הסקריפט.
-* `*from earsketch import ` מוסיפה את ה-API של EarSketch לפרויקט שלך. השורה הזו חייבת להימצא בראש כל סקריפט.
-* `()setTempo` מאפשרת לקבוע את הטמפו (מפעם) של השיר. יש לכלול שורה כזו בכל סקריפט.
+* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). טמפו קשור לסוגה (ז'אנר).
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `from earsketch import *` adds the EarSketch API to your project.
+* `setTempo()` lets you specify the tempo of your song. שורה זו חייבת להיכלל בכל סקריפט.
 * אתם יכולים להעלות צלילים משלכם ל-EarSketch בעזרת דפדפן הצלילים. פשוט הקליקו על "Add sound".
-* *process או תהליך* הוא משימה שרצה במחשב. העיבוד מתבצע על-ידי ה-*CPU*, שאחראי לביצוע הוראות התכנית.
-* *זיכרון* (הנקרא גם RAM ואחסון ראשי) מאחסן, באופן זמני, נתונים והוראות לשימוש ה-CPU.
-* *אחסון משני* מתייחס לאחסון נתונים לזמן ארוך, לרוב בכמויות גדולות. נתונים מהאחסון המשני חייבים להטען לזיכרון לפני שה-CPU משתמש בהם.
-* *זכויות יוצרים* הוא החלק של החוק הדן בבעלות על עבודה יצירתית, כמו מוסיקה. זכויות יוצרים חשובות למוסיקאים כי הן מגדירות איך אמן או אמנית רשאים להשתמש יצירה של מישהו אחר.
+* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
+* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
+* *Secondary storage* refers to long term storage of data, often in high volumes. נתונים מהאחסון המשני חייבים להטען לזיכרון לפני שה-CPU משתמש בהם.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * אם יצרתם יצירה ממשית ומקורית, יש לכם, אוטומטית, זכויות יוצרים עליה. במילים אחריות, יש לכם בעלות על יצירות שיצרתם.
-* *Licensing או הרשאה לשימוש* של יצירה מוסיקלית נותנת לאחרים רשות להשתמש בה. לפעמים, זכויות מסוימות נשמרות בעזרת הרשאות *Creative Commons*. EarSketch מאפשרת הוספת הרשאת Creative Commons למוסיקה שלכם בחלונית השיתוף (Share).
+* *Licensing* a piece of music gives others permission to use it.
 
 [role="curriculum-javascript"]
-* *טמפו* הוא המהירות בה קטע מוסיקה מנוגן. הטמפו נתון בביטים לדקה (bpm). טמפו קשור לסוגה (ז'אנר).
-* הקליפים בספריית הצלילים של EarSketch מאורגנים בתיקיות של צלילים דומים. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
-* הערות הן שורות קוד שלא מבוצעות על-ידי המחשב. הן משמשות לכתיבת הערות, הארות ותזכורות בקוד.
-* `;()setTempo` מאפשרת לקבוע את הטמפו (מפעם) של השיר. יש לכלול שורה כזו בכל סקריפט.
+* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). טמפו קשור לסוגה (ז'אנר).
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. כדי לדעת מה הטמפו של קליפ, עברו בספריית הצלילים, עם העכבר, מעל שמו.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `setTempo();` lets you specify the tempo of your song. שורה זו חייבת להיכלל בכל סקריפט.
 * אתם יכולים להעלות צלילים משלכם ל-EarSketch בעזרת דפדפן הצלילים. פשוט הקליקו על "Add sound".
-* *process או תהליך* הוא משימה שרצה במחשב. העיבוד מתבצע על-ידי ה-*CPU*, שאחראי לביצוע הוראות התכנית.
-* *זיכרון* (הנקרא גם RAM ואחסון ראשי) מאחסן, באופן זמני, נתונים והוראות לשימוש ה-CPU.
-* *אחסון משני* מתייחס לאחסון נתונים לזמן ארוך, לרוב בכמויות גדולות. נתונים מהאחסון המשני חייבים להטען לזיכרון לפני שה-CPU משתמש בהם.
-* *זכויות יוצרים* הוא החלק של החוק הדן בבעלות על עבודה יצירתית, כמו מוסיקה. זכויות יוצרים חשובות למוסיקאים כי הן מגדירות איך אמן או אמנית רשאים להשתמש יצירה של מישהו אחר.
+* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
+* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
+* *Secondary storage* refers to long term storage of data, often in high volumes. נתונים מהאחסון המשני חייבים להטען לזיכרון לפני שה-CPU משתמש בהם.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
 * אם יצרתם יצירה ממשית ומקורית, יש לכם, אוטומטית, זכויות יוצרים עליה. במילים אחריות, יש לכם בעלות על יצירות שיצרתם.
-* *Licensing או הרשאה לשימוש* של יצירה מוסיקלית נותנת לאחרים רשות להשתמש בה. לפעמים, זכויות מסוימות נשמרות בעזרת הרשאות *Creative Commons*. EarSketch מאפשרת הוספת הרשאת Creative Commons למוסיקה שלכם בחלונית השיתוף (Share).
-
-
-
+* *Licensing* a piece of music gives others permission to use it.
 
 [[chapter-questions]]
 === שאלות
 
 [question]
 --
-מה `()setTempo` מאפשרת לעשות ב- EarSketch?
+What does `setTempo()` allow you to do in EarSketch?
+
 [answers]
 * לקבוע את הטמפו (מפעם) של השיר
 * הוספת צליל לערוץ
@@ -235,6 +237,7 @@ END OF OPTIONAL
 [question]
 --
 מה היחידה לטמפו?
+
 [answers]
 * פעימות לדקה (BPM)
 * תיבות
@@ -245,6 +248,7 @@ END OF OPTIONAL
 [question]
 --
 למה משמשות הערות?
+
 [answers]
 * כל התשובות נכונות
 * ארגון הקוד
@@ -255,6 +259,7 @@ END OF OPTIONAL
 [question]
 --
 מי מהטענות הבאות נכונה?
+
 [answers]
 * דיסק קשיח הוא דוגמה לאחסון משני
 * נתוני שמע נשמרים ב-CPU
@@ -265,6 +270,7 @@ END OF OPTIONAL
 [question]
 --
 כיצד משיגים זכויות יוצרים?
+
 [answers]
 * על-ידי יצירה ופרסום של עבודה חדשה
 * על-ידי קניית פטנט
@@ -274,10 +280,11 @@ END OF OPTIONAL
 
 [question]
 --
-מה זה Creative Commons?
+What is a music license?
+
 [answers]
-* הרשאה להשתמש ביצירה שלכם תחת מגבלות מסוימות
+* A license gives others permission to use a musical work
 * תהליך הלחנה
-* הרשות לתבוע כל מי שמשתמש במוסיקה שלכם
-* רישיון שמאפשר לכם לגבות תגמולים
+* A musical genre
+* A description of your song
 --
