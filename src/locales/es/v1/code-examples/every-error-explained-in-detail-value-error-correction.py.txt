@@ -1,0 +1,9 @@
+# Value error: Correction
+
+from earsketch import *
+setTempo(120)
+
+drumKit = [OS_KICK06, RD_UK_HOUSE_SOLODRUMPART_15, OS_COWBELL01, TECHNO_ACIDBASS_001]
+beatString = "0+2+0+110+1+0+13"
+
+makeBeat(drumKit, 1, 1, beatString)
