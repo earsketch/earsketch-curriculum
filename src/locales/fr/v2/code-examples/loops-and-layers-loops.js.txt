@@ -8,7 +8,6 @@ var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
 // Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
-
 for (var measure = 1; measure < 9; measure = measure + 1) {
     fitMedia(drums1, 1, measure, measure + 0.5);
     fitMedia(drums2, 1, measure + 0.5, measure + 1);
