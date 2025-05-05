@@ -1,0 +1,26 @@
+[[welcome]]
+== Willkommen Schüler und Lehrer!
+
+:nofooter:
+
+Willkommen bei EarSketch!
+
+*Lehrer*: Schau dir unsere https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[new curriculum guide^] an und besuche unsere https://www.teachers.earsketch.org[EarSketch Teacher Site^] für zusätzliche Ressourcen.
+
+*Schüler*: Weiter unten erfährst du mehr über EarSketch
+
+Hier lernst du Informatik und Musikproduktion Seite an Seite. Du wirst entweder Python oder JavaScript benutzen, um deine eigene Musik zu erschaffen.
+
+Musiker und Programmierer schreiben Computercode, um neue Sounds, Effekte und Songs zu erstellen.
+
+[role="curriculum-mp4"]
+[[video0]]
+video::../landing/media/homepagevid.a1cf3d01.mp4[poster=../landing/img/homepagevid-poster.8993a985.png]
+
+Das Schreiben von Code ist eine Fähigkeit, die dir in einer Vielzahl von Karriere-Pfaden nützlich sein wird.
+
+Vielleicht wirst du ein legendärer Musikproduzent oder der begehrteste Aufnahmetechniker der Branche! Wir wünschen dir viel Glück auf deiner EarSketch-Reise.
+
+Klicke auf den rechten Pfeil oben in diesem Text, um loszulegen.
+
+Lehrer, erhaltet Zugang zu kostenlosen Lehrermaterialien und der Community https://www.teachers.earsketch.org/[hier^]!
