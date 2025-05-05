@@ -1,0 +1,28 @@
+// Fade in and fade out: Looping on all tracks to add a fade in and fade out
+
+// Sozlash
+setTempo(100);
+
+// Variables
+var melody1 = MILKNSIZZ_ADIOS_BRASS;
+var melody2 = MILKNSIZZ_ADIOS_STRINGS;
+var kick = OS_KICK04;
+var hihat = OS_OPENHAT03;
+var kickBeat = "0-------0-0-0---";
+var hihatBeat = "---0---0--00----";
+
+// Placing melodies on track 1
+fitMedia(melody1, 1, 1, 5);
+fitMedia(melody2, 1, 5, 9);
+
+// Placing the beats on tracks 2 (kick) and 3 (hihat) thanks to a for loop on measure
+for (var measure = 1; measure < 9; measure++) {
+    makeBeat(kick, 2, measure, kickBeat);
+    makeBeat(hihat, 3, measure, hihatBeat);
+}
+
+// Adding the fade in and fade out on tracks 1 through 3
+for (var track = 1; track < 4; track++) {
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3);
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9);
+}
