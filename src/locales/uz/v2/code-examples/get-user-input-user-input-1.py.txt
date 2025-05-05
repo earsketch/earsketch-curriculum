@@ -1,0 +1,17 @@
+# User input 1: Asking the user for the tempo
+
+# Sozlash
+from earsketch import *
+
+# asking for tempo
+question = "What tempo would you like for your music? Choose a number between 45 and 220"
+answer = readInput(question)
+
+# converting to an integer
+tempo = int(answer)
+
+# setting the tempo
+setTempo(tempo)
+
+# music
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
