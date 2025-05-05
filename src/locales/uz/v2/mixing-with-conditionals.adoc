@@ -1,0 +1,363 @@
+[[mixingwithconditionnals]]
+== Mix with Conditionals!
+
+:nofooter:
+
+In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (`if` statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+
+[[analyzetrack]]
+=== `analyzeTrack()`dan foydalaning
+
+We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. Biz `analyzeTrack()` deb nomlangan EarSketch funktsiyasidan foydalanamiz. Import and run the following code:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
+----
+
+You can read in your console that the printed loudness is 0.10306035109110138.
+
+* The loudness can go from 0 (silence) to 1 (maximum loudness).
+* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
+* Most of the sounds will have a loudness under 0.4
+
+`analyzeTrack()` funktsiyasi 2 ta argumentni oladi:
+
+. *track*: Track number
+. *feature*: Analysis constant, like `RMS_AMPLITUDE`
+
+.PRACTICE
+****
+. Try using the code given above with different sounds (change the variable `sound`) to see what the output is.
+. Ikkinchi trekni qo'shing va uning ovoz balandligini konsolda chop etish uchun `analyzeTrack()` funktsiyasidan foydalaning. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
+****
+
+`analyzeTrack()` parametri ovoz balandligini baholash uchun `RMS_AMPLITUDE` yoki tovush yorqinligini tahlil qilish uchun `SPECTRAL_CENTROID` boʻlishi mumkin. Biz ushbu bobda ovoz balandligini tahlil qilishga e'tibor qaratamiz.
+
+[[booleansandcomparisons]]
+=== Booleans and comparisons
+
+We will now see how *Boolean Logic* works. This will help us automate some tasks.
+
+[role="curriculum-python"]
+*Mantiqiy qiymatlar* ma'lumotlar turidir. Boolean ma'lumotlar turi faqat ikkita mumkin bo'lgan qiymatga ega, `True` va `False`. `True` va `False` soʻzlari bosh harf bilan boshlanadi va qo'shtirnoqsiz yoziladi.
+
+[role="curriculum-javascript"]
+*Mantiqiy qiymatlar* ma'lumotlar turidir. Boolean ma'lumotlar turi faqat ikkita mumkin bo'lgan qiymatga ega, `true` va `false`. `true` va `false` kichik harf bilan boshlanadi va qo'shtirnoqsiz yoziladi.
+
+[role="curriculum-python"]
+--
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = True;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Here are the comparison operators:
+
+[cols="^h,1"]
+|===
+|==
+|is equal to
+
+|!=
+|is not equal to
+
+|>
+|is greater than
+
+|>=
+|is greater than or equal
+
+|<
+|is less than
+
+|\<=
+|is less than or equal
+|===
+
+Note the difference between:
+
+1. Ikki qiymatni taqqoslash, ularning bir xilligini aniqlash uchun: `==`
+1. O'zgaruvchiga qiymat tayinlash: `=`
+--
+
+[role="curriculum-javascript"]
+--
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = true;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Here are the comparison operators:
+
+[cols="^h,1"]
+|===
+|===
+|is equal to
+
+|!==
+|is not equal to
+
+|>
+|is greater than
+
+|>=
+|is greater than or equal
+
+|<
+|is less than
+
+|\<=
+|is less than or equal
+|===
+
+Note the difference between:
+
+1. Comparing two values to see if they are equal: `===`
+1. O'zgaruvchiga qiymat tayinlash: `=`
+--
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/6_2_1_boolean_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/6_2_1_boolean_js.mp4[]
+
+// this video will be cut at 2' to delete the section about boolean operators//
+
+[role="curriculum-python"]
+.PRACTICE
+****
+* Create a new script, and add sounds on two tracks.
+* Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `Rost`, aks holda `Yolg'on` deb chop eting.
+* Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `Rost`ni, bo'lmasa, `Yolg'on`ni chop eting.
+* Siz `True` yoki `False`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `Rost` yoki `Yolg'on` ekanligini bilib olasiz. For example, you can first print the track number and then 'True' or 'False'.
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+* Create a new script, and add sounds on two tracks.
+* Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `rost`, aks holda `yolg'on` deb chop eting.
+* Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `rost`ni, bo'lmasa, `yolg'on`ni chop eting.
+* Siz `true` yoki `false`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `rost` yoki `yolg'on` ekanligini bilib olasiz. For example, you can first print the track number and then 'true' or 'false'.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-boolean-example.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
+----
+
+[role="curriculum-python"]
+In this example, we used `print()` with strings to help read the content of the console. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun, str() funktsiyasidan esa raqamlarni satrlarga aylantirish uchun foydalandik.
+
+[role="curriculum-javascript"]
+In this example, we used `println()` with strings to help read the content of the console. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun foydalandik.
+
+[[conditionalstatements]]
+=== Conditional Statements
+
+What is a conditional statement? *Bayonot* - bu kompyuter uchun ko'rsatma. *Shartli bayonot* - bu ma'lum bir *shart* rost bo'lgandagina bajarilishi kerak bo'lgan ko'rsatma. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. Agar yo'q bo'lsa, hech narsa qilmang (davom eting).
+
+Below is an example of conditional statement, note the similarity with a for loop:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
+----
+
+.PRACTICE
+****
+* Create a new script with two tracks.
+* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
+* You will need a negative gain (between -1dB and -60dB) to reduce the volume.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
+----
+
+We might want to check several conditions and execute a different set of statements depending on each condition. You can chain multiple conditions together. We use the following syntax:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
+----
+
+[[mixingyourtracks]]
+=== Mix your tracks
+
+Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mixing is modifying the volume of tracks so that they sound well balanced together.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+* Create a new script.
+* Add sounds on at least three tracks for at least sixteen measures.
+* You can use the `makeBeat()` function and a `for` loop to add percussion.
+* Choose your "main" track. It can be your melody, or one track that you wish to highlight.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
+* Use `print()` to show your process in the console. Here is an example: `print("Is track number" + str(track) + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?". The function `str()` converts a number (ex: `1`) into a string (ex: `"1"`).
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+* Create a new script.
+* Add sounds on at least three tracks for at least sixteen measures.
+* You can use the `makeBeat()` function and a `for` loop to add percussion.
+* Choose your "main" track. It can be your melody, or the track that you wish to highlight.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
+* Use `println()` to show your process in the console. Here is an example: `println("Is track number" + track + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?".
+****
+
+Keling, ba'zi lug'atlarni ko'rib chiqaylik:
+
+1. *Operator*: harakatni ifodalovchi belgi. We have seen arithmetic operators (`\+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `===`, `!==`).
+1. *Ifoda*: qiymatlar, konstantalar, o‘zgaruvchilar, operatorlar va funktsiyalar birikmasi. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1 + 2` (evaluated to 3) or `1 < 2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track `1`, a float between 0 and 1).
+1. *Bayonotllar* - bu kompyuter bajarishi uchun ko'rsatma.
+
+Below is an example of automated mixing. Agar siz bir yoki bir nechta tovushni o'zgartirsangiz, ularning ovoz balandligini tekshirishingiz va o'zingiz o'zgartirishingiz shart emas, chunki u allaqachon kodga kiritilgan. Shuning uchun biz buni avtomatlashtirilgan deb aytishimiz mumkin.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
+----
+
+{nbsp} +
+
+[[chapter6summary]]
+=== Chapter 6 Summary
+
+[role="curriculum-python"]
+* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
+* *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `True` va `False`.
+* Mantiqiy qiymatlar ushbu taqqoslash operatorlari tomonidan hosil qilinadi: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `==` 2 ta qiymat tengligini baholaydi, `=` esa o`zgaruvchiga qiymat tayinlaydi.
+* *Operator*: harakatni ifodalovchi belgi.
+* *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
+* *Bayonot* - bu kompyuter uchun ko'rsatma.
+* *Shart* `Rost` yoki `Yolg'on` deb baholanadigan iboradir.
+* The `if` statement only executes its code block when its condition is `True`.
+* In the event that an `if` statement's condition is `False`, an optional `else` statement allows an alternative code block to be executed.
+
+[role="curriculum-javascript"]
+* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
+* *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `true` va `false`.
+* Boolean values are generated by comparison operators: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
+* `===` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
+* *Operator*: harakatni ifodalovchi belgi.
+* *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
+* *Bayonot* - bu kompyuter uchun ko'rsatma.
+* *Shart* `rost` yoki `yolg'on` deb baholanadigan iboradir.
+* The `if` statement only executes its code block when its condition is `true`.
+* In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+Which of the following elements is a boolean?
+
+[answers]
+* `5+4 === 5`
+* `o'lchov = 1`
+* `2<3<4`
+* `False()`
+--
+
+[role="curriculum-python"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+
+[source,python]
+----
+include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
+----
+
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+
+[source,javascript]
+----
+include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
+----
+
+[answers]
+* 10
+* 5
+* True
+* False
+--
+
+[question]
+--
+What is mixing?
+
+[answers]
+* adapting the volume of each track so they sound well balanced
+* adapting the pitch of each track so they sound well balanced
+* adding a fade in
+* adding a fade out
+--
+
+[question]
+--
+How many conditions can you check in a conditional statement?
+
+[answers]
+* any number of conditions
+* 1 condition
+* 2 conditions
+* 3 conditions
+--
