@@ -1,0 +1,26 @@
+// Transition Techniques - Track Silencing: Transitioning between sections with track silencing
+
+// Sozlash
+setTempo(120);
+
+// Music
+var introLead = TECHNO_ACIDBASS_002;
+var mainLead1 = TECHNO_ACIDBASS_003;
+var mainLead2 = TECHNO_ACIDBASS_005;
+var auxDrums1 = TECHNO_LOOP_PART_025;
+var auxDrums2 = TECHNO_LOOP_PART_030;
+var mainDrums = TECHNO_MAINLOOP_019;
+var bass = TECHNO_SUBBASS_002;
+
+// Section 1
+fitMedia(introLead, 1, 1, 5);
+fitMedia(mainLead1, 1, 5, 9);
+fitMedia(auxDrums1, 2, 3, 5);
+fitMedia(auxDrums2, 2, 5, 8); // Drums drop out
+fitMedia(mainDrums, 3, 5, 8);
+
+// Section 2
+fitMedia(mainLead2, 1, 9, 17);
+fitMedia(auxDrums2, 2, 9, 17); // Drums enter back in
+fitMedia(mainDrums, 3, 9, 17);
+fitMedia(bass, 4, 9, 17);
