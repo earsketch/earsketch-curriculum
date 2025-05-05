@@ -1,19 +1,26 @@
 [[welcome]]
-== مرحبا بكم
+== اهلا وسهلا بالطلاب والمعلمين!
+
 :nofooter:
 
-مرحبا بكم في EarSketch! 
+Welcome to EarSketch!
 
-هنا سوف تتعلم علوم الكمبيوتر وتكنولوجيا الموسيقى جنبا إلى جنب. سوف تستخدم إما Python أو JavaScript لإنشاء الموسيقى الخاصة بك. 
+* المعلمون *: شاهد https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf دليل المناهج الجديدة ^] ، وقم بزيارة https://www.teachers.earsketch.org [موقع EarSketch للمعلمين ^] للحصول على معلومات إضافية مصادر.
 
-يكتب الموسيقيون والمبرمجون أكواد الكمبيوتر لإنشاء أصوات وتأثيرات وأغاني جديدة.
+* الطلاب *: تابع أدناه لمعرفة المزيد حول EarSketch
+
+Here you will learn computer science and music technology side by side. You will use either Python or JavaScript to create your own music.
+
+Musicians and programmers write computer code to create new sounds, effects, and songs.
 
 [role="curriculum-mp4"]
 [[video0]]
 video::../landing/media/homepagevid.a1cf3d01.mp4[poster=../landing/img/homepagevid-poster.8993a985.png]
 
-تعلم كتابة كود الكمبيوتر "البرمجة" هو مهارة ستكون مفيدة لك في مسارات مهنية متنوعة. 
+Learning to write computer code is a skill that will be useful to you in a variety of career paths.
 
-ربما 'll ستصبح منتجا موسيقيا اسطوريا او مهندس التسجيل الاكثر مشهورا في الصناعة'! نتمنى لك حظًا سعيدًا في رحلة ب EarSketch.
+ربما ستصبح منتجًا موسيقيًا أسطوريًا أو مهندس التسجيل الأكثر رواجًا في الصناعة! We wish you good luck on your EarSketch journey.
 
-انقر فوق السهم الأيمن أعلى هذا النص للبدء.
+Click on the right arrow at the top of this text to get started.
+
+يمكن للمعلمين الوصول إلى مواد المعلم المجانية و المجتمع https://www.teachers.earsketch.org/[هنا ^]!
