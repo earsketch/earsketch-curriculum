@@ -1,0 +1,21 @@
+// Zarbalarga misollar: Turli janrlarda zarbalar yaratish
+
+// Sozlash
+setTempo(110);
+
+// Sounds
+var drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01];
+
+// Rock zarbasi 1-o'lchovda
+makeBeat(drums, 1, 1, "0+++1+++0+++1+++");
+makeBeat(drums, 2, 1, "2+2+2+2+2+2+2+2+");
+
+// Hip hop zarbasi 3-o'lchovda
+makeBeat(drums, 1, 3, "0+++1++1+10+1+++");
+makeBeat(drums, 2, 3, "2+2+2+2+2+2+2+2+");
+
+// Jazz zarbasi 5-o'lchovda
+makeBeat(drums, 2, 5, "2++2+22++2+22++2");
+
+// Dembou (lotin, karib dengizi) zarbasi 7-o'lchovda
+makeBeat(drums, 1, 7, "0++10+1+0++10+1+");
