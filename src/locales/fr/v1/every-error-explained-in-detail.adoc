@@ -1,9 +1,27 @@
 [[ch_29]]
 == Tous les effets expliqués en détail
+
 :nofooter:
 
-[[importerror]]
-=== Import Error
+[[othererrors]]
+=== Overview
+
+Il arrive que les programmeur.se.s commettent des erreurs qui ont pour effet de mal faire fonctionner le code, voire de ne pas le faire fonctionner du tout. En programmation, les fautes de codage sont appelées *erreurs* ou *bogues*.
+
+Le processus de recherche et de correction des bogues s'appelle le *débogage*.
+
+Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
+
+Guidance on addressing the most common errors is given in the next sections.
+
+[role="curriculum-python"]
+See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
+
+[role="curriculum-javascript"]
+See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] for a full list of errors.
+
+[[modulenotfounderror]]
+=== ModuleNotFoundError
 
 //Python only
 
@@ -39,7 +57,7 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 *Solution :* Vérifiez que les instructions `from...import` dans la section supérieure de votre script ne comportent pas de fautes de frappe ni d'erreurs de casse.
 
 [role="curriculum-javascript"]
-Les erreurs de type « Import Error » ne se produisent pas en JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
+ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror, index errors>>.
 
 [[indentationerror]]
 === Indentation Error
@@ -149,6 +167,8 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 [role="curriculum-python"]
 *Description :* Une erreur de type « Name Error » se produit lorsqu'un programme essaie d'utiliser une variable ou d'appeler une fonction qui n'a jamais été définie, le plus souvent en raison d'une faute de frappe.
 
+Les erreurs de type « Import Error » ne se produisent pas en JavaScript.
+
 [role="curriculum-javascript"]
 *Description :* Une erreur de type « Name Error » se produit lorsqu'un programme essaie d'utiliser une variable ou d'appeler une fonction qui n'a jamais été définie, le plus souvent en raison d'une faute de frappe. JavaScript fait spécifiquement référence à ce type d'erreur comme étant une erreur de type « Reference Error ».
 
@@ -157,7 +177,6 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 
 [role="curriculum-javascript"]
 *Exemple :* Ci-dessous se trouve un script simple pour afficher la chaîne de caractères assignée à la variable `today`. Cependant, une erreur relative à la fonction `println()` empêche le script de s'exécuter.
-
 
 [role="curriculum-python"]
 [source,python]
@@ -185,7 +204,7 @@ include::code-examples/every-error-explained-in-detail-name-error-correction.py.
 include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
-*Solution :* Vérifiez l'orthographe et la casse de vos variables et de vos fonctions. Lorsque vous utilisez une variable ou que vous appelez une fonction, assurez-vous que chacune a été précédemment définie et veillez à bien définir une fonction avant de l'appeler. Bien que vous puissiez coller les noms directement, assurez-vous que vos noms de constantes de sons s'alignent sur les noms de clips dans le navigateur de sons.
+*Solution :* Vérifiez l'orthographe et la casse de vos variables et de vos fonctions. Lorsque vous utilisez une variable ou que vous appelez une fonction, assurez-vous que chacune a été précédemment définie et veillez à bien définir une fonction avant de l'appeler. Notez qu'il manque un deux-points (:) dans l'instruction _if_. Bien que vous puissiez coller les noms directement, assurez-vous que vos noms de constantes de sons s'alignent sur les noms de clips dans le navigateur de sons.
 
 [[parseerror]]
 === Parse Error
@@ -246,10 +265,10 @@ include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-Pour ce script, l'éditeur de code nous signale la ligne fautive. Notez qu'il manque un deux-points (:) dans l'instruction _if_. À la même ligne, il y a également une condition invalide ; il faut utiliser l'opérateur d'égalité `==` au lieu de l'opérateur d'affectation `=`.
+Pour ce script, l'éditeur de code nous signale la ligne fautive. Notice that we forgot to end our _if_ statement with a colon. À la même ligne, il y a également une condition invalide ; il faut utiliser l'opérateur d'égalité `==` au lieu de l'opérateur d'affectation `=`.
 
 [role="curriculum-javascript"]
-Pour ce script, l'éditeur de code nous signale la ligne fautive. Notez qu'il manque une accolade d'ouverture dans l'instruction de corps _if_. À la même ligne, il y a également une condition invalide ; il faut utiliser l'opérateur d'égalité stricte `===` au lieu de l'opérateur d'affectation `=`.
+Pour ce script, l'éditeur de code nous signale la ligne fautive. Notice that we forgot to open our _if_ statement body with a curly brace. À la même ligne, il y a également une condition invalide ; il faut utiliser l'opérateur d'égalité stricte `===` au lieu de l'opérateur d'affectation `=`.
 
 [role="curriculum-python"]
 [source,python]
