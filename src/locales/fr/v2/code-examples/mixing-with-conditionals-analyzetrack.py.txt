@@ -1,4 +1,5 @@
 # AnalyzeTrack() : Utilisation de la fonction analyzeTrack() pour afficher l'intensité sonore d'une piste
+
 # Paramétrage
 from earsketch import *
 setTempo(120)
