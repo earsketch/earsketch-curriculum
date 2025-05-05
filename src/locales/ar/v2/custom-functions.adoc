@@ -1,100 +1,102 @@
 [[customfunctionssongstructure]]
-== دوال مخصصة ، هيكل الأغنية
+== Custom Functions and Song Structure
+
 :nofooter:
 
-هيكل الأغنية هو تنظيم الأغنية 'بمرور الوقت: كيفية إنشاء أقسام وانتقالات ذات مغزى لتدفق الموسيقى الخاصة بك. في هذا الفصل ، ستنشئ'الدوال الخاصة بك: دوال مخصصة ، لتنظيم أغانيك!
+The song structure is the song's organization over time. The goal is to create meaningful sections and transitions for the flow of your music. In this chapter, you'll create your own function, custom functions, to structure your songs!
 
 [[asongsstructure]]
-=== هيكل 'أغنية
+=== A song's structure
+
 :nofooter:
 
-يمكن تقسيم الأغنية إلى * أقسام *. يتكون القسم من عدة مقاييس (وحدات زمنية موسيقية) ، ويعبر عن فكرة أو شعور. عادة ، يحاول الموسيقيون خلق تباين بين المقطوعات المختلفة. تعتبر المقدمات ، والآيات ، والجوقات ، والنهايات أمثلة على الأقسام.
+A song can be divided into *sections*. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
 
-* الشكل * ، أو بنية الأغنية ، هي عادةً ABA. A و B قسمان مختلفان ، على سبيل المثال الآية والجوقة. يضيفB section- القسم "ب" التنوع ، والعودة إلى A section- القسم "أ" يحافظ على التوحيد ويثير إحساسًا بالعودة إلى شيء مألوف وآمن. يقوم المقطع البرمجي أدناه بإنشاء نموذج ABA. يحتوي القسم "ب" على اصوات تتعارض مع الأصوات في القسم "أ": جهير أبطأ ومستوى صوت أعلى وإضافة "أصوات صرير":
+A common and simple *form*, or song structure, is ABA. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
 
 [[imediau2sections_052016png]]
-.نموذج ABA داخل EarSketch DAW
+.An ABA form within the EarSketch DAW
 [caption="Figure 9.2: "]
 image::../media/U2/sections_052016.png[Alt Text]
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-form.py.txt[]
+include::code-examples/custom-functions-a-b-a-form.py.txt[]
 ----
-
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-form.js.txt[]
+include::code-examples/custom-functions-a-b-a-form.js.txt[]
 ----
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-اختر أغنية تعجبك. استمع إليها وحاول ملاحظة الأقسام المختلفة. هل تمكنت من ملاحظة انتقال الأغنية من قسم إلى آخر؟ كم جوقة أو آية يمكنك سماعها؟ أي نوع من التناقضات يمكنك ملاحظته؟ شارك مثالك مع صديقك.
+Select a song that you like. Listen to it and try to notice the different sections. Can you tell when the musicians change sections? How many times do you hear the chorus and verse? What kind of contrasts can you observe? Share your example with your neighbor.
 ****
 
-تذكروا أن الجملة الموسيقية تبدو أكثر طبيعية عندما يتم ترتيب المقاطع في مجموعات من 2 ، 4 ، 8 ، 16 ، إلخ. لذلك يفضل أن يكون حجم أقسامك 2 ، 4 ، 8 ، 16 قياسًا.
+Keep in mind that a musical phrase sounds most natural when sounds are arranged into groups of two, four, eight, sixteen, etc. So your sections should preferably have a size of two, four, eight, or sixteen measures.
 
 [[creatingyourcustomfunctions]]
-=== قم بإنشاء الدوال المخصصة الخاصة بك
+=== Create your custom functions
 
-في المثال السابق بأغنية ABA ، المقطع البرمجي كبيرًا ، ويتكرر الرمز للقسم A الثاني. هناك طريقة لتبسيط وتقصير المقطع البرمجي ، بمساعدة* دوال مُخصصة *! سنحدد وظيفة تمثل section A ، ثم نستدعي الدالة مرتين.  
+In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more concise, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.
 
-الاختلاف مع الدوال التي استخدمتها مثل ` fitMedia () ` ، هو أنك ستحتاج إلى تحديد الدالة الخاصة بك المخصصة ، في حين أن ` fitMedia () ` محددة مسبقًا بالفعل. إليك كيفية تحديد section A:
+The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a sound. In a custom function, you get to define exactly what it does. Here is how you would define section A:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-untitled1.py.txt[]
+include::code-examples/custom-functions-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-untitled1.js.txt[]
+include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
-. هنا ،() sectionAهو الاسم الذي اخترناه لدالتنا ، يمكنك اختيار أي اسم تريده. حاول تسمية دالتك بطريقة وصفية حتى يسهل قراءة التعليمات البرمجية الخاصة بك.
-. التعليمات هي *body-جسم* الوظيفة. يتم نقلها إلى اليمين.
+. `sectionA()` is the name we chose for our function. You can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
+. The instructions are the *body* of the function. They are indented.
 
-.تدريب
+.PRACTICE
 ****
-الصق هذا الرمز في نص جديد ، وقم بتشغيله. يجب أن ترى أن منصة العمل DAW الصوتية الخاصة بك لا تزال فارغة. 
-هذا 'لأنك بحاجة * لاستدعاء الدالة * لاستخدامها.  
-لاستدعاء الدالة الخاصة بك ، أضف السطر `sectionA()` ، بدون مسافة بادئة ، بعد تعريف الدالة. عند تشغيل المقطع البرمجي ، يجب أن ترى section A في منصة العملDAW الصوتية الخاصة بك
-****
-
-الآن نريد إضافة section A من المقاييس 9 إلى 13. ومع ذلك ، عندما نستدعي sectionA()، يتم وضع الأصوات من المقاييس من 1 إلى 5. لمعالجة هذه المشكلة ، سننشئ * عوامل * للدالة الخاصة بنا.
-
-.تدريب
-****
-في البرنامج النصي الحالي الخاص بك ،
-1. أضف العوامل ` startMeasure ` و ` endMeasure ` ، مفصولة بفاصلات ، داخل الأقواس في تعريف الدالة. (`sectionA(startMeasure,endMeasure)`).
-2. في جسم الدالة '، استبدل قياسات البداية (1) وقياسات النهاية (5) بـ `startMeasure` و `endMeasure` على التوالي.
-3. عند استدعاء الدالة الخاصة بك ، أضف العوامل ` 1 ` و ` 5 ` بين القوسين. قم بتشغيل المقطع البرمجي للتأكد من عدم وجود خطأ.
-4. أضف استدعاء دالة ثانية ، هذه المرة مع العوامل ` 9 ` و ` 13 `. قم بتشغيل المقطع البرمجي للتأكد من عدم وجود خطأ.
-5. حدد دالة section B-للقسم B ، باستخدام نفس العملية ، واستدعاء section B-القسم B من المقاييس 5 إلى 9 ومن المقاييس 13 إلى 17.
+Paste this code in a new script, and run it. You should see that your DAW remains empty.
+That's because you need to *call* a function to use it.
+To call your function, add the line `sectionA()`, unindented, after your function definition. When running the code, you should see section A in your DAW
 ****
 
-هذا هو الشكل الذي يمكن أن تبدو عليه التعليمات البرمجية الخاصة بك:
+Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. To remedy this issue, we will create *parameters* for our function.
+
+.PRACTICE
+****
+In your current script you created for the previous practice problem:
+
+1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
+1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
+1. When you call your function, add the parameters `1` and `5` between the parentheses. Run the code to make sure there is no error.
+1. Add a second function call, this time with the parameters `9` and `13`. Run the code to make sure there is no error.
+1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
+****
+
+Here is what your code could look like:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
 ----
-
 
 //The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
-
 
 [role="curriculum-python curriculum-mp4"]
 [[video93py]]
@@ -104,151 +106,154 @@ video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
 [[video93js]]
 video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 
-
 [[transitionstrategies]]
-=== استراتيجيات الانتقال
+=== Transition Strategies
 
-الآن بعد أن عرفت كيفية إنشاء دالة مخصصة لتنظيم أغنيتك ، دعنا' ننظر إلى التحولات. *Transitions-الانتقالات *المساعدة في الانتقال بسلاسة من قسم إلى آخر. يمكن أن تربط المسارات بين البيت والجوقة ، أو خلط المسارات أو تغيير السلم. الهدف من الانتقال هو جذب انتباه المستمع 'وإعلامه بأن التغيير على وشك الحدوث. 
+Now that you know how to create custom functions to structure your song, let's look at transitions. *Transitions* help one section smoothly go into the next. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. The goal of a transition is to grab the listener's attention and let them know a change is about to occur.
 
-فيما يلي بعض الاستراتيجيات الشائعة لإنشاء انتقالات موسيقية:
+Following are some popular strategies for creating musical transitions:
 
-. *Crash Cymbal-تحطم الصنج *: يضع صوت الصنج في الجزء الأول من المقطع الجديد. انظر هذا https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[ المثال ^].
-. *Drum Fill-تعبئة الاسطوانة*: تغيير إيقاعي لملء الفراغ قبل قسم جديد. انظر هذه https://www.youtube.com/watch?v=YMskGG39Y0Y[ أمثلة ^] drum fills- لتعبئة الأسطوانة.
-. *Track Dropouts- تتبع المنقطعين*: كتم صوت مسارات معينة مؤقتًا لإنشاء فترات استراحة مؤقت. أصغ إلى https://www.youtube.com/watch?v=PxIgHSOLO_Q[Imagine Dragon's Love] في 1'16 كمثال.
-. * Melody Variation-تعديل اللحن *: يعرض التغييرات على الأوتار أو خط الجهير أو اللحن قبل المقطع الجديد. في كثير من الأحيان ، يحتوي مجلد داخل مكتبة صوت EarSketch على تنويعات للملف الموسيقي. 
-. <strong>Riser</0-رافع >: حرف أو ضوضاء يزداد ارتفاعها تدريجيًا. إنه شائع جدًا في EDM (اختصار لموسيقى الرقص الإلكترونية) ، ويخلق توقعًا بحدوث انخفاض. يمكنك استخدام مصطلح البحث "riser" في متصفح الصوت. يمكن استخدام الصوت المقلوب من الادخار riser-كرافعة ، مثل YG_EDM_REVERSE_CRASH_1. هنا مثال riser-الرافع في https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[a techno set from Carl Cox^].
-. * Snare Roll *: سلسلة من الاصطدامات المتكررة ، مع زيادة الكثافة ، والنغمة ، أو السعة. يمكنك استخدام مقطع مثل RD_FUTURE_DUBSTEP_FILL_1 أو HOUSE_BREAK_FILL_003او مع `makeBeat()`. هنا https://www.youtube.com/watch?v=c3HLuTAsbFE[مثال^].
-. *Looping-التكرار *: تكرار مقطع قصير من اللحن قبل المقطع جديد. هنا https://www.youtube.com/watch?v=AQg4wnbBjiQ[مثال^]للحلقات في الدي جي '.
-. * Crossfading-الإبهات المتقاطع *: خفض مستوى صوت المقطع تدريجيًا مع زيادة حجم المقطع الجديد. 
-. <strong> Anacrusis </0-أناكروسيس>: عندما يبدأ لحن المقطع الجديد ينبض الزوجان مبكرًا.
+. *Crash Cymbal*: Placing a crash cymbal on the first beat of a new section.
+. *Drum Fill*: A rhythmic variation to fill the gap before a new section.
+. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
+. *Melody Variation*: Introducing a variation of the chords, bass line, or melody before the new section. Often, a folder within the EarSketch sound library contains variations of a similar riff.
+. *Riser*: A note or noise that increases in pitch. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
+. *Snare Roll*: A sequence of repeated snare hits, with increasing density, pitch, or amplitude. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Looping*: Repeating a short segment of melody before a new section.
+. *Crossfading*: Decreasing the volume of one section while increasing the volume of a new section.
+. *Anacrusis*: When the melody of the new section starts a couple beats early.
 
-.تدريب
+.PRACTICE
 ****
-بالنظر إلى هذه القائمة من الانتقالات المحتملة ، حدد 2 منهم وحاول أن ترى كيف يمكنك تنفيذها باستخدام التعليمات البرمجية. يمكن العمل بأزواج. بمجرد 'التفكير في الأمر ، يمكنك إلقاء نظرة على الأمثلة أدناه.
+Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Once you've thought about it, you can have a look at the examples below.
+
+The transition should be placed one or two measures before the new section. You can use several transition techniques at the same time.
 ****
-يجب وضع الانتقال 1 أو 2 قبل القسم الجديد. يمكنك استخدام العديد من تقنيات الانتقال في نفس الوقت. 
 
-انتقال الطبل:
+Drum fills:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
+include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
+include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-تتطلب تقنية حذف القنوات فقط تغييرات في عدد المكالمات للدالة `fitMedia()`. وفيما يلي مثال على ذلك.
+The track silencing technique only requires the modification of a couple `fitMedia()` calls. An example is shown below.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
+include::code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
+include::code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
-المثال التالي يستخدم الناهضون(risers) المتعددين وانهيار الصنج أثناء الانتقال.
+The next example uses multiple risers and a crash cymbal during the transition.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.py.txt[]
+include::code-examples/custom-functions-transition-techniques-risers.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-transition-techniques-risers.js.txt[]
+include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 ----
+
+{nbsp} +
 
 [[yourfullsong]]
-=== أغنيتك الكاملة
+=== Your full song
 
-في البرمجة ، يمكنك إنشاء *abstractions-تبسيط (تجريدات) *: ربط الأفكار لإنشاء مفهوم واحد. تمامًا كما هو الحال في الموسيقى ، حيث نقوم بتجميع الأفكار الموسيقية في أقسام. الدوال هي أحد أنواع التجريد المستخدمة في علوم الكمبيوتر. يقومون بتجميع عبارات متعددة في أداة واحدة بحيث يمكن الرجوع إليها بسهولة. يمكن للتجريدات أن تجعل شكل البرنامج أكثر وضوحًا.
+In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
 
-.تدريب
+.PRACTICE
 ****
-في هذا التمرين ، سننشئ' أغنية كاملة ، باستخدام جميع الوسائل التي تعلمناها واكتشفناها 'في EarSketch! إليك اقتراح حول كيفية العمل على الأغنية. يمكنك ضبط طريقة عملك بحيث تكون مناسبة لك:
+Let's create a full song using all the tools you've discovered in EarSketch! Here is a suggestion of how to work, but you can adapt it as you like:
 
-. اختر موضوعًا لأغنيتك. فكر في أنواع الأصوات والآلات والكلمات التي ستنقل الرسالة بأفضل شكل.
-. ثم حدد هيكل بسيط. 
-. وأخيرًا ، ابدأ في كتابة المقطع البرمجي! ابدأ بتحديد الأصوات وتحديد مواضعها باستخدام دالة ` () fitMedia `.
-. استخدم `makeBeat()` لإضافة بعض الإيقاع.
-. يمكنك تحميل الأصوات الخاصة بك.
-. استخدم حلقات for لتقليل التكرار في المقاطع البرمجية الخاصة بك.
-. باستخدام الدوال ، حدد مقاطع في الأغنية ، وحدد هيكل الأغنية.
-. أضف واحدًا أو اثنين من الانتقالات ذات المغزى.
-. أضف تأثيرات باستخدام setEffect ().
-. أضف واحدًا أو أكثر من العبارات الشرطية.
-. تأكد من استخدام المتغيرات لتخزين بعض المعلومات مثل أسماء مقاطع الصوت.
-. تأكد من استخدام التعليقات لشرح ما تفعله.
-. لا تنس 'تشغيل مقطعك البرمجي بانتظام والاستماع إلى أغنيتك. غير الأغنية حتى تعبر عن رغبتك.
-. اختر اسمًا لأغنيتك.
+. Choose a theme for your song. Think about the type of sounds, instruments, or lyrics that will best convey your message.
+. Then select a simple structure.
+. And finally, start coding! Start with some `fitMedia()` functions to select sounds.
+. Use `makeBeat()` to add some percussion.
+. You can upload your own sounds.
+. Use `for` loops to reduce repetition in your code.
+. Use custom functions to define your sections and create your song structure.
+. Add one or two meaningful transitions.
+. Add effects with `setEffect()`.
+. Add one or several conditional statements.
+. Make sure you use variables to store some information such as sound constants.
+. Make sure you use comments to explain what you are doing.
+. Don't forget to regularly run your code and listen to your song. This will help you modify it until you like the sound of it.
+. Choose a name for your song.
 ****
 
-هذا مثال على أغنية كاملة:
+Here is an example of a full song:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
+include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 ----
+
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
+include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-في هذا المثال ، استخدمنا حلقة for داخل دالة مخصصة! استخدمنا عوامل الدالة (` بداية ` و ` نهاية `) داخل حلقة for.
-
+In this example, we have used a `for` loop inside a custom function! We have used parameters of the function (`start` and `end`) inside the for loop.
 
 [[chapter7summary]]
-=== الفصل السابع ملخص
+=== Chapter 7 Summary
 
-* *Sections-الأقسام * عبارة عن وحدات موسيقية ذات صلة تتكون من مقاييس متعددة. كل يعبر عن فكرة أو شعور.
-* * Transitions-الانتقالات * عبارة عن مقاطع موسيقية تستخدم لربط مقاطع موسيقية متتالية.
-* يُطلق على هيكل الأغنية وتنوعها اسم الأغنية *form-شكل *. الشكل الموسيقي الشائع هو A-B-A.
-* * الدوال المخصصة * هي دوال فريدة كتبها المبرمج لإنجاز مهمة معينة. يجب عليك إنشاء دالة مخصصة لتتمكن استدعائها. يمكنك إنشاء العديد من العوامل كما تريد.
-* * abstraction-التجريد * هو تجميع الأفكار لتشكيل مفهوم واحد ، غالبًا ما يكون أقل تعقيدًا. الدوال هي مثال على التجريد.
-
+* *Sections* are related musical units consisting of multiple measures. Each expresses an idea or feeling.
+* *Transitions* are passages of music used to connect consecutive musical sections.
+* The structure and variety found within a song is known as its *form*. A common musical form is A-B-A.
+* *Custom functions* are unique functions written by the programmer to accomplish a specific task. You have to create a custom function to be able to call it. You can create as many parameters as you want.
+* An *abstraction* is the bundling of ideas to form a single, often less complex, concept. Functions are an example of abstraction.
 
 [[chapter-questions]]
-=== الأسئلة
+=== Questions
 
 [question]
 --
-أي من هذه ليست مثالاً لقسم موسيقي؟
+Which of these is NOT an example of a musical section?
+
 [answers]
-* طبول
-* اIntro-فتتاح-بداية
+* Drums
+* Intro
 * Verse
--آية
-* Chorus-لازِمَة
+* Chorus
 --
 
 [question]
 --
-ما هو التجريد؟
+What is an abstraction?
+
 [answers]
-* تجميع الأفكار لتشكيل مفهوم واحد
-* مجموعة متنوعة من الأصوات في جميع أنحاء الأقسام
-* أجزاء من الأغنية مرتبطة ببعضها البعض ولكنها تختلف أيضًا عن بعضها البعض
-* عبارة ترجع قيمة إلى استدعاء الدالة
+* A bundling of ideas to form a single concept
+* A variety of sounds throughout sections
+* Parts of a song that are related, but also are distinct from each other
+* A statement that returns a value to the function call
 --
 
 [role="curriculum-python"]
 [question]
 --
-أي من الخيارات التالية يحدد بشكل صحيح الدالة `myFunction()` مع العوامل `startMeasure` و `endMeasure`؟
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+
 [answers]
 * `def myFunction(startMeasure, endMeasure):`
 * `def myFunction():`
@@ -259,7 +264,8 @@ include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer
 [role="curriculum-javascript"]
 [question]
 --
-أي من الخيارات التالية يحدد بشكل صحيح الدالة `myFunction()` مع العوامل `startMeasure` و `endMeasure`؟
+Which of these options correctly defines the function `myFunction()` with the parameters `startMeasure` and `endMeasure` ?
+
 [answers]
 * `function myFunction(startMeasure, endMeasure) {}`
 * `function myFunction() {}`
@@ -269,10 +275,11 @@ include::../../en/v2/code-examples/custom-functions-total-atlanta-song-of-summer
 
 [question]
 --
-أي من هذه ليست مثالاً لقسم الانتقال؟
+Which of these is NOT an example of a transition?
+
 [answers]
-* تناسق اللحن
-* تحطم الصنج
-* Riser- الناهض
-* تتبع المنقطعين
+* Melody Consistency
+* Crash Cymbal
+* Riser
+* Track Silencing
 --
