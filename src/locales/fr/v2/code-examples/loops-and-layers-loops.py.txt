@@ -9,7 +9,6 @@ drums1 = ELECTRO_DRUM_MAIN_BEAT_008
 drums2 = ELECTRO_DRUM_MAIN_BEAT_007
 
 # Utilisation d'une boucle au lieu de répéter des lignes similaires dans le code
-
 for measure in range(1, 9):
     fitMedia(drums1, 1, measure, measure + 0.5)
     fitMedia(drums2, 1, measure + 0.5, measure + 1)
