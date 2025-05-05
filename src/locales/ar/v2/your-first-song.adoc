@@ -1,174 +1,167 @@
 [[customizeyourfirstsong]]
-== تخصيص أغنيتك الأولى
+== Customize your first song
+
 :nofooter:
 
-في هذا الفصل ستتعلم كيفية تغيير إيقاع أغنيتك وإضافة التعليقات إلى الكود الخاص بك وتحميل الأصوات الخاصة بك لتحسين رسالة أغنيتك.
+In this chapter you will learn how to change the tempo of your song, add comments to your code, and upload your own sounds to enhance the message of your song.
 
 [[settempo]]
-=== الدالة
- ()setTempo 
+=== The `setTempo()` function
 
 [role="curriculum-python"]
 --
-لقد لاحظت الآن أنه عند إنشاء سكريبت، هناك عناصر موجودة مسبقًا يجب عليك الاحتفاظ بها تمامًا حتى يعمل الكود الخاصة بك:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
-. هناك ملاحظات التي تبدأ بـ `#` باللون الرمادي: سوف نغطي شرح ذلك في القسم التالي.
-. السطر 
-from Earsketch import*
-الذي يضيف دوال Earsketch  مثل 
-  ()fitMedia  
-للمشروع
-. الدالة `setTempo(120)` التي سنشرحها بالتفصيل أدناه
+. Some comments starting with `#`: we'll cover that in next section
+. the `from earsketch import*` line, which adds the EarSketch functions (like `fitMedia()`) to the project
+. the `setTempo(120)` function, which we will see in detail below
 --
 
 [role="curriculum-javascript"]
 --
-لقد لاحظت الآن أنه عند إنشاء سكريبت، هناك عناصر موجودة مسبقًا يجب عليك الاحتفاظ بها تمامًا حتى يعمل الكود الخاصة بك:
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
 
-. هناك ملاحظات التي تبدأ بـ`//` باللون الرمادي: سوف نغطي شرح ذلك في القسم التالي.
-. الدالة `setTempo(120)` التي سنشرحها بالتفصيل أدناه.
+. Some comments starting with `//`: we'll cover that in next section
+. the `setTempo(120)` function, which we will see in detail below
 --
 
-ستحدد دالة ()setTempo سرعة أغنيتك. tempo (إيقاع بالعربية) في الموسيقى الغربية. هو عدد النبضات (beats) في الدقيقة (bpm). في EarSketch ، يتم تعيين الإيقاع الافتراضي (أي القيمة الأولية لtempo) إلى 120 جزء من المليون، وهو ما يقابل للمشي السريع في حياتنا. لتغيير الايقاع tempo، فقط قم بتغيير الرقم بين قوسين لوظيفة `setTempo()`. كلما ارتفع الايقاع tempo كلما زادت سرعة موسيقاك. يمكنك تحديد الإيقاع بين    45 bpm  و  220 bpm.
+The `setTempo()` function will determine the speed of your song. The *tempo* is a number of beats per minute (bpm) in Western music. In EarSketch, the default tempo (i.e. the initial value of the tempo) is set to 120bpm, which corresponds to a fast walk or march speed. To change the tempo, just change the number between the parentheses of the `setTempo()` function. The higher the tempo, the faster your music. You can select a tempo between _45bpm and 220bpm_.
 
-.تدريب
+.PRACTICE
 ****
-. إنشاء سكريبت جديد. 
-. ضع الأصوات على مسارين مختلفين،
-. قم بتعديل الإيقاع الخاص بك والاستماع إلى الأغنية،
-. شغل أغنيتك في 3 ايقاعات مختلفة لصديق. ثم اطلب منهم ترتيب الايقاعات من الأبطأ إلى الأسرع.
+. Create a new script.
+. Place sounds on two different tracks.
+. Modify your tempo and listen to the song.
+. Play your song at three different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
 ****
 
-القالب الموسيقي هو فئة من الانتاجات الفنية مثل (الموسيقى) والتي تتشابه بصفاتها وشكلها او محتواها. قوالب مختلفة لها ايقاعات مختلفة على سبيل المثال:
+A genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Different genres have different tempo ranges. For instance:
 
 [cols="^3*"]
 |===
-|القالب الفني|BPM|مثال
+|GENRE |BPM |EXAMPLE
 
-|Hip Hop
-
-|85-95
-
-|Coolio - Gangsta Paradise (feat. L.V.)
-
-|البوب Pop
+|Pop
 |110-130
+|"Thriller" - Michael Jackson
 
-|Lizzo - Juice
- 
-|تكنو Techno
-|120-125
+"I Wanna Dance With Somebody" - Whitney Houston
 
-|Boris Brejcha - Schleierwolken
-|إلكترو Electro
-|100-130
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
 
-|Apashe - Behind My Eyes (feat. LIA)
+"Fight the Power" - Public Enemy
 
-|هاوس House
-|115-130
+|Country
+|90-110
+|"I Walk the Line" - Johnny Cash
 
-|DJ Breezy - Kimpinstik (feat. Dahlin Gage & Medikal)
-|دب ستيب & تراب Dubstep and Trap
+"Jolene" - Dolly Parton
 
+|House / EDM
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dubstep / Trap
 |140-150
+|"Scary Monsters and Nice Sprites" - Skrillex
 
-|Jessica Audiffred & Walshy Fire - Stupid Love (feat. Nia V)
-|درام & باس Drum & Bass
-|160-180
-
-|Mollie Collins - Lost & Found
+"Turn Down for What" - Lil Jon
 |===
 
-.تدريب
+.PRACTICE
 ****
-. اختر فنانًا واحداً تحبه حقًا و اكتشف نوع القالب الفني الذي ينتمي إليه.
-. ابحث عن هذا النوع من القالب الفني (على ساوندكلود أو ما شابه ذلك) واستمع إلى بضعة من الأغاني هذا النوع.
-. اصغي لأوجه التشابه بين الأغاني.
-. بإمكانك أيضاً أن تبحث عن نوع القالب في ويكيبيديا للحصول على مزيد من المعلومات عنه.
+. Select one artist you really like and find out what genre they belong to.
+. Search that genre (on https://soundcloud.com/[Soundcloud] or something similar) and listen to a few snippets of songs in that genre.
+. Listen for similarities between the songs.
+. You can also research the genre on Wikipedia to get more information about it.
 ****
- 
-لاحظ أن مقطع صوت واحد سيبدو في بعض الأحيان مختلفا جدا عند معاينته وعند تشغيله في أغنيتك. قد يكون ذلك لأن سرعة ايقاع مقطع الصوت مختلفة عن سرعة ايقاع أغنيتك temp. لمعرفة الإيقاع الدقيق للمقطع، مرر الماوس (الفأره) فوق اسم المقطع في متصفح (Browser) الصوت. وعندها يمكنك تعديل إيقاع أغنيتك وفقًا لذلك أو اختيار مقطع صوت يتناسب بشكل أفضل مع إيقاع أغنيتك.
 
+Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+
+To find the original tempo of sound, hover over the sound constant Sound Browser.
 
 [[comments]]
-=== أضف الملاحظات إلى تعليماتك البرمجية (الكود) 
+=== Adding comments to your code
+
+*Comments* are lines of code ignored by the computer. People use comments to make notes within the code.
+
+EarSketch scripts begin with comments that you can use to enter a description of your song. These details make it easier for other programmers to understand what your code is about.
 
 [role="curriculum-python"]
-*الملاحظات في Python* هي أسطر من التعليمات البرمجية التي لا يتم تنفيذها بواسطة الكمبيوتر. وهي تستخدم فقط من قبل الانسان لجعل التعليمات البرمجية (الكود) أسهل فهمها، أو للمساعدة في تنظيم التعليمات البرمجية أو لعمل ملاحظات للاستخدام في المستقبل. في Python، يشار إلى الملاحظات بواسطة سطر يبدأ بالرمز `#` 
+In Python, comments are indicated by a line starting with a pound `#` symbol.
 
 [role="curriculum-javascript"]
-*الملاحظات في JavaScript* هي أسطر من التعليمات البرمجية التي لا يتم تنفيذها بواسطة الكمبيوتر. وهي تستخدم فقط من قبل الانسان لجعل التعليمات البرمجية (الكود) أسهل فهمها، أو للمساعدة في تنظيم التعليمات البرمجية أو لعمل ملاحظات للاستخدام في المستقبل. في JavaScript، يشار إلى التعليقات بواسطة سطر يبدأ بخطين أمامين، `//`.
+In JavaScript, comments are indicated by a line starting with two forward slashes, `//`.
 
-لاحظ أن السطر الأول من كل سكريبت هو ملاحظات التي تصف النص البرمجي (الكود). لكل سريبت جديد، سوف تحتاج إلى ملء هذه المعلومات. هذا يجعل من الأسهل على المبرمجين الآخرين فهم ما هو الكود الخاص بك.
-
-.تدريب
+.PRACTICE
 ****
-على السكريبت الحالي الخاص بك، قم بتعبئة المعلومات التالية في الملاحظات في بداية الكود الخاص بك:
-
-. اسم السكريبت: اسم أغنيتك،
-. المؤلف : اسمك،
-. الوصف: هنا اكتب وصفاً مختصراً لمشروعك
+In your current script, write a comment with a description of your song on the first line.
 ****
 
-يمكنك أيضًا استخدام الملاحظات لوصف ما تفعله الأقسام المختلفة من الكود. فيما يلي مثال: يمكنك لصق الكود وتشغيله. لاحظ كيف تصف الملاحظات الفروع المختلفة:
+You can also use comments to describe what different sections of your code do. Here is an example below. You can paste and run the code. Note how the comments describe the different sections:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/your-first-song-comments.py.txt[]
+include::code-examples/your-first-song-comments.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/your-first-song-comments.js.txt[]
+include::code-examples/your-first-song-comments.js.txt[]
 ----
 
+{nbsp} +
 
 [[uploadingsounds]]
-=== تحميل الأصوات الخاصة بك
+=== Uploading your own sounds
 
+You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
 
-يمكنك تحميل الصوت الخاص بك من خلال متصفح الصوت. افتح متصفح الصوت الخاص بك وانقر على زر "إضافة صوت" أسفل الفلاتر (إذا لم يظهر الزر، تأكد من أنك مسجل الدخول)-- ستفتح نافذة، لنستكشف الخيارات الثلاثة الأولى:
+You must be logged in to upload sounds.
 
-. *تحميل صوت جديد* يسمح لك باختيار ملفات صوتية (.mp3, .aiff, وما إلى ذلك) من جهاز الكمبيوتر الخاص بك. يمكنك تعديل اسم الملف إذا لزم الأمر ("constant value(required)")، وانقر على "UPLOAD".
-. *تسجيل سريع* يتيح لك تسجيل مقطوعات قصيرة مباشرة في مكتبة EarSketch. شاهد الفيديو أدناه لمزيد من المعلومات.
-. *Freesound* تسمح لك باستيراد الأصوات مباشرة من Freesound.org، قاعدة بيانات صوتية مفتوحة المصدر. في شريط البحث، يمكنك البحث عن نوع من الصوت المطلوب (على سبيل المثال: أغاني الطيور، الأمطار، الشارع المزدحم..). تحت "النتائج"، ستظهر قائمة بالأصوات. يمكنك معاينة الأصوات بالنقر على زر التشغيل، وإذا أعجبتك، انقر زر التبديل أمام اسم الملف ثم انقر فوق "UPLOAD" في الأسفل تماما.
+Let's explore the first three options.
 
-للعثور على الصوت الذي قمت برفعه أو تسجيله للتو، اكتب اسمه في شريط البحث في متصفح الصوت.
+. *Upload Sound* allows you to choose audio files already on your computer.
+. *Quick Record* lets you record directly from your computer's microphone.
+. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
 
 [role="curriculum-mp4"]
 [[video101rec]]
 video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
-.تدريب
+.PRACTICE
 ****
-الموسيقى، والفن بشكل عام، غالباً ما تكون طريقة لنقل رسالة. ويمكن أن يكون إما من خلال كلمات الأغنية، و/أو من خلال نوع الأغنية. نود أن نصنع أغنية قصيرة تعبر عن شيء ما. يمكن أن يكون الشعور الذي ترغب'في مشاركته، أو قصة.
+Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. It can be a feeling that you'd like to share, or a story.
 
-. فكر في ما ترغب'في التعبير عنه 
-. ثم 1- إما أن تكتب بعض كلمات الأغنية وتسجل نفسك تغنيها أو تقرأها أو 2- تسجيل أو تحميل بعض الأصوات الموسيقية المرتبطة برسالتك
-. أضف هذه التسجيلات إلى أغنيتك باستخدام دالة fitMedia()
-. ثم أضف بعض المقاطع الإضافية من EarSketch باستخدام دالة fitMedia()
-. اعرض اغنيتك لصديق
-. يمكنك مناقشة أغنيتك والأشياء التي كنت تحاول التعبير عنها
+. Think about what you'd like to express
+. Then either:
+.. Write some lyrics and record yourself singing or reading them or
+.. Record or download some sounds that are related to your message
+. Add these recordings to your song using `fitMedia()`
+. Then add additional sounds using `fitMedia()`
+. Present your song to your friend
+. You can discuss your songs and the things you were trying to express
 ****
 
-////
-OPTIONAL
-////
+An active computer program is called a *process*.
 
-* العمليات * ، أو المهام ، هي برامج تعمل على جهاز الحاسوب الخاص بك. تقوم وحدة المعالجة' المركزية للحاسوب ، أو * وحدة المعالجة المركزية * بتنفيذها. 
+When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
 
-تحتفظ ذاكرة الحاسوب' * * بالبيانات وتعليمات المعالجة لاستخدام وحدة المعالجة المركزية. الذاكرة ، وتسمى أيضًا التخزين الأساسي أو ذاكرة الوصول العشوائي (ذاكرة الوصول العشوائي) ، تخزن بياناتها مؤقتًا. يتم تخزين المعلومات الخاصة بالعمليات التي يتم تشغيلها بنشاط فقط في ذاكرة الوصول العشوائي RAM. يتيح ذلك الوصول السريع إلى الإرشادات والبيانات الخاصة بوحدة المعالجة المركزية CPU.
+A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
 
-هناك فرق بين الذاكرة (أو التخزين قصير المدى) والتخزين طويل المدى. يشار إلى التخزين طويل المدى ، مثل محرك الأقراص الثابتة أو السحابة(cloud) ، على أنه تخزين ثانوي. * التخزين الثانوي * يحتوي على كميات كبيرة من البيانات لفترات طويلة من الوقت ، حتى بعد إيقاف تشغيل الحاسوب. لا تتفاعل وحدة المعالجة المركزية-CPU-بشكل مباشر مع وحدات التخزين الثانوية. عندما تنفذ وحدة المعالجة المركزية CPU عملية ما ، يجب أولاً وضع البيانات من التخزين الثانوي في الذاكرة حتى تتمكن وحدة المعالجة المركزيةCPU من الوصول إليها بسرعة.
+There is a difference between memory (or short-term storage) and long-term storage. Long-term storage, like a hard-drive or cloud, is referred to as secondary storage. *Secondary storage* holds high volumes of data for long periods of time, even after a computer is shut down. The CPU does not interact directly with secondary storage. When the CPU carries a process out, data from secondary storage must first be put into memory so that the CPU can access it quickly.
 
-في بعض الأحيان ، تأتي البيانات الموجودة في الذاكرة لاستخدام وحدة المعالجة المركزيةCPU من جهاز إدخال بدلاً من التخزين الثانوي. * المدخلات * هي الإشارات أو البيانات التي يتلقاها الكمبيوتر ، مثل الصوت من الميكروفون. وبالمثل ، فإن مخرجات * * هي الإشارات أو البيانات المرسلة منه ، مثل الصوت عبر مكبر الصوت. الإدخال / الإخراج ، أو I / O ، هو كيفية تواصل الحاسوب مع العالم الخارجي ، بما في ذلك البشر!
+Sometimes the data in memory for the CPU to use comes from an input device instead of secondary storage. *Inputs* are the signals or data received by the computer, like audio from a microphone. Likewise, *outputs* are the signals or data sent from it, like audio through a speaker. Input/output, or I/O, is how the computer communicates with the outside world, including humans!
 
-دعونا 'نفحص تسجيل الصوت في EarSketch كمثال للعملية. أولاً ، نقوم بتسجيل البيانات في الحاسوب باستخدام جهاز الإدخال ، الميكروفون. تقوم وحدة المعالجة المركزيةCPU بتخزين تلك البيانات الصوتية في ذاكرتها. إذا قمت بالضغط على زر التشغيل لسماع التسجيل الخاص بك ، فإن وحدة المعالجة المركزيةCPU تصل إلى البيانات وترسلها إلى أحد المخرجات أو مكبرات الصوت أو سماعات الرأس. عندما تضغط على زر التحميل ، تقوم وحدة المعالجة المركزيةCPU بتشغيل عملية تقوم بتحويل البيانات الصوتية إلى تنسيق ملف صوتي قياسي (ملف WAV أو .wav) وترسله إلى خادم EarSketch. الخادم (The server) هو نظام خارجي يوفر خدمات لجميع مستخدمي EarSketch ، بما في ذلك جهاز الكمبيوتر الخاص بك. يحفظ خادم EarSketch ملف الصوت من الذاكرة إلى التخزين الثانوي للخوادم 'بحيث يمكنك الوصول إليه في المستقبل.
+Let's examine recording a sound into EarSketch as an example process. First, we record data into the computer with the input device, the microphone. The CPU stores that audio data in its memory. If you press the play button to hear your recording, the CPU accesses the data and sends it to an output, the speakers or headphones. When you press the upload button, the CPU runs a process that converts the audio data into a standard sound file format (a WAV file, or .wav) and sends it to the EarSketch server. The server is an external system that provides services to all EarSketch users, including your own computer. The EarSketch server saves the sound file from memory to the server's secondary storage so that you can access it in the future.
 
-شاهد الشرح بالفيديو التالي:
+Check out the following supplementary video:
 
 [role="curriculum-mp4"]
 [[video11cpu]]
@@ -179,124 +172,119 @@ END OF OPTIONAL
 ////
 
 [[copyright]]
-=== استخدم حقوق النشر بحكمة
+=== Use Copyright Wisely
 
-* حقوق الطبع والنشر * هي جزء من القانون يغطي * الملكية الفكرية * ، أو ملكية العمل الإبداعي ، مثل الموسيقى. عند استخدام عينات (مقطوعات صغيرة من الموسيقى) أو إعادة مزج الموسيقى الموجودة ، فأنت بحاجة إلى منح الفضل للمؤلفين ، ويمكنك القيام بذلك في تعليقات التعليمات البرمجية الخاصة بك. قبل استخدام أصوات الموسيقيين الآخرين ومشاركة الموسيقى الخاصة بك ، تعرف على المزيد حول حقوق النشر!
+*Copyright* is the part of law that covers *intellectual property*, or ownership of creative work, like music. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
 
-* حقوق الطبع والنشر * هي جزء من القانون يغطي * الملكية الفكرية * ، أو ملكية العمل الإبداعي ، مثل الموسيقى. 
+When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
 
-عندما تنشئ شيئًا أصليًا وكبيرًا بدرجة كافية ، تحصل على حقوق الطبع والنشر تلقائيًا! في الولايات المتحدة ، هذا يعني أنه يمكنك: عمل نسخ وإجراء تعديلات ومشاركة ما تقوم بإنشائه.
+There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
 
-هناك نوعان من حقوق الطبع والنشر للأغنية: حقوق الأغنية (للكاتب أو الملحن) وحقوق التسجيل الصوتي (غالبًا بواسطة شركة التسجيل). تذهب عائدات العروض العامة إلى كاتب الأغاني وتذهب معظم الارباح من مبيعات التسجيلات إلى شركة التسجيلات. 
+*Copyright infringement* is a violation of copyright, like illegally downloading music. In the United States, *fair use* allows for use of copyrighted content under certain conditions, like educational or critical purposes, reusing only small amounts of the work. Fair use disputes are determined by a judge on a case-by-case basis.
 
-يعد * انتهاك حقوق الطبع والنشر * انتهاكًا لحقوق الطبع والنشر ، مثل تنزيل الموسيقى بشكل غير قانوني. في الولايات المتحدة ، يسمح * الاستخدام العادل * باستخدام المحتوى المحمي بحقوق الطبع والنشر في ظل ظروف معينة ، مثل الأغراض التعليمية أو الحرجة ، وإعادة استخدام كميات صغيرة فقط من العمل. يتم تحديد الاستخدام العادل لكل حالة من قبل الحكم على أساس كل حالة على حدة.
+Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
 
-إلى جانب الاستخدام العادل ، هناك طريقة لاستخدام الموسيقى ومشاركتها بشكل مفتوح. يجب أن تساعدنا حقوق الطبع والنشر في صنع ومشاركة المزيد من الفن ، وليس أقل. يعمل EarSketch لأن الفنانين شاركوا أعمالهم معك من خلال * امثلة لعينات * (جزء صغير من التسجيل الصوتي) في مكتبة الأصوات. شارك هؤلاء الفنانون عيناتهم بموجب ترخيص * المشاع الإبداعي * ، والذي يمنح الإذن للآخرين لاستخدام أعمالهم. في EarSketch ، لديك إذن وصول مفتوح إلى هذه العينات ، وكل الموسيقى التي تنشئها في EarSketch قابلة للمشاركة ، على الرغم من أنه لا يمكنك بيعها. تعد مشاركة الموسيقى الخاصة بك أو السماح للطلاب الآخرين بإعادة مزج التعليمات البرمجية الخاصة بك طريقة لدفع هذا الأمر إلى الأمام والمساعدة في وضع فن جديد في العالم.
+Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Copyright should help us make and share more art, not less. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
 
-تتيح تراخيص المشاع الإبداعي <strong> (أو CC) للمبدعين تحديد الحقوق التي يحتفظون بها والحقوق التي يتنازلون عنها. فيما يلي الأجزاء الممكنة من رخصة المشاع الإبداعي: ​​"يمكنك استخدام هذا العمل كيفما تشاء ، باستثناء ​...
+When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
 
-* ​...عليك أن تضع اسمي عليها " - Attribution (BY) - بدون مشتقات (ND)
-* ...&8203لا يمكنك تغييره على الإطلاق." - No Derivatives (ND)
-- بدون مشتقات (ND)
-* ​...لا يمكنك كسب المال منه " Non-Commercial (NC) - بدون مشتقات (ND)
-* ​...عليك مشاركة أي شيء جديد تصنعه بموجب نفس الترخيص " - شارك على حد سواء (SA)
-
-لتحديد ترخيص المشاع الإبداعي ، كل ما عليك فعله هو اختيار نوع ووضعه في عملك. في EarSketch ، عندما تشارك نصًا ، سيُطلب منك تحديد ترخيص لأغنيتك. 
-
-
+For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
 
 [[chapter2summary]]
-=== ملخص الفصل 2
+=== Chapter 2 Summary
 
 [role="curriculum-python"]
-* * الإيقاع * هو السرعة التي يتم بها تشغيل مقطوعة موسيقية ، محددة بعدد الدقات في الدقيقة (دقة في الدقيقة). الإيقاع مرتبط بالنوع الموسيقي.
-* يتم تنظيم المقاطع الموجودة في مكتبة اصوات EarSketch في مجلدات من الأصوات ذات الصلة. لمعرفة الإيقاع الدقيق للمقطع ، مرر مؤشر الماوس فوق الاسم في متصفح الصوت.
-* التعليقات هي أسطر من التعليمات البرمجية لا يتم تنفيذها بواسطة الحاسوب. ومع ذلك ، فهي مفيدة لادخال الملاحظات داخل البرنامج النصي.
-* `من مستورد earsketch*` يضيف EarSketch API إلى مشروعك. يجب أن يتم تضمينه في الجزء العلوي من كل نص.
-* `setTempo()`يتيح لك تحديد إيقاع أغنيتك. يجب تضمينه في كل برنامج نصي من EarSketch.
-* يمكنك تحميل الأصوات الخاصة بك إلى EarSketch من خلال مكتبة الاصوات. فقط انقر فوق "إضافة صوت".
-* <strong>المعالجة/0> هي مهمة تعمل على الحاسوب. تتم المعالجة بواسطة جهاز الحاسوب' * وحدة المعالجة المركزية CPU * ، وهو المسؤول عن تنفيذ تعليمات البرنامج.
-* * الذاكرة * (المعروفة أيضًا باسم ذاكرة الوصول العشوائي أو التخزين الأساسي) تحتفظ بالبيانات وتعليمات المعالجة مؤقتًا لاستخدام وحدة المعالجة المركزية.
-* * التخزين الثانوي * يشير إلى التخزين طويل المدى للبيانات ، غالبًا بكميات كبيرة. يجب وضع البيانات من التخزين الثانوي في الذاكرة قبل أن تتمكن وحدة المعالجة المركزية CPU من الوصول إليها.
-* * حقوق الطبع والنشر * هي جزء من القانون يغطي ملكية العمل الإبداعي ، مثل الموسيقى. إنه مهم للموسيقيين لأنه يحدد كيف يمكن استخدام عمل شخص آخر 'ومشاركته.
-* إذا أنشأت عملاً موسيقيًا ملموسًا وجديدًا ، فلديك حقوق نشر تلقائية. بمعنى آخر ، لديك حقوق على العمل الذي قمت بإنشائه.
-* * ترخيص * يمنح للآخرين الإذن باستخدام مقطوعة موسيقية. في بعض الأحيان ، يتم الاحتفاظ بحقوق معينة للعمل مع تراخيص * المشاع الإبداعي *. يسمح لك EarSketch بإضافة تراخيص Creative Commons-المشاع الإبداعي إلى الموسيقى الخاصة بك عبر نافذة المشاركة.
+* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `from earsketch import *` adds the EarSketch API to your project.
+* `setTempo()` lets you specify the tempo of your song. It must be included in every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
+* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
+* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
+* *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* *Licensing* a piece of music gives others permission to use it.
 
 [role="curriculum-javascript"]
-* * الإيقاع * هو السرعة التي يتم بها تشغيل مقطوعة موسيقية ، محددة بعدد الدقات في الدقيقة (دقة في الدقيقة). الإيقاع مرتبط بالنوع الموسيقي.
-* يتم تنظيم المقاطع الموجودة في مكتبة EarSketch Sounds في مجلدات من الأصوات ذات الصلة. لمعرفة الإيقاع الدقيق للمقطع ، مرر مؤشر الماوس فوق الاسم في متصفح الصوت.
-* التعليقات هي أسطر من التعليمات البرمجية لا يتم تنفيذها بواسطة الحاسوب. ومع ذلك ، فهي مفيدة لتدوين الملاحظات داخل البرنامج النصي.
-* `setTempo();`يتيح لك تحديد إيقاع أغنيتك. يجب تضمينه في كل برنامج نصي من EarSketch.
-* يمكنك تحميل الأصوات الخاصة بك إلى EarSketch من خلال متصفح الصوت. فقط انقر فوق "إضافة صوت".
-* *عملية  * هي مهمة تعمل على الكمبيوتر. تتم المعالجة بواسطة وحدة المعالجة المركزية CPU ، وهي المسؤولة عن تنفيذ تعليمات البرنامج.
-* * الذاكرة * (المعروفة أيضًا باسم ذاكرة الوصول العشوائي أو التخزين الأساسي RAM) تحتفظ بالبيانات وتعليمات المعالجة مؤقتًا لاستخدام وحدة المعالجة المركزية.
-* * التخزين الثانوي * يشير إلى التخزين طويل المدى للبيانات ، غالبًا بكميات كبيرة. يجب وضع البيانات من التخزين الثانوي في الذاكرة قبل أن تتمكن وحدة المعالجة المركزية من الوصول إليها.
-* * حقوق الطبع والنشر * هي جزء من القانون يغطي ملكية العمل الإبداعي ، مثل الموسيقى. إنه مهم للموسيقيين لأنه يحدد كيف يمكن استخدام ومشاركة عمل الأشخاص الآخرين.
-* إذا أنشأت عملاً موسيقيًا ملموسًا وجديدًا ، فلديك حقوق نشر تلقائية. بمعنى آخر، لديك حقوق على العمل الذي قمت بإنشائه.
-* *الترخيص* قطعة من الموسيقى تعطي الآخرين الإذن لاستخدامها. في بعض الأحيان ، يتم الاحتفاظ بحقوق معينة للعمل مع تراخيص  *Creative Commons*. يسمح لك EarSketch بإضافة تراخيص اCreative Commons إلى الموسيقى الخاصة بك عبر نافذة المشاركة.
-
-
-
+* *Tempo* is the speed at which a piece of music is played, specified in beats per minute (bpm). Tempo is tied to genre.
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `setTempo();` lets you specify the tempo of your song. It must be included in every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
+* A *process* is a program running on a computer. Processing is carried out by a computer's *CPU*, which is responsible for executing program instructions.
+* *Memory* (a.k.a RAM or primary storage) holds data and processing instructions temporarily for the CPU to use.
+* *Secondary storage* refers to long term storage of data, often in high volumes. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. It is important to musicians because it defines how another person's work can be used and shared.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* *Licensing* a piece of music gives others permission to use it.
 
 [[chapter-questions]]
-=== الأسئلة
+=== Questions
 
 [question]
 --
-ماذا تسمح لك `()setTempo` بفعله في EarSketch؟
-[answers]
-* غيّر وتيرة الأغنية
-* أضف صوت إلى المسار
-* اصنع قرع طبلة
-* غيّر نوعية الصوت داخل المشروع
---
+What does `setTempo()` allow you to do in EarSketch?
 
-[question]
---
-ما هي الوحدة للتمبو؟
 [answers]
-* بيتات لكل دقيقة (BPM)
-* قياس
-* ديسيبلس(دبي)
-* ثوانٍ
+* Specify the tempo of a song
+* Add a sound to a track
+* Create a drum beat
+* Change the qualities of sound within a project
 --
 
 [question]
 --
-ما الهدف من استخدام الملاحظات؟
+What is the unit for tempo?
+
 [answers]
-* كل ما ورد اعلاه
-* تنظيم التعليمات البرمجية/الكود الخاصة بك
-* كتابة وصف للسكريبت في بداية السكريبت الخاص بك
-* جعل التعليمات البرمجية (الكود) الخاصة بك سهلة القراءة للمبرمجين الآخرين
+* Beats Per Minute (BPM)
+* Measures
+* Decibels(dB)
+* Seconds
 --
 
 [question]
 --
-أي من التصريحات التالية صحيحة؟
+What can you use comments for?
+
 [answers]
-* القرص الصلب هو مثال للتخزين الثانوي
-* يتم حفظ بيانات الصوت في وحدة المعالجة المركزية للكمبيوتر
-* تحتوي وحدة المعالجة المركزية على بيانات تعليمية للبرامج
-* بيانات المخازن الثانوية لفترات قصيرة
+* All of the above
+* Organizing your code
+* Writing a description of your script at the beginning of your script
+* Making your code easy to read for other programmers
 --
 
 [question]
 --
-كيف تحصل على حقوق التأليف والنشر؟
+Which of the following statements is true?
+
 [answers]
-* عن طريق إنشاء ونشر أي عمل جديد
-* عن طريق شراء براءة اختراع
-* بالانضمام إلى منظمة سرية
-* عن طريق اختيار ترخيص لعملك
+* A hard drive is an example of secondary storage
+* Audio data is saved to a computer’s CPU
+* The CPU holds instructional data for programs
+* Secondary storage stores data for short periods of time
 --
 
 [question]
 --
-ما هو المشاع الإبداعي (Creative Commons)؟
+How do you get a copyright?
+
 [answers]
-* رخصة لمشاركة عملك علناً بموجب قيود معينة
-* عملية التأليف
-* الحق في مقاضاة أي شخص يستخدم موسيقاك
-* رخصة تسمح لك بجمع الإتاوات
+* By creating and publishing any new work
+* By buying a patent
+* By joining a secret organization
+* By choosing a license for your work
+--
+
+[question]
+--
+What is a music license?
+
+[answers]
+* A license gives others permission to use a musical work
+* A composing process
+* A musical genre
+* A description of your song
 --
