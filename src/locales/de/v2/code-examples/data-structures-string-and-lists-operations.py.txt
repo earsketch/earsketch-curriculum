@@ -1,0 +1,35 @@
+# String- und Listen-Operationen: Zeigt, was wir mit Listen und Strings tun können
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Meine Beat-Strings und Arrays erstellen
+stringA = "0+++----0+++--0+"
+stringB = "0-0-0-0-----0-0-"
+soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
+soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
+
+# Das zweite Zeichen jedes Strings ausgeben
+print(stringA[1])
+print(stringB[1])
+
+# Das letzte Element der Listen ausgeben.
+print(soundsA[len(soundsA) - 1])
+print(soundsB[len(soundsB) - 1])
+
+# StringC, die Verkettung von StringA und StringB, erstellen und ausgeben.
+stringC = stringA + stringB
+print(stringC)
+
+# soundsC, die Verkettung von soundsA und soundsB, nochmal erstellen und ausgeben.
+soundsC = soundsA + soundsB + soundsA
+print(soundsC)
+
+// StringD, das Stück von StringC vom zweiten bis zum einschließlich fünften Zeichen, erstellen und ausgeben.
+stringD = stringC[1:5]
+print(stringD)
+
+// soundsD, das Stück von soundsC vom dritten bis zum einschließlich letzten Zeichen, erstellen und ausgeben.
+soundsD = soundsC[2 : len(soundsC)]
+print(soundsD)
