@@ -1,0 +1,6 @@
+[[reference]]
+== Effekte, Fehler und EarSketch-Funktionen
+
+:nofooter:
+
+In dieser Einheit findest du Hinweise auf alle Effekte, Fehler und EarSketch-API-Funktionen.
