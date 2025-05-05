@@ -1,0 +1,24 @@
+# Return Statements: Linking two beats together with return statements
+
+# Sozlash
+from earsketch import *
+setTempo(100)
+
+rhythm1 = "0+++0+0+0+--0+00"
+rhythm2 = "0+0-00++0-000+++"
+
+# Music
+def createBeat(startMeasure, sound, beatString):
+    endMeasure = startMeasure + 3
+    for measure in range(startMeasure, endMeasure):
+        makeBeat(sound, 1, measure, beatString)
+
+    # Return ending measure so we can use it outside function
+    return endMeasure
+
+# Function calls
+# Assigning the value we return to a variable
+newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
+
+# Passing the returned value into another function
+createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
