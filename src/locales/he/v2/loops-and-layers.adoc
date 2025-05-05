@@ -1,16 +1,16 @@
 [[loopandlayers]]
-== לולאות ושכבות!
+== לולאות ושכבות
+
 :nofooter:
 
-בפרק זה נלמד על לולאות `for`, ואיך ליצור חזרות בקוד ובמוסיקה. כמו כן, נדבר על שכבות ומרקמים, ונראה מספר טיפים לתיקון שגיאות (debugging).
-
+In this chapter you will learn about `for` loops and how you can create repetition in your code and music. כמו כן, נדבר על שכבות ומרקמים, ונראה מספר טיפים לתיקון שגיאות (debugging).
 
 [[forloops]]
-=== לולאות`for`
+=== `for` loops
 
-בדיוק כמו שמוסיקאי/ת יכול/ה לנגן תבנית מוסיקלית, שוב ושוב, *בלופ*, אפשר לבקש מהמחשב להשלים משימות, שוב ושוב, *בלופ*! זה יותר יעיל: במקום לכתוב הוראה הרבה פעמים, נכתוב לולאה (loop) עם ההוראות, והמחשב ידע לחזור עליהן.
+Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
 
-לדוגמה, אם נרצה לחזור על `()makeBeat` שיצרנו, במקום לכתוב מספר שורות של פונקציות `()makeBeat`, אפשר ליצור לולאת `for`. זה נעשה כך:
+For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop.
 
 ////
 add new video
@@ -18,113 +18,117 @@ more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPu
 in the "revamping videos" tab (includes link to script)
 ////
 
-הנה הקוד הסופי מהווידאו:
-
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.py.txt[]
+include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/loops-and-layers-looping-my-beats.js.txt[]
+include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
-
-
-כדי להבין יותר טוב מה קורה בקוד, אפשר להשתמש בהוראה `print`. היא מאפשרת להציג מידע בקונסול (console), כשהקוד רץ.
 
 [role="curriculum-python"]
-`print`  *מחשבת* ביטוי: היא מפשטת אותו לצורתו הבסיסית, בהתאם לטיפוס הנתונים שלו, ומציגה אותו בקונסול. שימו לב לכך, שבפייתון, `print` שונה מפונקציות אחרות מפני שלא תמיד נצטרך לשים סוגריים אחרי שם הפונקציה.
+`for` loops in Python consist of 3 basic parts:
 
 [role="curriculum-javascript"]
-הפונקציה `()println` *מחשבת* ביטוי: היא מפשטת אותו לצורתו הבסיסית, בהתאם לטיפוס הנתונים שלו, ומציגה אותו בקונסול.
-
-[role="curriculum-python"]
-.תרגלו
-****
-לפני שתריצו את הקוד, הסיקו מה יוצג בקונסול אחרי כל שורת`print`.
-****
-
-[role="curriculum-javascript"]
-.תרגלו
-****
-לפני שתריצו את הקוד, הסיקו מה יוצג בקונסול אחרי כל שורת`()println`.
-****
-
-[role="curriculum-python"]
-[source,python]
-----
-include::../../en/v2/code-examples/loops-and-layers-printing.py.txt[]
-----
-
-[role="curriculum-javascript"]
-[source,javascript]
-----
-include::../../en/v2/code-examples/loops-and-layers-printing.js.txt[]
-----
-
-הסבר למה שיוצג בקונסול:
-----
-4 (התוצאה של 1+3)
-1 (בהתחלה ערכו של מונה התיבות measure הוא 1)
-"ok"
-2 (כעת ערכו של מונה התיבות measure הוא 2)
-"ok" (בכל מעבר על הלולאה (איטרציה) יודפס ok)
-3
-"ok"
-4
-"ok"
-----
-הריצה מסתיימת כאן כי ערכו של מונה התיבות measure חייב להיות קטן מחמש.
-
-.תרגלו
-****
-. צרו לולאת`for`עם המונה "measure" כדי להציב מחרוזת תיפוף בערוץ הראשון, בעזרת הפונקציה`()makeBeat`מתיבה אחת עד תיבה ארבע, כמו בווידאו
-. שנו את הקוד, כך שההצבה תהיה מתיבה שלוש עד תיבה שבע
-. שנו את הקוד כך שהביט יותר בערוץ השני ולא בערוץ הראשון. הוא עדיין יוצב מהתיבה השלישית עד השביעית
-. כעת, שנו את שם המונה, בחרו ערוץ, תיבת התחלה ותיבת סיום וצרו לולאת`for`בהתאם
-. הראו לחבר/ה את לולאת ה-`for`האחרונה, ובקשו ממנו/ה לומר באיזה ערוץ הביט, באיזו תיבה הוא מתחיל, באיזו תיבה הוא נגמר ומה שם המונה.
-****
-
-אפשר לכתוב יותר מהוראה אחת בתוך לולאת `for`.
-
-[role="curriculum-python"]
-לולאות`for` בפייתון מורכבות משלושה חלקים בסיסיים:
-
-[role="curriculum-javascript"]
-לולאות`for` ב-JavaScript מורכבות מארבעה חלקים בסיסיים:
+`for` loops in JavaScript consist of 4 basic parts:
 
 [[loop-components-PY]]
 .המרכיבים הבסיסיים של לולאת for
 [role="curriculum-python"]
-[caption="Figure 12.2: "]
+[caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 
 [[loop-components-JS]]
 .המרכיבים הבסיסיים של לולאת for
 [role="curriculum-javascript"]
-[caption="Figure 12.2: "]
+[caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
-* *גוף הלולאה*: מכיל את ההוראות שיתבצעו שוב ושוב. הגוף כולל כל מה *שמוזח* (בעזרת מקש _tab_) בשורות שמיד אחרי הנקודותיים`:`.
-* *מונה הלולאה*: יוצר משתנה שישמש כמונה הלולאה.
-* *טווח או Range*: פונקציה שיוצרת סדרה של מספרים. מונה הלולאה יקבל מספרים אחד אחרי השני. בכל איטרציה (ביצוע של גוף הלולאה) הוא יקבל מספר אחר מהסדרה. מילת המפתח `in` בודקת אם ערך מונה הלולאה הוא בטווח שצוין. לפונקציה`()range` שני פרמטרים, ערך ההתחלה (כולל) וערך הסיום (לא כולל): `range(startingNumber, endingNumber)`.
+* *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
+* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` connects the loop counter to the range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
-* *גוף הלולאה*: גוף הלולאה כולל הוראות שיתבצעו שוב ושוב. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key).
-* *אתחול*: יצירת משתנה שישמש *מונה לולאה*. האתחול נעשה לפני האיטרציה (ריצה של גוף הלולאה) הראשונה.
-* *הוראת איטרציה*: הוראה שמעדכנת את מונה הלולאה. המונה גדל בכל איטרציה.
-* *תנאי הלולאה*: בודק האם יש לבצע את הלולאה פעם נוספת. אם התנאי מתקיים, גוף הלולאה יבוצע. אם המונה גדול מדי, תנאי הלולאה לא יתקיים, והלולאה תסתיים. המחשב ימשיך לבצע את ההוראה הבאה אחרי הלולאה.
+* *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
+* *Loop Condition*: This checks whether the loop should run again. אם התנאי מתקיים, גוף הלולאה יבוצע. אם המונה גדול מדי, תנאי הלולאה לא יתקיים, והלולאה תסתיים. המחשב ימשיך לבצע את ההוראה הבאה אחרי הלולאה.
+* *Iteration Statement*: A statement that updates the loop counter. It counts up each time the loop repeats.
+* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
 
-אפשר לכתוב יותר מהוראה אחת בתוך לולאת `for`.
+.תרגלו
+****
+. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
+. Modify your code to go from measures `3` to `7`
+. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
+. Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
+. Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
+****
+
+{nbsp} +
+
+[[printstatements]]
+=== Print statements
+
+To better understand the flow of your code, you can use `print()`. היא מאפשרת להציג מידע בקונסול (console), כשהקוד רץ.
+
+[role="curriculum-python"]
+When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
+
+[role="curriculum-javascript"]
+When use provide data to `println()`, it is *evaluated*, or simplified it to its basic form.
+
+Then the data is converted into text and shown in the console.
+
+[role="curriculum-python"]
+.תרגלו
+****
+Before running the following code, try to guess what the console will display for each `print()` call.
+****
+
+[role="curriculum-javascript"]
+.תרגלו
+****
+Before running the following code, try to guess what the console will display for each `println()` call.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-printing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-printing.js.txt[]
+----
+
+הסבר למה שיוצג בקונסול:
+
+----
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
+ok
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
+3
+ok
+4
+ok
+----
+
+הריצה מסתיימת כאן כי ערכו של מונה התיבות measure חייב להיות קטן מחמש.
 
 [[controlflow]]
 === בקרת זרימה
 
-הנה דוגמה נוספת לשימוש בלולאות`for`:
+Here is another example of how you can use `for` loops:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12bpy]]
@@ -134,49 +138,49 @@ video::./videoMedia/012-03-ExampleLoop-PY.mp4[]
 [[video12bjs]]
 video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
 
-אפשר ליצור חזרות במוסיקה על-ידי הקלדה חוזרת של `()fitMedia` עם מספרי תיבה שונים:
+We can create repetition in our music by typing `fitMedia()` again and again, with different measure numbers:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/loops-and-layers-no-loops.py.txt[]
+include::code-examples/loops-and-layers-no-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/loops-and-layers-no-loops.js.txt[]
+include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-אפשר להשתמש בלולאת`for`כדי ליצור את אותה המוסיקה בצורה יותר יעילה. מונה הלולאה הוא "measure". שימו לב לכך שגוף הלולאה כולל שתי שורות. בשתי השורות מופיע המשתנה "measure".
+We can use a `for` loop to create the exact same music with less code. Our counter here is `measure`. Note that the body of the loop contains two lines of code, both of which use the counter `measure`.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/loops-and-layers-loops.py.txt[]
+include::code-examples/loops-and-layers-loops.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/loops-and-layers-loops.js.txt[]
+include::code-examples/loops-and-layers-loops.js.txt[]
 ----
 
-*המתרגם (interpreter)*, קורא ומבצע את הסקריפט. הסדר בו המתרגם מבצע את ההוראות נקרא *בקרת זרימה - control flow*. בדרך כלל המתרגם עובר שורה שורה, מלמעלה למטה. לכן צריך להגדיר משתנים לפני שמשתמשים בהם בקוד. 
+The *interpreter* reads and executes a script. The order it is executed in is called the *control flow*. בדרך כלל המתרגם עובר שורה שורה, מלמעלה למטה. לכן צריך להגדיר משתנים לפני שמשתמשים בהם בקוד.
 
-לולאה היא *הוראת בקרת זרימה*, והיא משנה סדר זה. בסוף גוף הלולאה, המתרגם קופץ חזרה לתחילת הלולאה.
+A loop is a *control flow statement*, which changes the order. בסוף גוף הלולאה, המתרגם קופץ חזרה לתחילת הלולאה.
 
-האנימציה הבאה מראה כיצד בקרת הזרימה נעה בלולאת`for`, ואיך ערך מונה הלולאה משתנה בכל *איטרציה*, או חזרה על גוף הלולאה:
+This animation shows how the control flow moves in a `for` loop, and how the value of the loop counter changes on each *iteration*, or repetition of the loop body:
 
 [[loop-py]]
 .לולאת for, צעד אחרי צעד
 [role="curriculum-python"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 image::../media/U1P2/LoopPy_updated.gif[Alt Text]
 
 .לולאת for, צעד אחרי צעד
 [role="curriculum-javascript"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 [[loop-js]]
 image::../media/U1P2/LoopJS_updated.gif[Alt Text]
 
@@ -186,59 +190,72 @@ Although it is valid syntax, a `*monospace bold phrase*` causes a build error in
 BMW
 ////
 
-דבר מעניין, אחרון, על לולאות`for`הוא אינקרמנטציה.
+One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-אינקרמנטציה, פירושה הגדלה. הגדלת הערך של מונה הלולאה. בלולאת `for` השתמשנו בפונקציה `()range`כדי להגדיל את ערכו של המונה. לפונקציה יש שני פרמטרים: `startingNumber`ו- `endingNumber` (הטווח לא כולל ערך זה). יש פרמטר, אופציונלי, שלישי: `increment`. ערך ברירת המחדל של `increment`הוא אחד, אבל ניתן לתת לו ערכים גדולים יותר.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen two parameters for range: `startingNumber` and `endingNumber`. There is an optional third parameter: `increment`. By default, `increment` is equal to one, but you can use it to increment by more than one. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
 
 [role="curriculum-javascript"]
-איקרמנטציה, פירושה הגדלה. הגדלת הערך של מונה הלולאה. בלולאת `for` השתמשנו ב:`measure = measure + 1`. זה הגדיל את המונה`measure` ב-1 בכל איטרציה (ריצה של גוף הלולאה). אפשר להגדיל את ערך המונה ביותר מאחד. לדוגמה:`measure = measure + 4`.
+Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by `1` for on each repeat. It's possible to increment it by more than one, like `measure = measure + 4`.
 
 .תרגלו
-*****
+****
 לפני שתריצו את הקוד, נסו להסיק מה הוא עושה.
-*****
+****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/loops-and-layers-incrementing.py.txt[]
+include::code-examples/loops-and-layers-incrementing.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/loops-and-layers-incrementing.js.txt[]
+include::code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
+[role="curriculum-python"]
+Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. משמעות הפעולה היא ש-measure שווה עכשיו לערכו הקודם ועוד אחד. You can use the shorthand `+=` to increment or `-=` to decrement. Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
 
 [role="curriculum-python"]
-כאן השתמשנו בפונקציה`()range`, אבל אפשר להגדיל או להקטין את הערך של המשתנה בעזרת: `measure = measure + 1`. משמעות הפעולה היא ש-measure שווה עכשיו לערכו הקודם ועוד אחד. אפשר לכתוב בקיצור `=+` (או `=-` כדי להקטין את הערך). נעשה זאת כך: ל-`measure += 1` אותה משמעות כמו ל- `measure = measure + 1`. ול-`measure -=1`אותה משמעות כמו ל-`measure = measure - 1`
+* `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
+* `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
 
 [role="curriculum-javascript"]
-כאן כתבנו`measure = measure + 4`, שמשמעותו ש-measure שווה עכשיו לערכו הקודם ועוד ארבע. אפשר להשתמש בקיצורים הבאים:
- `=+` (או`=-` להקטנת הערך). הביטויים הבאים הם דרך קצרה להגדיל או להקטין את ערכו של המונה:
+Here we wrote `measure = measure + 4`, which means measure is now equal to its former value plus four. You can use some shorthands:
+ `+=` (or `-=` to decrement). הביטויים הבאים הם דרך קצרה להגדיל או להקטין את ערכו של המונה:
 
-* `++measure`, או `measure += 1`יגדילו את ערכו של measure באחת. אם נרצה להגדיל את ערכו של measure בשתיים, נכתוב `measure += 2`.
-* `--measure`, או`measure -= 1` מקטינים את ערכו של measure באחת. אם נרצה להקטין את ערכו של המונה בשתיים, נכתוב use `measure -= 2`.
-
+[role="curriculum-javascript"]
+* `measure++`, or `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
+* `measure--`, or `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
 
 [[debuggingtips]]
 === טיפים לתיקון שגיאות (debugging)
 
-תכנות הוא לא רק כתיבת קוד. תכנות הוא גם תיקון שגיאות ותחזוקת הקוד. Debugging פירושו תיקון השגיאות בקוד. כשתתקלו בשגיאה, נסו את הצעדים הבאים:
+תכנות הוא לא רק כתיבת קוד. It's also debugging and maintaining it. Debugging means finding and solving bugs. Bugs are another term for errors in your code. כשתתקלו בשגיאה, נסו את הצעדים הבאים:
 
 [role="curriculum-python"]
-. *קריאת ההודעות בקונסול*.
-. *מציאת מקום השגיאה בקוד:* ישנן שלוש אפשרויות. 1. אם ההודעה בקונסול מציינת מספר שורה, יש לבדוק את השורה הזו ואת השורה שלפניה בקוד. 2. שימוש בהפיכת שורות להערות. אפשר לדייק את מיקום ואופי השגיאה על-ידי הפיכת בלוק של קוד להערה, והרצת הקוד. אם ההרצה, כעת, נקייה משגיאות, אז השגיאה היא בחלק שהפך להערה. 3. *תיקון שגיאות בעזרת print* יכול, גם הוא, לעזור במציאת מקום השגיאה. יש לקרוא את קטע הקוד בו נמצאת השגיאה ולעקוב אחרי אופן פעולתו. בעזרת `print` ניתן להדפיס ערכים של משתנים (או הודעות), כשאופן פעולת הקוד לא ברורה. ההדפסות מאפשרות להשוות השערות בדבר ערכי משתנים ואופן הפעולה, למה שהקוד מבצע בפועל. 
-. *תיקון השגיאה* בדיקת השגיאות, עריכת הקוד בהתאם והרצה חוזרת של הקוד כדי לוודא את נכונותו.
-. *בקשת עזרה*: אם אחרי השקעת זמן רב השגיאה לא תוקנה, כדאי לבקש עזרה מחבר/ה. זוג עיניים רענן יכול לחולל פלאים! 
+. *Read the console for clues*.
+. *Locate the error in your code:* You have three options here.
+[role="curriculum-python"]
+.. אם ההודעה בקונסול מציינת מספר שורה, יש לבדוק את השורה הזו ואת השורה שלפניה בקוד.
+.. שימוש בהפיכת שורות להערות. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. אם ההרצה, כעת, נקייה משגיאות, אז השגיאה היא בחלק שהפך להערה.
+.. *Print debugging* can also be used to locate an error. יש לקרוא את קטע הקוד בו נמצאת השגיאה ולעקוב אחרי אופן פעולתו. Insert `print()` calls where you are unsure of the logic, getting the value of variables and checking program state. ההדפסות מאפשרות להשוות השערות בדבר ערכי משתנים ואופן הפעולה, למה שהקוד מבצע בפועל.
+. *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
+. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! זוג עיניים רענן יכול לחולל פלאים!
 
 [role="curriculum-javascript"]
-. *קריאת ההודעות בקונסול*.
-. *מציאת מקום השגיאה בקוד:* ישנן שלוש אפשרויות. 1. אם ההודעה בקונסול מציינת מספר שורה, יש לבדוק את השורה הזו ואת השורה שלפניה בקוד. 2. שימוש בהפיכת שורות להערות. אפשר לדייק את מיקום ואופי השגיאה על-ידי הפיכת בלוק של קוד להערה, והרצת הקוד. אם ההרצה, כעת, נקייה משגיאות, אז השגיאה היא בחלק שהפך להערה. 3. *תיקון שגיאות בעזרת print* יכול, גם הוא, לעזור במציאת מקום השגיאה. יש לקרוא את קטע הקוד בו נמצאת השגיאה ולעקוב אחרי אופן פעולתו. בעזרת `()println` ניתן להדפיס ערכים של משתנים (או הודעות), כשאופן פעולת הקוד לא ברורה. ההדפסות מאפשרות להשוות השערות בדבר ערכי משתנים ואופן הפעולה, למה שהקוד מבצע בפועל. 
-. *תיקון השגיאה* בדיקת השגיאות, עריכת הקוד בהתאם והרצה חוזרת של הקוד כדי לוודא את נכונותו.
-. *בקשת עזרה*: אם אחרי השקעת זמן רב השגיאה לא תוקנה, כדאי לבקש עזרה מחבר/ה. זוג עיניים רענן יכול לחולל פלאים! 
+. *Read the console for clues*.
+. *Locate the error in your code:* You have three options here.
+[role="curriculum-javascript"]
+.. אם ההודעה בקונסול מציינת מספר שורה, יש לבדוק את השורה הזו ואת השורה שלפניה בקוד.
+.. שימוש בהפיכת שורות להערות. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. אם ההרצה, כעת, נקייה משגיאות, אז השגיאה היא בחלק שהפך להערה.
+.. *Print debugging* can also be used to locate an error. יש לקרוא את קטע הקוד בו נמצאת השגיאה ולעקוב אחרי אופן פעולתו. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. ההדפסות מאפשרות להשוות השערות בדבר ערכי משתנים ואופן הפעולה, למה שהקוד מבצע בפועל.
+. *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
+. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! זוג עיניים רענן יכול לחולל פלאים!
 
 קטע הווידאו מדגים, שלב אחרי שלב, תיקון שגיאות בעזרת הדפסת ערכי משתנים:
 
@@ -250,103 +267,101 @@ video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
 [[video15js]]
 video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
 
-הצגנו רשימת שגיאות אפשריות בפרק הראשון. להלן רשימה של שגיאות אפשריות נוספות:
+You've seen a list of potential errors in Chapter 1. להלן רשימה של שגיאות אפשריות נוספות:
 
 [role="curriculum-python"]
-. *אתחול משתנים*: יש לאתחל משתנים לפני השימוש בהם בסקריפט. פירוש הדבר, שיש להציב ערך במשתנים בתחילת הסקריפט.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. הערות בפייתון חייבות להתחיל בסימן `#`.
-. *הזחה (אינדנטציה):* הזחה היא קריטית בפייתון. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror, indentation error>>.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *פרמטרים:* טעויות בפרמטרים של פונקציה יכולים לגרום לכל מיני סוגים של שגיאות. חובה לספק מספר נכון של פרמטרים מהטיפוס הדרוש.
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign a value to your variable before using it later.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python comments must start with a `#` symbol.
+. *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. חובה לספק מספר נכון של פרמטרים מהטיפוס הדרוש.
 
 [role="curriculum-javascript"]
-. *אתחול משתנים*: יש לאתחל משתנים לפני השימוש בהם בסקריפט. פירוש הדבר, שיש להציב ערך במשתנים בתחילת הסקריפט. יש לאתחל את המשתנים בעזרת `var`.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. הערות ב-JavaScript חייבות להתחיל ב-`//`.
-. *נקודה פסיק:* כל הוראה ב-JavaScript חייבת להסתיים ב-;. 
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. *פרמטרים:* טעויות בפרמטרים של פונקציה יכולים לגרום לכל מיני סוגים של שגיאות. חובה לספק מספר נכון של פרמטרים מהטיפוס הדרוש. 
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should create it with `var` before using it later.
+. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript comments must start with `//`.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Arguments:* Mistakes with function arguments can lead to all kinds of errors. חובה לספק מספר נכון של פרמטרים מהטיפוס הדרוש.
 
-
-Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
-
+Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
 
 [[musicaltips]]
 === טיפים מוסיקליים
 
-כעת, אחרי שהכרנו כלים רבים ליצירת מוסיקה, כמו הפונקציה `()fitMedia`, הפונקציה`()makeBeat`ולולאות`for`, נכיר מספר רעיונות מוסיקליים.
+Now that you have many tools to create your music, like `fitMedia()`, `makeBeat()` and `for` loops, we will look at musical ideas.
 
-נתחיל עם *הסולם (key)* של היצירה. שימו לב לכך שבעברית המילה סולם מציינת שני מונחים באנגלית scale ו-key:
+Let's start with the *key* of your song:
 
-* *גובה הצליל (pitch)* מורה כמה גבוה או נמוך נשמע הצליל. טונים מוסיקליים יחסיים מסודרים *בסולם (scale)*, או קבוצה של תווים מוסיקליים המסודרים לפי האופן בו אנו שומעים התדר של הצלילים. 
-* *הסולם (key)* של שיר קובע את הסולם (scale), או קבוצת גבהי הצלילים, מהם המוסיקה מורכבת. סולם (key) יכול להיות מז'ורי (בדרך כלל נשמע "שמח" יותר) או מינורי (בדרך כלל נשמע "עצוב" יותר). 
-* למלחינות מתחילות ולמלחינים מתחילים מומלץ להשתמש בסולם (key) אחד בשיר שלכם. שימוש בצלילים מסולמות שונים עלול לשיר להישמע "מזייף". הקליפים באותה תיקייה בספריית הצלילים של EarSketch, הם כולם באותו סולם. 
+* *Pitch* is how high or low a note sounds. We order relative musical tones on a *scale*, or set of musical notes, based on how we hear the frequency of the sound.
+* The *key* of a song indicates the scale, or group of pitches, in which the music is composed. סולם (key) יכול להיות מז'ורי (בדרך כלל נשמע "שמח" יותר) או מינורי (בדרך כלל נשמע "עצוב" יותר).
+* למלחינות מתחילות ולמלחינים מתחילים מומלץ להשתמש בסולם (key) אחד בשיר שלכם. Selecting sounds from different keys might sound... off-key! הקליפים באותה תיקייה בספריית הצלילים של EarSketch, הם כולם באותו סולם.
 
-האזינו לקליפ, ושמעו את ההבדל בין סולם מז'ורי לסולם מינורי:
+Listen to the audio clip below to hear the difference between major and minor keys (the major scale and chord is first):
 
 ++++
 <div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
 ++++
 
-כעת נדון בסוגים שונים של ערוצים שיכולים להיות בשיר. אפשר להשתמש בערוץ נפרד של ה-DAW לכל כלי בשיר. בשיר פופ, אפשר למצוא את הערוצים הבסיסיים הבאים:
+Now let's talk about the different types of tracks you can have. אפשר להשתמש בערוץ נפרד של ה-DAW לכל כלי בשיר. בשיר פופ, אפשר למצוא את הערוצים הבסיסיים הבאים:
 
-* המלודיה היא הרעיון העיקרי, שלעיתים קרובות, מנוגן או מושר בצלילים הגבוהים. המלודיה היא "התווים שהזמר/ת שר/ה".  המלודיה יכולה להיות מושרת, מנוגנת בגיטרה או מנוגנת בצלילים הגבוהים של הקלידים.
-* ההרמוניה מורכבת מצלילים ארוכים יותר "שתומכים במלודיה" כמו האקורדים בפסנתר, בגיטרה או בהרכב כלי מיתר.
-* ישנו גם הבס (base line). ערוץ הבס מורכב מהצלילים הנמוכים יותר. הוא יכול להכיל נגינה של קונטרבס, גיטרה בס, צ'לו או הצלילים הנמוכים של הקלידים.
-* ולסיום, ערוץ כלי ההקשה. אם משתמשים ב-`()makeBeat`, יכולים להיות מספר ערוצים כאלה. לדוגמה, יכול להיות ערוץ אחד לקיק (kick), ערוץ שני לסנר (snare) וערוץ שלישי להיי-האט (hi-hat).
+* *Melody* is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar, etc.
+* *Harmony* is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
+* You also have a *bass line*. ערוץ הבס מורכב מהצלילים הנמוכים יותר. It can be a bass, a cello, the lower notes of a keyboard, etc.
+* Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. לדוגמה, יכול להיות ערוץ אחד לקיק (kick), ערוץ שני לסנר (snare) וערוץ שלישי להיי-האט (hi-hat).
 
-אלה הם רעיונות בסיסיים לסוגי ערוצים, שיוצרים את המבנה של מרקם השיר. אבל לשיר יכולים להיות חלקים שמכילים שמילים רק אחד או שניים מארבעת הסוגים. אפשר להוסיף ערוצים רבים נוספים: אפשר ליצור מלודיה שנייה, להוסיף נקודת עוגב (drone באנגלית. תו ארוך מאוד ברקע), קולות מוקלטים... נסו והחליטו מה מוצא חן באוזניכן/ם!
+These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
 
-לסיום נדון ב*חזרה* וב*ניגודיות (קונטרסט)*. בני אדם אוהבים חזרות בגלל מה שהפסיכולוגים מכנים "אפקט החשיפה גרידא". כשהמוח שומע קטע מוסיקלי הוא מנסה לנחש מה יהיה התו הבא, מה שגורם למאזין/ה להרגיש שותפות בנגינה. כמו כן, בכל פעם שהקטע חוזר, המאזין/ה יכול/ה להבחין בפרטים נוספים ביצירה, כי המוח כבר לא צריך להתמקד בעיבוד החומר המלודי הגולמי.
+Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. כשהמוח שומע קטע מוסיקלי הוא מנסה לנחש מה יהיה התו הבא, מה שגורם למאזין/ה להרגיש שותפות בנגינה. כמו כן, בכל פעם שהקטע חוזר, המאזין/ה יכול/ה להבחין בפרטים נוספים ביצירה, כי המוח כבר לא צריך להתמקד בעיבוד החומר המלודי הגולמי.
 
-קונטרסט מתייחס להבדלים בין קטעים עוקבים של מוסיקה, היוצרים איזון חשוב עם החזרה. קונטרסט משמש להבאת אלמנטים חדשים לתשומת לב המאזין/ה. קונטרסט יכול להיווצר בעזרת: שינויים ריתמיים, קווים מלודיים חדשים, הרמוניות חדשות או שינויים בכלים או בצלילים. דוגמה טובה לקונטרסט נמצאת בסביבות 21'0 (השנייה ה-21) ו-01'1 (דקה ושנייה) בשיר https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] של Son Lux.
+קונטרסט מתייחס להבדלים בין קטעים עוקבים של מוסיקה, היוצרים איזון חשוב עם החזרה. קונטרסט משמש להבאת אלמנטים חדשים לתשומת לב המאזין/ה. קונטרסט יכול להיווצר בעזרת: שינויים ריתמיים, קווים מלודיים חדשים, הרמוניות חדשות או שינויים בכלים או בצלילים.
 
 .תרגלו
 ****
 צרו שיר בעזרת:
 
-* נושא (ציינו את הנושא בהערות בתחילת הקוד)
-* הפונקציות `()fitMedia` ו-`()makeBeat`
-* לולאת `for`אחת, או יותר, עם `()fitMedia` או `()makeBeat`
-* לפחות ארבעה ערוצים
-* לפחות 16 תיבות
+* נושא (ציינו את הנושא בהכרות בתחילת הקוד)
+* The `fitMedia()` and `makeBeat()` functions
+* One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
+* At least four tracks
+* At least sixteen measures
 * לפחות קליפ אחד שהועלה לספריית הצלילים
 * הערות ומשתנים לארגון הקוד
 
 זכרו שאתם יכולים לנסות דברים שונים ולשמור רק את מה שנשמע טוב ומשרת את השיר. שתפו את המוסיקה שיצרתם!
 ****
 
-
+{nbsp} +
 
 [[chapter4summary]]
 === סיכום פרק רביעי
 
 [role="curriculum-python"]
-* לולאת *for* מורה למחשב לבצע קטע קוד מספר פעמים, ויוצרת קוד יעיל יותר. לולאות`for` מורכבות מגוף הלולאה, מונה הלולאה והטווח. הקוד בגוף הלולאה חייב להיות מוזח ימינה.
-* *בקרת הזרימה* מייצגת את סדר הביצוע, על-ידי המחשב, של ההוראות בקוד.
-* הוראת`print` מחשבת את ערכו של הביטוי שמועבר כפרמטר ומדפיסה אותו בקונסול. זה כלי שימושי לתיקון שגיאות (debugging) כי הוא מאפשר ללמוד על מצב התכנית וערכי המשתנים.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, loop counter, and range. הקוד בגוף הלולאה חייב להיות מוזח ימינה.
+* The *control flow* represents the order in which statements are executed by the computer.
+* `print()` displays the data in the console. זה כלי שימושי לתיקון שגיאות (debugging) כי הוא מאפשר ללמוד על מצב התכנית וערכי המשתנים.
 * הדפסה, הפיכת שורות קוד להערות והקונסול יכולים לעזור בתיקון שגיאות. בנוסף, בקשת עזרה יכולה לזרז את תהליך תיקון השגיאות.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
-* *גובה הצליל (pitch)* קובע כמה גבוה או נמוך הצליל נשמע בסולם יחסי.
-* *הסולם (key)* קובע את *הסולם (scale)*, או קבוצת גבהי צלילים, בהם היצירה מולחנת, וגם את *צליל הטוניקה*. סולמות (keys) הם מז'וריים או מינוריים, דבר שמשרה על המאזין/ה הלכי רוח שונים.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* The *pitch* of a sound determines how high or low it sounds on a relative scale.
+* The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. סולמות (keys) הם מז'וריים או מינוריים, דבר שמשרה על המאזין/ה הלכי רוח שונים.
 * אפשר להשתמש בשלושה ערוצים כשלד של השיר: מלודיה (בצלילים גבוהים יחסית) בס (בצלילים נמוכים יחסית) וכלי הקשה.
 
 [role="curriculum-javascript"]
-* לולאת *for* מורה למחשב לבצע קטע קוד מספר פעמים, ויוצרת קוד יעיל יותר. לולאות`for` מורכבות מגוף הלולאה, אתחול, הוראת איטרציה ותנאי הלולאה. הקוד בגוף הלולאה צריך להיות מוזח ימינה.
-* *בקרת הזרימה* מייצגת את סדר הביצוע, על-ידי המחשב, של ההוראות בקוד.
-* הפונקציה`()println` מחשבת את ערכם של הביטויים שמועברים כפרמטרים ומדפיסה אותם בקונסול. זה כלי שימושי לתיקון שגיאות (debugging) כי הוא מאפשר ללמוד על מצב התכנית וערכי המשתנים.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. הקוד בגוף הלולאה צריך להיות מוזח ימינה.
+* The *control flow* represents the order in which statements are executed by the computer.
+* `println()` displays the data in the console. זה כלי שימושי לתיקון שגיאות (debugging) כי הוא מאפשר ללמוד על מצב התכנית וערכי המשתנים.
 * הדפסה, הפיכת שורות קוד להערות והקונסול יכולים לעזור בתיקון שגיאות. בנוסף, בקשת עזרה יכולה לזרז את תהליך תיקון השגיאות.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
-* *גובה הצליל (pitch)* קובע כמה גבוה או נמוך הצליל נשמע בסולם יחסי.
-* *הסולם (key)* קובע את *הסולם (scale)*, או קבוצת גבהי צלילים, בהם היצירה מולחנת, וגם את *צליל הטוניקה*. סולמות (keys) הם מז'וריים או מינוריים, דבר שמשרה על המאזין/ה הלכי רוח שונים.
-* אפשר להשתמש בשלושה ערוצים כשלד של השיר: מלודיה (בצלילים גבוהים יחסית) בס (בצלילים נמוכים יחסית) וכלי הקשה.
-
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* The *pitch* of a sound determines how high or low it sounds on a relative scale.
+* The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. סולמות (keys) הם מז'וריים או מינוריים, דבר שמשרה על המאזין/ה הלכי רוח שונים.
+* You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 [[chapter-questions]]
 === שאלות
 
 [question]
 --
-מי מהבאים אינו רכיב של לולאת`for`?
+Which of the following is NOT a component of a `for` loop?
+
 [answers]
 * מתרגם הלולאה
 * מונה הלולאה
@@ -357,6 +372,7 @@ Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained 
 [question]
 --
 מי מהמשפטים הבאים אינו מתאר שימוש מוצלח של לולאות ביצירה מוסיקלית?
+
 [answers]
 * יצירת תבנית ביטים שאינה חוזרת על עצמה
 * מיקום קליפ בכל תיבה שלישית
@@ -367,6 +383,7 @@ Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained 
 [question]
 --
 מי מהמשפטים הבאים לא מתאר טכניקה מומלצת לתיקון שגיאות?
+
 [answers]
 * העתקה והדבקה של קטעי קוד במנוע החיפוש של Google
 * הדפסת ערכי משתנים לקונסול
@@ -377,6 +394,7 @@ Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained 
 [question]
 --
 מי מהבאים לא יכול להיות מודפס בקונסול?
+
 [answers]
 * הערות בקוד
 * מחרוזות (Strings)
@@ -386,11 +404,11 @@ Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained 
 
 [question]
 --
-____ היא איכות של הצליל הקובעת האם הצליל יישמע גבוה או נמוך.
+____ is a quality of sound that determines how high or low it sounds.
+
 [answers]
 * גובה (pitch)
 * טמפו
 * מקצב
 * עוצמה
 --
-
