@@ -9,7 +9,6 @@ bateria1 = ELECTRO_DRUM_MAIN_BEAT_008
 bateria2 = ELECTRO_DRUM_MAIN_BEAT_007
 
 # Cómo usar un ciclo en vez de escribir repetidamente líneas de código parecidas
-
 for compas in range(1, 9):
     fitMedia(bateria1, 1, compas, compas + 0.5)
     fitMedia(bateria2, 1, compas + 0.5, compas + 1)
