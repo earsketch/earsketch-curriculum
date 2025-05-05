@@ -8,6 +8,6 @@ beatString = "00+-0-00+0+-0+++"
 
 for measure in range(1, 32):
     if measure % 4 = 0
-    # Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
-    beatString = shuffleString(beatString)
+        # Utilisation de la fonction API de EarSketch pour mélanger la chaîne de caractères de beat
+        beatString = shuffleString(beatString)
     makeBeat(clap, 1, measure, beatString)
