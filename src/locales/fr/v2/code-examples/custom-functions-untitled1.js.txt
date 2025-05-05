@@ -4,5 +4,4 @@ function sectionA() {
     fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // percussions
     fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // ligne de basse
     setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // augmentation du volume de la ligne de basse
-    // Cette portion de code est indentée. Lorsque vous écrivez le reste de votre script, assurez-vous d'arrêter l'indentation.
 }
