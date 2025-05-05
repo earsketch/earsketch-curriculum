@@ -9,5 +9,3 @@ fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 // Établissement d'une rampe d'effet entre les mesures 1 et 3, allant de -60 dB à 0 dB.
 # Ceci est un fondu d'ouverture
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);
-
-#Fin:
