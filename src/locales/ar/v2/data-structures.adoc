@@ -1,145 +1,153 @@
 [[getorganizedwithdatastructures]]
-== كن منظمًا باستخدام هياكل البيانات
+== Data Structures
+
 :nofooter:
 
 [role="curriculum-python"]
-لديك الآن أدوات عديدة تحت تصرفك لإنشاء أغانٍ باستخدام EarSketch. قد تصبح النصوص التي تكتبها متنوعة جدًا وطويلة. سيساعدك هذا الفصل على تنظيم المقطع البرمجي الخاص بك بشكل أكبر ، لا سيما باستخدام خاصة مميزة تسمى القوائم ، ودالة جديدة لـ ` makeBeat () `.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called lists, and a new functionality of `makeBeat()`.
 
 [role="curriculum-javascript"]
-لديك الآن أدوات عديدة تحت تصرفك لإنشاء أغانٍ باستخدام EarSketch. قد تصبح النصوص التي تكتبها متنوعة جدًا وطويلة. سيساعدك هذا الفصل على تنظيم المقطع البرمجي الخاص بك بشكل أكبر ، لا سيما باستخدام خاصة مميزة تسمى المصفوفات ، ودالة جديدة لـ ` makeBeat () `.
+You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. This chapter will help you organize your code further, in particular using a special abstraction called arrays, and a new functionality of `makeBeat()`.
 
 [[datastructures]]
-=== هياكل البيانات
+=== What is a Data Structure
 
 [role="curriculum-python"]
-إذا كانت لديك قوائم طويلة جدًا من متغيرات الصوت' ، فمن الممكن ترتيبها بكفاءة بفضل * القوائم *. قائمة * * ، تسمى أيضًا المصفوفة في بعض لغات البرمجة ، هي مجموعة من القيم ، أو * عناصر * ، بين قوسين (` [] `) ومفصولة بواسطة الفواصل. مثالا على ذلك:
+If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-javascript"]
-إذا كانت لديك قوائم طويلة جدًا من متغيرات الصوت' ، فمن الممكن ترتيبها بكفاءة بفضل * المصفوفات *. المصفوفة * * ، تسمى أيضًا قائمة في بعض لغات البرمجة ، هي مجموعة من القيم ، أو * عناصر * ، بين قوسين (` [] `) ومفصولة بواسطة الفواصل. مثالا على ذلك:
+If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-instead-of-writing-this.py.txt[]
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-instead-of-writing-this.js.txt[]
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
-إذا استبدلت المتغيرات بقائمة ، كيف ستستدعي محتوى القائمة؟ نحن نستخدم المؤشرات. يتم تعيين مؤشر لكل عنصر من عناصر القائمة ، بدءًا من ` 0 `. في المثال السابق ، `drums[0]` تستدعي `OS_KICK03`, `drums[1]` تستدعي `OS_OPENHAT01` و `drums[3]` تستدعي OS_SNARE05`.
+If you have replaced variables with a list, how will you reference the content of the list? We use indices. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
 [role="curriculum-javascript"]
-إذا استبدلت المتغيرات بمصفوفة ، كيف ستستدعي محتوى المصفوفة؟ نحن نستخدم المؤشرات. يتم تعيين مؤشر لكل عنصر من عناصر المصفوفة ، بدءًا من ` 0 `. في المثال السابق ،`drums[0]` تستدعي`OS_KICK03`, `drums[1]` تستدعي`OS_OPENHAT01`و `drums[3]` تستدعي `OS_SNARE05`.
+If you have replaced variables with an array, how will you reference the content of the array? We use indices. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
 
-.تدريب
+.PRACTICE
 ****
-قم بإنشاء مصفوفة تحتوي على 3 أسماء لمقاطع صوتية.
-ثم باستخدام 3 استدعاءات ل`fitMedia()` ، ضع المقاطع الثلاثة على المسارات 1 و 2 و 3 ؛ على قياسات من 1 إلى 5.
+Create a list/array with three sounds.
+Then using three `fitMedia()` calls, place three sounds on tracks `1`, `2` and `3` from measures `1` to `5`.
 ****
 
-مثالا على ذلك:
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-list.py.txt[]
+include::code-examples/data-structures-list.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-arrays.js.txt[]
+include::code-examples/data-structures-arrays.js.txt[]
 ----
 
-[[Graphic]]
 //.The EarSketch Share window for collaboration (Let Others Edit)
+
 //[caption="Figure 21.4.2: "]
+
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-لقد رأينا' أن ` list [index] ` ستستدعي عنصرًا من عناصر القائمة. يمكن أيضًا استخدام هذا لتعديل عنصر من القائمة. على سبيل المثال: ` myEnsemble [0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11 ` في المثال السابق سيغير العنصر الأول من القائمة إلى ` RD_ROCK_POPRHYTHM_MAINDRUMS_11 `. تشبه هذه العملية تحديث متغير ، فهي تستخدم * عامل التعيين * ` = `.
+We've seen that `list[index]` will reference an element of the list. This can also be used to modify an element of the list. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
 [role="curriculum-javascript"]
-لقد رأينا أن ` المصفوفة [المؤشر] ` ستستدعي عنصرًا من المصفوفة. يمكن أيضًا استخدام هذا لتعديل عنصر من المصفوفة. على سبيل المثال: ` myEnsemble [0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11 ` في المثال السابق سيغير العنصر الأول من المصفوفة إلى ` RD_ROCK_POPRHYTHM_MAINDRUMS_11 `. تشبه هذه العملية تحديث متغير ، فهي تستخدم * عامل التعيين * ` = `.
+We've seen that `array[index]` will reference an element of the array. This can also be used to modify an element of the array. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
 
-.تدريب
+.PRACTICE
 ****
-في المثال السابق ، استخدم حلقة for لتجنب استدعاء ` fitMedia () ` ثلاث مرات. يمكنك استخدام رقم المسار باعتباره العداد.
-يجب أن يبدأ رقم الlcav من ` 0 ` بينما يبدأ مسارك من ` 1 `. داخل حلقة for ، ستحتاج' إلى إنشاء متغير ` مؤشر ` يساوي رقم المسار مطروحًا منه واحدًا.
+In the previous example, use a `for` loop instead of calling `fitMedia()` three times. You can use the track number as the counter.
+The index number must start at `0` while your track starts at `1`. Inside your for loop, you'll need to create an `index` variable equal to the track number minus one.
 ****
 
-مثالا على ذلك. يمكنك إلقاء نظرة في وحدة التحكم لمعرفة ما تم طباعته عند تشغيل المقطع البرمجي.
+Below is an example. You can have a look in the console to see what is printed when you run the code.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-iterating-through-lists.py.txt[]
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-iterating-through-arrays.js.txt[]
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
-نصيحة مفيدة: دالة len () ، مع اسم القائمة كمعامل ، ترجع عدد عناصر القائمة. لذا فإن ` list [0] ` هي العنصر الأول من ` list ` ، و ` list [len (list) -1] ` هي العنصر الأخير. على سبيل المثال ، إذا كانت ` list = ["Hello" ، "زميل" ، "EarSketchers"] ` ، ` len (list) ` تعرض ` 3 `. المؤشرات هي ` 0 ` ، ` 1 ` و ` 2 `. المؤشر الأخير هو 3-1 = 2.
+A useful tip: `len()` function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-javascript"]
-نصيحة مفيدة: الخاصية ` length ` (` array.length `) ترجع عدد عناصر المصفوفة. لذا فإن المصفوفة ` [0] ` هي العنصر الأول في المصفوفة ` ` ، و ` المصفوفة [array.length-1] ` هي العنصر الأخير. على سبيل المثال ، إذا كانت ` array = ["Hello" ، "fellow" ، "EarSketchers"] ؛ ` ، ` len (array) ` تعرض ` 3 `. المؤشرات هي ` 0 ` ، ` 1 ` و ` 2 `. المؤشر الأخير هو 3-1 = 2.
+A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. The last index is 3-1 = 2.
 
 [role="curriculum-python"]
-.تدريب
+.PRACTICE
 ****
-سننشئ مقدمة مضافة في EarSketch حيث يتم إضافة الآلات (المسارات) إلى الموسيقى واحدة تلو الأخرى بمرور الوقت. على سبيل المثال ، يبدأ المسار الأول عند المقياس 1 ، ثم يبدأ المسار الثاني عند القياس 2 ... يستخدم هذا بشكل شائع لمقدمة أغنية ، تحقق من https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West's "Power"^].
-باستخدام قائمة وحلقة for ، أنشئ مثل هذه المقدمة من المقاييس 1 إلى 5. كما في المثال السابق ، يمكنك استخدام ` track ` باعتباره العداد الخاص بك ، وستحتاج 'إلى إنشاء متغير ` index `. بالإضافة إلى ذلك ، يمكنك إنشاء متغير ` مقياس `.
-استخدم الدالة ` len () `.
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using a list and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `len()` function.
 ****
 
 [role="curriculum-javascript"]
-.تدريب
+.PRACTICE
 ****
-سننشئ مقدمة مضافة في EarSketch حيث يتم إضافة الآلات (المسارات) إلى الموسيقى واحدة تلو الأخرى بمرور الوقت. على سبيل المثال ، يبدأ المسار الأول عند المقياس 1 ، ثم يبدأ المسار الثاني عند القياس 2 ... يستخدم هذا بشكل شائع لمقدمة أغنية ، تحقق من https://www.youtube.com/watch?v=L53gjP-TtGEKanye[Kanye West 's "Power"^].
-باستخدام مصفوفة وحلقة for ، أنشئ مثل هذه المقدمة من المقاييس من 1 إلى 5. كما في المثال السابق ، يمكنك استخدام ` track ` باعتباره العداد الخاص بك ، وستحتاج 'إلى إنشاء متغير ` index `. بالإضافة إلى ذلك ، يمكنك إنشاء متغير ` مقياس `.
-استخدم خاصية ` length `.
+We will create an additive introduction in EarSketch in which instruments (tracks) are added to the music one by one over time. For example, the first track starts at measure `1`, then the second track starts at measure `2`, and so on. This is commonly used for a song's introduction.
+
+Using an array and a `for` loop, create such an introduction from measures `1` to `5`. Like in the previous example, you can use `track` as your counter, and you'll need to create an `index` variable. In addition, you can create a `measure` variable, using the `length` property.
 ****
 
-مثالا على ذلك:
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-additive-introduction.py.txt[]
+include::code-examples/data-structures-additive-introduction.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[]
+include::code-examples/data-structures-additive-introduction.js.txt[]
 ----
+
+{nbsp} +
 
 [[usingdatastructureswithmakebeat]]
-=== استخدام هياكل البيانات مع ` makeBeat () `
+=== Use Data Structures with `makeBeat()`
 
 [role="curriculum-python"]
-سنرى طريقتين يمكنك من خلالهما استخدام هياكل البيانات مع ` makeBeat () `. أولاً ، دعنا' نلقي نظرة على مدى تشابه السلاسل والقوائم:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and lists are:
 
 [role="curriculum-javascript"]
-سنرى طريقتين يمكنك من خلالهما استخدام هياكل البيانات مع ` makeBeat () `. أولاً ، دعنا 'نلقي نظرة على كيفية تشابه السلاسل والمصفوفات:
+We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
 
 [role="curriculum-python"]
-1. مثل القوائم ، تحتوي السلاسل على مؤشرات. يمثل *المؤشر* موضع حرف معين في سلسلة ، بدءًا من 0. على سبيل المثال `"Sarah"[3]` يرجع `a`.
-2. يمكنك استخدام الدالة ` len () ` مع السلاسل ، والتي تُرجع عدد الأحرف في السلسلة. الحرف الأخير موجود في المؤشر `len(string)-1`.
-تظهر مؤشرات السلسلة ` "EarSketch" ` في الجدول أدناه.
+* Like lists, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the function `len()` with strings, which returns the number of characters in the string. The last character is at index `len(string) - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
+[role="curriculum-javascript"]
+* Like arrays, strings have indices. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
+* You can use the property `.length` with strings, which returns the number of characters in the string. The last character is at index `string.length - 1`.
+The indices of the string `"EarSketch"` are shown in the table below.
 
 [cols="h,^,^,^,^,^,^,^,^,^"]
 |===
-|حرف-Character
+|Character
 |E
 |a
 |r
@@ -150,7 +158,7 @@ include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[
 |c
 |h
 
-|مؤشر-Index
+|Index
 |0
 |1
 |2
@@ -162,93 +170,61 @@ include::../../en/v2/code-examples/data-structures-additive-introduction.js.txt[
 |8
 |===
 
+[role="curriculum-python"]
+* You can concatenate lists together like you do with strings. Use the concatenation operator (`+`): the syntax is `newList = listA + listB`.
+
 [role="curriculum-javascript"]
-1. مثل المصفوفات ، تحتوي السلاسل على مؤشرات. يمثل *المؤشر* موضع حرف معين في سلسلة ، بدءًا من 0. على سبيل المثال `"Sarah"[3]` يرجع `a`.
-2. يمكنك استخدام الخاصية `.length ` مع السلاسل ، التي تُرجع عدد الأحرف في السلسلة. الحرف الأخير موجود في المؤشر `string.length-1`.
-تظهر مؤشرات السلسلة ` "EarSketch" ` في الجدول أدناه.
-
-[cols="h,^,^,^,^,^,^,^,^,^"]
-|===
-|حرف-Character
-|E
-|a
-|r
-|S
-|k
-|e
-|t
-|c
-|h
-
-|مؤشر-Index
-|0
-|1
-|2
-|3
-|4
-|5
-|6
-|7
-|8
-|===
-
-
+* You can concatenate arrays together like you do with strings. We use the `concat` *method*. A method is similar to a function as it has parentheses which contain parameters. To use it, place it after your array name, with a dot: the syntax is `newArray = arrayA.concat(arrayB)`. This is called *dot-notation*.
 
 [role="curriculum-python"]
-3. يمكنك تجميع القوائم معًا كما تفعل مع السلاسل. استخدم عامل التشغيل التسلسلي (` + `): بناء الجملة هو ` newList = listA + listB `. 
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
 
 [role="curriculum-javascript"]
-3. يمكنك تجميع المصفوفات معًا كما تفعل مع السلاسل. نستخدم طريقة `concat` *method*. الطريقة مشابهة للدالة لأنها تحتوي على أقواس تحتوي على عوامل. لاستخدامها ، ضعه بعد اسم المصفوفة ، بنقطة: الصيغة هي `newArray = arrayA.concat(arrayB)`. وهذا ما يسمى * نقطة المؤشر *.
+* You can get a *substring*, also known as a slice, of a larger string. This allows a beat to be sliced up, a popular technique in electronic music and remixing. Its syntax is `newString = oldString.substring(startIndex, endIndex)`. The substring includes the character at `startIndex` but not the character at `endIndex`.For example, `"Sarah.substring(1, 4)"` will return `"ara"`. You can do the same with arrays, using the `slice()` method: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` and `slice()` are methods and all use the dot notation.
 
 [role="curriculum-python"]
-4. يمكنك الحصول على سلسلة فرعية * * ، تُعرف أيضًا باسم شريحة سلسلة أكبر. يسمح هذا بتقطيع الإيقاع ، وهي تقنية شائعة في الموسيقى الإلكترونية وإعادة المزج. بناء الجملة هو `newString = oldString[startIndex: endIndex]`. تتضمن السلسلة الفرعية الحرف الموجود في ` startIndex ` ولكن ليس الحرف الموجود في ` endIndex `. على سبيل المثال `"Sarah[1,4]"` يرجع `"ara"`. يمكنك فعل الشيء نفسه مع القوائم: ` newList = oldList [startIndex: endIndex] `.
-
-[role="curriculum-javascript"]
-4. يمكنك الحصول على سلسلة فرعية * * ، تُعرف أيضًا باسم شريحة سلسلة أكبر. يسمح هذا بتقطيع الإيقاع ، وهي تقنية شائعة في الموسيقى الإلكترونية وإعادة المزج. بناء الجملة هو `newString = oldString[startIndex: endIndex]`. تتضمن السلسلة الفرعية الحرف الموجود في ` startIndex ` ولكن ليس الحرف الموجود في ` endIndex `. على سبيل المثال ، ` "Sarah.substring (1،4)" ` ستُرجع ` "ara" `. يمكنك فعل الشيء نفسه مع المصفوفات ، باستخدام ملف`slice()` method: `newList = oldList.slice(startIndex, endIndex)`. ` concat () ` ، ` سلسلة فرعية () ` و ` شريحة () ` هي طرق وكلها تستخدم تدوين النقطة.
-
-[role="curriculum-python"]
-.تدريب
+.PRACTICE
 ****
-في برنامج نصي جديد:
+In a new script:
 
-. إنشاء 4 متغيرات: 2 سلاسل إيقاع (` سلسلة A ` و ` سلسلة B `) وقائمتان لمقاطع الصوت (` أصوات A ` و ` أصوات B `).
-. اطبع الحرف الثاني من كل سلسلة.
-. اطبع العنصر الأخير في قوائمك.
-. قم بإنشاء وطباعة سلسلة ` سلسلة C ` ، سلسلة ` سلسلة A ` و ` سلسلة B `.
-. قم بإنشاء وطباعة ` أصوات C ` ، سلسلة الأصوات ` أصوات A ` ، ` الأصوات B ` و ` الأصوات A ` مرة أخرى.
-. قم بإنشاء وطباعة ` سلسلة D ` ، تم شمل شريحة ` سلسلة C ` من الثاني إلى الخامس من الأحرف.
-. قم بإنشاء وطباعة ` أصوات D ` ، شريحة ` سلسلة C ` من العنصر الثالث إلى آخر العناصر المضمنة.
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound lists (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your lists.
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
 [role="curriculum-javascript"]
-.تدريب
+.PRACTICE
 ****
-في برنامج نصي جديد:
+In a new script:
 
-. إنشاء 4 متغيرات: 2 من سلاسل الدقة (` سلسلة A ` و ` سلسلة B `) ومصفوفتان لمصفوفات الصوت (` أصوات A ` و ` أصوات B `).
-. اطبع الحرف الثاني من كل سلسلة.
-. اطبع العنصر الأخير من المصفوفات الخاصة بك.
-. قم بإنشاء وطباعة سلسلة ` سلسلة C ` ، سلسلة ` سلسلة A ` و ` سلسلة B `.
-. قم بإنشاء وطباعة ` أصوات C ` ، سلسلة الأصوات ` أصوات A ` ، ` الأصوات B ` و ` الأصوات A ` مرة أخرى.
-. قم بإنشاء وطباعة ` سلسلة D ` ، تم شمل شريحة ` سلسلة C ` من الثاني إلى الخامس من الأحرف.
-. قم بإنشاء وطباعة ` أصوات D ` ، شريحة ` سلسلة C ` من العنصر الثالث إلى آخر العناصر المضمنة.
+. Create four variables: two beat strings (`stringA` and `stringB`) and two sound arrays (`soundsA` and `soundsB`).
+. Print the second character of each string.
+. Print the last element of your arrays.
+. Create and print `stringC`, the concatenation of `stringA` and `stringB`.
+. Create and print `soundsC`, the concatenation your `soundsA`, `soundsB` and `soundsA` again.
+. Create and print `stringD`, the slice of `stringC` from the second to the fifth characters included.
+. Create and print `soundsD`, the slice of `soundsC` from the third to the last elements included.
 ****
 
-هذا مثال على الحل:
+Here is an example of a solution:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-string-and-lists-operations.py.txt[]
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-string-and-lists-operations.js.txt[]
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
 ----
 
-هذا hgمثال على كيفية استخدام عمليات السلاسل مع `MakeBeat()`:
+This is an example of how you can use string operations with `makeBeat()`:
 
 [role="curriculum-python curriculum-mp4"]
 [[video13py]]
@@ -261,183 +237,165 @@ video::./videoMedia/013-03-Substrings-JS.mp4[]
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-string-operations.py.txt[]
+include::code-examples/data-structures-string-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-string-operations.js.txt[]
+include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-أخيرًا ، يمكن لـ ` makeBeat () ` التعامل مع مقاطع صوتية متعددة في وقت واحد. يتيح لك هذا وضع جميع الأصوات القرعية على مسار واحد باستخدام سطر واحد فقط من نوع ` makeBeat () `. بدلاً من تمرير ملف الصوت الخاص بك كعامل أول ، ستقوم بتمرير قائمة ملفات الصوت. في سلسلة النغمات الخاصة بك ، بدلاً من استخدام ` 0 ` فقط لتشغيل الصوت ، يمكنك استخدام الأرقام من ` 0 ` إلى ` 9 `. تشير هذه الأرقام إلى مؤشر في قائمة الصوت الخاصة بك. تحقق من المثال "قبل وبعد" أدناه ، مع إيقاع "boot cat boot cat".
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass a list of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your list of sounds. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-javascript"]
-أخيرًا ، يمكن لـ ` makeBeat () ` التعامل مع مقاطع صوتية متعددة في وقت واحد. يتيح لك هذا وضع جميع الأصوات القرعية على مسار واحد باستخدام سطر واحد فقط ` makeBeat () `. بدلاً من تمرير ملف الصوت الخاص بك كعامل أول ، سوف تمرر مصفوفة ملفات صوتية. في سلسلة النغمات الخاصة بك ، بدلاً من استخدام ` 0 ` فقط لتشغيل الصوت ، يمكنك استخدام الأرقام من ` 0 ` إلى ` 9 `. تشير هذه الأرقام إلى مؤشر في مصفوفة الصوت الخاصة بك. تحقق من مثال "قبل وبعد" أدناه ، مع إيقاع "boot cat boot cat".
-
-[role="curriculum-python"]
-[source,python]
-----
-include::../../en/v2/code-examples/data-structures-making-a-drum-set.py.txt[]
-----
-
-[role="curriculum-javascript"]
-[source,javascript]
-----
-include::../../en/v2/code-examples/data-structures-making-a-drum-set.js.txt[]
-----
-
-.تدريب
-****
-انسخ مثال الكود في الفصل 3.4 للإيقاعات حسب النوع. قم بتعديل المقطع البرمجي بحيث يحتوي على سطر واحد فقط ` makeBeat () ` لكل نوع. في بعض الأحيان ، يتم تشغيل hihat في نفس وقت الركلة أو الفخ: في هذه الحالة ، يمكنك الحصول على سطر ` makeBeat () ` واحد فقط من أجل hihat.
-****
-
-هذا هو الحل:
+Finally, `makeBeat()` can handle multiple sounds at once. This allows you to place all the percussive sounds on one track with just one `makeBeat()` line. Instead of passing your sound file as a first argument, you will pass an array of sounds. In your beat string, instead of using just `0` to play a sound, you can use numbers from `0` to `9`. These numbers indicate an index in your array of sounds. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/data-structures-examples-of-beats.py.txt[]
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/data-structures-examples-of-beats.js.txt[]
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
 ----
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-باستخدام ما تعلمته في هذا الفصل ، أنشئ إيقاعات حسب رغبتك باستخدام ` makeBeat () `. يمكنك الرجوع إلى الفيديو في الفصل 3.4 للتعرف على الإيقاعات حسب النوع. لا 'تنس بانه يمكنك تشغيل المقطع البرمجي الخاص بك والاستماع إلى ما قمت بإنشائه وتعديله' حتى يبدو جيدًا بالنسبة لك.
+Copy the code example in chapter 3.4 for beats by genre. Modify the code to have just one `makeBeat()` line for each genre. Sometimes, the hihat is playing at the same time as the kick or snare. In that case, you can have one `makeBeat()` line just for the hihat.
 ****
+
+Here is the solution:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-examples-of-beats.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Using what you have learned in this chapter, create rhythms that you like with `makeBeat()`. You can refer to the video in chapter 3.4 for beats by genre. Don't forget that you can run your code, listen to what you've created, and modify it until it sounds good to you.
+****
+
+{nbsp} +
 
 [[evaluatingcorrectness]]
-=== تقييم الصواب
+=== Evaluate Correctness
 
-تهانينا ، لقد اكتسبت الآن مهارات موسيقية وبرمجية تتيح لك أن تكون مبدعًا مع EarSketch! آخر شيء نريد رؤيته معك ، هو التأكد من أن مقطعك البرمجي جيد بقدر الإمكان. فيما يلي بعض العناصر التي يمكنك التحقق منها:
+Congratulations, now you have acquired musical and coding skills that allow you to be creative with EarSketch! One last thing we want to make sure of is that your code is as neat as possible. Here are some elements that you can check:
 
-[role="curriculum-python"]
-* *Conciseness-الإيجاز * يعني تعليمات برمجيةموجزه تحقق هدفها بكفاءة. فيما يلي بعض الأسئلة التي يمكن أن تساعدك في جعل مقطعك البرمجي أكثر إيجازًا:
-** هل قمت بنسخ / لصق استدعاءات الدالة عدة مرات متتالية؟ (إذا كان الأمر كذلك ، فقم بالتبسيط باستخدام حلقة!)
-** هل يُمكنني اعادة أي كتل من التعليمات البرمجية؟ (إذا كان الأمر كذلك ، ضعهم في دالة!)
-** هل توجد ثوابت صوتية أو تعبيرات رياضية أستخدمها بشكل متكرر في التعليمات البرمجية الخاصة بي؟ (إذا كان الأمر كذلك ، فخصصهم للمتغيرات! قد تكون القائمة مفيدة أيضًا)
-* *Clarity-الوضوح * يتعلق بمدى جودة توصيل المقطع البرمجي لدالته وقصد 'المبرمج. إذا زملاؤك ارتبكوا او تلخبطوا بسبب التعليمات البرمجية الخاصة بك ، فمن المحتمل أن يكون ذلك غير واضح. فيما يلي بعض الأسئلة لمساعدتك في توضيح التعليمات البرمجية الخاصة بك:
-** هل أكملتُ تعليقات المقدمة بعنوان النص والمؤلف والوصف؟ 
-** هل أسماء المتغيرات والدوال الخاصة بي هي وصفية؟ (إذا لم يكن كذلك ، أعد تسميتها)
-** هل استخدمت التعليقات لشرح كل كتلة من المقاطع البرمجية وأي أسطر من التعليمات البرمجية يحتمل أن تكون مربكة؟
-** هل استخدمت هياكل حسابية مثل الدوال والحلقات المخصصة للمساعدة في تنظيم المقطع البرمجي الخاص بي؟
-** هل تعكس هيكل البرنامج النصي الخاص بي هيكل أغنيتي؟ هذا يساعد على تدفق القراءة.
+* *Conciseness* means brief code that accomplishes its goal with fewer lines. Here are some questions that can help you make your code more concise:
+** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
+** Am I reusing any blocks of code? If so, put them in a function!
+** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! A list might also be useful.
+* *Clarity* relates to how well code communicates its function and the programmer's intent. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
+** Are the names of my variables and functions descriptive? If not, rename them.
+** Have I used comments to explain each block of code and any potentially confusing lines of code?
+** Have I used computational structures like custom functions and loops to help organize my code?
+** Can I structure my script to mirror the structure of my song? In some cases this can help the flow of reading.
 
-[role="curriculum-javascript"]
-* *Conciseness-الإيجاز * يعني مقطع برمجي موجزًا ​​يحقق هدفه بكفاءة. فيما يلي بعض الأسئلة التي يمكن أن تساعدك في جعل مقطعك البرمجي أكثر إيجازًا:
-** هل قمت بنسخ / لصق استدعاءات الدالة عدة مرات متتالية؟ (إذا كان الأمر كذلك ، فقم بالتبسيط باستخدام حلقة!)
-** هل يُمكنني اعادة أي كتل من التعليمات البرمجية؟ (إذا كان الأمر كذلك ، ضعهم في دالة!)
-** هل توجد ثوابت صوتية أو تعبيرات رياضية أستخدمها بشكل متكرر في التعليمات البرمجية الخاصة بي؟ (إذا كان الأمر كذلك ، فخصصهم للمتغيرات! قد تكون المصفوفة مفيدة أيضًا)
-* *Clarity-الوضوح * يتعلق بمدى جودة توصيل المقطع البرمجي لدالته وقصد 'المبرمج. إذا زملاؤك ارتبكوا او تلخبطوا بسبب التعليمات البرمجية الخاصة بك ، فمن المحتمل أن يكون ذلك غير واضح. فيما يلي بعض الأسئلة لمساعدتك في توضيح التعليمات البرمجية الخاصة بك:
-** هل أكملتُ تعليقات المقدمة بعنوان النص والمؤلف والوصف؟ 
-** هل أسماء المتغيرات والدوال الخاصة بي هي وصفية؟ (إذا لم يكن كذلك ، أعد تسميتها)
-** هل استخدمت التعليقات لشرح كل كتلة من المقاطع البرمجية وأي أسطر من التعليمات البرمجية يحتمل أن تكون مربكة؟
-** هل استخدمت هياكل حسابية مثل الدوال والحلقات المخصصة للمساعدة في تنظيم المقطع البرمجي الخاص بي؟
-** هل تعكس هيكل البرنامج النصي الخاص بي هيكل أغنيتي؟ هذا يساعد على تدفق القراءة.
+*Peer Feedback* is common in programming and helps you improve your code and music thanks to comments from others. Feedback must be *constructive*, meaning it builds a peer up, rather them breaking them down. When giving feedback:
 
-* Peer Feedback-ملاحظات الزملاء * شائعة في البرمجة وتساعدك على تحسين المقطع البرمجي والموسيقى بفضل تعليقات الآخرين. يجب أن تكون التعليقات *onstructive-بنّاءة * ، مما يعني أنها تبني الأقران ، بدلاً من تفكيكها. عند إبداء الرأي:
+* *Be specific* - Refer to specific blocks and lines of code and to specific measures and tracks of music.
+* *Be descriptive* - Describe your reasoning and the process you would take to improve a script.
+* *Be sensitive to your peer's musical vision/goals* - Your own musical tastes should not factor in to an evaluation of your peer's music.
+* *Be positive* - In addition to what needs improvement, point out code blocks and musical passages that are strong.
+* *Don't compare* - Treat your peer's code as their own, not as a competition with your own or other peers' code.
 
-* *Be specific-كن محددًا * - يشير إلى مجموعات وأسطر معينة من التعليمات البرمجية وإلى مقاييس ومسارات موسيقية محددة.
-* * Be descriptive-كن وصفيًا * - صِف منطقك والعملية التي قد تتخذها لتحسين البرنامج النصي.
-* * كن حساسًا 'لرؤية / أهداف زميلك الموسيقية * - يجب ألا تؤثر أذواقك الموسيقية في تقييم موسيقى' زملائك.
-* * كن إيجابيًا * - بالإضافة إلى ما يحتاج إلى تحسين ، أشر إلى مجموعات التعليمات البرمجية والمقاطع الموسيقية القوية.
-* * لا تقارن '* - تعامل مع برنامج زميلك' على أنه رمز خاص به ، وليس كمنافسة مع برنامجك أو برنامج زملائك الآخرين.
+Likewise, when receiving feedback:
 
-وبالمثل ، عند تلقي التعليقات:
-
-* * كن محددًا * - أشر إلى الكتل أو سطور التعليمات البرمجية ومسارات أو مقاييس الموسيقى التي تسبب المشكلات. سيسمح ذلك لزملائك بتقديم ملاحظات مفيدة للغاية لك.
-* * استمع * - انتظر الرد حتى ينتهي زميلك من التحدث. كن منتبهاً للمعلومات التي ينقلها زميلك. التعليق على التعليمات البرمجية الخاصة بك استنادا الى ردود فعلهم. يمكن أن تكون هذه التعليقات مفيدة عند المراجعة.
-* * اطرح أسئلة * - اسأل عن المنطق الذي لست متأكدًا منه ، أو المشكلات ، أو الأخطاء ، أو التماسك الموسيقي ، أو أي عنصر من عناصر الصحة.
+* *Be specific* - Point out blocks or lines of code and tracks or measures of music that are causing issues. This will allow your peers to provide feedback that is most helpful to you.
+* *Listen* - Wait to respond until your peer has finished speaking. Be attentive to the information your peer is conveying. Comment your code based on their feedback. These comments can be useful when revising.
+* *Ask questions* - Ask about logic you are unsure of, issues, bugs, musical coherence, or any element of correctness.
 
 [role="curriculum-python"]
-.تدريب
+.PRACTICE
 ****
-قم بإنشاء أغنية كاملة واعرضها امام زميلك لتحسينها. اليك بعض الافكار للبدء:
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
 
-* يوصى' دائمًا بالتفكير في موضوع وهيكل لأغنيتك قبل البدء. يمكن أن يكون الهيكل الخاص بك بسيطًا مثل ABA. 
-* ابدأ في اختيار الأصوات واختبار الأشياء. أنشئ متغيرات صوتية وتغلب على السلسلة ، واستخدم استدعاءات ` fitMedia () ` و ` makeBeat () `. يمكنك تحميل الأصوات الخاصة بك.
-* كلما كان' ذلك مفيدًا ، قم بإنشاء حلقات for-loops ودوال مخصصة.
-* أضف بعض التأثيرات باستخدام ` setEffect () ` ، يمكنك إضافة a fade in, fade out, some delay, reverb...
-* يمكنك استخدام عبارة شرطية لمزج أغنيتك (تعديل حجم كل مقطع صوتي).
-* يمكنك طلب إدخال المستخدم لتعديل شيء ما في أغنيتك.
-* إذا لزم الأمر ، ضع بعض العناصر في مصفوفة.
+* It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`. You can add a fade in, fade out, some delay, reverb...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in a list.
 ****
 
 [role="curriculum-javascript"]
-.تدريب
+.PRACTICE
 ****
-قم بإنشاء أغنية كاملة واعرضها امام زميلك لتحسينها. اليك بعض الافكار للبدء:
+Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
 
-* يوصى' دائمًا بالتفكير في موضوع وهيكل لأغنيتك قبل البدء. يمكن أن يكون الهيكل الخاص بك بسيطًا مثل ABA. 
-* ابدأ في اختيار الأصوات واختبار الأشياء. أنشئ متغيرات صوتية وتغلب على السلسلة ، واستخدم استدعاءات ` fitMedia () ` و ` makeBeat () `. يمكنك تحميل الأصوات الخاصة بك.
-* كلما كان' ذلك مفيدًا ، قم بإنشاء حلقات for-loops ودوال مخصصة.
-* أضف بعض التأثيرات باستخدام ` setEffect () ` ، يمكنك إضافة a fade in, fade out, some delay, reverb...
-* يمكنك استخدام عبارة شرطية لمزج أغنيتك (تعديل حجم كل مقطع صوتي).
-* يمكنك طلب إدخال المستخدم لتعديل شيء ما في أغنيتك.
-* إذا لزم الأمر ، ضع بعض العناصر في مصفوفة.
+* It's always recommended to think about a theme for your song and a structure before getting started. Your structure can be as simple as ABA.
+* Start selecting sounds and testing things. Create sound and beat string variables, and use `fitMedia()` and `makeBeat()` calls. You can upload your own sounds.
+* Whenever it's useful, create for-loops and custom functions.
+* Add some effects with `setEffect()`.  You can add a fade in, fade out, some delay, reverb...
+* You can use a conditional statement to mix your song (adapt the volume of each track).
+* You can ask for user input to modify something in your song.
+* If necessary, place some elements in an array.
 ****
-
-[[conclusion]]
-=== استنتاج
-
-شكرًا جزيلاً لك على المشاركة في مغامرة EarSketch! نأمل أن تكون قد استمتعت وتعلمت الكثير من الأشياء باستخدام هذه الأداة :) هناك المزيد لاكتشافه في فصول اختيارية!
-
-////
-Thank you video
-////
-
 
 [[chapter9summary]]
-=== الفصل 9 ملخص
+=== Chapter 9 Summary
 
 [role="curriculum-python"]
-* <strong>list</0-قائمة> عبارة عن مجموعة من القيم مدمجة في كيان واحد ، وهي طريقة فعالة لتخزين البيانات. يمكن أن تكون القيم المخزنة في القائمة ، والتي تسمى أعضاء القائمة ، من أي نوع من البيانات.
-* كما هو الحال مع السلاسل ، يكون لأعضاء القائمة فهارس. تبدأ فهارس القائمة من 0.
-* يتم الوصول إلىعناصر القائمة باستخدام الأقواس المربعة. على سبيل المثال ، ` myList [1] `. يمكن الوصول إلى أحرف السلسلة بطريقة مماثلة: ` myString [1] `.
-* ترجع الدالة ` len () ` عدد عناصر القائمة ، أو عدد الأحرف في السلسلة. الصيغة هي`len(list)`.
-* يمكن أن تكون القوائم والمصفوفات متسلسلة ومقسمة إلى شرائح باستخدام * عمليات القائمة * ، وهي مجموعة من الأدوات لتعديل قائمة.
-* بناء الجملة لإنشاء مجموعة فرعية من قائمة من القائمة الأكبر الموجودة هو ` newList = oldList [startIndex: endIndex] `.
-* يمكن دمج القوائم باستخدام عامل التشغيل التسلسلي ، `+`, like `newList = listA + listB`.
-* يمكن لـ `makeBeat()` إنشاء إيقاعات من مقاطع متعددة في وقت واحد عن طريق تمرير سلسلة إيقاعية تشير إلى فهارس قائمة مختلفة. يمكن لـ ` makeBeat () ` الوصول إلى المقاطع الموجودة في الفهارس من 0 إلى 9 بشرط تخزينها في نفس القائمة.
-* تبادل المعلومات البناءة مع الآخرين هو شكل من أشكال *peer feedback*. يوفر فرصة للتعلم من الآخرين.
-
+* A *list* is a collection of values combined into a single entity, a good way to organize data. Items stored within a list, or elements, can be any data type.
+* Like strings, list elements get assigned an index. List indices start at 0.
+* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The function `len()` returns the number of elements in a list, or the number of characters in a string. The syntax is `len(list)`.
+* Lists and arrays can be concatenated and sliced using *list operations*, a set of tools for modifying a list.
+* The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
+* Lists can be combined using the concatenation operator, `+`, like `newList = listA + listB`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
+* Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 [role="curriculum-javascript"]
-* <strong>array</0- المصفوفة> عبارة عن مجموعة من القيم مدمجة في كيان واحد ، وهي طريقة فعالة لتخزين البيانات. يمكن أن تكون العناصر المخزنة في مصفوفة أو عناصر من أي نوع بيانات.
-* مثل السلاسل ، يتم تعيين فهرس لعناصر المصفوفة. تبدأ فهارس المصفوفة من 0.
-* يتم الوصول إلى عناصر المصفوفة عن طريق الأقواس المربعة. على سبيل المثال ، ` myArray [1] `. يمكن الوصول إلى أحرف السلسلة بطريقة مماثلة: ` myString [1] `.
-* تعرض الخاصية `length` عدد العناصر في المصفوفة ، أو عدد الأحرف في سلسلة. الصيغة هي `array.length` أو `string.length`.
-* يمكن ربط المصفوفات وقصها باستخدام * Array Operators * ، وهي مجموعة من أدوات المصفوفات.
-* بناء الجملة لتقسيم مصفوفة من مصفوفة أكبر موجودة هو ` newArray = oldArray.slice (startIndex، endIndex) `.
-* بناء الجملة لإنشاء سلسلة فرعية من سلسلة موجودة هو: ` newString = oldString.substring (startIndex، endIndex) `.
-* يمكن توصيل المصفوفات باستخدام طريقة ` concat () `. على سبيل المثال ، ` newArray = arrayA.concat (arrayB) `.
-* ` () makeBeat ` يمكنه إنشاء إيقاعات من عدة مقاطع في وقت واحد ، لكنه يحصل على عامل مع مجموعة المقاطع وسلسلة الأسطوانة التي تشير إلى المقاطع المختلفة </0>. يمكن لـ ` makeBeat () ` الوصول إلى المقاطع الموجودة في الفهارس من 0 إلى 9 بشرط تخزينها في نفس المصفوفة.
-* تبادل المعلومات البناءة مع الآخرين هو شكل من أشكال *peer feedback*. يوفر فرصة للتعلم من الآخرين.
-
+* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
+* Like strings, array elements get assigned an index. Array indices start at 0.
+* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
+* Arrays can be concatenated and sliced using *array operations*, a set of tools for modifying an array.
+* The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
+* The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
+* Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
+* Exchanging constructive information with others is a form of *peer feedback*. It provides the opportunity to learn from others.
 
 [[chapter-questions]]
-=== الأسئلة
+=== Questions
 
 [question]
 --
-أي من العمليات التالية تُستخدم لضم القوائم / المصفوفات؟
+Which of the following operations is used to join lists/arrays?
+
 [answers]
-* Concatenation-سلسلة
-* Slicing-التقطيع
-* Combination-المواصفات
-* Addition-إضافات
+* Concatenation
+* Slicing
+* Combination
+* Addition
 --
 
 [role="curriculum-python"]
 [question]
 --
-ما هو فهرس العنصر الأول في المصفوفة فيPython؟
+What is the index number of the first element of a list in Python?
+
 [answers]
 * `0`
 * `1`
@@ -448,18 +406,20 @@ Thank you video
 [role="curriculum-python"]
 [question]
 --
-ماذا يُرجع `len(myList)`؟
+What does `len(myList)` return?
+
 [answers]
-* عدد العناصر في `myList`
-* أنواع بيانات `myList`
-* أنواع بيانات `myList`
-* عرض ال `myList`
+* The number of elements in `myList`
+* The data types of `myList`
+* The elements of `myList`
+* The width of `myList`
 --
 
 [role="curriculum-python"]
 [question]
 --
-ما هو بناء الجملة لتسلسل قائمتين (` listA ` و ` listB `)؟
+What is the syntax to concatenate two lists (`listA` and `listB`)?
+
 [answers]
 * `listA + listB`
 * `listA ++ listB`
@@ -470,18 +430,20 @@ Thank you video
 [role="curriculum-python"]
 [question]
 --
-كيف يمكنك الحصول على قائمة من القائمة القديمة بدون العنصرين الأول والأخير؟
+How can you get a list from oldList without the first and last elements?
+
 [answers]
-* `oldList[1:len(oldList)-1]`
+* `oldList[1:len(oldList) - 1]`
 * `oldList[1:len(oldList)]`
 * `oldList[0:len(oldList)]`
-* `oldList[2:len(oldList-1)]`
+* `oldList[2:len(oldList - 1)]`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-ما هو فهرس العنصر الأول في المصفوفة فيJavascript؟
+What is the index number of the first element of an array in Javascript?
+
 [answers]
 * `0`
 * `1`
@@ -492,18 +454,20 @@ Thank you video
 [role="curriculum-javascript"]
 [question]
 --
-ماذا يُرجع ` myArray.length `؟
+What does `myArray.length` return?
+
 [answers]
-* عدد العناصر في ` myArray `
-* أنواع بيانات <code> myArray </0 (مصفوفتي)>
-* أنواع بيانات <code> myArray </0 (مصفوفتي)>
-* عرض ال <code> myArray </0 (مصفوفتي)>
+* The number of elements in `myArray`
+* The data types of `myArray`
+* The elements of `myArray`
+* The width of `myArray`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-ما هو التركيب اللغوي لمصفوفتين (` arrayA ` و ` arrayB `)؟
+What is the syntax to concatenate two arrays (`arrayA` and `arrayB`)?
+
 [answers]
 * `arrayA.concat(arrayB)`
 * `arrayA.concatenate(arrayB)`
@@ -514,10 +478,20 @@ Thank you video
 [role="curriculum-javascript"]
 [question]
 --
-كيف يمكنك الحصول على مصفوفة من ` oldArray ` بدون العنصر الأول والأخير؟
+How can you get an array from `oldArray` without the first and last elements?
+
 [answers]
-* `oldArray.slice(1,oldArray.length-1]`
-* `oldArray.slice(1,oldArray.length)`
-* `oldArray.slice(0,oldArray.length)`
-* `oldArray.slice(2:oldArray.length-1)`
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
 --
+
+[[conclusion]]
+=== Conclusion
+
+Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
+
+////
+Thank you video
+////
