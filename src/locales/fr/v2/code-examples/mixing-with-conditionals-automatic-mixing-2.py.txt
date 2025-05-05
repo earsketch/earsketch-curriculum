@@ -1,6 +1,6 @@
 # Mélange automatique 2 : Utilisation d'instructions conditionnelles pour mixer les pistes
 
-# Setup
+# Paramétrage
 from earsketch import *
 setTempo(120)
 
