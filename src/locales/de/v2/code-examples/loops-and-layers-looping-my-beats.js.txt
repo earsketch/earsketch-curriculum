@@ -1,0 +1,13 @@
+// Looping meiner Beats: Wiederholung einer makeBeat()-Anweisung mit einem for-loop
+
+// Setup
+setTempo (120);
+
+// Variablen
+var drum1 = OS_SNARE03;
+var beat_string = "0---0---0-0-0---";
+
+// Looping unseres Beats
+for (var measure = 1; measure < 5; measure++) {
+    makeBeat(drum1, 1, measure, beat_string);
+}
