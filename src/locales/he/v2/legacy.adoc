@@ -1,0 +1,6 @@
+[[legacy]]
+== ארכיון חומרי לימוד (2020-2015)
+
+:nofooter:
+
+This is an archive of the EarSketch core curriculum in use from 2015-2020.
