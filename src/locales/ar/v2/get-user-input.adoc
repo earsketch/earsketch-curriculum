@@ -1,15 +1,14 @@
 [[getuserinput]]
-== Get user input
+== Get User Input
+
 :nofooter:
 
--إدخال المستخدم
-
-في هذا الفصل ، ستتعلم كيفية طلب المدخلات من المستخدمين وتكييف موسيقاك وفقًا لذلك. لذلك ، سنلقي نظرة' على دوال الإرجاع والوظيفة `readInput()`.
+In this chapter, you will learn how to ask for input from users and adapt your music accordingly. For that, we'll look at return statements and the `readInput()` function.
 
 [[returnstatement]]
-=== تعليمات الارجاع- Return
+=== Return Statement
 
-شاهد الفيديو أولا:
+Watch this video first:
 
 [role="curriculum-python curriculum-mp4"]
 [[video131py]]
@@ -19,365 +18,191 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-. بالإضافة إلى أخذ بعض المدخلات (العوامل) ، يمكن للدوال إخراج قيمة. في البرمجة ، نسمي هذا إرجاع قيمة. 
-. عبارة الارجاع *return * هي عبارة داخل جسم الدالة: أ. تخبر الدالة بإرجاع قيمة عند استدعائها. B. يشير الى إنهاء تشغيل الدالة. إذا كان لديك أي عبارات بعد `return` ، فسيتم تجاهلها.
-. لاستخدام القيمة التي تُرجعها الدالة ، أنشئ متغيرًا وعيِّنه لاستدعاء الدالة.
-. الامر return ليس إلزاميا. بدون الامر return ، لا تنتج الدالة أي قيمة. `fitMedia()` و `setEffect()`هي أمثلة على الدوال التي لا تعيد' أي شيء.
+* In addition to taking inputs (parameters), functions can output a value. In programming, we call this returning a value.
+* The *return statement* is a statement inside the function body that: A. tells a function to return a value when called. B. signals the function to stop. If you have any statements after the `return` keyword, they will be ignored.
+* To use the value that is returned by the function, create a variable and assign it the function call.
+* A return statement is not compulsory. Without a return statement a function does not output a value. `fitMedia()` and `setEffect()` are examples of functions that don't return anything.
 
-مثال للمقطع البرمجي:
+Here is a code example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-# Return Statements: Linking two beats together with return statements
-
-# Setup
-from earsketch import *
-setTempo(100)
-
-rhythm1 = "0+++0+0+0+--0+00"
-rhythm2 = "0+0-00++0-000+++"
-
-# Music
-def createBeat(startMeasure, soundClip, beatString):
-    endMeasure = startMeasure + 3
-    for measure in range(startMeasure, endMeasure):
-        makeBeat(soundClip, 1, measure, beatString)
-
-    # Return ending measure so we can use it outside function
-    return endMeasure
-
-# Function calls
-# Assigning the value we return to a variable
-newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
-
-# Passing the returned value into another function
-createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
+include::code-examples/get-user-input-return-statements.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Return Statements: Linking two beats together with return statements
-
-// Setup
-setTempo(100);
-
-var rhythm1 = "0+++0+0+0+--0+00";
-var rhythm2 = "0+0-00++0-000+++";
-
-// Music
-function createBeat(startMeasure, soundClip, beatString) {
-    var endMeasure = startMeasure + 3;
-    for (var measure = startMeasure; measure < endMeasure; measure++) {
-        makeBeat(soundClip, 1, measure, beatString);
-    }
-
-    // Return ending measure so we can use it outside function
-    return endMeasure;
-}
-
-// Function calls
-// Assigning the value we return to a variable
-var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
-
-// Passing the returned value into another function
-createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);
+include::code-examples/get-user-input-return-statements.js.txt[]
 ----
 
-مع تعليمات return-الارجاع ، يبدو تدفق التحكم الكامل للدالة كما يلي:
+With the return statement, the complete control flow for a function looks like this:
 
 [[return]]
-.التحكم في تدفق تعليمات Return
-[caption="Figure 13.1: "]
+.Return statement control flow
+[caption="Figure 8.1.1: "]
 image::../media/U2/Return.png[Alt Text]
 
-.تدريب
+.PRACTICE
 ****
-اكتب دالة تنشئ مقطوعة موسيقية ، مع:
+Create a function that will implement a musical section with:
 
-* عامل واحد فقط ، يسمى `start` ، الذي يمثل بداية مقياس.
-* عبارة return-إرجاع واحدة تُرجع نهاية المقياس.
-* جسم دالة يحتوي على استدعاءات لدوال `fitMedia()`.
+* Only one parameter, called `start`, which represents the start measure.
+* One `return` statement that returns the end measure.
+* A body function with `fitMedia()` functions.
 
-يمكن أن يستمر قسمك بأي عدد تريده من المقاييس.
-ثم اتصل بالدالة ، واطبع مقياس النهاية.
+Your section can last as many measures as you like.
+Then call the function, and print the end measure.
 ****
 
-مثالا على ذلك:
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-# Return Statements 2: Returning the end measure of a section function
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
-drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
-
-# Function definition
-def verse(start):
-    end = start + 4
-    fitMedia(melody1, 1, start, end)
-    fitMedia(drums1, 2, start, end)
-    return end
-
-# Function calls
-endMeasure = verse(1)  # calling verse function and start is measure 1
-print(endMeasure)
+include::code-examples/get-user-input-return-statements-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Return Statements 2: Returning the end measure of a section function
-
-// Setup
-setTempo(120);
-
-var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
-var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
-
-// Function definition
-function verse(start) {
-    var end = start + 4;
-    fitMedia(melody1, 1, start, end);
-    fitMedia(drums1, 2, start, end);
-    return end;
-}
-// Function calls
-var endMeasure = verse(1); // calling verse function and start is measure 1
-println(endMeasure);
+include::code-examples/get-user-input-return-statements-2.js.txt[]
 ----
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-لنفترض' أن لديك قسم "أ" ، لكنك تريده أن يختلف قليلاً عند' استدعائه في لحظات مختلفة من الأغنية. ستقوم بإنشاء دالة تسمى `sectionA()` مع استدعائين`fitMedia()`.
+Let's say you have a section A, but you want it to vary slightly when it's called at different moments of the song. You will create a function called `sectionA()` with two `fitMedia()` calls.
 
-يجب أن تستقبل الدالة عاملين: `start`وعامل منطقي `variation` يسمح للمستخدم بالتغيير عند استدعاء الدالة. 
+The function should take two parameters: `start` and a boolean parameter `variation` that will allow the user to choose a variation when calling the function.
 
-في جسم الدالة، يجب أن يكون لديك عبارة شرطية(if) تقوم بتقييم العامل. بناءً على قيمة العامل ، ستقوم بتغيير مقطع الصوت المستخدم في إحدى مكالماتك في `fitMedia()`.
+In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound used in one of your `fitMedia()` calls.
 
-ثم قم باستدعاء الدالة في مقاييس مختلفة مع اختلافات مختلفة. 
+Then call the function at different measures with different variations.
 ****
 
-مقطع برمجي مثالا على ذلك:
+Here is an example:
 
 [role="curriculum-python"]
 [source,python]
 ----
-# Conditional statement: Using a boolean to create variation in a function
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
-melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
-drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
-
-# Function definition
-def verse(start, variation):
-    # variation is either equal to True or False
-    if variation:
-        fitMedia(melody1, 1, start, start + 4)
-    else:
-        fitMedia(melody2, 1, start, start + 4)
-    fitMedia(drums1, 2, start, start + 4)  # this is outside the conditional statement (no indentation)
-
-# Function calls
-verse(1, True)
-verse(7, False)
+include::code-examples/get-user-input-conditional-statement.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Conditional statement: Using a boolean to create variation in a function
-
-// Setup
-setTempo(120);
-
-var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
-var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
-var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
-
-// Function definition
-function verse(start, variation) {
-    // variation is either equal to true or false
-    if (variation) {
-        fitMedia(melody1, 1, start, start + 4);
-    } else {
-        fitMedia(melody2, 1, start, start + 4);
-    }
-    fitMedia(drums1, 2, start, start + 4); // this is outside the conditional statement (no indentation)
-}
-
-// Function calls
-verse(1, true);
-verse(7, false);
+include::code-examples/get-user-input-conditional-statement.js.txt[]
 ----
+
+{nbsp} +
 
 [[userinput]]
-=== الحصول على مُدخلات المستخدم
+=== Get User Input
 
-نحن'سنرى كيف نطلب إدخال المستخدم عند الضغط على زر "تشغيل". هذا ممكن بفضل دالة `readInput()`. تحتوي هذه الدالة على عامل من نوع سلسلة( string) ، مثل: "ما هو الإيقاع الذي تريده للموسيقى الخاصة بك؟". عندما يقوم المستخدم بتشغيل المقطع البرمجي ، سيرى نافذة جديدة تحتوي على السلسلة وسيُطلب منه كتابة إجابة. ترجع الدالة `readInput()` ما يكتبه المستخدم هناك.
+We'll see how to ask for user input when the "run" button is pressed. This is possible thanks to the `readInput()` function. This function takes as a parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. The `readInput()` function returns what the user types there.
 
-على سبيل المثال ، انسخ المقطع البرمجي التالي في برنامج نصي جديد ، وقم بتشغيله:
+For example, copy the following code in a new script, and run it:
 
 [role="curriculum-python"]
 [source,python]
 ----
-answer = readInput("What tempo would you like for your music?")
-print(answer)
+include::code-examples/get-user-input-untitled1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-var answer = readInput("What tempo would you like for your music?");
-println(answer);
+include::code-examples/get-user-input-untitled1.js.txt[]
 ----
 
-في بعض الأحيان نريد تحويل قيمة من نوع بيانات إلى آخر. فيما يلي دوال مفيدة:
+We might need to convert the returned user input into a different data type. Here are useful functions:
 
 [role="curriculum-python"]
-* `str()` -يحول أي قيمة إلى سلسلة.
-* `int()` - يحول سلسلة تحتوي على أرقام إلى عدد صحيح (على سبيل المثال: `"3"` يُصبح `3`).
-* `float()` -تحويل سلسلة تحتوي على أرقام مع فاصلة عشرية إلى عدد عشري (على سبيل المثال: `"3.5"` يُصبح `3.5`).
+* `str()` - converts any value into a string.
+* `int()` - converts a string containing digits into an integer (for example: `"3"` becomes `3`).
+* `float()` - convert a string containing digits with a decimal point into a float (for example: `"3.5"` becomes `3.5`).
 
 [role="curriculum-javascript"]
-* `String()` -يحول أي قيمة إلى سلسلة. لاحظ أنه لمرة واحدة' ، إن اسم الدالة يبدأ بحرف كبير.
-* `Number()` -يحول سلسلة إلى رقم(على سبيل المثال:`"3.5"` يُصبح`3.5`).
+* `String()` - converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.
+* `Number()` - converts a string into a number (for example: `"3.5"` becomes `3.5`).
 
-في المثال أدناه ، يتم استخدام إدخال وحدة التحكم لتحديد إيقاع الأغنية. نتأكد من تحويل مدخلات المستخدم إلى عدد صحيح. 
+In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer.
 
 [role="curriculum-python"]
 [source,python]
 ----
-# User input 1: Asking the user for the tempo
-
-# Setup
-from earsketch import *
-
-# asking for tempo
-question = "What tempo would you like for your music؟ Choose a number between 45 and 220"
-answer = readInput(question)
-
-# converting to an integer
-tempo = int(answer)
-
-# setting the tempo
-setTempo(tempo)
-
-# music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
+include::code-examples/get-user-input-user-input-1.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// User input 1: Asking the user for the tempo
-
-// Setup
-
-// asking for tempo
-var question = "What tempo would you like for your music؟ Choose a number between 45 and 220";
-var answer = readInput(question);
-
-// converting to a number
-var tempo = Number(answer);
-
-// setting the tempo
-setTempo(tempo);
-
-// music
-fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
+include::code-examples/get-user-input-user-input-1.js.txt[]
 ----
 
-فيما يلي مثال آخر لما يمكنك فعله بإدخال المستخدم. 
+Here is another example of what you can do with user input.
 
-*Concatenation*هي وسيلة لربط السلاسل معًا باستخدام الرمز `+`.  على سبيل المثال ، ربط السلاسل `"hello"`و`"world"`عائدات الى `"helloworld"`. في المثال التالي ، يُطلب من المستخدم تحديد رقم مقطع. الرقم متسلسل مع`DUBSTEP_BASS_WOBBLE_0` لإنشاء الاسم الكامل للمقطع مثل `DUBSTEP_BASS_WOBBLE_010`.
+*Concatenation* is a means to link strings together, using the `+` symbol.  For example, concatenating the strings `"Hello"` and `"World"` yields `"HelloWorld"`. In the following example, the user is prompted to specify a clip number. The number is concatenated with `DUBSTEP_BASS_WOBBLE_0` to form a complete clip name like `DUBSTEP_BASS_WOBBLE_010`.
 
 [role="curriculum-python"]
 [source,python]
 ----
-# User input 2: Creating a dubstep song with user-specified parameters
-
-# Setup
-from earsketch import *
-setTempo(120)
-
-# Music
-clipNumber = readInput("Type a clip number between 10 and 46: ")
-dubStepClip = "DUBSTEP_BASS_WOBBLE_0"
-finalClip = dubStepClip + clipNumber
-
-# user selected dubstep wobbles
-fitMedia(finalClip, 1, 1, 5)
+include::code-examples/get-user-input-user-input-2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// User input 2: Creating a dubstep song with user-specified parameters
-
-// Setup
-setTempo(120);
-
-// Music
-var clipNumber = readInput("Type a clip number between 10 and 46: ");
-var dubStepClip = "DUBSTEP_BASS_WOBBLE_0";
-var finalClip = dubStepClip + clipNumber;
-
-// user-selected dubstep wobbles
-fitMedia(finalClip, 1, 1, 5);
+include::code-examples/get-user-input-user-input-2.js.txt[]
 ----
 
-.تدريب
+{nbsp} +
+
+.PRACTICE
 ****
-اطلب إدخال من المستخدم لتعديل شيء ما في أغنيتك.
+Ask for a user input to modify something in your song.
 
-فيما يلي أفكار حول الأدوات التي يمكنك استخدامها:
+Here are ideas of tools you can use:
 
-. تسلسل السلسلة ، 
-. تحويل البيانات، 
-. إنشاء عامل مُحدد في وظيفة مخصصة
+. string concatenation,
+. data conversion,
+. creating a specific parameter in a custom function
 ****
+
+{nbsp} +
 
 [[booleanlogic]]
 === Boolean Logic
--المنطق البوليني
 
-دمج المنطق المنطقي والمدخلات من المستخدم في مثال آخر لتفاعل المستخدم.
+We will now combine boolean logic and user input for another example of user interaction.
 
 [role="curriculum-python"]
-أولاً ، سوف' نتعلم عن المنطق البوليني. هل تعلم أن *comparison operatorsعوامل المقارنة- * تساعد في إنشاء قيمة منطقية. على سبيل المثال ، العامل `==`يتحقق مما إذا كانت قيمتان متساويتين ، وإذا كان الأمر كذلك ، يتم تعيين القيمة المنطقية الى`True`.
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `==` checks if two values are equal, and if so the boolean is set to `True`.
 
 [role="curriculum-javascript"]
-أولاً ، سوف' نتعلم عن المنطق البوليني. هل تعلم أن <strong>comparison operatorsعوامل المقارنة-</0-عوامل المقارنة> تساعد في إنشاء قيمة منطقية. على سبيل المثال ، العامل `===` يتحقق مما إذا كانت قيمتان متساويتين ، وإذا كان الأمر كذلك ، يتم تعيين القيمة المنطقية الى`True`.
+Let's first look at boolean logic. You know that *comparison operators* help create a boolean. For example, the operator `===` checks if two values are equal, and if so the boolean is set to `true`.
 
-الآن دعونا نلقي 'نظرة على * العوامل المنطقية-boolean operators *: هذه تساعد في الجمع بين عدة قيم منطقية. هناك 3 عوامل منطقية:
+Now let's look at *boolean operators*: these help combine several booleans. There are three boolean operators:
 
 [role="curriculum-python"]
-* `and-و`: يستقبل تعبيرين منطقيين ، ويعيد `True` فقط إذا كان كلاهما `True` ، غير ذلك فإنه يُرجع `False`. 
-* `or-او`: يستقبل تعبيرين منطقيين ، ويعيد `True` فقط إذا كان أحدهما على الأقل `True` ، غير ذلك فإنه يُرجع `False`.
-* `not-ليس`: يستقبل مُدخلا منطقيًا واحدًا ويعيد القيمة المنطقية المعاكسة (القيمة العكسية).
+* `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+* `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+* `not`: takes one boolean input and returns the opposite (negated) boolean.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
-* `!`: يسمى "ليس": يستقبل مدخلًا منطقيًا واحدًا ويعيد القيمة المنطقية المعاكسة (القيمة العكسية).
+* `&&`: is called "and"; it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+* `||`: is called "or"; it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+* `!`: is called "not"; it takes one boolean input and returns the opposite (negated) boolean.
 
-على سبيل المثال ، إذا كنت تبلغ من العمر 16 عامًا ، فإن الجملة "أنا ' عُمري هو 16" صحيحة والجمل "أنا ' عُمري هو 17" خاطئة. الجملة "'عُمري16 وايضا' 17" (صح وخطأ) غير صحيح لأنك لست تبلغ من العمر 16 و 17 عامًا معًا. لكن الجملة' 16 او'17(صواب أو خطأ) هذا صحيح.
+For example if you are sixteen, the sentence "I'm sixteen" is true and the sentence "I'm seventeen" is false. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
 
 [role="curriculum-python"]
-.تدريب
+.PRACTICE
 ****
-ما رأيك في تقييم التعبيرات التالية؟ `True` or `False`؟
+What do you think the following expressions evaluate to? `True` or `False`?
 
 * `not True`
 * `True and False`
@@ -389,55 +214,34 @@ fitMedia(finalClip, 1, 1, 5);
 ****
 
 [role="curriculum-javascript"]
-.تدريب
+.PRACTICE
 ****
-ما رأيك في تقييم التعبيرات التالية؟ `true` or `false`؟
+What do you think the following expressions evaluate to? `true` or `false`?
 
 * `!true`
 * `true && false`
 * `true || false`
 * `true && true`
-* `(صحيح && خطأ) || صحيح`
+* `(true && false) || true`
 * `true && !false`
 * `!(false || false)`
 ****
 
-استخدم المقطع البرمجي التالي لطباعة الإجابات:
+Use the following code to print the answers:
 
 [role="curriculum-python"]
 [source,python]
 ----
-# Boolean expressions: printing boolean expressions
-
-from earsketch import *
-
-print(not True)
-print(True and False)
-print(True or False)
-print(True and True)
-print((True and False) or True)
-print(True and not False)
-print(not (False or False))
+include::code-examples/get-user-input-boolean-expressions.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Boolean expressions: printing boolean expressions
-
-// Setup
-setTempo(120);
-
-println(!true);
-println(true && false);
-println(true || false);
-println(true && true);
-println((true && false) || true);
-println(true && !false);
-println(!(false || false);
+include::code-examples/get-user-input-boolean-expressions.js.txt[]
 ----
 
-إليك تذكير بإنشاء منطقي، وبعض الأمثلة على العمليات المنطقية:
+Here is a reminder of boolean creation, and some examples of boolean operations:
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -447,174 +251,114 @@ video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
 [[video17ajs]]
 video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
-
-.تدريب
+.PRACTICE
 ****
-سنجمع الآن بين إدخال المستخدم والعمليات المنطقية:
-اكتب نصًا يطلب من المستخدم اختيار النوع ، مع عدد محدود من الخيارات (على سبيل المثال "هيب هوب" و "كلاسيكي"). اعتمادًا على إجابة المستخدم' ، حدد سلسلة إيقاعية تعمل بشكل جيد مع النوع. يمكنك قبول عدة احتمالات ، على سبيل المثال: "HIP HOP" و "hip hop" و "Hip Hop" ستخرج نفس الأغنية.
+Now we will combine user input and boolean operations.
+
+Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Depending on the user's answer, select a beat string that is works well with the genre. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
 ****
 
-مثالا على ذلك:
+Here is an example:
+
 [role="curriculum-python"]
 [source,python]
 ----
-# Boolean operations: Asking user for genre and creating beat accordingly
-
-from earsketch import *
-setTempo(120)
-
-# Sound variables
-kick = OS_KICK02
-hihat = OS_CLOSEDHAT04
-clap = OS_CLAP03
-
-# Beat string variables
-hiphopKickBeat = "0++++---0+++0+++"
-hiphopHihatBeat = "----0---00---000"
-edmKickBeat = "0+++----0+++----"
-edmClapBeat = "----0-------0---"
-
-# Requesting user input
-genre = readInput("What genre is your favourite؟ Hip Hop or EDM?")
-
-# Creating the appropriate rhythm
-if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
-    makeBeat(kick, 1, 1, hiphopKickBeat)
-    makeBeat(hihat, 2, 1, hiphopHihatBeat)
-elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
-    makeBeat(kick, 1, 1, edmKickBeat)
-    makeBeat(clap, 2, 1, edmClapBeat)
-else:
-    print("Sorry we couldn't read the genre you selected. Please run the code again")
-
-# Adding some reverb on track 2
-setEffect(2, REVERB, MIX, 0.1)
+include::code-examples/get-user-input-boolean-operations.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-// Boolean operations: Asking user for genre and creating beat accordingly
-
-// Setup
-setTempo(120);
-
-// Sound variables
-var kick = OS_KICK02;
-var hihat = OS_CLOSEDHAT04;
-var clap = OS_CLAP03;
-
-// Beat string variables
-var hiphopKickBeat = "0++++---0+++0+++";
-var hiphopHihatBeat = "----0---00---000";
-var edmKickBeat = "0+++----0+++----";
-var edmClapBeat = "----0-------0---";
-
-// Requesting user input
-var genre = readInput("What genre is your favourite؟ Hip Hop or EDM?");
-
-// Creating the appropriate rhythm
-if ((genre == "Hip Hop") || (genre == "hip hop") || (genre == "HIP HOP")) {
-    makeBeat(kick, 1, 1, hiphopKickBeat);
-    makeBeat(hihat, 2, 1, hiphopHihatBeat);
-} else if ((genre == "edm") || (genre == "Edm") || (genre == "EDM")) {
-    makeBeat(kick, 1, 1, edmKickBeat);
-    makeBeat(clap, 2, 1, edmClapBeat);
-} else {
-    println("Sorry we couldn't read the genre you selected. Please run the code again");
-}
-
-// Adding some reverb on track 2
-setEffect(2, REVERB, MIX, 0.1);
+include::code-examples/get-user-input-boolean-operations.js.txt[]
 ----
 
-.تحدّ
+{nbsp} +
+
+.CHALLENGE
 ****
-هذا هو تحدي Jukebox: اكتب نصًا يطلب إدخال المستخدم من حيث النوع ، مع 3 خيارات (على سبيل المثال "latino" و "trap" و "dubstep"). بناءً على إجابة المستخدم' ، قم بإنشاء أغنية تتناسب مع النوع.
+This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with three options (for example "latino", "trap" and "dubstep"). Depending on the user's answer, create a song that goes with the genre.
 ****
+
+{nbsp} +
 
 [[chapter8summary]]
-=== الفصل 8 ملخص
+=== Chapter 8 Summary
 
 [role="curriculum-python"]
-* *Return statements*تستخدم في تعريف الدالة لإخراج نتيجة عند استدعاء الدالة
-* `readInput()`سيطلب إدخال المستخدم عند تشغيل مقطعك البرمجي. العامل الوحيد هي سلسلة سيراها المستخدم. يمكنك بعد ذلك استخدام ما كتبه المستخدم في مقطعك البرمجي ، على سبيل المثال لتغيير الإيقاع أو نوع الموسيقى الخاصة بك.
-* تسمح لك بعض الدوال بتحويل البيانات من نوع إلى آخر. `str()` يحول أي قيمة إلى سلسلة.
-`int()`يحول سلسلة تحتوي على أرقام إلى عدد صحيح. `float()`تحويل سلسلة تحتوي على أرقام بعلامة عشرية.
-* يمكنك ربط*concatenate* (رابط) سلاسل معًا: "Hello"+"World" ستكون قيمتها "HelloWorld"
-* *Boolean logic*يتضمن العمليات المنطقية. فيما يلي عوامل التشغيل المنطقية:
-** `and-و`: يستقبل تعبيرين منطقيين ، ويعيد `True` فقط إذا كان كلاهما `True` ، غير ذلك فإنه يُرجع `False`. 
-** `or-او`: يستقبل تعبيرين منطقيين ، ويعيد `True` فقط إذا كان أحدهما على الأقل `True` ، غير ذلك فإنه يُرجع `False`.
-** `not-ليس`: يستقبل مُدخلا منطقيًا واحدًا ويعيد القيمة المنطقية المعاكسة (القيمة العكسية).
-* الآن ، لدينا العديد من الأدوات التي تسمح لنا بإجراء تغييرات: يمكن للإدخال من المستخدم تحديد عناصر معينة في الأغنية. يمكننا إضافة عوامل إلى الدوال التي أنشأناها ، والتي ستحدد ماهية التغيير.
+* *Return statements* can be included in a function definition to output a result when the function is called.
+* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
+* Some functions allow you to convert data from one type to another. `str()` converts any value into a string.
+`int()` converts a string containing digits into an integer. `float()` converts a string containing digits with a decimal point into a float.
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
+* *Boolean logic* includes boolean operations. Here are boolean operators:
+** `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+** `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+** `not`: takes one boolean input and returns the opposite (negated) boolean.
+* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
 
 [role="curriculum-javascript"]
-* *Return statements*<0 إرجاع البيانات, يمكن تضمينها في تعريف دالة لإخراج نتيجة عند استدعاء الوظيفة
-* `readInput()`يطلب الإدخال من المستخدم أثناء تشغيل المقطع البرمجي. العامل الوحيد هي السلسلة التي سيراها المستخدم. يمكنك بعد ذلك استخدام ما كتبه المستخدم في مقطعك البرمجي ، على سبيل المثال لتغيير الإيقاع أو نوع الموسيقى الخاصة بك.
-* تسمح لك بعض الدوال بتحويل البيانات من نوع إلى آخر. على سبيل المثال ، تقوم() str بتحويل البيانات إلى سلسلة. `String()` يحول أي قيمة إلى سلسلة. لاحظ أنه لمرة واحدة' ، إن اسم الدالة يبدأ بحرف كبير.  `() Number`يحول سلسلة إلى رقم.
-* يمكنك ربط*concatenate* (رابط) سلاسل معًا: "Hello"+"World" ستكون قيمتها "HelloWorld"
-* *Boolean logic*يتضمن العمليات المنطقية. هناك عوامل منطقية:
-** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
-** `!`: يسمى "ليس": يستقبل مدخلًا منطقيًا واحدًا ويعيد القيمة المنطقية المعاكسة (القيمة العكسية).
-* الآن ، لدينا العديد من الأدوات التي تسمح لنا بإجراء تغييرات: يمكن للإدخال من المستخدم تحديد عناصر معينة في الأغنية. يمكننا إضافة عوامل إلى الدوال التي أنشأناها ، والتي ستحدد ماهية التغيير.
-
-
-
+* *Return statements* can be included in a function definition to output a result when the function is called.
+* `readInput()` will request a user input when you run your code. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
+* Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` converts any value into a string. Note that, for once, it's a function name that starts with an uppercase letter.  `Number()` converts a string into a number.
+* You can *concatenate* (link) strings together: "Hello"+"World" will evaluate to "HelloWorld".
+* *Boolean logic* includes boolean operations. Here are boolean operators:
+** `&&`: is called "and", it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+** `||`: is called "or": it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+** `!`: is called "not": it takes one boolean input and returns the opposite (negated) boolean.
+* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
 
 [[chapter-questions]]
-=== الأسئلة
+=== Questions
 
 [question]
 --
-أي مما يلي يمكن اعتباره مثالاً على تحويل نوع البيانات؟
+Which of the following would be considered an example of data type conversion?
+
 [answers]
-* تحويل السلسلة إلى رقم.
-* يخزن قيمة الإيقاع ، التي يحددها المستخدم ، في متغير.
-* استخدام ` readInput () ` مطالبة نوع ما من المستخدم.
-* إنتاج قيمة منطقية من خلال عامل مقارنة.
+* Turning a string into a number.
+* Storing a user-defined tempo in a variable.
+* Using `readInput()` to ask a user for a genre.
+* Producing a Boolean through a comparison operator.
 --
 
 [role="curriculum-python"]
 [question]
 --
-ماذا سيكون ناتج مقتطف المقطع البرمجي التالي (على سبيل المثال ، ما الذي سيتم طباعته على وحدة التحكم)؟
+What would the output of this block of code be (what would print to the console)?
+
 [source,python]
 ----
-n = 5
-if (n * 3) == 15:
-    m = 5 + n
-    print(m)
+not (True and (4 > 5))
 ----
+
 [answers]
-* `10`
-* `n`
 * `True`
+* `5`
+* `4`
 * `False`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-ماذا سيكون ناتج مقتطف المقطع البرمجي التالي (على سبيل المثال ، ما الذي سيتم طباعته على وحدة التحكم)؟
+What would the output of this block of code be (what would print to the console)?
+
 [source,javascript]
 ----
-var n = 5;
-if (n * 3 == 15) {
-    var m = 5 + n;
-    println(m);
-}
+!(true && (4 > 5));
 ----
+
 [answers]
-* `10`
-* `n`
-* `True`
-* `False`
+* `true`
+* `4`
+* `false`
+* `5`
 --
 
 [question]
 --
-أي مما يلي مثال على التسلسل-concatenation؟
+Which of the following is an example of concatenation?
+
 [answers]
 * `x = beatstring1 + beatstring2`
 * `x = beatstring1.beatstring2`
@@ -625,29 +369,23 @@ if (n * 3 == 15) {
 [role="curriculum-python"]
 [question]
 --
-كيف يتم تقييم التعبير التالي؟
-[source,python]
-----
-not (True and (4 > 5))
-----
+How would you obtain the boolean True with the booleans True and False?
+
 [answers]
-* `True`
-* `False`
-* `! true`
-* `"false"`
+* `True or False`
+* `not True`
+* `True and False`
+* `true or false`
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-كيف يتم تقييم التعبير التالي؟
-[source,javascript]
-----
-!(true && (4 > 5));
-----
+How would you obtain the boolean true with the booleans true and false?
+
 [answers]
-* `true`
-* `false`
-* `True`
-* `"false"`
+* `true||false`
+* `!true`
+* `true&&false`
+* `True||False`
 --
