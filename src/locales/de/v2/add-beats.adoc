@@ -1,0 +1,339 @@
+[[addsomebeats]]
+== Füge ein paar Beats hinzu!
+
+:nofooter:
+
+In diesem Kapitel lernst du, wie du deine eigenen Beats erstellst! Wir werden uns Variablen ansehen, eine neue Funktion namens `makeBeat()`, und Beats aus verschiedenen Genres.
+
+[[variables]]
+=== Variablen
+
+[role="curriculum-python curriculum-mp4"]
+[[video2py]]
+video::./videoMedia/002-05-Variables-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video2js]]
+video::./videoMedia/002-05-Variables-JS.mp4[]
+
+Was ist eine Variable? Eine *Variable* ist ein Name für eine Datenmenge, die wir später in unserem Programm verwenden wollen.
+
+In EarSketch können die Variablen in deinen Skripten verweisen auf:
+
+* Eine *Zahl*, wie eine Tracknummer oder eine Taktnummer
+* Eine *Datei*, wie eine Audiodatei
+* Ein *String*, wie der Name eines Soundclips oder einiger Songtexte
+* Ein *Zeichen*, wie `A`, `a`, `2` oder `=`
+
+Ein *Zeichen* kann jede Zahl, jeder Buchstabe oder jedes Symbol sein. Ein *String* ist eine Reihe von Zeichen in Anführungszeichen, wie `"Hallo Welt 123!"`.
+
+Um eine Variable zu verwenden,
+
+[role="curriculum-python"]
+. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Das Schreiben von `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
+. Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Du kannst die Variable nur verwenden, nachdem sie zugewiesen wurde, nicht vorher. Schreibe z.B. `fitMedia(synth1, 1, 1, 3)`.
+. Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
+
+[role="curriculum-javascript"]
+. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Wir verwenden auch den Befehl `var` am Anfang der Zeile. Das Schreiben von `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
+. Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Schreibe z.B. `fitMedia(synth1, 1, 1, 3);`.
+. Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-instead-of-this.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-instead-of-this.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Verwende in deinen vorherigen Skripten Variablen, um die Namen deiner Soundclips zu speichern. Die Beispiele unten helfen dir dabei. Stelle sicher, dass deine Variablen kurze und verständliche Namen haben (wie `bass` oder `voice_1`).
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-variables.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-variables.js.txt[]
+----
+
+Beachte, dass es wichtig ist, deine Variable verständlich und aussagekräftig zu benennen. Gib zum Beispiel `synth1` anstelle von `music1` oder `test` an, was keine Informationen liefert. Wenn du oder jemand anderes deinen Code liest, kann er so erkennen, worauf du dich beziehst.
+
+Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert einer Konstante ändert sich jedoch nie. Zum Beispiel ist `TECHNO_SYNTHPLUCK_001` eine Konstante in EarSketch , sie bezieht sich auf die entsprechende Soundkonstante. Konventionell werden Konstantennamen großgeschrieben und verwenden Unterstriche anstelle von Leerzeichen.
+
+[[drumbeatstrings]]
+=== Beat Strings
+
+Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
+
+* *Rhythmus* ist ein Soundmuster, das oft wiederholt wird.
+* Das *Tempo* ist die Geschwindigkeit der Musik in BPM (beats per minute).
+* Ein *Beat* ist wie der "stetige Puls" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
+* Ein *Takt* (measure) ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
+* Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in 2 *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
+* Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e and a 2 e and a 3 e and a 4 e and a. .."
+* 1 Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
+* Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW kannst du das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
+
+[[imediameasurepng]]
+.Ein Takt (measure)
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
+
+[[imediabeatpng]]
+.Ein Beat
+[caption="Figure 3.2.2: "]
+image::../media/U1P1/beat.png[A beat]
+
+[[imediasixteenthnotepng]]
+.Eine Sechzehntelnote
+[caption="Figure 3.2.3: "]
+image::../media/U1P1/sixteenthnote.png[A sixteenth note]
+
+.ÜBUNG
+****
+Höre dir deinen Lieblingssong an und versuche, im Takt zu klatschen. Du kannst diese Übung auch mit deiner Nachbarin oder deinem Nachbarn machen.
+****
+
+Wir werden jeden unserer Rhythmen in einem *beat* String zusammenstellen.
+
+Ein *Beat* String ist ein String, der die Zeichen `0`, `+` oder `-` verwendet. Als Erinnerung: Ein String ist ein Datentyp, der eine Reihe von Zeichen (wie `0` oder `+`) in Anführungszeichen enthält.
+
+Zum Beispiel: `"0-00-00-0+++0+0+"`
+
+* `0` startet die Wiedergabe des perkussiven Soundclips (z. B. ein Schlag auf die Trommel).
+* `+` erweitert den Audioclip in den nächsten Sub-Beat. Es folgt immer einem `0` oder `+`.
+* `-` ist eine Pause, also Stille.
+
+.ÜBUNG
+****
+Versuche für jede der folgenden Zeichenfolgen auf die Nullen zu klatschen. Höre dir dann das entsprechende Audio an und überprüfe, ob du richtig lagst. Diese Übung hilft dir zu verstehen, wie die Zeichenfolgen der Drumbeats funktionieren.
+****
+
+Hier sind einige Beispiele für 1-Takt Beat Strings:
+
+Viertelnoten: `"0\+++0+++0\+++0+++"`
+(gelesen: "1, 2, 3, 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
+++++
+
+Achtelnoten: `"0+0+0+0+0+0+0+0+"`
+(gelesen: "1 und 2 und 3 und 4")
+
+++++
+<0>audioMedia/beatString11.mp3</0>
+++++
+
+Sechzehntel Noten: `"00000000000000"`
+(Das ist sehr schnell, je nach Tempo)
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
+++++
+
+`"0-0-0---0-0-0---"`
+(gelesen: "1 und 2, 3 und 4")
+
+++++
+<0>audioMedia/beatString2.mp3</0>
+++++
+
+`"0---0---0-0-0---"`
+(gelesen: "1, 2, 3 und 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
+++++
+
+`"0---0---0---0000"`
+(gelesen: "1, 2, 3, 4 e and a")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
+++++
+
+{nbsp} +
+
+////
+ADDITIONAL VIDEO TO BE ADDED
+See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
+video revamping tab
+////
+
+[[makebeat]]
+=== Die `makeBeat()` Funktion
+
+Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden wir den Begriff „Beat“ als Abkürzung für Drumbeat: ein wiederholtes rhythmisches Muster aus perkussiven Sounds. Wir werden die `makeBeat()` Funktion mit 4 Argumenten verwenden:
+
+. *Sound*: Eine Soundkonstante. Sie können den Genrefilter im Sound-Browser verwenden, um "MAKEBEAT" auszuwählen. Dies sind kurze Klänge passend für Beat Patterns.
+. *Track*: Die Tracknummer
+. *Start*: Der Starttakt
+. *Beat*: Ein String, der aus den Zeichen `"0"`, `"+"` und `"-"` besteht.
+
+Zum Beispiel: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` wird dein Muster `0--0--000--00-0-` auf Track 1 setzen, mit dem Sound `DUBSTEP_FILTERCHORD_002`.
+
+In diesem Video erfährst du mehr:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12py]]
+video::./videoMedia/3_3_makebeat_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12js]]
+video::./videoMedia/3_3_makebeat_js.mp4[]
+
+Hier ist das Beispiel aus dem Video:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-multi-beat.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-multi-beat.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Erstelle eine neue Variable `beatString1`, eine 16-stellige Zeichenkette mit den Zeichen `„0“`, `„+“`, und `„-“`.
+Benutze die `makeBeat()` Funktion, um dein Beat Muster deinem Song auf Track `1` hinzuzufügen.
+Bitte beachte Folgendes:
+
+. Du solltest deine Variablen durch das Symbol `=` zuweisen, bevor du sie verwendest.
+. Genau wie `fitMedia()`, startet die `makeBeat()` Funktion mit einem Kleinbuchstaben (`m`) und hat einen Großbuchstaben in der Mitte (`B`).
+. Genau wie `fitMedia()` hat die `makeBeat()` Funktion 4 durch Kommata getrennte Parameter.
+
+Wenn du deine Musik hörst und dir die erste Version nicht gefällt, ist das völlig in Ordnung. Verändere deinen Beat, damit er immer besser klingt, bis dir gefällt, was du hast.
+****
+
+{nbsp} +
+
+.ÜBUNG
+****
+Erstelle ein neues Skript und füge zwei oder drei Sounds mit `fitMedia()` hinzu. Verwende Variablen, um deine Soundkonstanten zu speichern.
+Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzufügen. Du kannst sie entweder gleichzeitig auf zwei verschiedenen Tracks oder nacheinander auf einem einzigen Track abspielen.
+****
+
+[[beatsandgenres]]
+=== Erstelle einen Beat passend zu deinem Musikgenre
+
+Nachdem du nun angefangen hast, mit `makeBeat()` und Beat-Strings zu arbeiten, lass uns einige grundlegende Beat-Patterns erkunden, die du verwenden kannst.
+Du hast gelernt, dass ein Musikgenre eine Kategorie der künstlerischen Komposition (z. B. Musik) ist, die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Genauso haben einige Genres auch charakteristische Beat-Muster. Im Folgenden findest du einige Beispiele:
+
+Wir werden drei Arten von Sound verwenden: Kick (Spur `1`), Snare (Spur `2`) und Hihat (Spur `3`). Wir werden für jeden dieser Sounds eine `makeBeat()` Funktion auf drei verschiedenen Tracks verwenden.
+
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
+
+Hier ist der entsprechende Code:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-examples-of-beats.js.txt[]
+----
+
+[[chapter3summary]]
+=== Zusammenfassung von Kapitel 3
+
+* In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
+* *Variablen* erstellen einen Platz im Computerspeicher, um Daten zu speichern.
+* Du musst zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
+* Ein *String* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
+* Percussive Sounds können mit dem GENRE-Filter im Sound-Browser gefunden werden: Wähle den Künstler MAKEBEAT aus.
+* Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat-String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
+* `makeBeat()` verwendet vier Argumente:
+** *Sound*: Eine Soundkonstante
+** *Track*: Die Tracknummer
+** *Start*: Der Starttakt
+** *Beat*: Ein String, der aus den Zeichen `"0"`, `"+"` und `"-"` besteht.
+* Verschiedene Beat Muster entsprechen oft unterschiedlichen musikalischen Genres.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Welche dieser Optionen ist ein String?
+
+[answers]
+* "Fünf"
+* 5
+* FÜNF
+* Fünf
+--
+
+[question]
+--
+Was bedeutet die „0“ in einem Beat-Muster-String?
+
+[answers]
+* Wiedergabe des Clips starten
+* Pause
+* Clip verlängern
+* Clip beenden
+--
+
+[question]
+--
+In EarSketch ist ein Takt ...
+
+[answers]
+* 4 Schläge lang
+* 4 Sub-Beats lang
+* 16 Schläge lang
+* 1 Viertelnote
+--
+
+[question]
+--
+Eine sechzehntel Note ist...
+
+[answers]
+* ein Viertel einer Viertelnote
+* ein halber Schlag
+* ein Viertel eines Taktes
+* 1 Takt (measure)
+--
+
+[question]
+--
+Um die `makeBeat()` Funktion zu verwenden, wie ist die Reihenfolge der Parameter, die du angeben musst?
+
+[answers]
+* Clipname, Track, Starttakt, Beat String
+* Tempo, Track, Starttakt, Endtakt
+* Clipname, Starttakt, Endtakt, Beat String
+* Beat String, Track, Starttakt, Clipname
+--
