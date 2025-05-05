@@ -1,0 +1,19 @@
+# Automatisches Mixen 1: Wenn Track 1 lauter ist als Track 2, werden wir die Lautstärke reduzieren
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Erstellen von 2 Tracks
+melody1 = RD_CINEMATIC_SCORE_STRINGS_14
+melody2 = RD_UK_HOUSE__5THCHORD_1
+fitMedia(melody1, 1, 1, 9)
+fitMedia(melody2, 2, 1, 9)
+
+# Auswertung der Lautstärke der Tracks
+loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
+loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
+
+# Wenn Track 1 lauter als Track 2 ist, werden wir die Lautstärke reduzieren
+if loudnessTrack1 > loudnessTrack2:
+    setEffect(1, VOLUME, GAIN, -10)
