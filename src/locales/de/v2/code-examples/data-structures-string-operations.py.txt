@@ -1,4 +1,4 @@
-# String-Operationen: Einen Beat String in einen längeren Beat String erweitern
+# String-Operationen: Einen Beat-String in einen längeren Beat-String erweitern
 
 # Setup
 from earsketch import *
@@ -13,11 +13,11 @@ def expander(beatString):
     für i im Bereich(0, len(beatString)):
         beatSlice = beatString[0:i]
         newBeat = newBeat + beatSlice
-    # den neuen Beat String zurückgeben, damit er außerhalb der Funktion verwendet werden kann
+    # den neuen Beat-String zurückgeben, damit er außerhalb der Funktion verwendet werden kann
     return newBeat
 
 finalBeat = expander(initialBeat)
 print(finalBeat)
 
-# makeBeat(drumInstr, 1, 1, initialBeat) # ursprünglicher Beat String
+# makeBeat(drumInstr, 1, 1, initialBeat) # ursprünglicher Beat-String
 makeBeat(drumInstr, 1, 1, finalBeat)
