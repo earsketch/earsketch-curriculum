@@ -34,7 +34,7 @@ include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 for-loops in Python bestehen aus 3 grundlegenden Teilen:
 
 [role="curriculum-javascript"]
-for-loops in JavaScript bestehen aus 4 grundlegenden Teilen:
+for-loops in JavaScript bestehen aus vier grundlegenden Teilen:
 
 [[loop-components-PY]]
 .Die grundlegenden Bestandteile eines for-loops
@@ -170,7 +170,7 @@ Der *Interpreter* liest und führt ein Skript aus. Die Reihenfolge, in der er au
 
 Eine Schleife ist eine *Kontroll-Flow-Anweisung*, die die Reihenfolge ändert. Am Ende eines loop bodys springt er zurück nach oben in die Schleife.
 
-Diese Animation zeigt, wie sich der Kontroll-Flow in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *iteration*, oder Wiederholung des Schleifenkörpers ändert:
+Diese Animation zeigt, wie sich der Kontroll-Flow in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *Iteration*, (Wiederholung) des Schleifenkörpers ändert:
 
 [[loop-py]]
 .Schritt für Schritt durch einen for-loop
@@ -283,7 +283,7 @@ Du hast eine Liste möglicher Fehler in Kapitel 1 gesehen. Hier sind einige weit
 . *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
 . *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
 
-Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine vollständige Beschreibung der verschiedenen Fehlertypen und was du tun kannst, um sie zu vermeiden.
+Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine vollständige Beschreibung der verschiedenen Fehlertypen (in Englisch) und was du tun kannst, um sie zu vermeiden.
 
 [[musicaltips]]
 === Musikalische Tipps
