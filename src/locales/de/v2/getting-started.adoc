@@ -10,7 +10,7 @@ In diesem Kapitel erfährst du, wie EarSketch funktioniert. Du wirst Sounds in d
 
 :nofooter:
 
-In EarSketch gibst du dem Computer Anweisungen, indem du Code schreibst. Eine Codezeile ist eine Anweisung. Alle Anweisungen zusammen werden als Programm bezeichnet (diese Anweisungen können auch als Algorithmus bezeichnet werden). So wie das Befolgen eines Rezepts in einem Kochbuch zu einem gekochten Gericht führen kann, kann das Ausführen eines Programms in EarSketch zu einem Song führen. Wie funktioniert es? Finde es im Video heraus!
+In EarSketch gibst du dem Computer Anweisungen, indem du Code schreibst. Eine Codezeile ist eine Anweisung. Alle Anweisungen zusammen werden als Programm bezeichnet (diese Anweisungen können auch als Algorithmus bezeichnet werden). So wie das Befolgen eines Rezepts in einem Kochbuch zu einem gekochten Gericht führen kann, kann das Ausführen eines Programms in EarSketch zu einem Song führen. Wie funktioniert es? Finde es im Video (in Englisch) heraus!
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -106,7 +106,7 @@ Auf der tiefsten Ebene führen Computer Code mit *binary* aus. Dies bedeutet, da
 
 Jetzt, wo du dein erstes Skript erstellt hast, kannst du dich an deine Musik machen!
 
-Schaue dir dieses Video an, um zu sehen, wie du einen Audioclip zu deinem Song hinzufügst:
+Schaue dir dieses Video (in Englisch) an, um genauer zu sehen, wie du einen Audioclip zu deinem Song hinzufügst:
 
 [role="curriculum-python curriculum-mp4"]
 [[video110py]]
@@ -135,7 +135,7 @@ Die obige Anweisung platziert den Sound `Y18_DRUM_SAMPLES_2` auf Track `2` von T
 
 Versuche `fitMedia()` zu einem Skript hinzuzufügen.
 
-Wenn du alle deine Parameter hinzugefügt hast, drücke _run_. Du wirst deine Sounds in der DAW visualisiert sehen. Drücke _play_ um deinen Song zu hören.
+Wenn du alle deine Parameter hinzugefügt hast, drücke _AUSFÜHREN_. Du wirst deine Sounds in der DAW visualisiert sehen. Drücke _play_ um deinen Song zu hören.
 
 [role="curriculum-javascript"]
 Hinweis: In JavaScript kann am Ende jeder Anweisung optional ein Semikolon `;` hinzugefügt werden. Die Verwendung des Semikolons ist deine persönliche Wahl.
@@ -149,7 +149,7 @@ OPTIONAL
 *_Der Sound-Browser_*
 
 Der *Sound-Browser* bietet eine Bibliothek von über viertausend Sounds, die du in deiner Musik verwenden kannst.
-Zu den Mitwirkenden gehören prominente Musiker
+Zu den Mitwirkenden gehören prominente Musiker wie
 https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
 https://en.wikipedia.org/wiki/Ciara[Ciara^],
 https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
@@ -290,7 +290,7 @@ Hier ist die Lösung
 END OF OPTIONAL
 ////
 
-Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine Beschreibung der verschiedenen Fehlertypen und was du tun kannst, um sie zu vermeiden.
+Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine Beschreibung der verschiedenen Fehlertypen (in Englisch) und was du tun kannst, um sie zu vermeiden.
 
 ////
 TODO: when options are ready, modify the link
