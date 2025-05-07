@@ -221,15 +221,15 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 Ici, nous avons utilisé la fonction `range()` , mais vous pouvez également incrémenter (augmenter) ou décrémenter (diminuer) une variable en utilisant le type d'expression suivant : `measure = measure + 1`. Cela signifie que « measure » est maintenant égal à sa valeur précédente +1. Vous pouvez aussi utiliser le raccourci `+=` (ou `-=` pour décrémenter). Vous pouvez utiliser le raccourci `+=` (ou `-=` pour décrémenter) de la manière suivante : `measure += 1` est équivalent à `measure = measure + 1`. Et `measure -= 1` est équivalent à `measure = measure - 1`.
 
 [role="curriculum-python"]
-* 1. N'oubliez pas d'initialiser les variables avec l'expression `var` !
-* 1. Si vous voulez décrémenter par une valeur supérieure à un, utilisez `measure -= 2`.
+* 1. Si vous voulez incrémenter par une valeur supérieure à un, utilisez `measure += 2`.
+* 1. 2.
 
 [role="curriculum-javascript"]
 Ici, nous avons écrit `measure = measure + 4`, ce qui signifie que « measure » est maintenant égale à sa valeur précédente +4. Vous pouvez détecter une erreur en écrivant // avant une ligne de code. Voici une méthode de raccourci pour incrémenter (ou décrémenter) un compteur :
 
 [role="curriculum-javascript"]
-* `measure++` ou `measure += 1` incrémente « measure » par 1. N'oubliez pas d'initialiser les variables avec l'expression `var` !
-* `measure--` ou `measure -= 1` décrémente « measure » par 1. Si vous voulez décrémenter par une valeur supérieure à un, utilisez `measure -= 2`.
+* `measure++` ou `measure += 1` incrémente « measure » par 1. Si vous voulez incrémenter par une valeur supérieure à un, utilisez `measure += 2`.
+* `measure--` ou `measure -= 1` décrémente « measure » par 1. 2.
 
 [[debuggingtips]]
 === Astuces de débogage
