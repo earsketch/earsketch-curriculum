@@ -188,7 +188,7 @@ Bei dem Urheberrecht geht es nicht nur darum, Menschen in Schwierigkeiten zu bri
 
 Wenn du Sounds in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Sounds zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
 
-Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+-
 
 [[chapter2summary]]
 === Zusammenfassung von Kapitel 2
