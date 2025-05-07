@@ -1,0 +1,339 @@
+[[addsomebeats]]
+== Add some Beats!
+
+:nofooter:
+
+In this chapter you will learn how to make your own beats! We'll look at variables, a new function called `makeBeat()`, and beats from different genres.
+
+[[variables]]
+=== Variables
+
+[role="curriculum-python curriculum-mp4"]
+[[video2py]]
+video::./videoMedia/002-05-Variables-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video2js]]
+video::./videoMedia/002-05-Variables-JS.mp4[]
+
+What is a variable? A *variable* is a name given to a piece of data that we plan to use later in our program.
+
+In EarSketch, the variables in your scripts may point to:
+
+* A *number*, like a track number or a measure number
+* A *file*, like an audio file
+* A *string*, like the name of a sound clip or some lyrics
+* A *character*, like `A`, `a`, `2`, or `=`
+
+A *character* can be any  number, letter or symbol. A *string* is a series of characters with quotation marks around it, like `"Hello World 123!"`.
+
+To use a variable,
+
+[role="curriculum-python"]
+. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. Writing `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
+. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
+. Then you need to call the variable: use `synth1` in your code. You can only use the variable after it has been assigned, not before. For example, write `fitMedia(synth1, 1, 1, 3)`.
+. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+
+[role="curriculum-javascript"]
+. You first have to *assign* it. We use the symbol `=`, which is called the *assignment operator*. We also use the command `var` at the beginning of the line. Writing `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
+. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
+. Then you need to call the variable: use `synth1` in your code. For example, write `fitMedia(synth1, 1, 1, 3);`.
+. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-instead-of-this.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-instead-of-this.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-variables.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-variables.js.txt[]
+----
+
+Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. This way, when you or someone else reads your code, they can see what you are referring to.
+
+A *constant* is similar to a variable because it stores values. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. By convention, constant names are capitalized and use underscores instead of spaces.
+
+[[drumbeatstrings]]
+=== Beat Strings
+
+Let's first learn some basic concepts about rhythm:
+
+* *Rhythm* is a pattern of sound, often repeated.
+* The *tempo* is the speed of the music in BPM (beats per minute).
+* A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
+* A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
+* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4...." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and...."
+* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
+* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
+* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
+
+[[imediameasurepng]]
+.A measure
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
+
+[[imediabeatpng]]
+.A beat
+[caption="Figure 3.2.2: "]
+image::../media/U1P1/beat.png[A beat]
+
+[[imediasixteenthnotepng]]
+.A sixteenth note
+[caption="Figure 3.2.3: "]
+image::../media/U1P1/sixteenthnote.png[A sixteenth note]
+
+.PRACTICE
+****
+Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
+****
+
+We'll compose each of our rhythms in a *beat* string.
+
+A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
+
+For example: `"0-00-00-0+++0+0+"`
+
+* `0` starts playing the percussive sound clip (one hit of the drum, for example).
+* `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
+* `-` is a rest, meaning silence.
+
+.PRACTICE
+****
+For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work.
+****
+
+Here are some examples of 1-measure beat strings:
+
+Quarter notes: `"0\+++0+++0\+++0+++"`
+(read: "1, 2, 3, 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
+++++
+
+Eighth notes: `"0+0+0+0+0+0+0+0+"`
+(read: "1 and 2 and 3 and 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
+++++
+
+Sixteenth notes: `"0000000000000000"`
+(that's very fast, depending on the tempo)
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
+++++
+
+`"0-0-0---0-0-0---"`
+(read: "1 and 2, 3 and 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
+++++
+
+`"0---0---0-0-0---"`
+(read: "1, 2, 3 and 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
+++++
+
+`"0---0---0---0000"`
+(read: "1, 2, 3, 4 e and a")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
+++++
+
+{nbsp} +
+
+////
+ADDITIONAL VIDEO TO BE ADDED
+See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
+video revamping tab
+////
+
+[[makebeat]]
+=== The `makeBeat()` function
+
+Now let's see how you can make your own beat. Here we use the term "beat" as a shorthand for drumbeat: a repeated rhythmic pattern of percussive sounds. We will use the `makeBeat()` function, with 4 arguments:
+
+. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
+. *Track*: The track number
+. *Start*: The starting measure
+. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+
+For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
+
+Let's see more details with this video:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12py]]
+video::./videoMedia/3_3_makebeat_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12js]]
+video::./videoMedia/3_3_makebeat_js.mp4[]
+
+Here is the example shown in the video:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-multi-beat.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-multi-beat.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
+Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
+Please note that:
+
+. You should assign your variables with the `=` symbol before using them.
+. Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
+. Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
+
+When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
+****
+
+{nbsp} +
+
+.PRACTICE
+****
+Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
+Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
+****
+
+[[beatsandgenres]]
+=== Create a beat based on your musical genre
+
+Now that you've started working with `makeBeat()` and beat strings, let's explore some basic beat patterns that you can use.
+You've learned that a musical genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Similarly, some genres have signature beat patterns. Below are some examples:
+
+We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
+
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
+
+Here is the corresponding code:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-examples-of-beats.js.txt[]
+----
+
+[[chapter3summary]]
+=== Chapter 3 Summary
+
+* In EarSketch, 1 measure is divided into 4 beats, or 4 quarter notes. 1 beat is divided into 4 sixteenth notes.
+* *Variables* create a space in computer memory to store data.
+* You first need to assign the value (data) to the variable name using the sign `=`. Then you can use the variable by writing its name in the code.
+* A *string* is a data type that consists of a series of characters encapsulated by single or double quotes.
+* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
+* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
+* `makeBeat()` takes four arguments:
+** *Sound*: A sound constant
+** *Track*: The track number
+** *Start*: The starting measure
+** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+* Different beat patterns often correspond to different musical genres.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+Which of these options is a string?
+
+[answers]
+* "Five"
+* 5
+* FIVE
+* Five
+--
+
+[question]
+--
+What does "0" represent in a beat pattern string?
+
+[answers]
+* Start playing the clip
+* Rest
+* Extend the clip
+* End the clip
+--
+
+[question]
+--
+In EarSketch, one measure is...
+
+[answers]
+* 4 beats long
+* 4 sub-beats long
+* 16 beats long
+* 1 quarter note
+--
+
+[question]
+--
+One sixteenth note is...
+
+[answers]
+* a quarter of a quarter note
+* half a beat
+* a quarter of a measure
+* 1 measure
+--
+
+[question]
+--
+To use the `makeBeat()` function, what is the order of parameters you need to provide?
+
+[answers]
+* clip name, track, start measure, beat string
+* tempo, track, start measure, end measure
+* clip name, start measure, end measure, beat string
+* beat string, track, start measure, clip name
+--

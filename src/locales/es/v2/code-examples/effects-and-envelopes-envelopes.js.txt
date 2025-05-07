@@ -7,6 +7,5 @@ setTempo(120);
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
 // Hace un _effect ramp_ (rampa del efecto) entre los compases 1 y 3, yendo desde -60dB hasta 0dB.
-
 // Esto es un _fade in_.
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);

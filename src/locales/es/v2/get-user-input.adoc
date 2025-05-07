@@ -19,8 +19,8 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
 * Además de requerir ciertos argumentos (parámetros), las funciones pueden generar un valor. En programación, le llamamos a ésto devolver un valor.
-* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: 1. pide que la función devuelva un valor cuando se llama. 2. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
-* Para usar el valor que la función devuelve, crea una variable y asígnala a la llamada a función. Recuerda que las variables no llevan acento.
+* La *declaración de retorno* es una declaración dentro del cuerpo de la función que: 1. 2. señala que la función se detenga. Si hay algunas declaraciones después de la palabra clave `return`, se ignorarán.
+* Para usar el valor que la función devuelve, crea una variable y asígnala a la llamada a función.
 * No es obligatorio tener una declaración de retorno. Sin una declaración de retorno una función no genera ningún valor. `fitMedia()` y `setEffect()` son ejemplos de funciones que no devuelven nada.
 
 Aquí hay un ejemplo usando código:
@@ -83,7 +83,7 @@ En el cuerpo de la función, debes tener una declaración condicional que evalua
 Entonces llama a la función en compases diferentes escogiendo variaciones diferentes.
 ****
 
-Aquí hay un ejemplo usando código:
+Aquí hay un ejemplo:
 
 [role="curriculum-python"]
 [source,python]
@@ -188,8 +188,8 @@ Primero vamos a considerar la lógica booleana. Sabes que los *operadores de com
 Ahora vamos a considerar los *operadores booleanos*: ayudan a combinar varios booleanos. Hay 3 operadores booleanos:
 
 [role="curriculum-python"]
-* `and` ("y" en español): requiere 2 valores booleanas y devuelve `True` sólo cuando los dos valores son `True` (ciertos). De lo contrario devuelve `False`.
-* `or` ("o" en español): requiere 2 valores booleanos y devuelve `True` cuando por lo menos 1 valor es `True`. De lo contrario devuelve `False`.
+* `and` ("y" en español): requiere 2 valores booleanas y devuelve `True` sólo cuando los dos valores son `True` (ciertos).
+* `or` ("o" en español): requiere 2 valores booleanos y devuelve `True` cuando por lo menos 1 valor es `True`.
 * `not` ("no" en español): requiere 1 valor booleano y devuelve el booleano opuesto.
 
 [role="curriculum-javascript"]
@@ -221,7 +221,7 @@ Según tus cálculos, ¿a qué equivalen las siguientes expresiones? ¿`true` o 
 * `!true`
 * `true && false`
 * `true || false`
-* `true || false`
+* De lo contrario devuelve `False`.
 * `(true && false) || true`
 * `true && !false`
 * `!(false || false)`
@@ -291,8 +291,8 @@ Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario 
 `int()` convierte una cadena con dígitos en un número entero. `float()` convierte una cadena con dígitos y un punto decimal en un float, o número decimal.
 * Se puede *concatenar* (unir) cadenas: "Hola"+"Mundo" se combinarán para formar "HolaMundo".
 * La *lógica booleana* incluye operaciones booleanas. Aquí están los operadores booleanos:
-** `and` ("y" en español): requiere 2 valores booleanas y devuelve `True` sólo cuando los dos valores son `True` (ciertos). De lo contrario devuelve `False`.
-** `or` ("o" en español): requiere 2 valores booleanos y devuelve `True` cuando por lo menos 1 valor es `True`. De lo contrario devuelve `False`.
+** `and` ("y" en español): requiere 2 valores booleanas y devuelve `True` sólo cuando los dos valores son `True` (ciertos).
+** `or` ("o" en español): requiere 2 valores booleanos y devuelve `True` cuando por lo menos 1 valor es `True`.
 ** `not` ("no" en español): requiere 1 valor booleano y devuelve el booleano opuesto.
 * Ahora tienes varias herramientas para introducir variaciones en tu música: las respuestas del usuario pueden determinar los elementos. Puedes añadir un parámetro a tu función personalizada para seleccionar una variación cuando llames a tu función.
 
@@ -302,8 +302,8 @@ Este es el desafío del _Jukebox_: escribe un script que pedirá que el usuario 
 * Algunas funciones permiten que conviertas los datos de un tipo a otro. Por ejemplo, str() convierte los datos en una cadena. `String()` - convierte a cualquier valor en una cadena. Toma en cuenta que esta vez el nombre de la función empieza con una letra en mayúscula.  `Number()` convierte una cadena en un número.
 * Se puede *concatenar* (unir) cadenas: "Hola"+"Mundo" se combinarán para formar "HolaMundo".
 * La *lógica booleana* incluye operaciones booleanas. Aquí están los operadores booleanos:
-** `&&`: se llama "and" ("y" en español); requiere 2 valores booleanos y devuelve `true` sólo cuando los dos valores son `true` (ciertos). De lo contrario devuelve `false`.
-** `||`: se llama "or" ("o" en español); requiere 2 valores booleanos y devuelve `true` cuando por lo menos 1 valor es `true`. De lo contrario devuelve `false`.
+** `&&`: se llama "and" ("y" en español); requiere 2 valores booleanos y devuelve `true` sólo cuando los dos valores son `true` (ciertos).
+** `||`: se llama "or" ("o" en español); requiere 2 valores booleanos y devuelve `true` cuando por lo menos 1 valor es `true`.
 ** `!`: se llama "not" ("no" en español); requiere 1 valor booleano y devuelve el booleano opuesto.
 * Ahora tienes varias herramientas para introducir variaciones en tu música: las respuestas del usuario pueden determinar los elementos. Puedes añadir un parámetro a tu función personalizada para seleccionar una variación cuando llames a tu función.
 

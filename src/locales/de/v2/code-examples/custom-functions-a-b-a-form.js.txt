@@ -1,0 +1,28 @@
+// A-B-A Form: Ein Song mit A und B Abschnitten
+
+// Setup
+setTempo(120);
+
+// Musik
+
+// Einen A-Abschnitt erstellen
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // main
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // drums
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // bass line
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5) // Erhöhung der Lautstärke der Basslinie
+
+// Erstelle einen 4-Takt-B-Abschnitt zwischen den Takten 5 und 9
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // Hauptmelodie variiert
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Drums variieren
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Kontrastbass: langsamer und lauter
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Erhöhung der Basslautstärke
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // Rasseln: Hinzufügen eines neuen Elements
+
+// Dann zurück zu Abschnitt A, Takt 9
+
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // main
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // drums
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // bass line
+setEffect(3, VOLUME, GAIN, -20, 9, 0, 13); // zunehmende Lautstärke der Basslinie

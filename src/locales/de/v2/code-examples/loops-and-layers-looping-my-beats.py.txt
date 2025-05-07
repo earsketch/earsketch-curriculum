@@ -1,0 +1,13 @@
+# Looping meiner Beats: Wiederholung einer makeBeat()-Anweisung mit einem for-loop
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Variablen
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Looping unseres Beats
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)

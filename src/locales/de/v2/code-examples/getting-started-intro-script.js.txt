@@ -1,0 +1,7 @@
+// Einführungsskript: Dieser Code fügt dem DAW einen Sound hinzu
+
+// Abschnitt einrichten
+setTempo(120);
+
+// Musik-Abschnitt
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9);

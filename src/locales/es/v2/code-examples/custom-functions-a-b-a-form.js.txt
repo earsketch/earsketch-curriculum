@@ -6,12 +6,14 @@ setTempo(120);
 // Música
 
 // Crea una sección A.
+
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); // Línea de bajo
 setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); // Aumentar el volumen de la línea de bajo
 
 // Crea una sección B con 4 compases entre el compás 5 y el 9.
+
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); // La melodía principal es diferente.
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); // Los tambores son diferentes.
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); // Una línea de bajo que crea contrastes: es más lenta y tiene más volumen.
@@ -19,6 +21,7 @@ setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); // Aumentar el volumen de la línea de b
 fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); // El traqueteo: añadir un nuevo elemento
 
 // Entonces se regresa a la sección A en el compás 9.
+
 fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); // Principal
 fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); // Tambores
 fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); // Línea de bajo

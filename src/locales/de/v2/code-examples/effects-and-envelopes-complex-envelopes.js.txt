@@ -1,0 +1,22 @@
+// Komplexe Envelopes: Mehrere setEffect()-Aufrufe auf einem Track verwenden, um Änderungen an der Effekt-Envelope vorzunehmen
+
+// Setup
+setTempo (120);
+
+// Musik
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
+
+// Envelope Zeitpunkte (in Takten)
+var pointA = 1;
+var pointB = 4;
+var pointC = 6.5;
+var pointD = 7;
+var pointE = 8.5;
+var pointF = 9;
+
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Erster Effekt, Filter-Sweep
+
+// Zweiter Effekt, Lautstärkenänderung
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Crescendo
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Start des fade out
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Ende des fade out

@@ -1,0 +1,23 @@
+// Bedingte Anweisung: Verwendung eines booleschen Wertes zur Erzeugung von Variationen in einer Funktion
+
+// Setup
+setTempo(120);
+
+var melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1;
+var melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2;
+var drums1 = RD_WORLD_PERCUSSION_DRUMPART_24;
+
+// Funktionsdefinition
+function verse(start, Variation) {
+    // Variation entspricht entweder true oder false
+    if (variation) {
+        fitMedia(melody1, 1, start, start + 4);
+    } else {
+        fitMedia(melody2, 1, start, start + 4);
+    }
+    fitMedia(drums1, 2, start, start + 4); // Dies liegt außerhalb der bedingten Anweisung (keine Einrückung)
+}
+
+// Function Calls
+verse(1, true);
+verse(7, false);

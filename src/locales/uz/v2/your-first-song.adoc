@@ -1,0 +1,290 @@
+[[customizeyourfirstsong]]
+== Customize your first song
+
+:nofooter:
+
+In this chapter you will learn how to change the tempo of your song, add comments to your code, and upload your own sounds to enhance the message of your song.
+
+[[settempo]]
+=== `setTempo()` funktsiyasi
+
+[role="curriculum-python"]
+--
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+
+. Some comments starting with `#`: we'll cover that in next section
+. loyihaga EarSketch funktsiyalarini (masalan, `fitMedia()`) qo‘shadigan `from earsketch import*` qatori
+. `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
+--
+
+[role="curriculum-javascript"]
+--
+By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+
+. Some comments starting with `//`: we'll cover that in next section
+. `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
+--
+
+`setTempo()` funktsiyasi qo'shiq tezligini aniqlaydi. G'arb musiqasida *Temp* - bu daqiqada zarbalar miqdori (dzm) sanaladi. In EarSketch, the default tempo (i.e. the initial value of the tempo) is set to 120bpm, which corresponds to a fast walk or march speed. Tempni oʻzgartirish uchun `setTempo()` funktsiyasida qavslar orasidagi raqamni oʻzgartirish kifoya. The higher the tempo, the faster your music. Siz tempni _45dzm va 220dzm_ oraligʻida tanlashingiz mumkin.
+
+.PRACTICE
+****
+. Create a new script.
+. Place sounds on two different tracks.
+. Modify your tempo and listen to the song.
+. Play your song at three different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
+****
+
+A genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Different genres have different tempo ranges. For instance:
+
+[cols="^3*"]
+|===
+|GENRE |BPM |EXAMPLE
+
+|Pop
+|110-130
+|"Thriller" - Michael Jackson
+
+"I Wanna Dance With Somebody" - Whitney Houston
+
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
+
+"Fight the Power" - Public Enemy
+
+|Country
+|90-110
+|"I Walk the Line" - Johnny Cash
+
+"Jolene" - Dolly Parton
+
+|House / EDM
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dubstep / Trap
+|140-150
+|"Scary Monsters and Nice Sprites" - Skrillex
+
+"Turn Down for What" - Lil Jon
+|===
+
+.PRACTICE
+****
+. Select one artist you really like and find out what genre they belong to.
+. Ushbu janrni qidiring (https://soundcloud.com/[Soundcloud] da yoki shunga o'xshash) va shu janrdagi qo'shiqlardan bir nechta parchalarni tinglang.
+. Listen for similarities between the songs.
+. You can also research the genre on Wikipedia to get more information about it.
+****
+
+Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+
+To find the original tempo of sound, hover over the sound constant Sound Browser.
+
+[[comments]]
+=== Adding comments to your code
+
+*Comments* are lines of code ignored by the computer. People use comments to make notes within the code.
+
+EarSketch scripts begin with comments that you can use to enter a description of your song. These details make it easier for other programmers to understand what your code is about.
+
+[role="curriculum-python"]
+Pythonda sharhlar qatori funt belgisi - `#` bilan boshlanadi.
+
+[role="curriculum-javascript"]
+JavaScript-da sharhlar qatori ikki yotiq chiziq belgisi - `//` bilan boshlanadi.
+
+.PRACTICE
+****
+In your current script, write a comment with a description of your song on the first line.
+****
+
+You can also use comments to describe what different sections of your code do. Here is an example below. You can paste and run the code. Note how the comments describe the different sections:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/your-first-song-comments.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/your-first-song-comments.js.txt[]
+----
+
+{nbsp} +
+
+[[uploadingsounds]]
+=== Uploading your own sounds
+
+You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
+
+You must be logged in to upload sounds.
+
+Let's explore the first three options.
+
+. *Upload Sound* allows you to choose audio files already on your computer.
+. *Quick Record* lets you record directly from your computer's microphone.
+. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
+
+[role="curriculum-mp4"]
+[[video101rec]]
+video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
+
+.PRACTICE
+****
+Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. Bu siz baham ko'rmoqchi bo'lgan tuyg'u yoki hikoya bo'lishi mumkin.
+
+. Ifodalashni xohlayotgan narsangizni tasavvur qiling
+. Then either:
+.. Write some lyrics and record yourself singing or reading them or
+.. Record or download some sounds that are related to your message
+. Add these recordings to your song using `fitMedia()`
+. Then add additional sounds using `fitMedia()`
+. Present your song to your friend
+. You can discuss your songs and the things you were trying to express
+****
+
+An active computer program is called a *process*.
+
+When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
+
+A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
+
+There is a difference between memory (or short-term storage) and long-term storage. Long-term storage, like a hard-drive or cloud, is referred to as secondary storage. *Ikkilamchi xotira*, hatto kompyuter o'chirilgandan keyin ham uzoq vaqt davomida katta hajmdagi ma'lumotlarni saqlaydi. The CPU does not interact directly with secondary storage. When the CPU carries a process out, data from secondary storage must first be put into memory so that the CPU can access it quickly.
+
+Sometimes the data in memory for the CPU to use comes from an input device instead of secondary storage. *Kirishlar* - bu mikrofondan audio kabi kompyuter tomonidan qabul qilingan signallar yoki ma'lumotlar. Xuddi shunday, *chiqishlar* undan yuboriladigan signallar yoki ma'lumotlar, masalan, karnay orqali audio chiqishi. Input/output, or I/O, is how the computer communicates with the outside world, including humans!
+
+Keling, misol sifatida EarSketch-ga ovoz yozishni ko'rib chiqaylik. First, we record data into the computer with the input device, the microphone. The CPU stores that audio data in its memory. If you press the play button to hear your recording, the CPU accesses the data and sends it to an output, the speakers or headphones. When you press the upload button, the CPU runs a process that converts the audio data into a standard sound file format (a WAV file, or .wav) and sends it to the EarSketch server. The server is an external system that provides services to all EarSketch users, including your own computer. EarSketch serveri tovush faylini xotiradan serverning ikkilamchi xotirasiga saqlaydi, shunda siz kelajakda unga kirishingiz mumkin.
+
+Check out the following supplementary video:
+
+[role="curriculum-mp4"]
+[[video11cpu]]
+video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
+
+////
+END OF OPTIONAL
+////
+
+[[copyright]]
+=== Use Copyright Wisely
+
+*Mualliflik huquqi* qonunning *intellektual mulk* yoki musiqa kabi ijodiy ishlarga egalik huquqini qamrab oluvchi qismidir. When using samples (small pieces of music) or remixing existing music, you need to give credit to the authors, and you can do so in the comments of your code. Before using sounds from other musicians and sharing your own music, learn more about copyright!
+
+When you create something original and substantial enough, you get a copyright automatically! In the United States, this means you can: make copies, make modifications, and share what you create.
+
+There are two copyrights involved with a song: rights to the song (by the writer or composer) and rights to the sound recording (often by the record label). Royalties from public performances go to the songwriter and most royalties from record sales go to the record label.
+
+*Mualliflik huquqining buzilishi* musiqani noqonuniy yuklab olish kabi mualliflik huquqining buzilishidir. Qo'shma Shtatlarda *adolatli foydalanish* mualliflik huquqi bilan himoyalangan kontentdan ma'lum sharoitlarda, masalan, ta'lim yoki tanqidiy maqsadlarda foydalanishga ruxsat beradi, asarning faqat kichik qismini qayta ishlatishga imkon beradi. Fair use disputes are determined by a judge on a case-by-case basis.
+
+Besides fair use, there are other ways to use and share music openly. EarSketch works because artists have shared their work with you through *samples* (a small part of sound recording) in the Sound Browser.
+
+Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Copyright should help us make and share more art, not less. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. EarSketch works because artists have shared their work with you, resulting in the library of samples you use to make new music. Sharing your music or letting other students remix your code is a way of paying this forward and helping to put new art into the world.
+
+When using sounds in your EarSketch scripts, you'll need to be sure that you have permission from the copyright holder to use the sounds, or that you are using them in accordance with fair use.
+
+For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+
+[[chapter2summary]]
+=== Chapter 2 Summary
+
+[role="curriculum-python"]
+* *Temp* - bu musiqa asarining ijro etilish tezligi, u daqiqada zarba miqdorida (dzm) belgilanadi. Tempo is tied to genre.
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `from earsketch import *` loyihangizga EarSketch IDI-ni qo‘shadi.
+* `setTempo();` qo'shiqning tempini belgilash imkonini beradi. It must be included in every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
+* A *process* is a program running on a computer. Qayta ishlash - dastur ko'rsatmalarini bajarish uchun mas'ul bo'lgan kompyuterning *Markaziy Protsessori* tomonidan amalga oshiriladi.
+* *Xotira* (RAM yoki asosiy xotira deb nomlanadi) Markaziy Protsessor foydalanishi uchun maʼlumotlar va ishlov berish koʻrsatmalarini vaqtincha saqlaydi.
+* *Ikkilamchi xotira* ma'lumotlarni uzoq muddatli, ko'pincha katta hajmlarda saqlashni nazarda tutadi. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. Bastakorlar uchun bu muhim, chunki u boshqa shaxsning ishidan qanday foydalanish va almashish mumkinligini belgilaydi.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* Musiqa asarini *litsenziyalash* boshqalarga undan foydalanishga ruxsat beradi.
+
+[role="curriculum-javascript"]
+* *Temp* - bu musiqa asarining ijro etilish tezligi, u daqiqada zarba miqdorida (dzm) belgilanadi. Tempo is tied to genre.
+* The sounds in the EarSketch Sound Browser are organized into folders of related sounds. To see the exact tempo of a clip, hover over the name in the Sound Browser.
+* Comments are lines of code that are ignored by the computer. They are useful for making notes within a script.
+* `setTempo();` qo'shiqning tempini belgilash imkonini beradi. It must be included in every EarSketch script.
+* You can upload your own sounds to EarSketch through the Sound Browser. Just click "Add Sound".
+* A *process* is a program running on a computer. Qayta ishlash - dastur ko'rsatmalarini bajarish uchun mas'ul bo'lgan kompyuterning *Markaziy Protsessori* tomonidan amalga oshiriladi.
+* *Xotira* (RAM yoki asosiy xotira deb nomlanadi) Markaziy Protsessor foydalanishi uchun maʼlumotlar va ishlov berish koʻrsatmalarini vaqtincha saqlaydi.
+* *Ikkilamchi xotira* ma'lumotlarni uzoq muddatli, ko'pincha katta hajmlarda saqlashni nazarda tutadi. Data from secondary storage must be put into memory before the CPU can access it.
+* *Copyright* is a portion of law that covers ownership of creative works, like music. Bastakorlar uchun bu muhim, chunki u boshqa shaxsning ishidan qanday foydalanish va almashish mumkinligini belgilaydi.
+* If you create a musical work that is tangible and new, you have an automatic copyright. In other words, you have rights over the work you created.
+* Musiqa asarini *litsenziyalash* boshqalarga undan foydalanishga ruxsat beradi.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+`setTempo()` EarSketch-da qanday imkoniyat beradi?
+
+[answers]
+* Specify the tempo of a song
+* Add a sound to a track
+* Create a drum beat
+* Change the qualities of sound within a project
+--
+
+[question]
+--
+What is the unit for tempo?
+
+[answers]
+* Beats Per Minute (BPM)
+* Measures
+* Decibels(dB)
+* Seconds
+--
+
+[question]
+--
+What can you use comments for?
+
+[answers]
+* All of the above
+* Organizing your code
+* Writing a description of your script at the beginning of your script
+* Making your code easy to read for other programmers
+--
+
+[question]
+--
+Which of the following statements is true?
+
+[answers]
+* A hard drive is an example of secondary storage
+* Audio data is saved to a computer’s CPU
+* The CPU holds instructional data for programs
+* Secondary storage stores data for short periods of time
+--
+
+[question]
+--
+How do you get a copyright?
+
+[answers]
+* By creating and publishing any new work
+* By buying a patent
+* By joining a secret organization
+* By choosing a license for your work
+--
+
+[question]
+--
+What is a music license?
+
+[answers]
+* A license gives others permission to use a musical work
+* A composing process
+* A musical genre
+* A description of your song
+--

@@ -1,0 +1,391 @@
+[[getuserinput]]
+== Benutzereingabe erhalten
+
+:nofooter:
+
+In diesem Kapitel lernst du, wie du die Nutzer um ihre Meinung bitten und deine Musik entsprechend anpassen kannst. Dafür werden wir uns die Return-Statements und die `readInput()` Funktion ansehen.
+
+[[returnstatement]]
+=== Return Statement
+
+Du kannst dir zum Start dieses Video (in Englisch) anschauen:
+
+[role="curriculum-python curriculum-mp4"]
+[[video131py]]
+video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video131js]]
+video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
+
+* Funktionen können nicht nur Eingaben (Parameter) entgegennehmen, sondern auch einen Wert ausgeben. In der Programmierung nennt man dies die Rückgabe eines Wertes.
+* Das *Return-Statement* ist eine Anweisung innerhalb des Funktion Bodys, die: A. einer Funktion sagt, dass sie einen Wert zurückgeben soll, wenn sie aufgerufen wird. B. der Funktion signalisiert, dass sie aufhören soll. Wenn du irgendwelche Anweisungen nach dem »Return«-Schlüsselwort hast, werden diese ignoriert.
+* Um den von der Funktion zurückgegebenen Wert zu verwenden, erstelle eine Variable und teile ihr den Function Call zu.
+* Ein return statement ist nicht zwingend erforderlich. Ohne return statement gibt eine Funktion keinen Wert aus. `fitMedia()` und `setEffect()` sind Beispiele für Funktionen, die nichts zurückgeben.
+
+Hier ist ein Code-Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-return-statements.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-return-statements.js.txt[]
+----
+
+Mit dem return statement sieht der komplette Kontroll-Flow für eine Funktion folgendermaßen aus:
+
+[[return]]
+.Return statement Kontroll-Flow
+[caption="Figure 8.1.1: "]
+image::../media/U2/Return.png[Alt Text]
+
+.ÜBUNG
+****
+Erstelle eine Funktion, die einen musikalischen Abschnitt implementieren wird mit:
+
+* Nur einem Parameter, der `start` genannt wird und den Anfangstakt darstellt.
+* Einer `return` Anweisung, die den Endtakt zurückgibt.
+* Einer Body Funktion mit `fitMedia()` Funktionen.
+
+Dein Abschnitt kann so viele Takte umfassen, wie du willst.
+Dann die Funktion aufrufen und den Endtakt ausgeben.
+****
+
+Hier ein Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-return-statements-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-return-statements-2.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Nehmen wir an, du hast einen Abschnitt A, aber du möchtest, dass er sich leicht verändert, wenn er an verschiedenen Stellen des Liedes aufgerufen wird. Du wirst eine Funktion namens `sectionA()` mit zwei `fitMedia()` Calls erstellen.
+
+Die Funktion sollte zwei Parameter beinhalten: `start` und einen booleschen Parameter `variation`, der es dem Benutzer erlaubt, beim Aufruf der Funktion eine Variation auszuwählen.
+
+Im Funktionskörper sollte eine bedingte Anweisung vorhanden sein, die den Parameter auswertet. Je nach dem Wert des Parameters ändert sich der Sound, der in einem der Aufrufe von `fitMedia()` verwendet wird.
+
+Rufe dann die Funktion in verschiedenen Takten mit verschiedenen Variationen auf.
+****
+
+Hier ein Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-conditional-statement.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-conditional-statement.js.txt[]
+----
+
+{nbsp} +
+
+[[userinput]]
+=== Benutzereingabe erhalten
+
+Wir werden sehen, wie man nach Benutzereingabe fragt, wenn die "Ausführen"-Taste gedrückt wird. Dies ist möglich dank der `readInput()` Funktion. Diese Funktion benutzt als Parameter einen String (wie "Welches Tempo möchtest du für deine Musik verwenden?"). Wenn der Benutzer den Code ausführt, wird er ein neues Fenster mit dem String sehen und aufgefordert, eine Antwort zu schreiben. Die Funktion `readInput()` gibt zurück, was der Benutzer dort eingibt.
+
+Kopiere zum Beispiel den folgenden Code in ein neues Skript und führe ihn aus:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-untitled1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-untitled1.js.txt[]
+----
+
+Möglicherweise müssen wir die zurückgegebene Benutzereingabe in einen anderen Datentyp umwandeln. Hier sind nützliche Funktionen:
+
+[role="curriculum-python"]
+* `str()` - konvertiert jeden Wert in einen String.
+* `int()` - konvertiert einen String mit Ziffern in einen Integer (z.B. `"3"` wird `3`).
+* `float()` - wandelt einen String mit Ziffern mit einem Dezimalpunkt in einen Float um (Beispiel: `"3.5"` wird `3.5`).
+
+[role="curriculum-javascript"]
+* `String()` - konvertiert jeden Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.
+* `Number()` - konvertiert einen String in eine Zahl (z. B.: `"3.5"` wird `3.5`).
+
+Im folgenden Beispiel wird die Konsoleneingabe verwendet, um das Tempo des Liedes zu bestimmen. Wir stellen sicher, dass Benutzereingaben in einen Integer konvertiert werden.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-user-input-1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-user-input-1.js.txt[]
+----
+
+Hier ist ein weiteres Beispiel dafür, was du mit der Benutzereingabe tun kannst.
+
+*Zusammensetzung* ist ein Mittel, um Strings mit dem `+` Symbol miteinander zu verknüpfen.  Zum Beispiel gibt die Verkettung der Strings `"Hello"` und `"World"` `"HelloWorld`. Im folgenden Beispiel wird der Benutzer aufgefordert, eine Clip-Nummer anzugeben. Die Nummer wird mit `DUBSTEP_BASS_WOBBLE_0` verbunden, um einen kompletten Clip-Namen wie `DUBSTEP_BASS_WOBBLE_010` zu bilden.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-user-input-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-user-input-2.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
+
+Hier sind Ideen von Tools, die du verwenden kannst:
+
+. String-Verkettung,
+. Datenkonvertierung,
+. Erstellung eines bestimmten Parameters in einer benutzerdefinierten Funktion
+****
+
+{nbsp} +
+
+[[booleanlogic]]
+=== Boolesche Logik
+
+Wir kombinieren nun boolesche Logik und Benutzereingabe für ein weiteres Beispiel der Benutzerinteraktion.
+
+[role="curriculum-python"]
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `==` ob zwei Werte gleich sind und ob der Boolean auf `True` gesetzt ist.
+
+[role="curriculum-javascript"]
+Schauen wir uns zuerst einmal die boolesche Logik an. Du weißt, dass *Vergleichsoperatoren* helfen, einen booleschen Wert zu erzeugen. Zum Beispiel prüft der Operator `===` ob zwei Werte gleich sind und ob der Boolean auf `true` gesetzt ist.
+
+Sehen wir uns nun die *booleschen Operatoren* an: Mit ihnen lassen sich mehrere Booleans kombinieren. Es gibt drei boolesche Operatoren:
+
+[role="curriculum-python"]
+* `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
+* `or`: nimmt zwei boolesche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+* `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
+
+[role="curriculum-javascript"]
+* `&&`: heißt "and"; es benötigt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten `false`.
+* `||`: heißt "oder"; es benötigt zwei boolesche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls `false`.
+* `!`: heißt "nicht"; es nimmt eine boolesche Eingabe und gibt den gegenteiligen (negierten) Boolean zurück.
+
+Zum Beispiel, wenn man sechzehn ist, ist der Satz "Ich bin sechzehn" wahr und der Satz "Ich bin siebzehn" ist falsch. "Ich bin sechzehn and ich bin siebzehn" (true and false) ist false, weil man nicht sowohl sechzehn als auch siebzehn Jahre alt ist. Aber der Satz "Ich bin sechzehn or siebzehn Jahre alt" (true or false) ist true.
+
+[role="curriculum-python"]
+.ÜBUNG
+****
+Was denkst du, was die folgenden Ausdrücke ergeben? `True` or `False`?
+
+* `not True`
+* `True and False`
+* `True or False`
+* `True and True`
+* `(True and False) or True`
+* `True and not False`
+* `not (False or False)`
+****
+
+[role="curriculum-javascript"]
+.ÜBUNG
+****
+Was denkst du, was die folgenden Ausdrücke ergeben? `true` or `false`?
+
+* `!true`
+* `true && false`
+* `true || false`
+* `true && true`
+* `(true && false) || true`
+* `true && !false`
+* `!(false || false)`
+****
+
+Benutze den folgenden Code, um die Antworten auszugeben:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-boolean-expressions.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-boolean-expressions.js.txt[]
+----
+
+Hier ist eine Erinnerung an die Erstellung von booleschen Werten und einige Beispiele für boolesche Operationen:
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+
+.ÜBUNG
+****
+Jetzt kombinieren wir Benutzereingaben und boolesche Operationen.
+
+Schreibe ein Skript, das den Benutzer auffordert, ein Genre auszuwählen, mit einer begrenzten Anzahl von Optionen (z. B. "Hip Hop" und "klassisch"). Abhängig von der Antwort des Benutzers wähle einen Beat-String, der gut mit dem Genre funktioniert. Du kannst mehrere Möglichkeiten akzeptieren. Zum Beispiel, "HIP HOP", "hip hop" und "Hip Hop" geben den gleichen Song aus.
+****
+
+Hier ein Beispiel:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-boolean-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-boolean-operations.js.txt[]
+----
+
+{nbsp} +
+
+.CHALLENGE
+****
+Dies ist die Jukebox- Challenge: Schreibe ein Skript, das nach Benutzereingaben in Bezug auf das Genre fragt, mit drei Optionen (zum Beispiel „Latino“, ‚Trap‘ und „Dubstep“). Je nach Antwort des Nutzers erstelle einen Song, der mit dem Genre geht.
+****
+
+{nbsp} +
+
+[[chapter8summary]]
+=== Zusammenfassung von Kapitel 8
+
+[role="curriculum-python"]
+* *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
+* `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
+* Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. `str()` konvertiert jeden Wert in einen String.
+`int()` konvertiert einen String mit Ziffern in einen Integer. `float()` konvertiert einen String mit Ziffern und einem Dezimalpunkt in einen Float.
+* Sie können Strings miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
+* *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
+** `and`: nimmt zwei boolesche Eingaben und gibt `True` nur zurück, wenn beide Eingaben `True` sind, andernfalls `False`.
+** `or`: nimmt zwei boolesche Eingaben und gibt `True` zurück, wenn mindestens eine Eingabe `True` ist, andernfalls wird `False` zurückgegeben.
+** `not`: nimmt einen booleschen Eingabewert und gibt den gegenteiligen (negierten) Boolean zurück.
+* Du hast jetzt viele Werkzeuge, um Variationen in deine Musik einzubringen: Benutzereingaben können Elemente bestimmen. Du kannst in deinen benutzerdefinierten Funktionen einen Parameter hinzufügen, um eine Variante auszuwählen, wenn du deine Funktion aufrufst.
+
+[role="curriculum-javascript"]
+* *Return Statements* können in eine Funktionsdefinition aufgenommen werden, um ein Ergebnis auszugeben, wenn die Funktion aufgerufen wird.
+* `readInput()` wird eine Benutzereingabe anfordern, wenn du deinen Code ausführst. Der einzige Parameter ist ein String, den der Benutzer sehen wird. Du kannst dann verwenden, was der Benutzer in deinen Code eingegeben hat, um zum Beispiel das Tempo oder das Genre deiner Musik zu ändern.
+* Einige Funktionen erlauben es dir, Daten von einem Typ in einen anderen umzuwandeln. Zum Beispiel wandelt str() Daten in einen String um. `String()` konvertiert jeden beliebigen Wert in einen String. Beachte, dass es sich ausnahmsweise um einen Funktionsnamen handelt, der mit einem Großbuchstaben beginnt.  `Number()` konvertiert einen String in eine Zahl.
+* Sie können Strings miteinander *verketten* (verknüpfen): „Hello “+‚World‘ wird zu „HelloWorld“ ausgewertet.
+* *Boolesche Logik* beinhaltet boolesche Operationen. Hier sind boolesche Operatoren:
+** `&&`: heißt "and", es nimmt zwei boolesche Eingaben und gibt `true` nur dann zurück, wenn beide Eingaben `true` sind, ansonsten wird `false` zurückgegeben.
+** `|`: heißt "oder": es nimmt zwei boolesche Eingaben und gibt `true` zurück, wenn mindestens eine Eingabe `true` ist, andernfalls wird `false` zurückgegeben.
+** `!`: heißt "nicht": es nimmt eine boolesche Eingabe und gibt das entgegengesetzte (negative) Boolean zurück.
+* Du hast jetzt viele Werkzeuge, um Variationen in deine Musik einzubringen: Benutzereingaben können Elemente bestimmen. Du kannst in deinen benutzerdefinierten Funktionen einen Parameter hinzufügen, um eine Variante auszuwählen, wenn du deine Funktion aufrufst.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Welcher der folgenden wäre ein Beispiel für die Konvertierung von Datentypen?
+
+[answers]
+* Umwandeln eines Strings in eine Zahl.
+* Speichern eines benutzerdefinierten Tempos in einer Variable.
+* Benutzung von `readInput()` um einen Nutzer nach einem Genre zu fragen.
+* Herstellung eines Boolean durch einen Vergleichsoperator.
+--
+
+[role="curriculum-python"]
+[question]
+--
+Was wäre Ausgabe dieses Codeblocks (was würde auf die Konsole ausgeben)?
+
+[source,python]
+----
+not (True and (4 > 5))
+----
+
+[answers]
+* `True`
+* `5`
+* `4`
+* `False`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Was wäre Ausgabe dieses Codeblocks (was würde auf die Konsole ausgeben)?
+
+[source,javascript]
+----
+!(true && (4 > 5));
+----
+
+[answers]
+* `true`
+* `4`
+* `false`
+* `5`
+--
+
+[question]
+--
+Welches der folgenden ist ein Beispiel für eine Verkettung?
+
+[answers]
+* `x = beatstring1 + beatstring2`
+* `x = beatstring1.beatstring2`
+* `x = (beatstring1, beatstring2)`
+* `x = beatstring1[beatstring2]`
+--
+
+[role="curriculum-python"]
+[question]
+--
+Wie würdest du die boolesche Wahrheit mit den Booleans True and False erhalten?
+
+[answers]
+* `True or False`
+* `not True`
+* `True and False`
+* `true or false`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Wie würdest du die boolesche Wahrheit mit den Booleans true and false erhalten?
+
+[answers]
+* `true||false`
+* `!true`
+* `true&&false`
+* `True||False`
+--

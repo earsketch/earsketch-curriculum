@@ -1,0 +1,6 @@
+// Suche Fehler: Fünf Fehler unten müssen behoben werden
+
+setTempo(88;
+
+fitMdia(HIPHOP_DUSTYGROOVEPART_001, 1, 1 9);
+fitmedia(2, HIPHOP_DUSTYGROOVEPART_001, 1, 9);

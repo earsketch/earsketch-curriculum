@@ -1,12 +1,12 @@
 [[addsomebeats]]
 == أضف بعض الإيقاعات!
+
 :nofooter:
 
 في هذا الفصل سوف تتعلمون كيفية إنشاء وحدات البت! 'سنتعرف على المتغيرات ، ووظيفة جديدة تسمى () makeBeatوأمثلة على البتات حسب النوع.
 
-
 [[variables]]
-=== المتغي
+=== Variables
 
 [role="curriculum-python curriculum-mp4"]
 [[video2py]]
@@ -16,90 +16,95 @@ video::./videoMedia/002-05-Variables-PY.mp4[]
 [[video2js]]
 video::./videoMedia/002-05-Variables-JS.mp4[]
 
-ما هو المتغير؟ 'اسم يساعد الكمبيوتر في العثور على جزء من المعلومات أو البيانات. يعمل هذا مع جميع أنواع البيانات. على سبيل المثال ، يمكن أن يشير المتغير إلى:
+What is a variable? A *variable* is a name given to a piece of data that we plan to use later in our program.
+
+In EarSketch, the variables in your scripts may point to:
 
 * رقم (مثل رقم المسار أو رقم القياس) ،
-* ملف (مثل ملف صوتي) ، 
-* سلسلة ، (مثل اسم مقطع أو نسخة من أغنية). A *شخصية*هو رقم أو حرف أو رمز ، مثل `A`, `a`, `2`, or `=`. السلسلة عبارة عن سلسلة من الأحرف حولها علامات اقتباس ، مثل `"Hello World 123!"`.
+* ملف (مثل ملف صوتي) ،
+* A *string*, like the name of a sound clip or some lyrics
+* A *شخصية*هو رقم أو حرف أو رمز ، مثل `A`, `a`, `2`, or `=`.
 
-نعطي البيانات اسمًا' حتى يسهل تسميتها وتغييرها. 
+يشير كل حرف إلى ستة اعشار حرفًا ، لذا فإن السلسلة المكونة من ستة عشر حرفًا هي مربع كامل. السلسلة عبارة عن سلسلة من الأحرف حولها علامات اقتباس ، مثل `"Hello World 123!"`.
+
+لاستخدام متغير ،
 
 [role="curriculum-python"]
-لاستخدام متغير ،
-
-. عليك أولاً تعيينه *assign*. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. تعني كتابة `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` أنك تنشئ متغيرًا يسمى synth1 وأنك تخزن البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. تعني كتابة `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` أنك تنشئ متغيرًا يسمى synth1 وأنك تخزن البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
 . HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
-. ثم تحتاج إلى استدعاء المتغير: استخدم ` synth1 ` فيمقطعك البرمجي. يمكنك فقط استخدام المتغير بعد تعيينه ، وليس قبل ذلك. على سبيل المثال ، اكتب`fitMedia(synth1, 1, 1, 3)`.
-. عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عندما يقرأ `synth1`. 
+. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. يمكنك فقط استخدام المتغير بعد تعيينه ، وليس قبل ذلك. على سبيل المثال ، اكتب `fitMedia(synth1, 1, 1, 3)`
+. عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
 
 [role="curriculum-javascript"]
-لاستخدام متغير ،
-
-. عليك أولاً تعيينه *assign*. نستخدم الرمز "=" والذي يسمى عامل التثبيت*assignment operator*. نستخدم أيضًا الأمر ` var ` في بداية السطر. الكتابة`var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;`تعني أنك تقوم بإنشاء متغير يسمى synth1 وأنك تقوم بتخزين البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
-. HIPHOP_SYNTHPLUCKLEAD_005 هو القيمة *value*الخاصة ب`synth1`.
-. ثم تحتاج إلى استدعاء المتغير: استخدم ` synth1 ` في مقطعك البرمجي. على سبيل المثال، اكتب `fitMedia(synth1, 1, 1, 3);`.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. نستخدم أيضًا الأمر`var` في بداية السطر. الكتابة`var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;`تعني أنك تقوم بإنشاء متغير يسمى synth1 وأنك تقوم بتخزين البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
+. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. على سبيل المثال، اكتب `fitMedia(synth1, 1, 1, 3);`.
 . عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-instead-of-this.py.txt[]
+include::code-examples/add-beats-instead-of-this.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-instead-of-this.js.txt[]
+include::code-examples/add-beats-instead-of-this.js.txt[]
 ----
+
+{nbsp} +
 
 .تدريب
 ****
 في برامجك النصية السابقة ، استخدم المتغيرات لتخزين أسماء مقاطع الصوت. انظر إلى الأمثلة أدناه للحصول على المساعدة. تأكد من أن المتغيرات الخاصة بك لها أسماء قصيرة ومفهومة (مثل "bass","voice_1",...&#8203) تصف مقطع الصوت الخاص بك.
 ****
 
+{nbsp} +
+
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-variables.py.txt[]
+include::code-examples/add-beats-variables.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-variables.js.txt[]
+include::code-examples/add-beats-variables.js.txt[]
 ----
+
 لاحظ أنه من المهم تسمية المتغير بطريقة وصفية ومفهومة. على سبيل المثال ، فضّل`synth1`بدلا من `music1`او `test`الذي لا يقديم أي معلومة.'. بهذه الطريقة ، عندما تقرأ أنت أو أي شخص آخر مقطعك البرمجي ، يمكنكم رؤية ما تشير إليه.
 
-*constant ثابت *يشبه المتغير لأنه يخزن القيم. لكن ، قيمة الثابت لا تتغير أبدًا. على سبيل المثال ، في EarSketch ، يعتبر `TECHNO_SYNTHPLUCK_001` ثابتًا ، فهو يشير إلى ملف الصوت المقابل. كمصطلح ، سيكون اسم الثابت دائمًا بأحرف كبيرة ، وسيحتوي على اسطر تحتية كمسافات بين الكلمات.
+*constant ثابت *يشبه المتغير لأنه يخزن القيم. لكن ، قيمة الثابت لا تتغير أبدًا. على سبيل المثال ، في EarSketch ، يعتبر `TECHNO_SYNTHPLUCK_001` ثابتًا ، فهو يشير إلى ملف الصوت المقابل. By convention, constant names are capitalized and use underscores instead of spaces.
 
 [[drumbeatstrings]]
 === Beat Strings-سلاسل البيت
 
 دعونا 'نتعلم أولاً بعض المفاهيم الأساسية حول الإيقاع:
 
-* ال*rhythm-الوتيرة *للأغنية هي كيفية ترتيب الأصوات بالوقت.
+* *Rhythm* is a pattern of sound, often repeated.
 * ال*tempo-السرعة*هي سرعة الموسيقى في BPM (نبضة في الدقيقة).
 * *beat-البيت/ دقات *مثل "النبض الثابت" للأغنية. عندما يصفق الجمهور في حفل موسيقي ، فإنهم 'يصفقون حسب بالإيقاع.
 * *measure-القياس* هي وحدة زمنية موسيقية ذات عدد محدد مسبقًا من الإيقاعات. In EarSketch, 1 *measure*هو 4 دقات طويلة. نظرًا لوجود 4 دقات في مقياس واحد ، يُطلق على النبضات أيضًا *quarter (1/4) notes*.
 * يمكن تقسيم كل نبضة إلى*subbeats-بيت/نبضات فرعية*. على سبيل المثال ، يمكن تقسيم1/4 الدقّة إلى 2 *eighth (1/8) notes*. عندما تعد 1/4 نوتة ، تقول "1، 2، 3، 4 ... " عند عد 1/8 نوتة ، يمكنك استخدام"و": " 1و 2 و 3 و 4 و ..."يمكن أيضًا تقسيم النوتة 1/8 إلى 2 * النوتة الستة اعشار (1/16) sixteenth (1/16) notes*.
+* عادةً 'ما يبلغ طول سلسلة الطبول 16 حرفًا ، ولكن يمكن أن يختلف طولها. ربع حرف بطول ربع
 * المقياس الواحد هو 4 1/4 نوتات ، أو 8 1/8 نوتات ، أو 16 1/16 نوتات. لاحظ أن مجموع كل النوتات في مقياس واحد يجب أن يساوي 1. يمكن خلطها ومطابقتها مثل 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
 * *metronome-المُسرّع *يساعد الموسيقي على ضبط إيقاع مقطوعته عن طريق النقر على الإيقاع. في EarSketch DAW ، يمكنك تشغيل المسرع أو إيقاف تشغيله باستخدام رمز "تبديل المسرع-toggle metronome" على يسار مستوى الصوت.
 
 [[imediameasurepng]]
 .A measure
-- القياس
-[caption="Figure 1: "]
-image::../media/U1P1/beat.png[A measure]
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
 .A beat
--النبضة/ الايقاع
-[caption="Figure 2: "]
+[caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
 .A sixteenth note- نوتة الستة اعشار
-[caption="Figure 3: "]
+[caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 .تدريب
@@ -107,57 +112,66 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 استمع إلى أغنيتك المفضلة ، وحاول أن تصفق على الإيقاع. يمكنك القيام بهذا التمرين مع اصدقائك.
 ****
 
-سننشئ 'نوعًا جديدًا من المتغيرات: *drumbeat strings سلاسل قرع الطبول * ؛ لقوالب الإيقاع. 
-سلسلة الطبلة هي سلسلة مكونة من الأحرف `"0"`, `"+"` or `"-"`. على سبيل المثال: `"0-00-00-0+++0+0+"`. عادةً 'ما يبلغ طول سلسلة الطبول 16 حرفًا ، ولكن يمكن أن يختلف طولها. يشير كل حرف إلى ستة اعشار حرفًا ، لذا فإن السلسلة المكونة من ستة عشر حرفًا هي مربع كامل.
+We'll compose each of our rhythms in a *beat* string.
+
+سلسلة الطبلة هي سلسلة مكونة من الأحرف `"0"`, `"+"` or `"-"`. يتكون من سلسلة من الأحرف (مثل `0` or `+`) داخل علامات الاقتباس.
+
+على سبيل المثال: `"0-00-00-0+++0+0+"`.
 
 * `0`يبدأ تشغيل المقطع (الذي يحتوي على قرع الطبلة ، على سبيل المثال).
 * `+` يوسع مقطع الصوت إلى الإيقاع الفرعي التالي. يتبع دائمًا أل`0` or `+`.
 * `-` تشكل استراحة، أي الهدوء.
 
-كتذكير ، السلسلة هي نوع بيانات. يتكون من سلسلة من الأحرف (مثل `0` or `+`) داخل علامات الاقتباس.
-
 .تدريب
 ****
-لكل من أوتار قرع الطبول التالية ، حاول التصفيق على الأصفار. ثم استمع إلى الصوت المقابل وتحقق مما إذا كنت على حق. سيساعدك هذا التمرين على فهم كيفية عمل أوتار الطبلة. 
+لكل من أوتار قرع الطبول التالية ، حاول التصفيق على الأصفار. ثم استمع إلى الصوت المقابل وتحقق مما إذا كنت على حق. سيساعدك هذا التمرين على فهم كيفية عمل أوتار الطبلة.
 ****
 
 فيما يلي بعض الأمثلة على أوتار الإيقاع بمقياس واحد:
 
 Quarter notes: `"0\+++0+++0\+++0+++"`
 (read: "1,2,3,4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
 ++++
 
 اثمان: `"0+0+0+0+0+0+0+0+"`
 (اقرأ: "1 and 2 and 3 and 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
 ++++
 
 اسداس الاعشار: `"0000000000000000"`
 (ويكون' سريع جدًا ، اعتمادًا على الإيقاع)
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
 ++++
 
 `"0-0-0---0-0-0---"`
 (اقرأ: "1 و 2, 3و 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
 ++++
 
 `"0---0---0-0-0---"`
 (اقرأ: "1,2,3 و 4")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
 ++++
 
 `"0---0---0---0000"`
 (اقرأ: "1, 2, 3, 4 e و a")
+
 ++++
 <div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
 ++++
+
+{nbsp} +
 
 ////
 ADDITIONAL VIDEO TO BE ADDED
@@ -165,18 +179,17 @@ See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_
 video revamping tab
 ////
 
-
 [[makebeat]]
 === دالة ال`makeBeat()`
 
 الآن 'دعنا نرى كيف يمكنك صنع إيقاعك الخاص. هنا نستخدم مصطلح "إيقاع" كاختصار لقرع الطبل: نمط إيقاعي متكرر لأصوات الطبول. سنستخدم الدالة ` makeBeat () ` ، مع 4 عوامل:
 
-. *Clip Name*: مقطع الصوت الذي تريده. في متصفح الصوت ، يمكنك تحديد الفنان "MAKEBEAT". هذه أصوات قصيرة مناسبة لأوتار الطبلة.
-. *Track Number*: المسار الذي سيكون إيقاعك عليه.
-. *Measure Number*: بدء قياس البيتات/الضربات.
+. *Sound*: A sound constant. في متصفح الصوت ، يمكنك تحديد الفنان "MAKEBEAT". هذه أصوات قصيرة مناسبة لأوتار الطبلة.
+. *trackNumber:*المسار الذي توضع عليه الموسيقى.
+. *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
 . *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
 
-على سبيل المثال `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` سيُثبت البيت 
+على سبيل المثال `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` سيُثبت البيت
 `0--0--000--00-0-`على المسار 1 ، عند القياس 1 ، باستخدام مقطع الصوت
 `DUBSTEP_FILTERCHORD_002`.
 
@@ -184,25 +197,27 @@ video revamping tab
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
-video::./videoMedia/011-03-makeBeat()-PY.mp4[]
+video::./videoMedia/3_3_makebeat_py.mp4[]
 
 [role="curriculum-javascript curriculum-mp4"]
 [[video12js]]
-video::./videoMedia/011-03-makeBeat()-JS.mp4[]
+video::./videoMedia/3_3_makebeat_js.mp4[]
 
 هذا هو المثال الموضح في الفيديو:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-multi-beat.py.txt[]
+include::code-examples/add-beats-multi-beat.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
+include::code-examples/add-beats-multi-beat.js.txt[]
 ----
+
+{nbsp} +
 
 .تدريب
 ****
@@ -216,6 +231,8 @@ include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
 
 عندما تسمع موسيقاك ، إذا لم تعجبك' نسختك الأولى' ، فهذا جيد تمامًا: قم بتعديل إيقاعك لجعله يبدو أفضل وأفضل ، حتى يعجبك ما لديك.
 ****
+
+{nbsp} +
 
 .تدريب
 ****
@@ -231,38 +248,38 @@ include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
 
 سنستخدم 3 أنواع من الأصوات: ركلة (المسار 1) ، فخ (المسار 2) ، وهيهات (المسار 3). سنستخدم دالة واحدة ` makeBeat () ` لكل من هذه الأصوات ، على 3 مسارات مختلفة.
 
-////
-video is currently being edited
-////
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
 
-هذا هو المقطع البرمجي المقابل:
+Here is the corresponding code:
 
 [role="curriculum-python"]
 [source,python]
 ----
-include::../../en/v2/code-examples/add-beats-examples-of-beats.py.txt[]
+include::code-examples/add-beats-examples-of-beats.py.txt[]
 ----
 
 [role="curriculum-javascript"]
 [source,javascript]
 ----
-include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
+include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
 === الفصل 3 ملخص
 
-* في EarSketch ، يتم تقسيم مقياس واحد إلى 4 دقات أو 4 ارباع الدقات. 1 نبضة مقسمة إلى 4 نغمات اسداس الاعشار. 
-* *Variables-متغيرات *إنشاء مساحة في ذاكرة الكمبيوتر لتخزين البيانات. 
+* في EarSketch ، يتم تقسيم مقياس واحد إلى 4 دقات أو 4 ارباع الدقات. 1 نبضة مقسمة إلى 4 نغمات اسداس الاعشار.
+* *Variables-متغيرات *إنشاء مساحة في ذاكرة الكمبيوتر لتخزين البيانات.
 * تحتاج أولاً إلى تعيين القيمة (البيانات) لاسم المتغير باستخدام العلامة`=`. ثم يمكنك استخدام المتغير بكتابة اسمه في المقطع البرمجي.
-* *string-سلسلة *هو نوع بيانات يتكون من سلسلة من الأحرف مغلفة بعلامات اقتباس مفردة أو مزدوجة. 
+* *string-سلسلة *هو نوع بيانات يتكون من سلسلة من الأحرف مغلفة بعلامات اقتباس مفردة أو مزدوجة.
 * يمكن العثور على مقاطع صوتية إيقاعية باستخدام فلتر ARTIST في متصفح الصوت: يجب اختيار الفنان MAKEBEAT.
 * تُستخدم السلاسل مع دالة ` makeBeat () ` لإنشاء أنماط إيقاعية في EarSketch. `makeBeat()`يضبط كل ستة عشر في نمط الإيقاع بمساعدة وتر الأسطوانة. ` 0 ` يبدأ تشغيل المقطع ، ` + ` يمتد المقطع إلى السادس عشر التالي ، و ` - ` ينشئ استراحة.
 * `makeBeat()`تستقبل 4 عوامل:
-** *clipName:*المقطع الذي تم إنشاؤه من.
+** *Sound*: A sound constant
 ** *trackNumber:*المسار الذي توضع عليه الموسيقى.
-** *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات. تحدد سلسلة النبض الطول الإجمالي.
-** *beatString-سلسلة الايقاع:* سلسلة تحدد الإيقاع الذي تم إنشاؤه.
+** *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
+** *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
 * تتوافق أنماط الإيقاع المختلفة مع الأنواع الموسيقية المختلفة.
 
 [[chapter-questions]]
@@ -271,6 +288,7 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 أي من هذه الخيارات عبارة عن سلسلة؟
+
 [answers]
 * "خمسة"
 * 5
@@ -281,6 +299,7 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 ماذا يمثل "0" في سلسلة نمط الايقاع؟
+
 [answers]
 * ابدأ تشغيل المقطع
 * استراحة
@@ -291,18 +310,20 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 في EarSketch ،مقياس واحد هو...
+
 [answers]
 * 4 دقات/ايقاعات طويلة
 * أربع ايقاعات فرعية طويلة
 * 16 دقات/ايقاعات طويلة
-* بطول رُبع واحد
+* 1 quarter note
 --
 
 [question]
 --
 خلية من ستة عشر حرفًا هي...
+
 [answers]
-* ربع حرف بطول ربع
+* a quarter of a quarter note
 * نصف ايقاع
 * ربع المقياس
 * مقياس 1
@@ -311,6 +332,7 @@ include::../../en/v2/code-examples/add-beats-examples-of-beats.js.txt[]
 [question]
 --
 لاستخدام الدالة` makeBeat () ` ، ما العوامل التي تحتاجها؟
+
 [answers]
 * اسم المقطع ، المسار ، بدء القياس ،سلسلة الايقاع
 * الإيقاع ، المسار ، بدء القياس ، قياس النهاية

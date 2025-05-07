@@ -1,0 +1,11 @@
+# Boolesche Ausdrücke: Ausgabe boolescher Ausdrücke
+
+from earsketch import *
+
+print(not True)
+print(True and False)
+print(True or False)
+print(True and True)
+print((True and False) or True)
+print(True and not False)
+print(not (False or False))

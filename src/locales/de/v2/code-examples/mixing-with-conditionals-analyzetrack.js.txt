@@ -1,0 +1,14 @@
+// analyzeTrack(): Benutze die Funktion analyzeTrack() um die Lautstärke eines Tracks auszugeben
+
+// Setup
+setTempo(120);
+
+// Einen Sound auf Track 1 platzieren
+var sound = COMMON_LOVE_VOX_COMMON_1;
+fitMedia(sound, 1, 1, 9);
+
+// Erstellen einer Variable, um die Lautstärke von Track 1 zu speichern
+var loudness1 = analyzeTrack(1, RMS_AMPLITUDE);
+
+// Die Lautstärke in der Konsole anzeigen
+println(loudness1);

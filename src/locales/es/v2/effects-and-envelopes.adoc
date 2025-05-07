@@ -20,12 +20,12 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-Se usa la función `setEffect()`, que requiere 4 argumentos. En este aspecto se parece a `fitMedia()`:
+Se usa la función `setEffect()`, que requiere 4 argumentos.
 
-. *numeroDePistaMusical* (_trackNumber_): La pista musical a la cual se añade el efecto.
-. *nombreDelEfecto*: El efecto específico que se usa.
-. *parametroParaElEfecto*: El parámetro, o configuración, para el efecto.
-. *valorDelEfecto*: El valor del parámetro expresado como un número en un rango específico. El rango depende del parámetro del efecto.
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 
 .PRÁCTICA
 ****
@@ -70,7 +70,7 @@ Por ejemplo, 'setEffect(1, DELAY, DELAY_TIME, 500)' pone un efecto de retardo en
 . Lee sobre el efecto de retardo (_delay_) en el capítulo que trata sobre la lista de efectos aquí: <</en/v1/every-effect-explained-in-detail#,effects>>
 . Luego ejecuta el código a continuación y escucha la música sin efectos
 . Descomenta la primera línea `setEffect()` y escucha la diferencia
-. Luego descomenta la segunda línea `setEffect()` y escucha la diferencia ("descomentar" significa borrar la sintaxis que se usa para los comentarios, `#` o `//`, del bloque de código). Toma en cuenta que la duración del efecto de retardo (_delay_), 500ms, es la misma duración que una pulsación. Ya que el tempo es 120 pulsaciones por minuto, hay una pulsación cada 60/120 = 1/2 de segundo. 1 segundo son 1000ms, entonces una 1/2 de segundo son 1000/2 = 500ms.
+. Luego descomenta la segunda línea `setEffect()` y escucha la diferencia ("descomentar" significa borrar la sintaxis que se usa para los comentarios, `#` o `//`, del bloque de código). Ya que el tempo es 120 pulsaciones por minuto, hay una pulsación cada 60/120 = 1/2 de segundo. 1 segundo son 1000ms, entonces una 1/2 de segundo son 1000/2 = 500ms.
 Puedes tratar de modificar la duración del efecto de retardo y observar si tu música suena mejor o no.
 ****
 
@@ -106,9 +106,9 @@ Hasta ahora, has estado usando varias funciones en EarSketch como `fitMedia()` o
 Cada argumento de la función puede requerir un tipo específico de dato. El orden de los argumentos es importante. Aquí hay algunos ejemplos de tipos de datos:
 
 * *Números*
-** *Enteros* (o "int") son números enteros, como 0, 5, o -26.
-** Los números de *coma flotante* (_floating point_ en inglés) son números racionales como 0.125 o -21.0. Por ejemplo, los argumentos de número de pista, compás inicial y compás final de la función `fitMedia()` son todos números.
-* *Las cadenas*. Son también conocidas como cadenas de caracteres en español o _strings_ en inglés. Una cadena de tiempos, como `"0000---0000---"`, se usa como argumento en la función `makeBeat()`.
+** *Enteros* (o "int") son números enteros, como 0, 5, o -26. Example: track numbers
+** Los números de *coma flotante* (_floating point_ en inglés) son números racionales como 0.125 o -21.0. Example: volume of -4.2dB
+* *Strings* represent text. Example: `"0000----0000----"`
 
 Ahora, vamos a jugar más con la función `setEffect()`. El siguiente video muestra cómo usar algunos efectos:
 
@@ -117,8 +117,6 @@ VIDEO IS BEEING MADE
 more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
 ("videos revamping" tab)
 ////
-
-_UN VIDEO SOBRE CÓMO HACER EFECTOS VIENE PRONTO_
 
 *Reverb* (una abreviación en inglés que significa reverberación) es cuando el sonido rebota de las paredes y regresa a tus oídos. Da la sensación de espacio a tu sonido. Piensa en la diferencia entre hablar en una pequeña recámara y hablar en una iglesia grande. En cuanto más grande y "plano" el cuarto, más tiempo tarda para que la onda regrese a tus oídos, lo cual produce ese sonido de "cuarto grande con eco". El efecto `REVERB` tiene parámetros para controlar el tiempo que el sonido toma para desaparecer (`REVERB_DECAY`) y la intensidad del efecto (`MIX`).
 
@@ -158,15 +156,15 @@ Vamos a usar 2 parejas valor-tiempo. Cada pareja contiene un valor de efecto y u
 [caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-Para cambiar un envelope, sólo se necesita la función `setEffect()` con 7 argumentos. Los últimos 4 argumentos son las 2 parejas valor-tiempo:
+Para cambiar un envelope, sólo se necesita la función `setEffect()` con 7 argumentos.
 
-. trackNumber (numeroDePista)
-. effectName (nombreDelEfecto)
-. effectParameter (parametroDelEfecto)
+. track
+. type
+. parameter
 . effectStartValue (valorInicialDelEfecto)
-. effectStartMeasure (compasInicialDelEfecto)
+. start
 . effectEndValue (valorFinalDelEfecto)
-. effectEndMeasure (compasFinalDelEfecto)
+. end
 
 Los últimos 3 de los 7 parámetros son *parámetros opcionales*. Si no se especifican, como fue el caso cuando sólo asignamos 4 parámetros a `setEffect()`, el efecto se aplicará a la pista entera.
 
@@ -213,7 +211,7 @@ Crea una nueva canción. Usa un ciclo `for` para añadir un envelope a todas las
 Pide que tu compañero/a escuche tu canción, con o sin el efecto (para escuchar tu canción sin el efecto, comenta las líneas que crean el efecto). Tu compañero/a debe adivinar cuál es el efecto que añadiste.
 ****
 
-A continuación, hay un ejemplo de la práctica anterior. Cada iteración del ciclo añade un segmento del envelope que dura un compás. Automatizar el parámetro GAIN crea aumentos/desvanecimientos rítmicos de volumen, un efecto popular en EDM (música electrónica dance). Ve a la canción https://www.youtube.com/watch?v=Us_U-d2YN5Y[Rhythm] de Lvly para un buen ejemplo. Trata de prender y apagar el bypass del efecto en la EAD para escuchar la diferencia que el efecto hace (el botón de "bypass" a la izquierda de la pista del efecto en tu EAD).
+A continuación, hay un ejemplo de la práctica anterior. Cada iteración del ciclo añade un segmento del envelope que dura un compás. Automatizar el parámetro GAIN crea aumentos/desvanecimientos rítmicos de volumen, un efecto popular en EDM (música electrónica dance). Trata de prender y apagar el bypass del efecto en la EAD para escuchar la diferencia que el efecto hace (el botón de "bypass" a la izquierda de la pista del efecto en tu EAD).
 
 [role="curriculum-python"]
 [source,python]
@@ -249,10 +247,10 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * *Los efectos* cambian las características de un sonido para hacerlas más únicas.
 * *El volumen* tiene que ver con la intensidad sonora. *El efecto de retardo (_delay_)* crea un eco. *La reverberación (_reverb_)* da la sensación de tocar el sonido en un cuarto grande. *Panning* (movimiento panorámico del sonido) inclina (o "panea") tu música hacia la izquierda o derecha.
 * Los efectos de EarSketch se implementan usando la función `setEffect()`. Su sintaxis es `setEffect(numeroDePista, nombreDelEfecto, parametroDelEfecto, valorDelEfecto)`.
-** *numeroDePistaMusical (_trackNumber_):* La pista musical a la cual se añade el efecto.
-** *nombreDelEfecto:* El efecto específico que se usa.
-** *parametroParaElEfecto:* La configuración que se usa para el efecto.
-** *valorDelEfecto:* El valor del parámetro (un número en un rango específico).
+. *track*: Track number or `MIX_TRACK`
+. *type*: Effect constant, like `DELAY`
+. *parameter*: Parameter constant, like `DELAY_TIME`
+. *value*: Parameter value, like `200`. This value must be within the effect's range.
 * *Las funciones* contienen instrucciones que la computadora ejecuta. Se envían datos a las funciones a través de *argumentos*, que afectan cómo se ejecuta la función. La sintaxis de una *llamada* a función con dos argumentos es `miFuncion(argumento1, argumento2)`. Un ejemplo de la sintaxis de una *llamada* a función con 4 argumentos es `makeBeat(bombo, 2, compas, ritmoDeBombo)`.
 * Se puede encontrar una lista completa de los efectos de EarSketch y sus parámetros en <</en/v1/every-effect-explained-in-detail#,effects>>, junto con descripciones de cada uno.
 * *Los envelopes* (una palabra que significa "envolventes" en español) definen cómo se cambia un parámetro de un efecto con el tiempo. Usan parejas valor-tiempo, como _(valor, tiempo, valor, tiempo)_.
@@ -280,7 +278,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * Nombre del clip
 * Nombre del efecto
 * Valor del efecto
-* Número de pista musical
+* trackNumber (numeroDePista)
 --
 
 [question]
@@ -301,7 +299,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 [answers]
 * Duración del clip
 * Valor de comienzo
-* Número de pista musical
+* trackNumber (numeroDePista)
 * Efecto
 --
 

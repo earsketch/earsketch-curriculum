@@ -1,7 +1,10 @@
 if (condicion1) {
-    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true. } else if (condicion2) {
-    // # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea. // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
+    // Escribe aquí las instrucciones que la computadora tiene que ejecutar si se calcula que la condicion1 es true.
+} else if (condicion2) {
+    // # Escribe aquí las instrucciones si la condicion2 es true. Si la condicion2 es false, prosigue a la siguiente línea.
+    // elif es una abreviatura de "else if" ("de lo contrario, si" en español)
 } else if (condicion3) {
-    // Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea. } else {
+    // Escribe aquí las instrucciones si la condicion3 es true. Si la condicion3 es false, prosigue a la siguiente línea.
+} else {
     // Escribe aquí las instrucciones si todas las 3 condiciones son false.
 }

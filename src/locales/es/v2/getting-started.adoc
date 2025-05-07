@@ -3,14 +3,14 @@
 
 :nofooter:
 
-En este capítulo vas a aprender cómo funciona EarSketch, cómo colocar sonidos (clips) en tu música, y cómo depurar tu código.
+En este capítulo vas a aprender cómo funciona EarSketch, cómo colocar sonidos (clips) en tu música, y cómo depurar tu código. Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código.
 
 [[discoverearsketch]]
 === Descubre EarSketch
 
 :nofooter:
 
-En EarSketch, darás instrucciones a la computadora escribiendo código. Una línea del código corresponde a una instrucción. Todas las instrucciones juntas forman el programa (estas instrucciones también se pueden llamar un algoritmo). De la misma manera que se usan las recetas de un libro de cocina para preparar una comida, se ejecuta un programa de EarSketch para crear una canción. ¿Dónde se coloca el código dentro de un programa? ¡Averígualo mirando este video!
+En EarSketch, darás instrucciones a la computadora escribiendo código. Una línea del código corresponde a una instrucción. Todas las instrucciones juntas forman el programa (estas instrucciones también se pueden llamar un algoritmo). De la misma manera que se usan las recetas de un libro de cocina para preparar una comida, se ejecuta un programa de EarSketch para crear una canción. How does it work? ¡Averígualo mirando este video!
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -20,14 +20,14 @@ video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 TODO: upload video
 ////
 
-Para usar EarSketch
+As you become familiar with EarSketch these are the main panels.
 
-. Puedes navegar y seleccionar sonidos en el *navegador de sonidos*.
-. Escribirás código en el *editor de código*.
-. Cuando hagas clic en el botón de *ejecutar*, verás tu música en la *Estación de Audio Digital* (o *EAD*).
-. Puedes entonces hacer clic en el botón de *play* para escuchar tu música.
-. ¡Puedes seguir cambiando tu programa (tu código) hasta que estés satisfecho con lo que escuchas!
-. Puedes abrir y cerrar este cuadro de currículo usando el icono más bajo de la barra izquierda
+* *Content Manager* _(left)_: Your scripts and sounds
+* *DAW* _(top-center)_: The song timeline and "play" button
+* *Editor* _(mid-center)_: The code editor and "run" button
+* *Console* _(bottom-center)_: The script output and errors
+
+{nbsp} +
 
 _¿Qué es una EAD?_
 
@@ -35,9 +35,7 @@ Una *Estación de Audio Digital*, o *EAD*, es un software que produce o edita cl
 
 Algunas EADs populares incluyen https://www.ableton.com/[Ableton^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^] y http://www.reaper.fm/[Reaper^].
 
-Con una EAD, puedes grabar, editar, visualizar y poner archivos de audio. Estos archivos de audio se llaman *clips*.
-
-EarSketch es igual que una EAD, con la diferencia de que puedes programar directamente los elementos musicales usando código.
+Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código.
 
 Este video explica cómo se hace pleno uso de la EAD:
 
@@ -68,18 +66,17 @@ include::code-examples/getting-started-intro-script.js.txt[]
 [[createanewscript]]
 === ¡Crea tu primer script!
 
-En EarSketch, cada script que escribas corresponderá a una canción. Vamos a ver cómo crear un script:
+Vamos a ver cómo crear un script:
 
-. *Iniciar una sesión (_sign in_) o crear una nueva cuenta* en la esquina derecha superior de tu pantalla. Si haces clic en el botón blanco que dice "Crear / Reiniciar la cuenta", puedes recuperar una contraseña perdida o crear una nueva cuenta ("Registrar una Nueva Cuenta"). _Advertencia:_ en general en el Internet, no uses la misma contraseña para todas tus cuentas y nunca compartas tus contraseñas.
-. *Haz clic para crear.* Si no tienes abierto ningún script, haz clic en el enlace grande azul en el editor de código que dice "¡Haz clic aquí para crear un nuevo script!".
+. *Create.* In the editor tabs, click the white "+" icon.
 +
-Si ya tienes un script o más abiertos, entonces haz clic en el icono "+" azul a lado de las pestañas.
+*Haz clic para crear.* Si no tienes abierto ningún script, haz clic en el enlace grande azul en el editor de código que dice "¡Haz clic aquí para crear un nuevo script!".
 +
 [[newscriptplus]]
 .Crea nuevos scripts, abre scripts
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
-. *Elige un nombre e idioma:* El cuadro de diálogo que dice "Crear un nuevo script" se abre. Ponle nombre a tu nuevo script: es el nombre de tu canción. Entonces selecciona el lenguaje de programación (Python o Javascript). Por fin, haz clic en el botón de "Crear".
+. Entonces selecciona el lenguaje de programación (Python o Javascript).
 +
 [[newscriptpromptpy]]
 .El cuadro de diálogo para crear un nuevo script
@@ -92,20 +89,17 @@ image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 [role="curriculum-javascript"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
+. *(OPTIONAL) Sign in or create a new account.* To save your scripts for future editing and sharing, sign in with an EarSketch account.
++
+_Note: Your EarSketch account does not require any personal information or email._
 
 *_¿Qué es un lenguaje de programación?_*
 
-El código está escrito en un *lenguaje de programación*, el cual incluye su propio vocabulario y sintaxis, igual que cualquier lenguaje regular. Tienes que saber cuáles son las reglas gramaticales de tu lenguaje de programación, o la computadora no podrá ejecutar tus instrucciones.
+El código está escrito en un *lenguaje de programación*, el cual incluye su propio vocabulario y sintaxis, igual que cualquier lenguaje regular. Like a spoken language it has vocabulary and syntax. Tienes que saber cuáles son las reglas gramaticales de tu lenguaje de programación, o la computadora no podrá ejecutar tus instrucciones.
 
-En EarSketch, puedes programar en Python o JavaScript.
+Cuando se toca el botón de *ejecutar*, la computadora traduce las instrucciones de Python o JavaScript a código binario. Luego el código es *ejecutado* por la computadora, y verás tu música aparecer en la EAD.
 
-[role="curriculum-python"]
-_Estás en modo Python. Compañías como Google, Yahoo, NASA y Disney usan Python para programar juegos como Civilization 4, Battlefield 2 y Crystal Space._
-
-[role="curriculum-javascript"]
-_Estás en modo JavaScript. JavaScript es uno de los diez lenguajes de programación más populares del mundo. Casi todas las páginas web usan JavaScript._
-
-En su nivel más profundo, las computadoras operan en combinaciones de 1s y 0s: números binarios. Eso se debe a que los componentes electrónicos pueden reaccionar de modo diferente si hay una corriente eléctrica (1) o si no hay corriente eléctrica (0). Cuando se toca el botón de *ejecutar*, la computadora traduce las instrucciones de Python o JavaScript a código binario. Luego el código es *ejecutado* por la computadora, y verás tu música aparecer en la EAD.
+At the deepest level, computers execute code using *binary*. This means that all computer code eventually becomes `1` 's and `0` 's as it is processed by electrical components in the computer.
 
 [[fitmedia]]
 === La función `fitMedia()`
@@ -122,25 +116,51 @@ video::./videoMedia/1_3_fitmedia_py.mp4[]
 [[video110js]]
 video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-Para agregar un clip de sonido a la EAD, empezamos escribiendo `fitMedia()`. Entre los paréntesis, tendremos 4 parámetros, separados por comas:
+Para agregar un clip de sonido a la EAD, empezamos escribiendo `fitMedia()`.
 
-. *Un nombre de clip*: coloca tu cursor entre los paréntesis, ve al navegador de sonidos, selecciona un clip y pégalo usando el icono azul de pegar.
-. *El número de pista musical*: las pistas musicales (tracks) son las filas que atraviesan la EAD; te ayudan a organizar tus sonidos por tipo de instrumento (voz, guitarra solista, guitarra rítmica, bajo, baterías, etc.). Para tu primer sonido, puedes empezar en la pista musical uno.
-. *El compás de comienzo*: el compás cuando tu sonido empezará a sonar. Los compases son unidades de tiempo musical. Un compás contiene 4 tiempos. Puedes empezar tu primer sonido en compás número uno.
+`fitMedia(sound, track, start, end)`
+
+There are 4 *parameters*, separated by commas.
+
 . *El último compás*: el compás cuando tu sonido deja de sonar.
+. *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
+. *Start*: the starting measure
+. *End*: the ending measure
 
-_Por ejemplo:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` colocará el sonido `Y18_DRUM_SAMPLES_2` en la pista musical 1 (track 1) del compás 1 al compás 5.
+_Example:_
 
-Entonces, haz clic en _ejecutar_: debes poder visualizar tu sonido en la EAD. Cuando oprimas _play_ puedes escucharlo.
+Por ejemplo, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` es una declaración.
+
+_Por ejemplo:_ `fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5)` colocará el sonido `Y18_DRUM_SAMPLES_2` en la pista musical 1 (track 1) del compás 1 al compás 5. Una *declaración* le indica a la computadora que ejecute una acción.
+
+`fitMedia()` es la manera principal de agregar sonido a la EAD.
+
+When you've finished adding all your parameters, press _run_. You will see your sounds visualized in the DAW. Puedes entonces hacer clic en el botón de *play* para escuchar tu música.
 
 [role="curriculum-javascript"]
-Una *declaración* le indica a la computadora que ejecute una acción. Por ejemplo, `fitMedia(Y18_DRUM_SAMPLES_1, 1, 1, 5);` es una declaración. Cada declaración en JavaScript *_debe terminar con punto y coma_*.
+Note: In JavaScript an optional semicolon `;` can be added to the end of each statement. Use of the semicolon is your personal choice.
 
 ////
 OPTIONAL
 ////
 
-El *Navegador de Sonidos*: Navega o busca entre los 4,000 clips de audio para usarlos en tu música, hechos por los músicos/productores https://en.wikipedia.org/wiki/Young_Guru[Young Guru^], https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^], https://en.wikipedia.org/wiki/Ciara[Ciara^], https://en.wikipedia.org/wiki/Common_(rapper)[Common^], https://en.wikipedia.org/wiki/Pharrell_Williams[Pharrell Williams^], Irizarry y Caraballo y https://www.sndbrd.com/[Milknsizz^].
+{nbsp} +
+
+Puedes navegar y seleccionar sonidos en el *navegador de sonidos*.
+
+The *sound browser* provides a library of over four thousand sounds to use in your music.
+Contributors include celebrity musicians
+https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
+https://en.wikipedia.org/wiki/Ciara[Ciara^],
+https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
+https://en.wikipedia.org/wiki/Khalid[Khalid^],
+https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
+https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
+and https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
+
+You can explore the sound browser within the *Content Manager* (left) by clicking "sounds". Try using different sound constants inside `fitMedia()`.
+
+Note: The https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] covers fair use of stock sounds.
 
 ////
 END OF OPTIONAL
@@ -150,7 +170,7 @@ END OF OPTIONAL
 OPTIONAL
 ////
 
-Mira algunos ejemplos de código usando `fitMedia()` (Recuerda que puedes hacer clic en ícono azul de portapapeles en la esquina superior derecha de la casilla para pegar el código en un nuevo archivo): 
+Mira algunos ejemplos de código usando `fitMedia()` (Recuerda que puedes hacer clic en ícono azul de portapapeles en la esquina superior derecha de la casilla para pegar el código en un nuevo archivo): Remember, you can import this script by clicking the blue clipboard icon.
 
 [role="curriculum-python"]
 [source,python]
@@ -279,41 +299,20 @@ TODO: when options are ready, modify the link
 [[chapter1summary]]
 === Resumen del capítulo 1
 
-[role="curriculum-python"]
-* Una línea de código es una instrucción que la computadora ejecute. Todas las instrucciones juntas forman el programa.
-* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
-* Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
-* Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
 * Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
-* *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
-* Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
-* `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
-** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
-** *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
-** *momentoDeComienzo:* El compás en el cual el clip de sonido empezará.
-** *momentoCuandoTermina:* El compás en el cual el clip de sonido terminará.
-* *Depuración* es el proceso de encontrar y arreglar *_bugs_*, errores hechos por el/la programador/a.
+* A *script* is a nickname for a short program.
+* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es igual que una EAD, con la diferencia de que puedes programar directamente los elementos musicales usando código.
+* Escribirás código en el *editor de código*. Cuando hagas clic en el botón de *ejecutar*, verás tu música en la *Estación de Audio Digital* (o *EAD*).
+* Puedes encontrar los clips de sonido en el Navegador de Sonidos. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
+* *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende.
 * Las reglas de *sintaxis* determinan cómo se escribe el código en el lenguaje de programación en cuestión.
-* La *consola* muestra información sobre el estado de un programa. Es útil para depurar errores de sintaxis.
-* Errores comunes de principiantes incluyen las erratas, el uso incorrecto de mayúsculas o minúsculas, la falta de paréntesis, la configuración incorrecta del script...
-
-[role="curriculum-javascript"]
-* Una línea de código es una instrucción que la computadora ejecute. Todas las instrucciones juntas forman el programa.
-* *EADs* son software de computadora especializado para grabar, editar y poner archivos de audio digital, o *clips*. EarSketch es una EAD que permite que se coloquen clips de audio en una secuencia de tiempo usando código.
-* Para hacer música en EarSketch, primero se escribe código en el cuadro del editor de código. Después de hacer clic en ejecutar, se toca la música en el cuadro de la EAD.
-* Puedes encontrar los clips de sonido en el Navegador de Sonidos. Para usarlos, hay que escribir o pegar sus nombres todo en mayúsculas en el código.
-* Un *programa* de computadora es una secuencia de instrucciones que la computadora ejecuta para realizar una tarea específica.
-* *Lenguajes de programación* son colecciones de palabras y símbolos que la computadora entiende. Un lenguaje de programación sigue una sintaxis a fin de organizar el código.
-* Un script de EarSketch consiste de una sección de comentarios, configuración, y música.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
-* `fitMedia()` es la manera principal de agregar sonido a la EAD. Tiene cuatro argumentos, la información que necesita para hacer música:
-** *nombreDelArchivo:* El clip de sonido que se mete en la EAD.
+* `fitMedia()` es la manera principal de agregar sonido a la EAD. It has the following four parameters.
+** *El último compás*: el compás cuando tu sonido deja de sonar.
 ** *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
-** *momentoDeComienzo:* El compás en el cual el clip de sonido empezará.
-** *momentoCuandoTermina:* El compás en el cual el clip de sonido terminará.
+** *Start*: the starting measure
+** *End*: the ending measure
 * *Depuración* es el proceso de encontrar y arreglar *_bugs_*, errores hechos por el/la programador/a.
-* Las reglas de *sintaxis* determinan cómo se escribe el código en el lenguaje de programación en cuestión.
 * La *consola* muestra información sobre el estado de un programa. Es útil para depurar errores de sintaxis.
 * Errores comunes de principiantes incluyen las erratas, el uso incorrecto de mayúsculas o minúsculas, la falta de paréntesis, la configuración incorrecta del script...
 

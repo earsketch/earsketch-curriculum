@@ -1,0 +1,18 @@
+[[unit1]]
+== Einheit 1: Schreibe und füge Beats hinzu
+
+:nofooter:
+
+In dieser Einheit lernst du, wie EarSketch funktioniert, du platzierst Sounds (Clips) in deine Musik, debuggst deinen Code, passt deinen Song an und fügst Beats für dein Musikgenre hinzu.
+
+Jeder kann programmieren lernen, vor allem du! Wie beim Lernen von Musikinstrumenten bedarf es ständiger Übung, um Fortschritte zu erzielen. Lass dich nicht entmutigen, wenn du nicht weiterkommst, das gehört dazu. Frage in deiner Klasse nach Hilfe oder schaue im Internet nach, falls nötig.
+
+Wir wünschen dir viel Glück, und bevor du anfängst, ist hier ein Beispiel dafür, was du mit EarSketch machen kannst:
+
+[role="curriculum-python curriculum-mp4"]
+[[video1livepy]]
+video::./videoMedia/001-01-WhyLearnProgrammingforMusic-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video1livejs]]
+video::./videoMedia/001-01-WhyLearnProgrammingforMusic-JS.mp4[]

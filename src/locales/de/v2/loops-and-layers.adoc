@@ -1,0 +1,414 @@
+[[loopandlayers]]
+== Loops und Layers
+
+:nofooter:
+
+In diesem Kapitel lernst du for-loops kennen und erfährst, wie du Wiederholungen in deinem Code und deiner Musik erzeugen kannst. Außerdem behandeln wir musikalische Schichten und Texturen sowie einige Tipps zur Fehlersuche.
+
+[[forloops]]
+=== for-loop
+
+So wie Musiker in einem *for-loop* immer wieder ein Muster spielen können, können Programmierer den Computer immer wieder auffordern, Aufgaben zu erledigen. in einem *loop*! Das ist effizienter: Anstatt eine Anweisung mehrmals zu schreiben, schreibst du einen Loop mit den Anweisungen, und der Computer weiß, dass er sie wiederholen soll.
+
+Wenn du zum Beispiel eine von dir erstellte `makeBeat()`-Funktion wiederholen möchtest, kannst du, anstatt mehrere Zeilen mit `makeBeat()` zu schreiben, einen for-loop erstellen.
+
+////
+add new video
+more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
+in the "revamping videos" tab (includes link to script)
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
+----
+
+[role="curriculum-python"]
+for-loops in Python bestehen aus 3 grundlegenden Teilen:
+
+[role="curriculum-javascript"]
+for-loops in JavaScript bestehen aus vier grundlegenden Teilen:
+
+[[loop-components-PY]]
+.Die grundlegenden Bestandteile eines for-loops
+[role="curriculum-python"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_PY.png[Alt Text]
+
+[[loop-components-JS]]
+.Die grundlegenden Bestandteile eines for-loops
+[role="curriculum-javascript"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_JS.png[Alt Text]
+
+[role="curriculum-python"]
+* *Loop-Zähler*: Erstellt eine Variable zur Verwendung als Loopzähler. Du kannst mehr als eine Zeile von Anweisungen im for-loop haben.
+* *Bereich*: Eine Funktion, die eine Liste von Zahlen erstellt, die der Loop-Zähler durchzählen soll. Das Schlüsselwort `in` verbindet den Schleifenzähler mit dem Bereich. `range()` benötigt zwei Argumente, einen Startpunkt (inklusive) und einen Endpunkt (exklusive): `range(startingNumber, endingNumber)`.
+* *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Dazu gehört alles, was direkt nach dem Doppelpunkt `:` (mit der Tabulatortaste) *eingerückt* wird.
+
+[role="curriculum-javascript"]
+* *Initialisierung*: Erstellt eine Variable, die als *Loop-Zähler* vor der ersten Schleife verwendet werden soll.
+* *Loop Bedingung*: Diese prüft, ob die Schleife erneut ausgeführt werden soll. Wenn die Anweisung true ist, wird der Schleifenkörper erneut ausgeführt. Wenn der Zähler zu hoch wird, ist die Aussage false, und wir verlassen den Loop. Der Computer führt dann den Code nach dem Loop weiter aus.
+* *Iteration Statement*: Eine Anweisung, die den Loopzähler aktualisiert. Es zählt jedes Mal, wenn sich die Schleife wiederholt.
+* *Loop Body*: Der Körper eines Loops enthält Anweisungen, die wiederholt ausgeführt werden. Es ist umgeben von geschweiften Klammern `{ }` und ist *eingerückt* (mit dem _tab_ Schlüssel). Du kannst mehr als eine Zeile von Anweisungen im for-loop haben.
+
+.ÜBUNG
+****
+. Erstelle einen for-loop mit dem Zähler `measure`, um dein „'makeBeat()“ von Takt 1 bis 4 zu haben.
+. Ändere deinen Code, damit er von Takt `3` bis `7` geht
+. Ändere dann deinen Code, um deine Beats auf Track `2` anstelle von Track `1` zu haben, immer noch von Takt `3` bis `7`
+. Ändere dann deinen Zählernamen, wähle einen Track und Takte und erstelle den passenden for-loop
+. Zeige deinen Nachbarn deine letzte for-loop und lass sie finden, auf welchem Track dein Beat ist, auf welchen Takten es sein wird und was der Name deines Counters ist.
+****
+
+{nbsp} +
+
+[[printstatements]]
+=== Anweisungen ausgeben
+
+Um den Ablauf deines Codes besser zu verstehen, kannst du eine `print()`-Anweisung verwenden. Dies ermöglicht es dir, Informationen in der Konsole anzuzeigen, wenn du den Code ausführst.
+
+[role="curriculum-python"]
+Wenn du Daten an `print()` übergibst, werden sie *ausgewertet*, oder sie werden auf ihre Grundform vereinfacht.
+
+[role="curriculum-javascript"]
+Wenn du Daten an `printIn()` übergibst, werden sie *ausgewertet*, oder sie werden auf ihre Grundform vereinfacht.
+
+Dann werden die Daten in Text konvertiert und in der Konsole angezeigt.
+
+[role="curriculum-python"]
+.ÜBUNG
+****
+Bevor du den folgenden Code ausführst, versuche zu erraten, was die Konsole bei der jeweiligen `print()`- Anweisung anzeigen wird.
+****
+
+[role="curriculum-javascript"]
+.ÜBUNG
+****
+Bevor du den folgenden Code ausführst, versuche zu erraten, was die Konsole bei der jeweiligen `printIn()`- Anweisung anzeigen wird.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-printing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-printing.js.txt[]
+----
+
+Hier siehst du in deiner Konsole die folgenden Zeilen:
+
+----
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
+ok
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
+3
+ok
+4
+ok
+----
+
+und es endet dort, da der Takt kleiner als 5 sein muss, also 4 ist dein Limit.
+
+[[controlflow]]
+=== Kontroll-Flow
+
+Hier ist ein weiteres Beispiel dafür, wie du for-loops verwenden kannst:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12bpy]]
+video::./videoMedia/012-03-ExampleLoop-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12bjs]]
+video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
+
+Wir können Wiederholungen in unserer Musik erzeugen, indem wir immer wieder `fitMedia()` mit verschiedenen Taktnummern eintippen:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-no-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-no-loops.js.txt[]
+----
+
+Wir können einen for-loop verwenden, um genau die gleiche Musik mit weniger Code zu erstellen. Unser Zähler hier ist "measure". Beachte, dass der Loop Body zwei Codezeilen enthält, die beide den Zähler `measure` verwenden.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-loops.js.txt[]
+----
+
+Der *Interpreter* liest und führt ein Skript aus. Die Reihenfolge, in der er ausgeführt wird, nennt man den *Kontroll-Flow*. Normalerweise geht es Linie für Linie, von oben nach unten. Deshalb müssen wir Variablen definieren, bevor wir sie im Code aufrufen.
+
+Eine Schleife ist eine *Kontroll-Flow-Anweisung*, die die Reihenfolge ändert. Am Ende eines loop bodys springt er zurück nach oben in die Schleife.
+
+Diese Animation zeigt, wie sich der Kontroll-Flow in einem for-loop bewegt, und wie sich der Wert des loop counters bei jeder *Iteration*, (Wiederholung) des Schleifenkörpers ändert:
+
+[[loop-py]]
+.Schritt für Schritt durch einen for-loop
+[role="curriculum-python"]
+[caption="Figure 4.2.1: "]
+image::../media/U1P2/LoopPy_updated.gif[Alt Text]
+
+.Schritt für Schritt durch einen for-loop
+[role="curriculum-javascript"]
+[caption="Figure 4.2.1: "]
+[[loop-js]]
+image::../media/U1P2/LoopJS_updated.gif[Alt Text]
+
+////
+Although it is valid syntax, a `*monospace bold phrase*` causes a build error in AsciidocFX. Might be something to do with DocBook conversion. No bold for now. May see how ES handles it in the future.
+
+BMW
+////
+
+Eine letzte interessante Sache an for-loops ist die Inkrementierung.
+
+[role="curriculum-python"]
+Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In for-loops haben wir die `range()` Funktion verwendet, um den Zähler zu erhöhen. Wir haben zwei Parameter für den Bereich gesehen: `startingNumber` und `endingNumber`. Es gibt einen optionalen dritten Parameter: `increment`. Standardmäßig ist `increment` gleich eins, aber du kannst es verwenden, um mehr als eins zu erhöhen. Zum Beispiel würde range(0, 10, 4) den Wert zwischen 0 und 10 um 4 erhöhen.
+
+[role="curriculum-javascript"]
+Inkrementierung bedeutet die Erhöhung des Wertes der Zähler. In for-loops haben wir die Begriffe `measure = measure + 1` verwendet. Dies erhöht den Zähler `measure` um `1` für jede Wiederholung. Es ist möglich, sie um mehr als eins zu erhöhen, wie `measure = measure + 4`.
+
+.ÜBUNG
+****
+Bevor du den folgenden Code ausführst, versuche zu erraten, was er tun wird.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-incrementing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-incrementing.js.txt[]
+----
+
+[role="curriculum-python"]
+Hier haben wir die `range()`-Funktion verwendet, aber du kannst eine Variable auch mit dieser Art von Ausdruck erhöhen oder verringern: „measure = measure+ 1“. Das bedeutet, dass der Takt nun seinem früheren Wert plus eins entspricht. Du kannst den Kurzbefehl `+=` verwenden um zu erhöhen oder `-=` zum Dekretieren. Hier ist wie: `measure += 1` entspricht `measure = measure + 1`. Und `measure -=1` entspricht `measure = measure - 1`
+
+[role="curriculum-python"]
+* `measure += 1` erhöht measure um 1. Wenn du um mehr als einen Wert erhöhen willst, verwende `measure += 2`.
+* `measure += 1` senkt measure um 1. Wenn du um mehr als einen Wert senken willst, verwende `measure += 2`.
+
+[role="curriculum-javascript"]
+Hier haben wir `measure = measure + 4` geschrieben, was bedeutet, dass measure jetzt gleich seinem früheren Wert plus vier ist. Du kannst einige shorthands verwenden:
+ `+=` (oder `-=` zum senken). Folgendes ist eine Shorthandmethode zum Erhöhen (oder senken) eines Zählers:
+
+[role="curriculum-javascript"]
+* `measure++`, oder `measure += 1` erhöht measure um 1. Wenn du um mehr als einen Wert erhöhen willst, verwende `measure += 2`.
+* `measure--`, or `measure -= 1` senkt measure um 1. Wenn du um mehr als einen Wert senken willst, verwende `measure += 2`.
+
+[[debuggingtips]]
+=== Debugging-Hinweise
+
+Programmieren ist nicht nur das Schreiben von Code. Es ist auch das Debuggen und Pflege davon. Debuggen bedeutet, Fehler zu finden und zu lösen. Bugs sind ein anderer Begriff für Fehler in deinem Code. Versuche diesen Schritten zu folgen, wenn du einen Fehler hast:
+
+[role="curriculum-python"]
+. *Lies die Konsole für Hinweise*.
+. *Suchen den Fehler in deinem Code:* Du hast hier drei Optionen.
+[role="curriculum-python"]
+.. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
+.. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
+.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `print()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
+. *Squash the Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
+
+[role="curriculum-javascript"]
+. *Lies die Konsole für Hinweise*.
+. *Suchen den Fehler in deinem Code:* Du hast hier drei Optionen.
+[role="curriculum-javascript"]
+.. Wenn die Konsole eine Zeilennummer angegeben hat, werfe einen Blick auf diese Zeile und die vorherige Zeile in dinem Code.
+.. Verwenden die "comment out"-Methode. Du kannst einen Fehler eingrenzen, indem du einen Codeblock mit Kommentarsyntax versiehst oder ihn *auskommentierst* und den Code ausführst. Wenn es keinen Fehler gibt, ist der Fehler irgendwo im kommentierten Block.
+.. *Print Debugging* kann auch verwendet werden, um einen Fehler zu lokalisieren. Lese den Problembereich deines Codes und versuche der Logik zu folgen. Füge `printIn()`-Aufrufe dort ein, wo du dir über die Logik unsicher bist, ermittle den Wert von Variablen und prüfe den Programmzustand. Das hilft dir, dein Verständnis des Programms mit dem tatsächlichen Geschehen zu vergleichen.
+. *Squash the Bug:* Prüfe auf Fehler, bearbeite den Code und führe ihn dann aus, um seine Richtigkeit zu überprüfen.
+. *Bitte um Hilfe:* Wenn du zu viel Zeit mit einem Fehler verbracht hast, dann frage jemanden um Hilfe! Ein frisches Paar Augen kann Wunder tun, um Fehler zu finden.
+
+Im Folgenden wird ein Beispiel für die Ausgabe von Variablen zur Fehlersuche in einem Skript erläutert:
+
+[role="curriculum-python curriculum-mp4"]
+[[video15py]]
+video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video15js]]
+video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
+
+Du hast eine Liste möglicher Fehler in Kapitel 1 gesehen. Hier sind einige weitere Fehler, die auftreten können:
+
+[role="curriculum-python"]
+. *Initialisieren von Variablen*: Eine Variable muss initialisiert werden, bevor sie in einem Skript verwendet werden kann. Dies bedeutet, dass du der Variable einen Wert zuweisen solltest, bevor du ihn später verwendest.
+. *Kommentare:* Eine unsachgemäße Kommentierung führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python-Kommentare müssen mit einem `#` Symbol beginnen.
+. *Einrückung:* Die Einrückung ist in Python entscheidend. Fehlende Einrückung in for-loop-bodies wird eine <</en/v1/every-error-explained-in-detail#indentationerror,indentation error> > verursachen.
+. *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
+. *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
+
+[role="curriculum-javascript"]
+. *Initialisieren von Variablen*: Eine Variable muss initialisiert werden, bevor sie in einem Skript verwendet werden kann. Dies bedeutet, dass du es mit `var` erstellen solltest, bevor du es später verwendest.
+. *Semikolons in der Definition eines for-loops*: Semikolons müssen verwendet werden, um die drei Teile (Initialisierung, Bedingung und Iterationsanweisung) einer for- Loop-Definition zu trennen.
+. *Kommentare:* Eine unsachgemäße Kommentierung führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript-Kommentare müssen mit `//` beginnen.
+. *Anführungszeichen:* Das Vergessen eines öffnenden oder schließenden Anführungszeichens kann ebenfalls ein <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> verursachen.
+. *Argumente:* Fehler bei Funktionsargumenten können zu allen möglichen Fehlern führen. Du musst die richtige Zahl und Art der Argumente für einen Function Call angeben.
+
+Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine vollständige Beschreibung der verschiedenen Fehlertypen (in Englisch) und was du tun kannst, um sie zu vermeiden.
+
+[[musicaltips]]
+=== Musikalische Tipps
+
+Jetzt, wo du viele Werkzeuge zum Erstellen deiner Musik, wie `fitMedia()`, `makeBeat()` und for-loops hast, werden wir uns musikalische Ideen ansehen.
+
+Beginnen wir mit der *Tonart* deines Songs:
+
+* *Pitch* ist, wie hoch oder niedrig ein Ton klingt. Wir ordnen relative musikalische Töne auf einer *Skala* oder einer Reihe von Musiknoten, basierend darauf, wie wir die Frequenz des Sounds hören.
+* Die *Tonart* eines Liedes bezeichnet die Tonleiter oder die Gruppe von Tonhöhen, in der die Musik komponiert ist. Tonarten können Dur (klingt normalerweise „fröhlicher“) oder Moll (klingt normalerweise „dunkler“) sein.
+* Anfängern empfehlen wir, nur eine Tonart für ihr Lied zu verwenden. Das Auswählen von Sounds aus verschiedenen Tonarten kann sich... ziemlich schief anhören! In der Regel sind alle Sounds innerhalb desselben Ordners in der EarSketch-Soundbibliothek in derselben Tonart.
+
+Hör dir den Audioclip unten an, um den Unterschied zwischen Dur und Moll zu verstehen (die Dur-Tonleiter und der Dur-Akkord stehen an erster Stelle):
+
+++++
+<div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
+++++
+
+Lass uns nun über die verschiedenen Arten von Spuren, die du haben kannst, sprechen. Du erinnerst dich vielleicht daran, dass du für jede Art von Instrument eine Spur in deiner DAW verwenden kannst. In einem Pop Song findest du die folgenden Basistracks:
+
+* Die *Melodie* ist der Hauptgedanke, der oft in höheren Tonlagen liegt, oder „die Noten, die der Lead singt“. Das kann eine Stimme sein, höhere Töne eines Keyboards, eine Gitarre usw.
+* *Harmony* sind die längeren Töne, die „die Melodie unterstützen“, wie die Akkorde eines Klaviers, einer Gitarre oder einer Ansammlung von Saiten.
+* Du hast auch eine *Bass-Linie*. Dies sind niedrigere Töne. Das kann ein Bass, ein Cello, die tiefen Töne eines Keyboards usw. sein.
+* Dann gibt es *Percussion*. Wenn du `makeBeat()` verwendest, kann das mehrere Tracks benötigen. Du kannst zum Beispiel einen Track für deinen Kick, eine für deine Snare und eine für deine Hi-Hat haben.
+
+Dies sind grundlegende Ideen, die die Struktur deines Songs bilden. Du kannst jedoch einige Teile deines Songs haben, die nur eine oder zwei der vier enthalten. Du kannst auch viele weitere Tracks hinzufügen: Du kannst eine zweite Melodie erstellen oder Drones (sehr lange Noten im Hintergrund), aufgenommene Sounds, Whooshes usw. hinzufügen. Die Möglichkeiten sind endlos! Probiere Ideen aus und behalte die, die dir am besten gefallen!
+
+Lass uns abschließend noch auf *Wiederholung* und *Kontrast* eingehen. Menschen genießen Wiederholung aufgrund dessen, was Psychologen den _mere exposure effect_ nennen. Wenn wir einen sich wiederholenden Abschnitt einer Musik hören, versucht unser Gehirn, sich die nächste Note vorzustellen, bevor sie gespielt wird und das gibt uns das Gefühl, daran beteiligt zu sein. Ebenso kann der Hörer bei jeder Wiederholung eines Musikabschnitts andere Details des Stücks wahrnehmen, da sich das Gehirn nicht mehr auf die Verarbeitung des rohen melodischen Inhalts konzentrieren muss.
+
+Der Kontrast bezieht sich auf Unterschiede in aufeinander folgenden Abschnitten der Musik, die ein wichtiges Gleichgewicht zur Wiederholung darstellen. Der Kontrast wird benutzt, um dem Zuhörer neue Elemente zu zeigen. Musiker setzen Kontraste durch rhythmische Veränderungen, neue melodische Linien und Harmonien oder Variationen bei den verwendeten Instrumenten oder Sounds.
+
+.ÜBUNG
+****
+Erstelle einen kompletten Song mit:
+
+* Ein Thema (bitte gib das von dir gewählte Thema in deinem kommentierten Intro im Code an)
+* Die Funktionen `fitMedia()` und `makeBeat()`
+* Einem oder mehreren for-loop(s) entweder mit `fitMedia()` oder `makeBeat()`
+* Mindestens vier Tracks
+* Mindestens sechzehn Takte
+* Mindestens einen hochgeladenen Sound
+* Kommentaren und Variablen zum Organisieren des Codes
+
+Denk daran, dass du Dinge ausprobieren und nur die Sounds/Ideen behalten kannst, die dir am besten gefallen. Du kannst deine Musik teilen!
+****
+
+{nbsp} +
+
+[[chapter4summary]]
+=== Zusammenfassung von Kapitel 4
+
+[role="curriculum-python"]
+* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop body, Loop-Zähler und Bereich. Der Code im Loop Body muss eingerückt werden.
+* Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
+* `print()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
+* Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
+* Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Der *Pitch (Tonhöhe)* eines Sounds bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
+* Du kannst 3 Grundtracks für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
+
+[role="curriculum-javascript"]
+* Ein *for-loop* weist den Computer an, einen Codeabschnitt wiederholt auszuführen, was weniger Code erfordert. for-loops bestehen aus einem Loop Body, einer Initialisierung, einer Iterationsanweisung und einer Loop-Bedingung. Der Code im Loop Body sollte eingerückt werden.
+* Der *Kontroll-Flow* repräsentiert die Reihenfolge, in der Anweisungen vom Computer ausgeführt werden.
+* `println()` zeigt die Daten in der Konsole an. Es ist ein nützliches Werkzeug zum Debuggen, da es dem Programmierer erlaubt, den Status des Programms zu erfahren.
+* Ausgeben, Kommentieren von Code und die Konsole können verwendet werden, um Code zu debuggen. Außerdem kann es den Fehlerbehebungsprozess erheblich beschleunigen, wenn du jemanden um Hilfe bittest.
+* Sieh dir die erweiterte Liste der häufigsten Programmierfehler noch einmal an: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Der *Pitch (Tonhöhe)* eines Sounds bestimmt, wie hoch oder niedrig er auf einer relativen Skala klingt.
+* Die *Tonart* eines Liedes definiert die *Tonleiter* oder Gruppe von Tonhöhen, in der das Stück komponiert ist, sowie die *Tonhöhe*. Die Tonarten sind entweder Dur oder Moll, was dem Hörer einen unterschiedlichen Eindruck vermitteln kann.
+* Du kannst 3 Grundtracks für das Rückgrat deiner Songs verwenden: eine Melodie in höheren Tonlagen, einen Bass in tieferen Tonlagen und ein Schlagzeug.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Welche der folgenden Komponenten ist KEINE Komponente eines for-loops?
+
+[answers]
+* Loop Interpreter
+* Loop Counter
+* Loop Body
+* Loop Bereich
+--
+
+[question]
+--
+Was von den folgenden ist KEINE gute Verwendung von Loops in einer musikalischen Komposition?
+
+[answers]
+* Ein Beatmuster erstellen, das sich nie wiederholt
+* Platzieren von Musikclips in jedem dritten Takt
+* Wiederholung eines Beats auf mehreren aufeinanderfolgenden Takten
+* Platzieren von Musikclips auf ungeraden Takten
+--
+
+[question]
+--
+Welche der folgenden Methoden ist KEINE empfohlene Technik zum Debuggen?
+
+[answers]
+* Kopieren und Einfügen von Code in Google
+* Variablenwerte in der Konsole ausgeben
+* In der Konsole angezeigte Fehlerzeilen betrachten
+* Andere um Hilfe bitten
+--
+
+[question]
+--
+Was von den folgenden ist NICHT etwas, das in der Konsole ausgegeben werden kann?
+
+[answers]
+* Code-Kommentare
+* Strings
+* Mathematische Ausdrücke
+* Variablen
+--
+
+[question]
+--
+____ ist eine Soundqualität, die bestimmt, wie hoch oder niedrig es klingt.
+
+[answers]
+* Pitch
+* Tempo
+* Rhythmus
+* Lautstärke
+--

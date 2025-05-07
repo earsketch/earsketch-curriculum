@@ -1,0 +1,13 @@
+# Benutzereingabe 2: Erstellen eines dubstep-Liedes mit benutzerdefinierten Parametern
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Musik
+soundNumber = readInput("Type a sound number between 10 and 46: ")
+dubstepSound = "DUBSTEP_BASS_WOBBLE_0"
+finalSound = dubstepSound + soundNumber
+
+# benutzerdefinierte Dubstep-Wobbles
+fitMedia(finalSound, 1, 1, 5);

@@ -1,0 +1,22 @@
+# Conditional statement: Using a boolean to create variation in a function
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Function definition
+def verse(start, variation):
+    # variation is either equal to True or False
+    if variation:
+        fitMedia(melody1, 1, start, start + 4)
+    else:
+        fitMedia(melody2, 1, start, start + 4)
+    fitMedia(drums1, 2, start, start + 4)  # this is outside the conditional statement (no indentation)
+
+# Function calls
+verse(1, True)
+verse(7, False)

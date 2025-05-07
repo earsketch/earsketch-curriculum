@@ -1,0 +1,17 @@
+# Volume Effect: Modifying the volume of 2 tracks
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# Variables
+piano1 = COMMON_LOVE_THEME_PIANO_2
+percussions1 = HOUSE_BREAK_FILL_002
+
+# Placing the sounds:
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percussions1, 2, 3, 5)
+
+# Mixing: increase the piano track and reduce the percussion track volumes
+setEffect(1, VOLUME, GAIN, 2)
+setEffect(2, VOLUME, GAIN, -15)

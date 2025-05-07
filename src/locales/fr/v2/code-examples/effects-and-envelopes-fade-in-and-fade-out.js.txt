@@ -1,7 +1,7 @@
 // Fondus d'ouverture et de fermeture : Ajout de boucle sur toutes les pistes pour ajouter un fondu d'ouverture et un fondu de fermeture
 
 // Paramétrage
-setTempo(100);
+setTempo(120);
 
 // Variables
 var melody1 = MILKNSIZZ_ADIOS_BRASS;

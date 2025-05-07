@@ -1,4 +1,5 @@
 # Total Atlanta Song of Summer : création d'une chanson complète avec des abstractions
+# structure of the song: intro-A-B-A-B
 
 from earsketch import *
 setTempo(110)

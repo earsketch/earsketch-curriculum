@@ -1,0 +1,8 @@
+if condition1:
+    # Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die condition1 True ist If it's False, move to the next line
+elif condition2:
+    # Hier schreibst du die Anweisungen, wenn condition2 True ist. If condition2 is False, move to the next line
+elif condition3:
+    # Hier schreibst du die Anweisungen, wenn condition3 True ist. If condition3 is False, move to the next line
+else:
+    # Hier schreibst du die Anweisungen für den Fall, dass alle 3 Bedingungen falsch sind

@@ -1,0 +1,19 @@
+# Ausgeben: Benutze println() um Nachrichten in der Konsole auszugeben
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Variablen
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Erste Ausgabeanweisung
+print(1 + 3)
+
+# Looping unseres Beats
+# Beachte, dass sich die Druckanweisung im for-loop befindet, so dass sie bei jeder Iteration der Schleife ausgeführt wird.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")

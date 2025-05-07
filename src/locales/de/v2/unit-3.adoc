@@ -1,0 +1,8 @@
+[[unit3]]
+== Einheit 3: Strukturiere deine Songs
+
+:nofooter:
+
+Jetzt, wo du viele Werkzeuge zum Erstellen deines Songs, zum Hinzufügen von Effekten und zum Abmischen deiner Tracks hast, werden wir uns die Struktur des Songs ansehen. Dafür verwenden wir benutzerdefinierte Funktionen: Dies sind Funktionen, die du selbst erstellst!
+
+Wir werden uns auch die Benutzereingaben ansehen und wie sie in deinen Code eingebettet werden können, um persönliche Songs zu erstellen. Schließlich werden wir sehen, wie du Datenstrukturen verwenden kannst, um deinen Code zu vereinfachen.

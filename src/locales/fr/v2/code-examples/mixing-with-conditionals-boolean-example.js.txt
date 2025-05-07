@@ -20,7 +20,7 @@ println(comparison1);
 
 // Création d'une boucle for pour comparer l'intensité sonore de chaque piste à la valeur 0.5
 for (var track = 1; track < 3; track++) {
-  var loudness = analyzeTrack(track,RMS_AMPLITUDE);
-  println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
-  println (loudness > 0.01);
+    var loudness = analyzeTrack(track,RMS_AMPLITUDE);
+    println ('Est-ce que l'intensité sonore de la piste ' + track + ' est plus élevée que 0.01 ?');
+    println (loudness > 0.01);
 }

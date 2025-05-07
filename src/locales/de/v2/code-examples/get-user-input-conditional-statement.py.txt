@@ -1,0 +1,22 @@
+# Bedingte Anweisung: Verwendung eines booleschen Wertes zur Erzeugung von Variationen in einer Funktion
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Funktionsdefinition
+def verse(start, variation):
+    # Variation entspricht entweder True oder False
+    if variation:
+        fitMedia(melody1, 1, start, start + 4)
+    else:
+        fitMedia(melody2, 1, start, start + 4)
+    fitMedia(drums1, 2, start, start + 4); # Dies liegt außerhalb der bedingten Anweisung (keine Einrückung)
+
+# Function calls
+verse(1, True)
+verse(7, False)

@@ -6,7 +6,7 @@ setTempo(100)
 
 # Antes, había una pista por cada sonido (compás 1):
 bombo = OS_KICK05
-redoblante = OS_SNARE01
+snare = OS_SNARE01
 ritmoDeBombo = "0+++----0+++----"
 ritmoDeRedoblante = "----0+++----0+++"
 makeBeat(bombo, 1, 1, ritmoDeBombo)

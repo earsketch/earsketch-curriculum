@@ -1,24 +1,22 @@
 [[loopandlayers]]
-== Boucles et textures musicales
+== Loops and Layers
+
 :nofooter:
 
 Dans ce chapitre, vous en apprendrez davantage sur les boucles `for` et comment vous pouvez créer des répétitions dans votre code et votre musique. Nous aborderons également la notion de texture musicales, ainsi que quelques conseils de débogage.
 
-
 [[forloops]]
 === Boucles `for`
 
-Tout comme les musiciens peuvent jouer un motif de façon répétée, ou en *boucle*, les programmeurs peuvent également demander à l'ordinateur d'effectuer des tâches à répétition dans une *boucle* ! C'est plus efficace, car au lieu d'écrire une instruction à plusieurs reprises, vous pouvez écrire une boucle comprenant les instructions et l'ordinateur comprendra qu'il devra les répéter.
+Tout comme les musiciens peuvent jouer un motif de façon répétée, ou en *boucle*, les programmeurs peuvent également demander à l'ordinateur d'effectuer des tâches à répétition dans une *boucle* ! in a *loop*! C'est plus efficace, car au lieu d'écrire une instruction à plusieurs reprises, vous pouvez écrire une boucle comprenant les instructions et l'ordinateur comprendra qu'il devra les répéter.
 
-Par exemple, si vous désirez répéter une fonction `makeBeat()` que vous avez créée, au lieu d'écrire plusieurs lignes de fonctions `makeBeat()`, vous pouvez créer une boucle `for`. Voici comment :
+Par exemple, si vous désirez répéter une fonction `makeBeat()` que vous avez créée, au lieu d'écrire plusieurs lignes de fonctions `makeBeat()`, vous pouvez créer une boucle `for`.
 
 ////
 add new video
 more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
 in the "revamping videos" tab (includes link to script)
 ////
-
-Voyez ci-dessous le code final de la vidéo :
 
 [role="curriculum-python"]
 [source,python]
@@ -32,14 +30,58 @@ include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
 include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
+[role="curriculum-python"]
+En Python, les boucles `for` se composent de trois parties principales :
+
+[role="curriculum-javascript"]
+En JavaScript, les boucles `for` se composent de quatre parties principales :
+
+[[loop-components-PY]]
+.Les composants de base d'une boucle « for »
+[role="curriculum-python"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_PY.png[Alt Text]
+
+[[loop-components-JS]]
+.Les composants de base d'une boucle « for »
+[role="curriculum-javascript"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_JS.png[Alt Text]
+
+[role="curriculum-python"]
+* *Compteur de boucle* : Crée une variable à utiliser comme compteur de boucle. Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
+* *Plage ou « Range »* : Une fonction qui crée une liste de nombres à compter pour le compteur de boucle. The keyword `in` connects the loop counter to the range. La fonction `range()` nécessite deux arguments, un point de départ (inclusif) et un point de fin (exclusif) : `range(startingNumber, endingNumber)`.
+* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. Cela inclut tout ce qui est *indenté* (avec un espace à gauche, à l'aide de la touche de tabulation ou _Tab_) directement après le deux-points `:`.
+
+[role="curriculum-javascript"]
+* *Initialisation* : Ceci crée une variable à utiliser comme *compteur de boucle* avant que la première boucle ne s'exécute.
+* *Condition de la boucle* : Ceci vérifie si la boucle doit être exécutée à nouveau. Si l'instruction est vraie, le corps de la boucle s'exécute à nouveau. Si le compteur dépasse la limite, l'instruction sera considérée comme fausse et la boucle se terminera. L'ordinateur continuera ensuite à exécuter le code situé après la boucle.
+* *Itération* : Une instruction qui met à jour le compteur de boucle. It counts up each time the loop repeats.
+* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
+
+.ENTRAÎNEZ-VOUS
+****
+. Créez une boucle `for` avec le compteur "measure" pour que votre fonction `makeBeat()` s'applique des mesures 1 à 4, comme dans la vidéo.
+. Modifiez votre code pour passer des mesures 3 à 7
+. Ensuite, modifiez votre code pour que vos beats se trouvent sur la piste 2 au lieu de la piste 1, mais toujours des mesures 3 à 7.
+. Puis, modifiez votre nom de compteur, choisissez une piste et des mesures, et créez la boucle `for` appropriée
+. Montrez à votre voisin.e votre dernière boucle `for`, et demandez-lui de trouver la piste sur laquelle se trouve votre beat, la mesure sur laquelle il va se trouver, ainsi que le nom de votre compteur.
+****
+
+{nbsp} +
+
+[[printstatements]]
+=== Print statements
 
 Pour mieux comprendre le flux de votre code, vous pouvez utiliser une instruction `print`. Cela vous permet d'afficher des informations dans la console lorsque vous exécutez le code.
 
 [role="curriculum-python"]
-L'instruction `print`  *évalue* une expression, c'est-à-dire qu'elle la simplifie à sa forme la plus élémentaire, quel que soit son type de données, puis l'affiche dans la console. Veuillez noter qu'en Python, l'instruction `print` est différente des autres fonctions, car nous n'avons pas besoin d'utiliser des parenthèses.
+When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
 
 [role="curriculum-javascript"]
 La fonction `println()` *évalue* une expression, c'est-à-dire qu'elle la simplifie à sa forme la plus élémentaire, quel que soit son type de données, puis l'affiche dans la console.
+
+Then the data is converted into text and shown in the console.
 
 [role="curriculum-python"]
 .ENTRAÎNEZ-VOUS
@@ -52,6 +94,8 @@ Avant d'exécuter le code suivant, essayez de deviner ce que la console va affic
 ****
 Avant d'exécuter le code suivant, essayez de deviner ce que la console va afficher pour chaque appel de `println()`.
 ****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
@@ -66,60 +110,20 @@ include::code-examples/loops-and-layers-printing.js.txt[]
 ----
 
 Vous verrez apparaître dans votre console les lignes suivantes :
+
 ----
-4 (cela correspond à 1+3, simplifié)
-1 (au début, votre compteur "measure" est égal à 1)
-"ok"
-2 (maintenant, votre compteur "measure" est égal à 2)
-"ok" (chaque fois que nous passons à travers une boucle, nous affichons "ok", voilà pourquoi cela se répète)
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
+ok
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
 3
-"ok"
+ok
 4
-"ok"
+ok
 ----
+
 Cela prend fin là, car la mesure doit être inférieure à 5, donc 4 est la limite.
-
-.ENTRAÎNEZ-VOUS
-****
-. Créez une boucle `for` avec le compteur "measure" pour que votre fonction `makeBeat()` s'applique des mesures 1 à 4, comme dans la vidéo.
-. Modifiez votre code pour passer des mesures 3 à 7
-. Ensuite, modifiez votre code pour que vos beats se trouvent sur la piste 2 au lieu de la piste 1, mais toujours des mesures 3 à 7.
-. Puis, modifiez votre nom de compteur, choisissez une piste et des mesures, et créez la boucle `for` appropriée
-. Montrez à votre voisin.e votre dernière boucle `for`, et demandez-lui de trouver la piste sur laquelle se trouve votre beat, la mesure sur laquelle il va se trouver, ainsi que le nom de votre compteur.
-****
-
-Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
-
-[role="curriculum-python"]
-En Python, les boucles `for` se composent de trois parties principales :
-
-[role="curriculum-javascript"]
-En JavaScript, les boucles `for` se composent de quatre parties principales :
-
-[[loop-components-PY]]
-.Les composants de base d'une boucle « for »
-[role="curriculum-python"]
-[caption="Figure 12.2: "]
-image::../media/U1P2/Loop_Components_PY.png[Alt Text]
-
-[[loop-components-JS]]
-.Les composants de base d'une boucle « for »
-[role="curriculum-javascript"]
-[caption="Figure 12.2: "]
-image::../media/U1P2/Loop_Components_JS.png[Alt Text]
-
-[role="curriculum-python"]
-* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. Cela inclut tout ce qui est *indenté* (avec un espace à gauche, à l'aide de la touche de tabulation ou _Tab_) directement après le deux-points `:`.
-* *Compteur de boucle* : Crée une variable à utiliser comme compteur de boucle.
-* *Plage ou « Range »* : Une fonction qui crée une liste de nombres à compter pour le compteur de boucle. Le mot clé `in` vérifie si la valeur du compteur de boucle se trouve dans la plage spécifiée. La fonction `range()` nécessite deux arguments, un point de départ (inclusif) et un point de fin (exclusif) : `range(startingNumber, endingNumber)`.
-
-[role="curriculum-javascript"]
-* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key).
-* *Initialisation* : Ceci crée une variable à utiliser comme *compteur de boucle* avant que la première boucle ne s'exécute.
-* *Itération* : Une instruction qui met à jour le compteur de boucle. Il compte à chaque itération.
-* *Condition de la boucle* : Ceci vérifie si la boucle doit être exécutée à nouveau. Si l'instruction est vraie, le corps de la boucle s'exécute à nouveau. Si le compteur dépasse la limite, l'instruction sera considérée comme fausse et la boucle se terminera. L'ordinateur continuera ensuite à exécuter le code situé après la boucle.
-
-Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
 
 [[controlflow]]
 === Flux de commande
@@ -162,7 +166,7 @@ include::code-examples/loops-and-layers-loops.py.txt[]
 include::code-examples/loops-and-layers-loops.js.txt[]
 ----
 
-L'*interpréteur* lit et exécute un script. L'ordre dans lequel il est exécuté est appelé le *flux de commande*. En général, il procède par ligne, de haut en bas. C'est pourquoi nous devons définir des variables avant de les appeler dans le code. 
+L'*interpréteur* lit et exécute un script. L'ordre dans lequel il est exécuté est appelé le *flux de commande*. En général, il procède par ligne, de haut en bas. C'est pourquoi nous devons définir des variables avant de les appeler dans le code.
 
 Une boucle est une *instruction de flux de commande*, qui modifie l'ordre d'execution. À la fin d'un corps de boucle, on revient au haut de la boucle.
 
@@ -171,12 +175,12 @@ Cette animation montre comment le flux de commande se déplace dans une boucle `
 [[loop-py]]
 .Passer à travers une boucle « for »
 [role="curriculum-python"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 image::../media/U1P2/LoopPy_updated.gif[Alt Text]
 
 .Passer à travers une boucle « for »
 [role="curriculum-javascript"]
-[caption="Figure 12.4: "]
+[caption="Figure 4.2.1: "]
 [[loop-js]]
 image::../media/U1P2/LoopJS_updated.gif[Alt Text]
 
@@ -189,15 +193,17 @@ BMW
 Un dernier aspect intéressant relatif aux boucles `for` est l'incrémentation.
 
 [role="curriculum-python"]
-Incrémenter signifie augmenter la valeur du compteur. Dans les boucles `for`, nous utilisons la fonction `range()` pour incrémenter le compteur. Nous avons vu deux paramètres pour la plage (range) : `startingNumber` et `endingNumber` (qui est exclusif). Il y a un troisième paramètre optionnel : `increment`. Par défaut, `increment` est égal à 1, mais vous pouvez l'utiliser pour incrémenter par plus d'un.
+Incrémenter signifie augmenter la valeur du compteur. Dans les boucles `for`, nous utilisons la fonction `range()` pour incrémenter le compteur. Nous avons vu deux paramètres pour la plage (range) : `startingNumber` et `endingNumber` (qui est exclusif). Il y a un troisième paramètre optionnel : `increment`. Par défaut, `increment` est égal à 1, mais vous pouvez l'utiliser pour incrémenter par plus d'un. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
 
 [role="curriculum-javascript"]
 Incrémenter signifie augmenter la valeur du compteur. Dans les boucles `for` nous utilisons l'expression `measure = measure + 1`. Cela incrémente la `mesure ou « measure »` du compteur par 1 pour chaque boucle. Il est également possible de l'incrémenter par plus d'un de la manière suivante : `measure = measure + 4`.
 
 .ENTRAÎNEZ-VOUS
-*****
+****
 Avant d'exécuter le code suivant, essayez de deviner ce qu'il va renvoyer.
-*****
+****
+
+{nbsp} +
 
 [role="curriculum-python"]
 [source,python]
@@ -211,33 +217,44 @@ include::code-examples/loops-and-layers-incrementing.py.txt[]
 include::code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
+[role="curriculum-python"]
+Ici, nous avons utilisé la fonction `range()` , mais vous pouvez également incrémenter (augmenter) ou décrémenter (diminuer) une variable en utilisant le type d'expression suivant : `measure = measure + 1`. Cela signifie que « measure » est maintenant égal à sa valeur précédente +1. Vous pouvez aussi utiliser le raccourci `+=` (ou `-=` pour décrémenter). Vous pouvez utiliser le raccourci `+=` (ou `-=` pour décrémenter) de la manière suivante : `measure += 1` est équivalent à `measure = measure + 1`. Et `measure -= 1` est équivalent à `measure = measure - 1`.
 
 [role="curriculum-python"]
-Ici, nous avons utilisé la fonction `range()` , mais vous pouvez également incrémenter (augmenter) ou décrémenter (diminuer) une variable en utilisant le type d'expression suivant : `measure = measure + 1`. Cela signifie que « measure » est maintenant égal à sa valeur précédente +1. Vous pouvez utiliser le raccourci `+=` (ou `-=` pour décrémenter) de la manière suivante : `measure += 1` est équivalent à `measure = measure + 1`. Et `measure -= 1` est équivalent à `measure = measure - 1`.
+* 1. Si vous voulez incrémenter par une valeur supérieure à un, utilisez `measure += 2`.
+* 1. 2.
 
 [role="curriculum-javascript"]
-Ici, nous avons écrit `measure = measure + 4`, ce qui signifie que « measure » est maintenant égale à sa valeur précédente +4. Vous pouvez aussi utiliser le raccourci `+=` (ou `-=` pour décrémenter). Voici une méthode de raccourci pour incrémenter (ou décrémenter) un compteur :
+Ici, nous avons écrit `measure = measure + 4`, ce qui signifie que « measure » est maintenant égale à sa valeur précédente +4. Vous pouvez détecter une erreur en écrivant // avant une ligne de code. Voici une méthode de raccourci pour incrémenter (ou décrémenter) un compteur :
 
+[role="curriculum-javascript"]
 * `measure++` ou `measure += 1` incrémente « measure » par 1. Si vous voulez incrémenter par une valeur supérieure à un, utilisez `measure += 2`.
-* `measure--` ou `measure -= 1` décrémente « measure » par 1. Si vous voulez décrémenter par une valeur supérieure à un, utilisez `measure -= 2`.
-
+* `measure--` ou `measure -= 1` décrémente « measure » par 1. 2.
 
 [[debuggingtips]]
 === Astuces de débogage
 
-La programmation ne se limite pas à l'écriture de code. Il y a aussi une partie de débogage et de maintenance du code. Le terme « déboguer » signifie résoudre les erreurs. Si vous rencontrez une erreur, essayez de suivre les étapes suivantes :
+La programmation ne se limite pas à l'écriture de code. Il y a aussi une partie de débogage et de maintenance du code. Debugging means finding and solving bugs. Bugs are another term for errors in your code. Si vous rencontrez une erreur, essayez de suivre les étapes suivantes :
 
 [role="curriculum-python"]
 . *Lisez la console pour obtenir des indices*.
-. *Localisez l'erreur dans votre code :* vous avez trois options ici. 1. Si la console vous indique un numéro de ligne, jetez-y un coup d'œil, ainsi qu'à la ligne précédente dans votre code. 2. Utilisez la méthode de "mise en commentaire". Vous pouvez détecter une erreur en écrivant # avant une ligne de code. Cela s'appelle mettre la ligne en commentaire : lorsque le code est exécuté, la ligne n'est pas exécutée. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée. 3. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Relisez la section de votre code qui pose problème et essayez de suivre la logique. Insérez des instructions `print` là où vous êtes incertain.e de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement. 
+. *Localisez l'erreur dans votre code :* vous avez trois options ici.
+[role="curriculum-python"]
+.. Si la console vous indique un numéro de ligne, jetez-y un coup d'œil, ainsi qu'à la ligne précédente dans votre code.
+.. Utilisez la méthode de "mise en commentaire". You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée.
+.. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des instructions `print` là où vous êtes incertain.e de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement.
 . *Partez à la chasse aux bogues* : vérifiez la présence d'erreurs et modifiez les lignes de code fautives, puis exécuter le code pour vérifier sa justesse.
-. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très utile pour repérer les erreurs. 
+. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très utile pour repérer les erreurs.
 
 [role="curriculum-javascript"]
 . *Lisez la console pour obtenir des indices*.
-. *Localisez l'erreur dans votre code :* vous avez trois options ici. 1. Si la console vous indique un numéro de ligne, jetez-y un coup d'œil, ainsi qu'à la ligne précédente dans votre code. 2. Utilisez la méthode de "mise en commentaire". Vous pouvez détecter une erreur en écrivant // avant une ligne de code. Cela s'appelle mettre la ligne en commentaire : lorsque le code est exécuté, la ligne n'est pas exécutée. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée. 3. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des appels de fonction `println()` là où vous êtes incertain de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement. 
+. *Localisez l'erreur dans votre code :* vous avez trois options ici.
+[role="curriculum-javascript"]
+.. Si la console vous indique un numéro de ligne, jetez-y un coup d'œil, ainsi qu'à la ligne précédente dans votre code.
+.. Utilisez la méthode de "mise en commentaire". You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée.
+.. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des appels de fonction `println()` là où vous êtes incertain de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement.
 . *Partez à la chasse aux bogues* : vérifiez la présence d'erreurs et modifiez les lignes de code fautives, puis exécuter le code pour vérifier sa justesse.
-. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très bénéfique pour détecter les erreurs. 
+. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très utile pour repérer les erreurs.
 
 Dans l'exemple ci-dessous, nous allons parcourir des variables print pour aider à déboguer un script :
 
@@ -259,15 +276,13 @@ Dans le chapitre 1, nous vous avons présenté une liste d'erreurs potentielles 
 . Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction.
 
 [role="curriculum-javascript"]
-. L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. Cela signifie que vous devez affecter des valeurs à vos variables dans le haut de votre script. N'oubliez pas d'initialiser les variables avec l'expression `var` !
+. L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. This means you should create it with `var` before using it later.
+. *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
 . *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. En JavaScript, les commentaires doivent commencer par le symbole `//`.
-. Les *points-virgules* : Inclure des points-virgules après chaque instruction est fortement recommandé en JavaScript. 
 . *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
-. Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction. 
-
+. Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction.
 
 Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
-
 
 [[musicaltips]]
 === Astuces musicales
@@ -276,9 +291,9 @@ Maintenant que vous disposez de plusieurs outils pour créer votre musique, comm
 
 Commençons par la *tonalité* de votre chanson :
 
-* La *hauteur* (ou hauteur tonale) correspond au niveau de sonorité d'une note (aigue ou grave). Les notes musicales sont regroupées en *gammes* : un ensemble de notes de musique qui sonnent bien ensemble. 
-* La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures (habituellement des sons plus "joyeux" ) ou mineures (habituellement des sons  plus "sombres"). 
-* Pour les compositeur.rice.s débutant.e.s, nous recommandons de n'avoir qu'une seule tonalité pour la chanson. Utiliser des sons provenants de tonalités différentes peut sonner... faux ! En général, les sons d'un dossier de la bibliothèque de sons EarSketch sont tous dans la même tonalité. 
+* La *hauteur* (ou hauteur tonale) correspond au niveau de sonorité d'une note (aigue ou grave). Les notes musicales sont regroupées en *gammes* : un ensemble de notes de musique qui sonnent bien ensemble.
+* La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures (habituellement des sons plus "joyeux" ) ou mineures (habituellement des sons  plus "sombres").
+* Pour les compositeur.rice.s débutant.e.s, nous recommandons de n'avoir qu'une seule tonalité pour la chanson. Utiliser des sons provenants de tonalités différentes peut sonner... off-key! En général, les sons d'un dossier de la bibliothèque de sons EarSketch sont tous dans la même tonalité.
 
 Écoutez le clip audio ci-dessous pour comprendre la différence entre les tonalités majeures et mineures :
 
@@ -288,16 +303,16 @@ Commençons par la *tonalité* de votre chanson :
 
 Maintenant, voyons les différents types de pistes que vous pourriez avoir. Vous vous souvenez peut-être qu'il est possible d'utiliser une piste de votre DAW pour chaque type d'instrument. Dans une chanson pop, vous pouvez trouver les pistes de base suivantes :
 
-* La mélodie est l'idée principale de la chanson qui est souvent plus aiguë.  Il peut s'agir d'une voix, de notes aiguës d'un clavier, de guitare, etc.
+* La mélodie est l'idée principale de la chanson qui est souvent plus aiguë. Ce sont des notes graves. Il peut s'agir d'une voix, de notes aiguës d'un clavier, de guitare, etc.
 * L'harmonie correspond aux notes plus longues qui "soutiennent la mélodie", comme les accords d'un piano, les cordes d'une guitare ou un ensemble de cordes (violons, etc.).
 * Vous avez également une ligne de basse. Ce sont des notes graves. Il peut s'agir d'une basse, d'un violoncelle, des notes graves d'un clavier, etc.
 * Ensuite, il y a les percussions. Si vous utilisez la fonction `makeBeat()`, celle-ci peut prendre plusieurs pistes. Par exemple, vous pouvez avoir une piste pour votre grosse caisse, une pour votre caisse claire et une pour votre charleston.
 
-Il s'agit là d'idées de base qui permettent de définir la texture de votre chanson. Cependant, certaines parties de votre chanson peuvent ne contenir qu'un ou deux de ces quatre éléments. Vous pouvez également ajouter d'autres pistes, créer une deuxième mélodie, ajouter des bourdons (notes très longues en arrière-plan), des sons enregistrés, des « whooshes », etc. Explorez plusieurs idées et gardez celles qui vous plaisent le plus !
+Il s'agit là d'idées de base qui permettent de définir la texture de votre chanson. Cependant, certaines parties de votre chanson peuvent ne contenir qu'un ou deux de ces quatre éléments. Vous pouvez également ajouter d'autres pistes, créer une deuxième mélodie, ajouter des bourdons (notes très longues en arrière-plan), des sons enregistrés, des « whooshes », etc. The possibilities are endless! Explorez plusieurs idées et gardez celles qui vous plaisent le plus !
 
 Enfin, parlons de la *répétition* et du *contraste*. Les êtres humains apprécient les répétitions en raison de ce que les psychologues appellent l'effet d'exposition. Lorsqu'il entend une partie de musique répétée, le cerveau essaie d'imaginer la note suivante avant qu'elle ne soit jouée, ce qui nous donne l'impression de participer. De même, chaque fois qu'une partie de musique est répétée, l'auditeur peut percevoir de nouveaux détails du morceau, car le cerveau n'a plus besoin de se concentrer sur la mélodie brute.
 
-La notion de contraste renvoie aux différences entre des parties successives de la musique, ce qui crée un équilibre important par rapport aux répétitions. Le contraste est utilisé pour attirer l'attention de l'auditeur sur de nouveaux éléments. Les musiciens peuvent créer un contraste grâce à des changements rythmiques, de nouvelles mélodies ou harmonies ou encore par des variations au niveau des instruments ou des sons utilisés. On peut retrouver un bon exemple de contraste vers 0'21 (seconde 21) et 1'01 (minute 1, seconde 1) de la chanson https://www.youtube.com/watch?v=AjjlABP5t1Q[Dream State] de Son Lux.
+La notion de contraste renvoie aux différences entre des parties successives de la musique, ce qui crée un équilibre important par rapport aux répétitions. Le contraste est utilisé pour attirer l'attention de l'auditeur sur de nouveaux éléments. Les musiciens peuvent créer un contraste grâce à des changements rythmiques, de nouvelles mélodies ou harmonies ou encore par des variations au niveau des instruments ou des sons utilisés.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -314,7 +329,7 @@ Créez une chanson complète comprenant :
 Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder que les sons/idées qui vous plaisent le plus. Aussi, n'hésitez pas à partager votre musique !
 ****
 
-
+{nbsp} +
 
 [[chapter4summary]]
 === Résumé du chapitre 4
@@ -333,12 +348,11 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 * Une *boucle `for`* indique à l'ordinateur d'exécuter une section de code de façon répétée, créant ainsi un code plus efficace. Les boucles `for` sont constituées d'un corps de boucle, d'une initialisation des variables, d'une instruction d'itération et d'une condition de boucle. En outre, le code dans le corps de la boucle doit être indenté.
 * Le *flux de commande* représente l'ordre dans lequel les instructions sont exécutées par l'ordinateur.
 * La fonction `println()` évalue son argument et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au programmeur d'en apprendre davantage sur l'état du programme.
-* La fonction « print », la mise en commentaire de code et la console sont toutes des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
+* La fonction « print », la mise en commentaire de code et la console sont des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * La *hauteur* d'un son détermine à quel point il est aiguë ou grave.
 * La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures ou mineures, ce qui crée une impression différente chez l'auditeur.
 * Vous pouvez utiliser trois pistes de base pour créer la structure de vos chansons : une mélodie aiguë, une basse grave et des percussions.
-
 
 [[chapter-questions]]
 === Questions
@@ -346,6 +360,7 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 [question]
 --
 Parmi les éléments suivants, lequel n'est PAS un composant d'une boucle `for` ?
+
 [answers]
 * L'interpréteur de boucle
 * Le compteur de boucle
@@ -356,6 +371,7 @@ Parmi les éléments suivants, lequel n'est PAS un composant d'une boucle `for`�
 [question]
 --
 Parmi les propositions suivantes, laquelle n'est PAS une bonne utilisation de boucles dans une composition musicale ?
+
 [answers]
 * Créer un motif de rythmes ou « beats » qui ne se répète jamais
 * Placer des clips musicaux sur chaque troisième mesure
@@ -366,6 +382,7 @@ Parmi les propositions suivantes, laquelle n'est PAS une bonne utilisation de bo
 [question]
 --
 Parmi les techniques suivantes, laquelle n'est PAS une technique recommandée pour le débogage ?
+
 [answers]
 * Copier et coller du code dans Google
 * Afficher les valeurs des variables dans la console
@@ -376,6 +393,7 @@ Parmi les techniques suivantes, laquelle n'est PAS une technique recommandée po
 [question]
 --
 Parmi les éléments suivants, lequel n'est PAS un élément qui peut être imprimé dans la console ?
+
 [answers]
 * Les commentaires du code
 * Les chaînes de caractères
@@ -386,10 +404,10 @@ Parmi les éléments suivants, lequel n'est PAS un élément qui peut être impr
 [question]
 --
 ____ est une qualité du son qui détermine à quel point un son est aiguë ou grave
+
 [answers]
 * La hauteur
 * Le tempo
 * Le rythme
 * Le volume
 --
-

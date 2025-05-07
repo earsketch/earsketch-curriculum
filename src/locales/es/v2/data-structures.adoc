@@ -97,7 +97,7 @@ Un consejo útil: la propiedad `length` (`arreglo.length`) devuelve el número d
 [role="curriculum-python"]
 .PRÁCTICA
 ****
-Crearemos una introducción aditiva en EarSketch en la cual los instrumentos (pistas) serán añadidos a la música uno por uno a lo largo del tiempo. Por ejemplo, la primera pista empieza en el compás 1; luego la segunda pista empieza en el compás 2, y así sucesivamente. Comúnmente se usa esta técnica en las introducciones de canciones. Escucha https://www.youtube.com/watch?v=L53gjP-TtGEKanye["Power" de Kanye West^].
+Crearemos una introducción aditiva en EarSketch en la cual los instrumentos (pistas) serán añadidos a la música uno por uno a lo largo del tiempo. Por ejemplo, la primera pista empieza en el compás 1; luego la segunda pista empieza en el compás 2, y así sucesivamente. Comúnmente se usa esta técnica en las introducciones de canciones.
 
 Usando una lista y un ciclo for, crea este tipo de introducción de los compases 1 a 5. Como en el ejemplo previo, puedes usar `pista` como contador, y tendrás que crear una variable de `indice`. Además, puedes crear una variable de `compas`, usando la función `len()`.
 ****
@@ -105,7 +105,7 @@ Usando una lista y un ciclo for, crea este tipo de introducción de los compases
 [role="curriculum-javascript"]
 .PRÁCTICA
 ****
-Crearemos una introducción aditiva en EarSketch en la cual los instrumentos (pistas) serán añadidos a la música uno por uno a lo largo del tiempo. Por ejemplo, la primera pista empieza en el compás 1; luego la segunda pista empieza en el compás 2, y así sucesivamente. Comúnmente se usa esta técnica en las introducciones de canciones. Escucha https://www.youtube.com/watch?v=L53gjP-TtGEKanye["Power" de Kanye West^].
+Crearemos una introducción aditiva en EarSketch en la cual los instrumentos (pistas) serán añadidos a la música uno por uno a lo largo del tiempo. Por ejemplo, la primera pista empieza en el compás 1; luego la segunda pista empieza en el compás 2, y así sucesivamente. Comúnmente se usa esta técnica en las introducciones de canciones.
 
 Usando un arreglo y un ciclo for, crea este tipo de introducción de los compases 1 a 5. Como en el ejemplo previo, puedes usar `pista` como contador, y tendrás que crear una variable de `indice`. Además, puedes crear una variable de `compas`, usando la propiedad `length`.
 ****
@@ -180,7 +180,7 @@ Se ven los índices de la cadena `"EarSketch"` en la siguiente tabla.
 * Puedes tener una *subcadena*, también conocida como una porción (_slice_ en inglés) de una cadena más larga. Permite que se divida un ritmo en partes, una técnica popular en la música electrónica y la remezcla. Su sintaxis es `nuevaCadena = viejaCadena[indiceDeComienzo: ultimoIndice]`. La subcadena incluye el carácter `indiceDeComienzo` pero no el carácter `ultimoIndice`. Por ejemplo, `"Sarah[1:4]"` devolverá `"ara"`. Puedes hacer lo mismo con listas: `listaNueva = viejaLista[indiceDeComienzo: ultimoIndice]`.
 
 [role="curriculum-javascript"]
-* Puedes tener una *subcadena*, también conocida como una porción (_slice_ en inglés) de una cadena más larga. Permite que se divida un ritmo en partes, una técnica popular en la música electrónica y la remezcla. Su sintaxis es `nuevaCadena = viejaCadena.substring(indiceDeComienzo, ultimoIndice)`. La subcadena incluye el carácter `indiceDeComienzo` pero no el carácter `ultimoIndice`. Por ejemplo, `"Sarah.substring(1, 4)"` devolverá `"ara"`. Puedes hacer lo mismo con arreglos, usando el método `slice()`: `listaNueva = viejaLista.slice(indiceDeComienzo, ultimoIndice)`. `concat()`, `substring()` y `slice()` son métodos y todos usan la notación de puntos.
+* Puedes tener una *subcadena*, también conocida como una porción (_slice_ en inglés) de una cadena más larga. Permite que se divida un ritmo en partes, una técnica popular en la música electrónica y la remezcla. Su sintaxis es `nuevaCadena = viejaCadena.substring(indiceDeComienzo, ultimoIndice)`. Por ejemplo, `"Sarah.substring(1, 4)"` devolverá `"ara"`. Puedes hacer lo mismo con arreglos, usando el método `slice()`: `listaNueva = viejaLista.slice(indiceDeComienzo, ultimoIndice)`. `concat()`, `substring()` y `slice()` son métodos y todos usan la notación de puntos.
 
 [role="curriculum-python"]
 .PRÁCTICA
@@ -247,10 +247,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto permite que se coloquen todos los sonidos percusivos en una pista usando sólo una línea de `makeBeat()`. En vez de colocar tu archivo de sonido como primer argumento, vas a crear una lista de archivos de sonido. En tu cadena de tiempos, en vez de sólo usar `0` para indicar que se toque un sonido, puedes usar los números de `0` a `9`. Estos números se refieren a un índice en tu lista de sonidos. Mira el siguiente ejemplo de sintaxis de un programa antes y después de combinar sus argumentos en una sola pista, usando un ritmo típico de beatbox que alterna entre dos sonidos.
+Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto permite que se coloquen todos los sonidos percusivos en una pista usando sólo una línea de `makeBeat()`. En vez de colocar tu archivo de sonido como primer argumento, vas a crear una lista de archivos de sonido. En tu cadena de tiempos, en vez de sólo usar `0` para indicar que se toque un sonido, puedes usar los números de `0` a `9`. Estos números se refieren a un índice en tu lista de sonidos. Check out the example "before and after" below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-javascript"]
-Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto permite que se coloquen todos los sonidos percusivos en 1 pista usando sólo una línea de `makeBeat()`. En vez de colocar tu archivo de sonido como primer argumento, vas a crear un arreglo de archivos de sonido. En tu cadena de tiempos, en vez de sólo usar `0` para indicar que se toque un sonido, puedes usar los números de `0` a `9`. Estos números se refieren a un índice en tu arreglo de sonidos. Mira el siguiente ejemplo de sintaxis de un programa antes y después de combinar sus argumentos en una sola pista, usando un ritmo típico de beatbox que alterna entre dos sonidos.
+Por último, `makeBeat()` puede tener múltiples clips de sonido a la vez. Esto permite que se coloquen todos los sonidos percusivos en una pista usando sólo una línea de `makeBeat()`. En vez de colocar tu archivo de sonido como primer argumento, vas a crear un arreglo de archivos de sonido. En tu cadena de tiempos, en vez de sólo usar `0` para indicar que se toque un sonido, puedes usar los números de `0` a `9`. Estos números se refieren a un índice en tu arreglo de sonidos. Check out the "before and after" example below, with the "boom bap boom bap" rhythm.
 
 [role="curriculum-python"]
 [source,python]
@@ -299,43 +299,29 @@ Usando lo que has aprendido en este capítulo, crea ritmos que te gusten con `ma
 
 ¡Felicitaciones, ahora has adquirido habilidades musicales y para programar que permiten que seas creativo con EarSketch! Por último, queremos asegurarnos que tu código esté lo más limpio posible. Estos son algunos elementos que puedes revisar:
 
-[role="curriculum-python"]
 * *Concisión* significa que el código es breve y cumple su objetivo eficazmente. Aquí están algunas preguntas que pueden ayudarte a escribir código más conciso:
 ** ¿Copié y pegué llamadas a función múltiples veces seguidas? Si la respuesta es sí, ¡simplifícalas con un ciclo!
 ** ¿Estoy volviendo a usar algunos bloques de código? Si la respuesta es sí, ¡ponlos en una función!
 ** ¿Hay constantes de sonido o expresiones matemáticas que uso repetidamente en mi código? Si la respuesta es sí, ¡asigna variables a las constantes o expresiones! Una lista también podría ser útil.
 * La *claridad* tiene que ver con cuán bien el código comunica su función y la intención del programador. Si tus compañeros se pierden en o se confunden con tu código, probablemente no es claro. Éstas son algunas preguntas para ayudarte a clarificar tu código:
-** ¿Completé los comentarios introductorios con mi título de script, autor y descripción?
 ** ¿Son descriptivos los nombres de mis variables y funciones? Si no son, cámbialos.
 ** ¿He usado comentarios para explicar cada bloque de código y cualquier línea de código que sea potencialmente confusa?
 ** ¿He usado estructuras computacionales como funciones personalizadas y ciclos para ayudar a organizar mi código?
 ** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien.
 
-[role="curriculum-javascript"]
-* *Concisión* significa que el código es breve y cumple su objetivo eficazmente. Aquí están algunas preguntas que pueden ayudarte a escribir código más conciso:
-** ¿Copié y pegué llamadas a función múltiples veces seguidas? Si la respuesta es sí, ¡simplifícalas con un ciclo!
-** ¿Estoy volviendo a usar algunos bloques de código? Si la respuesta es sí, ¡ponlos en una función!
-** ¿Hay constantes de sonido o expresiones matemáticas que uso repetidamente en mi código? Si la respuesta es sí, ¡asigna variables a las constantes o expresiones! Un arreglo también podría ser útil.
-* La *claridad* tiene que ver con cuán bien el código comunica su función y la intención del programador. Si tus compañeros se pierden en o se confunden con tu código, probablemente no es claro. Éstas son algunas preguntas para ayudarte a clarificar tu código:
-** ¿Completé los comentarios introductorios con mi título de script, autor y descripción?
-** ¿Son descriptivos los nombres de mis variables y funciones? Si no son, cámbialos.
-** ¿He usado comentarios para explicar cada bloque de código y cualquier línea de código que sea potencialmente confusa?
-** ¿He usado estructuras computacionales como funciones personalizadas y ciclos para ayudar a organizar mi código?
-** ¿La estructura de mi script refleja la estructura de mi canción? Esto ayuda a que la lectura fluya bien.
-
-En la programación, es común escuchar las *opiniones de tus compañeros*. Te ayudan a mejorar tu programa y música. Las opiniones tienen que ser *constructivas*, lo cual quiere decir que ayudan al compañero con su desempeño en vez de desanimarlo. Cuando des tus opiniones:
+En la programación, es común escuchar las *opiniones de tus compañeros*. Te ayudan a mejorar tu programa y música. No se trata de una competencia entre tu código y el código de otros compañeros. Las opiniones tienen que ser *constructivas*, lo cual quiere decir que ayudan al compañero con su desempeño en vez de desanimarlo. Cuando des tus opiniones:
 
 * *Sé específico* - Menciona bloques y líneas específicos del código y compases y pistas específicos de la música.
 * *Sé descriptivo* - Explica tu razonamiento y el proceso que usarías para mejorar un script.
 * *Ten en cuenta la visión y las metas musicales de tu compañero* - Tus propios gustos musicales no deberían ser un factor cuando evalúes la música de tu compañero.
 * *Sé positivo* - Además de comentar sobre lo que se debe mejorar, destaca los mejores bloques de código y pasajes musicales.
-* *No hagas comparaciones* - Reconoce que el código de tu compañero es propio de él o ella. No se trata de una competencia entre tu código y el código de otros compañeros.
+* *No hagas comparaciones* - Reconoce que el código de tu compañero es propio de él o ella.
 
 Asimismo, cuando recibas las opiniones de otros:
 
 * *Sé específico* - Indica cuál de los bloques o líneas de código y cuál de las pistas o compases de música te están causando problemas. Esto permitirá que tus compañeros te proporcionen comentarios más útiles.
 * *Escucha* - Espera hasta que tu compañero haya terminado de hablar antes de responder. Presta mucha atención a la información que tu compañero está impartiendo. Escribe comentarios de código basándose en sus opiniones. Estos comentarios pueden ser útiles mientras haces tus revisiones.
-* *Haz preguntas* - Pregunta sobre la lógica de lo que te haga dudar. Pregunta de problemas, errores, coherencia musical o cualquier elemento de la corrección.
+* Pregunta de problemas, errores, coherencia musical o cualquier elemento de la corrección.
 
 [role="curriculum-python"]
 .PRÁCTICA

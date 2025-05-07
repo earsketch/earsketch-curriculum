@@ -1,0 +1,18 @@
+// Variablen: Verwende Variablen, um Sounds zu speichern und zu vereinfachen
+
+// Setup
+setTempo(100);
+
+// Sounds
+var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Ordnet der Variable "synth1" einen Sound zu.
+var synth2 = HIPHOP_SOLOMOOGLEAD_001;
+var drums = HIPHOP_TRAPHOP_BEAT_008;
+
+// fitMedia() fügt die Sounds Synth1 und Synth2 abwechselnd auf Track 1 hinzu.
+fitMedia(synth1, 1, 1, 2);
+fitMedia(synth2, 1, 2, 3);
+fitMedia(synth1, 1, 3, 4);
+fitMedia(synth2, 1, 4, 5);
+
+// fitMedia() fügt das Schlagzeug auf Track 2 hinzu.
+fitMedia(drums, 2, 1, 9);

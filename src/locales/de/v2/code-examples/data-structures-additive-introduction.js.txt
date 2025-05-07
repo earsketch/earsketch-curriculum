@@ -1,0 +1,14 @@
+// Additive Introduction: Erstellen einer additiven Einführung mit Array-Iteration
+
+// Setup
+setTempo(120);
+
+// Musik
+var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
+
+for (var measure = 1; measure < introSounds.length + 1; measure++) {
+    // wir fügen 1 zu introSounds.length hinzu, da wir wollen, dass die Takte bis zu introSounds.length reichen
+    var index = measure - 1; // null-basierter Array-Index
+    var track = measure; // Track mit Takt ändern
+    fitMedia(introSounds[index], track, measure, 5);
+}

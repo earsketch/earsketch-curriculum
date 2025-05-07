@@ -1,0 +1,24 @@
+# Return-Statements: Zwei Beats mit Rückgabewerten verknüpfen
+
+# Setup
+from earsketch import *
+setTempo(100)
+
+rhythm1 = "0+++0+0+0+--0+00"
+rhythm2 = "0+0-00++0-000+++"
+
+# Musik
+def createBeat(startMeasure, sound, beatString):
+    endMeasure = startMeasure + 3
+    for measure in range(startMeasure, endMeasure):
+        makeBeat(sound, 1, measure, beatString)
+
+    # Endtakt zurückgeben, damit wir es außerhalb Funktion verwenden können
+    return endMeasure
+
+# Function calls
+# Zuweisung des zurückgegebenen Wertes an eine Variable
+newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
+
+# Übergabe des zurückgegebenen Wertes an eine andere Funktion
+createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)

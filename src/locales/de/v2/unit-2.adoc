@@ -1,0 +1,6 @@
+[[unit2]]
+== Einheit 2: Loops, Effekte, Mischen
+
+:nofooter:
+
+In dieser Lektion lernst du etwas über for-loops, mit denen du Codeanweisungen effizient wiederholen kannst. Wir werden auch über Soundeffekte und Envelopes gehen - die Entwicklung von Effekten im Laufe der Zeit. Schließlich lernst du, wie du deine Tracks mischst und Conditionals verwendest.

@@ -1,0 +1,285 @@
+[[customfunctionssongstructure]]
+== Benutzerdefinierte Funktionen und Songstruktur
+
+:nofooter:
+
+Die Songstruktur ist die Organisation des Songs im Laufe der Zeit. Das Ziel ist es, sinnvolle Abschnitte und Übergänge für den Fluss deiner Musik zu erstellen. In diesem Kapitel wirst du deine eigene Funktionen, benutzerdefinierte Funktionen, erstellen, um deine Songs zu strukturieren!
+
+[[asongsstructure]]
+=== Struktur eines Songs
+
+:nofooter:
+
+Ein Song kann in *Abschnitte* unterteilt werden. Ein Abschnitt besteht aus mehreren Takten (musikalische Zeiteinheiten) und drückt eine Idee oder ein Gefühl aus. In der Regel versuchen Musiker einen Kontrast zwischen verschiedenen Abschnitten hinzuzufügen. _Intro, Verse, Chorus_, und _Outro_ sind Beispiele für Abschnitte.
+
+Eine übliche und einfache *Form*, oder Liedstruktur, ist ABA. A und B sind zwei verschiedene Abschnitte, zum Beispiel Chorus und Vers. Der B-Teil sorgt für Abwechslung, während die Rückkehr zum A-Teil Vertrautheit hervorruft. Der folgende Code erstellt eine ABA-Form. Abschnitt B bietet Kontrastsounds zu Abschnitt A - einen langsameren und lauteren Bass und ein zusätzliches Rasseln:
+
+[[imediau2sections_052016png]]
+.Eine ABA-Form innerhalb der EarSketch DAW
+[caption="Figure 9.2: "]
+image::../media/U2/sections_052016.png[Alt Text]
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-a-b-a-form.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-a-b-a-form.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Wähle einen Song aus, den du magst. Höre dir den Song an und versuche, die verschiedenen Abschnitte zu erkennen. Kannst du sagen, wann die Musiker ihre Abschnitte ändern? Wie oft hörst du den Refrain und den Vers? Welche Kontraste kann man beobachten? Teile dein Beispiel mit deinem Nachbarn.
+****
+
+Denk daran, dass eine musikalische Phrase am natürlichsten klingt, wenn die Töne in Gruppen von zwei, vier, acht, sechzehn usw. angeordnet sind. Daher sollten deine Abschnitte vorzugsweise eine Größe von zwei, vier, acht oder sechzehn Takten haben.
+
+[[creatingyourcustomfunctions]]
+=== Erstelle deine eigenen Funktionen
+
+Im vorherigen Beispiel mit dem ABA-Lied ist der Code groß, und der Code wird für den zweiten A-Abschnitt wiederholt. Es gibt eine Möglichkeit, sich besser zu strukturieren, und zwar dank der *benutzerdefinierten Funktionen*! Wir definieren eine Funktion, die Abschnitt A repräsentiert, dann rufen wir die Funktion zweimal auf.
+
+Der Unterschied zu Funktionen, die du benutzt hast wie `fitMedia()`, ist, dass `fitMedia()` bereits von unserem Team vordefiniert ist, um einen Sound abzuspielen. Bei einer benutzerdefinierten Funktion kann man genau festlegen, was sie tut. So würdest du Abschnitt A definieren:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-untitled1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-untitled1.js.txt[]
+----
+
+. `sectionA()` ist der Name, den wir für unsere Funktion gewählt haben. Du kannst einen beliebigen Namen auswählen. Versuche, deine Funktion beschreibend zu benennen, damit dein Code leichter zu lesen ist.
+. Die Anweisungen sind der *Body* der Funktion. Sie sind eingerückt.
+
+.ÜBUNG
+****
+Füge diesen Code in ein neues Skript ein und führe ihn aus. Du solltest sehen, dass deine DAW leer bleibt.
+Das liegt daran, dass du eine Funktion *aufrufen* musst, um sie zu verwenden.
+Um deine Funktion aufzurufen, füge die Zeile `sectionA()`, nicht eingerückt, nach deiner Funktionsdefinition ein. Beim Ausführen des Codes solltest du Abschnitt A in deiner DAW sehen
+****
+
+Nun wollen wir Abschnitt A von den Takten neun bis dreizehn hinzufügen. Wenn wir jedoch `sectionA()` aufrufen, werden die Sounds von Takt eins bis fünf platziert. Um dieses Problem zu beheben, erstellen wir *Parameter* für unsere Funktion.
+
+.ÜBUNG
+****
+In deinem aktuellen Skript hast du für das vorherige Übungsproblem erstellt:
+
+1. Füge die Parameter `startMeasure` und `endMeasure` durch ein Komma getrennt zwischen die Klammern der sectionA-Funktion in deren Definition ein, etwa so: `sectionA(„startMeasure“, „endMeasure“)`.
+1. Ersetze im Hauptteil der Funktion den Starttakt (`1`) und Endtakt (`5`) durch `startMeasure` bzw. `endMeasure`.
+1. Wenn du deine Funktion aufrufst, füge die Parameter `1` und `5` zwischen den Klammern hinzu. Führe den Code aus, um sicherzustellen, dass kein Fehler auftritt.
+1. Füge einen zweiten Funktionsaufruf hinzu, diesmal mit den Parametern `9` und `13`. Führe den Code aus, um sicherzustellen, dass kein Fehler auftritt.
+1. Definiere eine Funktion für Abschnitt B nach demselben Verfahren und rufe Abschnitt B von Takt fünf bis neun und von Takt dreizehn bis siebzehn auf.
+****
+
+Hier ist, wie dein Code aussehen könnte:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-a-b-a-b-form-and-custom-functions.js.txt[]
+----
+
+//The following video will be cut in 2 with the beginning going to chapter 7.1, and the end to this chpater. For more info see https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020//
+
+[role="curriculum-python curriculum-mp4"]
+[[video93py]]
+video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video93js]]
+video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
+
+[[transitionstrategies]]
+=== Übergangsstrategien
+
+Jetzt, wo du weißt, wie du benutzerdefinierte Funktionen zur Strukturierung deines Songs erstellen kannst, wollen wir uns die Übergänge ansehen. *Übergänge* helfen einem Abschnitt reibungslos in den nächsten zu gehen. Du kannst Strophe und Refrain verbinden, zu einem Drop aufbauen, zwischen Tracks mischen (DJing) oder die Tonart wechseln. Das Ziel eines Übergangs ist es, die Aufmerksamkeit des Zuhörers auf sich zu nehmen und ihm eine kommende Veränderung mitzuteilen.
+
+Im Folgenden findest du einige beliebte Strategien zur Gestaltung musikalischer Übergänge:
+
+. *Crash Cymbal*: Platziere eine Crash-Cymbal auf den ersten Schlag eines neuen Abschnitts.
+. *Drum Fill*: Eine rhythmische Variation, um die Lücke vor einem neuen Abschnitt zu füllen.
+. *Track Silencing*: Schaltet einige Tracks für einen dramatischen Effekt vorübergehend stumm.
+. *Melody Variation*: Einführung einer Variation der Akkorde, Basslinie oder Melodie vor dem neuen Abschnitt. Oft enthält ein Ordner innerhalb der EarSketch Soundbibliothek Variationen eines ähnlichen Riffs.
+. *Steigerung*: Eine Note oder ein Geräusch, das in der Höhe zunimmt. Es ist sehr häufig in EDM (Electronic Dance Music) und schafft eine Vorfreude auf einen Drop. Du kannst den Suchbegriff "riser" im Sound-Browser verwenden. Eine umgekehrte Crash-Zymbal kann als Riser verwendet werden, wie YG_EDM_REVERSE_CRASH_1.
+. *Snare Roll*: Eine Folge wiederholter Snare Hits, mit zunehmender Dichte, Tonhöhe oder Amplitude. Du kannst einen Sound wie RD_FUTURE_DUBSTEP_FILL_1 oder HOUSE_BREAK_FILL_003 oder mit `makeBeat()` verwenden.
+. *Looping*: Wiederholen eines kurzen Melodie-Segments vor einem neuen Abschnitt.
+. *Crossfading*: Das Volumen eines Abschnitts wird verringert, während das Volumen eines neuen Abschnitts erhöht wird.
+. *Anacrusis*: Wenn die Melodie der neuen Sektion beginnt, schlagen ein paar beats frühzeitig.
+
+.ÜBUNG
+****
+Wähle aus der Liste der möglichen Übergänge zwei aus und überlege dir, wie du sie mit Code umsetzen kannst. Du kannst mit einem Partner arbeiten. Sobald du darüber nachgedacht hast, kannst du dir die folgenden Beispiele ansehen.
+
+Der Übergang sollte ein oder zwei Takte vor dem neuen Abschnitt platziert werden. Du kannst mehrere Übergangstechniken gleichzeitig benutzen.
+****
+
+Drum fills:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
+----
+
+Die Technik des Track Silencing erfordert nur die Änderung einiger `fitMedia()`-Aufrufe. Ein Beispiel wird unten gezeigt.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-transition-techniques-track-droupouts.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
+----
+
+Im nächsten Beispiel werden während des Übergangs mehrere Riser und ein crash cymbal verwendet.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-transition-techniques-risers.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
+----
+
+{nbsp} +
+
+[[yourfullsong]]
+=== Dein gesamter Song
+
+Beim Programmieren können wir *Abstraktionen* schaffen, die Bündelung von Ideen zu einem einzigen Konzept. In der Musik gruppieren wir musikalische Ideen in Abschnitte. Funktionen sind eine Art Abstraktion, die in der Informatik verwendet wird. Sie packen mehrere Anweisungen in ein Werkzeug, so dass sie leicht referenziert werden können. Abstraktionen können die Form eines Programms klarer machen.
+
+.ÜBUNG
+****
+Erstellen wir ein komplettes Lied mit allen Werkzeugen die du in EarSketch entdeckt hast! Hier ist ein Vorschlag zur Vorgehensweise, aber du kannst ihn nach Belieben anpassen:
+
+. Wähle ein Thema für deinen Song. Denke an die Art von Sounds, Instrumenten oder Songtexten, die deine Nachricht am besten vermitteln.
+. Wähle dann eine einfache Struktur.
+. Und dann, starte die Programmierung! Beginne mit einigen `fitMedia()` Funktionen, um Sounds auszuwählen.
+. Benutze `makeBeat()` um Percussion hinzuzufügen.
+. Du kannst deine eigenen Sounds hochladen.
+. Benutze for-loop, um Wiederholung in deinem Code zu reduzieren.
+. Verwende benutzerdefinierte Funktionen, um deine Abschnitte zu definieren und deine Songstruktur zu erstellen.
+. Füge ein oder zwei sinnvolle Übergänge hinzu.
+. Füge Effekte mit `setEffect()` hinzu.
+. Füge eine oder mehrere bedingte Anweisungen hinzu.
+. Du solltest darauf achten, dass du Variablen verwendest, um Informationen wie z.B. Soundkonstanten zu speichern.
+. Achte darauf, dass du Kommentare verwendest, um zu erklären, was du tust.
+. Vergiss nicht, regelmäßig deinen Code auszuführen und deinen Song zu hören. Auf diese Weise kannst du ihn ändern, bis er dir gefällt.
+. Wähle einen Namen für deinen Song.
+****
+
+Hier ist ein Beispiel für einen vollständigen Song:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
+----
+
+In diesem Beispiel haben wir einen for-loop in einer benutzerdefinierten Funktion verwendet! Wir haben Parameter der Funktion (`start` und `end`) innerhalb des for-loops verwendet.
+
+[[chapter7summary]]
+=== Zusammenfassung von Kapitel 7
+
+* *Abschnitte* sind verwandte musikalische Einheiten, die aus mehreren Takten bestehen. Jeder drückt eine Idee oder ein Gefühl aus.
+* *Transitions* sind Passagen der Musik, die verwendet werden, um aufeinander folgende Musikabschnitte zu verbinden.
+* Die Struktur und Vielfalt eines Liedes wird als seine *Form* bezeichnet. Eine übliche musikalische Form ist A-B-A.
+* *Benutzerdefinierte Funktionen* sind einzigartige Funktionen, die vom Programmierer geschrieben werden, um eine bestimmte Aufgabe zu erfüllen. Du musst eine benutzerdefinierte Funktion erstellen, um sie aufrufen zu können. Du kannst beliebig viele Parameter erstellen.
+* Eine *Abstraktion* ist das Bündeln von Ideen zu einem einzelnen, oft weniger komplexen Konzept. Funktionen sind ein Beispiel für Abstraktion.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Was davon ist NICHT ein Beispiel für eine musikalische Sektion?
+
+[answers]
+* Drums
+* Intro
+* Vers
+* Chorus
+--
+
+[question]
+--
+Was ist eine Abstraktion?
+
+[answers]
+* Eine Bündelung von Ideen zu einem einzigen Konzept
+* Eine Vielzahl von Sounds in verschiedenen Bereichen
+* Teile eines Liedes, die miteinander in Beziehung stehen, sich aber auch voneinander unterscheiden
+* Eine Anweisung, die einen Wert an den Funktionsaufruf zurückgibt
+--
+
+[role="curriculum-python"]
+[question]
+--
+Welche dieser Optionen definiert die Funktion `myFunction()` mit den Parametern `startMeasure` und `endMeasure` richtig ?
+
+[answers]
+* `def myFunction(startMeasure, endMeasure):`
+* `def myFunction():`
+* `myFunction(startMeasure, endMeasure):`
+* `myFunction(2, 5)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Welche dieser Optionen definiert die Funktion `myFunction()` mit den Parametern `startMeasure` und `endMeasure` richtig ?
+
+[answers]
+* `function myFunction(startMeasure, endMeasure) {}`
+* `funktion myFunction() {}`
+* `myFunction(startMeasure, endMeasure){}`
+* `myFunction(2, 5)`
+--
+
+[question]
+--
+Welches ist NICHT ein Beispiel für einen Übergang?
+
+[answers]
+* Melody Consistency
+* Crash Cymbal
+* Riser
+* Track Silencing
+--

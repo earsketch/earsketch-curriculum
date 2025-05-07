@@ -1,0 +1,14 @@
+# Loops: Musikalische Wiederholung mit Codeschleifen erstellt
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Musik
+drums1 = ELECTRO_DRUM_MAIN_BEAT_008
+drums2 = ELECTRO_DRUM_MAIN_BEAT_007
+
+# Verwendung einer Schleife statt wiederholt ähnliche Codezeilen zu schreiben
+for measure in range(1, 9):
+    fitMedia(drums1, 1, measure, measure + 0.5)
+    fitMedia(drums2, 1, measure + 0.5, measure + 1)

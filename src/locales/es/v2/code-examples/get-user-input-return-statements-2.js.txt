@@ -14,5 +14,5 @@ function verso(comienzo) {
     return fin;
 }
 // Llamadas a función
-var ultimoCompas = verso(1); // Llamar a la función verso, donde comienzo es el compás 1
+var endMeasure = verse(1); // calling verse function and start is measure 1
 println(ultimoCompas);

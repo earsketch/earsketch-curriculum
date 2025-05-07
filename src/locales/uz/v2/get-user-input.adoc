@@ -1,0 +1,391 @@
+[[getuserinput]]
+== Get User Input
+
+:nofooter:
+
+In this chapter, you will learn how to ask for input from users and adapt your music accordingly. Buning uchun biz qaytarish bayonotlari va `readInput()` funktsiyasini ko'rib chiqamiz.
+
+[[returnstatement]]
+=== Return Statement
+
+Watch this video first:
+
+[role="curriculum-python curriculum-mp4"]
+[[video131py]]
+video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video131js]]
+video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
+
+* In addition to taking inputs (parameters), functions can output a value. In programming, we call this returning a value.
+* *Qaytarish bayonoti* funktsiya tanasi ichidagi bayonot bo'lib, u: A. funktsiyaga qiymat chaqirilganda qaytarishni aytadi. B. signals the function to stop. Agar sizda `return` kalit so'zidan keyin biron-bir bayonot bo'lsa, ular e'tiborga olinmaydi.
+* To use the value that is returned by the function, create a variable and assign it the function call.
+* A return statement is not compulsory. Without a return statement a function does not output a value. `fitMedia()` va `setEffect()` hech narsa qaytarmaydigan funktsiyalarga misollardir.
+
+Here is a code example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-return-statements.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-return-statements.js.txt[]
+----
+
+With the return statement, the complete control flow for a function looks like this:
+
+[[return]]
+.Return statement control flow
+[caption="Figure 8.1.1: "]
+image::../media/U2/Return.png[Alt Text]
+
+.PRACTICE
+****
+Create a function that will implement a musical section with:
+
+* Boshlang'ich o'lchovini ifodalovchi `start` deb nomlangan faqat bitta parametr bilan.
+* One `return` statement that returns the end measure.
+* `fitMedia()` funktsiyalari bilan tana funktsiyasi.
+
+Your section can last as many measures as you like.
+Then call the function, and print the end measure.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-return-statements-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-return-statements-2.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Aytaylik, sizda A bo'limi bor, lekin qo'shiqning turli lahzalarida chaqirilganda uning biroz o'zgarishini xohlaysiz. You will create a function called `sectionA()` with two `fitMedia()` calls.
+
+The function should take two parameters: `start` and a boolean parameter `variation` that will allow the user to choose a variation when calling the function.
+
+In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound used in one of your `fitMedia()` calls.
+
+Then call the function at different measures with different variations.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-conditional-statement.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-conditional-statement.js.txt[]
+----
+
+{nbsp} +
+
+[[userinput]]
+=== Get User Input
+
+“Ishga tushirish” tugmasi bosilganda foydalanuvchi ma'lumotlarini qanday so‘rashni ko‘ramiz. Bu `readInput()` funktsiyasi ko'magida mumkin bo'ladi. This function takes as a parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. `readInput()` funktsiyasi u yerda foydalanuvchi yozgan narsalarni qaytaradi.
+
+For example, copy the following code in a new script, and run it:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-untitled1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-untitled1.js.txt[]
+----
+
+We might need to convert the returned user input into a different data type. Here are useful functions:
+
+[role="curriculum-python"]
+* `str()` - istalgan qiymatni satrga aylantiradi.
+* `int()` - raqamlardan iborat satrni butun songa aylantiradi (masalan: `"3"` - `3` ga aylanadi).
+* `float()` - o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi (masalan: `"3.5"` - `3.5`ga aylanadi).
+
+[role="curriculum-javascript"]
+* `String()` - istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.
+* `Number()` - satrni raqamga aylantiradi (masalan: `"3,5"` - `3,5` ga aylanadi).
+
+In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-user-input-1.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-user-input-1.js.txt[]
+----
+
+Here is another example of what you can do with user input.
+
+*Yopishtirish* bu `+` belgisidan foydalanib, satrlarni bir-biriga bog'lash vositasidir.  For example, concatenating the strings `"Hello"` and `"World"` yields `"HelloWorld"`. In the following example, the user is prompted to specify a clip number. Raqam “DUBSTEP_BASS_WOBBLE_0” bilan yopishtirilib, “DUBSTEP_BASS_WOBBLE_010” kabi toʻliq klip nomini hosil qiladi.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-user-input-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-user-input-2.js.txt[]
+----
+
+{nbsp} +
+
+.PRACTICE
+****
+Ask for a user input to modify something in your song.
+
+Here are ideas of tools you can use:
+
+. string concatenation,
+. data conversion,
+. creating a specific parameter in a custom function
+****
+
+{nbsp} +
+
+[[booleanlogic]]
+=== Boolean Logic
+
+We will now combine boolean logic and user input for another example of user interaction.
+
+[role="curriculum-python"]
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. For example, the operator `==` checks if two values are equal, and if so the boolean is set to `True`.
+
+[role="curriculum-javascript"]
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. For example, the operator `===` checks if two values are equal, and if so the boolean is set to `true`.
+
+Endi *mantiqiy operatorlarni* ko'rib chiqaylik: bular bir nechta mantiqiy qiymatlarni birlashtirishga yordam beradi. There are three boolean operators:
+
+[role="curriculum-python"]
+* `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+* `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+* `not`: takes one boolean input and returns the opposite (negated) boolean.
+
+[role="curriculum-javascript"]
+* `&&`: is called "and"; it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+* `||`: is called "or"; it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+* `!`: is called "not"; it takes one boolean input and returns the opposite (negated) boolean.
+
+For example if you are sixteen, the sentence "I'm sixteen" is true and the sentence "I'm seventeen" is false. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
+
+[role="curriculum-python"]
+.PRACTICE
+****
+What do you think the following expressions evaluate to? `Rostmi` yoki `Yolg'onmi`?
+
+* `Rost emas`
+* `Rost va Yolg'on`
+* `Rost yoki Yolg'on`
+* `Rost va Rost`
+* `(True and False) or True`
+* `True and not False`
+* `not (False or False)`
+****
+
+[role="curriculum-javascript"]
+.PRACTICE
+****
+What do you think the following expressions evaluate to? `rostmi` yoki `yolg'onmi`?
+
+* `!true`
+* `true && false`
+* `true || false`
+* `true && true`
+* `(true && false) || true`
+* `true && !false`
+* `!(false || false)`
+****
+
+Use the following code to print the answers:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-boolean-expressions.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-boolean-expressions.js.txt[]
+----
+
+Here is a reminder of boolean creation, and some examples of boolean operations:
+
+[role="curriculum-python curriculum-mp4"]
+[[video17apy]]
+video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video17ajs]]
+video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
+
+.PRACTICE
+****
+Now we will combine user input and boolean operations.
+
+Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Foydalanuvchining javobiga qarab, janr bilan yaxshi ishlaydigan zarba satrni tanlang. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
+****
+
+Here is an example:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/get-user-input-boolean-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/get-user-input-boolean-operations.js.txt[]
+----
+
+{nbsp} +
+
+.CHALLENGE
+****
+This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with three options (for example "latino", "trap" and "dubstep"). Foydalanuvchining javobiga qarab, janrga mos keladigan qo'shiq yarating.
+****
+
+{nbsp} +
+
+[[chapter8summary]]
+=== Chapter 8 Summary
+
+[role="curriculum-python"]
+* *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
+* Some functions allow you to convert data from one type to another. `str()` istalgan qiymatni satrga aylantiradi.
+`int()` raqamlardan iborat satrni butun songa aylantiradi. `float()` o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi.
+* Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Here are boolean operators:
+** `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
+** `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
+** `not`: takes one boolean input and returns the opposite (negated) boolean.
+* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+
+[role="curriculum-javascript"]
+* *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
+* Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.  `Number()` satrni raqamga aylantiradi.
+* Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Here are boolean operators:
+** `&&`: is called "and", it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
+** `||`: is called "or": it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
+** `!`: is called "not": it takes one boolean input and returns the opposite (negated) boolean.
+* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+
+[[chapter-questions]]
+=== Questions
+
+[question]
+--
+Which of the following would be considered an example of data type conversion?
+
+[answers]
+* Turning a string into a number.
+* Storing a user-defined tempo in a variable.
+* Foydalanuvchidan janrni so'rash uchun `readInput()` dan foydalanish.
+* Producing a Boolean through a comparison operator.
+--
+
+[role="curriculum-python"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+
+[source,python]
+----
+not (True and (4 > 5))
+----
+
+[answers]
+* `True`
+* `5`
+* `4`
+* `False`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+What would the output of this block of code be (what would print to the console)?
+
+[source,javascript]
+----
+!(true && (4 > 5));
+----
+
+[answers]
+* `true`
+* `4`
+* `false`
+* `5`
+--
+
+[question]
+--
+Which of the following is an example of concatenation?
+
+[answers]
+* `x = beatstring1 + beatstring2`
+* `x = beatstring1.beatstring2`
+* `x = (beatstring1, beatstring2)`
+* `x = beatstring1[beatstring2]`
+--
+
+[role="curriculum-python"]
+[question]
+--
+How would you obtain the boolean True with the booleans True and False?
+
+[answers]
+* `Rost yoki Yolg'on`
+* `Rost emas`
+* `Rost va Yolg'on`
+* `true or false`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+How would you obtain the boolean true with the booleans true and false?
+
+[answers]
+* `true||false`
+* `!true`
+* `true&&false`
+* `True||False`
+--
