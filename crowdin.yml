@@ -1,3 +1,10 @@
+excluded_target_languages:
+  - ar
+  - es
+  - fr
+  - he
+  - iu
+  - oj
 files:
   - source: /src/locales/en/v2/**/*
     translation: /src/locales/%two_letters_code%/v2/**/%original_file_name%
@@ -5,11 +12,5 @@ files:
     translation: /src/locales/%two_letters_code%/v1/**/%original_file_name%
   - source: /src/locales/en/v1/**/the-earSketch-api*
     translation: /src/locales/%two_letters_code%/v1/**/%original_file_name%
-"excluded_target_languages": [
-"ar",
-"es",
-"fr",
-"he",
-"iu",
-"oj"
-]
+  - source: /src/locales/en/v1/**/ch_Hour*
+    translation: /src/locales/%two_letters_code%/v1/**/%original_file_name%
