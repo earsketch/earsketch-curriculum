@@ -3,7 +3,7 @@
 
 :nofooter:
 
-In this chapter you will learn how to make your own beats! We'll look at variables, a new function called `makeBeat()`, and beats from different genres.
+في هذا الفصل سوف تتعلمون كيفية إنشاء وحدات البت! 'سنتعرف على المتغيرات ، ووظيفة جديدة تسمى () makeBeatوأمثلة على البتات حسب النوع.
 
 [[variables]]
 === Variables
@@ -20,26 +20,26 @@ What is a variable? A *variable* is a name given to a piece of data that we plan
 
 In EarSketch, the variables in your scripts may point to:
 
-* A *number*, like a track number or a measure number
-* A *file*, like an audio file
+* رقم (مثل رقم المسار أو رقم القياس) ،
+* ملف (مثل ملف صوتي) ،
 * A *string*, like the name of a sound clip or some lyrics
-* A *character*, like `A`, `a`, `2`, or `=`
+* A *شخصية*هو رقم أو حرف أو رمز ، مثل `A`, `a`, `2`, or `=`.
 
-A *character* can be any  number, letter or symbol. A *string* is a series of characters with quotation marks around it, like `"Hello World 123!"`.
+يشير كل حرف إلى ستة اعشار حرفًا ، لذا فإن السلسلة المكونة من ستة عشر حرفًا هي مربع كامل. السلسلة عبارة عن سلسلة من الأحرف حولها علامات اقتباس ، مثل `"Hello World 123!"`.
 
-To use a variable,
+لاستخدام متغير ،
 
 [role="curriculum-python"]
-. يجب عليك أولا * تعيينه *. We use the symbol `=`, which is called the *assignment operator*. Writing `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
-. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
-. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. You can only use the variable after it has been assigned, not before. على سبيل المثال ، اكتب `fitMedia(synth1, 1, 1, 3)`
-. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. تعني كتابة `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` أنك تنشئ متغيرًا يسمى synth1 وأنك تخزن البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
+. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. يمكنك فقط استخدام المتغير بعد تعيينه ، وليس قبل ذلك. على سبيل المثال ، اكتب `fitMedia(synth1, 1, 1, 3)`
+. عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
 
 [role="curriculum-javascript"]
-. يجب عليك أولا * تعيينه *. We use the symbol `=`, which is called the *assignment operator*. نستخدم أيضًا الأمر`var` في بداية السطر. Writing `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` means that you create a variable called `synth1` and you store the data `HIPHOP_SYNTHPLUCKLEAD_005` into that variable.
-. `HIPHOP_SYNTHPLUCKLEAD_005` is the *value* of `synth1`.
-. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. For example, write `fitMedia(synth1, 1, 1, 3);`.
-. When you run the code, the computer will understand that it must use the sound clip name `HIPHOP_SYNTHPLUCKLEAD_005` when it reads `synth1`.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. نستخدم أيضًا الأمر`var` في بداية السطر. الكتابة`var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;`تعني أنك تقوم بإنشاء متغير يسمى synth1 وأنك تقوم بتخزين البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
+. ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. على سبيل المثال، اكتب `fitMedia(synth1, 1, 1, 3);`.
+. عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
 
 [role="curriculum-python"]
 [source,python]
@@ -55,9 +55,9 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.تدريب
 ****
-In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
+في برامجك النصية السابقة ، استخدم المتغيرات لتخزين أسماء مقاطع الصوت. انظر إلى الأمثلة أدناه للحصول على المساعدة. تأكد من أن المتغيرات الخاصة بك لها أسماء قصيرة ومفهومة (مثل "bass","voice_1",...&#8203) تصف مقطع الصوت الخاص بك.
 ****
 
 {nbsp} +
@@ -74,23 +74,23 @@ include::code-examples/add-beats-variables.py.txt[]
 include::code-examples/add-beats-variables.js.txt[]
 ----
 
-Note that it's important to name your variable in an understandable and descriptive way. For example, specify `synth1` instead of `music1` or `test`, which don't provide any information. This way, when you or someone else reads your code, they can see what you are referring to.
+لاحظ أنه من المهم تسمية المتغير بطريقة وصفية ومفهومة. على سبيل المثال ، فضّل`synth1`بدلا من `music1`او `test`الذي لا يقديم أي معلومة.'. بهذه الطريقة ، عندما تقرأ أنت أو أي شخص آخر مقطعك البرمجي ، يمكنكم رؤية ما تشير إليه.
 
-A *constant* is similar to a variable because it stores values. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. By convention, constant names are capitalized and use underscores instead of spaces.
+*constant ثابت *يشبه المتغير لأنه يخزن القيم. لكن ، قيمة الثابت لا تتغير أبدًا. على سبيل المثال ، في EarSketch ، يعتبر `TECHNO_SYNTHPLUCK_001` ثابتًا ، فهو يشير إلى ملف الصوت المقابل. By convention, constant names are capitalized and use underscores instead of spaces.
 
 [[drumbeatstrings]]
-=== Beat Strings
+=== Beat Strings-سلاسل البيت
 
-Let's first learn some basic concepts about rhythm:
+دعونا 'نتعلم أولاً بعض المفاهيم الأساسية حول الإيقاع:
 
 * *Rhythm* is a pattern of sound, often repeated.
-* The *tempo* is the speed of the music in BPM (beats per minute).
-* A *beat* is like the "steady pulse" of a song. When members of an audience clap their hands in a concert, they're clapping on the beat.
-* A *measure* is a musical time unit with a predetermined number of beats. In EarSketch, 1 *measure* is 4 beats long. Since there are 4 beats in 1 measure, beats are also called *quarter (1/4) notes*.
-* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. When you are counting 1/4 notes, you say "1, 2, 3, 4...." When counting 1/8 notes, you can use "ands": "1 and 2 and 3 and 4 and...."
-* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
-* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
-* A *metronome* helps the musician set the rhythm of his or her piece by making a clicking noise on the beat. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
+* ال*tempo-السرعة*هي سرعة الموسيقى في BPM (نبضة في الدقيقة).
+* *beat-البيت/ دقات *مثل "النبض الثابت" للأغنية. عندما يصفق الجمهور في حفل موسيقي ، فإنهم 'يصفقون حسب بالإيقاع.
+* *measure-القياس* هي وحدة زمنية موسيقية ذات عدد محدد مسبقًا من الإيقاعات. In EarSketch, 1 *measure*هو 4 دقات طويلة. نظرًا لوجود 4 دقات في مقياس واحد ، يُطلق على النبضات أيضًا *quarter (1/4) notes*.
+* يمكن تقسيم كل نبضة إلى*subbeats-بيت/نبضات فرعية*. على سبيل المثال ، يمكن تقسيم1/4 الدقّة إلى 2 *eighth (1/8) notes*. عندما تعد 1/4 نوتة ، تقول "1، 2، 3، 4 ... " عند عد 1/8 نوتة ، يمكنك استخدام"و": " 1و 2 و 3 و 4 و ..."يمكن أيضًا تقسيم النوتة 1/8 إلى 2 * النوتة الستة اعشار (1/16) sixteenth (1/16) notes*.
+* عادةً 'ما يبلغ طول سلسلة الطبول 16 حرفًا ، ولكن يمكن أن يختلف طولها. ربع حرف بطول ربع
+* المقياس الواحد هو 4 1/4 نوتات ، أو 8 1/8 نوتات ، أو 16 1/16 نوتات. لاحظ أن مجموع كل النوتات في مقياس واحد يجب أن يساوي 1. يمكن خلطها ومطابقتها مثل 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
+* *metronome-المُسرّع *يساعد الموسيقي على ضبط إيقاع مقطوعته عن طريق النقر على الإيقاع. في EarSketch DAW ، يمكنك تشغيل المسرع أو إيقاف تشغيله باستخدام رمز "تبديل المسرع-toggle metronome" على يسار مستوى الصوت.
 
 [[imediameasurepng]]
 .A measure
@@ -103,69 +103,69 @@ image::../media/U1P1/measure.png[A measure]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
-.A sixteenth note
+.A sixteenth note- نوتة الستة اعشار
 [caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
-.PRACTICE
+.تدريب
 ****
-Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
+استمع إلى أغنيتك المفضلة ، وحاول أن تصفق على الإيقاع. يمكنك القيام بهذا التمرين مع اصدقائك.
 ****
 
 We'll compose each of our rhythms in a *beat* string.
 
-A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
+سلسلة الطبلة هي سلسلة مكونة من الأحرف `"0"`, `"+"` or `"-"`. يتكون من سلسلة من الأحرف (مثل `0` or `+`) داخل علامات الاقتباس.
 
-For example: `"0-00-00-0+++0+0+"`
+على سبيل المثال: `"0-00-00-0+++0+0+"`.
 
-* `0` starts playing the percussive sound clip (one hit of the drum, for example).
-* `+` extends the audio clip into the next sub-beat. It always follows a `0` or `+`.
-* `-` is a rest, meaning silence.
+* `0`يبدأ تشغيل المقطع (الذي يحتوي على قرع الطبلة ، على سبيل المثال).
+* `+` يوسع مقطع الصوت إلى الإيقاع الفرعي التالي. يتبع دائمًا أل`0` or `+`.
+* `-` تشكل استراحة، أي الهدوء.
 
-.PRACTICE
+.تدريب
 ****
-For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work.
+لكل من أوتار قرع الطبول التالية ، حاول التصفيق على الأصفار. ثم استمع إلى الصوت المقابل وتحقق مما إذا كنت على حق. سيساعدك هذا التمرين على فهم كيفية عمل أوتار الطبلة.
 ****
 
-Here are some examples of 1-measure beat strings:
+فيما يلي بعض الأمثلة على أوتار الإيقاع بمقياس واحد:
 
 Quarter notes: `"0\+++0+++0\+++0+++"`
-(read: "1, 2, 3, 4")
+(read: "1,2,3,4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
 ++++
 
-Eighth notes: `"0+0+0+0+0+0+0+0+"`
-(read: "1 and 2 and 3 and 4")
+اثمان: `"0+0+0+0+0+0+0+0+"`
+(اقرأ: "1 and 2 and 3 and 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
 ++++
 
-Sixteenth notes: `"0000000000000000"`
-(that's very fast, depending on the tempo)
+اسداس الاعشار: `"0000000000000000"`
+(ويكون' سريع جدًا ، اعتمادًا على الإيقاع)
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
 ++++
 
 `"0-0-0---0-0-0---"`
-(read: "1 and 2, 3 and 4")
+(اقرأ: "1 و 2, 3و 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
 ++++
 
 `"0---0---0-0-0---"`
-(read: "1, 2, 3 and 4")
+(اقرأ: "1,2,3 و 4")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
 ++++
 
 `"0---0---0---0000"`
-(read: "1, 2, 3, 4 e and a")
+(اقرأ: "1, 2, 3, 4 e و a")
 
 ++++
 <div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
@@ -180,18 +180,20 @@ video revamping tab
 ////
 
 [[makebeat]]
-=== The `makeBeat()` function
+=== دالة ال`makeBeat()`
 
-Now let's see how you can make your own beat. Here we use the term "beat" as a shorthand for drumbeat: a repeated rhythmic pattern of percussive sounds. We will use the `makeBeat()` function, with 4 arguments:
+الآن 'دعنا نرى كيف يمكنك صنع إيقاعك الخاص. هنا نستخدم مصطلح "إيقاع" كاختصار لقرع الطبل: نمط إيقاعي متكرر لأصوات الطبول. سنستخدم الدالة ` makeBeat () ` ، مع 4 عوامل:
 
-. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
-. *Track*: The track number
-. *Start*: The starting measure
-. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+. *Sound*: A sound constant. في متصفح الصوت ، يمكنك تحديد الفنان "MAKEBEAT". هذه أصوات قصيرة مناسبة لأوتار الطبلة.
+. *trackNumber:*المسار الذي توضع عليه الموسيقى.
+. *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
+. *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
 
-For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
+على سبيل المثال `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` سيُثبت البيت
+`0--0--000--00-0-`على المسار 1 ، عند القياس 1 ، باستخدام مقطع الصوت
+`DUBSTEP_FILTERCHORD_002`.
 
-Let's see more details with this video:
+دعونا' نرى المزيد من التفاصيل مع هذا الفيديو:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
@@ -201,7 +203,7 @@ video::./videoMedia/3_3_makebeat_py.mp4[]
 [[video12js]]
 video::./videoMedia/3_3_makebeat_js.mp4[]
 
-Here is the example shown in the video:
+هذا هو المثال الموضح في الفيديو:
 
 [role="curriculum-python"]
 [source,python]
@@ -217,34 +219,34 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.تدريب
 ****
-Create a new `beatString1` variable, a 16-character string with the characters `"0"`, `"+"`, and `"-"`.
-Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
-Please note that:
+إنشاء متغير ` beatString1 ` جديد ، سلسلة مكونة من 16 حرفًا بالأحرف ` "0" ` و ` "+" ` و ` "-" `.
+استخدم وظيفة ` makeBeat () ` لإضافة نمط الإيقاع الخاص بك إلى أغنيتك على المسار 1.
+يرجى ملاحظة ما يلي:
 
-. You should assign your variables with the `=` symbol before using them.
-. Just like `fitMedia()`, the `makeBeat()` function starts with a lowercase letter (`m`) and has an uppercase letter in the middle (`B`).
-. Just like `fitMedia()`, the `makeBeat()` function has 4 parameters separated by commas.
+. يجب عليك تعيين المتغيرات الخاصة بك بالرمز ` = ` قبل استخدامها.
+. تمامًا مثل `fitMedia()`، تبدأ الدالة ` makeBeat () ` بحرف صغير(`m`) وتحتوي على حرف كبير في المنتصف (`B`).
+. تمامًا مثل ` fitMedia () ` ، تحتوي الدالة ` makeBeat () ` على 4 عوامل مفصولة بفواصل.
 
-When you hear your music, if you don't like your first version, tweak your beat to make it sound better and better, until you like what you have.
+عندما تسمع موسيقاك ، إذا لم تعجبك' نسختك الأولى' ، فهذا جيد تمامًا: قم بتعديل إيقاعك لجعله يبدو أفضل وأفضل ، حتى يعجبك ما لديك.
 ****
 
 {nbsp} +
 
-.PRACTICE
+.تدريب
 ****
-Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
-Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
+أنشئ نصًا جديدًا وأضف 2 أو 3 مقاطع صوتية باستخدام`fitMedia()`. استخدم المتغيرات لتخزين أسماء المقاطع الخاصة بك.
+استخدم الدالة ` makeBeat () ` لإضافة دقتين مختلفتين على الأقل. يمكنك إما تشغيلها في وقت واحد ، على مسارين مختلفين ، أو واحدًا تلو الآخر على مسار واحد.
 ****
 
 [[beatsandgenres]]
-=== Create a beat based on your musical genre
+=== قم بإنشاء إيقاع بناءً على النوع الموسيقي الخاص بك
 
-Now that you've started working with `makeBeat()` and beat strings, let's explore some basic beat patterns that you can use.
-You've learned that a musical genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Similarly, some genres have signature beat patterns. Below are some examples:
+الآن 'بعد أن بدأت العمل مع ` makeBeat () ` وسلاسل الأوتار ، دعنا 'نستكشف بعض أنماط الإيقاع الأساسية التي يمكنك استخدامها.
+لقد تعلمت' أن النوع الموسيقي هو فئة من التكوين الفني (مثل الموسيقى) ، تتميز بأوجه تشابه في الشكل أو الأسلوب أو الموضوع. وبالمثل ، فإن بعض الأنواع لها أنماط إيقاع مميزة. فيما يلي بعض الأمثلة:
 
-We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
+سنستخدم 3 أنواع من الأصوات: ركلة (المسار 1) ، فخ (المسار 2) ، وهيهات (المسار 3). سنستخدم دالة واحدة ` makeBeat () ` لكل من هذه الأصوات ، على 3 مسارات مختلفة.
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -265,30 +267,30 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
-=== Chapter 3 Summary
+=== الفصل 3 ملخص
 
-* In EarSketch, 1 measure is divided into 4 beats, or 4 quarter notes. 1 beat is divided into 4 sixteenth notes.
-* *Variables* create a space in computer memory to store data.
-* You first need to assign the value (data) to the variable name using the sign `=`. Then you can use the variable by writing its name in the code.
-* A *string* is a data type that consists of a series of characters encapsulated by single or double quotes.
-* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
-* Strings are used with the `makeBeat()` function to create rhythmic patterns in EarSketch. `makeBeat()` takes a beat string to define each sixteenth note of its pattern. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
-* `makeBeat()` takes four arguments:
+* في EarSketch ، يتم تقسيم مقياس واحد إلى 4 دقات أو 4 ارباع الدقات. 1 نبضة مقسمة إلى 4 نغمات اسداس الاعشار.
+* *Variables-متغيرات *إنشاء مساحة في ذاكرة الكمبيوتر لتخزين البيانات.
+* تحتاج أولاً إلى تعيين القيمة (البيانات) لاسم المتغير باستخدام العلامة`=`. ثم يمكنك استخدام المتغير بكتابة اسمه في المقطع البرمجي.
+* *string-سلسلة *هو نوع بيانات يتكون من سلسلة من الأحرف مغلفة بعلامات اقتباس مفردة أو مزدوجة.
+* يمكن العثور على مقاطع صوتية إيقاعية باستخدام فلتر ARTIST في متصفح الصوت: يجب اختيار الفنان MAKEBEAT.
+* تُستخدم السلاسل مع دالة ` makeBeat () ` لإنشاء أنماط إيقاعية في EarSketch. `makeBeat()`يضبط كل ستة عشر في نمط الإيقاع بمساعدة وتر الأسطوانة. ` 0 ` يبدأ تشغيل المقطع ، ` + ` يمتد المقطع إلى السادس عشر التالي ، و ` - ` ينشئ استراحة.
+* `makeBeat()`تستقبل 4 عوامل:
 ** *Sound*: A sound constant
-** *Track*: The track number
-** *Start*: The starting measure
-** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
-* Different beat patterns often correspond to different musical genres.
+** *trackNumber:*المسار الذي توضع عليه الموسيقى.
+** *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
+** *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
+* تتوافق أنماط الإيقاع المختلفة مع الأنواع الموسيقية المختلفة.
 
 [[chapter-questions]]
-=== Questions
+=== الأسئلة
 
 [question]
 --
-Which of these options is a string?
+أي من هذه الخيارات عبارة عن سلسلة؟
 
 [answers]
-* "Five"
+* "خمسة"
 * 5
 * FIVE
 * Five
@@ -296,44 +298,44 @@ Which of these options is a string?
 
 [question]
 --
-What does "0" represent in a beat pattern string?
+ماذا يمثل "0" في سلسلة نمط الايقاع؟
 
 [answers]
-* Start playing the clip
-* Rest
-* Extend the clip
-* End the clip
+* ابدأ تشغيل المقطع
+* استراحة
+* قم بتوسيع ومد المقطع
+* قم بإنهاء المقطع
 --
 
 [question]
 --
-In EarSketch, one measure is...
+في EarSketch ،مقياس واحد هو...
 
 [answers]
-* 4 beats long
-* 4 sub-beats long
-* 16 beats long
+* 4 دقات/ايقاعات طويلة
+* أربع ايقاعات فرعية طويلة
+* 16 دقات/ايقاعات طويلة
 * 1 quarter note
 --
 
 [question]
 --
-One sixteenth note is...
+خلية من ستة عشر حرفًا هي...
 
 [answers]
 * a quarter of a quarter note
-* half a beat
-* a quarter of a measure
-* 1 measure
+* نصف ايقاع
+* ربع المقياس
+* مقياس 1
 --
 
 [question]
 --
-To use the `makeBeat()` function, what is the order of parameters you need to provide?
+لاستخدام الدالة` makeBeat () ` ، ما العوامل التي تحتاجها؟
 
 [answers]
-* clip name, track, start measure, beat string
-* tempo, track, start measure, end measure
-* clip name, start measure, end measure, beat string
-* beat string, track, start measure, clip name
+* اسم المقطع ، المسار ، بدء القياس ،سلسلة الايقاع
+* الإيقاع ، المسار ، بدء القياس ، قياس النهاية
+* اسم المقطع ، بدء القياس ، قياس النهاية ، سلسلة الايقاع
+* سلسلة الايقاع ، المسار ، ابدأ القياس ، اسم المقطع
 --
