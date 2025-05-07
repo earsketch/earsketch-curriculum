@@ -1,15 +1,15 @@
 [[HourOfCode]]
-== Hour of Code with EarSketch
+== Hour of Code
 
 :nofooter:
 
-Welcome to the EarSketch Hour of Code.
+Willkommen zur Hour of Code.
 
 [[WhatIs]]
-=== What is EarSketch?
+=== Was ist EarSketch?
 
 [role="curriculum-python"]
-EarSketch is a platform for making music with code. In this Hour of Code tutorial, you will learn the basics of coding in EarSketch and will be able to make music like this:
+EarSketch ist eine Plattform zum Erstellen von Musik mit Code. In diesem Hour of Code Tutorial wirst du die Grundlagen der Programmierung in EarSketch lernen und Musik machen können, die so klingt:
 
 [role="curriculum-python"]
 audio::./audioMedia/HourOfCode-Example1.mp3[]
@@ -18,7 +18,7 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-python"]
-When you are done listening to the music, press the right arrow button at the bottom of the screen to continue.
+Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am unteren Rand des Bildschirms, um fortzufahren.
 
 //Welcome to the EarSketch Hour of Code.
 
@@ -27,7 +27,7 @@ When you are done listening to the music, press the right arrow button at the bo
 //=== What is EarSketch?
 
 [role="curriculum-javascript"]
-EarSketch is a platform for making music with code. In this Hour of Code tutorial, you will learn the basics of coding in EarSketch and will be able to make music like this:
+EarSketch ist eine Plattform zum Erstellen von Musik mit Code. In diesem Hour of Code Tutorial wirst du die Grundlagen der Programmierung in EarSketch lernen und Musik machen können, die so klingt:
 
 [role="curriculum-javascript"]
 audio::./audioMedia/HourOfCode-Example1.mp3[]
@@ -36,13 +36,13 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-javascript"]
-When you are done listening to the music, press the right arrow button at the bottom of the screen to continue.
+Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am unteren Rand des Bildschirms, um fortzufahren.
 
 [[GettingStarted]]
-=== Getting Started
+=== Loslegen
 
 [role="curriculum-python"]
-Below is some code created in EarSketch. It is written in a programming language called Python. Click the blue icon in the upper right corner to copy the code into the code editor. Don’t worry about understanding the code yet.
+Unten ist ein Code, der in der EarSketch erstellt wurde. Er ist in einer Programmiersprache namens Python geschrieben. Klicke auf das blaue Symbol in der oberen rechten Ecke, um den Code in den Code-Editor zu kopieren. Mach dir noch keine Gedanken über das Verständnis des Codes.
 
 [role="curriculum-python"]
 [source,python]
@@ -51,7 +51,7 @@ include::code-examples/ch_HourOfCode-untitled1.py.txt[]
 ----
 
 [role="curriculum-python"]
-Once the code has been copied to the code editor, click the blue "Import To Edit" button. This will allow you to make changes to the code.
+Sobald der Code in den Code-Editor kopiert wurde, klicke auf die blaue Schaltfläche „Zum Bearbeiten importieren“. Dadurch kannst du Änderungen am Code vornehmen.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_import.PNG[]
@@ -59,7 +59,7 @@ image::../media/HOC/hoc_import.PNG[]
 //Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
 
 [role="curriculum-javascript"]
-Below is some code created in EarSketch. It is written in a programming language called JavaScript. Click the blue icon in the upper right corner to copy the code into the code editor. Don’t worry about understanding the code yet.
+Unten ist ein Code, der in der EarSketch erstellt wurde. Er ist in einer Programmiersprache namens JavaScript geschrieben. Klicke auf das blaue Symbol in der oberen rechten Ecke, um den Code in den Code-Editor zu kopieren. Mach dir noch keine Gedanken über das Verständnis des Codes.
 
 [role="curriculum-javascript"]
 [source,javascript]
@@ -68,7 +68,7 @@ include::code-examples/ch_HourOfCode-untitled1.js.txt[]
 ----
 
 [role="curriculum-javascript"]
-Once the code has been copied to the code editor, click the blue "Import To Edit" button. This will allow you to make changes to the code.
+Sobald der Code in den Code-Editor kopiert wurde, klicke auf die blaue Schaltfläche „Zum Bearbeiten importieren“. Dadurch kannst du Änderungen am Code vornehmen.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_import.PNG[]
@@ -76,10 +76,10 @@ image::../media/HOC/hoc_import.PNG[]
 //Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
 
 [[RunTheCode]]
-=== Run The Code
+=== Den Code ausführen
 
 [role="curriculum-python"]
-Run the example code by pressing the green "Run" button at the top of the code editor.
+Führe den Beispielcode aus, indem du auf die grüne Schaltfläche „Ausführen“ oben im Code-Editor drückst.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_run.PNG[]
@@ -88,7 +88,7 @@ image::../media/HOC/hoc_run.PNG[]
 {empty} +
 
 [role="curriculum-python"]
-After you run the code, you will see that the top section of the screen will be populated by rectangles. These represent sound clips.
+Nachdem du den Code ausgeführt hast, wirst du sehen, dass der obere Teil des Bildschirms mit Rechtecken gefüllt wird. Es handelt sich um Soundclips.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_daw_clips.PNG[]
@@ -97,7 +97,7 @@ image::../media/HOC/hoc_daw_clips.PNG[]
 {empty} +
 
 [role="curriculum-python"]
-Play the music that the code generated by clicking the play button above the sound clips.
+Spiele die Musik ab, die der Code erzeugt hat, indem du auf den Play-Button über den Soundclips klickst.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_play.PNG[]
@@ -106,14 +106,14 @@ image::../media/HOC/hoc_play.PNG[]
 {empty} +
 
 [role="curriculum-python"]
-The video below shows you how to open, import, run, and listen to the example code.
+Das folgende Video (auf Englisch) zeigt dir, wie du den Beispielcode öffnen, importieren, ausführen und anhören kannst.
 
 [[video1livepy]]
 [role="curriculum-python"]
 video::./videoMedia/037-03-RunTheCode-PY.mp4[]
 
 [role="curriculum-javascript"]
-Run the example code by pressing the green "Run" button at the top of the code editor.
+Führe den Beispielcode aus, indem du auf die grüne Schaltfläche „Ausführen“ oben im Code-Editor drückst.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_run.PNG[]
@@ -122,7 +122,7 @@ image::../media/HOC/hoc_run.PNG[]
 {empty} +
 
 [role="curriculum-javascript"]
-After you run the code, you will see that the top section of the screen will be populated by rectangles. These represent sound clips.
+Nachdem du den Code ausgeführt hast, wirst du sehen, dass der obere Teil des Bildschirms mit Rechtecken gefüllt wird. Es handelt sich um Soundclips.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_daw_clips.PNG[]
@@ -131,7 +131,7 @@ image::../media/HOC/hoc_daw_clips.PNG[]
 {empty} +
 
 [role="curriculum-javascript"]
-Play the music that the code generated by clicking the play button above the sound clips.
+Spiele die Musik ab, die der Code erzeugt hat, indem du auf den Play-Button über den Soundclips klickst.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_play.PNG[]
@@ -140,20 +140,20 @@ image::../media/HOC/hoc_play.PNG[]
 {empty} +
 
 [role="curriculum-javascript"]
-The video below shows you how to open, import, run, and listen to the example code.
+Das folgende Video (auf Englisch) zeigt dir, wie du den Beispielcode öffnen, importieren, ausführen und anhören kannst.
 
 [[video1livejs]]
 [role="curriculum-javascript"]
 video::./videoMedia/037-03-RunTheCode-JS.mp4[]
 
 [[Clips]]
-=== Adding Sound Clips
+=== Sound-Clips hinzufügen
 
 [role="curriculum-python"]
-Above the clips is a timeline which displays time in seconds (top) and measures (bottom). Measure is a musical term for a length of time.
+Über den Clips befindet sich eine Zeitleiste, die die Zeit in Sekunden (oben) und Takten (unten) anzeigt. Takt ist ein musikalischer Begriff für eine Zeitspanne.
 
 [role="curriculum-python"]
-The clips are organized in rows, called tracks in EarSketch.
+Die Clips sind in Reihen angeordnet, in EarSketch Tracks genannt.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_daw_labeled.png[]
@@ -162,22 +162,22 @@ image::../media/HOC/hoc_daw_labeled.png[]
 {empty} +
 
 [role="curriculum-python"]
-The code that adds the sound clips to the first track is on line 7 in the Code Editor.
+Der Code, der die Soundclips zum ersten Track hinzufügt, befindet sich in Zeile 7 im Code-Editor.
 
 [role="curriculum-python"]
-Line 7 uses a function called `fitMedia()`. A function is a piece of code that performs an operation. The `fitMedia()` function adds a sound clip to the time line.
+Zeile 7 verwendet eine Funktion namens `fitMedia()`. Eine Funktion ist ein Teil des Codes, der eine Aktion ausführt. Die `fitMedia()` Funktion fügt der Zeitleiste einen Soundclip hinzu.
 
 [role="curriculum-python"]
-A function generally requires parameters in order to know precisely what you want to do. The `fitMedia()` function takes in four input parameters:
+Eine Funktion benötigt in der Regel Parameter, um genau zu wissen, was du tun willst. Die `fitMedia()` Funktion nimmt vier Eingabeparameter auf:
 
 [role="curriculum-python"]
-* sound clip
-* track number
-* start measure
-* end measure
+* Soundclip
+* Tracknummer
+* Starttakt
+* Endtakt
 
 [role="curriculum-python"]
-Let's look at line 7:
+Schauen wir uns Zeile 7 an:
 
 [role="curriculum-python"]
 [source,text]
@@ -186,13 +186,13 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5)
 ----
 
 [role="curriculum-python"]
-This means the sound clip called "RD_UK_HOUSE_MAINBEAT_8" will be added to track 1, starting at measure 1 and ending at measure 5.
+Das bedeutet, dass der Soundclip mit dem Namen „RD_UK_HOUSE_MAINBEAT_8“ zu Track 1 hinzugefügt wird, und bei Takt 1 beginnt und bei Takt 5 endet.
 
 [role="curriculum-javascript"]
-Above the clips is a timeline which displays time in seconds (top) and measures (bottom). Measure is a musical term for a length of time.
+Über den Clips befindet sich eine Zeitleiste, die die Zeit in Sekunden (oben) und Takten (unten) anzeigt. Takt ist ein musikalischer Begriff für eine Zeitspanne.
 
 [role="curriculum-javascript"]
-The clips are organized in rows, called tracks in EarSketch.
+Die Clips sind in Reihen angeordnet, in EarSketch Tracks genannt.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_daw_labeled.png[]
@@ -201,22 +201,22 @@ image::../media/HOC/hoc_daw_labeled.png[]
 {empty} +
 
 [role="curriculum-javascript"]
-The code that adds the sound clips to the first track is on line 7 in the Code Editor.
+Der Code, der die Soundclips zum ersten Track hinzufügt, befindet sich in Zeile 7 im Code-Editor.
 
 [role="curriculum-javascript"]
-Line 7 uses a function called `fitMedia()`. A function is a piece of code that performs an operation. The `fitMedia()` function adds a sound clip to the time line.
+Zeile 7 verwendet eine Funktion namens `fitMedia()`. Eine Funktion ist ein Teil des Codes, der eine Aktion ausführt. Die `fitMedia()` Funktion fügt der Zeitleiste einen Soundclip hinzu.
 
 [role="curriculum-javascript"]
-A function generally requires parameters in order to know precisely what you want to do. The `fitMedia()` function takes in four input parameters:
+Eine Funktion benötigt in der Regel Parameter, um genau zu wissen, was du tun willst. Die `fitMedia()` Funktion nimmt vier Eingabeparameter auf:
 
 [role="curriculum-javascript"]
-* sound clip
-* track number
-* start measure
-* end measure
+* Soundclip
+* Tracknummer
+* Starttakt
+* Endtakt
 
 [role="curriculum-javascript"]
-Let's look at line 7:
+Schauen wir uns Zeile 7 an:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -225,13 +225,13 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5);
 ----
 
 [role="curriculum-javascript"]
-This means the sound clip called "RD_UK_HOUSE_MAINBEAT_8" will be added to track 1, starting at measure 1 and ending at measure 5.
+Das bedeutet, dass der Soundclip mit dem Namen „RD_UK_HOUSE_MAINBEAT_8“ zu Track 1 hinzugefügt wird, und bei Takt 1 beginnt und bei Takt 5 endet.
 
 [[ChangeEnd]]
-=== Changing the End Time of a Clip
+=== Ändern der Endzeit eines Clips
 
 [role="curriculum-python"]
-Let's change line 7 so the sound clip ends at measure 9 instead of 5. The line should now look like this:
+Ändern wir Zeile 7 so, dass der Soundclip bei Takt 9 statt bei Takt 5 endet. Die Zeile sollte nun so aussehen:
 
 [role="curriculum-python"]
 [source,text]
@@ -240,13 +240,13 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9)
 ----
 
 [role="curriculum-python"]
-Use the code editor to change line 7. Then run the code, play the music, and listen to how it has changed.
+Verwende den Code-Editor, um Zeile 7 zu ändern. Führe dann den Code aus, spiele die Musik und höre dir an, wie sie sich verändert hat.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_change_end.PNG[]
 
 [role="curriculum-javascript"]
-Let's change line 7 so the sound clip ends at measure 9 instead of 5. The line should now look like this:
+Ändern wir Zeile 7 so, dass der Soundclip bei Takt 9 statt bei Takt 5 endet. Die Zeile sollte nun so aussehen:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -255,16 +255,16 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9);
 ----
 
 [role="curriculum-javascript"]
-Use the code editor to change line 7. Then run the code, play the music, and listen to how it has changed.
+Verwende den Code-Editor, um Zeile 7 zu ändern. Führe dann den Code aus, spiele die Musik und höre dir an, wie sie sich verändert hat.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_change_end.PNG[]
 
 [[ChangeStart]]
-=== Changing the Start Time of a Clip
+=== Ändern der Startzeit eines Clips
 
 [role="curriculum-python"]
-Now let's look at line 8. The line reads:
+Schauen wir uns nun Zeile 8 an. Die Zeile lautet:
 
 [role="curriculum-python"]
 [source,text]
@@ -273,10 +273,10 @@ fitMedia(RD_POP_PADCHORD_2,2,1,9)
 ----
 
 [role="curriculum-python"]
-This means the sound clip called "RD_POP_PADCHORD_2" will be added to track 2, starting at measure 1 and ending at measure 9.
+Das bedeutet, dass der Soundclip mit dem Namen „RD_POP_PADCHORD_2“ zu Track 2 hinzugefügt wird und bei Takt 1 beginnt und bei Takt 9 endet.
 
 [role="curriculum-python"]
-Change the line so the sound clip starts at measure 5 instead of 1. The line should now look like this:
+Ändere die Zeile so, dass der Soundclip bei Takt 5 statt bei 1 beginnt. Die Zeile sollte nun so aussehen:
 
 [role="curriculum-python"]
 [source,text]
@@ -285,13 +285,13 @@ fitMedia(RD_POP_PADCHORD_2,2,5,9)
 ----
 
 [role="curriculum-python"]
-Use the code editor to change line 8. Then run the code, play the music, and listen to how it has changed.
+Verwende den Code-Editor, um Zeile 8 zu ändern. Führe dann den Code aus, spiele die Musik und höre dir an, wie sie sich verändert hat.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_change_start.PNG[]
 
 [role="curriculum-javascript"]
-Now let's look at line 8. The line reads:
+Schauen wir uns nun Zeile 8 an. Die Zeile lautet:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -300,10 +300,10 @@ fitMedia(RD_POP_PADCHORD_2,2,1,9);
 ----
 
 [role="curriculum-javascript"]
-This means the sound clip called "RD_POP_PADCHORD_2" will be added to track 2, starting at measure 1 and ending at measure 9.
+Das bedeutet, dass der Soundclip mit dem Namen „RD_POP_PADCHORD_2“ zu Track 2 hinzugefügt wird und bei Takt 1 beginnt und bei Takt 9 endet.
 
 [role="curriculum-javascript"]
-Change the line so the sound clip starts at measure 5 instead of 1. The line should now look like this:
+Ändere die Zeile so, dass der Soundclip bei Takt 5 statt bei 1 beginnt. Die Zeile sollte nun so aussehen:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -312,49 +312,49 @@ fitMedia(RD_POP_PADCHORD_2,2,5,9);
 ----
 
 [role="curriculum-javascript"]
-Use the code editor to change line 8. Then run the code, play the music, and listen to how it has changed.
+Verwende den Code-Editor, um Zeile 8 zu ändern. Führe dann den Code aus, spiele die Musik und höre dir an, wie sie sich verändert hat.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_change_start.PNG[]
 
 [[StartAndEnd]]
-=== Experiment with Start and End Times
+=== Experimentieren mit Start- und Endzeiten
 
 [role="curriculum-python"]
-Now that you know how to change the start and end times of clips in EarSketch, you can customize the music.
+Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern kannst, kannst du die Musik anpassen.
 
 [role="curriculum-python"]
-On lines 7 and 8, try some different values for the start and end parameters. Then, run the code and listen to how the music changes.
+Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und höre zu, wie sich die Musik verändert.
 
 [role="curriculum-python"]
-You can use whole numbers (like 1, 5, or 27) or decimals (like 1.25, 5.5, or 27.75) for start and end times. Remember that the smallest number you can use for a measure or track is 1.
+Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
 
 [role="curriculum-javascript"]
-Now that you know how to change the start and end times of clips in EarSketch, you can customize the music.
+Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern kannst, kannst du die Musik anpassen.
 
 [role="curriculum-javascript"]
-On lines 7 and 8, try some different values for the start and end parameters. Then, run the code and listen to how the music changes.
+Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und höre zu, wie sich die Musik verändert.
 
 [role="curriculum-javascript"]
-You can use whole numbers (like 1, 5, or 27) or decimals (like 1.25, 5.5, or 27.75) for start and end times. Remember that the smallest number you can use for a measure or track is 1.
+Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
 
 [[DrumFills]]
-=== Drum Fills
+=== Drum fills
 
 [role="curriculum-python"]
-Line 14 of the code uses the `makeBeat()` function. This function allows you to make custom rhythms.
+Zeile 14 des Codes verwendet die `makeBeat()` Funktion. Mit dieser Funktion kannst du eigene Rhythmen erstellen.
 
 [role="curriculum-python"]
-The `makeBeat()` function takes in four input parameters:
+Die `makeBeat()` Funktion nimmt vier Eingabeparameter auf:
 
 [role="curriculum-python"]
-* sound clip
-* track number
-* start measure
-* beat string
+* Soundclip
+* Tracknummer
+* Starttakt
+* Beat-String
 
 [role="curriculum-python"]
-Line 14 contains the code:
+Zeile 14 enthält den Code:
 
 [role="curriculum-python"]
 [source,text]
@@ -363,22 +363,22 @@ makeBeat(OS_SNARE03, 3, 4, fillA)
 ----
 
 [role="curriculum-python"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 4, and use the beat string `fillA`.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat-String „fillA“ verwendet.
 
 [role="curriculum-javascript"]
-Line 14 of the code uses the `makeBeat()` function. This function allows you to make custom rhythms.
+Zeile 14 des Codes verwendet die `makeBeat()` Funktion. Mit dieser Funktion kannst du eigene Rhythmen erstellen.
 
 [role="curriculum-javascript"]
-The `makeBeat()` function takes in four input parameters:
+Die `makeBeat()` Funktion nimmt vier Eingabeparameter auf:
 
 [role="curriculum-javascript"]
-* sound clip
-* track number
-* start measure
-* beat string
+* Soundclip
+* Tracknummer
+* Starttakt
+* Beat-String
 
 [role="curriculum-javascript"]
-Line 14 contains the code:
+Zeile 14 enthält den Code:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -387,19 +387,19 @@ makeBeat(OS_SNARE03, 3, 4, fillA);
 ----
 
 [role="curriculum-javascript"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 4, and use the beat string `fillA`.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat-String „fillA“ verwendet.
 
 [[Vars]]
-=== Variables
+=== Variablen
 
 [role="curriculum-python"]
-In this example, `fillA` is a variable. Variables hold data such as numbers or words to be used later in the code.
+In diesem Beispiel ist `fillA` eine Variable. Variablen enthalten Daten wie Zahlen oder Wörter, die später im Code verwendet werden.
 
 [role="curriculum-python"]
-The `fillA` variable holds a string of characters, `"0---0-0-00--0000"`, which describes a rhythm for `makeBeat()`. Strings always begin and end with quotation marks. The code also defines the variables `fillB` and `fillC` as strings.
+Die Variable `fillA` enthält eine Zeichenfolge `"0---0-0-00--0000"`, die einen Rhythmus für `makeBeat()` beschreibt. Strings beginnen und enden immer mit Anführungszeichen. Der Code definiert auch die Variablen `fillB` und `fillC` als Strings.
 
 [role="curriculum-python"]
-Let's edit line 14 to use one of the other variables. Choose either `fillB` or `fillC` to replace `fillA` in the code. Here is what line 14 will look like if you choose `fillC`:
+Lass uns Zeile 14 bearbeiten, um eine der anderen Variablen zu verwenden. Wähle entweder `fillB` oder `fillC` um `fillA` im Code zu ersetzen. So wird Zeile 14 aussehen, wenn du `fillC` auswählst:
 
 [role="curriculum-python"]
 [source,text]
@@ -408,16 +408,16 @@ makeBeat(OS_SNARE03, 3, 4, fillC)
 ----
 
 [role="curriculum-python"]
-Once you have chosen a new drum fill, run the code and listen to the result.
+Wenn du ein neues Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
 
 [role="curriculum-javascript"]
-In this example, `fillA` is a variable. Variables hold data such as numbers or words to be used later in the code.
+In diesem Beispiel ist `fillA` eine Variable. Variablen enthalten Daten wie Zahlen oder Wörter, die später im Code verwendet werden.
 
 [role="curriculum-javascript"]
-The `fillA` variable holds a string of characters, `"0---0-0-00--0000"`, which describes a rhythm for `makeBeat()`. Strings always begin and end with quotation marks. The code also defines the variables `fillB` and `fillC` as strings.
+Die Variable `fillA` enthält eine Zeichenfolge `"0---0-0-00--0000"`, die einen Rhythmus für `makeBeat()` beschreibt. Strings beginnen und enden immer mit Anführungszeichen. Der Code definiert auch die Variablen `fillB` und `fillC` als Strings.
 
 [role="curriculum-javascript"]
-Let's edit line 14 to use one of the other variables. Choose either `fillB` or `fillC` to replace `fillA` in the code. Here is what line 14 will look like if you choose `fillC`:
+Lass uns Zeile 14 bearbeiten, um eine der anderen Variablen zu verwenden. Wähle entweder `fillB` oder `fillC` um `fillA` im Code zu ersetzen. So wird Zeile 14 aussehen, wenn du `fillC` auswählst:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -426,16 +426,16 @@ makeBeat(OS_SNARE03, 3, 4, fillC);
 ----
 
 [role="curriculum-javascript"]
-Once you have chosen a new drum fill, run the code and listen to the result.
+Wenn du ein neues Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
 
 [[BeatStrings]]
-=== Editing Beat Strings
+=== Beat Strings bearbeiten
 
 [role="curriculum-python"]
-EarSketch has a function called `reverseString()` which can reverse the order of the characters in a string.
+EarSketch hat eine Funktion namens `reverseString()` die die Reihenfolge der Zeichen in einem String umkehren kann.
 
 [role="curriculum-python"]
-On line 16 in the code, type the following:
+Gib in Zeile 16 des Codes Folgendes ein:
 
 [role="curriculum-python"]
 [source,text]
@@ -444,13 +444,13 @@ fillRev = reverseString(fillA)
 ----
 
 [role="curriculum-python"]
-This creates a new variable called `fillRev` that contains a reversed version of `fillA`. Since `fillA` is `"0---0-0-00--0000"`, `fillRev` will be `"0000--00-0-0---0"`.
+Dies erzeugt eine neue Variable namens `fillRev`, die eine umgekehrte Version von `fillA` enthält. Da `fillA` `"0---0-0-0-00--0000"` ist, wird `fillRev` `"0000--00-0---0---0"`.
 
 [role="curriculum-javascript"]
-EarSketch has a function called `reverseString()` which can reverse the order of the characters in a string.
+EarSketch hat eine Funktion namens `reverseString()` die die Reihenfolge der Zeichen in einem String umkehren kann.
 
 [role="curriculum-javascript"]
-On line 16 in the code, type the following:
+Gib in Zeile 16 des Codes Folgendes ein:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -459,16 +459,16 @@ fillRev = reverseString(fillA);
 ----
 
 [role="curriculum-javascript"]
-This creates a new variable called `fillRev` that contains a reversed version of `fillA`. Since `fillA` is `"0---0-0-00--0000"`, `fillRev` will be `"0000--00-0-0---0"`.
+Dies erzeugt eine neue Variable namens `fillRev`, die eine umgekehrte Version von `fillA` enthält. Da `fillA` `"0---0-0-0-00--0000"` ist, wird `fillRev` `"0000--00-0---0---0"`.
 
 [[NewFill]]
-=== Making a New Fill
+=== Einen neuen Fill erstellen
 
 [role="curriculum-python"]
-We can use `fillRev` in a `makeBeat()` function. Instead of editing the existing `makeBeat()` function, we will make a new one to add a second drum fill to the music.
+Wir können `fillRev` in einer `makeBeat()` Funktion verwenden. Anstatt die vorhandene `makeBeat()`-Funktion zu bearbeiten, werden wir eine neue erstellen, um einen zweiten Drum Fill zur Musik hinzuzufügen.
 
 [role="curriculum-python"]
-On line 17, type the following code to put the reversed fill into your song:
+Gib in Zeile 17 den folgenden Code ein, um das umgekehrte Fill in deinen Song einzufügen:
 
 [role="curriculum-python"]
 [source,text]
@@ -477,19 +477,19 @@ makeBeat(OS_SNARE03, 3, 8, fillRev)
 ----
 
 [role="curriculum-python"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 8, and will use the beat string stored in `fillRev`.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat-String verwendet.
 
 [role="curriculum-python"]
-Run the code and listen to the result.
+Führen den Code aus und höre dir das Ergebnis an.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_new_fill.PNG[]
 
 [role="curriculum-javascript"]
-We can use `fillRev` in a `makeBeat()` function. Instead of editing the existing `makeBeat()` function, we will make a new one to add a second drum fill to the music.
+Wir können `fillRev` in einer `makeBeat()` Funktion verwenden. Anstatt die vorhandene `makeBeat()`-Funktion zu bearbeiten, werden wir eine neue erstellen, um einen zweiten Drum Fill zur Musik hinzuzufügen.
 
 [role="curriculum-javascript"]
-On line 17, type the following code to put the reversed fill into your song:
+Gib in Zeile 17 den folgenden Code ein, um das umgekehrte Fill in deinen Song einzufügen:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -498,79 +498,79 @@ makeBeat(OS_SNARE03, 3, 8, fillRev);
 ----
 
 [role="curriculum-javascript"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 8, and will use the beat string stored in `fillRev`.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat-String verwendet.
 
 [role="curriculum-javascript"]
-Run the code and listen to the result.
+Führen den Code aus und höre dir das Ergebnis an.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_new_fill.PNG[]
 
 [[UserFill]]
-=== Add Your Own Fill
+=== Deinen eigenen Fill hinzufügen
 
 [role="curriculum-python"]
-Use what you've learned to write another `makeBeat()` call at a different measure with a different beat string.
+Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat-String zu schreiben.
 
 [role="curriculum-python"]
-You can use or modify one of the provided strings or try to write one from scratch using "0" and "-" characters. Beat strings are usually 16 characters long, which represents one measure of music.
+Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat-Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
 
 [role="curriculum-javascript"]
-Use what you've learned to write another `makeBeat()` call at a different measure with a different beat string.
+Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat-String zu schreiben.
 
 [role="curriculum-javascript"]
-You can use or modify one of the provided strings or try to write one from scratch using "0" and "-" characters. Beat strings are usually 16 characters long, which represents one measure of music.
+Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat-Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
 
 [[Comments]]
-=== Using Comments
+=== Kommentare verwenden
 
 [role="curriculum-python"]
-Throughout the example code, you'll see section labels such as `# Add Sounds`, `# Fills`, and `# More Sounds`. The "#" symbol at the start of the line means that line is a comment. Comments provide information about the code but are ignored by the computer.
+Im Beispielcode siehst du Abschnittsbezeichnungen wie `# Sounds hinzufügen`, `# Fills`, und `# Weitere Sounds`. Das "#" Symbol am Zeilenanfang bedeutet, dass die Zeile ein Kommentar ist. Kommentare geben Informationen über den Code, werden aber vom Computer ignoriert.
 
 [role="curriculum-python"]
-Comments can be used as labels and explanations to help make code easier to read. They can also be used to disable lines of code so they are ignored by the computer when the code is run.
+Kommentare können als Labels und Erklärungen verwendet werden, um das Lesen von Code zu erleichtern. Sie können auch verwendet werden, um Codezeilen zu deaktivieren, sodass sie vom Computer ignoriert werden, wenn der Code ausgeführt wird.
 
 [role="curriculum-javascript"]
-Throughout the example code, you'll see section labels such as `// Add Sounds`, `// Fills`, and `// More Sounds`. The "//" symbol at the start of the line means that line is a comment. Comments provide information about the code but are ignored by the computer.
+Im Beispielcode siehst du Abschnittsbezeichnungen wie `// Sounds hinzufügen`, `// Fills`, und `// Weitere Sounds`. Das "//" Symbol am Zeilenanfang bedeutet, dass die Zeile ein Kommentar ist. Kommentare geben Informationen über den Code, werden aber vom Computer ignoriert.
 
 [role="curriculum-javascript"]
-Comments can be used as labels and explanations to help make code easier to read. They can also be used to disable lines of code so they are ignored by the computer when the code is run.
+Kommentare können als Labels und Erklärungen verwendet werden, um das Lesen von Code zu erleichtern. Sie können auch verwendet werden, um Codezeilen zu deaktivieren, sodass sie vom Computer ignoriert werden, wenn der Code ausgeführt wird.
 
 [[AddSounds]]
-=== Adding More Sounds
+=== Mehr Sounds hinzufügen
 
 [role="curriculum-python"]
-Under the `# More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Each contains a different sound.
+Unter dem `# Weitere Sounds` Kommentar gibt es eine Reihe von `fitMedia()` Funktionen, die auskommentiert werden. Jeder enthält einen anderen Sound.
 
 [role="curriculum-python"]
-You can enable them by deleting the "#" character at the beginning of the line.
+Du kannst sie aktivieren, indem du das Zeichen "#" am Anfang der Zeile löschst.
 
 [role="curriculum-python"]
-Try uncommenting different combinations of lines. Then, run the code and listen to the result. See if you can guess what each line of code will add to the music before you press run.
+Versuche, verschiedene Linienkombinationen zu entkommentieren. Führe dann den Code aus und hör dir das Ergebnis an. Versuche zu erraten, was die einzelnen Codezeilen der Musik hinzufügen werden, bevor du auf „Ausführen“ drückst.
 
 [role="curriculum-javascript"]
-Under the `// More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Each contains a different sound.
+Unter dem `// Mehr Sounds` Kommentar gibt es eine Reihe von `fitMedia()` Funktionen, die auskommentiert sind. Jeder enthält einen anderen Sound.
 
 [role="curriculum-javascript"]
-You can enable them by deleting the "//" character at the beginning of the line.
+Du kannst sie aktivieren, indem du das Zeichen "//" am Anfang der Zeile löschst.
 
 [role="curriculum-javascript"]
-Try uncommenting different combinations of lines. Then, run the code and listen to the result. See if you can guess what each line of code will add to the music before you press run.
+Versuche, verschiedene Linienkombinationen zu entkommentieren. Führe dann den Code aus und hör dir das Ergebnis an. Versuche zu erraten, was die einzelnen Codezeilen der Musik hinzufügen werden, bevor du auf „Ausführen“ drückst.
 
 [[MakeYourOwn]]
-=== Make Your Own Song
+=== Erstelle deinen eigenen Song
 
 [role="curriculum-python"]
-It is time to make your own music using EarSketch.
+Es ist an der Zeit, deine eigene Musik mit EarSketch zu machen.
 
 [role="curriculum-python"]
-Comment and uncomment lines of code, change start and end times in `fitMedia()`, and add fills with `makeBeat()`.
+Kommentiere und entkommentiere Codezeilen, ändere die Start- und Endzeiten in `fitMedia()` und füge Fills mit `makeBeat()` hinzu.
 
 [role="curriculum-python"]
-You can edit or comment out functions that were included in the example code or try to write your own new lines of code. If you want to start a new song from scratch, press the `+` icon to create a new Python script.
+Du kannst Funktionen, die im Beispielcode enthalten waren, bearbeiten oder auskommentieren oder versuchen, deine eigenen neuen Codezeilen zu schreiben. Wenn du ein neues Lied von Grund auf starten möchtest, drücke das `+`-Symbol, um ein neues Python-Skript zu erstellen.
 
 [role="curriculum-python"]
-If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
+Wenn du mehr Soundclips erforschen willst, kannst du den Sound Browser benutzen. Rufe den Browser auf, indem du auf das Symbol auf der linken Seite des Bildschirms klickst.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_sound_browser1.png[]
@@ -579,22 +579,22 @@ image::../media/HOC/hoc_sound_browser1.png[]
 {empty} +
 
 [role="curriculum-python"]
-In the browser, you can search for and filter through all of the sounds available in EarSketch.
+Im Browser kannst du nach allen in EarSketch verfügbaren Sounds suchen und sie filtern.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_sound_browser2.PNG[]
 
 [role="curriculum-javascript"]
-It is time to make your own music using EarSketch.
+Es ist an der Zeit, deine eigene Musik mit EarSketch zu machen.
 
 [role="curriculum-javascript"]
-Comment and uncomment lines of code, change start and end times in `fitMedia()`, and add fills with `makeBeat()`.
+Kommentiere und entkommentiere Codezeilen, ändere die Start- und Endzeiten in `fitMedia()` und füge Fills mit `makeBeat()` hinzu.
 
 [role="curriculum-javascript"]
-You can edit or comment out functions that were included in the example code or try to write your own new lines of code. If you want to start a new song from scratch, press the `+` icon to create a new JavaScript script.
+Du kannst Funktionen, die im Beispielcode enthalten waren, bearbeiten oder auskommentieren oder versuchen, deine eigenen neuen Codezeilen zu schreiben. Wenn du ein neues Lied von Grund auf starten möchtest, drücke das `+` Symbol, um ein neues JavaScript-Skript zu erstellen.
 
 [role="curriculum-javascript"]
-If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
+Wenn du mehr Soundclips erforschen willst, kannst du den Sound Browser benutzen. Rufe den Browser auf, indem du auf das Symbol auf der linken Seite des Bildschirms klickst.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_sound_browser1.png[]
@@ -603,19 +603,19 @@ image::../media/HOC/hoc_sound_browser1.png[]
 {empty} +
 
 [role="curriculum-javascript"]
-In the browser, you can search for and filter through all of the sounds available in EarSketch.
+Im Browser kannst du nach allen in EarSketch verfügbaren Sounds suchen und sie filtern.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_sound_browser2.PNG[]
 
 [[GoingFurther]]
-=== Going Further With EarSketch
+=== Weitere Schritte mit EarSketch
 
 [role="curriculum-python"]
-EarSketch offers much more than we had time to cover in the last hour. There is a full length curriculum included in this panel. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch bietet viel mehr, als wir in der letzten Stunde behandeln konnten. In diesem Programm gibt es einen vollständigen Lehrplan. Du kannst darauf zugreifen, indem du auf das Symbol für das Inhaltsverzeichnis oben rechts im Browserfenster klickst.
 
 [role="curriculum-python"]
-You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
+Du kannst den gesamten Lehrplan nutzen, um mehr über das Programmieren zu lernen und komplexere Musik zu erstellen. Das folgende Beispiel stellt nur eine der Möglichkeiten dar.
 
 [role="curriculum-python"]
 audio::./audioMedia/HourOfCode-Example2.mp3[]
@@ -627,10 +627,10 @@ include::code-examples/ch_HourOfCode-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
-EarSketch offers much more than we had time to cover in the last hour. There is a full length curriculum included in this panel. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch bietet viel mehr, als wir in der letzten Stunde behandeln konnten. In diesem Programm gibt es einen vollständigen Lehrplan. Du kannst darauf zugreifen, indem du auf das Symbol für das Inhaltsverzeichnis oben rechts im Browserfenster klickst.
 
 [role="curriculum-javascript"]
-You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
+Du kannst den gesamten Lehrplan nutzen, um mehr über das Programmieren zu lernen und komplexere Musik zu erstellen. Das folgende Beispiel stellt nur eine der Möglichkeiten dar.
 
 [role="curriculum-javascript"]
 audio::./audioMedia/HourOfCode-Example2.mp3[]
