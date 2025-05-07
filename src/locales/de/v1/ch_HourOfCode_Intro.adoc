@@ -1,8 +1,8 @@
 [[HourOfCode]]
-== Hour of Code with EarSketch
+== Hour of Code
 
 :nofooter:
 
-Welcome to the EarSketch Hour of Code.
+Willkommen zur Hour of Code.
 
-Click the "Next Page" button or <<ch_HourOfCode#, click here>> to get started.
+Klicke auf die Schaltfläche „Nächste Seite“ oder <<ch_HourOfCode#, click here>>, um zu beginnen.
