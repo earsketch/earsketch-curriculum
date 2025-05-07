@@ -123,7 +123,7 @@ Pour ajouter un clip de son au DAW, nous commençons par entrer la fonction `fit
 Entre les parenthèses, nous aurons quatre paramètres, séparés par des virgules :
 
 . *Sound*: the sound constant from the sound browser
-. *Numéro de piste :* La piste sur laquelle la musique est placée.
+. *trackNumber :* La piste sur laquelle la musique est placée.
 . *Mesure de début :* La mesure de départ du clip de son.
 . *Mesure de fin :* La mesure de fin du clip de son.
 
@@ -248,14 +248,14 @@ Voici quelques erreurs courantes :
 
 [role="curriculum-python"]
 . : si vous oubliez de fermer une parenthèse ou si vous avez écrit la fonction fitMedia incorrectement).
-. *Sensibilité à la casse :* La plupart des mots utilisés en programmation sont sensibles à la casse (l'ordinateur reconnaît la différence entre les lettres majuscules et minuscules). Il est possible de les désigner en saisissant ou en collant leur nom en majuscule. Vous écrirez ensuite du code dans votre *éditeur de code*. *Choisissez un nom et un langage :* Une fois que la boîte de dialogue « Créer un nouveau script » sera ouverte, donnez un nom à votre nouveau script : il s'agira du titre de votre chanson.
+. Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule. Par exemple, vous devez écrire `fitMedia()` et non `FitMedia()` ou `fitmedia()`. *Choisissez un nom et un langage :* Une fois que la boîte de dialogue « Créer un nouveau script » sera ouverte, donnez un nom à votre nouveau script : il s'agira du titre de votre chanson.
 . Chaque instruction en JavaScript *_doit se terminer par un point-virgule_*.
 . *Paramétrage du script :* EarSketch ajoute automatiquement des code de paramétrage à un nouveau script, mais vous pourriez accidentellement supprimer `from earsketch import *`.
 . Parmi les erreurs habituelles, on retrouve les fautes de frappe, les erreurs de casse, les parenthèses manquantes, le paramétrage incorrect du script, etc.
 
 [role="curriculum-javascript"]
 . : si vous oubliez de fermer une parenthèse ou si vous avez écrit la fonction fitMedia incorrectement).
-. *Sensibilité à la casse :* La plupart des mots utilisés en programmation sont sensibles à la casse (l'ordinateur reconnaît la différence entre les lettres majuscules et minuscules). Il est possible de les désigner en saisissant ou en collant leur nom en majuscule. Vous écrirez ensuite du code dans votre *éditeur de code*. *Choisissez un nom et un langage :* Une fois que la boîte de dialogue « Créer un nouveau script » sera ouverte, donnez un nom à votre nouveau script : il s'agira du titre de votre chanson.
+. Les *langages de programmation* sont un ensemble de mots et de symboles qui sont compris par l'ordinateur. Il est possible de les désigner en saisissant ou en collant leur nom en majuscule. Par exemple, vous devez écrire `fitMedia()` et non `FitMedia()` ou `fitmedia()`. *Choisissez un nom et un langage :* Une fois que la boîte de dialogue « Créer un nouveau script » sera ouverte, donnez un nom à votre nouveau script : il s'agira du titre de votre chanson.
 . Chaque instruction en JavaScript *_doit se terminer par un point-virgule_*.
 . Parmi les erreurs habituelles, on retrouve les fautes de frappe, les erreurs de casse, les parenthèses manquantes, le paramétrage incorrect du script, etc.
 
@@ -309,7 +309,7 @@ TODO: when options are ready, modify the link
 * Vous pouvez créer un nouveau script en cliquant sur le long lien bleu ou sur l'icône « + » si un autre script est déjà ouvert.
 * La fonction `fitMedia()` permet d'ajouter du son dans le DAW. It has the following four parameters.
 ** *Sound*: the sound constant from the sound browser
-** *Numéro de piste :* La piste sur laquelle la musique est placée.
+** *trackNumber :* La piste sur laquelle la musique est placée.
 ** *Mesure de début :* La mesure de départ du clip de son.
 ** *Mesure de fin :* La mesure de fin du clip de son.
 * Le *débogage* est le processus de recherche et de correction de *bogues* ou d'erreurs faites par le programmeur.
