@@ -8,7 +8,7 @@ In diesem Kapitel lernst du, wie du die Nutzer um ihre Meinung bitten und deine 
 [[returnstatement]]
 === Return Statement
 
-Sieh dir zuerst dieses Video an:
+Du kannst dir zum Start dieses Video (in Englisch) anschauen:
 
 [role="curriculum-python curriculum-mp4"]
 [[video131py]]
@@ -255,7 +255,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 ****
 Jetzt kombinieren wir Benutzereingaben und boolesche Operationen.
 
-Schreibe ein Skript, das den Benutzer auffordert, ein Genre auszuwählen, mit einer begrenzten Anzahl von Optionen (z. B. "Hip Hop" und "klassisch"). Abhängig von der Antwort des Benutzers wähle einen Beat String, der gut mit dem Genre funktioniert. Du kannst mehrere Möglichkeiten akzeptieren. Zum Beispiel, "HIP HOP", "hip hop" und "Hip Hop" geben den gleichen Song aus.
+Schreibe ein Skript, das den Benutzer auffordert, ein Genre auszuwählen, mit einer begrenzten Anzahl von Optionen (z. B. "Hip Hop" und "klassisch"). Abhängig von der Antwort des Benutzers wähle einen Beat-String, der gut mit dem Genre funktioniert. Du kannst mehrere Möglichkeiten akzeptieren. Zum Beispiel, "HIP HOP", "hip hop" und "Hip Hop" geben den gleichen Song aus.
 ****
 
 Hier ein Beispiel:

@@ -393,4 +393,4 @@ include::code-examples/every-error-explained-in-detail-value-error-correction.py
 include::code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
-*Lösung:* Überprüfe deine Beat Strings, um sicherzustellen, dass die Werte in den richtigen Bereich fallen. Bestätige auch, dass alle Argumente von `setEffect()` innerhalb des benötigten Bereichs des Effekts sind.
+*Lösung:* Überprüfe deine Beat-Strings, um sicherzustellen, dass die Werte in den richtigen Bereich fallen. Bestätige auch, dass alle Argumente von `setEffect()` innerhalb des benötigten Bereichs des Effekts sind.

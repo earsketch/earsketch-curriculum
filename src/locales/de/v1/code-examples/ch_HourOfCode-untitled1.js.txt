@@ -1,0 +1,23 @@
+setTempo (120);
+
+// Sounds hinzufügen
+fitMedia(RD_UK_HOUSE_MAINBEAT_8, 1, 1, 5);
+fitMedia(RD_POP_PADCHORD_2, 2, 1, 9);
+
+// Fills
+var fillA = "0---0-0-00--0000";
+var fillB = "0--0--0--0--0-0-";
+var fillC = "--000-00-00-0-00";
+makeBeat(OS_SNARE03, 3, 4, fillA);
+
+// Weitere Sounds
+// fitMedia(YG_RNB_TAMBOURINE_1,4,1,9);
+// fitMedia(YG_FUNK_HIHAT_2,5,1,9);
+// fitMedia(Y01_CRASH_1,6,1,9);
+// fitMedia(YG_FUNK_CONGAS_3,7,1,9);
+// fitMedia(RD_POP_ARPBASS_4,8,1,9);
+// fitMedia(RD_POP_KEYPLUCK_4,9,1,9);
+// fitMedia(RD_POP_SYNTHLEAD_1,10,1,9);
+// fitMedia(RD_POP_TB303LEAD_3,11,1,9);
+// fitMedia(RD_POP_SYNTHBASS_6,12,1,9);
+// fitMedia(DUBSTEP_PERCDRUM_006,13,1,9);

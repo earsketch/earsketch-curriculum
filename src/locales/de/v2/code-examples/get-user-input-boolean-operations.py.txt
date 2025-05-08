@@ -8,7 +8,7 @@ kick = OS_KICK02
 hihat = OS_CLOSEDHAT04
 clap = OS_CLAP03
 
-# Beat String Variablen
+# Beat-String Variablen
 hiphopKickBeat = "0++++---0+++0+++"
 hiphopHihatBeat = "----0---00---000"
 edmKickBeat = "0+++----0+++----"

@@ -187,7 +187,7 @@ Die Indexe des Strings `"EarSketch"` werden in der unten stehenden Tabelle angez
 ****
 In einem neuen Skript:
 
-. Erstelle vier Variablen: zwei Beat Strings (`stringA` und `stringB`) und zwei Soundlisten (`soundsA` und `soundsB`).
+. Erstelle vier Variablen: zwei Beat-Strings (`stringA` und `stringB`) und zwei Soundlisten (`soundsA` und `soundsB`).
 . Gib das zweite Zeichen jedes Strings aus.
 . Gib das letzte Element deiner Listen aus.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
@@ -201,7 +201,7 @@ In einem neuen Skript:
 ****
 In einem neuen Skript:
 
-. Erstelle vier Variablen: zwei Beat Strings (`stringA` und `stringB`) und zwei Sound Arrays (`soundsA` und `soundsB`).
+. Erstelle vier Variablen: zwei Beat-Strings (`stringA` und `stringB`) und zwei Sound Arrays (`soundsA` und `soundsB`).
 . Gib das zweite Zeichen jedes Strings aus.
 . Das letzte Element deiner Arrays ausgeben.
 . `stringC`, die Verkettung von `stringA` und `stringB`, erstellen und ausgeben.
@@ -247,10 +247,10 @@ include::code-examples/data-structures-string-operations.js.txt[]
 ----
 
 [role="curriculum-python"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du eine Liste von Sounds. In deinem Beat-String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deiner Liste der Sounds an. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-javascript"]
-Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deinem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
+Schließlich kann `makeBeat()` mehrere Sounds auf einmal bewältigen. So kannst du alle percussive Sounds mit nur einer `makeBeat()` Linie auf einen Track platzieren. Anstatt deine Sounddatei als erstes Argument zu übergeben, übergibst du einen Array von Sounds. In deinem Beat-String kannst du statt nur mit `0` einen Sound abspielen, Zahlen von `0` bis `9` verwenden. Diese Zahlen zeigen einen Index in deinem Array von Sounds. Schaue dir das Beispiel „vorher und nachher“ an, mit dem „Boom Bap Boom Bap“-Rhythmus.
 
 [role="curriculum-python"]
 [source,python]

@@ -21,7 +21,7 @@ hihat = OS_CLOSEDHAT03
 
 # Drums hinzufügen:
 def addingDrums(start, end, pattern):
-    # Zuerst erstellen wir Beat Strings, abhängig vom Parametermuster:
+    # Zuerst erstellen wir Beat-Strings, abhängig vom Parametermuster:
     if pattern == "heavy":
         beatStringKick = "0---0---0---00--"
         beatStringHihat = "-----000----0-00"

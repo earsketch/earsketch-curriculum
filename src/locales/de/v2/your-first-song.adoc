@@ -75,7 +75,7 @@ Ein Genre ist eine Kategorie künstlerischer Kompositionen (z. B. Musik), die si
 .ÜBUNG
 ****
 . Wähle einen Künstler den du wirklich magst, und finde heraus, welchem Genre er angehört.
-. Suche nach diesem Genre (auf https://soundcloud.com/[Soundcloud] oder etwas Ähnlichem) und höre dir ein paar Ausschnitte von Songs in diesem Genre an.
+. Suche nach diesem Genre (auf Spotify oder etwas Ähnlichem) und höre dir ein paar Ausschnitte von Songs in diesem Genre an.
 . Achte auf Ähnlichkeiten zwischen den Songs.
 . Du kannst auch auf Wikipedia recherchieren, um mehr Informationen über das Genre zu erhalten.
 ****
@@ -127,8 +127,8 @@ Du musst eingeloggt sein, um Sound hochzuladen.
 
 Lass uns die ersten drei Optionen erkunden.
 
-. *Upload Sound* erlaubt dir Audiodateien auf deinem Computer auszuwählen.
-. *Quick Record* ermöglicht die Aufnahme direkt vom Mikrofon deines Computers.
+. *Sound hochladen* erlaubt dir Audiodateien auf deinem Computer auszuwählen.
+. *Schnellaufnahme* ermöglicht die Aufnahme direkt vom Mikrofon deines Computers.
 . *Freesound* erlaubt dir den Import von Sounds von http://freesound.org[freesound.org^], einer Open-Source-Audio-Datenbank. In der Suchleiste kannst du nach einem Soundtyp suchen. Wähle dann die Umschalttaste vor dem Dateinamen, um die Datei auszuwählen.
 
 [role="curriculum-mp4"]
@@ -161,7 +161,7 @@ Manchmal stammen die Daten im Arbeitsspeicher, die die CPU verwenden soll, nicht
 
 Betrachten wir die Aufnahme eines Sounds in EarSketch als Beispielprozess. Zuerst nehmen wir mit dem Eingabegerät, dem Mikrofon, Daten auf dem Computer auf. Die CPU speichert diese Audiodaten in ihrem Speicher. Wenn du die Abspieltaste drückst, um deine Aufnahme zu hören, greift die CPU auf die Daten zu und sendet sie an einen Ausgang, also an die Lautsprecher oder Kopfhörer. Wenn du die Upload-Taste drückst, führt die CPU einen Prozess aus, der die Audiodaten in ein Standard-Tondateiformat (eine WAV-Datei, oder .wav) umwandelt und an den EarSketch-Server sendet. Der Server ist ein externes System, das allen EarSketch-Benutzern Dienste zur Verfügung stellt, auch deinem eigenen Computer. Der EarSketch-Server speichert die Sounddatei auf dem Sekundärspeicher des Servers, damit du in Zukunft darauf zugreifen kannst.
 
-Sieh dir das folgende Zusatzvideo an:
+Für Zusatzinformationen, schau dir dieses Video (in Englisch) an:
 
 [role="curriculum-mp4"]
 [[video11cpu]]
@@ -188,7 +188,7 @@ Bei dem Urheberrecht geht es nicht nur darum, Menschen in Schwierigkeiten zu bri
 
 Wenn du Sounds in deinen EarSketch-Skripten verwendest, musst du sicher sein, dass du die Erlaubnis des Urheberrechtsinhabers hast, die Sounds zu verwenden, oder dass du sie im Einklang mit der Fair Use-Regelung verwendest.
 
-Für alle Details siehe https://earsketch.gatech.edu/landing/#/license[LICENSE^].
+-
 
 [[chapter2summary]]
 === Zusammenfassung von Kapitel 2

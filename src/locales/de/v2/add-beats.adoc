@@ -79,7 +79,7 @@ Beachte, dass es wichtig ist, deine Variable verständlich und aussagekräftig z
 Eine *Konstante* ist ähnlich einer Variable, da sie Werte speichert. Der Wert einer Konstante ändert sich jedoch nie. Zum Beispiel ist `TECHNO_SYNTHPLUCK_001` eine Konstante in EarSketch , sie bezieht sich auf die entsprechende Soundkonstante. Konventionell werden Konstantennamen großgeschrieben und verwenden Unterstriche anstelle von Leerzeichen.
 
 [[drumbeatstrings]]
-=== Beat Strings
+=== Beat-Strings
 
 Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 
@@ -87,9 +87,9 @@ Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 * Das *Tempo* ist die Geschwindigkeit der Musik in BPM (beats per minute).
 * Ein *Beat* ist wie der "stetige Puls" eines Songs. Wenn die Zuhörer bei einem Konzert klatschen, klatschen sie auf den Beat.
 * Ein *Takt* (measure) ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
-* Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in 2 *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
+* Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in zwei *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
 * Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e and a 2 e and a 3 e and a 4 e and a. .."
-* 1 Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
+* Ein Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
 * Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW kannst du das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
 
 [[imediameasurepng]]
@@ -112,9 +112,9 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 Höre dir deinen Lieblingssong an und versuche, im Takt zu klatschen. Du kannst diese Übung auch mit deiner Nachbarin oder deinem Nachbarn machen.
 ****
 
-Wir werden jeden unserer Rhythmen in einem *beat* String zusammenstellen.
+Wir werden jeden unserer Rhythmen in einem *Beat*-String zusammenstellen.
 
-Ein *Beat* String ist ein String, der die Zeichen `0`, `+` oder `-` verwendet. Als Erinnerung: Ein String ist ein Datentyp, der eine Reihe von Zeichen (wie `0` oder `+`) in Anführungszeichen enthält.
+Ein *Beat*-String ist ein String, der die Zeichen `0`, `+` oder `-` verwendet. Als Erinnerung: Ein String ist ein Datentyp, der eine Reihe von Zeichen (wie `0` oder `+`) in Anführungszeichen enthält.
 
 Zum Beispiel: `"0-00-00-0+++0+0+"`
 
@@ -124,10 +124,10 @@ Zum Beispiel: `"0-00-00-0+++0+0+"`
 
 .ÜBUNG
 ****
-Versuche für jede der folgenden Zeichenfolgen auf die Nullen zu klatschen. Höre dir dann das entsprechende Audio an und überprüfe, ob du richtig lagst. Diese Übung hilft dir zu verstehen, wie die Zeichenfolgen der Drumbeats funktionieren.
+Versuche für jede der folgenden Zeichenfolgen auf die Nullen zu klatschen. Höre dir dann das entsprechende Audio an und überprüfe, ob du richtig lagst. Diese Übung hilft dir zu verstehen, wie die Strings der Drumbeats funktionieren.
 ****
 
-Hier sind einige Beispiele für 1-Takt Beat Strings:
+Hier sind einige Beispiele für 1-Takt Beat-Strings:
 
 Viertelnoten: `"0\+++0+++0\+++0+++"`
 (gelesen: "1, 2, 3, 4")
@@ -191,7 +191,7 @@ Lass uns nun schauen, wie du deinen eigenen Beat machen kannst. Hier verwenden w
 
 Zum Beispiel: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` wird dein Muster `0--0--000--00-0-` auf Track 1 setzen, mit dem Sound `DUBSTEP_FILTERCHORD_002`.
 
-In diesem Video erfährst du mehr:
+Hier ist ein Video (in Englisch), falls du dir das Ganze genauer erklären lassen willst:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12py]]
@@ -267,7 +267,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 [[chapter3summary]]
 === Zusammenfassung von Kapitel 3
 
-* In EarSketch ist ein Takt in 4 Schläge oder 4 Viertelnoten unterteilt. 1 Schlag ist in 4 Sechzehntelnoten unterteilt.
+* In EarSketch ist ein Takt in vier Schläge oder vier Viertelnoten unterteilt. Ein Schlag ist in vier Sechzehntelnoten unterteilt.
 * *Variablen* erstellen einen Platz im Computerspeicher, um Daten zu speichern.
 * Du musst zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
 * Ein *String* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.

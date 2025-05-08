@@ -24,7 +24,7 @@ Wir verwenden die Funktion `setEffect()`, die vier Argumente enthält, ähnlich 
 
 . *track*: Tracknummer oder `MIX_TRACK`
 . *type*: Effektkonstante, wie `DELAY`
-. *Parameter*: Parameterkonstante, wie `DELAY_TIME`
+. *parameter*: Parameterkonstante, wie `DELAY_TIME`
 . *value*: Parameterwert wie `200`. Dieser Wert muss innerhalb des Effektbereichs liegen.
 
 .ÜBUNG
@@ -110,7 +110,7 @@ Die Argumente der Funktion können jeweils einen bestimmten Datentyp haben. Die 
 ** *Floating Point* Zahlen sind rationale Zahlen wie 0.125 oder -21.0. Beispiel: Lautstärke von -4.2dB
 * *Strings* repräsentieren Text. Beispiel: `"0000----0000----"`
 
-Lass uns nun mehr mit der Funktion `setEffect()` spielen. Das folgende Video zeigt, wie einige Effekte verwendet werden können:
+Lass uns nun mehr mit der Funktion `setEffect()` spielen. Das folgende Video (in Englisch) zeigt dir genauer, wie einige Effekte verwendet werden können:
 
 ////
 VIDEO IS BEEING MADE
@@ -182,7 +182,7 @@ include::code-examples/effects-and-envelopes-envelopes.py.txt[]
 include::code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
-Sieh dir nun dieses Video für andere Envelope-Beispiele an
+In diesem Video (in Englisch) kannst du dir nochmal ein paar andere Envelope-Beispiele anschauen:
 
 [role="curriculum-python curriculum-mp4"]
 [[video5b]]
@@ -249,7 +249,7 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * Effekte werden in EarSketch mit der Funktion `setEffect()` eingefügt. Seine Syntax ist `setEffect(track, type, parameter, value)`.
 . *track*: Tracknummer oder `MIX_TRACK`
 . *type*: Effektkonstante, wie `DELAY`
-. *Parameter*: Parameterkonstante, wie `DELAY_TIME`
+. *parameter*: Parameterkonstante, wie `DELAY_TIME`
 . *value*: Parameterwert wie `200`. Dieser Wert muss innerhalb des Effektbereichs liegen.
 * *Funktionen* enthalten Anweisungen zum Ausführen des Rechners. Daten werden durch *Argumente* an Funktionen gesendet, was die Ausführung der Funktion beeinflusst. Die Syntax eines *Funktions Calls* mit zwei Argumenten lautet „myFunction(argument1, argument2)“. Ein Beispiel für eine Syntax, die in einem Funktionsaufruf mit 4 Argumenten verwendet wird, ist `makeBeat(kick, 2, measure, kickBeat)`.
 * Eine vollständige Liste der EarSketch-Effekte und deren Parameter finden Sie in <</en/v1/every-effect-explained-in-detail#,effects>>, zusammen mit Beschreibungen für jeden.
