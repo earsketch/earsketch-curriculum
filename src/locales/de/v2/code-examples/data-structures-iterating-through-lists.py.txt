@@ -1,0 +1,16 @@
+# Iteration durch Listen: Verwendung eines Arrays, um mehrere Sounds zu halten und sie dank eines for-loops in unserer DAW zu platzieren
+
+# Setup
+from earsketch import *
+setTempo(130)
+
+# Musik
+
+# Eine Liste von Sounds erstellen
+myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
+
+# Durchlaufen der Liste
+for track in range(1, 4):
+    index = track - 1
+    fitMedia(myEnsemble[index], track, 1, 5)
+    print("this iteration, track = " + str(track) + " and index = " + str(index))

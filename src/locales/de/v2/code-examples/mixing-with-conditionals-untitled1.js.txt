@@ -1,0 +1,4 @@
+if (condition) {
+    // Hier schreibst du die Anweisungen die der Computer ausführen muss, wenn die Bedingung true ist
+    // Beachte, dass die Anweisungen eingerückt sind, genau wie bei Schleifen
+}

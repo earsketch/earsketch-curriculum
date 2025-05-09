@@ -1,0 +1,11 @@
+// Envelopes: Erstellen von Envelopes mit 7-Parameter setEffect()
+
+// Setup
+setTempo(120);
+
+// Musik
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
+
+// Erzeugt eine Effektrampe zwischen den Takten 1 und 3, die von -60 dB bis 0 dB reicht.
+// Dies ist eine Einblendung
+setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);

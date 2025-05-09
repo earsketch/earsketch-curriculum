@@ -1,0 +1,10 @@
+// Type Error: Beispiel
+
+setTempo(120);
+
+var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
+var measureTotal = readInput("How many measures?");
+
+println(measureTotal);
+
+fitMedia(soundClip, 1, 1, measureTotal + 1);

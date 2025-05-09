@@ -1,0 +1,6 @@
+[[ch_27]]
+== Die EarSketch-API
+
+:nofooter:
+
+link:<api>[Hier klicken] um die EarSketch API zu öffnen.

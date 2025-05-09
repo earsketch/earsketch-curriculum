@@ -1,0 +1,386 @@
+[[getstartedwithearsketch]]
+== Erste Schritte mit EarSketch
+
+:nofooter:
+
+In diesem Kapitel erfährst du, wie EarSketch funktioniert. Du wirst Sounds in deine Musik einbauen und sehen, wie du deinen Code debuggen kannst.
+
+[[discoverearsketch]]
+=== EarSketch entdecken
+
+:nofooter:
+
+In EarSketch gibst du dem Computer Anweisungen, indem du Code schreibst. Eine Codezeile ist eine Anweisung. Alle Anweisungen zusammen werden als Programm bezeichnet (diese Anweisungen können auch als Algorithmus bezeichnet werden). So wie das Befolgen eines Rezepts in einem Kochbuch zu einem gekochten Gericht führen kann, kann das Ausführen eines Programms in EarSketch zu einem Song führen. Wie funktioniert es? Finde es im Video (in Englisch) heraus!
+
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/1_1_Discover_EarSketch.mp4[]
+
+////
+TODO: upload video
+////
+
+Wenn du dich mit EarSketch vertraut gemacht hast, sind dies die Hauptbereiche.
+
+* *Content-Manager* _(links)_: Deine Skripte und Sounds
+* *DAW* _(Oben-Mitte)_: Die Song Timeline und "Play" Taste
+* *Editor* _(mittig-zentral)_: Der Code-Editor und "Ausführen"-Button
+* *Konsole* _(unten mittig)_: Die Skriptausgabe und Fehler
+
+{nbsp} +
+
+Was ist eine DAW?
+
+Ein *DAW*, oder *Digital Audio Workstation*, ist eine Software, die Audio auf einem Computer produziert oder bearbeitet, sei es in einem professionellen Studio oder in Laptopstudios.
+
+Einige populäre DAWs sind https://www.ableton.com/[Ableton Live^], https://www.image-line.com/[FL Studio^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], https://www.avid.com/pro-tools[Pro Tools^], und http://www.reaper.fm/[Reaper^].
+
+EarSketch ist eine DAW, mit der du Musik erstellen kannst, indem du Code schreibst.
+
+Hier erfährst du, wie du die DAW voll ausnutzen kannst:
+
+[role="curriculum-mp4"]
+[[video1b]]
+video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
+
+////
+TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+////
+
+Versuchen wir, ein Codebeispiel in EarSketch auszuführen! Drücke im Feld unten auf das blaue Zwischenablagensymbol oben rechts. Dadurch wird der Beispielcode in eine neue Datei im *Code Editor* eingefügt. Du brauchst den Code noch nicht zu verstehen. Klicke einfach auf _ausführen_: Deine Musik wird in der DAW angezeigt. Du kannst den _play_ Button drücken, um ihn zu hören.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/getting-started-intro-script.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/getting-started-intro-script.js.txt[]
+----
+
+{nbsp} +
+
+[[createanewscript]]
+=== Erstelle dein erstes Skript!
+
+Mal sehen, wie man ein Skript von Grund auf neu erstellt.
+
+. *Erstellen.* Klicke in den Registerkarten des Editors auf das weiße "+" Symbol.
++
+Wenn dies dein erstes Skript ist, klicke auf den großen blauen Text "Klicke hier, um ein neues Skript zu erstellen!"
++
+[[newscriptplus]]
+.Ein neues Skript erstellen, Skripte öffnen
+[caption="Figure 1.2.1: "]
+image::../media/U1P1/NewScriptPlus.png[Alt Text]
+. *Wähle einen Namen und eine Sprache.* Gib deinem neuen Skript einen Namen und wähle zwischen den Programmiersprachen Python und JavaScript.
++
+[[newscriptpromptpy]]
+.Das Dialogfeld „Ein neues Skript erstellen“
+[role="curriculum-python"]
+[caption="Figure 1.2.2: "]
+image::../media/U1P1/newScriptPromptPY.png[Alt Text]
++
+[[newscriptpromptjs]]
+.Das Dialogfeld „Ein neues Skript erstellen“
+[role="curriculum-javascript"]
+[caption="Figure 1.2.2: "]
+image::../media/U1P1/newScriptPromptJS.png[Alt Text]
+. *(OPTIONAL) Melde dich an oder erstelle ein neues Konto.* Um deine Skripte für die spätere Bearbeitung und Weitergabe zu speichern, melde dich mit einem EarSketch-Konto an.
++
+_Hinweis: Für dein EarSketch-Konto sind keine persönlichen Daten oder E-Mails erforderlich._
+
+*_Was ist eine Programmiersprache?_*
+
+Code wird in einer *Programmiersprache* geschrieben. Wie eine gesprochene Sprache hat es Vokabular und Syntax. Du musst die Grammatikregeln deiner Programmiersprache befolgen, so wie du es bei der gesprochenen Sprache tun würdest.
+
+Wenn du die Schaltfläche *Ausführen* drückst, übersetzt ein *Compiler* die Python- oder JavaScript-Anweisungen in Maschinencode, den der Computer verstehen kann. Dann *führt* der Computer den Code *aus*, sodass deine Musik in der DAW erscheint.
+
+Auf der tiefsten Ebene führen Computer Code mit *binary* aus. Dies bedeutet, dass der gesamte Computercode irgendwann `1` und `0` wird, da er von elektrischen Komponenten im Computer verarbeitet wird.
+
+[[fitmedia]]
+=== Die `fitMedia()` Funktion
+
+Jetzt, wo du dein erstes Skript erstellt hast, kannst du dich an deine Musik machen!
+
+Schaue dir dieses Video (in Englisch) an, um genauer zu sehen, wie du einen Audioclip zu deinem Song hinzufügst:
+
+[role="curriculum-python curriculum-mp4"]
+[[video110py]]
+video::./videoMedia/1_3_fitmedia_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video110js]]
+video::./videoMedia/1_3_fitmedia_js.mp4[]
+
+Um einen Sound in die DAW hinzuzufügen, beginnen wir mit der Eingabe von `fitMedia()` und verwenden die folgende Form.
+
+`fitMedia(sound, track, start, end)`
+
+Es gibt 4 *Parameter*, durch Kommata getrennt.
+
+. *Sound*: die Soundkonstante aus dem Sound-Browser
+. *Track*: Die Tracknummer
+. *Start*: Der Starttakt
+. *End*: Der Endtakt
+
+_Beispiel:_
+
+`fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
+
+Die obige Anweisung platziert den Sound `Y18_DRUM_SAMPLES_2` auf Track `2` von Takt `1` bis `5`. Eine *Anweisung* weist den Computer an, eine Aktion durchzuführen.
+
+Versuche `fitMedia()` zu einem Skript hinzuzufügen.
+
+Wenn du alle deine Parameter hinzugefügt hast, drücke _AUSFÜHREN_. Du wirst deine Sounds in der DAW visualisiert sehen. Drücke _play_ um deinen Song zu hören.
+
+[role="curriculum-javascript"]
+Hinweis: In JavaScript kann am Ende jeder Anweisung optional ein Semikolon `;` hinzugefügt werden. Die Verwendung des Semikolons ist deine persönliche Wahl.
+
+////
+OPTIONAL
+////
+
+{nbsp} +
+
+*_Der Sound-Browser_*
+
+Der *Sound-Browser* bietet eine Bibliothek von über viertausend Sounds, die du in deiner Musik verwenden kannst.
+Zu den Mitwirkenden gehören prominente Musiker wie
+https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
+https://en.wikipedia.org/wiki/Ciara[Ciara^],
+https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
+https://en.wikipedia.org/wiki/Khalid[Khalid^],
+https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
+https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
+und https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
+
+Du kannst den Sound-Browser im *Content Manager* (links) erkunden, indem du auf „Sounds“ klickst. Versuche es mit verschiedenen Soundkonstanten innerhalb von `fitMedia()`.
+
+Hinweis: Das https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] deckt die faire Nutzung von Stock Sounds ab.
+
+////
+END OF OPTIONAL
+////
+
+////
+OPTIONAL
+////
+
+Unten ist ein Beispielskript mit `fitMedia()`. Denke daran, dass du dieses Skript importieren kannst, indem du auf das blaue Zwischenablage-Symbol klickst.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/getting-started-using-fitmedia.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/getting-started-using-fitmedia.js.txt[]
+----
+
+Füge deinem Skript für eine zusätzliche Herausforderung weitere <code>fitMedia()</code>-Aufrufe hinzu, wie wir es im Folgenden tun. Beachte, dass wir für jeden `fitMedia()` Aufruf eine andere Tracknummer verwenden:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/getting-started-using-fitmedia-2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/getting-started-using-fitmedia-2.js.txt[]
+----
+
+{nbsp} +
+
+.ÜBUNG
+****
+Sounds verwenden, die du magst:
+
+. Platziere Sounds auf 2 verschiedenen Tracks
+. Platziere Sounds von Takt 2 bis 12
+. Erstelle einen kurzen Song mit 3 Tracks, der mindestens 8 Takte lang ist
+
+Bei jeder Übung kannst du deine Nachbarin oder deinen Nachbarn deinen Song anhören lassen.
+
+Wenn bei der Ausführung deines Codes Fehler auftreten, lies das nächste Kapitel über die Fehlersuche.
+****
+
+[[debugging]]
+=== Fehlersuche in deinem Code
+
+Manchmal macht man beim Programmieren Fehler, die dazu führen, dass der Code nicht richtig oder gar nicht funktioniert. Bei der Programmierung werden Fehler *errors* oder *bugs* genannt. Der Prozess der Fehlersuche und -behebung nennt sich *debugging*. Du kannst Debugging-Strategien anwenden, indem du die Konsole benutzt.
+
+[role="curriculum-python curriculum-mp4"]
+[[video3py]]
+video::./videoMedia/1_4_Debugging_Console_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video3js]]
+video::./videoMedia/1_4_Debugging_Console_js.mp4[]
+
+////
+TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
+////
+
+////
+OPTIONAL
+////
+
+Was sind die verschiedenen Arten von Fehlern?
+
+. *Syntaxfehler*: Dein Programm läuft nicht, weil dein Code gegen die *Syntaxregeln* der Sprache verstößt (zum Beispiel: du hast vergessen, eine Klammer zu schließen, oder du hast fitMedia falsch geschrieben).
+. *Laufzeitfehler*: Dein Programm beginnt zu laufen, wird aber aufgrund eines Fehlers angehalten.
+. *Logikfehler*: Dein Programm läuft, aber es tut nicht, was erwartet wird. Du kannst diese Fehler beheben, indem du in der DAW nachschaust, ob die Clips, die du hinzufügen wolltest, tatsächlich an der richtigen Stelle hinzugefügt wurden.
+
+////
+END OF OPTIONAL
+////
+
+Hier sind einige häufige Fehler:
+
+[role="curriculum-python"]
+. *Falsche Rechtschreibung:* Überprüfe die Schreibweise, wenn du eine Funktion wie `fitMedia()` oder Soundkonstanten verwendest.
+. *Groß- und Kleinschreibung:* Die meisten Wörter, die in der Programmierung verwendet werden, unterscheiden Groß- und Kleinschreibung (der Computer erkennt den Unterschied zwischen groß- und kleingeschriebenen Buchstaben). Achte also auf klein- und großgeschriebene Buchstaben. Schreibe zum Beispiel `fitMedia()` und nicht `FitMedia()` oder `fitmedia()`. Die Funktionen in EarSketch verwenden einen Stil, der *Camel Case* genannt wird: Das erste Wort wird klein geschrieben, und der erste Buchstabe der folgenden Wörter wird groß geschrieben, wie in `exampleFunctionName()`.
+. *Klammern:* Das Vergessen einer öffnenden oder schließenden Klammer führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Skripteinrichtung:* EarSketch fügt einem neuen Skript automatisch etwas Code hinzu, aber es kann sein, dass Sie versehentlich `from earsketch import *` löschen.
+. *Satzzeichen:* Fehlende Kommas oder andere Satzzeichenfehler
+
+[role="curriculum-javascript"]
+. *Falsche Rechtschreibung:* Überprüfe die Schreibweise, wenn du eine Funktion wie `fitMedia()` oder Soundkonstanten verwendest.
+. *Groß- und Kleinschreibung:* Die meisten Wörter, die in der Programmierung verwendet werden, unterscheiden Groß- und Kleinschreibung (der Computer erkennt den Unterschied zwischen groß- und kleingeschriebenen Buchstaben). Achte also auf klein- und großgeschriebene Buchstaben. Schreibe zum Beispiel `fitMedia()` und nicht `FitMedia()` oder `fitmedia()`. Die Funktionen in EarSketch verwenden einen Stil, der *Camel Case* genannt wird: Das erste Wort wird klein geschrieben, und der erste Buchstabe der folgenden Wörter wird groß geschrieben, wie in `exampleFunctionName()`.
+. *Klammern:* Das Vergessen einer öffnenden oder schließenden Klammer führt zu einem <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Satzzeichen:* Fehlende Kommas oder andere Satzzeichenfehler
+
+Zeit zum Üben!
+Finde die fünf Fehler im folgenden Code:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/getting-started-finding-errors.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/getting-started-finding-errors.js.txt[]
+----
+
+////
+OPTIONAL
+////
+
+Hier ist die Lösung
+
+. Der `setTempo()` Funktion fehlt eine Klammer
+. Der ersten `fitMedia()` fehlt ein `env
+. Dem ersten `fitMedia()` fehlt ein Komma zwischen dem dritten und dem vierten Parameter
+. Dem zweiten `fitMedia()` fehlt ein Großbuchstaben `M`
+. In der zweiten `fitMedia()` ist die Reihenfolge der Parameter nicht korrekt: Es sollte der Name des Soundclips sein und dann die Tracknummer
+
+////
+END OF OPTIONAL
+////
+
+Unter <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> findest du eine Beschreibung der verschiedenen Fehlertypen (in Englisch) und was du tun kannst, um sie zu vermeiden.
+
+////
+TODO: when options are ready, modify the link
+////
+
+[[chapter1summary]]
+=== Zusammenfassung von Kapitel 1
+
+* Ein Computer *Programm* ist eine Abfolge von Anweisungen, die der Computer ausführt, um eine bestimmte Aufgabe zu erfüllen.
+* Ein *Skript* ist ein Spitzname für ein kurzes Programm.
+* Ein *DAW*, oder Digital Audio Workstation, ist eine Art Computersoftware zur Aufnahme und Bearbeitung von Audio. EarSketch ist ein DAW, mit dem du Musik mit Code machen kannst.
+* Um Musik zu machen, gib den Code in den *Editor* ein, klicke auf „Ausführen“ und dann auf „Abspielen“, um ihn anzuhören.
+* *Sounds* kannst du im Sound-Browser finden. Du kannst Sounds zu deinem Code hinzufügen, indem du die *Soundkonstante* in einer Funktion wie `fitMedia()` benutzt.
+* *Programmiersprachen* sind eine Sammlung von Wörtern und Symbolen, die vom Computer verstanden werden.
+* Die Regeln von *syntax* legen fest, wie Code geschrieben werden muss und wie Satzzeichen (`.`, `,`) verwendet werden.
+* Erstelle ein neues Skript, indem du auf den großen blauen Link „Click here to create...“ oder das „+“-Symbol auf den Editor-Registerkarten klickst.
+* `fitMedia()` ist eine Möglichkeit, dem DAW Sounds hinzuzufügen. Es hat die folgenden vier Parameter.
+** *Sound*: die Soundkonstante aus dem Sound-Browser
+** *Track*: Die Tracknummer
+** *Start*: Der Starttakt
+** *End*: Der Endtakt
+* *Debugging* ist der Prozess zum Finden und Beheben von *Bugs*, oder Fehlern, die vom Programmierer gemacht wurden.
+* Die *Konsole* zeigt Informationen über den Status eines Programms, was für das Debuggen von Syntaxfehlern nützlich ist.
+* Häufige Programmierfehler sind Tippfehler, fehlerhafte Fälle, fehlende Klammern, unsachgemäße Skriptkonfiguration und logische Fehler.
+
+[[chapter-questions]]
+=== Fragen
+
+[question]
+--
+Welches von den folgenden ist KEIN Panel im EarSketch Arbeitsbereich?
+
+[answers]
+* Der Effekte-Browser
+* Der Code-Editor
+* Die DAW
+* Die Konsole
+--
+
+[question]
+--
+Wie viele Parameter benötigst du für deine `fitMedia()` Funktion?
+
+[answers]
+* 4
+* 6
+* 2
+* 3
+--
+
+[question]
+--
+Ein Skript gehört zu...
+
+[answers]
+* einem EarSketch-Song
+* einer Codezeile
+* einer Programmiersprache
+* einer programmierenden Person
+--
+
+[question]
+--
+Was ist ein Takt?
+
+[answers]
+* Eine musikalische Zeiteinheit
+* Eine Audio-Lautstärkeeinheit
+* Eine Zeile in der DAW
+* Eine Tonhöheneinheit
+--
+
+[question]
+--
+Welcher der folgenden ist KEIN häufiger Fehler in einem Code?
+
+[answers]
+* Grammatikfehler
+* Laufzeitfehler
+* Logikfehler
+* Syntaxfehler
+--
+
+[question]
+--
+Wo im EarSketch-Arbeitsbereich kannst du Informationen über deine Bugs erhalten?
+
+[answers]
+* Die Konsole
+* Im Sound-Browser
+* Im Skript-Browser
+* Die DAW
+--

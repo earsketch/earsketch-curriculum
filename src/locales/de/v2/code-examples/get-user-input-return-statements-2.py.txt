@@ -1,0 +1,19 @@
+# Rückgabewert 2: Gibt den Endtakt einer Abschnittsfunktion zurück
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Funktionsdefinition
+def verse(start):
+    end = start + 4
+    fitMedia(melody1, 1, start, end)
+    fitMedia(drums1, 2, start, end)
+    return end
+
+# Function calls
+endMeasure = verse(1); # Aufruf der Strophenfunktion und Beginn ist Takt 1
+print(endMeasure)

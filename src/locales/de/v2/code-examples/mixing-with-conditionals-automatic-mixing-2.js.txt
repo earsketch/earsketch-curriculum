@@ -1,0 +1,48 @@
+// Automatisches Mischen 2: Benutze bedingte Anweisungen um die Tracks zu mischen
+
+// Setup
+setTempo(120);
+
+// Melodie und Bass hinzufügen
+var melody1 = YG_ALT_POP_GUITAR_3;
+var melody2 = YG_ALT_POP_GUITAR_1;
+var bass1 = YG_ALT_POP_BASS_1;
+var bass2 = DUBSTEP_SUBBASS_008;
+var strings = YG_HIP_HOP_STRINGS_4;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 1, 9, 17);
+fitMedia(bass1, 2, 1, 9);
+fitMedia(bass2, 2, 9, 17);
+fitMedia(strings, 3, 9, 17);
+
+// Percussion mit makeBeat() hinzufügen
+var beatKick = "0---0-----0-0---";
+var beatSnare = "--0-0------000-";
+var soundKick = OS_KICK02;
+var soundSnare = OS_SNARE06;
+for (var measure = 5; measure > 17; measure++) {
+    makeBeat(soundKick, 4, measure, beatKick);
+    makeBeat(soundSnare, 5, measure, beatSnare);
+}
+
+// Meine Tracks mischen
+// Zuerst analysieren wir die Tracks auf Lautstärke
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+println("The loudness of track 1 is" + loudnessTrack1);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+println("The loudness of track 2 is" + loudnessTrack2);
+var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
+println("The loudness of track 3 is" + loudnessTrack3);
+
+if (loudnessTrack1 < loudnessTrack2) {
+    // Wenn Track 1 leiser ist als Track 2, erhöhen wir die Lautstärke von Track 1
+    setEffect(1, VOLUME, GAIN, +5);
+    println("track 1 was quieter than track 2");
+} else if (loudnessTrack1 < loudnessTrack3) {
+    // Wenn Track 1 lauter als Track 2, aber leiser als Track 3 ist, erhöhen wir die Lautstärke von Track 1
+    setEffect(1, VOLUME, GAIN, +5);
+    println("track 1 was quieter than track 3");
+} else {
+    // Wenn Track 1 lauter ist als Track 2 und 3, dann ändern wir nichts
+    println("track 1 was the loudest track already");
+}

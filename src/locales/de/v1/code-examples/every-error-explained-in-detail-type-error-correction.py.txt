@@ -1,0 +1,14 @@
+# Type Error: Korrektur
+
+from earsketch import *
+setTempo(120)
+
+soundClips = DUBSTEP_DRUMLOOP_MAIN_006
+beatString = "0+000+++0--0-0--"
+measureTotal = 0
+
+for measure in range(1, 9):
+    makeBeat(soundClips, 1, measure, beatString)
+    measureTotal += 1
+
+print("Your beat is " + str(measureTotal) + " measures long.")

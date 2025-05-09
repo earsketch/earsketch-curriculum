@@ -1,0 +1,15 @@
+# analyzeTrack(): Verwenden der analyzeTrack() Funktion um die Lautstärke eines Tracks auszugeben
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Einen Sound auf Track 1 platzieren
+sound = COMMON_LOVE_VOX_COMMON_1
+fitMedia(sound, 1, 1, 9)
+
+# Erstellen einer Variable, um die Lautstärke von Track 1 zu speichern
+loudness1 = analyzeTrack(1, RMS_AMPLITUDE)
+
+# Die Lautstärke in der Konsole anzeigen
+print(loudness1)

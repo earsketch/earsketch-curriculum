@@ -1,0 +1,8 @@
+[[HourOfCode]]
+== Hour of Code
+
+:nofooter:
+
+Willkommen zur Hour of Code.
+
+Klicke auf die Schaltfläche „Nächste Seite“ oder <<ch_HourOfCode#, click here>>, um zu beginnen.

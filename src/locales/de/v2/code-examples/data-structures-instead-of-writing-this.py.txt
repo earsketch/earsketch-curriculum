@@ -1,0 +1,7 @@
+# Anstatt zu schreiben:
+kick = OS_KICK03
+hihat = OS_OPENHAT01
+snare = OS_SNARE05
+
+# Du kannst Folgendes schreiben:
+drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05]

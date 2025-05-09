@@ -1,0 +1,13 @@
+# Syntaxfehler: Beispiel
+
+from earsketch import *
+setTempo(120)
+
+clap = RD_TRAP_ARCADEFIRESFX_1
+beatString = "00+-0-00+0+-0+++"
+
+for measure in range(1, 32):
+    if measure % 4 = 0
+        # Verwende die EarSketch API-Funktion, um den Beat-String zu mischen
+        beatString = shuffleString(beatString)
+    makeBeat(clap, 1, measure, beatString)
