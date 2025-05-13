@@ -18,7 +18,7 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-python"]
-Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am unteren Rand des Bildschirms, um fortzufahren.
+Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am oberen Rand des Bildschirms, um fortzufahren.
 
 //Welcome to the EarSketch Hour of Code.
 
@@ -36,7 +36,7 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-javascript"]
-Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am unteren Rand des Bildschirms, um fortzufahren.
+Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am oberen Rand des Bildschirms, um fortzufahren.
 
 [[GettingStarted]]
 === Loslegen
@@ -324,7 +324,7 @@ image::../media/HOC/hoc_change_start.PNG[]
 Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern kannst, kannst du die Musik anpassen.
 
 [role="curriculum-python"]
-Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und höre zu, wie sich die Musik verändert.
+Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und hör zu, wie sich die Musik verändert.
 
 [role="curriculum-python"]
 Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
@@ -333,7 +333,7 @@ Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 
 Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern kannst, kannst du die Musik anpassen.
 
 [role="curriculum-javascript"]
-Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und höre zu, wie sich die Musik verändert.
+Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und hör zu, wie sich die Musik verändert.
 
 [role="curriculum-javascript"]
 Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
@@ -408,7 +408,7 @@ makeBeat(OS_SNARE03, 3, 4, fillC)
 ----
 
 [role="curriculum-python"]
-Wenn du ein neues Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
+Wenn du einen neuen Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
 
 [role="curriculum-javascript"]
 In diesem Beispiel ist `fillA` eine Variable. Variablen enthalten Daten wie Zahlen oder Wörter, die später im Code verwendet werden.
@@ -426,10 +426,10 @@ makeBeat(OS_SNARE03, 3, 4, fillC);
 ----
 
 [role="curriculum-javascript"]
-Wenn du ein neues Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
+Wenn du einen neuen Drum fill ausgewählt hast, führe den Code aus und höre dir das Ergebnis an.
 
 [[BeatStrings]]
-=== Beat Strings bearbeiten
+=== Beat-Strings bearbeiten
 
 [role="curriculum-python"]
 EarSketch hat eine Funktion namens `reverseString()` die die Reihenfolge der Zeichen in einem String umkehren kann.
@@ -591,7 +591,7 @@ Es ist an der Zeit, deine eigene Musik mit EarSketch zu machen.
 Kommentiere und entkommentiere Codezeilen, ändere die Start- und Endzeiten in `fitMedia()` und füge Fills mit `makeBeat()` hinzu.
 
 [role="curriculum-javascript"]
-Du kannst Funktionen, die im Beispielcode enthalten waren, bearbeiten oder auskommentieren oder versuchen, deine eigenen neuen Codezeilen zu schreiben. Wenn du ein neues Lied von Grund auf starten möchtest, drücke das `+` Symbol, um ein neues JavaScript-Skript zu erstellen.
+Du kannst Funktionen, die im Beispielcode enthalten waren, bearbeiten oder auskommentieren oder versuchen, deine eigenen neuen Codezeilen zu schreiben. Wenn du einen neuen Song von Grund auf starten möchtest, drücke das `+` Symbol, um ein neues JavaScript-Skript zu erstellen.
 
 [role="curriculum-javascript"]
 Wenn du mehr Soundclips erforschen willst, kannst du den Sound Browser benutzen. Rufe den Browser auf, indem du auf das Symbol auf der linken Seite des Bildschirms klickst.

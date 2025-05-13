@@ -5,9 +5,9 @@
 
 Willkommen bei EarSketch!
 
-Schön, dass du da bist.
+*Lehrer*: Schau dir unsere https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[new curriculum guide^] an und besuche unsere https://www.teachers.earsketch.org[EarSketch Teacher Site^] für zusätzliche Ressourcen auf Englisch.
 
---------------
+*Schüler*: Jetzt geht es los und du erfährst mehr über EarSketch.
 
 Hier lernst du Informatik und Musikproduktion Seite an Seite. Du wirst entweder Python oder JavaScript benutzen, um deine eigene Musik zu erschaffen.
 
