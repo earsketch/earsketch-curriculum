@@ -5,9 +5,9 @@
 
 Willkommen bei EarSketch!
 
-Schön, dass du da bist.
+*Lehrer*: Schau dir unseren Notion-Lehrerguide an für zusätzliche Ressourcen.
 
---------------
+*Schüler*: Jetzt geht es los und du erfährst mehr über EarSketch.
 
 Hier lernst du Informatik und Musikproduktion Seite an Seite. Du wirst entweder Python oder JavaScript benutzen, um deine eigene Musik zu erschaffen.
 
