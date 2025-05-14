@@ -19,7 +19,7 @@ var hihat = OS_CLOSEDHAT03;
 
 // Drums hinzufügen:
 function addingDrums(start, end, pattern) {
-    // Zuerst erstellen wir Beat-Strings, abhängig vom Parametermuster:
+    // Zuerst erstellen wir Beat Strings, abhängig vom Parametermuster:
     if (pattern === "heavy") {
         var beatStringKick = "0---0---0---00--";
         var beatStringHihat = "-----000----0-00";
