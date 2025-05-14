@@ -112,7 +112,7 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 Höre dir deinen Lieblingssong an und versuche, im Takt zu klatschen. Du kannst diese Übung auch mit deiner Nachbarin oder deinem Nachbarn machen.
 ****
 
-Wir werden jeden unserer Rhythmen in einem *Beat*-String zusammenstellen.
+Wir werden jeden unserer Rhythmen in einem *Beat* String zusammenstellen.
 
 Ein *Beat*-String ist ein String, der die Zeichen `0`, `+` oder `-` verwendet. Als Erinnerung: Ein String ist ein Datentyp, der eine Reihe von Zeichen (wie `0` oder `+`) in Anführungszeichen enthält.
 
@@ -241,7 +241,7 @@ Benutze die `makeBeat()` Funktion, um mindestens zwei verschiedene Beats hinzuzu
 [[beatsandgenres]]
 === Erstelle einen Beat passend zu deinem Musikgenre
 
-Nachdem du nun angefangen hast, mit `makeBeat()` und Beat-Strings zu arbeiten, lass uns einige grundlegende Beat-Patterns erkunden, die du verwenden kannst.
+Nachdem du nun angefangen hast, mit `makeBeat()` und Beat Strings zu arbeiten, lass uns einige grundlegende Beat-Patterns erkunden, die du verwenden kannst.
 Du hast gelernt, dass ein Musikgenre eine Kategorie der künstlerischen Komposition (z. B. Musik) ist, die sich durch Ähnlichkeiten in Form, Stil oder Thema auszeichnet. Genauso haben einige Genres auch charakteristische Beat-Muster. Im Folgenden findest du einige Beispiele:
 
 Wir werden drei Arten von Sound verwenden: Kick (Spur `1`), Snare (Spur `2`) und Hihat (Spur `3`). Wir werden für jeden dieser Sounds eine `makeBeat()` Funktion auf drei verschiedenen Tracks verwenden.
@@ -272,7 +272,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * Du musst zuerst den Wert (Daten) dem Variablennamen mit dem Zeichen `=` zuweisen. Dann kannst du die Variable verwenden, indem du ihren Namen in den Code schreibst.
 * Ein *String* ist ein Datentyp, der aus einer Reihe von Zeichen besteht, die mit einfachen oder doppelten Anführungszeichen zusammengefasst sind.
 * Percussive Sounds können mit dem GENRE-Filter im Sound-Browser gefunden werden: Wähle den Künstler MAKEBEAT aus.
-* Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat-String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
+* Strings werden mit der `makeBeat()` Funktion verwendet, um rhythmische Muster in EarSketch zu erstellen. makeBeat() nimmt einen Beat String, um jede Sechzehntelnote des Musters zu definieren. Ein „0“ startet das Abspielen eines Tons, ein „+“ verlängert die Note für den nächsten Sub-Beat, und „-“ erzeugt eine Pause.
 * `makeBeat()` verwendet vier Argumente:
 ** *Sound*: Eine Soundkonstante
 ** *Track*: Die Tracknummer
@@ -296,7 +296,7 @@ Welche dieser Optionen ist ein String?
 
 [question]
 --
-Was bedeutet die „0“ in einem Beat-Muster-String?
+Was bedeutet die „0“ in einem Beat Muster String?
 
 [answers]
 * Wiedergabe des Clips starten
