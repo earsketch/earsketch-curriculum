@@ -1,5 +1,5 @@
 [[ch_29]]
-== Tous les effets expliqués en détail
+== Toutes les erreurs expliquées en détail
 :nofooter:
 
 [[importerror]]
