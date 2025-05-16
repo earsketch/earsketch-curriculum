@@ -12,19 +12,11 @@ Tout comme les musiciens peuvent jouer un motif de façon répétée, ou en *bou
 
 Par exemple, si vous désirez répéter une fonction `makeBeat()` que vous avez créée, au lieu d'écrire plusieurs lignes de fonctions `makeBeat()`, vous pouvez créer une boucle `for`. Voici comment :
 
-[role="curriculum-python"]
-[source,python]
-----
-include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
-----
-
-[role="curriculum-javascript"]
-[source,javascript]
-----
-include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
-----
-
-Voyez ci-dessous le code final de la vidéo :
+////
+add new video
+more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
+in the "revamping videos" tab (includes link to script)
+////
 
 [role="curriculum-python"]
 [source,python]
