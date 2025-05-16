@@ -8,7 +8,7 @@ Il est possible d'automatiser beaucoup d'opérations grâce au codage. Un exempl
 [[analyzetrack]]
 === Utilisation de la fonction `analyzeTrack()`
 
-Nous allons maintenant voir comment détecter l'intensité sonore ou le volume d'une piste. Assurez-vous de bien comprendre la différence entre la hauteur (aiguë ou grave) et le volume (fort ou faible) d'un son. Nous utiliserons une fonction EarSketch nommée `analyzeTrack()`. Copiez et exécutez le code suivant :
+Nous allons maintenant voir comment détecter l'intensité sonore ou le volume d'une piste. Rappelez-vous la différence entre la hauteur (aiguë ou grave) et le volume (fort ou faible) d'un son. Nous utiliserons une fonction EarSketch nommée `analyzeTrack()`. Copiez et exécutez le code suivant :
 
 [role="curriculum-python"]
 [source,python]
@@ -30,16 +30,17 @@ Vous pouvez lire dans votre console que l'intensité sonore affichée est de 0.0
 * La plupart des sons auront une intensité sonore inférieure à 0.4. 
 
 La fonction `analyzeTrack()` prend 2 arguments :
-* le numéro de piste,
-* le paramètre que nous voulons analyser. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
+
+* Le numéro de piste,
+* Le paramètre que nous voulons analyser. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
 
 .ENTRAÎNEZ-VOUS
 ****
 . Vous pouvez essayer ce code avec différents sons (changez la variable "sound") pour découvrir ce que donnera la sortie.
-. Ajoutez une seconde piste et utilisez la fonction `analyzeTrack()` pour afficher son intensité sonore dans la console. Lorsque vous exécutez le code, avant de regarder votre console, écoutez votre musique et essayez de deviner quelle piste est la plus forte.
+. Ajoutez une seconde piste et utilisez la fonction `analyzeTrack()` pour afficher son volume dans la console. Lorsque vous exécutez le code, avant de regarder votre console, écoutez votre musique et essayez de deviner quelle piste est la plus forte.
 ****
 
-Le paramètre de `analyzeTrack()` peut être soit `RMS_AMPLITUDE`, afin d'évaluer l'intensité sonore, soit `SPECTRAL_CENTROID` pour analyser la hauteur du son. Nous allons nous concentrer sur l'analyse de l'intensité sonore dans ce chapitre.
+Le paramètre de `analyzeTrack()` peut être soit `RMS_AMPLITUDE`, afin d'évaluer le volume, soit `SPECTRAL_CENTROID` pour analyser la hauteur du son. Nous allons nous concentrer sur l'analyse du volume dans ce chapitre.
 
 [[booleansandcomparisons]]
 === Booléens et comparaisons
@@ -118,7 +119,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 ****
 * Créez un nouveau script et ajouter des sons sur deux pistes.
 * Imprimez dans la console `True` si la première piste est plus forte que la seconde piste et `False` sinon.
-* Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `True`, sinon, imprimez dans la console `False`.
+* Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `True`, sinon, imprimez dans la console `False` pour chaque piste.
 * Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `True` ou `False`, afin que vous puissiez savoir ce qui est `True` ou `False` lorsque vous lirez la console.
 ****
 
@@ -127,7 +128,7 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 ****
 * Créez un nouveau script et ajouter des sons sur deux pistes.
 * Imprimez dans la console `true` si la première piste est plus forte que la seconde piste et `false` sinon.
-* Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `true`, sinon, imprimez `false` dans la console.
+* Utilisez une boucle « for » avec le compteur `track` pour vérifier si l'intensité sonore est strictement supérieure à 0.01 pour chaque piste. Si c'est le cas, affichez `true`, sinon, imprimez `false` dans la console pour chaque piste.
 * Vous pouvez utiliser des instructions d'affichage supplémentaires avant d'afficher `true` ou `false`, afin que vous puissiez savoir ce qui est `true` ou `false` lorsque vous lirez la console.
 ****
 
@@ -146,7 +147,7 @@ include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
-Remarque : dans cet exemple, nous avons utilisé des instructions d'affichage avec des chaînes de caractères pour aider à lire le contenu de la console. Nous avons utilisé l'opérateur `+` pour *concaténer* ou ajouter des chaînes et la fonction str() pour convertir des nombres en chaînes de caractères.
+Remarque : dans cet exemple, nous avons utilisé des instructions d'affichage avec des chaînes de caractères pour aider à lire le contenu de la console. Nous avons utilisé l'opérateur `+` pour *concaténer* (coller ensemble) des chaînes et la fonction str() pour convertir des nombres en chaînes de caractères.
 
 [role="curriculum-javascript"]
 Remarque : dans cet exemple, nous avons utilisé des instructions d'affichage avec des chaînes de caractères pour aider à lire le contenu de la console. Nous avons utilisé l'opérateur `+` pour *concaténer* (coller ensemble) des chaînes de caractères.
@@ -231,13 +232,13 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 ****
 
 
-Let's review some vocabulary:
-1. *Operator*: a character that represents an action. We have seen arithmetic operators (`+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
-2. *Expression*: A combination of values, constants, variables, operators, and functions. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1+2` (evaluated to 3) or `1<2` (evaluated to True) or `analyzeTrack(1,RMS_AMPLITUDE)` (evaluated to the loudness of track 1, a float between 0 and 1).
-3. *Statements*: instructions for the computer to execute.
+Revoyons un peu de vocabulaire :
+1. *Opérateur*: un caractère qui représente une action. Nous avons vu des caractctères aritmétiques (`+`, `-`, `\*`, `=`) and des caractères de comparaison (`>`, `>=`, `<`, `\<=`, `==`, `!=`).
+2. *Expression*: une combinaison de valeurs, constantes, variables, opérateurs et fonctions. L'ordinateure évalue les expressions pour en créer un résultat, souvent un nombre ou un booléen. Par exemple : `1+2` (qui sera évalué à 3) ou `1<2` (qui sera évalué à True) ou `analyzeTrack(1,RMS_AMPLITUDE)` (qui sera évalué au volume de la piste 1, un nombre entre 0 et 1).
+3. *Instructions*: instructions que l'ordinateur doit exécuter.
 
 
-Below is an example of automated mixing. We can say it's automated because if you change one or more sounds, you won't have to check their loudness and modify the volume accordingly yourself, since it's already included in the code.
+Ci-dessous vous verrez un exemple de mix automatisé. Dans ce cas, le mix est automatisé, car si vous changez un ou plusieurs sons, vous n'aurez pas besoin de vérifier leur volume ni de modifier le volume de la piste, car cela est déjà prévu par le code. 
 
 [role="curriculum-python"]
 [source,python]
@@ -257,9 +258,9 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 
 [role="curriculum-python"]
 * La fonction `analyzeTrack()` nécessite deux arguments :
-le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie le volume de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la brillance de la piste.
+le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie le volume de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la hauteur ou brillance de la piste.
 * Le type de données *booléen* peut seulement prendre deux valeurs : `True` ou `False`.
-* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* Les booléens sont générés soit directement en créant une variable égale à `True` ou `False`, soit par des opérateurs de comparaison : `==`, `!=`, `>`, `>=`, `<`, `\<=`.
 * `==` évalue si deux valeurs sont égales, alors que `=` affecte une valeur à une variable.
 * Un *opérateur * est un caractère qui représente une action.
 * Les *expressions* sont évaluées par l'ordinateur pour produire une valeur.
@@ -272,8 +273,8 @@ le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`,
 * La fonction `analyzeTrack()` prend deux arguments :
 le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la hauteur de la piste.
 * Le type de données *booléen* peut valoir seulement deux valeurs : `true` ou `false`.
-* Boolean values are generated by comparison operators: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
-* `==` évalue si deux valeurs sont égales, alors que `=` affecte une valeur à une variable.
+* Les booléens sont générés soit directement en créant une variable égale à `true` ou `false`, soit par des opérateurs de comparaison : `===`, `!==`, `>`, `>=`, `<`, `\<=`.
+* `===` évalue si deux valeurs sont égales, alors que `=` affecte une valeur à une variable.
 * Un *opérateur * est un caractère qui représente une action.
 * Les *expressions* sont évaluées par l'ordinateur pour produire une valeur.
 * Une *instruction* correspond à une commande pour l'ordinateur.
