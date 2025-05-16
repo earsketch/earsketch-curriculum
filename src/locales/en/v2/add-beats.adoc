@@ -128,7 +128,7 @@ For each of the following drumbeat strings, try clapping on the zeros. Then list
 
 Here are some examples of 1-measure beat strings:
 
-Quarter notes: `"0\+++0+++0\+++0+++"`
+Quarter notes: `"0+++0+++0+++0+++"`
 (read: "1, 2, 3, 4")
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>

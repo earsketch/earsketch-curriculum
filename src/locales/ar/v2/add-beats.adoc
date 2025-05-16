@@ -123,7 +123,7 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 فيما يلي بعض الأمثلة على أوتار الإيقاع بمقياس واحد:
 
-Quarter notes: `"0\+++0+++0\+++0+++"`
+Quarter notes: `"0+++0+++0+++0+++"`
 (read: "1,2,3,4")
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
