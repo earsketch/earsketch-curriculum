@@ -283,7 +283,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 [role="curriculum-javascript"]
 * La función `analyzeTrack()` requiere dos argumentos: el número de pista y un parámetro. Cuando el parámetro es `RMS_AMPLITUDE`, la función calculará el volumen de la pista (un número entre 0 y 1). Cuando el parámetro es `SPECTRAL_CENTROID`, la función calculará el brillo de la pista.
 * El tipo de dato *booleano* sólo tiene dos posibles valores, `true` y `false` (cierto y falso).
-* Los valores booleanos son generados por operadores de comparación: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
+* Los valores booleanos son generados por operadores de comparación: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
 * `==` calcula si 2 valores son iguales, mientras que `=` asigna un valor a una variable.
 * Un *operador* es un carácter que representa una acción.
 * La computadora evalúa las *expresiones* para producir un valor.

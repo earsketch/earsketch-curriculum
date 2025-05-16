@@ -18,8 +18,6 @@ more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPu
 in the "revamping videos" tab (includes link to script)
 ////
 
-فيما يلي الكود النهائي من الفيديو:
-
 [role="curriculum-python"]
 [source,python]
 ----
