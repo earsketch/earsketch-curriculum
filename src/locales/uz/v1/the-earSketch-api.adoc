@@ -1,6 +1,6 @@
 [[ch_27]]
-== The EarSketch API
+== EarSketch Ilova Dasturlash Interfeysi (API)
 
 :nofooter:
 
-link:<api>[Click Here] to open the EarSketch API.
+EarSketch API'ni ochish uchun link:<api>[Shu Yerga Bosing].
