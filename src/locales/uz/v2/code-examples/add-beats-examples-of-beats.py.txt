@@ -4,7 +4,7 @@
 from earsketch import *
 setTempo(120)
 
-Tovushlar
+#Tovushlar
 kick = OS_KICK05  # Bu "bum" tovushi.
 snare = OS_SNARE01  # Bu "bap" tovushi.
 hihat = OS_CLOSEDHAT01  # Bu "ts" tovushi.
