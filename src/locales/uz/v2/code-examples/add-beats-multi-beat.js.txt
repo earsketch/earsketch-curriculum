@@ -1,9 +1,9 @@
-// Multi Beat: Using several makeBeat calls with different rhythms
+//Multi Zarba: Bir nechta makeBeat funksiyasini turli ritmlar bilan ishlatish
 
 // Sozlash
 setTempo(120);
 
-// Music
+//Musiqa
 var synth = DUBSTEP_FILTERCHORD_002;
 var cymbal = OS_CLOSEDHAT01;
 var beat1 = "-00-00+++00--0-0";
