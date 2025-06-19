@@ -4,9 +4,9 @@
 from earsketch import *
 setTempo(120)
 
-# Sounds
+Tovushlar
 kick = OS_KICK05  # Bu "bum" tovushi.
-snare = OS_SNARE01  # This is the "bap" sound.
+snare = OS_SNARE01  # Bu "bap" tovushi.
 hihat = OS_CLOSEDHAT01  # Bu "ts" tovushi.
 
 # Rock zarbasi 1-o'lchovda
