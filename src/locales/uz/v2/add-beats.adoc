@@ -3,10 +3,10 @@
 
 :nofooter:
 
-In this chapter you will learn how to make your own beats! We'll look at variables, a new function called `makeBeat()`, and beats from different genres.
+Ushbu bo'limda siz shaxsiy zarbalaringizni qanday yaratishni o'rganasiz! Biz o'zgaruvchilarni, makeBeat() deb nomlangan yangi funktsiyani va janr bo'yicha turli xil zarba misollarini ko'rib chiqamiz.
 
 [[variables]]
-=== Variables
+=== O'zgaruvchilar
 
 [role="curriculum-python curriculum-mp4"]
 [[video2py]]
@@ -16,7 +16,7 @@ video::./videoMedia/002-05-Variables-PY.mp4[]
 [[video2js]]
 video::./videoMedia/002-05-Variables-JS.mp4[]
 
-What is a variable? A *variable* is a name given to a piece of data that we plan to use later in our program.
+O'zgaruvchi nima? A *variable* is a name given to a piece of data that we plan to use later in our program.
 
 In EarSketch, the variables in your scripts may point to:
 
