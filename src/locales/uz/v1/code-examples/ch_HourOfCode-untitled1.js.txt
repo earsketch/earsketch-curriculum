@@ -1,16 +1,16 @@
 setTempo(120);
 
-// Add Sounds
+//Tovushlar qo'shish
 fitMedia(RD_UK_HOUSE_MAINBEAT_8, 1, 1, 5);
 fitMedia(RD_POP_PADCHORD_2, 2, 1, 9);
 
-// Fills
+//To'ldirmalar
 var fillA = "0---0-0-00--0000";
 var fillB = "0--0--0--0--0-0-";
 var fillC = "--000-00-00-0-00";
 makeBeat(OS_SNARE03, 3, 4, fillA);
 
-// More Sounds
+//Qo'shimcha Tovushlar
 // fitMedia(YG_RNB_TAMBOURINE_1,4,1,9);
 // fitMedia(YG_FUNK_HIHAT_2,5,1,9);
 // fitMedia(Y01_CRASH_1,6,1,9);
