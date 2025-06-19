@@ -3,10 +3,10 @@
 // Sozlash
 setTempo(120);
 
-// Sounds
+//Tovushlar
 var kick = OS_KICK05; // Bu "bum" tovushi.
-var snare = OS_SNARE01; // This is the "bap" sound.
-var hihat = OS_CLOSEDHAT01; // This is the "ts" sound.
+var snare = OS_SNARE01; // Bu "bap" tobushi.
+var hihat = OS_CLOSEDHAT01; // Bu "ts" tovushi.
 
 // Rock zarbasi 1-o'lchovda
 makeBeat(kick, 1, 1, "0+++----0+++----");
