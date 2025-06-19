@@ -1,4 +1,4 @@
-# Index Error: Example
+#Index Xatosi: Misol
 
 from earsketch import *
 setTempo(100)
