@@ -1,4 +1,4 @@
-// Index Error: Correction
+//Index Xatosi: To'g'irlash
 
 setTempo(100);
 
