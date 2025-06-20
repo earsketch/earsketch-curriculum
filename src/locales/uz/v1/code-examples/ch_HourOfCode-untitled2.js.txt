@@ -48,7 +48,7 @@ addSection(clips1, drums, beat1, true, 0.25, 13, 4);
 addSection(clips2, drums, beat3, true, 1, 17, 4);
 addSection(clips2, drums, "", false, 1, 21, 4);
 
-// Effects
+// Effektlar
 var pan = [0, 0, 50, -50, -35, 35];
 var vol = [0, -1, 0, 0, 0, 0];
 for (var i = 0; i < 6; i++) {
