@@ -3,12 +3,12 @@
 
 :nofooter:
 
-Ushbu bobda siz `for` halqalari hamda kodingiz va musiqangizda takrorlashni qanday yaratishingiz haqida bilib olasiz. We will also cover musical layers and textures as well as some debugging tips.
+Ushbu bobda siz `for` halqalari hamda kodingiz va musiqangizda takrorlashni qanday yaratishingiz haqida bilib olasiz. Shuningdek, biz musiqiy qatlamlar va teksturalarni, shuningdek, dasturdagi nosozliklarni tuzatish bo'yicha ba'zi maslahatlarni ko'rib chiqamiz.
 
 [[forloops]]
 === `for` halqalari
 
-Musiqachilar andozani *halqada* qayta-qayta ijro etishi mumkin bo'lgani kabi, dasturchilar ham kompyuterdan vazifalarni qayta-qayta bajarishni so'rashi mumkin... *halqa* ichida! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
+Musiqachilar andozani *halqada* qayta-qayta ijro etishi mumkin bo'lgani kabi, dasturchilar ham kompyuterdan vazifalarni qayta-qayta bajarishni so'rashi mumkin... *halqa* ichida! Bu yanada samaraliroq: ko'rsatmani ko'p marotaba yozish o'rniga, siz ko'rsatmalar bilan bitta halqa yozasiz va kompyuter ularni takrorlash kerakligini anglaydi.
 
 Misol uchun, agar siz yaratgan `makeBeat()`ni takrorlamoqchi bo'lsangiz, `makeBeat()` funktsiyalarining bir necha qatorini yozish o'rniga, `for` halqasini yaratishingiz mumkin.
 
@@ -37,13 +37,13 @@ Python-da `for` halqalari 3 ta asosiy qismdan iborat:
 JavaScript-da `for` halqalari 4 ta asosiy qismdan iborat:
 
 [[loop-components-PY]]
-.The basic components of a for loop
+.Loop halqasining tarkibiy qismlari
 [role="curriculum-python"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 
 [[loop-components-JS]]
-.The basic components of a for loop
+.Loop halqasining tarkibiy qismlari
 [role="curriculum-javascript"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
@@ -356,50 +356,50 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 * You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
 Quyidagilardan qaysi biri `for` halqasining komponenti EMAS?
 
 [answers]
-* Loop interpreter
-* Loop Counter
-* Loop Body
-* Loop Range
+* Halqa interpretatori
+* Halqa Hisoblagichi
+* Halqa Tanasi
+* Halqa Diapazoni
 --
 
 [question]
 --
-Which of the following is NOT a good use of loops in a musical composition?
+Quyidagilardan qaysi biri musiqiy kompozitsiyada halqalardan to'g'ri foydalanish EMAS?
 
 [answers]
-* Creating a beat pattern than never repeats
-* Placing musical clips on every third measure
-* Repeating a beat on several consecutive measures
-* Placing musical clips on odd measures
+* Hech qachon takrorlanmaydigan zarba andozasini yaratish
+* Musiqiy kliplarni xar uchinchi o'lchovlarga joylashtirish
+* Bir necha ketma-ket harakatlar bo'yicha zarbani takrorlash
+* Musiqiy kesmalarni toq o'lchovlarga joylashtirish
 --
 
 [question]
 --
-Which of the following is NOT a recommended technique for debugging?
+Quyidagilardan qaysi biri nosozliklarni tuzatish uchun tavsiya etilgan usullardan biri EMAS?
 
 [answers]
-* Copying and pasting code into Google
-* Printing variable values to the console
-* Looking at error lines identified in the console
-* Asking others for help
+* Kodni nusxalash va Google-ga joylashtirish
+* O'zgaruvchi qiymatlarini konsolga chop etish
+* Konsolda aniqlangan xato qatorlariga qarash
+* Boshqalardan yordam so'rash
 --
 
 [question]
 --
-Which of the following is NOT something that can be printed to the console?
+Quyidagilardan qaysi biri konsolda chop etilishi mumkin bo'lgan narsa EMAS?
 
 [answers]
-* Code Comments
-* Strings
-* Mathematical Expressions
-* Variables
+* Kod Sharhlari
+* Satrlar
+* Matematik Ifodalar
+* O'zgaruvchilar
 --
 
 [question]
@@ -407,8 +407,8 @@ Which of the following is NOT something that can be printed to the console?
 ____ tovushning qanchalik baland yoki pastligini belgilovchi sifati.
 
 [answers]
-* Pitch
-* Tempo
-* Rhythm
-* Loudness
+* Ohang
+* Temp
+* Ritm
+* Ovoz Balandligi
 --
