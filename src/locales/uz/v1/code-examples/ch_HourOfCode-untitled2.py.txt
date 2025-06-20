@@ -40,7 +40,7 @@ addSection(clips1, drums, beat1, True, 0.25, 13, 4)
 addSection(clips2, drums, beat3, True, 1, 17, 4)
 addSection(clips2, drums, "", False, 1, 21, 4)
 
-# Effetcs
+#Effektlar
 pan = [0, 0, 50, -50, -35, 35]
 vol = [0, -1, 0, 0, 0, 0]
 for i in range(6):
