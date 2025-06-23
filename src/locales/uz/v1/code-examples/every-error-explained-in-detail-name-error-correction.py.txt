@@ -1,7 +1,7 @@
-# Name Error: Correction
+//Index Xatosi: To'g'irlash
 
 from earsketch import *
 setTempo(120)
 
-today = readInput("What day is it?")
-print("Today is " + today)
+bugun = readInput("Bugun qaysi kun?")
+print("Bugun " + bugun)
