@@ -12,6 +12,6 @@ fitMedia(chords1, 1, 1, 9)
 fitMedia(chords2, 1, 9, 17)
 
 for measure in range(1, 17, 2):
-  # select a random clip with EarSketch API function
+  # Earsketch API funksiyasi orqali tasodifiy klip tanlash
   beat = selectRandomFile(soundFolder
   fitMedia(beat, 2, measure, measure + 2)
