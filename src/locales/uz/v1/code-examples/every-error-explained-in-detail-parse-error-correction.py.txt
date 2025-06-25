@@ -1,4 +1,4 @@
-# Parse Error: Correction
+//Index Xatosi: To'g'irlash
 
 from earsketch import *
 setTempo(98)
