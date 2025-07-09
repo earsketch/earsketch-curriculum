@@ -1,9 +1,9 @@
-// Type Error: Example
+//Tur Xatosi: Misol
 
 setTempo(120);
 
 var soundClip = DUBSTEP_DRUMLOOP_MAIN_006;
-var measureTotal = readInput("How many measures?");
+var measureTotal = readInput("Nechta sanoq");
 
 println(measureTotal);
 
