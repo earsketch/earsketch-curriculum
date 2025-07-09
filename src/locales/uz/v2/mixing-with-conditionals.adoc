@@ -1,5 +1,5 @@
 [[mixingwithconditionnals]]
-== Mix with Conditionals!
+== Shartlar bilan Mix Qilamiz!
 
 :nofooter:
 
