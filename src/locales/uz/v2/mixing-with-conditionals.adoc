@@ -3,12 +3,12 @@
 
 :nofooter:
 
-In coding, you can automate things. An example of automation is if you are programming a robot so that it stops when an obstacle is detected. In this scenario, the robot won’t need a human being to tell it to stop manually. Instead, the robot will have a sensor to detect obstacles, and if there is one, it will stop. We can do musical automations in EarSketch using conditionals (`if` statements). We will see how to automate the mixing of the tracks. Mixing means if a track is too loud, we’ll reduce its volume and if it’s too quiet, we’ll increase its volume.
+Dasturlashda siz xar xil narsalarni va jarayonlarni avtomatlashtirishingiz mumkin. Siz robotni to'siq aniqlanganda to'xtab qoladigan tarzda dasturlashtirishingiz avtomatlashtirishga misol bo'ladi. Ushbu stsenariyda robotga to'xtashni aytish uchun inson kerak bo'lmaydi. Buning o'rniga robotda to'siqlarni aniqlaydigan sensor bo'ladi va agar to'siq mavjud bo'lsa, u to'xtaydi. Biz EarSketch-da shartlar (`if` bayonotlari) yordamida musiqiy avtomatlashtirishni amalga oshirishimiz mumkin. Biz treklarni miks qilish qanday avtomatlashtirishini ko'rib chiqamiz. Miks qilish bu shuni bildiradi: agar trek juda baland bo'lsa, biz uning ovoz balandligini pasaytiramiz va juda past bo'lsa, biz uning ovoz balandligini oshiramiz.
 
 [[analyzetrack]]
 === `analyzeTrack()`dan foydalaning
 
-We’ll see how to detect the loudness, or volume of a track. Make sure you understand the difference between the pitch (high or low) and volume (loud or quiet) of a sound. Biz `analyzeTrack()` deb nomlangan EarSketch funktsiyasidan foydalanamiz. Import and run the following code:
+Biz trekning ovoz balandligi yoki tovushini qanday aniqlashni ko'rib chiqamiz. Tovush pardasi (yuqori yoki past) va ovoz balandligi (baland yoki sokin) o'rtasidagi farqni tushunganingizga ishonch hosil qiling. Biz `analyzeTrack()` deb nomlangan EarSketch funktsiyasidan foydalanamiz. Quyidagi kodni nusxalang va ishga tushiring:
 
 [role="curriculum-python"]
 [source,python]
@@ -22,21 +22,21 @@ include::code-examples/mixing-with-conditionals-analyzetrack.py.txt[]
 include::code-examples/mixing-with-conditionals-analyzetrack.js.txt[]
 ----
 
-You can read in your console that the printed loudness is 0.10306035109110138.
+Konsolingizda chop etilgan ovoz balandligi 0,10306035109110138 ekanligini o'qishingiz mumkin.
 
-* The loudness can go from 0 (silence) to 1 (maximum loudness).
-* Sometimes you will see a number looking like this: 1.74630733714e-05. This is called scientific notation: see the e-05 at the end? It means move the decimal to the left 5 places (replacing with 0 if needed). This is equal to 0.0000174630733714.
-* Most of the sounds will have a loudness under 0.4
+* Ovoz balandligi 0 dan (sukunat) 1 gacha (maksimal ovoz balandligi) bo'lishi mumkin.
+* Ba'zan siz shunga o'xshash raqamni ko'rasiz: 1.74630733714e-05. Bunga ilmiy belgilash deyiladi: oxiridagi e-05 ni ko'ryapsizmi? Bu o'nli kasrni 5 taga chapga ko'chirishni anglatadi (kerak bo'lsa 0 bilan almashtiring). Bu 0.0000174630733714 ga teng.
+* Aksariyat tovushlarning balandligi 0.4 dan past bo'ladi
 
 `analyzeTrack()` funktsiyasi 2 ta argumentni oladi:
 
-. *track*: Track number
-. *feature*: Analysis constant, like `RMS_AMPLITUDE`
+. *track*: Trek raqami
+. *feature*: Analiz konstantasi, masalan `RMS_AMPLITUDE`
 
-.PRACTICE
+.AMALIYOT
 ****
-. Try using the code given above with different sounds (change the variable `sound`) to see what the output is.
-. Ikkinchi trekni qo'shing va uning ovoz balandligini konsolda chop etish uchun `analyzeTrack()` funktsiyasidan foydalaning. When you run the code, before looking at your console, listen to your music and try to guess which track is louder.
+. Chiqishda nimani yangrashini ko'rish uchun yuqorida berilgan kodni turli tovushlar bilan ishlatib ko'ring (`sound` o'zgaruvchisini o'zgartiring).
+. Ikkinchi trekni qo'shing va uning ovoz balandligini konsolda chop etish uchun `analyzeTrack()` funktsiyasidan foydalaning. Kodni ishga tushirganingizda, konsolingizga qarashdan avval musiqangizni tinglang va qaysi trek balandroq ekanligini taxmin qilishga harakat qiling.
 ****
 
 `analyzeTrack()` parametri ovoz balandligini baholash uchun `RMS_AMPLITUDE` yoki tovush yorqinligini tahlil qilish uchun `SPECTRAL_CENTROID` boʻlishi mumkin. Biz ushbu bobda ovoz balandligini tahlil qilishga e'tibor qaratamiz.
@@ -125,7 +125,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 // this video will be cut at 2' to delete the section about boolean operators//
 
 [role="curriculum-python"]
-.PRACTICE
+.AMALIYOT
 ****
 * Create a new script, and add sounds on two tracks.
 * Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `Rost`, aks holda `Yolg'on` deb chop eting.
@@ -134,7 +134,7 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.AMALIYOT
 ****
 * Create a new script, and add sounds on two tracks.
 * Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `rost`, aks holda `yolg'on` deb chop eting.
@@ -181,7 +181,7 @@ include::code-examples/mixing-with-conditionals-untitled1.py.txt[]
 include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 ----
 
-.PRACTICE
+.AMALIYOT
 ****
 * Create a new script with two tracks.
 * If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
@@ -222,7 +222,7 @@ include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mixing is modifying the volume of tracks so that they sound well balanced together.
 
 [role="curriculum-python"]
-.PRACTICE
+.AMALIYOT
 ****
 * Create a new script.
 * Add sounds on at least three tracks for at least sixteen measures.
@@ -233,7 +233,7 @@ Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mix
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.AMALIYOT
 ****
 * Create a new script.
 * Add sounds on at least three tracks for at least sixteen measures.
