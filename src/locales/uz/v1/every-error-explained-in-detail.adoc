@@ -68,7 +68,7 @@ ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an exp
 *Konsol xabari:* IndentationError: kodda chekinish xatosi mavjud (bo'shliq qoldirilmagan yoki ortiqcha bo'shliq mavjud).
 
 [role="curriculum-python"]
-*Description:* Recall that proper indentation is needed in Python when using loops, functions, and conditional statements - any statement that ends with a colon (`:`). An indentation error is thrown when an incorrect amount of indentation is used, either not enough or too much.
+*Izoh:* Yodda tutingki, Python-da halqalar, funktsiyalar va ikki nuqta (':') bilan tugaydigan har qanday bayonot kabi shartli bayonotlardan foydalanganda to'g'ri chekinishga ehtiyoj tug'iladi. Chekinish miqdoridan noto'g'ri foydalanilganda, ya'ni yetarli emas yoki keragidan ortiq bo'lsa, chekinish xatosi yuzaga keladi.
 
 [role="curriculum-python"]
 *Example:* The EarSketch Code Editor automatically indents lines of code following a colon, but the programmer may accidentally change indentation manually, perhaps when making changes to a body of code. In the snippet below, it is unclear which lines should fall within the loop, both to user and the interpreter.
