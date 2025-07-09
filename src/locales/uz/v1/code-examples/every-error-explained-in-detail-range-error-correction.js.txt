@@ -1,4 +1,4 @@
-// Range error: Correction
+//Index Xatosi: To'g'irlash
 
 setTempo(120);
 
