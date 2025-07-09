@@ -1,6 +1,6 @@
-// Reference Error: Correction
+//Index Xatosi: To'g'irlash
 
 setTempo(120);
 
-var today = readInput("What day is it?");
-println("Today is " + today);
+var bugun = readInput("Bugun qaysi kun?");
+print("Bugun " + bugun);
