@@ -1,24 +1,24 @@
 [[ch_29]]
-== Every Error Explained in Detail
+== Har Bir Xatoning Batafsil Tavsifi
 
 :nofooter:
 
 [[othererrors]]
-=== Overview
+=== Umumiy Ma'lumot
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi.
+Ba'zida dasturchilar kodning noto'g'ri ishlashiga yoki umuman ishlamasligiga olib keladigan xatolarga yo'l qo'yishadi. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi.
 
 Xatolarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi.
 
-Check the console for details and the line number. In some cases you may need to fix _the preceding line_ to resolve the error.
+Konsolda xato haqidagi izohni va satr nomerini ko'rib chiqing. Ba'zan, nosozlikni tuzatish uchun belgilangan satrdan oldingi satrni o'zgartirish kerak boladi. Konsol dagi ma'lumotni va satr raqamini koring. Ba'zan nosozlikni tuzatish uchun ko'rsatilgan satrdan oldingi satrni tuzatish kerak bo'ladi.
 
-Guidance on addressing the most common errors is given in the next sections.
+Quyidagi bo'limda, eng ko'p tarqalgan nosozliklarni tuzatish xaqida ma'lumot berilgan.
 
 [role="curriculum-python"]
-See the official https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] for a full list of errors.
+Rasmiy https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Python documentation^] saxifasida, barcha xatolar ro'yxati va tavsifini ko'rishingiz mumkin.
 
 [role="curriculum-javascript"]
-See Mozilla's https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] for a full list of errors.
+Mozilla'ning https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] saxifasida, barcha xatolar ro'yxati va tavsifini korishingiz mumkin.
 
 [[modulenotfounderror]]
 === ModuleNotFoundError
@@ -65,7 +65,7 @@ ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an exp
 //Python only
 
 [role="curriculum-python"]
-*Console message:* IndentationError: There is an indentation error in the code (lack of or extra spaces).
+*Konsol xabari:* IndentationError: kodda chekinish xatosi mavjud (bo'shliq qoldirilmagan yoki ortiqcha bo'shliq mavjud).
 
 [role="curriculum-python"]
 *Description:* Recall that proper indentation is needed in Python when using loops, functions, and conditional statements - any statement that ends with a colon (`:`). An indentation error is thrown when an incorrect amount of indentation is used, either not enough or too much.
@@ -102,7 +102,7 @@ Indentation errors do not occur in JavaScript, though you should still use prope
 === Index Error
 
 [role="curriculum-python"]
-*Console message:* IndexError: There is an error using an out of range index.
+<strong>Konsol xabari:</strong> IndexError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
 
 [role="curriculum-javascript"]
 *Console message:* TypeError: There is an error using an out of range index.
