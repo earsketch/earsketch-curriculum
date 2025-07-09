@@ -2,5 +2,5 @@
 
 setTempo(120);
 
-var today = readInput("What day is it?");
-println("Today is " + Today);
+var bugun = readInput("Bugun qaysi kun?");
+print("Bugun " + Bugun);
