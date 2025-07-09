@@ -1,4 +1,4 @@
-# Syntax Error: Example
+// Sintax Xatosi: Misol
 
 from earsketch import *
 setTempo(120)
@@ -8,6 +8,6 @@ beatString = "00+-0-00+0+-0+++"
 
 for measure in range(1, 32):
     if measure % 4 = 0
-        # Use EarSketch API function to shuffle beat string
+        # EarSketch API funksiyasini dan foydalanib zarba satrini aralashtirish
         beatString = shuffleString(beatString)
     makeBeat(clap, 1, measure, beatString)
