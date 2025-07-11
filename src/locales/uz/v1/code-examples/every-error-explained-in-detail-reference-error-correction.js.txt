@@ -1,4 +1,4 @@
-//Index Xatosi: To'g'irlash
+//Mos Yozuvlar Xatosi: To'g'irlash
 
 setTempo(120);
 
