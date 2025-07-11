@@ -207,7 +207,7 @@ include::code-examples/every-error-explained-in-detail-reference-error-correctio
 *Solution:* Check the spelling and case of your variables and functions. When using a variable or calling a function, make sure each has been defined previously. Make sure you define a function before it is called. Although you can paste the names in directly, ensure your sound constant names align with the clip names in the Sound Browser.
 
 [[parseerror]]
-=== Parse Error
+=== Tahlil Xatosi
 
 [role="curriculum-python"]
 *Console message:* ParseError: There is an error when reading the code.
