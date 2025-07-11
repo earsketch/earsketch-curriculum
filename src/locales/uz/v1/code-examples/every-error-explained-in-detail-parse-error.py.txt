@@ -1,4 +1,4 @@
-#Index Xatosi: Misol
+#Tahlil Xatosi: Misol
 
 from earsketch import *
 setTempo(98)
