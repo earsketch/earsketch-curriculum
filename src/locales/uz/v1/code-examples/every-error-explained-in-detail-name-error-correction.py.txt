@@ -1,4 +1,4 @@
-//Index Xatosi: To'g'irlash
+//Nom Xatosi: To'g'irlash
 
 from earsketch import *
 setTempo(120)
