@@ -156,27 +156,27 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 *Solution:* Write down the name of each clip in your array and label each with its associated index, starting at 0. This helps you understand the structure of the array and what may be causing an index error.
 
 [[nameerror]]
-=== Name Error
+=== Nom Xatosi
 
 [role="curriculum-python"]
-*Console message:* NameError: There is an error with a variable or function name that is not defined.
+*Konsol xabari:* Oʻzgaruvchi yoki funktsiya nomi bilan bogʻliq aniqlanmagan xatolik mavjud.
 
 [role="curriculum-javascript"]
-*Console message:* Reference Error: There is an error with a variable or function name that is not defined.
+*Konsol xabari:* Oʻzgaruvchi yoki funktsiya nomi bilan bogʻliq aniqlanmagan xatolik mavjud.
 
 [role="curriculum-python"]
-*Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo.
+*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi.
 
-Often there is a missing `from earsketch import *` statement at the top of the script.
+Ko'pincha, skriptning eng tepasida `from earsketch import *` degan ifoda yozilmagan boladi va bu xatolikga keltiradi.
 
 [role="curriculum-javascript"]
-*Description:* A name error occurs when a program tries to use a variable or call a function that was never defined, most often due to a typo. JavaScript specifically refers to this type of error as a reference error.
+*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi. JavaScript bu turdagi xatoliklarni mos yozuvlar xatosi sifatida ko'rsatadi.
 
 [role="curriculum-python"]
-*Example:* Below is a simple script to print the string assigned to the `today` variable. However, a mistake with the print statement prevents the script from running.
+*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, chop etish bayonotidagi xato skriptning ishlashiga to'sqinlik qiladi.
 
 [role="curriculum-javascript"]
-*Example:* Below is a simple script to print the string assigned to the `today` variable. However, a mistake within the `println()` function prevents the script from running.
+*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. However, a mistake within the `println()` function prevents the script from running.
 
 [role="curriculum-python"]
 [source,python]
