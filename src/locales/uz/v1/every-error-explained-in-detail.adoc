@@ -176,7 +176,7 @@ Ko'pincha, skriptning eng tepasida `from earsketch import *` degan ifoda yozilma
 *Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, chop etish bayonotidagi xato skriptning ishlashiga to'sqinlik qiladi.
 
 [role="curriculum-javascript"]
-*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. However, a mistake within the `println()` function prevents the script from running.
+*Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, `println()` funktsiyasidagi xatolik skriptning ishlashiga xalaqit beradi.
 
 [role="curriculum-python"]
 [source,python]
@@ -190,7 +190,7 @@ include::code-examples/every-error-explained-in-detail-name-error.py.txt[]
 include::code-examples/every-error-explained-in-detail-reference-error.js.txt[]
 ----
 
-In this case, the variable containing the string to be concatenated was not referred to by the correct name; a lowercase "t" should have been used.
+Bunday holda, yopishtirilgan satrni o'z ichiga olgan o'zgaruvchi to'g'ri nom bilan atalmagan; kichik “t” harfi ishlatilishi kerak edi.
 
 [role="curriculum-python"]
 [source,python]
@@ -204,16 +204,16 @@ include::code-examples/every-error-explained-in-detail-name-error-correction.py.
 include::code-examples/every-error-explained-in-detail-reference-error-correction.js.txt[]
 ----
 
-*Solution:* Check the spelling and case of your variables and functions. When using a variable or calling a function, make sure each has been defined previously. Make sure you define a function before it is called. Although you can paste the names in directly, ensure your sound constant names align with the clip names in the Sound Browser.
+*Yechim:* Oʻzgaruvchilar va funktsiyalaringizning imlosi va katta-kichik harflarini tekshiring. O'zgaruvchidan foydalanganda yoki funktsiyani chaqirganda, har birining avval aniqlanganligiga ishonch hosil qiling. Funktsiyani chaqirishdan oldin uni aniqlaganingizga ishonch hosil qiling. Nomlarni to'g'ridan-to'g'ri joylashtirishingiz mumkin bo'lsa-da, tovush konstantasi nomlari Tovush Brauzeridagi klip nomlari bilan mos kelishiga ishonch hosil qiling.
 
 [[parseerror]]
 === Tahlil Xatosi
 
 [role="curriculum-python"]
-*Console message:* ParseError: There is an error when reading the code.
+*Konsol xabari:* ParseError: kodni o'qishda xatolik yuz berdi.
 
 [role="curriculum-python"]
-*Description:* *Parsing* means converting one form of information into another. Therefore, a parse error occurs when the interpreter is unable to convert your code into information that the computer can use to make music. Code formatting, like brackets and parentheses, is often the cause of a parse error.
+*Izoh:* *Tahrirlash* axborotning bir shaklini boshqasiga aylantirishni bildiradi. Shuning uchun, interpretator sizning kodingizni kompyuter musiqa yaratishi uchun foydalanishi mumkin bo'lgan ma'lumotga aylantira olmaydi va tahlil qilish xatosi paydo bo'ladi. Burchakli qavslar va oddiy qavslar kabi kodni formatlash ko'pincha tahlil xatosiga sabab bo'ladi.
 
 [role="curriculum-python"]
 *Example:* In the following example, we attempt to have some fun by selecting random beats to play over a melody, but something is preventing the code from running.
