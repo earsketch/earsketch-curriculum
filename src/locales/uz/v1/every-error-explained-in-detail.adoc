@@ -268,7 +268,7 @@ include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 Ushbu skript uchun kod muharriri bizga noto'g'ri satrni belgilaydi. E'tibor bering, biz _if_ bayonotimizni ikki nuqta bilan tugatishni unutib qo'ydik. Xuddi shu qatorda biz bekor yaroqsiz shartni ham berdik; Biz tayinlash operatori `=` o'rniga tenglik operatoridan `==` foydalanishimiz kerak.
 
 [role="curriculum-javascript"]
-Ushbu skript uchun kod muharriri bizga noto'g'ri satrni belgilaydi. Notice that we forgot to open our _if_ statement body with a curly brace. On the same line, we also gave an invalid condition; we should be using the strict equality operator `===` instead of the assignment operator `=`.
+Ushbu skript uchun kod muharriri bizga noto'g'ri satrni belgilaydi. E'tibor bering, biz _if_ bayonotining asosiy qismini jingalak qavs bilan ochishni unutganmiz. Xuddi shu qatorda biz bekor yaroqsiz shartni ham berdik; Biz tayinlash operatori `=` o'rniga tenglik operatoridan `===` foydalanishimiz kerak.
 
 [role="curriculum-python"]
 [source,python]
@@ -283,28 +283,28 @@ include::code-examples/every-error-explained-in-detail-syntax-error-correction.j
 ----
 
 [role="curriculum-python"]
-*Solution:* Always check the console and code editor for clues. Beyond the common errors given above, check for opening and closing quotations and make sure you are not using Python keywords as variable names.
+*Yechim:* Har doim konsol va kod muharririda ishoralar yordamidan foydalaning. Yuqorida keltirilgan keng tarqalgan xatolardan tashqari, qo'shtirnoqlarni ochish va yopishni tekshiring va Python kalit so'zlarini o'zgaruvchi nomlar sifatida ishlatmaganingizga ishonch hosil qiling.
 
 ////
 Added solution from parse error to JS version below.
 ////
 
 [role="curriculum-javascript"]
-*Solution:* Always check the console and code editor for clues.
-Beyond the common errors given above, check for opening and closing quotations and ensure all function definitions, function calls, and other expressions have opening and closing parentheses. Also, check for missing or extra punctuation marks in other areas of your script. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. You cannot use JavaScript reserved words as variable names. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
+*Yechim:* Har doim konsol va kod muharririda ishoralar yordamidan foydalaning.
+Yuqorida keltirilgan keng tarqalgan xatolardan tashqari, qo'shtirnoqlarni ochish va yopishni tekshiring va barcha funktsiya ta'riflari, funktsiya chaqiruvlari va boshqa iboralarda ochilish va yopish qavslari mavjudligiga ishonch hosil qiling. Shuningdek, skriptingizning boshqa joylarida yetishmayotgan yoki ortiqcha tinish belgilarini tekshiring. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. JavaScript-ning zahiraga olgan soʻzlaridan oʻzgaruvchi nomlari sifatida foydalana olmaysiz. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
 
 [[typeerror]]
-=== Type Error
+=== Tur Xatosi
 
-*Console message:* TypeError: There is an error with the expected data type.
+*Konsol xabari:* TypeError: Kutilayotgan maʼlumotlar turida xatolik yuz berdi.
 
-*Description:* A type error occurs when a particular operation or function is expecting one data type, but receives another.
+*Ta'rif:* Ma'lum bir operatsiya yoki funktsiya bitta ma'lumot turini kutayotgan vaqtda boshqa ma'lumot turini qabul qilsa, tur xatosi yuzaga keladi.
 
 [role="curriculum-python"]
-*Example:* Suppose you have written a script that keeps track of the total measures used with an updating variable. In the snippet below, we attempt to print a message stating the length of a song.
+*Misol:* Faraz qilaylik, siz yangilanayotgan oʻzgaruvchi bilan foydalanilgan umumiy oʻlchovlarni kuzatib boruvchi skript yozdingiz. Quyidagi parchada biz qo'shiqning uzunligi ko'rsatilgan xabarni chop etishga harakat qilamiz.
 
 [role="curriculum-javascript"]
-*Example:* Suppose you have written a script that takes user input to determine the length of the song. The user's value is passed to `fitMedia()`.
+*Misol:* Siz qo'shiq uzunligini aniqlash uchun foydalanuvchi ma'lumotlarini talab qiladigan skript yozdingiz deylik. Foydalanuvchi qiymati `fitMedia()` ga uzatiladi.
 
 [role="curriculum-python"]
 [source,python]
