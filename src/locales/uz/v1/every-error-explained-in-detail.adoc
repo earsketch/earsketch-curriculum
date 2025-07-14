@@ -238,19 +238,19 @@ include::code-examples/every-error-explained-in-detail-parse-error-correction.py
 ----
 
 [role="curriculum-python"]
-*Solution:* Check the console for an indication of where the offending line may be. Make sure all function definitions, function calls, and other expressions have opening and closing parentheses. Check for missing or extra punctuation marks in  other areas of your script. Additionally, check for missing function definitions and arguments. Finally, check spelling of the arguments you pass to functions.
+*Yechim:* Konsolni buzuvchi chiziq qayerda bo'lishi mumkinligini tekshiring. Barcha funktsiya taʼriflari, funktsiya chaqiruvlari va boshqa ifodalarda ochish va yopish qavslari borligiga ishonch hosil qiling. Skriptingizning boshqa joylarida yetishmayotgan yoki ortiqcha tinish belgilarini tekshiring. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
 
 [role="curriculum-javascript"]
-Parse errors are interpreted broadly as syntax errors in JavaScript, which is covered <<every-error-explained-in-detail#syntaxerror,next>>.
+JavaScript'da tahlil xatolari umuman olganda sintaksis xatolari deb talqin qilinadi. Bular keyingi qismda korib chiqiladi <<every-error-explained-in-detail#syntaxerror,next>>.
 
 [[syntaxerror]]
-=== Syntax Error
+=== Sintaksis Xatosi
 
-*Console message:* SyntaxError: There is an error with the syntax (or arrangement) of code.
+*Konsol xabari:* Sintaksis xatosi: kod sintaksisi (yoki tartibga solish) bilan bog'liq xatolik bor.
 
-*Description:* A syntax error occurs when a program encounters a mistake in the script's syntax, the rules of a particular language.
+*Izoh:* Sintaksis xatosi dastur skript sintaksisida, ma'lum bir til qoidalarida xatolikka duch kelganida yuzaga keladi.
 
-*Example:* The following script is supposed to create dynamically changing futuristic bleeps. However it contains two common bugs that cause syntax errors.
+*Misol:* Quyidagi skript dinamik ravishda o'zgaruvchan futuristik signallarni yaratishi kerak. Biroq, unda sintaksis xatolariga olib keladigan ikkita keng tarqalgan nosozlik mavjud.
 
 [role="curriculum-python"]
 [source,python]
@@ -265,10 +265,10 @@ include::code-examples/every-error-explained-in-detail-syntax-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-For this script, the code editor flags the offending line for us. Notice that we forgot to end our _if_ statement with a colon. On the same line, we also gave an invalid condition; we should be using the equality operator `==` instead of the assignment operator `=`.
+Ushbu skript uchun kod muharriri bizga noto'g'ri satrni belgilaydi. E'tibor bering, biz _if_ bayonotimizni ikki nuqta bilan tugatishni unutib qo'ydik. Xuddi shu qatorda biz bekor yaroqsiz shartni ham berdik; Biz tayinlash operatori `=` o'rniga tenglik operatoridan `==` foydalanishimiz kerak.
 
 [role="curriculum-javascript"]
-For this script, the code editor flags the offending line for us. Notice that we forgot to open our _if_ statement body with a curly brace. On the same line, we also gave an invalid condition; we should be using the strict equality operator `===` instead of the assignment operator `=`.
+Ushbu skript uchun kod muharriri bizga noto'g'ri satrni belgilaydi. Notice that we forgot to open our _if_ statement body with a curly brace. On the same line, we also gave an invalid condition; we should be using the strict equality operator `===` instead of the assignment operator `=`.
 
 [role="curriculum-python"]
 [source,python]
@@ -291,7 +291,7 @@ Added solution from parse error to JS version below.
 
 [role="curriculum-javascript"]
 *Solution:* Always check the console and code editor for clues.
-Beyond the common errors given above, check for opening and closing quotations and ensure all function definitions, function calls, and other expressions have opening and closing parentheses. Also, check for missing or extra punctuation marks in other areas of your script. Additionally, check for missing function definitions and arguments. You cannot use JavaScript reserved words as variable names. Finally, check spelling of the arguments you pass to functions.
+Beyond the common errors given above, check for opening and closing quotations and ensure all function definitions, function calls, and other expressions have opening and closing parentheses. Also, check for missing or extra punctuation marks in other areas of your script. Bundan tashqari, yetishmayotgan funktsiya ta'riflari va argumentlarini tekshiring. You cannot use JavaScript reserved words as variable names. Va nihoyat, funktsiyalarga o'tadigan argumentlarning imlosini tekshiring.
 
 [[typeerror]]
 === Type Error
