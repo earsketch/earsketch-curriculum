@@ -216,7 +216,7 @@ include::code-examples/every-error-explained-in-detail-reference-error-correctio
 *Izoh:* *Tahrirlash* axborotning bir shaklini boshqasiga aylantirishni bildiradi. Shuning uchun, interpretator sizning kodingizni kompyuter musiqa yaratishi uchun foydalanishi mumkin bo'lgan ma'lumotga aylantira olmaydi va tahlil qilish xatosi paydo bo'ladi. Burchakli qavslar va oddiy qavslar kabi kodni formatlash ko'pincha tahlil xatosiga sabab bo'ladi.
 
 [role="curriculum-python"]
-*Example:* In the following example, we attempt to have some fun by selecting random beats to play over a melody, but something is preventing the code from running.
+*Masalan:* Quyidagi misolda biz musiqa ustida ijro etish uchun tasodifiy zarbalarni tanlash orqali biroz zavqlanishga harakat qilamiz, lekin kodning ishlashiga nimadir xalaqit bermoqda.
 
 [role="curriculum-python"]
 [source,python]
@@ -229,7 +229,7 @@ The parse error included in the example above breaks AsciiDoc syntax highlightin
 ////
 
 [role="curriculum-python"]
-Upon running the code, the console points us to line 26. This line looks fine, but the `selectRandomFile()` function in the previous line is missing its closing parentheses. In many cases, parse errors can be fixed quickly.
+Kodni ishga tushirgandan so'ng, konsol bizni 26-qatorga ishora qiladi. Bu qator yaxshi ko'rinadi, lekin avvalgi qatordagi `selectRandomFile()` funktsiyasida yopish qavslari yo'q. Ko'p hollarda tahlil xatolari tezda tuzatilishi mumkin.
 
 [role="curriculum-python"]
 [source,python]
