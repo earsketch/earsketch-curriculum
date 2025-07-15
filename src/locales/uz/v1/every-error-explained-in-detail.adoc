@@ -21,18 +21,18 @@ Rasmiy https://docs.python.org/3/library/exceptions.html#concrete-exceptions[Pyt
 Mozilla'ning https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors[JavaScript documentation^] saxifasida, barcha xatolar ro'yxati va tavsifini korishingiz mumkin.
 
 [[modulenotfounderror]]
-=== ModuleNotFoundError
+=== Modul Topilmadi Xatosi
 
 //Python only
 
 [role="curriculum-python"]
-*Console message:* ModuleNotFoundError: No module named 'missing_module_name'
+*Konsol xabari:* ModuleNotFoundError: 'mavjud_bolmagan_modul_nomi' moduli mavjud emas
 
 [role="curriculum-python"]
-*Description:* A ModuleNotFoundError occurs when a program fails to load the module given in a `from...import` statement, like `from module import *`. This could be due to a misspelling, or maybe the module to be imported does not exist.
+*Izoh:" Modul topilmaganligi xatosi (ya'ni ModuleNotFoundError) bayonotida keltirilgan dastur modulni yuklay olmaganida import xatosi yuzaga keladi. Masalan, `from module import`. Buning sababi imlo xatosi bo'lishi mumkin yoki import qilinadigan modul mavjud emas.
 
 [role="curriculum-python"]
-*Example:* Although the snippet below shows the word "EarSketch" with its usual styling, Python modules are specified in all lowercase.
+*Misol:* Quyidagi parcha "EarSketch" so'zini odatdagi uslub bilan ko'rsatsa-da, Python modullaribing barchasi kichik harflarda ko'rsatilgan.
 
 ////
 Can't turn off pasted without this appearing in JS mode.
@@ -45,7 +45,7 @@ include::code-examples/every-error-explained-in-detail-import-error.py.txt[]
 ----
 
 [role="curriculum-python"]
-Instead, our statement should read:
+Buning o'rniga bizning bayonotimiz quyidagicha o'qilishi kerak:
 
 [role="curriculum-python"]
 [source,python]
@@ -54,10 +54,10 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 ----
 
 [role="curriculum-python"]
-*Solution:* Check your `from...import` statements at the top of your script for typos and letter case.
+*Yechim:* Skriptingizning yuqori qismidagi 'from...import'-da imlo va katta-kichik harf xatolari mavjudligini tekshiring.
 
 [role="curriculum-javascript"]
-ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#othererrors>>.
+Import xatoliklari JavaScript-da uchramaydi. Bu turdagi xatoning izohini korish uchun Python skriptini oching yoki bo yerga o'ting <<every-error-explained-in-detail#othererrors>>.
 
 [[indentationerror]]
 === Chekinish Xatosi
@@ -108,10 +108,10 @@ JavaScript-da chekinish xatolari yuzaga kelmaydi, ammo o'qish qulayligi uchun to
 *Konsol xabari:* TypeError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
 
 [role="curriculum-python"]
-*Ta'rif:* Ro'yxat yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi.
+*Izoh:* Ro'yxat yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi.
 
 [role="curriculum-javascript"]
-*Ta'rif:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da tur xatosi sifatida paydo bo'ladi. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
+*Izoh:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da tur xatosi sifatida paydo bo'ladi. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
 
 [role="curriculum-python"]
 *Example:* In the following code, we attempt to create an additive structure using clips from a list.
@@ -298,7 +298,7 @@ Yuqorida keltirilgan keng tarqalgan xatolardan tashqari, qo'shtirnoqlarni ochish
 
 *Konsol xabari:* TypeError: Kutilayotgan maʼlumotlar turida xatolik yuz berdi.
 
-*Ta'rif:* Ma'lum bir operatsiya yoki funktsiya bitta ma'lumot turini kutayotgan vaqtda boshqa ma'lumot turini qabul qilsa, tur xatosi yuzaga keladi.
+*Izoh:* Ma'lum bir operatsiya yoki funktsiya bitta ma'lumot turini kutayotgan vaqtda boshqa ma'lumot turini qabul qilsa, tur xatosi yuzaga keladi.
 
 [role="curriculum-python"]
 *Misol:* Faraz qilaylik, siz yangilanayotgan oʻzgaruvchi bilan foydalanilgan umumiy oʻlchovlarni kuzatib boruvchi skript yozdingiz. Quyidagi parchada biz qo'shiqning uzunligi ko'rsatilgan xabarni chop etishga harakat qilamiz.
@@ -352,16 +352,16 @@ include::code-examples/every-error-explained-in-detail-type-error-correction.js.
 *Konsol xabari:* RangeError: Berilgan argument funktsiya uchun qabul qilinadigan qiymatlar to‘plami yoki oralig‘ida emas.
 
 [role="curriculum-python"]
-*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi.
+*Izoh:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi.
 
 [role="curriculum-javascript"]
-*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi. JavaScript bu turdagi xatoliklarni diapazon xatosi deb ataydi.
+*Izoh:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi. JavaScript bu turdagi xatoliklarni diapazon xatosi deb ataydi.
 
 [role="curriculum-python"]
 *Misol:* Quyidagi parcha `makeBeat()` yordamida roʻyxatlar bilan qiziqarli zarba yaratishga harakat qiladi.
 
 [role="curriculum-javascript"]
-*Example:* The following snippet attempts to create an interesting beat by using `makeBeat()` with arrays.
+*Misol:* Quyidagi parcha `MakeBeat()` yordamida massivlar bilan qiziqarli zarba yaratishga harakat qiladi.
 
 [role="curriculum-python"]
 [source,python]
@@ -379,7 +379,7 @@ include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
 `makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. Ushbu stsenariyda dasturchi ro'yxat indekslari noldan boshlanishini unutgan bo'lishi mumkin.
 
 [role="curriculum-javascript"]
-`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. In this scenario, it is likely that the programmer forgot that array indices start at zero.
+`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. Ushbu stsenariyda dasturchi massiv indekslari noldan boshlanishini unutgan bo'lishi mumkin.
 
 [role="curriculum-python"]
 [source,python]
