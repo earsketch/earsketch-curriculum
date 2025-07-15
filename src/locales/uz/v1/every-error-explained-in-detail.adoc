@@ -319,10 +319,10 @@ include::code-examples/every-error-explained-in-detail-type-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-A type error is thrown because the number type cannot be concatenated into a string. Instead, we can use data type conversion to first convert the `measureTotal` value into a string:
+Raqam turini satrga yopishtirib bo'lmagani uchun tur xatosi yuzaga kelgan. Buning o'rniga, avval `measureTotal` qiymatini satrga aylantirish uchun ma'lumotlar turini o'zgartirishdan foydalanishimiz mumkin:
 
 [role="curriculum-javascript"]
-A type error is thrown because we accidentally passed a string as the last `fitMedia()` argument. Instead, we can use data type conversion to first convert the `measureTotal` string into a number:
+Biz tasodifan satrni oxirgi `fitMedia()` argumenti sifatida o'tkazib yuborganimiz uchun tur xatosi yuzaga keldi. Buning o'rniga, avval `measureTotal` satrini raqamga aylantirish uchun ma'lumotlar turini o'zgartirishdan foydalanishimiz mumkin:
 
 [role="curriculum-python"]
 [source,python]
@@ -336,7 +336,7 @@ include::code-examples/every-error-explained-in-detail-type-error-correction.py.
 include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
-*Solution:* The EarSketch console gives the offending data type and points to a specific line number. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
+`Yechim:` EarSketch konsoli qoidabuzar ma'lumot turlarini beradi va ma'lum bir qator raqamiga ishora qiladi. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
 
 ////
 (ex. trying to concatenate something into string that isn't string, modifying a string value instead of concatenating something in, function call with too few arguments)
