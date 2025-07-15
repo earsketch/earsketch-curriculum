@@ -71,7 +71,7 @@ ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an exp
 *Izoh:* Yodda tutingki, Python-da halqalar, funktsiyalar va ikki nuqta (':') bilan tugaydigan har qanday bayonot kabi shartli bayonotlardan foydalanganda to'g'ri chekinishga ehtiyoj tug'iladi. Chekinish miqdoridan noto'g'ri foydalanilganda, ya'ni yetarli emas yoki keragidan ortiq bo'lsa, chekinish xatosi yuzaga keladi.
 
 [role="curriculum-python"]
-*Example:* The EarSketch Code Editor automatically indents lines of code following a colon, but the programmer may accidentally change indentation manually, perhaps when making changes to a body of code. In the snippet below, it is unclear which lines should fall within the loop, both to user and the interpreter.
+`Misol:` EarSketch Kod Muharriri avtomatik ravishda ikki nuqtadan keyin kod satrlarini cheklaydi, lekin dasturchi kod qismiga o'zgartirishlar kiritishda tasodifan cheklovni qo'lda o'zgartirishi mumkin. Quyidagi parchada foydalanuvchiga ham, tahlil qiluvchiga ham qaysi qatorlar halqaga tushishi aniq emas.
 
 ////
 Can't turn off pasting without this appearing in JS mode
@@ -84,7 +84,7 @@ include::code-examples/every-error-explained-in-detail-indentation-error.py.txt[
 ----
 
 [role="curriculum-python"]
-A properly indented body should instead look like the snippet below. The for-loop body is indented by one tab and it is clear that the last `fitMedia()` call is outside the loop.
+To'g'ri chekintirilgan tana (ya'ni kodning asosiy qismi) quyidagi parcha ko'rinishida bo'lishi kerak. For-halqasi tanasi bitta tab bilan chekintirilgan va oxirgi `fitMedia()` chaqiruvi halqadan tashqarida ekanligi aniq.
 
 [role="curriculum-python"]
 [source,python]
@@ -93,25 +93,25 @@ include::code-examples/every-error-explained-in-detail-indentation-error-correct
 ----
 
 [role="curriculum-python"]
-*Solution:* Try deleting all the spaces in front of the code in the body so each line is against the left edge of the code editor. Then, indent the body line by line, ensuring that all indentation is constant.
+`Yechim:` Har bir satr kod muharririning chap chetiga suyangan boʻlishi uchun kod tanasidagi barcha boʻshliqlarni oʻchirib koʻring. So'ngra, tanani satr bo'ylab ichkariga chekintiring va barcha chekinishlar sobit bo'lishiga ishonch hosil qiling.
 
 [role="curriculum-javascript"]
-Indentation errors do not occur in JavaScript, though you should still use proper indentation for readability. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#indexerror,index errors>>.
+JavaScript-da chekinish xatolari yuzaga kelmaydi, ammo o'qish qulayligi uchun to'g'ri chekinishdan foydalanish kerak. Bu turdagi xatoning izohini korish uchun Python skriptini oching yoki bo yerga o'ting <<every-error-explained-in-detail#indexerror,index errors>>.
 
 [[indexerror]]
-=== Index Error
+=== Indeks Xatosi
 
 [role="curriculum-python"]
-<strong>Konsol xabari:</strong> IndexError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
+*Konsol xabari:* IndexError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
 
 [role="curriculum-javascript"]
-*Console message:* TypeError: There is an error using an out of range index.
+*Konsol xabari:* TypeError: Diapazondan tashqari indeksni ishlatishda xatolik yuz berdi.
 
 [role="curriculum-python"]
-*Description:* An index error is thrown when trying to access an index that is out of range or does not exist within a list or string.
+*Ta'rif:* Ro'yxat yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi.
 
 [role="curriculum-javascript"]
-*Description:* An index error is thrown when trying to access an index that is out of range or does not exist within an array or string. It is thrown as a type error in JavaScript. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
+*Ta'rif:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da tur xatosi sifatida paydo bo'ladi. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
 
 [role="curriculum-python"]
 *Example:* In the following code, we attempt to create an additive structure using clips from a list.
