@@ -60,7 +60,7 @@ include::code-examples/every-error-explained-in-detail-import-error-correction.p
 ModuleNotFoundErrors do not occur in JavaScript. Open a Python script for an explanation of this error type, or move on to <<every-error-explained-in-detail#othererrors>>.
 
 [[indentationerror]]
-=== Indentation Error
+=== Chekinish Xatosi
 
 //Python only
 
@@ -170,7 +170,7 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 Ko'pincha, skriptning eng tepasida `from earsketch import *` degan ifoda yozilmagan boladi va bu xatolikga keltiradi.
 
 [role="curriculum-javascript"]
-*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi. JavaScript bu turdagi xatoliklarni mos yozuvlar xatosi sifatida ko'rsatadi.
+*Izoh:* Nom xatosi dastur o'zgaruvchidan foydalanishga yoki hech qachon aniqlanmagan funktsiyani chaqirishga harakat qilganda, ko'pincha imlo xatosi tufayli yuzaga keladi. JavaScript bu turdagi xatoliklarni ishora xatosi deb ko'rsatadi.
 
 [role="curriculum-python"]
 *Misol:* Quyida `bugun` o'zgaruvchisiga tayinlangan satrni chop etish uchun oddiy skript keltirilgan. Biroq, chop etish bayonotidagi xato skriptning ishlashiga to'sqinlik qiladi.
@@ -336,29 +336,29 @@ include::code-examples/every-error-explained-in-detail-type-error-correction.py.
 include::code-examples/every-error-explained-in-detail-type-error-correction.js.txt[]
 ----
 
-`Yechim:` EarSketch konsoli qoidabuzar ma'lumot turlarini beradi va ma'lum bir qator raqamiga ishora qiladi. Check for consistent data types within arithmetic expressions, data structure operations, and function arguments. In addition, make sure your function calls have the correct number of arguments.
+`Yechim:` EarSketch konsoli qoidabuzar ma'lumot turlarini beradi va ma'lum bir qator raqamiga ishora qiladi. Arifmetik ifodalar, ma'lumotlar tuzilmasi operatsiyalari va funktsiya argumentlari ichida izchil ma'lumot turlarini tekshiring. Bundan tashqari, funktsiya chaqiruvlaringiz to'g'ri argumentlar soniga ega ekanligiga ishonch hosil qiling.
 
 ////
 (ex. trying to concatenate something into string that isn't string, modifying a string value instead of concatenating something in, function call with too few arguments)
 ////
 
 [[valueerror]]
-=== Value Error
+=== Qiymat Xatosi
 
 [role="curriculum-python"]
-*Console message:* ValueError: A provided argument is not within the set or range of acceptable values for a function.
+*Konsol xabari:* ValueError: Berilgan argument funktsiya uchun qabul qilinadigan qiymatlar to‘plami yoki oralig‘ida emas.
 
 [role="curriculum-javascript"]
-*Console message:* RangeError: A provided argument is not within the set or range of acceptable values for a function.
+*Konsol xabari:* RangeError: Berilgan argument funktsiya uchun qabul qilinadigan qiymatlar to‘plami yoki oralig‘ida emas.
 
 [role="curriculum-python"]
-*Description:* A value error occurs when a function receives an argument of the correct type but inappropriate value.
+*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi.
 
 [role="curriculum-javascript"]
-*Description:* A value error occurs when a function receives an argument of the correct type but inappropriate value. JavaScript specifically refers to this type of error as a range error.
+*Ta'rif:* Qiymat xatosi funktsiya to'g'ri turdagi, lekin nomaqbul qiymatdagi argumentni qabul qilganda yuzaga keladi. JavaScript bu turdagi xatoliklarni diapazon xatosi deb ataydi.
 
 [role="curriculum-python"]
-*Example:* The following snippet attempts to create an interesting beat by using `makeBeat()` with lists.
+*Misol:* Quyidagi parcha `makeBeat()` yordamida roʻyxatlar bilan qiziqarli zarba yaratishga harakat qiladi.
 
 [role="curriculum-javascript"]
 *Example:* The following snippet attempts to create an interesting beat by using `makeBeat()` with arrays.
@@ -376,10 +376,10 @@ include::code-examples/every-error-explained-in-detail-range-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-`makeBeat()` 's fourth argument is the appropriate type, but one of the index values it must access is invalid. In this scenario, it is likely that the programmer forgot that list indices start at zero.
+`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. Ushbu stsenariyda dasturchi ro'yxat indekslari noldan boshlanishini unutgan bo'lishi mumkin.
 
 [role="curriculum-javascript"]
-`makeBeat()` 's fourth argument is the appropriate type, but one of the index values it must access is invalid. In this scenario, it is likely that the programmer forgot that array indices start at zero.
+`makeBeat()` ning toʻrtinchi argumenti mos turga ega, lekin u kirishi kerak boʻlgan indeks qiymatlaridan biri yaroqsiz. In this scenario, it is likely that the programmer forgot that array indices start at zero.
 
 [role="curriculum-python"]
 [source,python]
@@ -393,4 +393,4 @@ include::code-examples/every-error-explained-in-detail-value-error-correction.py
 include::code-examples/every-error-explained-in-detail-range-error-correction.js.txt[]
 ----
 
-*Solution:* Check your beat strings to ensure values fall within the correct range. Also, confirm any arguments provided to `setEffect()` are within the effect's required range.
+*Yechim:* Qiymatlar to'g'ri diapazonga tushishiga ishonch hosil qilish uchun zarba satrlarini tekshiring. Shuningdek, `setEffect()` ga taqdim etilgan har qanday argumentlar effektning talab qilinadigan diapazonida ekanligini tasdiqlang.
