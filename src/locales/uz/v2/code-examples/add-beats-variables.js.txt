@@ -1,4 +1,4 @@
-// Variables: Using variables to store sounds and simplify edits
+//O'zgaruvchilar: Tovushlarni saqlash uchun va redatsiyani yengillashtirish uchun o'zgaruvchilar ishlatish
 
 // Sozlash
 setTempo(100);
