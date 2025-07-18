@@ -1,27 +1,27 @@
-# A-B-A-B Form and custom functions: A song with A and B sections, using custom functions
+# A-B-A-B shaklidagi va maxsus funktsiyalar: A va B qismga ega bo'lgan qo'shiq va uni funktsiyalar yordamida yaratish
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Music
+#Musiqa
 
-# Create an A section function
+# A qismini funktsiya orqali yaratish
 def sectionA(startMeasure, endMeasure):
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure)  # main
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure)  # drums
-    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure)  # bass line
-    setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure)  # increasing volume of bass line
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure); # asosiy
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure); # baraban
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure); # bass
+    setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure); # bass ovozini ko'tarish
 
-# Create a B section function
+# B qismini funktsiya orqali yaratish
 def sectionB(startMeasure, endMeasure):
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure)  # main melody differs
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure)  # drums differ
-    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure)  # contrasting bass: it's slower and louder
-    setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure)  # increasing bass volume
-    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure)  # rattling: adding a new element
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure); # boshqacha asosiy melodiya
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure); # baraban o'zgarishi
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); # kontrastli bass: sekinroq va ovozi balandroq
+    setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure); # bass ovozini ko'tarish
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); # shitirlash: yangi element qoshiladi
 
-# Call my functions
+# Funktsiyalarimni chariqish
 sectionA(1, 5)
 sectionB(5, 9)
 sectionA(9, 13)
