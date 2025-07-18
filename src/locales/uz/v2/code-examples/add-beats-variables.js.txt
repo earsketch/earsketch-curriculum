@@ -3,7 +3,7 @@
 // Sozlash
 setTempo(100);
 
-// Sounds
+//Tovushlar
 var synth1 = HIPHOP_SYNTHPLUCKLEAD_005; // Assigns a sound to the variable "synth1".
 var synth2 = HIPHOP_SOLOMOOGLEAD_001;
 var drums = HIPHOP_TRAPHOP_BEAT_008;
