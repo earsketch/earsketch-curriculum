@@ -111,13 +111,13 @@ JavaScript-da chekinish xatolari yuzaga kelmaydi, ammo o'qish qulayligi uchun to
 *Izoh:* Ro'yxat yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi.
 
 [role="curriculum-javascript"]
-*Izoh:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da tur xatosi sifatida paydo bo'ladi. For an explanation of more general type errors, see the section on <<every-error-explained-in-detail#typeerror,type errors>>.
+*Izoh:* Massiv yoki satrda mavjud bo'lmagan yoki diapazondan tashqarida bo'lgan indeksga kirishga urinayotganda indeks xatosi yuzaga keladi. Bu JavaScript-da tur xatosi sifatida paydo bo'ladi. Umumiy turxatolar xaqida izoh uchun quyidagi qismni ko'oring <<every-error-explained-in-detail#typeerror,type errors>>.
 
 [role="curriculum-python"]
-*Example:* In the following code, we attempt to create an additive structure using clips from a list.
+*Misol:* Quyidagi kodda biz roʻyxatdagi kliplar yordamida qoʻshimcha tuzilma yaratishga harakat qilamiz.
 
 [role="curriculum-javascript"]
-*Example:* In the following code, we attempt to create an additive structure using clips from an array.
+*Misol:* Quyidagi kodda biz massivdagi kliplar yordamida qoʻshimcha tuzilma yaratishga harakat qilamiz.
 
 [role="curriculum-python"]
 [source,python]
@@ -132,10 +132,10 @@ include::code-examples/every-error-explained-in-detail-index-error.js.txt[]
 ----
 
 [role="curriculum-python"]
-An Index Error is thrown and the console points us to line 19, stating the index is out of range. We have three sound clips, but we forgot that list indices start at 0, so the last index we should be accessing is index 2:
+Indeks xatosi yuz berdi va konsol bizni 19-qatorga ishora qilib, indeks diapazondan tashqarida ekanligini bildiradi. Bizda uchta ovozli klip bor, lekin biz ro'yxat indekslari 0 dan boshlanishini unutdik, shuning uchun biz kirishimiz kerak bo'lgan oxirgi indeks bu - indeks 2:
 
 [role="curriculum-javascript"]
-A Type Error is thrown and the console states that a different data type was expected on line 17. An out of range value was provided to the last `fitMedia()` call. We have three sound clips, but we forgot that array indices start at 0, so the last index we should be accessing is index 2:
+Yozuv xatosi paydo bo'ldi va konsol 17-qatorda boshqa ma'lumotlar turi kutilganligini bildiradi. So'nggi `fitMedia()` chaqiruviga diapazondan tashqari qiymat berilgan. Bizda uchta ovozli klip bor, lekin biz massiv indekslari 0 dan boshlanishini unutdik, shuning uchun biz kirishimiz kerak bo'lgan oxirgi indeks bu - indeks 2:
 
 [role="curriculum-python"]
 [source,python]
@@ -150,10 +150,10 @@ include::code-examples/every-error-explained-in-detail-index-error-correction.js
 ----
 
 [role="curriculum-python"]
-*Solution:* Write down the name of each clip in your list and label each with its associated index, starting at 0. This helps you understand the structure of the list and what may be causing an index error.
+*Yechim:* Ro'yxatingizdagi har bir klip nomini yozing va har biriga 0 dan boshlab o'zining tegishli indeksi bilan belgilang. Bu sizga ro'yxat tuzilishini va indeks xatosiga nima sabab bo'lishi mumkinligini tushunishga yordam beradi.
 
 [role="curriculum-javascript"]
-*Solution:* Write down the name of each clip in your array and label each with its associated index, starting at 0. This helps you understand the structure of the array and what may be causing an index error.
+*Yechim:* Massivingizdagi har bir klip nomini yozing va har biriga 0 dan boshlab o'zining tegishli indeksi bilan belgilang. Bu sizga massiv tuzilishini va indeks xatosiga nima sabab bo'lishi mumkinligini tushunishga yordam beradi.
 
 [[nameerror]]
 === Nom Xatosi
