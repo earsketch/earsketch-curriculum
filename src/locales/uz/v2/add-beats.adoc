@@ -55,7 +55,7 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
 In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
 ****
@@ -107,7 +107,7 @@ image::../media/U1P1/beat.png[A beat]
 [caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
-.PRACTICE
+.AMALIYOT
 ****
 Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
 ****
@@ -122,7 +122,7 @@ For example: `"0-00-00-0+++0+0+"`
 * `+` audio klipni keyingi quyi-zarbaga kengaytiradi. U har doim `0` yoki `+` dan keyin keladi.
 * `-` sukut, sukunat degan ma’noni anglatadi.
 
-.PRACTICE
+.AMALIYOT
 ****
 For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work.
 ****
@@ -217,7 +217,7 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
 Yangi `beatString1` o'zgaruvchisi, `"0"`, `"+"` va `"-"` belgilaridan iborat 16 ta belgili satr yarating.
 Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
@@ -232,7 +232,7 @@ Musiqangizni tinglaganingizda, agar sizga birinchi versiya yoqmasa, u sizga yoqm
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
 Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
 Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
