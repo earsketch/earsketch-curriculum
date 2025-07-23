@@ -1,29 +1,29 @@
-# A-B-A Form: A song with A and B sections
+# A-B-A Shakli: A va B qismli qo'shiq
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Music
+#Musiqa
 
-# Create an A section
+# A qismini yaratish
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # main
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # drums
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # bass line
-setEffect(3, VOLUME, GAIN, -20, 1, 0, 5)  # increasing volume of bass line
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); # baraban
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); # bass
+setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); # bass ovozini ko'tarish
 
-# Create a 4 measure B section between measures 5 and 9
+# 5 va 9 o'lchamlar orasida 4 o'lchamli B qismini yaratish
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9)  # main melody differs
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9)  # drums differ
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9)  # contrasting bass: it's slower and louder
-setEffect(3, VOLUME, GAIN, 5, 5, 5, 9)  # increasing bass volume
-fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9)  # rattling: adding a new element
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, 5, 9); # asosiy melodiya o'zgarishi
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, 5, 9); # baraban o'zgarishi
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, 5, 9); #kontrastli bass: sekinroq va ovosi balandroq
+setEffect(3, VOLUME, GAIN, 5, 5, 5, 9); # bass ovozini ko'tarish
+fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, 5, 9); # shitirlash: yangi element qo'shiladi
 
-# Then back to section A at measure 9
+# Endi 9 o'lchamda yana A qismiga qaytamiz
 
-fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13)  # main
-fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13)  # drums
-fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13)  # bass line
-setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # increasing volume of bass line
+fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 9, 13); # asosiy
+fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 9, 13); # baraban
+fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 9, 13); # bass
+setEffect(3, VOLUME, GAIN, 0, 9, -20, 13)  # bass ovozini ko'tarish
