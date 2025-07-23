@@ -1,8 +1,8 @@
-// Total Atlanta Song of Summer: creating a complete song with abstractions
+// 'Atlanta Song of Summer' Qo'shig'i: Butun qo'shiqni abstraktsiyalar bilan yaratish
 
 setTempo(110);
 
-// Sound variables
+//Tovush o'zgaruvchilari
 var melody1 = EIGHT_BIT_ATARI_BASSLINE_005;
 var melody2 = DUBSTEP_LEAD_018;
 var melody3 = DUBSTEP_LEAD_017;
@@ -15,9 +15,9 @@ var piano = YG_RNB_PIANO_4;
 var kick = OS_KICK02;
 var hihat = OS_CLOSEDHAT03;
 
-// FUNCTION DEFINITIONS
+// FUNKTSIYALAR TA'RIFI
 
-// Adding drums:
+//Barabanlarni qo'shish:
 function addingDrums(start, end, pattern) {
     // first, we create beat strings, depending on the parameter pattern:
     if (pattern === "heavy") {
