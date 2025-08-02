@@ -4,7 +4,7 @@
 from earsketch import *
 setTempo(110)
 
-# Sounds
+#Tovushlar
 drums = [OS_KICK05, OS_SNARE01, OS_CLOSEDHAT01]
 
 # Rock zarbasi 1-o'lchovda
