@@ -1,15 +1,15 @@
-# Iterating through Lists: Using a list to hold several sounds and placing them in our DAW thanks to a for loop
+# Ro'yxat Orqali Iteratsiyalar: Ro'yxatdan foydalanib bir nechta tovushni saqlash va ularni for halqasi orqali RAISga qo'yish
 
 # Sozlash
 from earsketch import *
 setTempo(130)
 
-# Music
+# Musiqa
 
-# Creating a list of sounds
+# Tovushlar ro'yxatini yaratish
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
-# Going through the list
+# Roy'xatdan birma-bir o'tish
 for track in range(1, 4):
     index = track - 1
     fitMedia(myEnsemble[index], track, 1, 5)
