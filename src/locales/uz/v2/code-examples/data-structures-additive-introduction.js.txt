@@ -1,13 +1,13 @@
-// Additive Introduction: Creating an additive introduction with array iteration
+// Qo'shma Kirish: Massiv iteratsiyasi orqali qo'shma kirishni yaratish
 
 // Sozlash
 setTempo(120);
 
-// Music
+//Musiqa
 var introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001];
 
 for (var measure = 1; measure < introSounds.length + 1; measure++) {
-    // we add 1 to introSounds.length since we want measure to go up to introSounds.length
+    // introSounds.length ga 1 qo'shamiz chunki biz o'chovni introSounds.length miqdorigacha ko'tarilishini istaymiz
     var index = measure - 1; // zero-based array index
     var track = measure; // change track with measure
     fitMedia(introSounds[index], track, measure, 5);
