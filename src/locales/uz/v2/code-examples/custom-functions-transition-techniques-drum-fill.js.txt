@@ -12,15 +12,15 @@ var drums1 = RD_ROCK_POPRHYTHM_DRUM_PART_10;
 var drums2 = RD_ROCK_POPRHYTHM_MAINDRUMS_1;
 var drumFill = RD_ROCK_POPRHYTHM_FILL_4;
 
-// Section 1
+// 1-qism
 fitMedia(leadGuitar1, 1, 1, 8);
 fitMedia(bass1, 2, 1, 8);
 fitMedia(drums1, 3, 1, 8);
 
-// Drum Fill
+//Baraban bilan to'ldirish
 fitMedia(drumFill, 3, 8, 9);
 
-// Section 2
+// 2-qism
 fitMedia(leadGuitar2, 1, 9, 17);
 fitMedia(bass2, 2, 9, 17);
 fitMedia(drums2, 3, 9, 17);
