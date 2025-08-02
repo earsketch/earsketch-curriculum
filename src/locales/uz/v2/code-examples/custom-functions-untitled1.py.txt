@@ -1,7 +1,7 @@
 def sectionA():
-    # Write your instructions here. This is the body of the function.
-    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # main
-    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5)  # drums
-    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5)  # bass line
-    setEffect(3, VOLUME, GAIN, -20, 1, 0, 5)  # increasing volume of bass line
-    # This code is indented. When writing the rest of your script, make sure you stop indenting.
+    # Bu yerga funktsiya ko'rsatmalarini yozing. This is the body of the function.
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, 1, 5)  # asosiy
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, 1, 5); # baraban
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, 1, 5); # bass
+    setEffect(3, VOLUME, GAIN, -20, 1, 0, 5); # bass ovozini ko'tarish
+    # Bu programmada chekinish bor. Skriptingizning davomini yozayotganda chekinishni to'xtatganingizga ishonch hosil qiling.
