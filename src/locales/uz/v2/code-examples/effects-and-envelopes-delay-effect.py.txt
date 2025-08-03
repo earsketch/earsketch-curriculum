@@ -1,10 +1,10 @@
-# Delay Effect: Adding delay to a track
+# Kechikish Effekti: Trekga kechikish effektini qo'oshish
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Music
+# Musiqa
 lead1 = EIGHT_BIT_ATARI_SYNTH_001
 lead2 = EIGHT_BIT_ATARI_SYNTH_002
 pad1 = EIGHT_BIT_ATARI_PAD_002
@@ -23,6 +23,6 @@ fitMedia(pad2, 2, 7, 9)
 fitMedia(drums1, 3, 3, 5)
 fitMedia(drums2, 3, 5, 9)
 
-# Effects
-# setEffect(1, DELAY, DELAY_TIME, 500)  # Adds a delay (echo) effect at intervals of 500ms.
-# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # Lowers the relative amount of repeats (default is -3.0).
+# Effektlar
+# setEffect(1, DELAY, DELAY_TIME, 500)  # 500ms oraliqda kechiktirish (ya'ni aks-sado) effektini qoshish.
+# setEffect(1, DELAY, DELAY_FEEDBACK, -20.0)  # #Takrorlanishlarning nisbiy miqdorini pasaytiradi (standart -3.0).
