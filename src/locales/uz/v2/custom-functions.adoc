@@ -115,22 +115,22 @@ Quyida musiqiy o'tishlarni yaratish uchun mashhur strategiyalar keltirilgan:
 
 . *To'qnashuv Simbali*: To'qnashuv Simbalini yangi qismning birinchi zarbasiga joylashtirish.
 . *Baraban bilan toʻldirish*: Yangi boʻlim oldidagi boʻshliqni toʻldirish uchun ritmik oʻzgarishlar.
-. *Trekni o'chirish*: Dramatik effekt uchun ba'zi treklarni vaqtinchalik o'chirib qo'yish.
-. *Ohangning o'zgarishi*: yangi bo'lim oldidan akkordlar, bass qatori yoki ohangning o'zgarishini kiritish. Often, a folder within the EarSketch sound library contains variations of a similar riff.
-. *Ko'taruvchi*: Tovush pardasini oshiradigan nota yoki shovqin. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
-. *Pistirma Kasri*: ortib borayotgan zichlik, tovush pardasi yoki amplituda bilan takrorlangan pistirma urishlar ketma-ketligi. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
+. *Trekni o'chirish*: Dramatik effekt uchun ba'zi treklarni vaqtinchalik o'chirib qo'yish yoki uzish.
+. *Ohangning o'zgarishi*: yangi bo'lim oldidan akkordlar, bass qatori yoki ohangning o'zgarishini kiritish. Ko'p xollarda, EarSketch tovush kutubxonasida shunga o'xshash riffning turlari mavjud.
+. *Ko'taruvchi*: Tovush pardasini oshiradigan nota yoki shovqin. EDM (Elektron Raqs Musiqasi) da juda keng tarqalgan va tushriib qoldirishdagi intiqishni yaratadi. Tovush Brauzerida "ko'taruvchi" qidiruv terminidan foydalanishingiz mumkin. Teskari to'qnashuv simbalidan ko'taruvchi sifatida foydalanish mumkin, masalan YG_EDM_REVERSE_CRASH_1.
+. *Pistirma Kasri*: ortib borayotgan zichlik, tovush pardasi yoki amplituda bilan takrorlangan pistirma urishlar ketma-ketligi. Siz RD_FUTURE_DUBSTEP_FILL_1 yoki HOUSE_BREAK_FILL_003 kabi klipdan yoki `makeBeat()` bilan foydalanishingiz mumkin.
 . *Halqalash*: yangi qism oldidan qisqa musiqa segmentini takrorlash.
 . *Krossfeyding*: Bir qismning ovozini balandligini pasaytirish va yangi bo'limning ovoz balandligini oshirish.
 . *Anakrusis*: Yangi bo'limning ohangi ikki zarbaga ertaroq boshlanganadi.
 
 .AMALIYOT
 ****
-Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Bu haqda o'ylab ko'rganingizdan so'ng, quyidagi misollarni ko'rishingiz mumkin.
+Mumkin bo'lgan o'tishlarning ushbu ro'yxatiga qarab, ulardan 2 tasini tanlang va ularni kod yordamida qanday amalga oshirishingiz mumkinligini ko'rishga harakat qiling. Siz juftlikda ishlashingiz mumkin. Bu haqda o'ylab ko'rganingizdan so'ng, quyidagi misollarni ko'rishingiz mumkin.
 
-The transition should be placed one or two measures before the new section. You can use several transition techniques at the same time.
+O'tishni yangi qismdan 1 yoki 2 o'lchovga avvalroq qo'yish kerak. Bir vaqtning o'zida bir nechta o'tish uslubidan foydalanishingiz mumkin.
 ****
 
-Drum fills:
+Baraban bilan to'ldirishlar:
 
 [role="curriculum-python"]
 [source,python]
@@ -144,7 +144,7 @@ include::code-examples/custom-functions-transition-techniques-drum-fill.py.txt[]
 include::code-examples/custom-functions-transition-techniques-drum-fill.js.txt[]
 ----
 
-The track silencing technique only requires the modification of a couple `fitMedia()` calls. An example is shown below.
+Trekni uzish uslubi faqat bir-ikkita`fitMedia()` chaqiruvlarini o'zgartirishni talab qiladi. Quyida misol keltirilgan.
 
 [role="curriculum-python"]
 [source,python]
@@ -158,7 +158,7 @@ include::code-examples/custom-functions-transition-techniques-track-droupouts.py
 include::code-examples/custom-functions-transition-techniques-track-droupouts.js.txt[]
 ----
 
-The next example uses multiple risers and a crash cymbal during the transition.
+Keyingi misol, o'tish jarayonida bir nechta ko'taruvchilar va to'qnashuv simbalidan foydalaniladi.
 
 [role="curriculum-python"]
 [source,python]
@@ -175,22 +175,22 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 {nbsp} +
 
 [[yourfullsong]]
-=== Your full song
+=== Sizning to'liq qo'shig'ingiz
 
-In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
+Dasturlashda biz *abstraksiyalarni* yaratishimiz mumkin, ya'ni yagona tushunchani shakllantirish uchun g'oyalar to'plami. Musiqada biz musiqiy g'oyalarni bo'limlarga ajratamiz. Funktsiyalar - bu informatika fanida qo'llaniladigan mavhumlikning bir turi. Ular bir nechta bayonotlarni bitta vositaga to'playdi, shuning uchun ularga osongina murojaat qilish mumkin. Abstraktsiyalar dastur shaklini aniqroq qilishi mumkin.
 
 .AMALIYOT
 ****
-Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'liq qo'shiq yarataylik! Here is a suggestion of how to work, but you can adapt it as you like:
+Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'liq qo'shiq yarataylik! Bu erda qanday ishlash bo'yicha taklif bor, lekin uni xohlaganingizcha moslashtirishingiz mumkin:
 
-. Choose a theme for your song. Think about the type of sounds, instruments, or lyrics that will best convey your message.
-. Then select a simple structure.
-. And finally, start coding! Tovushlarni tanlash uchun `fitMedia()` funktsiyalaridan boshlang.
+. Qo'shiq uchun mavzuni tanlang. Sizning xabaringizni eng zo'r yetkazadigan tovushlar, asboblar yoki so'zlarning turi haqida o'ylab ko'ring.
+. So'ng oddiy tuzilmani tanlang.
+. Va nihoyat, dasturlashni boshlang! Tovushlarni tanlash uchun `fitMedia()` funktsiyalaridan boshlang.
 . Zarbdorlik qoʻshish uchun `makeBeat()` dan foydalaning.
-. You can upload your own sounds.
+. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
 . Kodingizdagi takrorlanishni kamaytirish uchun `for` halqalaridan foydalaning.
-. Use custom functions to define your sections and create your song structure.
-. Add one or two meaningful transitions.
+. Bo'limlaringizni belgilash va qo'shiq tuzilmangizni yaratish uchun maxsus funktsiyalardan foydalaning.
+. Bir yoki ikkita mazmunli o'tishni qo'shing.
 . Add effects with `setEffect()`.
 . Add one or several conditional statements.
 . Make sure you use variables to store some information such as sound constants.
