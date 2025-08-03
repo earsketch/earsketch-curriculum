@@ -1,4 +1,4 @@
-// Massivlar: Bir nechta tovushni saqlash uchun massivlarda qo'llanish
+// Massivlar: Bir nechta tovushni saqlash uchun massivlardan qo'llanish
 
 // Sozlash
 setTempo(130);
