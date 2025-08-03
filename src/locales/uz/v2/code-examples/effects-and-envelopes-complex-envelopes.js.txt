@@ -1,12 +1,12 @@
-// Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
+// Murakkab konvertlar: Effektlar konvertida o'zgartirishlar kiritish uchun trekda bir nechta setEffect() ni chaqirish
 
 // Sozlash
 setTempo(120);
 
-// Music
+// Musiqa
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
 
-// Envelope time points (in measures)
+// Konvert vaqt nuqtalari (o'lchovlarda ko'rsatiladi)
 var pointA = 1;
 var pointB = 4;
 var pointC = 6.5;
@@ -14,9 +14,9 @@ var pointD = 7;
 var pointE = 8.5;
 var pointF = 9;
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // First effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); // Birinchi effekt, filtrdan qo'llanish
 
-// Second effect, volume changes
-setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // End of fade out
+// Ikkinchi effekt, tovush balandligini o'zgartirish
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC); // Kreshendo, eng yuqori nuqta
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE); // Pasayishning boshlanishi
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF); // Pasayishning tugashi
