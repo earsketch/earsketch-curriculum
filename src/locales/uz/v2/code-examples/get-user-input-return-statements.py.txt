@@ -1,4 +1,4 @@
-# Return Statements: Linking two beats together with return statements
+# Qaytarish Bayonotlari: Ikkita zarbani qaytarish bayonotlari orqali birlashtirish
 
 # Sozlash
 from earsketch import *
@@ -7,18 +7,18 @@ setTempo(100)
 rhythm1 = "0+++0+0+0+--0+00"
 rhythm2 = "0+0-00++0-000+++"
 
-# Music
+# Musiqa
 def createBeat(startMeasure, sound, beatString):
     endMeasure = startMeasure + 3
     for measure in range(startMeasure, endMeasure):
         makeBeat(sound, 1, measure, beatString)
 
-    # Return ending measure so we can use it outside function
+    # Nihoyat o'lchovni funktsiyadan tashaqari ishlata olish uchun qaytarish
     return endMeasure
 
-# Function calls
-# Assigning the value we return to a variable
+# Funktsiyani chaqirish
+# O'zgaruvchiga qaytarilgan qiymatni tayinlash
 newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1)
 
-# Passing the returned value into another function
+# Qaytarilgan qiymatni yana bir bor funktsiyaga o'tkazish
 createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2)
