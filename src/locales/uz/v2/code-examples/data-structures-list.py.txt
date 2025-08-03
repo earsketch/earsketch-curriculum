@@ -1,15 +1,15 @@
-# List: Using a list to hold several sounds
+# Ro'yxatlar: Bir nechta tovushni saqlash uchun ro'yxatlardan qo'llanish
 
 # Sozlash
 from earsketch import *
 setTempo(130)
 
-# Music
+# Musiqa
 
-# Creating a list of sounds
+# Tovushlar ro'yxatini yaratish
 myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11]
 
-# Placing sounds from measure 1 to 5
+# Tovushlarni 1-dan 5-gacha o'lchovlarga joylashtirish
 fitMedia(myEnsemble[0], 1, 1, 5)  # accessing index 0
 fitMedia(myEnsemble[1], 2, 1, 5)  # accessing index 1
 fitMedia(myEnsemble[2], 3, 1, 5)  # accessing index 2
