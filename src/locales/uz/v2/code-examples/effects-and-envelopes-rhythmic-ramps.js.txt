@@ -1,9 +1,9 @@
-// Rhythmic Ramps: Automating effects with a for loop
+// Ritmli rampalar: For halqasi orqali effektlarni avtomatlashtirish
 
 // Sozlash
 setTempo(120);
 
-// Music
+// Musiqa
 fitMedia(Y33_CHOIR_1, 1, 1, 9);
 fitMedia(RD_ELECTRO_MAINBEAT_5, 2, 1, 9);
 
