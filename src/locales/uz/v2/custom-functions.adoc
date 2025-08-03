@@ -191,15 +191,15 @@ Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'li
 . Kodingizdagi takrorlanishni kamaytirish uchun `for` halqalaridan foydalaning.
 . Bo'limlaringizni belgilash va qo'shiq tuzilmangizni yaratish uchun maxsus funktsiyalardan foydalaning.
 . Bir yoki ikkita mazmunli o'tishni qo'shing.
-. Add effects with `setEffect()`.
-. Add one or several conditional statements.
-. Make sure you use variables to store some information such as sound constants.
-. Make sure you use comments to explain what you are doing.
-. Kodingizni muntazam ravishda ishga tushirishni va qo'shiqni tinglashni unutmang. This will help you modify it until you like the sound of it.
-. Choose a name for your song.
+. SetEffect() yordamida effektlar qo'shing.
+. Bir yoki bir nechta shartli bayonotlarni qo'shing.
+. Ovozli klip nomlari kabi ba'zi ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanganingizga ishonch hosil qiling.
+. Nima qilayotganingizni tushuntirish uchun sharhlardan foydalanganingizga ishonch hosil qiling.
+. Kodingizni muntazam ravishda ishga tushirishni va qo'shiqni tinglashni unutmang. Bu sizga uning yangrashi o'zingizga yoqmagunga qadar uni o'zgartirishga yordam beradi.
+. Qo'shiq uchun nom tanlang.
 ****
 
-Here is an example of a full song:
+Mana to'liq qo'shiqning namunasi:
 
 [role="curriculum-python"]
 [source,python]
@@ -213,40 +213,40 @@ include::code-examples/custom-functions-total-atlanta-song-of-summer.py.txt[]
 include::code-examples/custom-functions-total-atlanta-song-of-summer.js.txt[]
 ----
 
-In this example, we have used a `for` loop inside a custom function! Biz for halqasi ichida (`start` va `end`) funktsiya parametrlaridan foydalandik.
+Ushbu misolda biz maxsus funktsiya ichida `for` halqasidan foydalandik! Biz for halqasi ichida (`start` va `end`) funktsiya parametrlaridan foydalandik.
 
 [[chapter7summary]]
-=== Chapter 7 Summary
+=== 7-Bob Xulosa
 
-* *Bo'limlar* bir nechta o'lchovlardan tashkil topgan o'zaro bog'liq musiqa birliklari. Each expresses an idea or feeling.
+* *Bo'limlar* bir nechta o'lchovlardan tashkil topgan o'zaro bog'liq musiqa birliklari. Ularning har biri g'oya yoki his-tuyg'ularni ifodalaydi.
 * *Oʻtishlar* musiqaning ketma-ket musiqiy boʻlimlarini bogʻlash uchun foydalaniladigan parchalardir.
-* Qo'shiqning tuzilishi va xilma-xilligi uning *shakli* deb nomlanadi. A common musical form is A-B-A.
-* *Maxsus funktsiyalar* - bu muayyan vazifani bajarish uchun dasturchi tomonidan yozilgan noyob funktsiyalar. You have to create a custom function to be able to call it. You can create as many parameters as you want.
-* *Abstraktsiya* - bu yagona, ko'pincha unchalik murakkab bo'lmagan tushunchani shakllantirish uchun g'oyalar to'plami. Functions are an example of abstraction.
+* Qo'shiqning tuzilishi va xilma-xilligi uning *shakli* deb nomlanadi. A-B-A keng qo'llaniladigan musiqiy shakl hisoblanadi.
+* *Maxsus funktsiyalar* - bu muayyan vazifani bajarish uchun dasturchi tomonidan yozilgan noyob funktsiyalar. Uni chaqira olish uchun maxsus funktsiya yaratishingiz kerak. Siz xohlagancha ko'p parametrlarni yaratishingiz mumkin.
+* *Abstraktsiya* - bu yagona, ko'pincha unchalik murakkab bo'lmagan tushunchani shakllantirish uchun g'oyalar to'plami. Funktsiyalar abstraktsiyaga bir misoldir.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of these is NOT an example of a musical section?
+Bulardan qaysi biri musiqiy qismga misol EMAS?
 
 [answers]
-* Drums
-* Intro
-* Verse
-* Chorus
+* Barabanlar
+* Muqaddima
+* She'r
+* Naqorat
 --
 
 [question]
 --
-What is an abstraction?
+Abstraksiya nima?
 
 [answers]
-* A bundling of ideas to form a single concept
-* A variety of sounds throughout sections
-* Parts of a song that are related, but also are distinct from each other
-* A statement that returns a value to the function call
+* Yagona tushunchani shakllantirish uchun g'oyalar to'plami
+* Bo'limlar bo'ylab turli xil tovushlar
+* Qo'shiqning o'zaro bog'liq bo'lgan, shu bilan birga bir-biridan farq qilgan qismlari
+* Funktsiya chaqiruviga qiymat qaytaruvchi bayonot
 --
 
 [role="curriculum-python"]
