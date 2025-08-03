@@ -1,4 +1,4 @@
-// Boolean expressions: printing boolean expressions
+// Mantiqiy ifodalar: mantiqiy ifodalarni chop etish
 
 // Sozlash
 setTempo(120);
