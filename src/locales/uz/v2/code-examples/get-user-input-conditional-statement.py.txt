@@ -1,4 +1,4 @@
-# Conditional statement: Using a boolean to create variation in a function
+# Shartli bayonot: Funktsiyalarda o'zgarishlar yaratish uchun mantiqiy ifodalardan foydalanish
 
 # Sozlash
 from earsketch import *
@@ -8,15 +8,15 @@ melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
 melody2 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_2
 drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
 
-# Function definition
+# Funktsiya ta'rifi
 def verse(start, variation):
-    # variation is either equal to True or False
+    # o'zgarish qiymati rost yoki yolg'on bo'lishi mumkin
     if variation:
         fitMedia(melody1, 1, start, start + 4)
     else:
         fitMedia(melody2, 1, start, start + 4)
-    fitMedia(drums1, 2, start, start + 4)  # this is outside the conditional statement (no indentation)
+    fitMedia(drums1, 2, start, start + 4)  # bu shartli bayonotdan tashqarida (chekinish yo'q)
 
-# Function calls
+# Funktsiyani chaqirish
 verse(1, True)
 verse(7, False)
