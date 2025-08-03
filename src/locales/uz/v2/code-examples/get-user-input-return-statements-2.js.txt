@@ -14,5 +14,5 @@ function verse(start) {
     return end;
 }
 // Funktsiyani chaqirish
-var endMeasure = verse(1); // calling verse function and start is measure 1
+var endMeasure = verse(1); // she'r funktsiyasini chaqirish va boshlang'ich o'lchamni 1ga tenglashtirish
 println(endMeasure);
