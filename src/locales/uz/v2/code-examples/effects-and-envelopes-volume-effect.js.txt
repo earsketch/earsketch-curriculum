@@ -11,6 +11,6 @@ var percussions1 = HOUSE_BREAK_FILL_002;
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
-// Mixing: increase the piano track and reduce the percussion track volumes
+// Miks qilish: pianino trekini ovozini baland qilish va barabanlar trekini pasaytirish
 setEffect(1, VOLUME, GAIN, 2);
 setEffect(2, VOLUME, GAIN, -15);
