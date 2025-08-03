@@ -1,12 +1,12 @@
-# Envelopes: Making envelopes with 7-parameter setEffect()
+# Konvertlar: 7 parametrli setEffect() bilan konvertlar yaratish
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Music
+# Musiqa
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Makes an effect ramp between measures 1 and 3, moving from -60dB to 0dB.
-# This is a fade in
+# 1 va 3 o'lchamlari orasida effekt rampasini yaratish. U -60dB dan 0dB ga otadi.
+# Bu 'fade in', ya'ni sekin asta tovushning baland bolishi
 setEffect(1, VOLUME, GAIN, -60, 1, 0, 3)
