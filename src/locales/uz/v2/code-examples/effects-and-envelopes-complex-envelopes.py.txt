@@ -1,13 +1,13 @@
-# Complex Envelopes: Using multiple setEffect() calls on a track to make changes in the effect envelope
+# Murakkab konvertlar: Effektlar konvertida o'zgartirishlar kiritish uchun trekda bir nechta setEffect() ni chaqirish
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Music
+# Musiqa
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Envelope time points (in measures)
+# Konvert vaqt nuqtalari (o'lchovlarda ko'rsatiladi)
 pointA = 1
 pointB = 4
 pointC = 6.5
@@ -15,9 +15,9 @@ pointD = 7
 pointE = 8.5
 pointF = 9
 
-setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB)  # First effect, filter sweep
+setEffect(1, FILTER, FILTER_FREQ, 20, pointA, 10000, pointB); # Birinchi effekt, filtrdan qo'llanish
 
-# Second effect, volume changes
-setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC)  # Crescendo
-setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # Begin fade out
-setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF)  # End of fade out
+# Ikkinchi effekt, tovush balandligini o'zgartirish
+setEffect(1, VOLUME, GAIN, -10, pointB, 0, pointC)  # Kreshendo, eng yuqori nuqta
+setEffect(1, VOLUME, GAIN, 0, pointD, -10, pointE)  # pasayishning boshlanishi
+setEffect(1, VOLUME, GAIN, -10, pointE, -60, pointF)  # Pasayishning tugashi
