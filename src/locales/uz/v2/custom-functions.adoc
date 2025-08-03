@@ -1,21 +1,21 @@
 [[customfunctionssongstructure]]
-== Custom Functions and Song Structure
+== Maxsus Funktsiyalar va Qo'shiq Tuzilmasi
 
 :nofooter:
 
-Qo'shiq tuzilmasi vaqt o'tishi bilan qo'shiqni tashkillashtirishdir. The goal is to create meaningful sections and transitions for the flow of your music. Ushbu bobda siz qo'shiqlaringizni tuzish uchun shaxsiy funktsiyangizni, maxsus funktsiyalarni yaratasiz!
+Qo'shiq tuzilmasi vaqt o'tishi bilan qo'shiqni tashkillashtirishdir. Maqsad musiqangiz oqimi uchun mazmunli bo'limlar va o'tishlarni yaratishdir. Ushbu bobda siz qo'shiqlaringizni tuzish uchun shaxsiy funktsiyangizni, maxsus funktsiyalarni yaratasiz!
 
 [[asongsstructure]]
 === Qo'shiq tuzilishi
 
 :nofooter:
 
-Qo'shiqni *bo'limlarga* bo'lish mumkin. A section is made up of several measures (musical time units), and it expresses an idea or feeling. Usually, musicians try to add contrast between different sections. _Intro, Verse, Chorus_, and _Outro_ are examples of sections.
+Qo'shiqni *bo'limlarga* bo'lish mumkin. Bo'lim bir nechta o'lchovlardan (musiqiy vaqt birliklaridan) iborat bo'lib, u fikr yoki tuyg'uni ifodalaydi. Odatda, musiqachilar turli bo'limlar o'rtasida kontrast qo'shishga harakat qilishadi. _Muqaddimalar, She'rlar, Naqoratlar_ va _Xotimalar_ bo'limlarga misoldir.
 
-Umumiy va oddiy *shakl* yoki qo'shiq tuzilishi ABA hisoblanadi. A and B are two different sections, for example chorus and verse. The B section adds variety, while returning to the A section invokes familiarity. The code below creates an ABA form. Section B features contrasting sounds to Section A - a slower and louder bass, and an additional rattling:
+Umumiy va oddiy *shakl* yoki qo'shiq tuzilishi ABA hisoblanadi. A va B ikki xil bo'limdir, masalan, naqorat va she'r. B bo'limi rang-baranglikni qo'shadi, A bo'limiga qaytish esa boxabarlikni chaqiradi. Quyidagi kod ABA shaklini yaratadi. B bo'limida A bo'limiga nisbatan kontrast tovushlar mavjud - sekinroq va balandroq bass va qo'shimcha shitirlash:
 
 [[imediau2sections_052016png]]
-.An ABA form within the EarSketch DAW
+.EarSketch RAIS ichidagi ABA shakli
 [caption="Figure 9.2: "]
 image::../media/U2/sections_052016.png[Alt Text]
 
@@ -33,19 +33,19 @@ include::code-examples/custom-functions-a-b-a-form.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
-Select a song that you like. Listen to it and try to notice the different sections. Can you tell when the musicians change sections? How many times do you hear the chorus and verse? What kind of contrasts can you observe? Share your example with your neighbor.
+O'zingizga yoqqan qo'shiqni tanlang. Uni tinglang va turli bo'limlarga e'tibor berishga harakat qiling. Musiqachilar bo'limlarni qachon o'zgartirishini ayta olasizmi? Naqorat va she'rni nechi marta eshittingiz? Qanday kontrastni kuzata olyapsiz? O'zingizning misolingizni qo'shningiz bilan baham ko'ring.
 ****
 
-Keep in mind that a musical phrase sounds most natural when sounds are arranged into groups of two, four, eight, sixteen, etc. So your sections should preferably have a size of two, four, eight, or sixteen measures.
+Yodda tutingki, kliplar 2, 4, 8, 16 guruhlarga ajratilganda musiqiy ibora tabiiy eshitiladi. Shuning uchun, sizning bo'limlaringiz 2, 4, 8, 16 o'lchovlarga ega bo'lishi kerak.
 
 [[creatingyourcustomfunctions]]
-=== Create your custom functions
+=== Maxsus funktsiyalaringizni yarating
 
-In the previous example with the ABA song, the code is large, and the code is repeated for the second A section. There is a way to be more concise, thanks to *custom functions*! We will define a function that will represent section A, then call the function twice.
+ABA qo'shig'i bilan oldingi misolda kod katta bo'lib, u ikkinchi A bo'limi uchun ham takrorlanadi. *Maxsus funktsiyalar* ko'magida yanada samaraliroq bo'lish yo'li bor! Biz A bo'limini ifodalovchi funktsiyani aniqlaymiz, so'ngra funktsiyani ikki marta chaqiramiz.
 
-The difference with functions that you have used like `fitMedia()`, is that `fitMedia()` is already pre-defined by our team to play a sound. In a custom function, you get to define exactly what it does. Here is how you would define section A:
+`fitMedia()` kabi funktsiyalardan farqi shundaki, `fitMedia()` qo‘shiqni ijro etish uchun jamoamiz tomonidan oldindan belgilab qo‘yilgan. Maxsus funktsiyada siz uning nima qilishini aniq belgilashingiz mumkin. A bo'limini mana shunday belgilashingiz mumkin:
 
 [role="curriculum-python"]
 [source,python]
@@ -59,30 +59,30 @@ include::code-examples/custom-functions-untitled1.py.txt[]
 include::code-examples/custom-functions-untitled1.js.txt[]
 ----
 
-. `sectionA()` is the name we chose for our function. You can choose any name you like. Try to name your function in a descriptive way so your code is easier to read.
-. Ko'rsatmalar funktsiyaning *tanasi* hisoblanadi. They are indented.
+. `sectionA()` funktsiyamiz uchun tanlagan nomdir. O'zingizga yoqqan har qanday nomni tanlashingiz mumkin. Funktsiyangizni tavsiflovchi tarzda nomlashga harakat qiling, shunda kodingizni o'qish osonroq bo'ladi.
+. Ko'rsatmalar funktsiyaning *tanasi* hisoblanadi. Ular chekingan bo'ladi.
 
-.PRACTICE
+.AMALIYOT
 ****
-Paste this code in a new script, and run it. You should see that your DAW remains empty.
+Ushbu kodni yangi skriptga joylashtiring va uni ishga tushiring. Siz RAIS bo'sh qolganligini ko'rishingiz kerak.
 Buning sababi, uni ishlatish uchun funktsiyani *chaqirishingiz* kerak.
-Funktsiyangizni chaqirish uchun funktsiya izohidan so'ng `sectionA()` qatorini chekintirmasdan qo'shing. When running the code, you should see section A in your DAW
+Funktsiyangizni chaqirish uchun funktsiya izohidan so'ng `sectionA()` qatorini chekintirmasdan qo'shing. Kodni ishga tushirishda siz RAIS-da A bo'limini ko'rishingiz kerak
 ****
 
-Now we want to add section A from measures nine to thirteen. However, when we call `sectionA()`, the sounds are placed from measures one to five. Ushbu muammoni hal qilishda biz funktsiyamiz uchun *parametrlarni* yaratamiz.
+Endi biz A bo'limini 9 dan 13 gacha o'lchovlarda qo'shmoqchimiz. Biroq, `sectionA()` ni chaqirganimizda, tovushlar 1 dan 5 gacha o'lchovlardan joylashtiriladi. Ushbu muammoni hal qilishda biz funktsiyamiz uchun *parametrlarni* yaratamiz.
 
-.PRACTICE
+.AMALIYOT
 ****
-In your current script you created for the previous practice problem:
+Avvalgi amaliyot muammosi uchun siz joriy skriptingizda yaratgansiz:
 
-1. Add the parameters `startMeasure` and `endMeasure` separated by a comma between the parentheses of the sectionA function in its definition like this: `sectionA(startMeasure,endMeasure)`.
-1. In the function's body, replace the start measure (`1`) and end measure (`5`) by `startMeasure` and `endMeasure` respectively.
-1. Funktsiyangizni chaqirganingizda, qavslar orasiga `1` va `5` parametrlarini qo'shing. Run the code to make sure there is no error.
-1. Bu safar `9` va `13` parametrlari bilan ikkinchi funktsiya chaqiruvini qo'shing. Run the code to make sure there is no error.
-1. Define a function for section B, using the same process, and call section B from measures five to nine and from measures thirteen to seventeen.
+1. sectionA funktsiyasi ta'rifi uchun qavslar ichida hamda vergul bilan ajratilgan `startMeasure` va `endMeasure` parametrlarini qo'shing: `sectionA(startMeasure,endMeasure)`.
+1. Funktsiyaning tanasida boshlan'ich o'lchovlarini (`1`) va yakunlash o'lchovlarini (`5`) mos ravishda `startMeasure` va `endMeasure` bilan almashtiring.
+1. Funktsiyangizni chaqirganingizda, qavslar orasiga `1` va `5` parametrlarini qo'shing. Hech qanday xato yo'qligiga ishonch hosil qilish uchun kodni ishga tushiring.
+1. Bu safar `9` va `13` parametrlari bilan ikkinchi funktsiya chaqiruvini qo'shing. Hech qanday xato yo'qligiga ishonch hosil qilish uchun kodni ishga tushiring.
+1. Xuddi shu jarayondan foydalanib, B bo'limi uchun funktsiyani aniqlang hamda 5 dan 9 gacha va 13 dan 17 gacha bo'lgan o'lchovlardan B qismini chaqiring.
 ****
 
-Here is what your code could look like:
+Sizning kodingiz shunday ko'rinishi mumkin:
 
 [role="curriculum-python"]
 [source,python]
@@ -107,15 +107,15 @@ video::./videoMedia/009-03-CustomFunctions-PY.mp4[]
 video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 
 [[transitionstrategies]]
-=== Transition Strategies
+=== O'tish Strategiyalari
 
-Endi siz qo'shiqni tuzish uchun maxsus funktsiyalarni qanday yaratishni bilasiz, keling, o'tishlarni ko'rib chiqaylik. *O'tishlar* bir bo'lim ikkinchisiga silliq o'tishiga yordam beradi. They can connect verse and chorus, build up to a drop, mix between tracks (DJing), or change keys. O'tishning maqsadi tinglovchining e'tiborini jalb qilish va ularga o'zgarish sodir bo'lishini bildirishdir.
+Endi siz qo'shiqni tuzish uchun maxsus funktsiyalarni qanday yaratishni bilasiz, keling, o'tishlarni ko'rib chiqaylik. *O'tishlar* bir bo'lim ikkinchisiga silliq o'tishiga yordam beradi. Ular she'r va naqoratni bog'lashi, notalarni biriktirishi, treklar o'rtasida miks qilish (DJ-lik) yoki ohangni o'zgartirishi mumkin. O'tishning maqsadi tinglovchining e'tiborini jalb qilish va ularga o'zgarish sodir bo'lishini bildirishdir.
 
-Following are some popular strategies for creating musical transitions:
+Quyida musiqiy o'tishlarni yaratish uchun mashhur strategiyalar keltirilgan:
 
 . *To'qnashuv Simbali*: To'qnashuv Simbalini yangi qismning birinchi zarbasiga joylashtirish.
 . *Baraban bilan toʻldirish*: Yangi boʻlim oldidagi boʻshliqni toʻldirish uchun ritmik oʻzgarishlar.
-. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
+. *Trekni o'chirish*: Dramatik effekt uchun ba'zi treklarni vaqtinchalik o'chirib qo'yish.
 . *Ohangning o'zgarishi*: yangi bo'lim oldidan akkordlar, bass qatori yoki ohangning o'zgarishini kiritish. Often, a folder within the EarSketch sound library contains variations of a similar riff.
 . *Ko'taruvchi*: Tovush pardasini oshiradigan nota yoki shovqin. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. You can use the search term "riser" in the Sound Browser. A reversed crash cymbal can be used as a riser, like YG_EDM_REVERSE_CRASH_1.
 . *Pistirma Kasri*: ortib borayotgan zichlik, tovush pardasi yoki amplituda bilan takrorlangan pistirma urishlar ketma-ketligi. You can use a sound like RD_FUTURE_DUBSTEP_FILL_1 or HOUSE_BREAK_FILL_003, or with `makeBeat()`.
@@ -123,7 +123,7 @@ Following are some popular strategies for creating musical transitions:
 . *Krossfeyding*: Bir qismning ovozini balandligini pasaytirish va yangi bo'limning ovoz balandligini oshirish.
 . *Anakrusis*: Yangi bo'limning ohangi ikki zarbaga ertaroq boshlanganadi.
 
-.PRACTICE
+.AMALIYOT
 ****
 Looking at this list of possible transitions, select two of them and try to see how you could implement them using code. You can work in pairs. Bu haqda o'ylab ko'rganingizdan so'ng, quyidagi misollarni ko'rishingiz mumkin.
 
@@ -179,7 +179,7 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 
 In programming we can create *abstractions*, the bundling of ideas to form a single concept. In music, we group musical ideas into sections. Functions are one kind of abstraction used in computer science. They pack multiple statements into one tool so they can be easily referred to. Abstractions can make the form of a program clearer.
 
-.PRACTICE
+.AMALIYOT
 ****
 Keling, EarSketch-da siz kashf etgan barcha vositalardan foydalangan holda to'liq qo'shiq yarataylik! Here is a suggestion of how to work, but you can adapt it as you like:
 
@@ -275,11 +275,11 @@ Ushbu variantlardan qaysi biri `myFunction()` funktsiyasini `startMeasure` va `e
 
 [question]
 --
-Which of these is NOT an example of a transition?
+Bulardan qaysi biri o'tish uslubiga misol EMAS?
 
 [answers]
-* Melody Consistency
-* Crash Cymbal
-* Riser
-* Track Silencing
+* Ohangning Izchilligi
+* To'qnashuv Simbali
+* Ko'taruvchi
+* Trekning ovozini o'chirish
 --
