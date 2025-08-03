@@ -1,35 +1,35 @@
-# String and Lists Operations: Showing what we can do with lists and strings
+# Satr va Ro'yxatlar Operatsiyalari: Massiv va satrlar bilan nima qila olishimizni namoyish qilamiz
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Creating my beat strings and arrays
+# Zarba satrlarini va massivlarni yaratish
 stringA = "0+++----0+++--0+"
 stringB = "0-0-0-0-----0-0-"
 soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]
 soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2]
 
-# Print the second character of each string.
+# Har bir satrning ikkinchi belgisini chop eting.
 print(stringA[1])
 print(stringB[1])
 
-# Print the last element of your lists.
+# Ro'yxatlaringizning oxirgi elementini chop eting.
 print(soundsA[len(soundsA) - 1])
 print(soundsB[len(soundsB) - 1])
 
-# Create and print stringC, the concatenation of stringA and stringB.
+# stringA va stringB yopishmasidan stringC yarating va chop eting.
 stringC = stringA + stringB
 print(stringC)
 
-# Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+# soundsA, soundsB va yana soundsA yopishmasidan SoundsC yarating va chop eting.
 soundsC = soundsA + soundsB + soundsA
 print(soundsC)
 
-# Create and print stringD, the slice of stringC from the second to the fifth characters included.
+# stringC ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan stringD yarating va chop eting.
 stringD = stringC[1:5]
 print(stringD)
 
-# Create and print soundsD, the slice of stringC from the third to the last elements included.
+#soundsC ning uchinchidan oxirgi elementigacha bo'lgan qismidan soundsD yarating va chop eting.
 soundsD = soundsC[2 : len(soundsC)]
 print(soundsD)
