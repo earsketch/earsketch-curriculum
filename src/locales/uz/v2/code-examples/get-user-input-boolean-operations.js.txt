@@ -1,32 +1,32 @@
-// Boolean operations: Asking user for genre and creating beat accordingly
+// Mantiqiy operatsiyalar: Ishlatuvchidan janrni so'rab olish va javobga ko'ra zarbani yaratish
 
 // Sozlash
 setTempo(120);
 
-// Sound variables
+//Tovush o'zgaruvchilari
 var kick = OS_KICK02;
 var hihat = OS_CLOSEDHAT04;
 var clap = OS_CLAP03;
 
-// Beat string variables
+// Zarba satr o'zgaruvchilari
 var hiphopKickBeat = "0++++---0+++0+++";
 var hiphopHihatBeat = "----0---00---000";
 var edmKickBeat = "0+++----0+++----";
 var edmClapBeat = "----0-------0---";
 
-// Requesting user input
-var genre = readInput("What genre is your favorite? Hip Hop or EDM?");
+// Ishlatuvchidan kirimni so'rab olish
+var genre = readInput("Qaysi janrni yoqtirasiz? Hip Hop yoki EDM?");
 
-// Creating the appropriate rhythm
+// Kerak bo'lgan ritmni yaratish
 if ((genre === "Hip Hop") || (genre === "hip hop") || (genre === "HIP HOP")) {
-    makeBeat(kick, 1, 1, hiphopKickBeat);
+    makeBeat(kick, 1, 1, kickBeat);
     makeBeat(hihat, 2, 1, hiphopHihatBeat);
 } else if ((genre === "edm") || (genre === "Edm") || (genre === "EDM")) {
     makeBeat(kick, 1, 1, edmKickBeat);
     makeBeat(clap, 2, 1, edmClapBeat);
 } else {
-    println("Sorry we couldn't read the genre you selected. Please run the code again.");
+    println("Kechirasiz. Siz tanlagan janrni biz o'qiy olmadik. Iltimos, kodni qayta ishga tushiring.");
 }
 
-// Adding some reverb on track 2
+// 2-trekka reverb effektini qo'shish
 setEffect(2, REVERB, MIX, 0.1);
