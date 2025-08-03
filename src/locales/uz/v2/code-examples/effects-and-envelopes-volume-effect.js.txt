@@ -1,13 +1,13 @@
-// Volume Effect: Modifying the volume of 2 tracks
+// Tovush hajmi effekti: 2 ta trek tovush hajmini o'zgartirish
 
 // Sozlash
 setTempo(120);
 
-// Variables
+// O'zgaruvchilar
 var piano1 = COMMON_LOVE_THEME_PIANO_2;
 var percussions1 = HOUSE_BREAK_FILL_002;
 
-// Placing the sounds
+// Tovushlarni joylashtirish
 fitMedia(piano1, 1, 1, 5);
 fitMedia(percussions1, 2, 3, 5);
 
