@@ -21,14 +21,14 @@ println(soundsB[soundsB.length - 1]);
 var stringC = stringA + stringB;
 println(stringC);
 
-// Create and print soundsC, the concatenation your soundsA, soundsB and soundsA again.
+// soundsA, soundsB va yana soundsA yopishmasidan SoundsC yarating va chop eting.
 var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
 println(soundsC);
 
-// Create and print stringD, the slice of stringC from the second to the fifth characters included.
+// stringC ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan stringD yarating va chop eting.
 var stringD = stringC.substring(1, 5);
 println(stringD);
 
-// Create and print soundsD, the slice of stringC from the third to the last elements included.
+//soundsC ning uchinchidan oxirgi elementigacha bo'lgan qismidan soundsD yarating va chop eting.
 var soundsD = soundsC.slice(2, soundsC.length);
 println(soundsD);
