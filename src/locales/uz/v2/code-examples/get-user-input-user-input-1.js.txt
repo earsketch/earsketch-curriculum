@@ -1,8 +1,8 @@
-// User input 1: Asking the user for the tempo
+// Foydalanuvchi kiritgan ma'lumot 1: Foydalanuvchidan tempni sorab olish
 
 // Sozlash
 
-// asking for tempo
+// Tempni sorab olish
 var question = "What tempo would you like for your music? Choose a number between 45 and 220";
 var answer = readInput(question);
 
