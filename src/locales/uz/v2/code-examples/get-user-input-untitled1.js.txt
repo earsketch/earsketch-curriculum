@@ -1,2 +1,2 @@
-var answer = readInput("What tempo would you like for your music?");
+var answer = readInput("Musiqangiz qanday tempda bo'lishini istaysiz?");
 println(answer);
