@@ -1,4 +1,4 @@
-// Finding errors: Five errors below must be fixed
+// Xatolar topish: Beshta xatoni tuzatish kerak
 
 setTempo(88;
 
