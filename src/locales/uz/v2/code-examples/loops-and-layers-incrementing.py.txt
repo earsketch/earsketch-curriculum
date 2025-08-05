@@ -1,4 +1,4 @@
-# Incrementing: Creating an alternating drum beat
+# O'stirish: O'zgaruvchan baraban zarbasini yaratish
 
 from earsketch import *
 setTempo(120)
