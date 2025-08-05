@@ -1,9 +1,9 @@
-// Using fitMedia() 2: Multiple fitMedia() calls on different tracks
+// fitMedia() dan foydalanish 2: Turli treklarga fitMedia() funktsiyasini bir nechta marta chaqirish
 
-// Setup Section
+// Sozlash Bo'limi
 setTempo(100);
 
-// Music Section
+// Musiqa bo'limi
 fitMedia(Y01_DRUMS_1, 1, 1, 9);
 fitMedia(Y11_BASS_1, 2, 1, 9);
 fitMedia(Y11_GUITAR_1, 3, 1, 9);
