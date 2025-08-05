@@ -1,7 +1,7 @@
-// Using fitMedia(): Adding a sound to the DAW
+// fitMedia() dan foydalanish: RAISga tovush qo'shish
 
 // Sozlash
 setTempo(120);
 
-// Music
+// Musiqa
 fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);
