@@ -3,14 +3,14 @@
 // Sozlash
 
 // Tempni sorab olish
-var question = "What tempo would you like for your music? Choose a number between 45 and 220";
+var question = "Musiqangiz qanday tempda bo'lishini istaysiz? 45 dan 220 gacha bo'lgan raqam tanlang";
 var answer = readInput(question);
 
-// converting to a number
+// songa aylantirish
 var tempo = Number(answer);
 
-// setting the tempo
+// tempni o'rnatish
 setTempo(tempo);
 
-// music
+// Musiqa
 fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
