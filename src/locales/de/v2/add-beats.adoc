@@ -30,13 +30,13 @@ Ein *Zeichen* kann jede Zahl, jeder Buchstabe oder jedes Symbol sein. Ein *Strin
 Um eine Variable zu verwenden,
 
 [role="curriculum-python"]
-. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Das Schreiben von `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. Musst du sie zuerst *zuweisen*. Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Das Schreiben von `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
 . `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
 . Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Du kannst die Variable nur verwenden, nachdem sie zugewiesen wurde, nicht vorher. Schreibe z.B. `fitMedia(synth1, 1, 1, 3)`.
 . Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
 
 [role="curriculum-javascript"]
-. Musst du sie zuerst *zuweisen* Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Wir verwenden auch den Befehl `var` am Anfang der Zeile. Das Schreiben von `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
+. Musst du sie zuerst *zuweisen*. Wir verwenden das Symbol `=`, das als *Zuweisungsoperator* bezeichnet wird. Wir verwenden auch den Befehl `var` am Anfang der Zeile. Das Schreiben von `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` bedeutet, dass du eine Variable namens `synth1` erstellst und die Daten `HIPHOP_SYNTHPLUCKLEAD_005` in dieser Variable speicherst.
 . `HIPHOP_SYNTHPLUCKLEAD_005` ist der *Wert* von `synth1`.
 . Dann musst du die Variable aufrufen: Benutze `synth1` in deinem Code. Schreibe z.B. `fitMedia(synth1, 1, 1, 3);`.
 . Wenn du den Code ausführst, wird der Computer verstehen, dass er den Sound-Clip-Namen `HIPHOP_SYNTHPLUCKLEAD_005` verwenden muss, wenn er `synth1` liest.
@@ -89,7 +89,7 @@ Lernen wir zunächst einige grundlegende Konzepte zum Thema Rhythmus kennen:
 * Ein *Takt* (measure) ist eine musikalische Zeiteinheit mit einer bestimmten Anzahl von Schlägen. In EarSketch ist 1 *Takt* 4 Schläge lang. Da ein Takt also vier Schläge hat, werden sie auch als *Viertelnoten* (1/4) bezeichnet.
 * Jeder Beat kann in *Subbeats* unterteilt werden. Zum Beispiel kann eine 1/4 Note in zwei *Achtel (1/8) Noten* unterteilt werden. Wenn du 1/4 Noten zählst, sagst du "1, 2, 3, 4...." Beim Zählen von 1/8 Notizen kannst du "unds" verwenden: "1 und 2 und 3 und 4 und...."
 * Eine 1/8 Note kann auch in 2 *Sechzehntel (1/16) Noten* aufgeteilt werden. Beim Zählen von 1/16 Noten kannst du "e" und "a" auf jeder Seite des "und" verwenden: "1 e and a 2 e and a 3 e and a 4 e and a. .."
-* Ein Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wir (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
+* Ein Takt sind 4 x (1/4) Noten, 8 x (1/8) Noten oder 16 x (1/16) Noten. Beachte, dass die Summe aller Noten in einem Takt gleich 1 sein muss. Sie können gemischt werden wie (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16 + 1/16) = 1.
 * Ein *Metronom* hilft dem Musiker den Rhythmus seines Stücks zu bestimmen, indem er auf den Schlag klickt. In der EarSketch DAW kannst du das Metronom ein- oder ausschalten mit dem Symbol "Metronom ein/aus".
 
 [[imediameasurepng]]
@@ -140,7 +140,7 @@ Achtelnoten: `"0+0+0+0+0+0+0+0+"`
 (gelesen: "1 und 2 und 3 und 4")
 
 ++++
-<0>audioMedia/beatString11.mp3</0>
+<div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
 ++++
 
 Sechzehntel Noten: `"00000000000000"`
@@ -154,7 +154,7 @@ Sechzehntel Noten: `"00000000000000"`
 (gelesen: "1 und 2, 3 und 4")
 
 ++++
-<0>audioMedia/beatString2.mp3</0>
+<div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
 ++++
 
 `"0---0---0-0-0---"`
