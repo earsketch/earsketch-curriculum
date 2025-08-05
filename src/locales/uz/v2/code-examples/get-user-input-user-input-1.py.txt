@@ -1,17 +1,16 @@
-# User input 1: Asking the user for the tempo
+# Foydalanuvchi kiritgan ma'lumot 1: Foydalanuvchidan tempni sorab olish
 
 # Sozlash
 from earsketch import *
 
-# asking for tempo
-question = "What tempo would you like for your music? Choose a number between 45 and 220"
-answer = readInput(question)
+# Tempni sorab olish
+question = "Musiqangiz qanday tempda bo'lishini istaysiz? 45dan 220gacha bo'lgan raqam tanlang"
 
-# converting to an integer
+// butun songa aylantirish
 tempo = int(answer)
 
-# setting the tempo
+# tempni o'rnatish
 setTempo(tempo)
 
-# music
+# Musiqa
 fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)
