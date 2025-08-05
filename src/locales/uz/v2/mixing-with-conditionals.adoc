@@ -42,9 +42,9 @@ Konsolingizda chop etilgan ovoz balandligi 0,10306035109110138 ekanligini o'qish
 `analyzeTrack()` parametri ovoz balandligini baholash uchun `RMS_AMPLITUDE` yoki tovush yorqinligini tahlil qilish uchun `SPECTRAL_CENTROID` boʻlishi mumkin. Biz ushbu bobda ovoz balandligini tahlil qilishga e'tibor qaratamiz.
 
 [[booleansandcomparisons]]
-=== Booleans and comparisons
+=== Mantiqiy qiymatlar va taqqoslashlar
 
-We will now see how *Boolean Logic* works. This will help us automate some tasks.
+Endi biz *Boolean mantig'i*ning qanday ishlashini ko'rib chiqamiz. Bu bizga ba'zi vazifalarni avtomatlashtirishga yordam beradi.
 
 [role="curriculum-python"]
 *Mantiqiy qiymatlar* ma'lumotlar turidir. Boolean ma'lumotlar turi faqat ikkita mumkin bo'lgan qiymatga ega, `True` va `False`. `True` va `False` soʻzlari bosh harf bilan boshlanadi va qo'shtirnoqsiz yoziladi.
@@ -54,30 +54,30 @@ We will now see how *Boolean Logic* works. This will help us automate some tasks
 
 [role="curriculum-python"]
 --
-Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = True;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Here are the comparison operators:
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = True;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Quyida taqqoslash operatorlari:
 
 [cols="^h,1"]
 |===
 |==
-|is equal to
+|... ga teng
 
 |!=
-|is not equal to
+|... ga teng emas
 
 |>
-|is greater than
+|...dan kattaroq
 
 |>=
-|is greater than or equal
+|...dan kattaroq yoki barobar
 
 |<
-|is less than
+|...dan kam
 
 |\<=
-|is less than or equal
+|...dan kichik yoki teng
 |===
 
-Note the difference between:
+Bular o'rtasidagi farqqa e'tibor bering:
 
 1. Ikki qiymatni taqqoslash, ularning bir xilligini aniqlash uchun: `==`
 1. O'zgaruvchiga qiymat tayinlash: `=`
@@ -85,32 +85,32 @@ Note the difference between:
 
 [role="curriculum-javascript"]
 --
-Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = true;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Here are the comparison operators:
+Mantiqiy qiymat yaratish uchun siz o‘zgaruvchini ishga tushirishingiz mumkin (`var variable1 = true;`) yoki taqqoslashdan foydalanishingiz mumkin. Taqqoslash uchun biz *taqqoslash operatoridan* foydalanamiz. Quyida taqqoslash operatorlari:
 
 [cols="^h,1"]
 |===
 |===
-|is equal to
+|... ga teng
 
 |!==
-|is not equal to
+|... ga teng emas
 
 |>
-|is greater than
+|...dan kattaroq
 
 |>=
-|is greater than or equal
+|...dan kattaroq yoki barobar
 
 |<
-|is less than
+|...dan kam
 
 |\<=
-|is less than or equal
+|...dan kichik yoki teng
 |===
 
-Note the difference between:
+Bular o'rtasidagi farqqa e'tibor bering:
 
-1. Comparing two values to see if they are equal: `===`
+1. Ikki qiymatni taqqoslash, ularning bir xilligini aniqlash uchun: `===`
 1. O'zgaruvchiga qiymat tayinlash: `=`
 --
 
@@ -127,22 +127,22 @@ video::./videoMedia/6_2_1_boolean_js.mp4[]
 [role="curriculum-python"]
 .AMALIYOT
 ****
-* Create a new script, and add sounds on two tracks.
+* Yangi skript yarating va 2 trekka tovush qo'shing.
 * Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `Rost`, aks holda `Yolg'on` deb chop eting.
 * Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `Rost`ni, bo'lmasa, `Yolg'on`ni chop eting.
-* Siz `True` yoki `False`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `Rost` yoki `Yolg'on` ekanligini bilib olasiz. For example, you can first print the track number and then 'True' or 'False'.
+* Siz `True` yoki `False`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `Rost` yoki `Yolg'on` ekanligini bilib olasiz. Masalan, avval trek raqamini, so'ngra 'Rost' yoki 'Yolg'on'ni chop etishingiz mumkin.
 ****
 
 [role="curriculum-javascript"]
 .AMALIYOT
 ****
-* Create a new script, and add sounds on two tracks.
+* Yangi skript yarating va 2 trekka tovush qo'shing.
 * Agar birinchi trek ikkinchi trekdan balandroq bo'lsa, `rost`, aks holda `yolg'on` deb chop eting.
 * Har bir trek uchun ovoz balandligi 0,01 dan aniq katta ekanligini tekshirish uchun `trek` hisoblagichi bilan for halqasidan foydalaning. Agar shunday bo'lsa, `rost`ni, bo'lmasa, `yolg'on`ni chop eting.
-* Siz `true` yoki `false`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `rost` yoki `yolg'on` ekanligini bilib olasiz. For example, you can first print the track number and then 'true' or 'false'.
+* Siz `true` yoki `false`ni chop etishdan oldin qo‘shimcha chop etish bayonotlaridan foydalanishingiz mumkin, shunda konsolni o‘qiganingizda nima `rost` yoki `yolg'on` ekanligini bilib olasiz. Masalan, avval trek raqamini, so'ngra 'rost' yoki 'yolg'on'ni chop etishingiz mumkin.
 ****
 
-Here is an example:
+Mana bir misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -157,17 +157,17 @@ include::code-examples/mixing-with-conditionals-boolean-example.js.txt[]
 ----
 
 [role="curriculum-python"]
-In this example, we used `print()` with strings to help read the content of the console. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun, str() funktsiyasidan esa raqamlarni satrlarga aylantirish uchun foydalandik.
+Bu misolda biz konsoldagi ma'lumotni o'qiy olishimiz uchun `print()` va satrlardan foydalandik.  Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun, str() funktsiyasidan esa raqamlarni satrlarga aylantirish uchun foydalandik.
 
 [role="curriculum-javascript"]
-In this example, we used `println()` with strings to help read the content of the console. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun foydalandik.
+Bu misolda biz konsoldagi ma'lumotni o'qiy olishimiz uchun `print()` va satrlardan foydalandik. Biz `+` operatoridan *yopishtirish* yoki satrlarni qoʻshish uchun foydalandik.
 
 [[conditionalstatements]]
-=== Conditional Statements
+=== Shartli Bayonotlar
 
-What is a conditional statement? *Bayonot* - bu kompyuter uchun ko'rsatma. *Shartli bayonot* - bu ma'lum bir *shart* rost bo'lgandagina bajarilishi kerak bo'lgan ko'rsatma. For example if you program a robot for it to stop in front of an obstacle, the condition is "is there an obstacle?". If yes, then stop. Agar yo'q bo'lsa, hech narsa qilmang (davom eting).
+Shartli Bayonot nima? *Bayonot* - bu kompyuter uchun ko'rsatma. *Shartli bayonot* - bu ma'lum bir *shart* rost bo'lgandagina bajarilishi kerak bo'lgan ko'rsatma. Misol uchun, agar siz robotni to'siq oldida to'xtash uchun dasturlashtirsangiz, shart "to'siq bormi?" bo'ladi. Ha bo'lsa, to'xtating. Agar yo'q bo'lsa, hech narsa qilmang (davom eting).
 
-Below is an example of conditional statement, note the similarity with a for loop:
+Quyida shartli bayonotning namunasi keltirilgan, for halqasi bilan o'xshashligiga e'tibor bering:
 
 [role="curriculum-python"]
 [source,python]
@@ -183,12 +183,12 @@ include::code-examples/mixing-with-conditionals-untitled1.js.txt[]
 
 .AMALIYOT
 ****
-* Create a new script with two tracks.
-* If the first track is louder than the second one, then reduce its volume. You'll need the `analyzeTrack()` and `setEffect()` functions, plus an `if` statement.
-* You will need a negative gain (between -1dB and -60dB) to reduce the volume.
+* 2 trekdan iborat yangi skript yarating.
+* Agar birinchi trekning ovozi ikkinchisidan balandroq bo'lsa, uning ovozini pasaytiring. Sizga `analyzeTrack()` va `setEffect()` funktsiyalari hamda `if` bayonoti kerak bo`ladi.
+* Ovozni pasaytirish uchun sizga salbiy o'sish (-1dB va -60dB oralig'ida) kerak bo'ladi.
 ****
 
-Here is an example:
+Mana bir misol:
 
 [role="curriculum-python"]
 [source,python]
