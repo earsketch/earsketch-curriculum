@@ -1,13 +1,13 @@
-// Looping my beats: Looping a makeBeat() instruction with a for loop
+// Zarbalarni halqalash: makeBeat() ko'rsatmasini for halqasi bilan ishlatish
 
-// Setup:
+// Sozlash
 setTempo(120);
 
-// Variables
+// O'zgaruvchilar
 var drum1 = OS_SNARE03;
 var beat_string = "0---0---0-0-0---";
 
-// Looping our beat
+// Zarbamizni halqalash
 for (var measure = 1; measure < 5; measure++) {
     makeBeat(drum1, 1, measure, beat_string);
 }
