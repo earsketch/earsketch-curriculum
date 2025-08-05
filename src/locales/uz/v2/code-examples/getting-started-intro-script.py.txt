@@ -1,8 +1,8 @@
-# Intro Script: This code adds one sound to the DAW
+# Boshlang'ich Skript: Ushbu kod RAISga bitta tovush qoshadi
 
 # Setup Section
 from earsketch import *
 setTempo(120)
 
-# Music Section
+# Musiqa bo'limi
 fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
