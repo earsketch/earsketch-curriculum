@@ -1,13 +1,13 @@
-// No loops: Musical repetition created without code loops
+// Halqalar yo'q: Halqalarni ishlatmasdan musiqaviy takroralsh
 
 // Sozlash
 setTempo(120);
 
-// Music
+// Musiqa
 var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
 var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
 
-// All of these fitMedia() calls could be replaced with two calls placed in a loop.
+// Quiyidagi barcha fitMedia() chaqiruvlarini o'rniga ikkita for halqadan foydalanish mumkin.
 
 fitMedia(drums1, 1, 1, 1.5);
 fitMedia(drums2, 1, 1.5, 2);
