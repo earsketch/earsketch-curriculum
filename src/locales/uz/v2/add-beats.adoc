@@ -57,7 +57,7 @@ include::code-examples/add-beats-instead-of-this.js.txt[]
 
 .AMALIYOT
 ****
-In your previous scripts, use variables to store your sound constants. Look at the examples below for help. Make sure that your variables have short and understandable names (like `bass` or `voice_1`).
+Avvalgi skriptlaringizda ovozli klip nomlarini saqlash uchun o'zgaruvchilardan foydalaning. Yordam olish uchun quyidagi misollarni ko'rib chiqing. O'zgaruvchilaringiz qisqa va tushunarli nomlarga ega ekanligiga ishonch hosil qiling (masalan, `bas`, `tovush_`,...).
 ****
 
 {nbsp} +
@@ -74,42 +74,42 @@ include::code-examples/add-beats-variables.py.txt[]
 include::code-examples/add-beats-variables.js.txt[]
 ----
 
-E'tibor bering, o'zgaruvchini tushunarli va tavsiflovchi tarzda nomlash muhim. Misol uchun, hech qanday ma'lumot bermaydigan `music1` yoki `test` o'rniga `synth1` ni belgilang. This way, when you or someone else reads your code, they can see what you are referring to.
+E'tibor bering, o'zgaruvchini tushunarli va tavsiflovchi tarzda nomlash muhim. Misol uchun, hech qanday ma'lumot bermaydigan `music1` yoki `test` o'rniga `synth1` ni belgilang. Shunday qilib, siz yoki boshqa birov sizning kodingizni o'qiganda, ular siz nimani nazarda tutayotganingizni ko'rishlari mumkin.
 
-*Konstanta* o'zgaruvchiga o'xshaydi, chunki u o'zida qiymatlarni saqlaydi. However, the value of a constant never changes. For example, in EarSketch, `TECHNO_SYNTHPLUCK_001` is a constant, it refers to the corresponding sound constant. By convention, constant names are capitalized and use underscores instead of spaces.
+*Konstanta* o'zgaruvchiga o'xshaydi, chunki u o'zida qiymatlarni saqlaydi. Biroq, konstantaning qiymati hech qachon o'zgarmaydi. Masalan, EarSketch da `TECHNO_SYNTHPLUCK_001` konstanta bo'lib, u mos keladigan audio faylga ishora qiladi. An'anaga ko'ra, konstanta nomlari katta harflar bilan yoziladi va bo'shliq o'rniga pastki chiziqdan foydalaniladi.
 
 [[drumbeatstrings]]
-=== Beat Strings
+=== Zarba Satrlari
 
 Keling, avval ritm haqidagi ba'zi asosiy tushunchalarni bilib olaylik:
 
-* *Rhythm* is a pattern of sound, often repeated.
+* *Ritm* bu tovush andozasi va u odatta takgorlanadi.
 * *Temp* - bu musiqaning DZMdagi tezligi (daqiqada zarba miqdori).
 * *Zarba* qo'shiqning "barqaror yurak urishi"ga o'xshaydi. Tomoshabinlar kontsertda qarsak chalsa, bir maromdagi zarbdor qarsak hosil bo'ladi.
 * *O'lchov* - bu oldindan belgilangan zarbalar soniga ega musiqiy vaqt birligi. EarSketch-da 1 *o'lchov* 4 zarba uzunligidadir. 1 oʻlchovda 4 ta zarba boʻlgani uchun zarbalar *chorak (1/4) notalar* deb ham ataladi.
 * Har bir zarba *quyi-zarbalar* ga bo'linishi mumkin. Masalan, 1/4 nota 2 ta *sakkizinchi (1/8) nota*ga boʻlinishi mumkin. 1/4 notalarni sanayotganingizda “1, 2, 3, 4...” deb aytasiz 1/8 notalarni sanayotganda siz "va" dan foydalanishingiz mumkin: "1 va 2 va 3 va 4 va...."
 * 1/8 nota esa 2 ta *o‘n oltinchi (1/16) nota*ga bo‘linishi mumkin. 1/16 notalarni sanayotganda siz "va" ning har bir tomonida "e" va "a" dan foydalanishingiz mumkin: "1 e va a 2 e va a 3 e va a 4 e va a...."
-* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Note that the sum of all notes in one measure must be equal to 1. They can be mixed and matched like (1/4) + (1/4) + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1.
-* *Metronom* musiqachiga zarbani chertish orqali o'z asarining ritmini o'rnatishga yordam beradi. In the EarSketch DAW, you can turn the metronome on or off using the "toggle metronome" icon.
+* 1 o'lchov - 4 ta 1/4 nota, 8 ta 1/8 nota yoki 16 ta 1/16 nota. E'tibor bering, bitta o'lchovdagi barcha notalarning yig'indisi 1 ga teng bo'lishi kerak. Ularni 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1 kabi miks qilish va moslashtirish mumkin.
+* *Metronom* musiqachiga zarbani chertish orqali o'z asarining ritmini o'rnatishga yordam beradi. EarSketch RAIS-da siz ovoz darajasining chap tomonidagi "metronomni almashtirish" belgisi yordamida metronomni yoqishingiz yoki o'chirishingiz mumkin.
 
 [[imediameasurepng]]
-.A measure
+.O'lchov
 [caption="Figure 3.2.1: "]
 image::../media/U1P1/measure.png[A measure]
 
 [[imediabeatpng]]
-.A beat
+.Zarba
 [caption="Figure 3.2.2: "]
 image::../media/U1P1/beat.png[A beat]
 
 [[imediasixteenthnotepng]]
-.A sixteenth note
+.1/16 nota
 [caption="Figure 3.2.3: "]
 image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 .AMALIYOT
 ****
-Listen to your favorite song, and try to clap on the beat. You can do this exercise with your neighbor.
+Sevimli qo'shig'ingizni tinglang va ritmda qarsak chalishga harakat qiling. Ushbu mashqni qo'shningiz bilan bajarishingiz mumkin.
 ****
 
 We'll compose each of our rhythms in a *beat* string.
