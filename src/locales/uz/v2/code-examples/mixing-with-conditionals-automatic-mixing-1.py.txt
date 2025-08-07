@@ -1,19 +1,19 @@
-# Automatic mixing 1: If track 1 is louder than track 2, we'll reduce its volume
+# Trekni avtomatik ravishda miks qilish 1: Agar trek 1 ovozi trek 2 nikidan baland bo'lsa, uning ovozini pasaytiramiz
 
 # Sozlash
 from earsketch import *
 setTempo(120)
 
-# Creating 2 tracks
+# 2ta trekni yaratish
 melody1 = RD_CINEMATIC_SCORE_STRINGS_14
 melody2 = RD_UK_HOUSE__5THCHORD_1
 fitMedia(melody1, 1, 1, 9)
 fitMedia(melody2, 2, 1, 9)
 
-# Evaluating the loudness of the tracks
+# Treklarning ovozlarini baholash
 loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE)
 loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE)
 
-# If track 1 is louder than track 2, we reduce its volume
+# Agar trek 1 ovozi trek 2 nikidan baland bo'lsa, uning ovozini pasaytiramiz
 if loudnessTrack1 > loudnessTrack2:
     setEffect(1, VOLUME, GAIN, -10)
