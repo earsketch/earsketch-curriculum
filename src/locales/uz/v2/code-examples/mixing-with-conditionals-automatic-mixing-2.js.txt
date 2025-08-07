@@ -15,7 +15,7 @@ fitMedia(bass1, 2, 1, 9);
 fitMedia(bass2, 2, 9, 17);
 fitMedia(strings, 3, 9, 17);
 
-//  Adding percussion using makeBeat()
+// makeBeat() bilan Zarbalarni qo'shish 
 var beatKick = "0---0-----0-0---";
 var beatSnare = "--0-0------000-";
 var soundKick = OS_KICK02;
@@ -25,24 +25,24 @@ for (var measure = 5; measure > 17; measure++) {
     makeBeat(soundSnare, 5, measure, beatSnare);
 }
 
-// Mixing my tracks
-// First, we analyze the tracks for loudness
+// Treklarni miks qilish
+// Avval biz treklarning ovozini balandligini tahlil qilamiz
 var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
-println("The loudness of track 1 is" + loudnessTrack1);
+println("1-trekning balandligi" + loudnessTrack1);
 var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
-println("The loudness of track 2 is" + loudnessTrack2);
+println("2-trekning balandligi" + loudnessTrack2);
 var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
-println("The loudness of track 3 is" + loudnessTrack3);
+println("3-trekning balandligi" + loudnessTrack3);
 
 if (loudnessTrack1 < loudnessTrack2) {
-    // if track 1 is quieter than track 2 then we increase the volume of track 1
+    // agar 1-trek ovozi 2-treknikidan pastroq bo'lsa 1-trekning ovozini ko'taramiz
     setEffect(1, VOLUME, GAIN, +5);
-    println("track 1 was quieter than track 2");
+    println("1-trek ovozi 2-trekdan pastroq");
 } else if (loudnessTrack1 < loudnessTrack3) {
-    // if track 1 is louder than track 2 but quieter than track 3, we increase the volume of track 1
+    // agar 1-trek 2-treknikidan balandroq lekin 3-trekdan pastroq bulsa 1-trekning ovozini ko'taramiz
     setEffect(1, VOLUME, GAIN, +5);
-    println("track 1 was quieter than track 3");
+    println("1-trek ovozi 3-treknikidan pastroq");
 } else {
-    // if track 1 is louder than tracks 2 and 3, then we change nothing
-    println("track 1 was the loudest track already");
+    // agar 1-trek ovozi ovozi 2-trekniki va 3-treknikidan balandroq bo'lsa, hech narsa o'zgartirmaymiz
+    println("1-trekning ovozi boshqalarnikidan balandroq");
 }
