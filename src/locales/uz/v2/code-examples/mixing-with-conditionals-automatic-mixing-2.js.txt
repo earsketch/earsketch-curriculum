@@ -1,9 +1,9 @@
-// Automatic Mixing 2: Using conditional statements to mix the tracks
+// Avttomatix ravishta miks qilish 2: Treklarni miks qilish uchun shartli bayonotlarni ishlatish
 
 // Sozlash
 setTempo(120);
 
-// Adding a melody and bass
+// Ohang va bass qo'shish
 var melody1 = YG_ALT_POP_GUITAR_3;
 var melody2 = YG_ALT_POP_GUITAR_1;
 var bass1 = YG_ALT_POP_BASS_1;
