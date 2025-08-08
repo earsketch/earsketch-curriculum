@@ -112,11 +112,11 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 Sevimli qo'shig'ingizni tinglang va ritmda qarsak chalishga harakat qiling. Ushbu mashqni qo'shningiz bilan bajarishingiz mumkin.
 ****
 
-We'll compose each of our rhythms in a *beat* string.
+Ritmlarning har birini `zarba` (beat string) satrini ichiga bastalaymiz.  
 
-A *beat* string is a string that uses the characters `0`, `+`, or `-`. As a reminder, a string is a data type that contains a series of characters (like `0` or `+`) inside quotation marks.
+Baraban satri - bu `"0"`, `"+"` yoki `"-"` belgilaridan foydalaniladigan satr. Shuni eslatib o'tish kerakki, satr (ya'ni string) bu bir nechta belgidan iborat bolgan (Masaln `0` yoki `+`)  ma'lumotning bir turi va u qo'shtirnoq ichida yoziladi.  
 
-For example: `"0-00-00-0+++0+0+"`
+Masalan: `"0-00-00-0+++0+0+"`
 
 * `0` zarbdor ovozli klipni ijro eta boshlaydi (masalan, barabanning bir zarbasi).
 * `+` audio klipni keyingi quyi-zarbaga kengaytiradi. U har doim `0` yoki `+` dan keyin keladi.
@@ -124,10 +124,10 @@ For example: `"0-00-00-0+++0+0+"`
 
 .AMALIYOT
 ****
-For each of the following drumbeat strings, try clapping on the zeros. Then listen to the corresponding audio and verify if you were right. This exercise will help you understand how the drumbeat strings work.
+Quyidagi baraban satrlarining har biri uchun nollarga qarsak chalishga harakat qiling. So'ng tegishli audioni tinglang va siz haq ekanligingizni tekshiring. Ushbu mashq baraban satrlari qanday ishlashini tushunishga yordam beradi.
 ****
 
-Here are some examples of 1-measure beat strings:
+Bu yerda 1 o'lchovli zarba sarrlarining ba'zi misollari:
 
 Chorak notalar: `"0+++0+++0+++0+++"`
 (o'qing: "1, 2, 3, 4")
@@ -182,9 +182,9 @@ video revamping tab
 [[makebeat]]
 === `makeBeat()` funktsiyasi
 
-Endi shaxsiy zarbangizni qanday yarishingiz mumkinligini ko'rib chiqaylik. Here we use the term "beat" as a shorthand for drumbeat: a repeated rhythmic pattern of percussive sounds. Biz `makeBeat()` funktsiyasidan 4 ta argument bilan foydalanamiz:
+Endi shaxsiy zarbangizni qanday yarishingiz mumkinligini ko'rib chiqaylik. Bu yerda biz "zarba" atamasini baraban urishining qisqartmasi sifatida ishlatamiz: zarbdor tovushlarning takroriy ritmik andozalari. Biz `makeBeat()` funktsiyasidan 4 ta argument bilan foydalanamiz:
 
-. *Sound*: A sound constant. You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
+. *Tovush (Sound):* Tovush konstantasi.   You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
 . *Track*: The track number
 . *Start*: The starting measure
 . *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
