@@ -184,12 +184,12 @@ video revamping tab
 
 Endi shaxsiy zarbangizni qanday yarishingiz mumkinligini ko'rib chiqaylik. Bu yerda biz "zarba" atamasini baraban urishining qisqartmasi sifatida ishlatamiz: zarbdor tovushlarning takroriy ritmik andozalari. Biz `makeBeat()` funktsiyasidan 4 ta argument bilan foydalanamiz:
 
-. *Tovush (Sound):* Tovush konstantasi.   You may want to use the genre filter in the Sound Browser to select "MAKEBEAT". These are short sounds appropriate for beat patterns.
-. *Track*: The track number
-. *Start*: The starting measure
-. *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
+. *Ovoz(Sound):* Ovoz konstantasi.   "MAKEBEAT" ni tanlash uchun Ovoz Brauzerida janr filtrini ishlatishingizni tavsiya qilamiz. Bular zarba andozalarini yaratishga to'gri keladigan qisqa ovozlardir. 
+. *Trek (Track)*: Trek raqami
+. *Boshlanish (start)*: Boshlanish o'lchami
+. *Zarba (beat)*: `"0"`, `"+"` va `"-"` belgilaridan tashkil topgan satr.
 
-For example: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` will place your pattern `0--0--000--00-0-` on track 1, at measure 1, using the sound `DUBSTEP_FILTERCHORD_002`.
+Masalan: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` funktsiyasi `DUBSTEP_FILTERCHORD_002` ovozli klipidan foydalangan xolda `0--0--000--00-0-` andozasini 1-trekning 1-o'lchoviga joylashtiradi.
 
 Keling, ushbu video orqali batafsil ma'lumotni ko'ramiz:
 
@@ -201,7 +201,7 @@ video::./videoMedia/3_3_makebeat_py.mp4[]
 [[video12js]]
 video::./videoMedia/3_3_makebeat_js.mp4[]
 
-Here is the example shown in the video:
+Mana videoda ko'rsatilgan misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -220,10 +220,10 @@ include::code-examples/add-beats-multi-beat.js.txt[]
 .AMALIYOT
 ****
 Yangi `beatString1` o'zgaruvchisi, `"0"`, `"+"` va `"-"` belgilaridan iborat 16 ta belgili satr yarating.
-Use the `makeBeat()` function to add your beat pattern to your song on track `1`.
-Please note that:
+1-trekdagi qo'shiqqa zarba abdozasini qo'shish uchun `makeBeat()` funktsiyasidan foydalaning.
+Shuni yodda tuting:
 
-. You should assign your variables with the `=` symbol before using them.
+. O'zgaruvchilarni ishlatishdan avval ularni `=` belgisi bilan belgilashingiz kerak.
 . Xuddi `fitMedia()` kabi, `makeBeat()` funktsiyasi ham kichik (`m`) harf bilan boshlanadi va oʻrtada katta (`B`) harfi bo'ladi.
 . Xuddi `fitMedia()` kabi, `makeBeat()` funktsiyasi vergul bilan ajratilgan 4 ta parametrga ega.
 
@@ -234,23 +234,23 @@ Musiqangizni tinglaganingizda, agar sizga birinchi versiya yoqmasa, u sizga yoqm
 
 .AMALIYOT
 ****
-Create a new script and add two or three sounds using `fitMedia()`. Use variables to store your sound constants.
-Use the `makeBeat()` function to add at least two different beats. You can either play them simultaneously, on two different tracks, or one after the other on one single track.
+Yangi skript yarating va `fitMedia()` yordamida 2 yoki 3 ta ovozli klip qo'shing. Klip nomlarini saqlash uchun o'zgaruvchilardan foydalaning.
+Kamida 2 xil zarba qo'shish uchun `makeBeat()` funktsiyasidan foydalaning. Siz ularni bir vaqtning o'zida ikkita turli trekda yoki bitta trekda birin-ketin ijro etishingiz mumkin.
 ****
 
 [[beatsandgenres]]
-=== Create a beat based on your musical genre
+=== Musiqiy janringiz asosida zarba yarating
 
 Endi siz `makeBeat()` va zarba satrlari bilan ishlashni boshlaganingizdan so'ng, keling, siz foydalanishingiz mumkin bo'lgan bir nechta asosiy zarba andozalarini ko'rib chiqamiz.
-Siz musiqiy janr - bu shakl, uslub yoki mavzu bo'yicha o'xshashlik bilan tavsiflangan badiiy kompozitsiya (masalan, musiqa) toifasi ekanligini bilib oldingiz. Similarly, some genres have signature beat patterns. Below are some examples:
+Siz musiqiy janr - bu shakl, uslub yoki mavzu bo'yicha o'xshashlik bilan tavsiflangan badiiy kompozitsiya (masalan, musiqa) toifasi ekanligini bilib oldingiz. Xuddi shunday, ba'zi janrlarda o'ziga xos zarba andozalari mavjud. Quyida ba'zi misollar keltirilgan:
 
-We will use three types of sounds: kick (track `1`), snare (track `2`), and hihat (track `3`). We will use one `makeBeat()` function for each of these sounds, on three different tracks.
+Biz 3 xil tovushdan foydalanamiz: zarba (1-trek), pistirma (2-trek) va likopcha (3-trek). Bu tovushlarning har biri uchun 3 xil trekda bitta `makeBeat()` funktsiyasidan foydalanamiz.
 
 [role="curriculum-mp4"]
 [[video1a]]
 video::./videoMedia/3_4_beat_by_genre.mp4[]
 
-Here is the corresponding code:
+Mana tegishli kod:
 
 [role="curriculum-python"]
 [source,python]
@@ -265,44 +265,44 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 ----
 
 [[chapter3summary]]
-=== Chapter 3 Summary
+=== 3-Bob Xulosa
 
-* In EarSketch, 1 measure is divided into 4 beats, or 4 quarter notes. 1 beat is divided into 4 sixteenth notes.
+* EarSketch-da 1 o'lchov 4 ta zarbaga yoki 4 chorak notaga bo'linadi. 1 zarba 4 ta o'n oltidan bir (1/16) notaga bo'linadi.
 * *O'zgaruvchilar* ma'lumotlarni saqlash uchun kompyuter xotirasida bo'sh joy yaratadi.
-* Siz avval `=` belgisi yordamida o'zgaruvchi nomiga qiymatni (ma'lumotlarni) belgilashingiz kerak. Then you can use the variable by writing its name in the code.
+* Siz avval `=` belgisi yordamida o'zgaruvchi nomiga qiymatni (ma'lumotlarni) belgilashingiz kerak. Keyin kodga o'zgaruvchining nomini yozib, undan foydalanishingiz mumkin.
 * *Satr* - bu birtirnoq yoki qo'shtirnoq bilan qoplangan belgilar qatoridan iborat ma'lumotlar turi.
-* Percussive sounds can be found using the GENRE filter in the Sound Browser: select the artist MAKEBEAT.
-* Satrlar EarSketch da ritmik andozalar yaratish uchun `makeBeat()` funktsiyasi bilan ishlatiladi. `makeBeat()` o'z andozasining har o'n oltinchi notasini aniqlash uchun zarba satrini oladi. A `0` starts playing a sound, a `+` extends the note for the next sub-beat, and `-` creates a rest.
+* Zarbdor ovozli kliplarni Ovoz Brauzeridagi ARTIST filtri yordamida topish mumkin: MAKEBEAT artistini tanlang.
+* Satrlar EarSketch da ritmik andozalar yaratish uchun `makeBeat()` funktsiyasi bilan ishlatiladi. `makeBeat()` o'z andozasining har o'n oltinchi notasini aniqlash uchun zarba satrini oladi. `0` klip ijrosini boshlaydi, `+` notani keyingi quyi-zarba uchun kengaytiradi va `-` sukut yaratadi.
 * `makeBeat()` to'rtta argument oladi:
-** *Sound*: A sound constant
-** *Track*: The track number
-** *Start*: The starting measure
-** *Beat*: A string composed of the characters `"0"`, `"+"`, and `"-"`.
-* Different beat patterns often correspond to different musical genres.
+** *Ovoz(Sound):* Ovoz konstantasi
+** *Trek (Track)*: Trek raqami
+** *Boshlanish (start)*: Boshlanish o'lchami
+** *Zarba (beat)*: `"0"`, `"+"` va `"-"` belgilaridan tashkil topgan satr.
+* Turli xil zarba andozalari turli musiqiy janrlarga mos keladi.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of these options is a string?
+Ushbu variantlardan qaysi biri satr hisoblanadi?
 
 [answers]
-* "Five"
+* "Besh"
 * 5
-* FIVE
-* Five
+* BESH
+* Besh
 --
 
 [question]
 --
-What does "0" represent in a beat pattern string?
+Zarba andozasi satrida "0" nimani anglatadi?
 
 [answers]
-* Start playing the clip
-* Rest
-* Extend the clip
-* End the clip
+* Klip ijrosini boshlash
+* Sukut
+* Klipni kengaytirish
+* Klipni tugatish
 --
 
 [question]
@@ -310,10 +310,10 @@ What does "0" represent in a beat pattern string?
 EarSketch-da bir o'lchov...
 
 [answers]
-* 4 beats long
-* 4 sub-beats long
-* 16 beats long
-* 1 quarter note
+* 4 zarba uzunligida
+* Uzunligi 4 ta quyi-zarba
+* 16 zarba uzunligida
+* 1 chorak nota
 --
 
 [question]
@@ -321,10 +321,10 @@ EarSketch-da bir o'lchov...
 1/16 nota...
 
 [answers]
-* a quarter of a quarter note
-* half a beat
-* a quarter of a measure
-* 1 measure
+* chorak notaning chorak qismi
+* yarim zarba
+* chorak o'lchov
+* 1 o'lchov
 --
 
 [question]
@@ -332,8 +332,8 @@ EarSketch-da bir o'lchov...
 `makeBeat()` funktsiyasidan foydalanish uchun parametrlar tartibi qanday boʻlishi kerak?
 
 [answers]
-* clip name, track, start measure, beat string
-* tempo, track, start measure, end measure
-* clip name, start measure, end measure, beat string
-* beat string, track, start measure, clip name
+* klip nomi, trek, boshlang'ich o'lchov, zarba satri
+* temp, trek, boshlang'ich o'lchov, yakuniy o'lchov
+* klip nomi, boshlang'ich o'lchov, yakuniy o'lchov, zarba satri
+* zarba satri, trek, boshlang'ich o'lchov, klip nomi
 --
