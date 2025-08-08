@@ -299,17 +299,17 @@ Ushbu bobda o'rganganlaringizdan foydalanib, `makeBeat()` yordamida o'zingizga y
 
 Tabriklaymiz, endi siz EarSketch bilan ijodiy bo'lish imkonini beruvchi musiqiy va dasturlash ko'nikmalariga ega bo'ldingiz! Biz ishonch hosil qilmoqchi bo'lgan oxirgi narsa - kodingiz iloji boricha tiniq bo'lishi. Quyida siz tekshirishingiz mumkin bo'lgan ba'zi elementlar:
 
-* *Conciseness* means brief code that accomplishes its goal with fewer lines. Here are some questions that can help you make your code more concise:
-** Did I copy/paste function calls several times in a row? If so, simplify with a loop!
-** Am I reusing any blocks of code? If so, put them in a function!
-** Are there sound constants or mathematical expressions that I use repeatedly throughout my code? If so, assign them to variables! A list might also be useful.
-* *Aniqlik* kod o'z funktsiyasi va dasturchining niyatini qanchalik yaxshi bildirishi bilan bog'liq. If your peers are getting lost or confused by your code, it is probably unclear. Here are some questions to help you make your code clear:
-** Are the names of my variables and functions descriptive? If not, rename them.
-** Have I used comments to explain each block of code and any potentially confusing lines of code?
-** Have I used computational structures like custom functions and loops to help organize my code?
-** Can I structure my script to mirror the structure of my song? In some cases this can help the flow of reading.
+* *Ixchamlik* o'z maqsadini samarali bajaradigan qisqa kodni bildiradi. Kodingizni yanada ixcham qilishga yordam beradigan ba'zi savollar:
+** Funktsiya chaqiruvlarini ketma-ket bir necha marta nusxalash/joylashtirishni amalga oshirdimmi? Agar shunday bo'lsa, halqalash bilan soddalashtiring!
+** Har qanday kod bloklarini qayta ishlatamanmi? Agar shunday bo'lsa, ularni funktsiyaga qo'ying!
+** Kod davomida qayta-qayta ishlatadigan tovush konstantalari yoki matematik ifodalar bormi? Agar shunday bo'lsa, ularni o'zgaruvchilarga tayinlang! Ro'yxat ham foydali bo'lishi mumkin.
+* *Aniqlik* kod o'z funktsiyasi va dasturchining niyatini qanchalik yaxshi bildirishi bilan bog'liq. Agar sizning tengdoshlaringiz sizning kodingizda tushunmovchilikka yoki chalkashlikka uchrayotgan bo'lsa, demak bu kod aniq emas. Kodingizni aniqlashtirishga yordam beradigan ba'zi savollar:
+** Mening o'zgaruvchilarim va funktsiyalarimning nomlari tushunarlimi? Agar unday bo'lmasa, ularni qayta nomlang.
+** Har bir kod blokini va har qanday chalkash kod satrlarini tushuntirish uchun sharhlardan foydalandimmi?
+** Kodimni tartibga solishda yordam berish uchun maxsus funktsiyalar va halqalar kabi hisoblash tuzilmalaridan foydalanganmanmi?
+** Mening skriptimning tuzilishi qo'shig'imning tuzilishini aks ettiradimi? Ba'zan bu kodni o'qishni osonlashtiradi. 
 
-*Tengdoshlarning fikr-mulohazalari* dasturlashda keng tarqalgan bo‘lib, boshqalarning sharhlari ko'magida kod va musiqangizni mukammallashtirishga yordam beradi. Fikr-mulohaza *konstruktiv* bo'lishi kerak, ya'ni u tengdoshlar orasini buzishdan ko'ra ular orasidagi munosabatni mustahkamlaydi. When giving feedback:
+*Tengdoshlarning fikr-mulohazalari* dasturlashda keng tarqalgan bo‘lib, boshqalarning sharhlari ko'magida kod va musiqangizni mukammallashtirishga yordam beradi. Fikr-mulohaza *konstruktiv* bo'lishi kerak, ya'ni u tengdoshlar orasini buzishdan ko'ra ular orasidagi munosabatni mustahkamlaydi. Boshqalarga fikr bildirishda:
 
 * *Aniq bo'ling* - Kodning muayyan bloklari va qatorlariga hamda musiqaning muayyan o'lchovlari va treklariga murojaat qiling.
 * *Tavsiflovchi bo'ling* - Skriptni mukammal qilish uchun o'z fikringizni va amalga oshirayotgan jarayoningizni tavsiflab bering.
@@ -317,84 +317,84 @@ Tabriklaymiz, endi siz EarSketch bilan ijodiy bo'lish imkonini beruvchi musiqiy 
 * *Ijobiy bo'ling* - Mukammallik ehtiyoj sezgan narsalardan tashqari, kuchli kod bloklari va musiqiy parchalarni ko'rsatib o'ting.
 * *Taqqoslamang* - Tengdoshingizning kodini o'zingizning yoki boshqa tengdoshlaringizning kodlari bilan raqobatlashuvchi sifatida emas, balki ularning shaxsiy mulki sifatida ko'ring.
 
-Likewise, when receiving feedback:
+Xuddi shunday, fikr-mulohazalarni qabul qilishda:
 
-* *Aniq bo'ling* - Muammolarni keltirib chiqaradigan kodning bloklari yoki qatorlarini, musiqaning treklari yoki o'lchovlarini ko'rsating. This will allow your peers to provide feedback that is most helpful to you.
-* *Tinglang* - Tengdoshingiz gapirib bo'lguncha javob berishni kuting. Be attentive to the information your peer is conveying. Comment your code based on their feedback. These comments can be useful when revising.
+* *Aniq bo'ling* - Muammolarni keltirib chiqaradigan kodning bloklari yoki qatorlarini, musiqaning treklari yoki o'lchovlarini ko'rsating. Bu sizga tengdoshlaringizdan eng foydali bo'lgan fikr-mulohazalarni olish imkonini beradi.
+* *Tinglang* - Tengdoshingiz gapirib bo'lguncha javob berishni kuting. Tengdoshingiz yetkazayotgan ma'lumotlarga e'tiborli bo'ling. Ularning fikr-mulohazalari asosida kodingizni sharhlang. Ushbu sharhlar qayta ko'rib chiqishda foydali bo'lishi mumkin.
 * *Savollar bering* - O'zingiz bilmagan mantiq, muammolar, nosozliklar, musiqiy uyg'unlik yoki to'g'rilikning biron bir elementi haqida so'rang.
 
 [role="curriculum-python"]
 .AMALIYOT
 ****
-Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
+To'liq qo'shiq yarating va uni mukammallashtirish uchun qo'shningiz tomonidan tinglab baho berishini so'rang. Boshlashingiz uchun ba'zi fikrlar:
 
-* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Your structure can be as simple as ABA.
-* Start selecting sounds and testing things. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. You can upload your own sounds.
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Sizning tuzilmangiz ABA kabi oddiy bo'lishi mumkin.
+* Tovushlarni tanlash va narsalarni sinab ko'rishni boshlang. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
 * Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
 * `setEffect()` yordamida ba'zi effektlarni qo'shing. Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
-* You can use a conditional statement to mix your song (adapt the volume of each track).
-* You can ask for user input to modify something in your song.
-* If necessary, place some elements in a list.
+* Siz qo'shiqni miks qilish uchun shartli bayonotdan foydalanishingiz mumkin (har bir trekning ovozini moslashtiring).
+* Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rashingiz mumkin.
+* Agar lozim bo'lsa, ba'zi elementlarni ro'yxatga joylashtiring.
 ****
 
 [role="curriculum-javascript"]
 .AMALIYOT
 ****
-Create a full song and have it peer-reviewed by your neighbor to improve it. Here are some ideas to get you started:
+To'liq qo'shiq yarating va uni mukammallashtirish uchun qo'shningiz tomonidan tinglab baho berishini so'rang. Boshlashingiz uchun ba'zi fikrlar:
 
-* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Your structure can be as simple as ABA.
-* Start selecting sounds and testing things. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. You can upload your own sounds.
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Sizning tuzilmangiz ABA kabi oddiy bo'lishi mumkin.
+* Tovushlarni tanlash va narsalarni sinab ko'rishni boshlang. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
 * Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
 * `setEffect()` yordamida ba'zi effektlarni qo'shing.  Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
-* You can use a conditional statement to mix your song (adapt the volume of each track).
-* You can ask for user input to modify something in your song.
-* If necessary, place some elements in an array.
+* Siz qo'shiqni miks qilish uchun shartli bayonotdan foydalanishingiz mumkin (har bir trekning ovozini moslashtiring).
+* Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rashingiz mumkin.
+* Agar lozim bo'lsa, ba'zi elementlarni massivga joylashtiring.
 ****
 
 [[chapter9summary]]
-=== Chapter 9 Summary
+=== 9-Bob Xulosa
 
 [role="curriculum-python"]
-* A *list* is a collection of values combined into a single entity, a good way to organize data. Items stored within a list, or elements, can be any data type.
-* Like strings, list elements get assigned an index. List indices start at 0.
-* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* *Ro'yxat* - bu yagona obyektga birlashtirilgan qiymatlar to'plami, bu ma'lumotlarni saqlashning samarali usuli. Ro'yxat yoki elementlar ichida saqlangan mahsulotlar har qanday ma'lumot turi bo'lishi mumkin.
+* Satrlardagi singari, ro'yxat elementlariga indeks tayinlanadi. Ro'yxat indekslari 0 dan boshlanadi.
+* Roʻyxat elementlariga `myList[1]` kabi burchakli qavs belgisi bilan kirish mumkin. Satrdagi belgilarga xuddi shunday kirish mumkin: `myString[1]`.
 * `len()` funktsiyasi roʻyxatdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `len(list)`.
 * Ro'yxatlarni o‘zgartirish vositalari to‘plami - *ro'yxat operatsiyalari* yordamida yopishtirish va kesish mumkin.
 * Kattaroq, mavjud roʻyxatdan roʻyxatning quyi toʻplamini yaratish sintaksisi - `newList = oldList[startIndex: endIndex]`.
 * Roʻyxatlar yopishtirish operatori `+` yordamida birlashtirilishi mumkin, masalan, `newList = listA + listB`.
-* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
-* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. It provides the opportunity to learn from others.
+* `makeBeat()` bir vaqtning o'zida bir nechta ovozlardan ritmlarni turli ro'yxat indekslariga tegishli bo'lgan zarba satrini o'tkazish orqali qurishi mumkin. `makeBeat()` 0 dan 9 gacha bo'lgan indekslardagi ovozlarga kirishi mumkin, agar ular bir xil ro'yxatda saqlangan bo'lsa.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. Bu boshqalardan o'rganish imkoniyatini beradi.
 
 [role="curriculum-javascript"]
-* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
-* Like strings, array elements get assigned an index. Array indices start at 0.
-* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
+* *Massiv* - bu yagona obyektga birlashtirilgan qiymatlar to'plami, bu ma'lumotlarni saqlashning samarali usuli. Massiv yoki elementlar ichida saqlangan mahsulotlar har qanday ma'lumot turi bo'lishi mumkin.
+* Satrlardagi singari, massiv elementlariga indeks tayinlanadi. Massiv indekslari 0 dan boshlanadi.
+* Massiv elementlariga `myArray[1]` kabi burchakli qavs belgisi bilan kirish mumkin. Satrdagi belgilarga xuddi shunday kirish mumkin: `myString[1]`.
 * `length` xossasi massivdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `array.length` yoki `string.length`.
 * Massivlarni o‘zgartirish vositalari to‘plami - *massiv operatsiyalari* yordamida yopishtirish va kesish mumkin.
 * Kattaroq, mavjud massivdan massivni ajratib olish sintaksisi `newArray = oldArray.slice(startIndex, endIndex)`.
 * Kattaroq satrdan quyi-satrni kesib olish sintaksisi - `newString = oldString.substring(startIndex, endIndex)`.
 * Massivlarni `concat()` usuli yordamida yopishtirish mumkin, masalan, `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
-* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. It provides the opportunity to learn from others.
+* `makeBeat()` bir vaqtning o'zida bir nechta ovoz ritmlarni turli massiv indekslariga tegishli bo'lgan zarba satrini o'tkazish orqali qurishi mumkin. `makeBeat()` 0 dan 9 gacha bo'lgan indekslardagi kliplarga kirishi mumkin, agar ular bir xil massivda saqlangan bo'lsa.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. Bu boshqalardan o'rganish imkoniyatini beradi.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of the following operations is used to join lists/arrays?
+Quyidagi amallardan qaysi biri roʻyxatlar/massivlarni birlashtirish uchun ishlatiladi?
 
 [answers]
-* Concatenation
-* Slicing
-* Combination
-* Addition
+* Yopishtirish
+* Kesish
+* Birlashtirish
+* Qo'shish
 --
 
 [role="curriculum-python"]
 [question]
 --
-What is the index number of the first element of a list in Python?
+Pythonda ro'yxat birinchi elementining indeks raqami nechchi?
 
 [answers]
 * `0`
@@ -430,7 +430,7 @@ Ikki ro‘yxatni (`listA` va `listB`) yopishtirish sintaksisi qanday?
 [role="curriculum-python"]
 [question]
 --
-How can you get a list from oldList without the first and last elements?
+OldList dan birinchi va oxirgi elementlarsiz ro'yxatni qanday olish mumkin?
 
 [answers]
 * `oldList[1:len(oldList) - 1]`
@@ -442,7 +442,7 @@ How can you get a list from oldList without the first and last elements?
 [role="curriculum-javascript"]
 [question]
 --
-What is the index number of the first element of an array in Javascript?
+Javascriptda massiv birinchi elementining indeks raqami nechchi?
 
 [answers]
 * `0`
@@ -488,9 +488,9 @@ Birinchi va oxirgi elementlarsiz `oldArray` dan massivni qanday olish mumkin?
 --
 
 [[conclusion]]
-=== Conclusion
+=== Xulosa
 
-Thank you so much for taking part in the EarSketch adventure! We hope you had fun and learned many things with this tool :)
+EarSketch sarguzashtida ishtirok etganingiz uchun katta rahmat! Umid qilamizki, siz ushbu vositadan zavqlandingiz va ko'p narsalarni o'rgandingiz :)
 
 ////
 Thank you video
