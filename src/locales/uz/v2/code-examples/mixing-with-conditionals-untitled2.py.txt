@@ -1,8 +1,8 @@
-if condition1:
-    # Here write the instructions the computer needs to execute if the condition1 evaluates to True. If it's False, move to the next line
-elif condition2:
-    # Here write the instructions if condition2 is True. If condition2 is False, move to the next line
-elif condition3:
-    # Here write the instructions if condition3 is True. If condition3 is False, move to the next line
+if shart1:
+    # bu yerda shart1 rost bo'lsa kompyuter bajarishi kerak bolgan ko'rsatmalarni yozing Agar u Yolg'on deb baholansa, keyingi satrga kompyuter keyingi satrga o'tadi.
+elif shart2:
+    # Bu yerda shart2 bajarilganligi Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing.  Agar shart2 bajarilganiligi Yolg'on deb baholansa, keyingi satrga kompyuter keyingi satrga o'tadi.
+elif shart3:
+    # Bu yerda shart3 bajarilgani Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing. Agar shart3 bajarilganiligi Yolg'on deb baholansa, keyingi satrga kompyuter keyingi satrga o'tadi.
 else:
-    # Here write the instructions in case all 3 conditions are False
+    # Bu yerda uchchala shart bajarilgani Yolg'on deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing
