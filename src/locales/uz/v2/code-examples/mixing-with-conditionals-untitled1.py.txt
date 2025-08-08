@@ -1,3 +1,3 @@
-if condition:
-    # Here write the instructions the computer needs to execute if the condition evaluates to True
-    # Note that the instructions are indented, just like in for loops
+if shart:
+    # bu yerda shart rost bo'lsa kompyuter bajarishi kerak bolgan ko'rsatmalarni yozing
+    # E'tibor bering, ko'rsatmalar yozganda checkinish mavjut, huddi for halqalari kabi. 
