@@ -1,16 +1,16 @@
 [[getorganizedwithdatastructures]]
-== Data Structures
+== Ma'lumot Tuzilmalari
 
 :nofooter:
 
 [role="curriculum-python"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, ro'yxatlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+EarSketch yordamida qo'shiqlar yaratish uchun sizda ko'plab vositalar mavjud. Siz yozadigan skriptlar juda xilma-xil va uzun bo'lishi mumkin. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, ro'yxatlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
 
 [role="curriculum-javascript"]
-You now have numerous tools at your disposal to create songs with EarSketch. The scripts you write might get very diversified and long. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, massivlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+EarSketch yordamida qo'shiqlar yaratish uchun sizda ko'plab vositalar mavjud. Siz yozadigan skriptlar juda xilma-xil va uzun bo'lishi mumkin. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, massivlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
 
 [[datastructures]]
-=== What is a Data Structure
+=== Ma'lumot Tuzilmalari nima
 
 [role="curriculum-python"]
 If you have very long lists of sound variables, it's possible to organize them using *lists*. A *list*, also called an array in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Here is an example:
