@@ -1,16 +1,16 @@
 [[effectsandenvelopes]]
-== Effects and Envelopes
+== Effektlar va Zarflar
 
 :nofooter:
 
-EarSketch lets the composer alter existing sounds to produce new and unique sounds. Bunga ushbu bobning diqqat markazida bo'lgan `setEffect()` funktsiyasi orqali erishiladi.
+EarSketch bastakorga yangi va noyob tovushlarni yaratish uchun ovoz kliplarini o'zgartirish imkonini beradi. Bunga ushbu bobning diqqat markazida bo'lgan `setEffect()` funktsiyasi orqali erishiladi.
 
 [[effectsinearsketch]]
-=== Use Effects in EarSketch
+=== Earsketch-da Effektlardan Foydalanish
 
 :nofooter:
 
-*Effektlar* bizga tovush sifatini o'zgartirish imkonini beradi. Similar to how adding a filter alters a photo, adding an audio effect changes the sound. For example, you can change the volume, add some echo or reverb, etc.
+*Effektlar* bizga tovush sifatini o'zgartirish imkonini beradi. Filtr qo'shish bilan fotosuratni qanday o'zgartirish mumkin bo'lsa, audio effekt qo'shish bilan ham tovush shunday o'zgartiriladi. Masalan, siz ovoz balandligini o'zgartirishingiz, aks-sado yoki reverberatsiya qo'shishingiz va hokazo.
 
 [role="curriculum-python curriculum-mp4"]
 [[video4py]]
@@ -20,20 +20,20 @@ video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
 [[video4js]]
 video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
 
-We use the function `setEffect()`, which takes four arguments, similar to `fitMedia()`:
+Biz `fitMedia()` kabi 4 ta argumentni oladigan `setEffect()` funktsiyasidan foydalanamiz:
 
-. *track*: Track number or `MIX_TRACK`
-. *type*: Effect constant, like `DELAY`
-. *parameter*: Parameter constant, like `DELAY_TIME`
-. *value*: Parameter value, like `200`. This value must be within the effect's range.
+. 1. *trek*: Trek raqami yoki `MIX_TRACK` kabi ifoda
+. 2. *tur*: `DELAY` kabi effekt konstantasi
+. *parametr*: `DELAY_TIME` kabi parametr konstantasi
+. *qiymat*: `200` kabi parametr qiymati.  Bu qiymat effektning qiymatlar diapazonida bo'lishi shart. 
 
-.PRACTICE
+.AMALIYOT
 ****
-Write a new song with two tracks and modify the volume for both of the tracks using the `setEffect()` function.
-In that case, the effect name (second argument) is `VOLUME`, and the effect parameter (third argument) is `GAIN`. The effect value (fourth argument) is a number of decibels (dB), between `-60` and `+12`.
+2 trekdan iborat yangi qo'shiq yozing va `setEffect()` funktsiyasidan foydalanib ikkala trekning ovoz balandligini o'zgartiring.
+Bunday holda, effekt nomi (2-argument) `VOLUME`, effekt parametri (3-argument) esa `GAIN` hisoblanadi. Effekt qiymati (4-argument) -60 dan +12 gacha bo'lgan detsibellar soni (dB).
 ****
 
-Here is an example below:
+Quyida misol keltirilgan:
 
 [role="curriculum-python"]
 [source,python]
@@ -49,30 +49,30 @@ include::code-examples/effects-and-envelopes-volume-effect.js.txt[]
 
 Biz “OVOZ BALANDLIGI” effektini ko‘rdik. Endi “KECHIKTIRISH”ni ko'rib chiqamiz. Quyidagi 2 ta klipni tinglang, biri *kechiktirish* effekti qo'llaniladi, boshqasida esa yo'q.
 
-No effect:
+Effektsiz:
 
 ++++
 <div class="curriculum-mp3">audioMedia/reference.mp3</div>
 ++++
 
-Delay effect:
+Kechiktirish effekti:
 
 ++++
 <div class="curriculum-mp3">audioMedia/delay2.mp3</div>
 ++++
 
-In that case, the effect name (second argument) is `DELAY`, and the effect parameter (third argument) can either be `DELAY_TIME` (how long before the echo "answers") or `DELAY_FEEDBACK` (how loud your echo is). The value of `DELAY_TIME` is in milliseconds (1000 milliseconds is one second) and the value of `DELAY_FEEDBACK` is a number between `-120` and `-1`.
+Bunday holda effekt nomi (2-argument) `DELAY`, effekt parametri (3-argument) esa `DELAY_TIME` (aks-sado "javob berishdan" qancha vaqt oldin) yoki `DELAY_FEEDBACK` (sizning aks-sadongiz qanchalik baland) boʻlishi mumkin. `DELAY_TIME` qiymati millisekundlarda (1000 millisekund bir soniya) va `DELAY_FEEDBACK` qiymati -120 va -1 oralig`idagi raqamdir.
 
-For example, `setEffect(1, DELAY, DELAY_TIME, 500)` puts a delay onto track 1 with the delay/echo lasting for 500 ms.
+Masalan, 'setEffect(1, DELAY, DELAY_TIME, 500)' 1-trekka kechiktirish/aks-sado 500 ms davom etadigan kechiktirish qo'yadi.
 
-.PRACTICE
+.AMALIYOT
 ****
 . Effektlar roʻyxatidagi kechiktirish effekti haqida bu yerda oʻqing: <</en/v1/every-effect-explained-in-detail#,effects>>
-. Then run the code below and listen to the music without effects
+. So'ng quyidagi kodni ishga tushiring va musiqani effektlarsiz tinglang
 . So'ng birinchi `setEffect()` qatori boshidan sharhni olib tashlang va farqni tinglang
 . So'ng ikkinchi `setEffect()` qatori boshidan sharhni olib tashlang va farqni tinglang ("sharhni olib tashlash" `#` yoki `//` kod bloki kabi sharh sintaksisini o'chirishni anglatadi)
-E'tibor bering, kechiktirish vaqti - 500ms, bu bir zarbaning uzunligi hisoblanadi. Since the tempo is 120 beats per minute, there is one beat every 60/120 = 1/2 seconds. 1 second is 1000ms, so 1/2 second is 1000/2 = 500ms.
-You can try modifying the delay time and observing if your music sounds better or not.
+E'tibor bering, kechiktirish vaqti - 500ms, bu bir zarbaning uzunligi hisoblanadi. Temp daqiqada 120 zarba bo'lganligi sababli, har 60/120 = 1/2 soniyada bitta zarba mavjud. 1 soniya = 1000ms, shuning uchun 1/2 soniya 1000/2 = 500ms.
+Kechiktirish vaqtini o'zgartirishga urinib ko'rishingiz va musiqangiz ohangi yaxshi yoki yomon tomonga o'zgarganini kuzatishingiz mumkin.
 ****
 
 {nbsp} +
@@ -92,26 +92,26 @@ include::code-examples/effects-and-envelopes-delay-effect.js.txt[]
 {nbsp} +
 
 [[functionsandmoreeffects]]
-=== Functions and more effects
+=== Funktsiyalar va Boshqa Effektlar
 
-Hozirgacha siz EarSketch-da `fitMedia()` yoki `setEffect()` kabi bir nechta funktsiyalardan foydalangansiz. Note that the function names always start with a lower-case letter, and are often a verb. Qaslar kompyuterga funktsiyani *chaqirish* yoki *bajarish*ni buyuradi. Qavslar orasidagi *Argumentlar* yoki parametrlar vergul bilan ajratiladi.
+Hozirgacha siz EarSketch-da `fitMedia()` yoki `setEffect()` kabi bir nechta funktsiyalardan foydalangansiz. E'tibor bering, funktsiya nomlari har doim kichik harf bilan boshlanadi va ko'p hollarda fe'ldir. Qaslar kompyuterga funktsiyani *chaqirish* yoki *bajarish*ni buyuradi. Qavslar orasidagi *Argumentlar* yoki parametrlar vergul bilan ajratiladi.
 
 [role="curriculum-python"]
-* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch, or the EarSketch API, adds musical features to Python. Another example of API is the Google Maps API: a set of tools for embedding maps into websites or apps.
+* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch yoki EarSketch IDI Python-ga musiqiy xususiyatlarni qo'shadi. IDI-ning yana bir misoli Google Maps IDI: xaritalarni veb-saytlar yoki ilovalarga joylashtirish uchun vositalar to'plami.
 * Keyingi bobda siz o'zingizning shaxsiy funktsiyalaringizni qanday yaratishni ham o'rganasiz.
 
 [role="curriculum-javascript"]
-* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch, or the EarSketch API, adds musical features to JavaScript. Another example of API is the Google Maps API: a set of tools for embedding maps into websites or apps.
+* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch yoki EarSketch IDI JavaScript-ga musiqiy xususiyatlarni qo'shadi. IDI-ning yana bir misoli Google Maps IDI: xaritalarni veb-saytlar yoki ilovalarga joylashtirish uchun vositalar to'plami.
 * Keyingi bobda siz o'zingizning shaxsiy funktsiyalaringizni qanday yaratishni ham o'rganasiz.
 
-The arguments of the function can each have a specific data type. The order of the arguments is important. Here are some data type examples:
+Funktsiya argumentlarining har biri ma'lum bir ma'lumot turiga ega bo'lishi mumkin. Argumentlar tartibi muhim ahamiyatga ega. Quyida ma'lumotlar turiga misollar keltirilgan:
 
 * *Raqamlar*
-** *Integers* are whole numbers, like 0, 5, or -26. Example: track numbers
-** *Suzuvchi nuqta* raqamlari 0,125 yoki -21,0 kabi ratsional sonlardir. Example: volume of -4.2dB
-* *Strings* represent text. Example: `"0000----0000----"`
+** * Butun sonlar* (yoki "int") 0, 5 yoki -26 kabi butun sonlardir. Masalan: trek raqamlari. 
+** *Suzuvchi nuqta* raqamlari 0,125 yoki -21,0 kabi ratsional sonlardir. Masalan: -4.2dB ovoz balandligi. 
+* *Satrlar* matnni bildiradi.  Masalan: `"0000----0000----"`
 
-Endi `setEffect()` funktsiyasi bilan ko'proq ishlaymiz. The following video shows how to use some effects:
+Endi `setEffect()` funktsiyasi bilan ko'proq ishlaymiz. Quyidagi videoda ba'zi effektlardan qanday foydalanish kerakligi ko'rsatilgan:
 
 ////
 VIDEO IS BEEING MADE
@@ -119,17 +119,17 @@ more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNP
 ("videos revamping" tab)
 ////
 
-*Reverb* (reverberatsiya uchun qisqartma) bu devorlarga urilib, quloqlaringizga qaytadigan tovushdir. It gives a sense of space to your sound. Think about the difference between talking in a small bedroom and talking in a large church. The larger and "flatter" the room, the longer it takes the waves to return to your ears, hence that "large echoey room" sound. `REVERB` effekti tovushning so'nish vaqtini (`REVERB_DECAY`) va mavjud effekt miqdorini (`MIX`) boshqarish parametrlariga ega.
+*Reverb* (reverberatsiya uchun qisqartma) bu devorlarga urilib, quloqlaringizga qaytadigan tovushdir. Bu sizning tovushingizga koinot hissini beradi. Kichik yotoqxonada gapirish va katta cherkovda gapirish o'rtasidagi farq haqida o'ylab ko'ring. Xona qanchalik katta va "tekis" bo'lsa, to'lqinlar sizning quloqlaringizga qaytish uchun shunchalik uzoq vaqt talab etadi, bu tovush shuning uchun "keng xona aks-sadosi" deyiladi. `REVERB` effekti tovushning so'nish vaqtini (`REVERB_DECAY`) va mavjud effekt miqdorini (`MIX`) boshqarish parametrlariga ega.
 
-Listen to the clips below to hear the result of adding reverb to a track:
+Trekka reverbatsiya qo'shish natijasini eshitish uchun quyidagi kliplarni tinglang:
 
-No effect:
+Effektsiz:
 
 ++++
 <div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
 ++++
 
-Reverb effect:
+Reverbatsiya effekti:
 
 ++++
 <div class="curriculum-mp3">audioMedia/reverbEffect.mp3</div>
@@ -137,20 +137,20 @@ Reverb effect:
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
 Effektlarning toʻliq roʻyxati uchun <</en/v1/every-effect-explained-in-detail#,this chapter>> ga oʻting.
-Create a song with a volume effect and two other effects. Nima qilayotganingizni sharhlarda yozishni va kerak bo'lganda o'zgaruvchilar yaratishni unutmang.
+Ovoz balandligi effekti va boshqa 2 ta effektli qoʻshiq yarating. Nima qilayotganingizni sharhlarda yozishni va kerak bo'lganda o'zgaruvchilar yaratishni unutmang.
 ****
 
 [[effectsandenvelopes2]]
-=== Effects and Envelopes
+=== Effektlar va Zarflar
 
-Siz effektlardan foydalanishni boshladingiz va biroz vaqt o'tgach bir effektning o'zgarishini xohlaysiz. For example, you might want a fade in (volume getting higher) at the beginning of your song.
+Siz effektlardan foydalanishni boshladingiz va biroz vaqt o'tgach bir effektning o'zgarishini xohlaysiz. Misol uchun, siz qo'shiqning boshida tovushning asta kuchayishini (tovushning o'sib borishi) xohlashingiz mumkin.
 
 *Zarflar* bizga effektning vaqt o'tishi bilan qanday o'zgarishini aniqlash imkonini beradi.
 
-We will use two value-time pairs. Each pair contains an effect value and a corresponding measure. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. Zarf ushbu nuqtalar o'rtasida *qiyalik* deb nomlangan chiziq hosil qiladi:
+Biz 2 ta qiymat-vaqt juftligidan foydalanamiz. Each pair contains an effect value and a corresponding measure. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. Zarf ushbu nuqtalar o'rtasida *qiyalik* deb nomlangan chiziq hosil qiladi:
 
 [[envelopepoints]]
 .An annotated envelope in EarSketch
@@ -206,7 +206,7 @@ include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
 Create a new song. Barcha treklarga zarf qo'shish uchun (masalan: barcha treklaringiz uchun tovushning asta kuchayishi va so'nishi) yoki ayni trekdagi effektni qayta takrorlash uchun bitta "for" halqasidan foydalaning. You can use any effect you like.
 Have your neighbor listen to your song, with and without the effect (to hear your song without the effect, comment out the lines that create the effect). Your neighbor has to guess which effect you added.
@@ -248,10 +248,10 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * *Effects* change the qualities of a sound to make them unique.
 * *Ovoz balandligi* tovushning jaranglash balandligi bilan bog'liq. *Kechiktirish* aks-sado hosil qiladi. *Reverb* tovushning keng xonada yangrayotgandek his qildiradi. *Panoramalash* musiqangizni chap yoki o'ng tomonga joylashtiradi.
 * Effektlar EarSketch-da `setEffect()` funktsiyasi bilan amalga oshiriladi. Its syntax is `setEffect(track, type, parameter, value)`.
-. *track*: Track number or `MIX_TRACK`
-. *type*: Effect constant, like `DELAY`
-. *parameter*: Parameter constant, like `DELAY_TIME`
-. *value*: Parameter value, like `200`. This value must be within the effect's range.
+. 1. *trek*: Trek raqami yoki `MIX_TRACK` kabi ifoda
+. 2. *tur*: `DELAY` kabi effekt konstantasi
+. *parametr*: `DELAY_TIME` kabi parametr konstantasi
+. *qiymat*: `200` kabi parametr qiymati.  Bu qiymat effektning qiymatlar diapazonida bo'lishi shart. 
 * *Funktsiyalar* kompyuterning bajarishi uchun ko'rsatmalarni o'z ichiga oladi. Ma'lumotlar funktsiyalarga *argumentlar* orqali yuboriladi, bu funktsiya qanday bajarilishiga ta'sir qiladi. Ikki argumentli *chaqiruv* funktsiyasining sintaksisi `myFunction(argument1, argument2)`. 4 ta argumentli *chaqiruv* funktsiyasida ishlatiladigan sintaksisga `makeBeat(kick, 2, measure, kickBeat)` misol bola oladi.
 * EarSketch effektlarining toʻliq roʻyxati va ularning parametrlarini har biri uchun tavsiflari bilan birga <</en/v1/every-effect-explained-in-detail#,effects>> da topish mumkin.
 * *Zarflar* - effekt parametri vaqt o'tishi bilan qanday o'zgarishini belgilaydi. Ular _(qiymat, vaqt, qiymat, vaqt)_ kabi qiymat-vaqt juftliklari bilan tavsiflanadi.
