@@ -3,7 +3,7 @@
 
 :nofooter:
 
-Ushbu bobda siz EarSketchning qanday ishlashini o'rganasiz. Musiqangizga ovozlar qo'yasiz va kodingizda nosozliklarni qidirib topasiz.
+Ushbu bobda siz EarSketchning qanday ishlashini o'rganasiz. Musiqangizga ovozlar qo'yasiz va kodingizda nosozliklarni tuzatasiz.
 
 [[discoverearsketch]]
 === EarSketch Bilan Tanishing
@@ -122,23 +122,23 @@ Ovozni RAIS ga qo'shishuchun bus `fitMedia()` funktsiyasidan quyidagi shaklda fo
 
 Bunda biz 4 parametr bor va xar bir parametrdan so'ng vergul qo'yiladi.
 
-. *Sound*: the sound constant from the sound browser
-. *Track*: the track number
-. *Start*: the starting measure
-. *End*: the ending measure
+. *Ovoz (sound)*: ovoz brauzeridan olingan ovoz konstantasi
+. *Trek (Track)*: Trek raqami
+. *Boshlanish (start)*: Boshlanish o'lchami
+. *Oxiri (end)*: Tugash o'lchami
 
-_Example:_
+_Misol:_
 
 `fitMedia(Y18_DRUM_SAMPLES_2, 2, 1, 5)`
 
-The statement above will place the sound `Y18_DRUM_SAMPLES_2` on track `2` from measures `1` to `5`. *bayonot* kompyuterga biror amalni bajarishni buyuradi.
+Yuqoridagi bayonot `Y18_DRUM_SAMPLES_2` ovozini 1-o'lchamdan 5-o'lchamgacha 2-trekka qo'yadi. *bayonot* kompyuterga biror amalni bajarishni buyuradi.
 
-Try adding `fitMedia()` to a script.
+`fitMedia()` ni skriptga qo'shib ko'ring.
 
-When you've finished adding all your parameters, press _run_. You will see your sounds visualized in the DAW. Press _play_ to listen to your song.
+Barcha parametrlani qo'yib bo'lganingizdan kegin _Ishga tushirish_ tugmasini bosing. Ovozingiz RAIS da aks ettirilganini ko'rasiz. Musiqani tinglash uchun _Ijro etish_ tugmasini bosing.
 
 [role="curriculum-javascript"]
-Note: In JavaScript an optional semicolon `;` can be added to the end of each statement. Use of the semicolon is your personal choice.
+Eslatma: JavaScript tilida, xar bir bayonottan kegin ixtiyoriy ravishda `;` belgisni qo'yish mumkin. Bu belgini qo'yish o'zingizga xovola.  Bu belgini qo'yish o'zingizga xovola.
 
 ////
 OPTIONAL
@@ -146,10 +146,10 @@ OPTIONAL
 
 {nbsp} +
 
-*_The Sound Browser_*
+*_Ovoz brauzeri_*
 
-The *sound browser* provides a library of over four thousand sounds to use in your music.
-Contributors include celebrity musicians
+*Ovoz brauzeri* to'rt mingdan ortiq ovozlar zahirasidir. Bularni siz o'zingiz musiqangizni yaratishda ishlatishingiz mumkin.
+Bunga ko'p taniqli qo'shiqchi va bastakorlar hissa qo'shgan, jumladan: 
 https://en.wikipedia.org/wiki/Alicia_Keys[Alicia Keys^],
 https://en.wikipedia.org/wiki/Ciara[Ciara^],
 https://en.wikipedia.org/wiki/Common_(rapper)[Common^],
@@ -158,9 +158,9 @@ https://en.wikipedia.org/wiki/Pharrell[Pharrell^],
 https://en.wikipedia.org/wiki/Richard_Devine[Richard Devine^],
 and https://en.wikipedia.org/wiki/Young_Guru[Young Guru^].
 
-You can explore the sound browser within the *Content Manager* (left) by clicking "sounds". Try using different sound constants inside `fitMedia()`.
+Ovoz brauzerini siz *Kontent menejeri* (chapda) ko'rib chiqishingiz mumkin. Buning uchun "ovozlar" tugmasini bosing. `fitMedia()` ishlatib turli ovozlar konstantalarni ishlatib ko'ring.
 
-Note: The https://earsketch.gatech.edu/landing/#/license[EarSketch License Agreement^] covers fair use of stock sounds.
+Eslatma: https://earsketch.gatech.edu/landing/#/license[EarSketch Litsenziya Kelishuviga^] ovozlardan adolatli foydalanish ham kiradi.
 
 ////
 END OF OPTIONAL
@@ -170,7 +170,7 @@ END OF OPTIONAL
 OPTIONAL
 ////
 
-Below is an example script using `fitMedia()`. Remember, you can import this script by clicking the blue clipboard icon.
+Quyida `fitMedia()` ishlatish misoli keltirilgan.  Shuni esda tutingki, skriptni import qilishingiz uchun ko'k papka tugmasini bosishingiz mukin.
 
 [role="curriculum-python"]
 [source,python]
@@ -200,23 +200,23 @@ include::code-examples/getting-started-using-fitmedia-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
-Using sounds that you like:
+Sizga yoqqan tovushlardan foydalanish:
 
-. Place sounds on two different tracks
-. Place sounds from measure `2` to `12`
-. Create a short song with three tracks that is eight measures long or more
+. Tovushlarni 2 xil trekka joylashtiring
+. Tovushlarni 2 dan 12 gacha o'lchovlardan joylashtiring
+. 8 o'lchov yoki undan ortiq uzunlikdagi 3 ta trekdan iborat qisqa qo'shiq yarating
 
-For each exercise, you can have your neighbour listen to your song.
+Har bir mashq uchun siz qo'shningizga qo'shiqni tinglatishingiz mumkin.
 
-If you have errors when running your code, check out the next chapter about debugging.
+Agar kodingizni ishga tushirishda xatolaringiz bo'lsa, nosozliklarni tuzatish haqida keyingi bobni ko'rib chiqing.
 ****
 
 [[debugging]]
-=== Debug your code
+=== Kodingizdagi nosozliklarni tuzating
 
-Sometimes programmers make mistakes that cause code to work incorrectly, or not run at all. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi. Xatolarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi. You can use debugging strategies, using the console.
+Ba'zida dasturchilar kodning noto'g'ri ishlashiga yoki umuman ishlamasligiga olib keladigan xatolarga yo'l qo'yishadi. Dasturlashda kodlash xatoliklari *xatolar* yoki *nosozliklar* deb ataladi. Xatolarni topish va tuzatish jarayoni *Nosozliklarni tuzatish* deb ataladi. Konsoldan foydalanib, nosozliklarni tuzatish strategiyalaridan foydalanishingiz mumkin.
 
 [role="curriculum-python curriculum-mp4"]
 [[video3py]]
@@ -234,33 +234,33 @@ TODO: This video needs some revamping. See recommandations here: https://docs.go
 OPTIONAL
 ////
 
-What are the different types of errors?
+Xatolarning har xil turlari qanday?
 
-. *Syntax errors*: Your program does not run because your code breaks the language's *syntax* rules (ex: you forgot to close a parenthesis, or you wrote `fitMedia` incorrectly).
+. *Sintaksis xatolar*: Dasturingiz ishlamaydi, chunki kodingiz tilning *sintaksis* qoidalarini buzgan (masalan: qavsni yopishni unutdingiz yoki fitMedia-ni noto‘g‘ri yozdingiz).
 . *Ijro etish xatolari*: Dasturingiz ishlay boshlaydi, lekin xato tufayli toʻxtab qoladi.
-. *Mantiqiy xatolar*: Dasturingiz ishlaydi, lekin u kutilgan ishni bajarmaydi. You can fix these by looking at the DAW to check if the clips you meant to add were actually added in the right place.
+. *Mantiqiy xatolar*: Dasturingiz ishlaydi, lekin u kutilgan ishni bajarmaydi. Siz qo'shmoqchi bo'lgan kliplar haqiqatan ham to'g'ri joyga qo'shilganligini tekshirish uchun RAIS-ga qarab ularni tuzatishingiz mumkin.
 
 ////
 END OF OPTIONAL
 ////
 
-Here are some common errors:
+Bu yerda bir nechta keng tarqalgan xatolar mavjud:
 
 [role="curriculum-python"]
 . *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
-. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Pay attention to lowercase and uppercase letters. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Kichik va bosh harflarga e'tibor bering. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. Skriptdagi aksariyat elementlar *camel-caps* deb nomlangan qoidaga amal qiladi: birinchi so'z kichik harf va keyingi so'zlarning birinchi harfi, `funktsiyaNomiMisoli()` da bo'lgani kabi bosh harf bilan yoziladi.
 . *Qavslar:* Qavsni kerakli joyda ochish yoki yopishni unutish <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
-. *Script setup:* EarSketch adds some code to a new script automatically, but you might accidentally delete `from earsketch import *`.
+. *Skriptni sozlash:* EarSketch avtomatik ravishda yangi skriptga sozlash funktsiyalarini qoʻshadi, lekin siz tasodifan `from earsketch import` bayonotini oʻchirgan bo'lishingiz mumkin.
 . *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
 
 [role="curriculum-javascript"]
 . *Imlo xatosi:* `fitMedia()` yoki tovush konstantalari kabi funktsiyadan foydalanganda imloni tekshiring.
-. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Pay attention to lowercase and uppercase letters. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. The functions in EarSketch use a style called *Camel Case*: the first word is lower case, and the first letter of subsequent words are capitalized, as in `exampleFunctionName()`.
+. *Harf sezgirligi:* Dasturlashda qoʻllaniladigan soʻzlarning koʻpchiligi katta-kichik harflarga sezgir bo'ladi (kompyuter bosh va kichik harflar oʻrtasidagi farqni taniydi). Kichik va bosh harflarga e'tibor bering. Masalan, `FitMedia()` yoki `fitmedia()` emas, balki `fitMedia()` deb yozing. Skriptdagi aksariyat elementlar *camel-caps* deb nomlangan qoidaga amal qiladi: birinchi so'z kichik harf va keyingi so'zlarning birinchi harfi, `funktsiyaNomiMisoli()` da bo'lgani kabi bosh harf bilan yoziladi.
 . *Qavslar:* Qavsni kerakli joyda ochish yoki yopishni unutish <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
 . *Tinish belgilari:* Vergullarning mavjud emasligi yoki boshqa tinish belgilaridagi xatoliklar
 
-Time to practice!
-Find the five errors in the following code:
+Mashq qilish vaqti!
+Quyidagi koddan 5 ta xatoni toping:
 
 [role="curriculum-python"]
 [source,python]
@@ -278,12 +278,12 @@ include::code-examples/getting-started-finding-errors.js.txt[]
 OPTIONAL
 ////
 
-Here is the answer
+Javob quyidagicha
 
-. The `setTempo()` function is missing a parentheses
-. The first `fitMedia()` is missing an `e`
+. `setTempo()` funktsiyasida qavslar mavjud emas
+. Birinchi `fitMedia()` da 'e' belgisi yo'q
 . Birinchi `fitMedia()`da uchinchi va toʻrtinchi parametrlar orasida vergul yoʻq
-. The second `fitMedia()` is missing an uppercase `M`
+. Ikkinchi `fitMedia()` da katta “M” harfi yoʻq
 . Ikkinchi `fitMedia()`da parametrlar tartibi toʻgʻri emas: u ovozli klip nomi, so'ng trek raqami boʻlishi kerak
 
 ////
@@ -297,21 +297,21 @@ TODO: when options are ready, modify the link
 ////
 
 [[chapter1summary]]
-=== Chapter 1 Summary
+=== 1-Bob Xulosa
 
-* A computer *program* is a sequence of instructions the computer executes to accomplish a specific task.
-* A *script* is a nickname for a short program.
-* A *DAW*, or Digital Audio Workstation, is a type of computer software for recording and editing audio. EarSketch is a DAW that lets you make music with code.
-* To make music, type code into the *editor*, click "run", and click "play" to listen.
-* *Sounds* can be found in the *Sound Browser*. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
+* Kompyuter *dasturi* - bu kompyuter muayyan vazifani ijro etishi uchun bajaradigan ko'rsatmalar ketma-ketligi.
+* *Skript* bu qisqacha dasturlarga berilgan laqab.
+* *Raqamli Audio Ish Stantsiyasi* yoki *RAIS* (Digital Audio Workstation) — bu kompyuterda audio yoki ovozli kliplarni ishlab chiqaruvchi yoki tahrirlovchi dasturiy taʼminot. EarSketch dasturi bu kod bilan musiqa yaratadigan RAIS.
+* Musiqa yaratish uchun, *muharrirga* kodingizni yozing, "Ish ga tushirish" tugmasini bosing, kegin musiqani tinglash uchun "Ijro etish" tugmasini bosing.
+* Ovozlarni *Ovoz brauzerida* topish mumkin. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
 * *Programming languages* are collections of words and symbols that are understood by the computer.
 * The rules of *syntax* define how code must be written and how punctuation (`.`, `,`) is used.
 * Create a new script by clicking the large blue link "Click here to create..." or the "+" icon on the editor tabs.
 * `fitMedia()` is a way of adding sounds to the DAW. It has the following four parameters.
-** *Sound*: the sound constant from the sound browser
-** *Track*: the track number
-** *Start*: the starting measure
-** *End*: the ending measure
+** *Ovoz (sound)*: ovoz brauzeridan olingan ovoz konstantasi
+** *Trek (Track)*: Trek raqami
+** *Boshlanish (start)*: Boshlanish o'lchami
+** *Oxiri (end)*: Tugash o'lchami
 * *Debugging* is the process of finding and fixing *bugs*, or errors, made by the programmer.
 * *Konsol* dasturning holati haqidagi ma'lumotlarni ko'rsatadi, bu esa sintaksis xatolarini tuzatish uchun foydali bo'ladi.
 * Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
@@ -380,7 +380,7 @@ Where in the EarSketch workspace can you get information about your bugs?
 
 [answers]
 * The console
-* The sound browser
-* The script browser
+* Ovoz brauzeri
+* Skript brauzeri
 * The DAW
 --
