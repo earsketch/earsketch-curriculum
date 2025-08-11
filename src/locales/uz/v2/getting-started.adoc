@@ -1,16 +1,16 @@
 [[getstartedwithearsketch]]
-== Getting Started with EarSketch
+== EarSketch Bilan Ishlashni Boshlang
 
 :nofooter:
 
-In this chapter you will learn how EarSketch works. You will place sounds into your music and see how to debug your code.
+Ushbu bobda siz EarSketchning qanday ishlashini o'rganasiz. Musiqangizga ovozlar qo'yasiz va kodingizda nosozliklarni qidirib topasiz.
 
 [[discoverearsketch]]
-=== Discover EarSketch
+=== EarSketch Bilan Tanishing
 
 :nofooter:
 
-In EarSketch, you will give the computer instructions by writing code. One line of code is one instruction. All the instructions together are called the program (these instructions can also be called an algorithm). Just like following a recipe in a cookbook can lead to cooked meal, executing a program in EarSketch can lead to a song. How does it work? Find out in the video below!
+EarSketch-da siz kod yozish orqali kompyuterga ko'rsatmalar berasiz. Kodning bir qatori - bir ko'rsatma hisoblanadi. Barcha ko'rsatmalar birgalikda dastur deb ataladi (bu ko'rsatmalarni algoritm deb ham atash mumkin). Oshpaz kitobidagi retseptga rioya qilish ovqat pishirilishiga olib kelishi kabi, EarSketch-da dasturni bajarish qo'shiqqa olib kelishi mumkin. U qanday ishlaydi?  Quyidagi videoni korib bilib oling!
 
 [role="curriculum-mp4"]
 [[video1a]]
@@ -20,24 +20,24 @@ video::./videoMedia/1_1_Discover_EarSketch.mp4[]
 TODO: upload video
 ////
 
-As you become familiar with EarSketch these are the main panels.
+EarSketch bilan tanishishni davom etishingiz bilan mana shu asosiy panellarni esda tuting.
 
-* *Content Manager* _(left)_: Your scripts and sounds
-* *DAW* _(top-center)_: The song timeline and "play" button
-* *Editor* _(mid-center)_: The code editor and "run" button
-* *Console* _(bottom-center)_: The script output and errors
+* *Content Menejeri* _(chapda)_: Skriptlaringiz va ovozlar
+* *RAIS* _(o'rta yuqorida)_: Qo'shiqning vaqt jadvali va "Ijro" tugmasi
+* *Muharrir* _(o'rtada)_: Kod muharriri va "Ishga tushirish" tugmasi
+* *Konsol* _(orta pastda)_: Skript chiqimlari va nosozliklar xaqida ma'lumot
 
 {nbsp} +
 
 _RAIS nima?_
 
-A *DAW*, or *Digital Audio Workstation*, is software that produces or edits audio on a computer, be it in a professional studio or in home laptop-based studios.
+*Raqamli Audio Ish Stantsiyasi* yoki *RAIS* (Digital Audio Workstation) — bu xoh professional studiyada, xoh uy noutbukiga asoslangan studiyalarda boʻlsin, kompyuterda audio yoki ovozli kliplarni ishlab chiqaruvchi yoki tahrirlovchi dasturiy taʼminot.
 
-Some popular DAWs include https://www.ableton.com/[Ableton Live^], https://www.image-line.com/[FL Studio^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], https://www.avid.com/pro-tools[Pro Tools^], and http://www.reaper.fm/[Reaper^].
+https://www.ableton.com/[Ableton Live^], https://www.image-line.com/[FL Studio^], https://www.apple.com/logic-pro/[Logic Pro^], http://www.apple.com/mac/garageband/[GarageBand^], https://www.avid.com/pro-tools[Pro Tools^], and http://www.reaper.fm/[Reaper^] kabi dasturlar RAISga misollardir.
 
-EarSketch is DAW that allows you to create music by writing code.
+EarSketch dasturi bu shunday bir RAISki uning yordamida siz kod bilan musiqa yaratishingiz mumkin.
 
-Here is how to make full use of the DAW:
+RAIS-dan qanday qilib to'liq foydalanish mumkin:
 
 [role="curriculum-mp4"]
 [[video1b]]
@@ -47,7 +47,7 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-Keling, EarSketch-da kod misolini ishga tushirishga harakat qilaylik! On the box below, press the blue clipboard icon in the top right corner. Bu misol kodini *kod muharriri*dagi yangi faylga joylashtiradi. Hali kodni tushunishning hojati yo'q, shunchaki _Ishga Tushir_ tugmasini bosing va musiqangiz RAIS da paydo bo'ladi. Uni tinglash uchun _ijro_ tugmasini bosishingiz mumkin.
+Keling, EarSketch-da kod misolini ishga tushirishga harakat qilaylik! Quyidagi oynada yuqori o'ng burchakdagi ko'k tugmachani bosing. Bu misol kodini *kod muharriri*dagi yangi faylga joylashtiradi. Hali kodni tushunishning hojati yo'q, shunchaki _Ishga Tushir_ tugmasini bosing va musiqangiz RAIS da paydo bo'ladi. Uni tinglash uchun _ijro_ tugmasini bosishingiz mumkin.
 
 [role="curriculum-python"]
 [source,python]
@@ -64,49 +64,49 @@ include::code-examples/getting-started-intro-script.js.txt[]
 {nbsp} +
 
 [[createanewscript]]
-=== Create your first script!
+=== Birinchi skriptingizni yarating!
 
-Let's see how to create a script from scratch.
+Keling skriptni noldan qanday qilib yaratishni o'rganamiz.
 
-. *Create.* In the editor tabs, click the white "+" icon.
+. *Yaratish.* Muharrir yorlig'ida "+" dugmasini bosing.
 +
-If this is your first script, click the large blue text "Click here to create a new script!"
+Agar bu sizning ilk skriptingiz bo'lsa, "Yangi skriptni yaratish uchun bosing" deb nomlangan katta ko'k tugmani bosing.
 +
 [[newscriptplus]]
-.Create a new script, open scripts
+.Yangi skript yarating, skriptlarni oching
 [caption="Figure 1.2.1: "]
 image::../media/U1P1/NewScriptPlus.png[Alt Text]
-. *Choose a name and language.* Give your new script a name, and choose between Python and JavaScript programming languages.
+. *Tilni tanlash va nom berish.* Yangi skriptingizga nom bering va Python yoki JavaScript dasturlash tilini tanlang.
 +
 [[newscriptpromptpy]]
-.The create a new script dialog box
+.Yangi skript yaratish muloqot oynasi
 [role="curriculum-python"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptPY.png[Alt Text]
 +
 [[newscriptpromptjs]]
-.The create a new script dialog box
+.Yangi skript yaratish muloqot oynasi
 [role="curriculum-javascript"]
 [caption="Figure 1.2.2: "]
 image::../media/U1P1/newScriptPromptJS.png[Alt Text]
-. *(OPTIONAL) Sign in or create a new account.* To save your scripts for future editing and sharing, sign in with an EarSketch account.
+. *(Ixtiyoriy) Tizimga kirish yoki yangi hisob yaratish.* Skriptlaringizni kelajakda muharrirlik qilish yoki ulashish maqsadida saqlab qolish uchun EarSketch tizimiga hisobingiz bilan kiring.
 +
-_Note: Your EarSketch account does not require any personal information or email._
+_Eslatma: EarSketch hisobingiz hech qanday shaxsiy ma'lumot yoke email talab qilmaydi._
 
 *_Dasturlash tili nima?_*
 
-Code is written in a *programming language*. Like a spoken language it has vocabulary and syntax. You need to follow your programming language's grammar rules as you would with spoken language.
+Kod oddiy til kabi lug'at va sintaksisni o'z ichiga olgan *dasturlash tilida* yozilgan. Boshqa tillar kabi ular lug'at va sintaktikaga ega. Ishlatayotgan dasturlash tilining grammatika qoidalariga rioya qilishingiz kerak.
 
-When you press the *run* button, a *compiler* translates the Python or JavaScript instructions into machine code which the computer can understand. Then the computer *executes* the code, which causes your music appear in the DAW.
+"Ishga tushirish" tugmasini bosganingizda, *kompayler* Python yoki JavaScript da yozilgan ko'rsatmalarni mashina kodiga tarjima qiladi va uni kompyuter tushina oladigan shaklga keltiradi. Undan so'ngra, kompyuter kodni *bajaradi* va sizning musiqangiz RAIS da paydo bo'ladi.
 
-At the deepest level, computers execute code using *binary*. This means that all computer code eventually becomes `1` 's and `0` 's as it is processed by electrical components in the computer.
+Chuqurroq olib qaraganda, kompyuterlar kodni *binar* tizimida bajariladi. Bu degani barcha kompyuter kodlari `1` va `0` ga tarjima qiliniadi va ularni kompyuterning elektron komponentlari ularni qayta ishlaydi. Bu degani barcha kompyuter kodlari `1` va `0` ga tarjima qiliniadi va ularni kompyuterning elektron komponentlari ularni qayta ishlaydi.
 
 [[fitmedia]]
 === `fitMedia()` funktsiyasi
 
 Endi siz birinchi skriptingizni yaratdingiz, keling, musiqangiz ustida ishlashni boshlaylik!
 
-Watch this video to see how to add an audio clip to your song:
+Qo'shiqqa qanday audio klip qo'shishni ko'rish uchun ushbu videoni tomosha qiling:
 
 [role="curriculum-python curriculum-mp4"]
 [[video110py]]
@@ -116,11 +116,11 @@ video::./videoMedia/1_3_fitmedia_py.mp4[]
 [[video110js]]
 video::./videoMedia/1_3_fitmedia_js.mp4[]
 
-To add a sound to the DAW, we start by typing `fitMedia()` and use the following form.
+Ovozni RAIS ga qo'shishuchun bus `fitMedia()` funktsiyasidan quyidagi shaklda foydalanamiz.
 
-`fitMedia(sound, track, start, end)`
+`fitMedia(ovoz, trek, boshi, oxiri)`
 
-There are 4 *parameters*, separated by commas.
+Bunda biz 4 parametr bor va xar bir parametrdan so'ng vergul qo'yiladi.
 
 . *Sound*: the sound constant from the sound browser
 . *Track*: the track number
