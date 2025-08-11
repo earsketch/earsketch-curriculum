@@ -150,26 +150,26 @@ Siz effektlardan foydalanishni boshladingiz va biroz vaqt o'tgach bir effektning
 
 *Zarflar* bizga effektning vaqt o'tishi bilan qanday o'zgarishini aniqlash imkonini beradi.
 
-Biz 2 ta qiymat-vaqt juftligidan foydalanamiz. Each pair contains an effect value and a corresponding measure. For example, `(-60, 1, 0, 3)` means a point is placed at value `-60` at measure `1`, and another point is placed at value `0` at measure `3`. Zarf ushbu nuqtalar o'rtasida *qiyalik* deb nomlangan chiziq hosil qiladi:
+Biz 2 ta qiymat-vaqt juftligidan foydalanamiz. Har bir juftlik effekt qiymati va mos keladigan o'lchovni o'z ichiga oladi. Masalan, `(-60, 1, 0, 3)` - nuqta 1-oʻlchovda -60 qiymatiga, boshqa nuqta esa 3-o'lchovda 0-qiymatiga qoʻyilganligini bildiradi. Zarf ushbu nuqtalar o'rtasida *qiyalik* deb nomlangan chiziq hosil qiladi:
 
 [[envelopepoints]]
-.An annotated envelope in EarSketch
+.EarSketch-da izohli zarf
 [caption="Figure 5.3.1: "]
 image::../media/U2/NewEnvelope.png[Alt Text]
 
-To change an envelope, you just need the `setEffect()` function with seven arguments (the last four arguments are the two value-time pairs):
+Zarfni o'zgartirish uchun sizga 7 ta argumentli `setEffect()` funktsiyasi kerak bo'ladi (oxirgi 4 ta argument 2 qiymat-vaqt juftligidir):
 
-. track
-. type
-. parameter
-. startValue
-. start
-. endValue
-. end
+. trek
+. tur
+. parametr
+. startValue (boshlang'ich qiymat)
+. boshlash
+. endValue (tugash qiymati)
+. tugash
 
-The last three out of seven parameters are *optional parameters*. If left unspecified, as was the case when we used `setEffect()` with only four parameters, the effect is applied to the entire track.
+7 parametrdan oxirgi 3 tasi *ixtiyoriy parametrlar*. Agar biz `setEffect()` dan atigi 4 ta parametr bilan foydalanganimizdagi kabi belgilangan boʻlmasa, effekt butun trekka qoʻllaniladi.
 
-Here is an example of fade in:
+Bu yerda tovushning asta kuchayishiga bir misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -183,7 +183,7 @@ include::code-examples/effects-and-envelopes-envelopes.py.txt[]
 include::code-examples/effects-and-envelopes-envelopes.js.txt[]
 ----
 
-Now watch this video for other envelope examples
+Endi boshqa zarf misollari uchun ushbu videoni tomosha qiling
 
 [role="curriculum-python curriculum-mp4"]
 [[video5b]]
@@ -208,11 +208,11 @@ include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
 
 .AMALIYOT
 ****
-Create a new song. Barcha treklarga zarf qo'shish uchun (masalan: barcha treklaringiz uchun tovushning asta kuchayishi va so'nishi) yoki ayni trekdagi effektni qayta takrorlash uchun bitta "for" halqasidan foydalaning. You can use any effect you like.
-Have your neighbor listen to your song, with and without the effect (to hear your song without the effect, comment out the lines that create the effect). Your neighbor has to guess which effect you added.
+Yangi qo'shiq yarating. Barcha treklarga zarf qo'shish uchun (masalan: barcha treklaringiz uchun tovushning asta kuchayishi va so'nishi) yoki ayni trekdagi effektni qayta takrorlash uchun bitta "for" halqasidan foydalaning. Siz o'zingiz yoqtirgan har qanday effektdan foydalanishingiz mumkin.
+Qo'shningizdan qo'shiqni effektli va effektsiz tinglab ko'rishini so'rang (qo'shiqni effektsiz eshitish uchun effekt yaratuvchi satrlarning bosh qismini sharhlang). Qo'shningiz qaysi effektni qo'shganingizni taxmin qilishi kerak.
 ****
 
-Below is an example of the above practice. Each iteration of the loop adds a one measure long segment of the envelope. Automating the GAIN parameter creates rhythmic volume fades. Try toggling the effect bypass in the DAW to hear the difference the effect makes (the "bypass" button to the left of the effect track in your DAW).
+Yuqoridagi amaliyotga quyida misol keltirilgan. Halqaning har bir takrorlanishi zarfning bir o'lchovli segmentini qo'shadi. GAIN parametrini avtomatlashtirish ritmik ovoz pasayishni yaratadi. Effekt yaratgan farqni eshitish uchun RAIS-da effektni chetlab o'tishga almashtirib ko'ring (RAIS-dagi effekt trekining chap tomonidagi "chetlab o'tish" tugmasi).
 
 [role="curriculum-python"]
 [source,python]
@@ -226,7 +226,7 @@ include::code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
 include::code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
 ----
 
-And here is an example of fade in and fade out on all the tracks:
+Bu yerda barcha treklarda tovushning asta kuchayishi va asta so'nishiga misoli keltirilgan:
 
 [role="curriculum-python"]
 [source,python]
@@ -243,11 +243,11 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 {nbsp} +
 
 [[chapter5summary]]
-=== Chapter 5 Summary
+=== 5-Bob Xulosa
 
-* *Effects* change the qualities of a sound to make them unique.
+* *Effektlar* tovush sifatini o‘zgartirib, ularni yanada noyob qiladi.
 * *Ovoz balandligi* tovushning jaranglash balandligi bilan bog'liq. *Kechiktirish* aks-sado hosil qiladi. *Reverb* tovushning keng xonada yangrayotgandek his qildiradi. *Panoramalash* musiqangizni chap yoki o'ng tomonga joylashtiradi.
-* Effektlar EarSketch-da `setEffect()` funktsiyasi bilan amalga oshiriladi. Its syntax is `setEffect(track, type, parameter, value)`.
+* Effektlar EarSketch-da `setEffect()` funktsiyasi bilan amalga oshiriladi. Uning sintaktikasi `setEffect(terk, tur, parametir, qiymat)`
 . 1. *trek*: Trek raqami yoki `MIX_TRACK` kabi ifoda
 . 2. *tur*: `DELAY` kabi effekt konstantasi
 . *parametr*: `DELAY_TIME` kabi parametr konstantasi
@@ -255,20 +255,20 @@ include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
 * *Funktsiyalar* kompyuterning bajarishi uchun ko'rsatmalarni o'z ichiga oladi. Ma'lumotlar funktsiyalarga *argumentlar* orqali yuboriladi, bu funktsiya qanday bajarilishiga ta'sir qiladi. Ikki argumentli *chaqiruv* funktsiyasining sintaksisi `myFunction(argument1, argument2)`. 4 ta argumentli *chaqiruv* funktsiyasida ishlatiladigan sintaksisga `makeBeat(kick, 2, measure, kickBeat)` misol bola oladi.
 * EarSketch effektlarining toʻliq roʻyxati va ularning parametrlarini har biri uchun tavsiflari bilan birga <</en/v1/every-effect-explained-in-detail#,effects>> da topish mumkin.
 * *Zarflar* - effekt parametri vaqt o'tishi bilan qanday o'zgarishini belgilaydi. Ular _(qiymat, vaqt, qiymat, vaqt)_ kabi qiymat-vaqt juftliklari bilan tavsiflanadi.
-* For an envelope, the 7-parameter `setEffect()` arguments are: `setEffect(track, type, parameter, startValue, start, endValue, end)`.
+* Zarflar uchun 7 parametrli `setEffect()` argumentlari: setEffect(trek, tur, parametr, boshlang'ichQiymat, boshlash, tugashQiymati, tugash).
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-What does an effect allow you to do in EarSketch?
+EarSketch-da effekt nima qilish imkonini beradi?
 
 [answers]
-* Change the qualities of sound within a project
-* Add a sound to a track
-* Create a drum beat
-* Change the tempo of a song
+* Loyiha doirasida tovush sifatini o'zgartirish
+* Trekka tovush qo'shish
+* Baraban zarbasini yaratish
+* Qo'shiqning tempini o'zgartirish
 --
 
 [question]
@@ -276,15 +276,15 @@ What does an effect allow you to do in EarSketch?
 Bulardan qaysi biri `setEffect()` argumenti EMAS?
 
 [answers]
-* Clip Name
-* Effect Name
-* Effect Value
-* Track Number
+* Klip Nomi
+* Effekt Nomi
+* Effekt Qiymati
+* Trek Raqami
 --
 
 [question]
 --
-How would you set the delay time of a delay effect on track 3 to 50 milliseconds?
+3 dan 50 millisekundgacha bo'lgan trekdagi kechiktirish effektining kechikish vaqtini qanday o'rnatgan bo'lardingiz?
 
 [answers]
 * `setEffect(3, DELAY, DELAY_TIME, 50.0)`
@@ -298,10 +298,10 @@ How would you set the delay time of a delay effect on track 3 to 50 milliseconds
 Quyidagilardan qaysi biri `setEffect()` zarflarida foydalaniladigan parametr emas?
 
 [answers]
-* Clip Length
-* Start Value
-* Track Number
-* Effect
+* Klip Uzunligi
+* Boshlanish Qiymati
+* Trek Raqami
+* Effekt
 --
 
 [question]
@@ -314,8 +314,8 @@ setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
 ----
 
 [answers]
-* Increase the amount of distortion on track 1 over 10 measures.
-* Decrease the amount of distortion on track 1 over 50 measures.
-* Increase the volume of track 1 over 10 measures.
-* Decrease the volume on track 1 over 50 measures.
+* 1-trekdagi distortsiya miqdorini 10 ta o'lchovga oshirish.
+* 1-trekdagi distortsiya miqdorini 50 ta oʻlchovga kamaytirish.
+* 1-trekdagi ovoz balandligiini 10 ta o'lchovga oshirish.
+* 1-trekdagi ovoz balandligini 50 ta oʻlchovga kamaytirish.
 --
