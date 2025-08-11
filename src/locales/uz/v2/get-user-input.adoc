@@ -197,12 +197,12 @@ Endi *mantiqiy operatorlarni* ko'rib chiqaylik: bular bir nechta mantiqiy qiymat
 * `||`: "yoki (or)" deb ataladi; u 2 ta mantiqiy kirishni oladi va kamida 1 ta kiritish `to'g'ri` bo'lsa, `true` qiymatini qaytaradi, aks holda `false` qiymatini qaytaradi.
 * `!`: "emas (not)" deb ataladi: u 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatini qaytaradi.
 
-Misol uchun, agar siz 16 yoshda bo'lsangiz, "Men 16 yoshdaman" jumlasi rost va "Men 17 yoshdaman" gapi yolg'on. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
+Misol uchun, agar siz 16 yoshda bo'lsangiz, "Men 16 yoshdaman" jumlasi rost va "Men 17 yoshdaman" gapi yolg'on. Men 16 yoshda man va men 17 yoshdaman" (rost va yolg'on) bu yolg'on chunki siz ham 16 ham 17 yoshda bola olmaysiz.  Ammo "Men 16 yoki 17 yoshdaman" (rost yoki yolg'on) jumlasi rostdir.
 
 [role="curriculum-python"]
 .AMALIYOT
 ****
-What do you think the following expressions evaluate to? `Rostmi` yoki `Yolg'onmi`?
+Sizningcha, quyidagi iboralar nimani baholaydi? `Rostmi` yoki `Yolg'onmi`?
 
 * `Rost emas`
 * `Rost va Yolg'on`
@@ -210,13 +210,13 @@ What do you think the following expressions evaluate to? `Rostmi` yoki `Yolg'onm
 * `Rost va Rost`
 * `(True and False) or True`
 * `True and not False`
-* `not (False or False)`
+* (Yolg'on yoki Yolg'on) emas
 ****
 
 [role="curriculum-javascript"]
 .AMALIYOT
 ****
-What do you think the following expressions evaluate to? `rostmi` yoki `yolg'onmi`?
+Sizningcha, quyidagi iboralar nimani baholaydi? `rostmi` yoki `yolg'onmi`?
 
 * `!true`
 * `true && false`
@@ -227,7 +227,7 @@ What do you think the following expressions evaluate to? `rostmi` yoki `yolg'onm
 * `!(false || false)`
 ****
 
-Use the following code to print the answers:
+Javoblarni chop etish uchun quyidagi koddan foydalaning:
 
 [role="curriculum-python"]
 [source,python]
@@ -241,7 +241,7 @@ include::code-examples/get-user-input-boolean-expressions.py.txt[]
 include::code-examples/get-user-input-boolean-expressions.js.txt[]
 ----
 
-Here is a reminder of boolean creation, and some examples of boolean operations:
+Bu yerda mantiqiy yaratilish haqida eslatma va mantiqiy amaliyotlarning ba'zi misollari:
 
 [role="curriculum-python curriculum-mp4"]
 [[video17apy]]
@@ -253,9 +253,9 @@ video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
 .AMALIYOT
 ****
-Now we will combine user input and boolean operations.
+Endi biz foydalanuvchi kiritishi va mantiqiy amaliyotlarni birlashtiramiz.
 
-Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Foydalanuvchining javobiga qarab, janr bilan yaxshi ishlaydigan zarba satrni tanlang. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
+Cheklangan miqdordagi variantlar (masalan, "hip hop" va "klassik") bilan foydalanuvchidan janr tanlashni so'raydigan skript yozing. Foydalanuvchining javobiga qarab, janr bilan yaxshi ishlaydigan zarba satrni tanlang. Siz bir nechta imkoniyatlarni qabul qilishingiz mumkin. Masalan, "HIP HOP", "hip hop" va "Hip Hop" bir xil qo'shiqni chiqaradi.
 ****
 
 Mana bir misol:
@@ -274,57 +274,57 @@ include::code-examples/get-user-input-boolean-operations.js.txt[]
 
 {nbsp} +
 
-.CHALLENGE
+.VAZIFA
 ****
-This is the Jukebox challenge: write a script that will ask for user input in terms of genre, with three options (for example "latino", "trap" and "dubstep"). Foydalanuvchining javobiga qarab, janrga mos keladigan qo'shiq yarating.
+Bu Jukebox vazifasi: 3 ta variant (masalan, "latino", "tuzoq" va "dabstep") bilan janr bo'yicha foydalanuvchi kiritishini so'raydigan skript yozing. Foydalanuvchining javobiga qarab, janrga mos keladigan qo'shiq yarating.
 ****
 
 {nbsp} +
 
 [[chapter8summary]]
-=== Chapter 8 Summary
+=== 8-Bob Xulosa
 
 [role="curriculum-python"]
 * *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
-* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. `str()` istalgan qiymatni satrga aylantiradi.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. Yagona parametr - foydalanuvchi ko'radigan satr. So'ngra foydalanuvchi kodingizga kiritgan narsadan siz foydalanishingiz mumkin, masalan, musiqangiz tempini yoki janrini o'zgartirishingiz uchun.
+* Ba'zi funktsiyalar sizga ma'lumotlarni bir turdan ikkinchisiga o'tkazish imkonini beradi. `str()` istalgan qiymatni satrga aylantiradi.
 `int()` raqamlardan iborat satrni butun songa aylantiradi. `float()` o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi.
 * Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
-* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Here are boolean operators:
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Quyida mantiqiy operatorlar:
 ** `va (and)`: 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `False` qiymatini qaytaradi.
 ** `yoki (or)`: 2 ta mantiqiy kirishni oladi va kamida 1 ta kirish `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `Yolgʻon` qiymatini qaytaradi.
 ** `emas (not)`: 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatni qaytaradi.
-* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+* Endi musiqangizdagi oʻzgarishlarni kiritish uchun sizda koʻplab vositalar mavjud: foydalanuvchi kiritishi elementlarni aniqlashi mumkin. Funktsiyangizni chaqirganingizda o'zgarishni tanlash uchun maxsus funktsiyalaringizga parametr qo'shishingiz mumkin.
 
 [role="curriculum-javascript"]
 * *Qaytarish bayonotlari* funktsiya chaqirilganda natijani chiqarish uchun funktsiya izohiga kiritilishi mumkin.
-* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. The only parameter is a string that the user will see. You can then use what the user has typed in your code, for example, to change the tempo or the genre of your music.
-* Some functions allow you to convert data from one type to another. For example, str() converts data into a string. `String()` istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.  `Number()` satrni raqamga aylantiradi.
+* `readInput()` kodingizni ishga tushirganingizda foydalanuvchi kiritishini talab qiladi. Yagona parametr - foydalanuvchi ko'radigan satr. So'ngra foydalanuvchi kodingizga kiritgan narsadan siz foydalanishingiz mumkin, masalan, musiqangiz tempini yoki janrini o'zgartirishingiz uchun.
+* Ba'zi funktsiyalar sizga ma'lumotlarni bir turdan ikkinchisiga o'tkazish imkonini beradi. Masalan, str() ma'lumotlarni satrga aylantiradi. `String()` istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.  `Number()` satrni raqamga aylantiradi.
 * Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
-* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Here are boolean operators:
-** `&&`: is called "and", it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-** `||`: is called "or": it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
-** `!`: is called "not": it takes one boolean input and returns the opposite (negated) boolean.
-* You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
+* *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Quyida mantiqiy operatorlar:
+** `&&`: "va (or)" deb ataladi; u 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `to'g'ri` bo'lganda `true` ni qaytaradi, aks holda `false`ni qaytaradi.
+** `||`: "yoki (or)" deb ataladi; u 2 ta mantiqiy kirishni oladi va kamida 1 ta kiritish `to'g'ri` bo'lsa, `true` qiymatini qaytaradi, aks holda `false` qiymatini qaytaradi.
+** `!`: "emas (not)" deb ataladi: u 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatini qaytaradi.
+* Endi musiqangizdagi oʻzgarishlarni kiritish uchun sizda koʻplab vositalar mavjud: foydalanuvchi kiritishi elementlarni aniqlashi mumkin. Funktsiyangizni chaqirganingizda o'zgarishni tanlash uchun maxsus funktsiyalaringizga parametr qo'shishingiz mumkin.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of the following would be considered an example of data type conversion?
+Quyidagilardan qaysi biri ma'lumotlar turini o'zgartirishga misol bo'lishi mumkin?
 
 [answers]
-* Turning a string into a number.
-* Storing a user-defined tempo in a variable.
+* Satrni raqamga aylantirish.
+* Foydalanuvchi tomonidan belgilangan tempni o'zgaruvchida saqlash.
 * Foydalanuvchidan janrni so'rash uchun `readInput()` dan foydalanish.
-* Producing a Boolean through a comparison operator.
+* Taqqoslash operatori orqali mantiqiy qiymat hosil qilish.
 --
 
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
 
 [source,python]
 ----
@@ -341,7 +341,7 @@ not (True and (4 > 5))
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
 
 [source,javascript]
 ----
@@ -357,7 +357,7 @@ What would the output of this block of code be (what would print to the console)
 
 [question]
 --
-Which of the following is an example of concatenation?
+Quyidagilardan qaysi biri yopishtirishga misol bo‘la oladi?
 
 [answers]
 * `x = beatstring1 + beatstring2`
@@ -369,7 +369,7 @@ Which of the following is an example of concatenation?
 [role="curriculum-python"]
 [question]
 --
-How would you obtain the boolean True with the booleans True and False?
+True va False mantiqiy qiymatlaridan qanday qilib True mantiqiy qiymatiga erishasiz?
 
 [answers]
 * `Rost yoki Yolg'on`
@@ -381,7 +381,7 @@ How would you obtain the boolean True with the booleans True and False?
 [role="curriculum-javascript"]
 [question]
 --
-How would you obtain the boolean true with the booleans true and false?
+True va false mantiqiy qiymatlaridan qanday qilib true mantiqiy qiymatiga erishasiz?
 
 [answers]
 * `true||false`
