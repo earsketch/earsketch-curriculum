@@ -1,14 +1,14 @@
 [[getuserinput]]
-== Get User Input
+== Foydalanuvchi Ma'lumotlarini Oling
 
 :nofooter:
 
-In this chapter, you will learn how to ask for input from users and adapt your music accordingly. Buning uchun biz qaytarish bayonotlari va `readInput()` funktsiyasini ko'rib chiqamiz.
+Ushbu bobda siz foydalanuvchilardan ma'lumot so'rash va musiqangizni shunga mos ravishda moslashtirishni o'rganasiz. Buning uchun biz qaytarish bayonotlari va `readInput()` funktsiyasini ko'rib chiqamiz.
 
 [[returnstatement]]
-=== Return Statement
+=== Qaytarish Bayonoti
 
-Watch this video first:
+Avval ushbu videoni tomosha qiling:
 
 [role="curriculum-python curriculum-mp4"]
 [[video131py]]
@@ -18,12 +18,12 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-* In addition to taking inputs (parameters), functions can output a value. In programming, we call this returning a value.
-* *Qaytarish bayonoti* funktsiya tanasi ichidagi bayonot bo'lib, u: A. funktsiyaga qiymat chaqirilganda qaytarishni aytadi. B. signals the function to stop. Agar sizda `return` kalit so'zidan keyin biron-bir bayonot bo'lsa, ular e'tiborga olinmaydi.
-* To use the value that is returned by the function, create a variable and assign it the function call.
-* A return statement is not compulsory. Without a return statement a function does not output a value. `fitMedia()` va `setEffect()` hech narsa qaytarmaydigan funktsiyalarga misollardir.
+* Ba'zi kiritish (parametrlar) olishdan tashqari, funktsiyalar qiymatni chiqarishi ham mumkin. Dasturlashda biz buni "qiymatni qaytarish" deb ataymiz.
+* *Qaytarish bayonoti* funktsiya tanasi ichidagi bayonot bo'lib, u: A. funktsiyaga qiymat chaqirilganda qaytarishni aytadi. B. funktsiyani toʻxtatish uchun signal beradi. Agar sizda `return` kalit so'zidan keyin biron-bir bayonot bo'lsa, ular e'tiborga olinmaydi.
+* Funktsiya tomonidan qaytariladigan qiymatdan foydalanish uchun o'zgaruvchi yarating va unga funktsiya chaqiruvini tayinlang.
+* Qaytarish bayonoti majburiy emas. Qaytarish bayonotisiz funktsiya hech qanday qiymat chiqarmaydi. `fitMedia()` va `setEffect()` hech narsa qaytarmaydigan funktsiyalarga misollardir.
 
-Here is a code example:
+Quyida kod misoli:
 
 [role="curriculum-python"]
 [source,python]
@@ -37,26 +37,26 @@ include::code-examples/get-user-input-return-statements.py.txt[]
 include::code-examples/get-user-input-return-statements.js.txt[]
 ----
 
-With the return statement, the complete control flow for a function looks like this:
+Qaytarish bayonoti bilan funktsiya uchun to'liq boshqaruv oqimi quyidagicha ko'rinadi:
 
 [[return]]
-.Return statement control flow
+.Qaytarish bayonotining boshqaruv oqimi
 [caption="Figure 8.1.1: "]
 image::../media/U2/Return.png[Alt Text]
 
-.PRACTICE
+.AMALIYOT
 ****
-Create a function that will implement a musical section with:
+Musiqiy qismni amalga oshiradigan funktsiya yarating:
 
 * Boshlang'ich o'lchovini ifodalovchi `start` deb nomlangan faqat bitta parametr bilan.
-* One `return` statement that returns the end measure.
+* Yakuniy o'lchovni qaytaradigan bitta qaytish bayonoti bilan.
 * `fitMedia()` funktsiyalari bilan tana funktsiyasi.
 
-Your section can last as many measures as you like.
-Then call the function, and print the end measure.
+Sizning bo'limingiz siz xohlagancha ko'p o'lchovlarni davom ettirishi mumkin.
+Keyin funktsiyani chaqiring va yakuniy o'lchovni chop eting.
 ****
 
-Here is an example:
+Mana bir misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -72,18 +72,18 @@ include::code-examples/get-user-input-return-statements-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
-Aytaylik, sizda A bo'limi bor, lekin qo'shiqning turli lahzalarida chaqirilganda uning biroz o'zgarishini xohlaysiz. You will create a function called `sectionA()` with two `fitMedia()` calls.
+Aytaylik, sizda A bo'limi bor, lekin qo'shiqning turli lahzalarida chaqirilganda uning biroz o'zgarishini xohlaysiz. Siz 2 ta `fitMedia()` chaqiruvi bilan `sectionA()` funktsiyasini yaratasiz.
 
-The function should take two parameters: `start` and a boolean parameter `variation` that will allow the user to choose a variation when calling the function.
+Funktsiya 2 ta parametrni olishi kerak: `boshlash` va mantiqiy parametr `o'zgaruvchanlik`, bu foydalanuvchi funktsiyani chaqirayotganda o'zgaruvchanlikni tanlash imkonini beradi.
 
-In the function body, you should have a conditional statement which will evaluate the parameter. Depending on the parameter value, you will change the sound used in one of your `fitMedia()` calls.
+Funktsiya tanasida siz parametrni baholaydigan shartli bayonotga ega bo'lishingiz kerak. Parametr qiymatiga qarab, siz `fitMedia()` chaqiruvlaridan birida ishlatiladigan ovozli klipni o'zgartirasiz.
 
-Then call the function at different measures with different variations.
+Keyin funktsiyani turli xil o'lchovlarda turli xil o'zgarishlar bilan chaqiring.
 ****
 
-Here is an example:
+Mana bir misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -100,11 +100,11 @@ include::code-examples/get-user-input-conditional-statement.js.txt[]
 {nbsp} +
 
 [[userinput]]
-=== Get User Input
+=== Foydalanuvchi Ma'lumotlarini Oling
 
-“Ishga tushirish” tugmasi bosilganda foydalanuvchi ma'lumotlarini qanday so‘rashni ko‘ramiz. Bu `readInput()` funktsiyasi ko'magida mumkin bo'ladi. This function takes as a parameter a string (like "what tempo would you like for your music?"). When the user runs the code, they will see a new window with the string and are prompted to write an answer. `readInput()` funktsiyasi u yerda foydalanuvchi yozgan narsalarni qaytaradi.
+“Ishga tushirish” tugmasi bosilganda foydalanuvchi ma'lumotlarini qanday so‘rashni ko‘ramiz. Bu `readInput()` funktsiyasi ko'magida mumkin bo'ladi. Bu funktsiya parametr sifatida satrni oladi (masalan, “musiqangiz uchun qanday tempni xohlaysiz?”). Foydalanuvchi kodni ishga tushirganda, ular satr bilan yangi oynani ko'radi va unga javob yozish taklif etiladi. `readInput()` funktsiyasi u yerda foydalanuvchi yozgan narsalarni qaytaradi.
 
-For example, copy the following code in a new script, and run it:
+Masalan, quyidagi kodni yangi skriptga ko'chiring va uni ishga tushiring:
 
 [role="curriculum-python"]
 [source,python]
@@ -118,7 +118,7 @@ include::code-examples/get-user-input-untitled1.py.txt[]
 include::code-examples/get-user-input-untitled1.js.txt[]
 ----
 
-We might need to convert the returned user input into a different data type. Here are useful functions:
+Qaytarilgan foydalanuvchi kirishlarini boshqa ma'lumotlar turiga aylantirishimiz kerak bo'lishi mumkin. Quyida foydali funktsiyalar mavjud:
 
 [role="curriculum-python"]
 * `str()` - istalgan qiymatni satrga aylantiradi.
@@ -129,7 +129,7 @@ We might need to convert the returned user input into a different data type. Her
 * `String()` - istalgan qiymatni satrga aylantiradi. E'tibor bering, bu funktsiya nomi katta harf bilan boshlanadi.
 * `Number()` - satrni raqamga aylantiradi (masalan: `"3,5"` - `3,5` ga aylanadi).
 
-In the example below, console input is used to determine the tempo of the song. We make sure to convert user input into an integer.
+Quyidagi misolda qo'shiqning tempini belgilash uchun konsol kiritishi ishlatiladi. Biz foydalanuvchi kiritgan ma'lumotlarni butun songa aylantirishga ishonch hosil qilamiz.
 
 [role="curriculum-python"]
 [source,python]
@@ -143,9 +143,9 @@ include::code-examples/get-user-input-user-input-1.py.txt[]
 include::code-examples/get-user-input-user-input-1.js.txt[]
 ----
 
-Here is another example of what you can do with user input.
+Bu yerda foydalanuvchi kiritishi bilan nima qilishingiz mumkinligiga yana bir misol.
 
-*Yopishtirish* bu `+` belgisidan foydalanib, satrlarni bir-biriga bog'lash vositasidir.  For example, concatenating the strings `"Hello"` and `"World"` yields `"HelloWorld"`. In the following example, the user is prompted to specify a clip number. Raqam “DUBSTEP_BASS_WOBBLE_0” bilan yopishtirilib, “DUBSTEP_BASS_WOBBLE_010” kabi toʻliq klip nomini hosil qiladi.
+*Yopishtirish* bu `+` belgisidan foydalanib, satrlarni bir-biriga bog'lash vositasidir.  Misol uchun, `"hello"` va `"world"` satrlarini yopishtirish `"helloworld"` hosil qiladi. Quyidagi misolda foydalanuvchidan klip raqamini ko'rsatish so'raladi. Raqam “DUBSTEP_BASS_WOBBLE_0” bilan yopishtirilib, “DUBSTEP_BASS_WOBBLE_010” kabi toʻliq klip nomini hosil qiladi.
 
 [role="curriculum-python"]
 [source,python]
@@ -161,46 +161,46 @@ include::code-examples/get-user-input-user-input-2.js.txt[]
 
 {nbsp} +
 
-.PRACTICE
+.AMALIYOT
 ****
-Ask for a user input to modify something in your song.
+Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rang.
 
-Here are ideas of tools you can use:
+Quyida siz foydalanishingiz mumkin bo'lgan vositalar uchun g'oyalar:
 
-. string concatenation,
-. data conversion,
-. creating a specific parameter in a custom function
+. satr yopishtirish,
+. ma'lumotlarni o'zgartirish,
+. maxsus funktsiyada ma'lum bir parametr yaratish
 ****
 
 {nbsp} +
 
 [[booleanlogic]]
-=== Boolean Logic
+=== Boolean Mantig'i
 
-We will now combine boolean logic and user input for another example of user interaction.
+Endi biz foydalanuvchi bilan o'zaro munosabatga misol bo'lishi uchun boolean mantig'i va foydalanuvchi kiritishini birlashtiramiz.
 
 [role="curriculum-python"]
-Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. For example, the operator `==` checks if two values are equal, and if so the boolean is set to `True`.
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. Masalan, `==` operatori 2 ta qiymatning tengligini tekshiradi va agar shunday bo'lsa, mantiqiy qiymat `True` ga o'rnatiladi.
 
 [role="curriculum-javascript"]
-Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. For example, the operator `===` checks if two values are equal, and if so the boolean is set to `true`.
+Keling, avval boolean mantig'ini ko'rib chiqaylik. Bilasizki, *taqqoslash operatorlari* mantiqiy qiymat yaratishga yordam beradi. Masalan, `===` operatori 2 ta qiymatning tengligini tekshiradi va agar shunday bo'lsa, mantiqiy qiymat `True` ga o'rnatiladi.
 
-Endi *mantiqiy operatorlarni* ko'rib chiqaylik: bular bir nechta mantiqiy qiymatlarni birlashtirishga yordam beradi. There are three boolean operators:
+Endi *mantiqiy operatorlarni* ko'rib chiqaylik: bular bir nechta mantiqiy qiymatlarni birlashtirishga yordam beradi. 3 ta mantiqiy operator mavjud:
 
 [role="curriculum-python"]
-* `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-* `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
-* `not`: takes one boolean input and returns the opposite (negated) boolean.
+* `va (and)`: 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `False` qiymatini qaytaradi.
+* `yoki (or)`: 2 ta mantiqiy kirishni oladi va kamida 1 ta kirish `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `Yolgʻon` qiymatini qaytaradi.
+* `emas (not)`: 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatni qaytaradi.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and"; it takes two boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or"; it takes two boolean inputs and returns `true` when at least one input is `true`, otherwise returns `false`.
-* `!`: is called "not"; it takes one boolean input and returns the opposite (negated) boolean.
+* `&&`: "va (or)" deb ataladi; u 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `to'g'ri` bo'lganda `true` ni qaytaradi, aks holda `false`ni qaytaradi.
+* `||`: "yoki (or)" deb ataladi; u 2 ta mantiqiy kirishni oladi va kamida 1 ta kiritish `to'g'ri` bo'lsa, `true` qiymatini qaytaradi, aks holda `false` qiymatini qaytaradi.
+* `!`: "emas (not)" deb ataladi: u 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatini qaytaradi.
 
-For example if you are sixteen, the sentence "I'm sixteen" is true and the sentence "I'm seventeen" is false. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
+Misol uchun, agar siz 16 yoshda bo'lsangiz, "Men 16 yoshdaman" jumlasi rost va "Men 17 yoshdaman" gapi yolg'on. "I'm sixteen and I'm seventeen" (true and false) is false because you are not both sixteen and seventeen. But the sentence "I'm sixteen or I'm seventeen" (true or false) is true.
 
 [role="curriculum-python"]
-.PRACTICE
+.AMALIYOT
 ****
 What do you think the following expressions evaluate to? `Rostmi` yoki `Yolg'onmi`?
 
@@ -214,7 +214,7 @@ What do you think the following expressions evaluate to? `Rostmi` yoki `Yolg'onm
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.AMALIYOT
 ****
 What do you think the following expressions evaluate to? `rostmi` yoki `yolg'onmi`?
 
@@ -251,14 +251,14 @@ video::./videoMedia/Screencast-Ch17-2-PY.mp4[]
 [[video17ajs]]
 video::./videoMedia/Screencast-Ch17-2-JS.mp4[]
 
-.PRACTICE
+.AMALIYOT
 ****
 Now we will combine user input and boolean operations.
 
 Write a script that will ask for the user to choose a genre, with a limited number of options (for example "hip hop" and "classical"). Foydalanuvchining javobiga qarab, janr bilan yaxshi ishlaydigan zarba satrni tanlang. You can accept several possibilities. For example, "HIP HOP", "hip hop" and "Hip Hop" will output the same song.
 ****
 
-Here is an example:
+Mana bir misol:
 
 [role="curriculum-python"]
 [source,python]
@@ -291,9 +291,9 @@ This is the Jukebox challenge: write a script that will ask for user input in te
 `int()` raqamlardan iborat satrni butun songa aylantiradi. `float()` o'nlik kasrli raqamlarni o'z ichiga olgan satrni suzuvchi songa aylantiradi.
 * Siz satrlarni *yopishtirishingiz* (bog'lashingiz) mumkin: "Hello"+"World" - "HelloWorld" deb baholanadi.
 * *Boolean mantig'i* mantiqiy oamaliyotlarni o'z ichiga oladi. Here are boolean operators:
-** `and`: takes two boolean inputs and returns `True` only when both inputs are `True`, otherwise returns `False`.
-** `or`: takes two boolean inputs and returns `True` when at least one input is `True`, otherwise returns `False`.
-** `not`: takes one boolean input and returns the opposite (negated) boolean.
+** `va (and)`: 2 ta mantiqiy kirishni oladi va faqat ikkala kiritish ham `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `False` qiymatini qaytaradi.
+** `yoki (or)`: 2 ta mantiqiy kirishni oladi va kamida 1 ta kirish `Toʻgʻri` boʻlsa, `True` qiymatini qaytaradi, aks holda `Yolgʻon` qiymatini qaytaradi.
+** `emas (not)`: 1 ta mantiqiy kirishni oladi va teskari (inkor qilingan) mantiqiy qiymatni qaytaradi.
 * You now have many tools to introduce variations in your music: User input can determine elements. You can add a parameter in your custom functions to select a variation when you call your function.
 
 [role="curriculum-javascript"]
