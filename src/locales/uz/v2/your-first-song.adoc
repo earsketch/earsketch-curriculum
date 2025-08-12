@@ -121,15 +121,15 @@ include::code-examples/your-first-song-comments.js.txt[]
 [[uploadingsounds]]
 === Shaxsiy tovushlaringizni yuklash
 
-You can upload your own sounds through the Sound Browser on the left side of your screen. Under the "Sounds" tab, click on the "Add sound" button.
+Chap taraftagi Ovoz Brauzeri orqali ozingizning ovoz parchalarini yuklab olishingiz mumkin. "Ovozlar" yorlig'i ostida "Ovozni qo'shish" tugmasini bosing.
 
-You must be logged in to upload sounds.
+Ovozlarni EarSketch ga yuklash uchun siz hisobigningiza kirgan bolishingiz kerak.
 
-Let's explore the first three options.
+Keling, birinchi 3 ta variantni ko'rib chiqaylik.
 
-. *Upload Sound* allows you to choose audio files already on your computer.
-. *Quick Record* lets you record directly from your computer's microphone.
-. *Freesound* allows you to import sounds from http://freesound.org[freesound.org^], an open-source audio database. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
+. *Tovushni Yuklash* kompyuteringizda avvaldan mavjud bo'lgan audio fayllarni tanlash imkonini beradi.
+. *Tez Yozib Olish* kompyuteringizning mikrofonidan foydalanib ovoz yozib olish imkoniyatini beradi.
+. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
 
 [role="curriculum-mp4"]
 [[video101rec]]
