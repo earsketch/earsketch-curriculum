@@ -202,7 +202,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-1.py.txt[]
 include::code-examples/mixing-with-conditionals-automatic-mixing-1.js.txt[]
 ----
 
-We might want to check several conditions and execute a different set of statements depending on each condition. You can chain multiple conditions together. We use the following syntax:
+Biz bir nechta shartlarni tekshirishni va har bir shartga qarab turli xil bayonotlar to'plamini bajarishni xohlashimiz mumkin. Siz bir nechta shartlarni ketma ket qo'yishingiz mumkin. Bunda quyidagi sintaksis ishlatiladi:
 
 [role="curriculum-python"]
 [source,python]
@@ -217,15 +217,15 @@ include::code-examples/mixing-with-conditionals-untitled2.js.txt[]
 ----
 
 [[mixingyourtracks]]
-=== Mix your tracks
+=== Treklaringizni miks qiling
 
-Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mixing is modifying the volume of tracks so that they sound well balanced together.
+Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Miks qilish treklarning ovoz balandligini o'zgartiradi, shunda ular birgalikda yaxshi muvozanatlanadi.
 
 [role="curriculum-python"]
 .AMALIYOT
 ****
-* Create a new script.
-* Add sounds on at least three tracks for at least sixteen measures.
+* Yangi skript yarating.
+* Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
 * You can use the `makeBeat()` function and a `for` loop to add percussion.
 * Choose your "main" track. It can be your melody, or one track that you wish to highlight.
 * Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
@@ -235,8 +235,8 @@ Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mix
 [role="curriculum-javascript"]
 .AMALIYOT
 ****
-* Create a new script.
-* Add sounds on at least three tracks for at least sixteen measures.
+* Yangi skript yarating.
+* Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
 * You can use the `makeBeat()` function and a `for` loop to add percussion.
 * Choose your "main" track. Bu sizning ohangingiz yoki siz ta'kidlashni istagan trek bo'lishi mumkin.
 * Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
