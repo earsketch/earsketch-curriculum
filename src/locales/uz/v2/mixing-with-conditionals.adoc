@@ -226,10 +226,10 @@ Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mik
 ****
 * Yangi skript yarating.
 * Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
-* You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or one track that you wish to highlight.
-* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
-* Use `print()` to show your process in the console. Here is an example: `print("Is track number" + str(track) + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?". The function `str()` converts a number (ex: `1`) into a string (ex: `"1"`).
+* Zarbdorliklar qoʻshish uchun `makeBeat()` funktsiyasidan va `for` halqasidan foydalanishingiz mumkin.
+* "asosiy" trekingizni tanlang. Bu sizning ohangingiz yoki siz ta'kidlashni istagan bitta trek bo'lishi mumkin.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. `analyzeTrack()` zarbdorlik uchun muvofiq bo'lmagunga qadar zarbdor trekni hisob ichiga olmang. `analyzeTrack()` oʻrtacha qiymatni qaytaradi, perkussiya esa tovushning portlashidir, shuning uchun oʻrtacha qiymat ovoz balandligini aniq baholamaydi.
+* Jarayoningizni konsolda ko'rsatish uchun `print()` bayonotidan foydalaning. Chop etish bayonotiga misol: `print("trek raqami" + trek + "0,01 dan kattami?")`, agar hisoblagich `trek` `1` ga teng bo'lsa, bu "1 raqamli trek 0,01 dan kattami?" deb chop etadi. `str()` funktsiyasi raqamni (masalan: 1) satrga (masalan: "1") aylantiradi.
 ****
 
 [role="curriculum-javascript"]
@@ -237,9 +237,9 @@ Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mik
 ****
 * Yangi skript yarating.
 * Kamida 16 ta oʻlchov uchun kamida 3 ta trekka tovush qoʻshing.
-* You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. Bu sizning ohangingiz yoki siz ta'kidlashni istagan trek bo'lishi mumkin.
-* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
+* Zarbdorliklar qoʻshish uchun `makeBeat()` funktsiyasidan va `for` halqasidan foydalanishingiz mumkin.
+* "asosiy" trekingizni tanlang. Bu sizning ohangingiz yoki siz ta'kidlashni istagan trek bo'lishi mumkin.
+* Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. `analyzeTrack()` zarbdorlik uchun muvofiq bo'lmagunga qadar zarbdor trekni hisob ichiga olmang. `analyzeTrack()` oʻrtacha qiymatni qaytaradi, perkussiya esa tovushning portlashidir, shuning uchun oʻrtacha qiymat ovoz balandligini aniq baholamaydi.
 * Jarayoningizni konsolda ko'rsatish uchun `println()` bayonotidan foydalaning. Chop etish bayonotiga misol: `println('trek raqami' + trek + '0,01 dan kattami?')`, agar hisoblagich `trek` `1` ga teng bo'lsa, bu '1 raqamli trek 0,01 dan kattami?' deb chop etadi.
 ****
 
