@@ -303,31 +303,31 @@ TODO: when options are ready, modify the link
 * *Skript* bu qisqacha dasturlarga berilgan laqab.
 * *Raqamli Audio Ish Stantsiyasi* yoki *RAIS* (Digital Audio Workstation) — bu kompyuterda audio yoki ovozli kliplarni ishlab chiqaruvchi yoki tahrirlovchi dasturiy taʼminot. EarSketch dasturi bu kod bilan musiqa yaratadigan RAIS.
 * Musiqa yaratish uchun, *muharrirga* kodingizni yozing, "Ish ga tushirish" tugmasini bosing, kegin musiqani tinglash uchun "Ijro etish" tugmasini bosing.
-* Ovozlarni *Ovoz brauzerida* topish mumkin. You can add sounds to your code by using the *sound constant* in a function like `fitMedia()`.
-* *Programming languages* are collections of words and symbols that are understood by the computer.
-* The rules of *syntax* define how code must be written and how punctuation (`.`, `,`) is used.
-* Create a new script by clicking the large blue link "Click here to create..." or the "+" icon on the editor tabs.
-* `fitMedia()` is a way of adding sounds to the DAW. It has the following four parameters.
+* Ovozlarni *Ovoz brauzerida* topish mumkin. *Ovoz konstantasi* `fitMedia()` kabi funktsiyalarning ichida ishlatib kodingizga turli ovozlarni qo'shishingiz mumkin.
+* *Dasturlash tillari* - bu kompyuter tushunadigan so'zlar va belgilar to'plami.
+* *Sintaksis* qoidalari kod qanday yozilishi va punktuatsiyaning (nuqta, vergul, va hokazo) ishlatilishini o'rnatadi.
+* Skriptni yaratish uchun "Yangi skriptni yaratish uchun bosing!" deb nomlangan katta ko'k tugmani yoki "+" tugmasini bosing.
+* `fitMedia()` RAIS-ga tovush qo'shishning asosiy usuli hisoblanadi. Uning parametrlari quyidagicha.
 ** *Ovoz (sound)*: ovoz brauzeridan olingan ovoz konstantasi
 ** *Trek (Track)*: Trek raqami
 ** *Boshlanish (start)*: Boshlanish o'lchami
 ** *Oxiri (end)*: Tugash o'lchami
-* *Debugging* is the process of finding and fixing *bugs*, or errors, made by the programmer.
+* *Nosozliklarni tuzatish* - bu dasturchi tomonidan yo'l qo'yilgan *nosozliklar*, xatolarni topish va tuzatish jarayoni.
 * *Konsol* dasturning holati haqidagi ma'lumotlarni ko'rsatadi, bu esa sintaksis xatolarini tuzatish uchun foydali bo'ladi.
-* Common programming errors include typos, incorrect cases, missing parentheses, improper script setup, and logic errors.
+* Boshlang'ich dasturchilar uchun keng tarqalgan xatolar orasida matn terish xatolari, noto'g'ri harflar, yetishmayotgan qavslar, noto'g'ri skript sozlamalari...
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of the following is NOT a panel in the EarSketch workspace?
+Quyidagilardan qaysi biri EarSketch ish maydonidagi panel EMAS?
 
 [answers]
-* The effects browser
-* The code editor
-* The DAW
-* The console
+* Effektlar brauzeri
+* Kod muharriri
+* RAIS
+* Konsol
 --
 
 [question]
@@ -346,41 +346,41 @@ Which of the following is NOT a panel in the EarSketch workspace?
 Bitta skript ... ga mos keladi
 
 [answers]
-* One EarSketch song
-* One line of code
-* One programming language
-* One programmer
+* Bir EarSketch qo'shig'i
+* Bir qator kod
+* Bir dasturlash tili
+* Bitta dasturchi
 --
 
 [question]
 --
-What is a measure?
+O'lchov nima?
 
 [answers]
-* A musical time unit
-* An audio volume unit
-* A line in the DAW
-* A pitch unit
+* Musiqiy vaqt birligi
+* Ovoz balandligi birligi
+* RAIS-dagi chiziq
+* Tovush pardasi birligi
 --
 
 [question]
 --
-Which of the following is NOT a common type of error found in code?
+Quyidagilardan qaysi biri kodda uchraydigan xatolikning keng tarqalgan turi EMAS?
 
 [answers]
-* Grammatical Errors
-* Runtime Errors
-* Logic Errors
-* Syntax Errors
+* Grammatik xatolar
+* Ijro Etish Xatolari
+* Mantiqiy Xatolar
+* Sintaksis Xatolari
 --
 
 [question]
 --
-Where in the EarSketch workspace can you get information about your bugs?
+EarSketch ish maydonida nosozliklaringiz haqida ma'lumotni qayerdan olishingiz mumkin?
 
 [answers]
-* The console
+* Konsol
 * Ovoz brauzeri
 * Skript brauzeri
-* The DAW
+* RAIS
 --
