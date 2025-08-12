@@ -1,45 +1,45 @@
 [[customizeyourfirstsong]]
-== Customize your first song
+== Birinchi qo'shig'ingizni sozlang
 
 :nofooter:
 
-In this chapter you will learn how to change the tempo of your song, add comments to your code, and upload your own sounds to enhance the message of your song.
+Ushbu bo'limda siz qo'shig'ingizning tempini qanday o'zgartirishni, kodingizga sharhlar qo'shishni va qo'shiq xabarini kuchaytirish uchun o'z tovushlaringizni yuklashni o'rganasiz.
 
 [[settempo]]
 === `setTempo()` funktsiyasi
 
 [role="curriculum-python"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+Hozirga kelib, siz yangi skript yaratishda kodingiz ishlashi uchun avvaldan mavjud elementlar borligini payqadingiz:
 
-. Some comments starting with `#`: we'll cover that in next section
+. `#` bilan boshlangan baʼzi sharhlar: bu haqda keyingi boʻlimda batafsil toʻxtalamiz
 . loyihaga EarSketch funktsiyalarini (masalan, `fitMedia()`) qo‘shadigan `from earsketch import*` qatori
 . `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
 --
 
 [role="curriculum-javascript"]
 --
-By now you've noticed that when you create a new script, there are preexisting elements added for your benefit:
+Hozirga kelib, siz yangi skript yaratishda kodingiz ishlashi uchun avvaldan mavjud elementlar borligini payqadingiz:
 
-. Some comments starting with `//`: we'll cover that in next section
+. `//` bilan boshlangan baʼzi sharhlar: bu haqda keyingi boʻlimda batafsil toʻxtalamiz
 . `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
 --
 
-`setTempo()` funktsiyasi qo'shiq tezligini aniqlaydi. G'arb musiqasida *Temp* - bu daqiqada zarbalar miqdori (dzm) sanaladi. In EarSketch, the default tempo (i.e. the initial value of the tempo) is set to 120bpm, which corresponds to a fast walk or march speed. Tempni oʻzgartirish uchun `setTempo()` funktsiyasida qavslar orasidagi raqamni oʻzgartirish kifoya. The higher the tempo, the faster your music. Siz tempni _45dzm va 220dzm_ oraligʻida tanlashingiz mumkin.
+`setTempo()` funktsiyasi qo'shiq tezligini aniqlaydi. G'arb musiqasida *Temp* - bu daqiqada zarbalar miqdori (dzm) sanaladi. EarSketch-da standart temp (ya'ni tempning boshlang'ich qiymati) 120dzm ga o'rnatiladi, bu tez yurish yoki marsh tezligiga mos keladi. Tempni oʻzgartirish uchun `setTempo()` funktsiyasida qavslar orasidagi raqamni oʻzgartirish kifoya. Temp qanchalik baland bo'lsa, musiqangiz shunchalik tezlashadi. Siz tempni _45dzm va 220dzm_ oraligʻida tanlashingiz mumkin.
 
-.PRACTICE
+.AMALIYOT
 ****
-. Create a new script.
-. Place sounds on two different tracks.
-. Modify your tempo and listen to the song.
-. Play your song at three different tempos for a friend. Then ask them to rank from slowest to fastest tempo.
+. Yangi skript yarating.
+. Tovushlarni 2 xil trekka joylashtiring
+. Tempni o'zgartiring va qo'shiqni tinglang.
+. Do'stingiz uchun qo'shiqni 3 farqli tempda ijro eting. So'ng undan eng sekindan eng tez tempga qarab daraja berishini so'rang.
 ****
 
-A genre is a category of artistic composition (e.g. music), characterized by similarities in form, style, or subject matter. Different genres have different tempo ranges. For instance:
+Janr - bu shakl, uslub yoki mavzu bo'yicha o'xshashlik bilan tavsiflangan badiiy kompozitsiyaning (masalan, musiqa) toifasi. Turli janrlar turli xil temp diapazonlariga ega. Masalan:
 
 [cols="^3*"]
 |===
-|GENRE |BPM |EXAMPLE
+|JANR |DZM |MISOL
 
 |Pop
 |110-130
@@ -53,36 +53,36 @@ A genre is a category of artistic composition (e.g. music), characterized by sim
 
 "Fight the Power" - Public Enemy
 
-|Country
+|Kantri
 |90-110
 |"I Walk the Line" - Johnny Cash
 
 "Jolene" - Dolly Parton
 
-|House / EDM
+|Xaus / Elektron Raqs Musiqasi
 |110-130
 |"One More Time" - Daft Punk
 
 "Good Vibrations" - Marky Mark
 
-|Dubstep / Trap
+|Dabstep / Trep
 |140-150
 |"Scary Monsters and Nice Sprites" - Skrillex
 
 "Turn Down for What" - Lil Jon
 |===
 
-.PRACTICE
+.AMALIYOT
 ****
-. Select one artist you really like and find out what genre they belong to.
+. O'zingizga yoqqan ijrochilardan birini tanlang va ular qaysi janrga tegishli ekanligini bilib oling.
 . Ushbu janrni qidiring (https://soundcloud.com/[Soundcloud] da yoki shunga o'xshash) va shu janrdagi qo'shiqlardan bir nechta parchalarni tinglang.
-. Listen for similarities between the songs.
-. You can also research the genre on Wikipedia to get more information about it.
+. Qo'shiqlar orasidagi o'xshashlikni tinglang.
+. Shuningdek, janr haqida ko'proq ma'lumot olish uchun Vikipediyani tadqiq qilishingiz mumkin.
 ****
 
-Sounds are automatically stretched to fit your song's tempo. This is why sounds previewed in the Sound Browser sometimes appear different from in your song. The effect can be extreme if the tempos are very different.
+Ovozlar avtomatik ravshda ashulangiz tempiga moslab cho'ziladi yoki qisqartiriladi. Aynan shuning uchun, Ovoz Brauzerida ovozlarni ba'zan qo'shig'ingiz ichida ijro etganda boshqacha eshitiladi. Bunda effekt templar orasidagi farq katta bo'lganda qattiq seziladi.
 
-To find the original tempo of sound, hover over the sound constant Sound Browser.
+Ovozning aniq tempini ko'rish uchun Ovoz Brauzerida kursorni ovoz konstantasi (ya'ni nomi) ustiga olib boring.
 
 [[comments]]
 === Adding comments to your code
@@ -97,7 +97,7 @@ Pythonda sharhlar qatori funt belgisi - `#` bilan boshlanadi.
 [role="curriculum-javascript"]
 JavaScript-da sharhlar qatori ikki yotiq chiziq belgisi - `//` bilan boshlanadi.
 
-.PRACTICE
+.AMALIYOT
 ****
 In your current script, write a comment with a description of your song on the first line.
 ****
@@ -135,7 +135,7 @@ Let's explore the first three options.
 [[video101rec]]
 video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
-.PRACTICE
+.AMALIYOT
 ****
 Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. Bu siz baham ko'rmoqchi bo'lgan tuyg'u yoki hikoya bo'lishi mumkin.
 
