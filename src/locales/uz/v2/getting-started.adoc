@@ -300,7 +300,7 @@ TODO: when options are ready, modify the link
 === 1-Bob Xulosa
 
 * Kompyuter *dasturi* - bu kompyuter muayyan vazifani ijro etishi uchun bajaradigan ko'rsatmalar ketma-ketligi.
-* *Skript* bu qisqacha dasturlarga berilgan laqab.
+* *Skript* bu qisqacha dasturlarga berilgan atama.
 * *Raqamli Audio Ish Stantsiyasi* yoki *RAIS* (Digital Audio Workstation) — bu kompyuterda audio yoki ovozli kliplarni ishlab chiqaruvchi yoki tahrirlovchi dasturiy taʼminot. EarSketch dasturi bu kod bilan musiqa yaratadigan RAIS.
 * Musiqa yaratish uchun, *muharrirga* kodingizni yozing, "Ish ga tushirish" tugmasini bosing, kegin musiqani tinglash uchun "Ijro etish" tugmasini bosing.
 * Ovozlarni *Ovoz brauzerida* topish mumkin. *Ovoz konstantasi* `fitMedia()` kabi funktsiyalarning ichida ishlatib kodingizga turli ovozlarni qo'shishingiz mumkin.
