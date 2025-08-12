@@ -1,5 +1,5 @@
 [[loopandlayers]]
-== Loops and Layers
+== Halqalar va Qatlamlar
 
 :nofooter:
 
@@ -50,20 +50,20 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
 * *Loop Counter*: Halqa hisoblagichi sifatida foydalanish uchun o'zgaruvchini yaratadi. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
-* *Range*: halqa hisoblagichi uchun sonlar roʻyxatini tuzadigan funktsiya. The keyword `in` connects the loop counter to the range. `range()` ikkita argument oladi, boshlang'ich nuqta (o'z ichiga olgan holda) va tugash nuqtasi (mustasno holda): `range(startingNumber, endingNumber)`.
+* *Range*: halqa hisoblagichi uchun sonlar roʻyxatini tuzadigan funktsiya. `in` so'zi halqaning ichidagi hisoblagichni diapazonga (range) bog'laydi. `range()` ikkita argument oladi, boshlang'ich nuqta (o'z ichiga olgan holda) va tugash nuqtasi (mustasno holda): `range(startingNumber, endingNumber)`.
 * *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U `:` ikki nuqtadan so'ng to'g'ridan-to'g'ri *chekingan* (_tab_ tugmasi yordamida) barcha narsalarni o'z ichiga oladi.
 
 [role="curriculum-javascript"]
 * *Initialization*: Bu birinchi halqa ishga tushishidan oldin *halqa hisoblagichi* sifatida foydalanish uchun oʻzgaruvchini yaratadi.
-* *Loop Condition*: Bu halqa qayta ishga tushishini tekshiradi. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
-* *Takrorlanish bayonoti*: halqa hisoblagichini yangilaydigan bayonot. It counts up each time the loop repeats.
+* *Loop Condition*: Bu halqa qayta ishga tushishini tekshiradi. Agar bayonot rost bo'lsa, halqa tanasi yana ijro etiladi. Hisoblagich juda baland bo'lsa, bayonot yolg'on bo'ladi va biz halqadan chiqamiz. So'ng kompyuter halqadan keyingi kodni bajarishni davom ettiradi.
+* *Takrorlanish bayonoti*: halqa hisoblagichini yangilaydigan bayonot. U halqa har safar takrorlanganda hisobni olib boradi.
 * *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U jingalak qavslar `{ }` bilan o'ralgan va (_tab_ tugmasi yordamida) *chekingan*. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
 
-.PRACTICE
+.AMALIYOT
 ****
-. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
-. Modify your code to go from measures `3` to `7`
-. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
+. `makeBeat()` 1 dan 4 gacha boʻlgan oʻlchovlarga ega boʻlishi uchun “measure” hisoblagichi bilan `for` halqasini yarating
+. 3 dan 7 gacha bo'lgan o'lchovlarga o'tish uchun kodingizni o'zgartiring
+. So'ng 3 dan 7 gacha o'lchovlar saqlangan holda zarbalaringiz 1-trek o'rniga 2-trekda bo'lishi uchun kodingizni o'zgartiring
 . So'ng hisoblagich nomini o'zgartiring, trek va o'lchovlarni tanlang va tegishli `for` halqasini yarating
 . Qo‘shningizga so'nggi `for` halqasini ko'rsating va ular sizning zarbangiz qaysi trekda yoqilganligini, unda qaysi o'lchovlar yoqilaganini va hisoblagichingizning nomini aniqlashlarini so‘rang.
 ****
@@ -71,26 +71,26 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 {nbsp} +
 
 [[printstatements]]
-=== Print statements
+=== Chop Etish Bayonotlari
 
-To better understand the flow of your code, you can use `print()`. It allows you to display information in the console when you run the code.
-
-[role="curriculum-python"]
-When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
-
-[role="curriculum-javascript"]
-When use provide data to `println()`, it is *evaluated*, or simplified it to its basic form.
-
-Then the data is converted into text and shown in the console.
+Kodingiz oqimini yaxshiroq tushunish uchun `print()` chop etish bayonotidan foydalanishingiz mumkin. Bu kodni ishga tushirganingizda konsolda ma'lumotni ko'rsatishga imkon beradi.
 
 [role="curriculum-python"]
-.PRACTICE
+Biz print() uchun ma'lumotni uzatganimizda, u *baholanadi*, ya'ni uning sodda shakliga keltiriladi.
+
+[role="curriculum-javascript"]
+Biz println() uchun ma'lumotni uzatganimizda, u *baholanadi*, ya'ni uning sodda shakliga keltiriladi.
+
+Ma'lumot matnga o'giriliadi va konsolda ko'rsatiladi.
+
+[role="curriculum-python"]
+.AMALIYOT
 ****
-Before running the following code, try to guess what the console will display for each `print()` call.
+Quyidagi kodni ishga tushirishdan oldin, har bir `print()` chaqiruvi uchun konsol nimani ko'rsatishini taxmin qilishga harakat qiling.
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.AMALIYOT
 ****
 Quyidagi kodni ishga tushirishdan oldin, har bir `println()` chaqiruvi uchun konsol nimani ko'rsatishini taxmin qilishga harakat qiling.
 ****
@@ -109,7 +109,7 @@ include::code-examples/loops-and-layers-printing.py.txt[]
 include::code-examples/loops-and-layers-printing.js.txt[]
 ----
 
-Here, you will see in your console the following lines:
+Bu yerda siz konsolingizda quyidagi qatorlarni ko'rasiz:
 
 ----
 4 (this is 1+3, simplified)
@@ -123,10 +123,10 @@ ok
 ok
 ----
 
-and it ends there since measure has to be lower than 5, so 4 is your limit.
+va u shu yerda tugaydi, chunki o'lchov 5 dan kam bo'lishi kerak, shuning uchun 4 siz uchun chegara hisoblanadi.
 
 [[controlflow]]
-=== Control Flow
+=== Boshqaruv Oqimi
 
 `For` halqalaridan qanday foydalanishga yana bir misol:
 
@@ -198,7 +198,7 @@ O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida hisoblagich
 [role="curriculum-javascript"]
 O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida biz `measure = measure + 1` atamalaridan foydalanganmiz. This increments the counter `measure` by `1` for on each repeat. Uni bir necha marta oshirish mumkin, masalan, `measure = measure + 4'.
 
-.PRACTICE
+.AMALIYOT
 ****
 Before running the following code, try to guess what it will do.
 ****
@@ -315,7 +315,7 @@ Nihoyat, keling, *takrorlash* va *kontrast*ni muhokama qilaylik. Psixologlar _sh
 
 Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
 
-.PRACTICE
+.AMALIYOT
 ****
 Create a complete song with:
 
