@@ -238,18 +238,18 @@ Keling, qo'shiqni miks qilish uchun ushbu barcha vositalardan foydalanaylik. Mix
 * Create a new script.
 * Add sounds on at least three tracks for at least sixteen measures.
 * You can use the `makeBeat()` function and a `for` loop to add percussion.
-* Choose your "main" track. It can be your melody, or the track that you wish to highlight.
+* Choose your "main" track. Bu sizning ohangingiz yoki siz ta'kidlashni istagan trek bo'lishi mumkin.
 * Agar sizning asosiy trekingiz boshqa treklardan balandroq bo'lmasa, `setEffect()` funktsiyasidan foydalanib uning ovoz balandligini oshirganingizga ishonch hosil qiling. Don't take the percussive track into account, as `analyzeTrack()` is not relevant for percussion. `analyzeTrack()` returns a mean whereas percussion are bursts of sound, so a mean doesn't really evaluate the loudness.
-* Use `println()` to show your process in the console. Here is an example: `println("Is track number" + track + "greater than 0.01?")`, if the counter `track` is equal to `1`, this will print "Is track number 1 greater than 0.01?".
+* Jarayoningizni konsolda ko'rsatish uchun `println()` bayonotidan foydalaning. Chop etish bayonotiga misol: `println('trek raqami' + trek + '0,01 dan kattami?')`, agar hisoblagich `trek` `1` ga teng bo'lsa, bu '1 raqamli trek 0,01 dan kattami?' deb chop etadi.
 ****
 
 Keling, ba'zi lug'atlarni ko'rib chiqaylik:
 
-1. *Operator*: harakatni ifodalovchi belgi. We have seen arithmetic operators (`\+`, `-`, `\*`, `=`) and comparison operators (`>`, `>=`, `<`, `\<=`, `===`, `!==`).
-1. *Ifoda*: qiymatlar, konstantalar, o‘zgaruvchilar, operatorlar va funktsiyalar birikmasi. The computer evaluates expressions to produce a result, usually a single numeric or boolean value.  For example: `1 + 2` (evaluated to 3) or `1 < 2` (evaluated to True) or `analyzeTrack(1, RMS_AMPLITUDE)` (evaluated to the loudness of track `1`, a float between 0 and 1).
+1. *Operator*: harakatni ifodalovchi belgi. Biz arifmetik operatorlarni (`\+`, `-`, `\*`, `=`) va taqqoslash operatorlarini (`>`, `>=`, `<`, `<=`, `===`, `!=`) ko'rdik.
+1. *Ifoda*: qiymatlar, konstantalar, o‘zgaruvchilar, operatorlar va funktsiyalar birikmasi. Natija hosil qilish uchun kompyuter ifodalarni baholaydi, u odatda bitta raqam yoki mantiqiy qiymat bo'ladi.  Masalan: `1+2` (3ga baholangan) yoki `1<2` (Rost deb baholangan) yoki `analyzeTrack(1, RMS_AMPLITUDE)` (1-trekning balandligiga baholangan, 0 va 1 orasida suzuvchi vergul kattaligi).
 1. *Bayonotllar* - bu kompyuter bajarishi uchun ko'rsatma.
 
-Below is an example of automated mixing. Agar siz bir yoki bir nechta tovushni o'zgartirsangiz, ularning ovoz balandligini tekshirishingiz va o'zingiz o'zgartirishingiz shart emas, chunki u allaqachon kodga kiritilgan. Shuning uchun biz buni avtomatlashtirilgan deb aytishimiz mumkin.
+Quyida avtomatlashtirilgan miks qilish misoli keltirilgan. Agar siz bir yoki bir nechta tovushni o'zgartirsangiz, ularning ovoz balandligini tekshirishingiz va o'zingiz o'zgartirishingiz shart emas, chunki u allaqachon kodga kiritilgan. Shuning uchun biz buni avtomatlashtirilgan deb aytishimiz mumkin.
 
 [role="curriculum-python"]
 [source,python]
@@ -266,10 +266,10 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 {nbsp} +
 
 [[chapter6summary]]
-=== Chapter 6 Summary
+=== 6-Bob Xulosa
 
 [role="curriculum-python"]
-* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
+* `analyzeTrack()` funktsiyasi ikkita argumentni oladi: trek raqami va parametr. Parametr `RMS_AMPLITUDE` bo'lsa, funktsiya trekning balandligini qaytaradi (0 va 1 orasidagi raqam). Parametr `SPECTRAL_CENTROID` bo'lsa, funktsiya trekning yorqinligini qaytaradi.
 * *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `True` va `False`.
 * Mantiqiy qiymatlar ushbu taqqoslash operatorlari tomonidan hosil qilinadi: `==`, `!=`, `>`, `>=`, `<`, `\<=`.
 * `==` 2 ta qiymat tengligini baholaydi, `=` esa o`zgaruvchiga qiymat tayinlaydi.
@@ -277,27 +277,27 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 * *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
 * *Bayonot* - bu kompyuter uchun ko'rsatma.
 * *Shart* `Rost` yoki `Yolg'on` deb baholanadigan iboradir.
-* The `if` statement only executes its code block when its condition is `True`.
-* In the event that an `if` statement's condition is `False`, an optional `else` statement allows an alternative code block to be executed.
+* `if` bayonoti shart faqat `Rost` bo'lgandagina kod blokini bajaradi.
+* Agar `if` bayonotining sharti `Yolg'on` bo'lsa, ixtiyoriy `else` operatori muqobil kod blokini bajarishga imkon beradi.
 
 [role="curriculum-javascript"]
-* The `analyzeTrack()` function takes two arguments: the track and feature. When the feature is `RMS_AMPLITUDE`, the function will return the loudness of the track (a number between 0 and 1). When the feature is `SPECTRAL_CENTROID`, the function will return the brightness of the track.
+* `analyzeTrack()` funktsiyasi ikkita argumentni oladi: trek raqami va parametr. Parametr `RMS_AMPLITUDE` bo'lsa, funktsiya trekning balandligini qaytaradi (0 va 1 orasidagi raqam). Parametr `SPECTRAL_CENTROID` bo'lsa, funktsiya trekning yorqinligini qaytaradi.
 * *Boolean* maʼlumotlar turi faqat ikkita mumkin boʻlgan qiymatga ega, `true` va `false`.
-* Boolean values are generated by comparison operators: `===`, `!==`, `>`, `>=`, `<`, `\<=`.
-* `===` evaluates if 2 values are equal, whereas `=` assigns a value to a variable.
+* Mantiqiy qiymatlar ushbu taqqoslash operatorlari tomonidan hosil qilinadi: `===`, `!=`, `>`, `>=`, `<`, `\<=`.
+* `===` 2 ta qiymat tengligini baholaydi, `=` esa o`zgaruvchiga qiymat tayinlaydi.
 * *Operator*: harakatni ifodalovchi belgi.
 * *Ifodalar* qiymat ishlab chiqarish uchun kompyuter tomonidan baholanadi.
 * *Bayonot* - bu kompyuter uchun ko'rsatma.
 * *Shart* `rost` yoki `yolg'on` deb baholanadigan iboradir.
-* The `if` statement only executes its code block when its condition is `true`.
-* In the event that an `if` statement's condition is `false`, an optional `else` statement allows an alternative code block to be executed.
+* `if` bayonoti shart faqat `Rost` bo'lgandagina kod blokini bajaradi.
+* Agar `if` bayonotining sharti `Yolg'on` bo'lsa, ixtiyoriy `else` operatori muqobil kod blokini bajarishga imkon beradi.
 
 [[chapter-questions]]
-=== Questions
+=== Savollar
 
 [question]
 --
-Which of the following elements is a boolean?
+Quyidagi elementlardan qaysi biri mantiqiy hisoblanadi?
 
 [answers]
 * `5+4 === 5`
@@ -309,7 +309,7 @@ Which of the following elements is a boolean?
 [role="curriculum-python"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
 
 [source,python]
 ----
@@ -319,14 +319,14 @@ include::code-examples/mixing-with-conditionals-untitled3.py.txt[]
 [answers]
 * 10
 * 5
-* True
-* False
+* Rost (True)
+* Yolg'on (False)
 --
 
 [role="curriculum-javascript"]
 [question]
 --
-What would the output of this block of code be (what would print to the console)?
+Ushbu kod blokining chiqishi qanday bo'ladi (konsolga nima chop etiladi)?
 
 [source,javascript]
 ----
@@ -336,28 +336,28 @@ include::code-examples/mixing-with-conditionals-untitled3.js.txt[]
 [answers]
 * 10
 * 5
-* True
-* False
+* Rost (True)
+* Yolg'on (False)
 --
 
 [question]
 --
-What is mixing?
+Miks qilish nima?
 
 [answers]
-* adapting the volume of each track so they sound well balanced
-* adapting the pitch of each track so they sound well balanced
-* adding a fade in
-* adding a fade out
+* har bir trek yaxshi muvozanatli eshitilishi uchun ularning ovoz balandligini moslashtirish
+* treklar muvozanatli eshitilishi uchun har bir trekning tovush pardasini moslashtirish
+* tovushning asta kuchayishini qo'shish
+* tovushning asta so'nishini qo'shish
 --
 
 [question]
 --
-How many conditions can you check in a conditional statement?
+Shartli bayonotda nechta shartni tekshirishingiz mumkin?
 
 [answers]
-* any number of conditions
-* 1 condition
-* 2 conditions
-* 3 conditions
+* har qanday miqdordagi shartlar
+* 1ta shart
+* 2ta shart
+* 3ta shart
 --
