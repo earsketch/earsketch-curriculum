@@ -129,7 +129,7 @@ Keling, birinchi 3 ta variantni ko'rib chiqaylik.
 
 . *Tovushni Yuklash* kompyuteringizda avvaldan mavjud bo'lgan audio fayllarni tanlash imkonini beradi.
 . *Tez Yozib Olish* kompyuteringizning mikrofonidan foydalanib ovoz yozib olish imkoniyatini beradi.
-. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. Qidiruv satrida sizga kerak bo'lgan ovozni qidiring. Then select the toggle button in front of the file name to select.
+. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. Qidiruv satrida sizga kerak bo'lgan ovozni qidiring. Undan so'ng faylni tanlash uchun fayl nomining yonidagi tugmani bosing.
 
 [role="curriculum-mp4"]
 [[video101rec]]
@@ -137,10 +137,10 @@ video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
 .AMALIYOT
 ****
-Music, and art in general, is often a way to convey a message. It can be either through lyrics, and/or through the mood of the song. We would like for you to create a short song that expresses something. Bu siz baham ko'rmoqchi bo'lgan tuyg'u yoki hikoya bo'lishi mumkin.
+Musiqa va umuman san'at ko'pincha xabarni yetkazishning bir usuli hisoblanadi. Bu qo'shiq matni va/yoki qo'shiqning kayfiyati orqali bo'lishi mumkin. Sizdan nimanidir ifodalovchi qisqa qo'shiq yaratishingizni xohlaymiz. Bu siz baham ko'rmoqchi bo'lgan tuyg'u yoki hikoya bo'lishi mumkin.
 
 . Ifodalashni xohlayotgan narsangizni tasavvur qiling
-. Then either:
+. Keyin yoki:
 .. Write some lyrics and record yourself singing or reading them or
 .. Record or download some sounds that are related to your message
 . Add these recordings to your song using `fitMedia()`
