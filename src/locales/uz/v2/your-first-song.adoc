@@ -129,7 +129,7 @@ Keling, birinchi 3 ta variantni ko'rib chiqaylik.
 
 . *Tovushni Yuklash* kompyuteringizda avvaldan mavjud bo'lgan audio fayllarni tanlash imkonini beradi.
 . *Tez Yozib Olish* kompyuteringizning mikrofonidan foydalanib ovoz yozib olish imkoniyatini beradi.
-. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. In the search bar, you can look for a type of sound. Then select the toggle button in front of the file name to select.
+. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. Qidiruv satrida sizga kerak bo'lgan ovozni qidiring. Then select the toggle button in front of the file name to select.
 
 [role="curriculum-mp4"]
 [[video101rec]]
