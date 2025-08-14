@@ -141,17 +141,17 @@ Musiqa va umuman san'at ko'pincha xabarni yetkazishning bir usuli hisoblanadi. B
 
 . Ifodalashni xohlayotgan narsangizni tasavvur qiling
 . Keyin yoki:
-.. Write some lyrics and record yourself singing or reading them or
-.. Record or download some sounds that are related to your message
-. Add these recordings to your song using `fitMedia()`
-. Then add additional sounds using `fitMedia()`
-. Present your song to your friend
-. You can discuss your songs and the things you were trying to express
+.. She'r yozing va uni qo'shiq qilib aytayotganingizni yoki uni o'qiyotganingizni yozib oling, yoki
+.. Xabaringiz bilan bog'liq ba'zi tovushlarni yozib oling yoki yuklab oling
+. `fitMedia()` funktsiyasidan foydalanib, ushbu yozuvlarni qo'shiqqa qo'shing
+. Qo'shimcha ovozlarni fitMedia() ning yordamida qo'shing
+. Qo'shiqni do'stingizga taqdim eting
+. Siz o'z qo'shiqlaringizni va ifodalamoqchi bo'lgan narsalarni muhokama qilishingiz mumkin
 ****
 
-An active computer program is called a *process*.
+Shu onda ishlayotgan kmpyuter dastury *jarayon* (process) deb ataladi.
 
-When you start a process, the computer code is first stored in the computer's *memory* for quick access. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
+Siz jarayonni boshlaganingizda, kompyuter kodi avval kompyuterning *xotirasida* saqlanadi chunki u yeardan kod tezroq chaqiriladi. The *CPU*, or Central Processing Unit, accesses each instruction from the memory and executes it. The CPU is often considered the "brain" of the computer.
 
 A computer's memory is sometimes called primary storage or RAM. It is designed to be fast and temporary, for active processes only.
 
