@@ -1,4 +1,4 @@
-# Ritmli rampalar: For halqasi orqali effektlarni avtomatlashtirish
+# Ritmli rampalar (asta sekin o'zgartirish): For halqasi orqali effektlarni avtomatlashtirish
 
 # Sozlash
 from earsketch import *
