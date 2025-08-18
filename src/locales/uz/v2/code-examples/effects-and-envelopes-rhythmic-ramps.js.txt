@@ -1,4 +1,4 @@
-// Ritmli rampalar: For halqasi orqali effektlarni avtomatlashtirish
+// Ritmli rampalar (asta sekin ozgartrish): For halqasi orqali effektlarni avtomatlashtirish
 
 // Sozlash
 setTempo(120);
