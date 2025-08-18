@@ -1,4 +1,4 @@
-# Konvertlar: 7 parametrli setEffect() bilan konvertlar yaratish
+# Zarflar: 7 parametrli setEffect() bilan zarflar yaratish
 
 # Sozlash
 from earsketch import *
