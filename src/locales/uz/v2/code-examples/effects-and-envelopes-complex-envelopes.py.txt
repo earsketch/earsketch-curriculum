@@ -1,4 +1,4 @@
-# Murakkab konvertlar: Effektlar konvertida o'zgartirishlar kiritish uchun trekda bir nechta setEffect() ni chaqirish
+# Murakkab zarflar: Effektlar zarfida o'zgartirishlar kiritish uchun trekda bir nechta setEffect() ni chaqirish
 
 # Sozlash
 from earsketch import *
@@ -7,7 +7,7 @@ setTempo(120)
 # Musiqa
 fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9)
 
-# Konvert vaqt nuqtalari (o'lchovlarda ko'rsatiladi)
+# Zarf vaqt nuqtalari (o'lchovlarda ko'rsatiladi)
 pointA = 1
 pointB = 4
 pointC = 6.5
