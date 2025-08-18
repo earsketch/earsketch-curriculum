@@ -15,7 +15,7 @@ var hihatBeat = "---0---0--00----";
 fitMedia(melody1, 1, 1, 5);
 fitMedia(melody2, 1, 5, 9);
 
-// For halqasidan qo'llanib o'lchamga loyiq qilib trekka zarbalarni qoshish. Tepuvchi baraban 2-trekka va hai-het barabani 3-trekka. 
+// For halqasidan qo'llanib o'lchamga loyiq qilib trekka zarbalarni qoshish. Tepuvchi baraban 2-trekka va hai-het barabani 3-trekka.
 for (var measure = 1; measure < 9; measure++) {
     makeBeat(kick, 2, measure, kickBeat);
     makeBeat(hihat, 3, measure, hihatBeat);
