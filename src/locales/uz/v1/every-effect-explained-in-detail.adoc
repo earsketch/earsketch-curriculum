@@ -49,7 +49,7 @@ setEffect(1, BANDPASS, MIX, 1);
 |===
 
 [[chorus]]
-=== NAQORAT
+=== CHORUS (xor)
 
 ++++
 <div class="effect-examples">
@@ -100,7 +100,7 @@ setEffect(1, CHORUS, MIX, 0.5);
 |===
 
 [[compressor]]
-=== KOMPRESSOR
+=== COMPRESSOR (kompressor)
 
 ++++
 <div class="effect-examples">
@@ -141,7 +141,7 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 |===
 
 [[delay]]
-=== KECHIKTIRISH
+=== DELAY (kechiktirish)
 
 ++++
 <div class="effect-examples">
@@ -186,13 +186,13 @@ setEffect(1, DELAY, MIX, 1);
 |===
 
 [[distortion]]
-=== DISTORTION
+=== DISTORTION (qiyshaytirish, buzish)
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
 </div>
 ++++
@@ -214,12 +214,12 @@ setEffect(1, DISTORTION, DISTO_GAIN, 27);
 setEffect(1, DISTORTION, MIX, 1);
 ----
 
-`DISTORTION` adds a dirty, fuzzy, and gritty effect to a sound by overdriving it, which clips the sound wave and adds overtones (higher frequencies related to the original sound). `DISTORTION` is commonly used on electric guitars in rock and grunge music, but you can use it for many different sounds.
+`DISTORTION` kir, ovozga yomon eshtiladigan, g'idir-bidir effekt qo'shadi. Tovush to'lqini kesib unga boshqa ohanglar qo'shadi (bular asl tovushnlarga bog'liq balandroq chastotadagi tovushlar). `DISTORTION` odatda elektrik gitarada rok va grandj janridagi musiqalarda ishlatiladi. Lekin siz uni boshqa turli ovozlar bilan ishlatishingiz mumkin.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|DISTO_GAIN |The amount of overdrive of the original sound. |20.0 |0.0 |50.0
+|DISTO_GAIN |Asl tovushning haddan tashqari kuchaytirish miqdori. |20.0 |0.0 |50.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -231,9 +231,9 @@ setEffect(1, DISTORTION, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
 </div>
 ++++
@@ -261,12 +261,12 @@ setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000);
 setEffect(1, EQ3BAND, MIX, 1);
 ----
 
-`EQ3BAND` is a three-band equalizer, which is a tool used to adjust the volume of three separate frequency ranges in an audio track: bass, midrange, and treble (low, mid, high). EQ is used in music production to get rid of unwanted frequencies, create balance between tracks to get a radio-ready mix, or simply change the "vibe" of a sound.
+`EQ3BAND` uch oraliqli ekvalayzer. Bu asbob treknin uchta chastota oralig'ini sozlash uchun ishlatiladi: bass, o'rta o'ralig, baland o'ralig (treble).   Ekvalayzer musiqa aranjirovkasida istalmagan chastotalarni olib tashlash, treklar orasida muvozanat yaratish (radioda ijro etish uchun), yoki shunchaki ovozning his-xususiyatini o'zgartirsh uchun ishlatiladi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|EQ3BAND_LOWGAIN |The gain (in dB) of the low range of frequencies of the EQ. Negative values lower the volume of the low frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_LOWGAIN |EQ chastotasining past diapazonining o'sishi (dB-da). Salbiy qiymatlar past chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
 
 |EQ3BAND_LOWFREQ |Specifies the highest frequency (in Hz) of the low range. |200.0 |20.0 |20000.0
 
@@ -284,7 +284,7 @@ setEffect(1, EQ3BAND, MIX, 1);
 |===
 
 [[filter]]
-=== FILTER
+=== FILTER (filtr)
 
 ++++
 <div class="effect-examples">
