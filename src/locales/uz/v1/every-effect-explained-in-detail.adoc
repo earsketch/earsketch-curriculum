@@ -34,7 +34,7 @@ setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9);
 setEffect(1, BANDPASS, MIX, 1);
 ----
 
-`BANDPASS` faqat ma'lum diapazondagi chastotalarni o'tazadi ("pass" ingliz tilida o'tkazish ma'nosini bildiradi). Chastotalar diapazonini o'zgartirish mumkin. Boshqa barcha chastotalar o'tkazilmaydi. Diapazonni kichikroq qilib belgilanganingizada (ya'ni `BANDPASS_RESONANCE` ning qiymatini 1 ga yaqinroq bo'lsa), siz telefon yoki megafonga o'xshash tovush yaratasiz. By creating a wider band of frequencies (setting `BANDPASS_RESONANCE` closer to 0), you can make sounds that seem overpowering blend better with other sounds in the mix.
+`BANDPASS` faqat ma'lum diapazondagi chastotalarni o'tazadi ("pass" ingliz tilida o'tkazish ma'nosini bildiradi). Chastotalar diapazonini o'zgartirish mumkin. Boshqa barcha chastotalar o'tkazilmaydi. Diapazonni kichikroq qilib belgilanganingizada (ya'ni `BANDPASS_RESONANCE` ning qiymatini 1 ga yaqinroq bo'lsa), siz telefon yoki megafonga o'xshash tovush yaratasiz. Chastotalar oralig'ini kengaytirganingizda (ya'ni `BANDPASS_RESONANCE` 0 ga yaqinroqqa tenglashtirganingizda), siz kuchliroq eshitilayotgan tovushlarini boshqa tovushlar bilan samaraliroq qo'shilib ketishiga erishishingiz mumkin.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
@@ -81,18 +81,18 @@ setEffect(1, CHORUS, CHORUS_RATE, 10);
 setEffect(1, CHORUS, MIX, 0.5);
 ----
 
-`CHORUS` creates a subtle ensemble-like effect by making various copies of the sound, changing them slightly in pitch, and mixing them back into the sound.
+`CHORUS` ansamblga o'xshagan effekt yaratadi. U ovozning turli nusxalarini yaratib, ularning ohangini bir oz o'zgrtirib ularni yana asl ovoz bilan miks qiladi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|CHORUS_LENGTH |The length of time (in ms) from the original sound within which the chorus effect is activated. |15.0 |1.0 |250.0
+|CHORUS_LENGTH |Asl tovush ichidan naqorat effekti faollashtirilgan vaqt uzunligi (millisoniya - ms). |15.0 |1.0 |250.0
 
-|CHORUS_NUMVOICES |The number of copies of the original sound that is used. Larger values create a bigger ensemble-like effect. |1.0 |1.0 |8.0
+|CHORUS_NUMVOICES |Foydalanilgan asl tovushning nusxalari miqdori. Kattaroq qiymatlar ansamblga o'xshash katta effekt yaratadi. |1.0 |1.0 |8.0
 
-|CHORUS_RATE |The rate (in Hz) which the pitch cycles or "wobbles" at. Lower values create smoothly-cycling sounds, while higher values create more wobbly-sounding effects. |0.5 |0.1 |16.0
+|CHORUS_RATE |Tovush pardasining aylanish yoki "tebranish" darajasi (Gertsda). Pastroq qiymatlar silliq aylanuvchi tovushlarni yaratadi, yuqori qiymatlar esa ko'proq tebranish effektlarini yaratadi. |0.5 |0.1 |16.0
 
-|CHORUS_MOD |The depth of the pitch wobbling (i.e. how much pitch cycling is used). Low settings create a more natural sound, while higher settings create a more artificial-like sound. |0.7 |0.0 |1.0
+|CHORUS_MOD |Tovush pardasining tebranish chuqurligi (ya'ni, qancha tovush pardasi aylanmasi ishlatiladi). Past sozlamalar tabiiyroq tovushni yaratadi, yuqoriroq sozlamalar esa sun'iyroq tovushni yaratadi. |0.7 |0.0 |1.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -100,13 +100,13 @@ setEffect(1, CHORUS, MIX, 0.5);
 |===
 
 [[compressor]]
-=== COMPRESSOR
+=== KOMPRESSOR
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
 </div>
 ++++
@@ -128,26 +128,26 @@ setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
 setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 ----
 
-`COMPRESSOR` reduces the volume of the loudest sections of a sound and amplifies the quietest sections. This creates a smaller dynamic range, which means that the volume of the track stays more constant throughout. Music producers often use compressors to fine-tune and add “punch” to drums.
+`COMPRESSOR` ovozning eng baland qismini pasaytiradi va eng past qismini balandlashtiradi. By dinamik diapazonni toraytiradi, ya'ni trekning balandligi boshidan oxirigacha barqaror bo'ladi. Musiqa prodyuserlari barabanlarni sozlash uchun kompressorlardan foydalanishadi va bu barabani "zarbaliroq" eshitilishiga yordam beradi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|COMPRESSOR_THRESHOLD |The amplitude (volume) level (in dB) above which the compressor starts to reduce volume. |-18.0 |-30.0 |0.0
+|COMPRESSOR_THRESHOLD |Kompressor tovushni kamaytira boshlagan amplituda (ovoz balandligi) darajasi (dB da). |-18.0 |-30.0 |0.0
 
-|COMPRESSOR_RATIO |The amount of specified gain reduction. A ratio of 3:1 means that if the original sound is 3 dB over the threshold, then the affected sound will be 1 dB over the threshold. |10.0 |1.0 |100.0
+|COMPRESSOR_RATIO |Belgilangan o'sishning kamayish miqdori. 3:1 nisbati, agar asl tovush chegaradan 3 dB yuqori bo'lsa, ta'sirlangan tovush chegaradan 1 dB yuqori bo'lishini anglatadi. |10.0 |1.0 |100.0
 
 |BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
 |===
 
 [[delay]]
-=== DELAY
+=== KECHIKTIRISH
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effect bilan:</div>
     <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
 </div>
 ++++
@@ -171,14 +171,14 @@ setEffect(1, DELAY, DELAY_FEEDBACK, -3.5);
 setEffect(1, DELAY, MIX, 1);
 ----
 
-`DELAY` creates a repeated echo of the original sound. It does this by playing the original sound as well as a delayed, quieter version of the original. After this first echo, it plays an echo of the echo (quieter than the first), then an echo of the echo of the echo (even quieter), and so on. If you set the time between each echo (`DELAY_TIME`) to the length of a beat, you can create an interesting rhythmic effect.
+`KECHIKTIRISH` asl tovushning takroriy aks-sadosi kabi kechikishini hosil qiladi. U asl tovush bilan birga uning kechiktirilgan va ovozi pastroq nushasini ijro etadi. Birinchi aks sado dang so'ng, uning yana bir aks sadosini (birinchidan pastroq), va yana bir aks sadoni (oldindagidan pastroq) va hokazolarni ijro etadi.  Agar siz aks sadolarning orasidagi vaqtni (`DELAY_TIME`) zarbaning uzunligiga teng qilib belgilasangiz, qiziqarli ritmik effekt xosil qilishingiz mumkin.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|DELAY_TIME |The time amount in milliseconds (ms) that the original track is delayed, and the time between successive repeats of the delay. |300.0 |0.0 |4000.0
+|DELAY_TIME |Asl trek kechiktirilgan vaqt miqdori millisoniyalarda (ms) va kechikishning ketma-ket takrorlanishi orasidagi vaqt. |300.0 |0.0 |4000.0
 
-|DELAY_FEEDBACK |The relative amount of repeats that the delay generates. Higher values create more "echoes". Be careful of applying "too much" feedback! |-3.0 |-120.0 |-1.0
+|DELAY_FEEDBACK |Kechiktirish keltirib chiqaradigan takrorlashlarning nisbiy miqdori. Yuqori qiymatlar ko'proq "aks-sadolarni" yaratadi. "Haddan tashqari" yuqori qiymatlarda extiyot bo'ling chunki u fidbek (jarangli ovoz) xosil qilishi mumkin.  |-3.0 |-120.0 |-1.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |0.5 |0.0 |1.0
 
@@ -712,7 +712,7 @@ setEffect(1, WAH, MIX, 1);
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|WAH_POSITION |The center frequency of the boosted fixed-width frequency range. |0.0 |0.0 |1.0
+|WAH_POSITION |Belglangan doimiy kenglikdagi chastota diapazonining markaziy chastotasi. |0.0 |0.0 |1.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
