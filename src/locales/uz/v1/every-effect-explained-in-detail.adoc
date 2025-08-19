@@ -361,12 +361,12 @@ setEffect(1, FLANGER, FLANGER_RATE, 20);
 setEffect(1, FLANGER, MIX, 1);
 ----
 
-`FLANGER` creates a "whoosh"-like effect by making various copies of the sound, adjusting their delay time very slightly, and then mixing them back into the original sound. At extreme values of parameter settings, `FLANGER` produces more artificial and "robot-like" sounds.
+`FLANGER` "shhht"-ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Parametrlar qiymatlarini ekstrimal darajaga tenglaganda, `FLANGER` soxta, robotga o'xshash ovoz yaratadi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|FLANGER_LENGTH |The length of delay time (in ms) from the original sound within which the flanger effect is activated. |6.0 |0.0 |200.0
+|FLANGER_LENGTH |Flanger effekti faollashtirilgan asl tovushdan kechikish vaqtining uzunligi (ms da). |6.0 |0.0 |200.0
 
 |FLANGER_FEEDBACK |The amount (in dB) that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-50.0 |-80.0 |-1.0
 
