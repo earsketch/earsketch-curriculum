@@ -266,17 +266,17 @@ setEffect(1, EQ3BAND, MIX, 1);
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|EQ3BAND_LOWGAIN |EQ chastotasining past diapazonining o'sishi (dB-da). Salbiy qiymatlar past chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
+|EQ3BAND_LOWGAIN |Ekvalayzer chastotasining past diapazonining o'sishi (dB-da). Salbiy qiymatlar past chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
 
-|EQ3BAND_LOWFREQ |Specifies the highest frequency (in Hz) of the low range. |200.0 |20.0 |20000.0
+|EQ3BAND_LOWFREQ |Past diapazonning eng yuqori chastotasini (Gertsda) belgilaydi. |200.0 |20.0 |20000.0
 
-|EQ3BAND_MIDGAIN |The gain (in dB) of the mid range of frequencies of the EQ. Negative values lower the volume of the mid frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_MIDGAIN |Ekvalayzer chastotasining o'rta diapazonining o'sishi (dB-da). Salbiy qiymatlar o'rta chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
 
-|EQ3BAND_MIDFREQ |Specifies the center frequency (in Hz) of the mid range. |2000.0 |20.0 |20000.0
+|EQ3BAND_MIDFREQ |O'rta diapazonning markaziy chastotasini (Gertsda) belgilaydi. |2000.0 |20.0 |20000.0
 
-|EQ3BAND_HIGHGAIN |The gain (in dB) of the high range of frequencies of the EQ. Negative values lower the volume of the high frequencies, while positive values boost them. |0.0 |-24.0 |18.0
+|EQ3BAND_HIGHGAIN |Ekvalayzer chastotasining yuqori diapazonining o'sishi (dB-da). Salbiy qiymatlar yuqori chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
 
-|EQ3BAND_HIGHFREQ |Specifies the cutoff frequency (in Hz) of the high range. |2000.0 |20.0 |20000.0
+|EQ3BAND_HIGHFREQ |Yuqori diapazonning kesish chastotasini (Gertsda) belgilaydi. |2000.0 |20.0 |20000.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -288,9 +288,9 @@ setEffect(1, EQ3BAND, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
 </div>
 ++++
@@ -314,14 +314,14 @@ setEffect(1, FILTER, FILTER_RESONANCE, 0.9);
 setEffect(1, FILTER, MIX, 1);
 ----
 
-`FILTER` can soften, darken, or add depth to sound. It does this by applying a low-pass filter which lowers the volume of high frequencies.
+`FILTER` tovushni yumshatishi, "qorong'uroq" qilishi, yoki uni chuqurroq qilishi mumkin.  U yuqori chastotadagi ovozlarni filtr orqali pasaytiradi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|FILTER_FREQ |The cutoff frequency (Hz), which means that all frequencies higher than this value are rolled-off (become lower and lower in volume the higher they are from this value). |1000.0 |20.0 |20000.0
+|FILTER_FREQ |Kesish chastotasi (Gerts), ya'ni bu qiymatdan yuqori bo'lgan barcha chastotalar o'chirilgan (bu qiymatdan qanchalik yuqori bo'lsa, ovoz balandligi pastlashib boraveradi). |1000.0 |20.0 |20000.0
 
-|FILTER_RESONANCE |The boost of frequencies near the FILTER_FREQ level. Higher values of resonance strongly boost a small window of frequencies near the FILTER_FREQ, creating a sharper, more ringing sound around those frequencies, while lower values of resonance subtly boost a larger window. |0.8 |0.0 |1.0
+|FILTER_RESONANCE |BANDPASS_FREQ qiymati atrofida chastotalarni kuchaytirish. Balandroq rezonans qiymatlar FILTER_FREQ atrofida tor oraliqdagi chastotalarni qattiq kuchaytiradi va bu o'tkirroq, jaranglaydigan ovoz xosil qiladi. Kichikroq qiymatlar esa keng oraliqdagi chastotalarni ozgina kuchaytiradi. |0.8 |0.0 |1.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -333,9 +333,9 @@ setEffect(1, FILTER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
 </div>
 ++++
