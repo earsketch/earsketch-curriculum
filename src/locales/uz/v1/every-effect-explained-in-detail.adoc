@@ -361,16 +361,16 @@ setEffect(1, FLANGER, FLANGER_RATE, 20);
 setEffect(1, FLANGER, MIX, 1);
 ----
 
-`FLANGER` "shhht"-ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Parametrlar qiymatlarini ekstrimal darajaga tenglaganda, `FLANGER` soxta, robotga o'xshash ovoz yaratadi.
+`FLANGER` "hushtak chalish"-ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Parametrlar qiymatlarini ekstrimal darajaga tenglaganda, `FLANGER` sun'iy, robotga o'xshash ovoz yaratadi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
 |FLANGER_LENGTH |Flanger effekti faollashtirilgan asl tovushdan kechikish vaqtining uzunligi (ms da). |6.0 |0.0 |200.0
 
-|FLANGER_FEEDBACK |The amount (in dB) that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-50.0 |-80.0 |-1.0
+|FLANGER_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor (dB). Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. |-50.0 |-80.0 |-1.0
 
-|FLANGER_RATE |The rate (in Hz) which the pitch cycles or "whooshes" at. Lower values create more smoothly-cycling sounds, while higher values create more whooshing-sounding effects and sonic artifacts. |0.6 |0.001 |100.0
+|FLANGER_RATE |Tovush pardasining aylanish yoki "hushtak chalish" darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq shovqinli jaranglaydigan effektlar va tovush artefaktlarini yaratadi. |0.6 |0.001 |100.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -382,9 +382,9 @@ setEffect(1, FLANGER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
 </div>
 ++++
@@ -404,12 +404,12 @@ fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
 setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
 ----
 
-`PAN` affects the mix between the left and right audio channels. If you are wearing headphones, adjusting `PAN` changes how much of the sound you hear in your left ear versus the right.
+`PAN` bu chap va o'ng audio kanallari orasidagi muvozanatga ta'sir qiladi. Agar siz naushnikni taqib `PAN` effektini ishlatsangiz, chap va o'ng qulog'ingizda ijro etilayotgan ovozni o'zgarganini eshitasiz.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|LEFT_RIGHT |Specifies the left/right location of the original sound within the stereo field (0.0 is center, -100.0 is fully left, 100.0 is fully right). |0.0 |-100.0 |100.0
+|LEFT_RIGHT |Stereo maydon ichida asl tovushning chap/o‘ng joyini belgilaydi (0,0 markazda, -100,0 to‘liq chapda, 100,0 to‘liq o‘ngda). |0.0 |-100.0 |100.0
 
 |BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
 |===
@@ -419,9 +419,9 @@ setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
 </div>
 ++++
@@ -449,18 +449,18 @@ setEffect(1, PHASER, PHASER_FEEDBACK, -2);
 setEffect(1, PHASER, MIX, 1);
 ----
 
-`PHASER` creates a sweeping-sounding effect by making a copy of the original sound, delaying it slightly, and playing it against the original. When this happens, some of the frequencies in the original sound and the copy temporarily cancel each other out by going "in and out of phase" with each other.
+`PHASER` "tez uchish"ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Bunda, ask tovushning va uning nusxasining ba'zi chastotalari bir birini bekor qiladi. 
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|PHASER_RATE |The rate (in Hz) that the slight delay time changes back and forth. Lower values create more smoothly-cycling sounds, while higher values create more robotic-sounding effects and sonic artifacts. |0.5 |0.0 |10.0
+|PHASER_RATE |Yengil kechiktirish vaqti oldinga va orqaga o'zgarish darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq robot tovushiga o'xshash effektlar va tovush artefaktlarini yaratadi. |0.5 |0.0 |10.0
 
-|PHASER_RANGEMIN |The low value (in Hz) of the affected frequency range. |440.0 |40.0 |20000.0
+|PHASER_RANGEMIN |Ta'sir qilingan chastota diapazonining past qiymati (Gertsda). |440.0 |40.0 |20000.0
 
-|PHASER_RANGEMAX |The high value (in Hz) of the affected frequency range. |1600.0 |40.0 |20000.0
+|PHASER_RANGEMAX |Ta'sir qilingan chastota diapazonining yuqori qiymati (Gertsda). |1600.0 |40.0 |20000.0
 
-|PHASER_FEEDBACK |The amount that the affected sound is "fed back" into the effect. Higher values create more artificial-like sounds. |-3.0 |-120.0 |-1.0
+|PHASER_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. |-3.0 |-120.0 |-1.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -472,9 +472,9 @@ setEffect(1, PHASER, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effect bilan:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effectsiz:</div>
     <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
 </div>
 ++++
@@ -494,12 +494,12 @@ fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
 setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 ----
 
-`PITCHSHIFT` raises or lowers the pitch of a sound. It can be helpful for making multiple tracks sound better together.
+`PITCHSHIFT` ovozning ohangini ko'taradi yoki pasaytiradi. Bu bir nechta trekning birgalikda yaxshiroq eshitilishi uchun yordam berishi mumkin. 
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|PITCHSHIFT_SHIFT |Specifies the amount to adjust the pitch of the original sound in semitones (and fractions of a semitone, given by values after the decimal point). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
+|PITCHSHIFT_SHIFT |Yarim ohanglarda asl ohangning tovush pardasini sozlash miqdorini belgilaydi (va o'nli nuqtadan keyingi qiymatlar bilan berilgan yarim ohangning kasrlari). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
 
 |BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
 |===
@@ -509,9 +509,9 @@ setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
 </div>
 ++++
@@ -535,14 +535,14 @@ setEffect(1, REVERB, REVERB_DAMPFREQ, 18000);
 setEffect(1, REVERB, MIX, 0.5);
 ----
 
-`REVERB` adds a slowly decaying ambience to a sound, making it sound denser, dreamier, or as if it was recorded in a smaller or larger room than it actually was.
+`REVERB` sekin so'nadigan ambians (muhit tovush) ni qoshadi. Bu ovozni zichroq va "sehrliroq" qiladi yoki ovozni huddi kichik xonada yozib olingan kabi aks etadi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|REVERB_TIME |The decaying time of the ambiance in milliseconds (ms). When modulating REVERB_TIME over time using automation curve, due to the nature of convolution-based reverb, the value is updated only at every quarter note (time=0.25) in a "stair-case" manner from the starting point of the automation. (You will, however, hardly notice that.) |1500.0 |100.0 |4000.0
+|REVERB_TIME |Muhitning so'nish vaqti millisekundlarda (ms). Avtomatlashtirish egri chizig'i yordamida vaqt o'tishi bilan REVERB_TIME modulyatsiya qilinganda, o'rama asosli reverbatsiyaning tabiati tufayli qiymat faqat har chorak notada (vaqt = 0,25) avtomatlashtirishning boshlang'ich nuqtasidan boshlab "zinapoya" ko'rinishida yangilanadi. (Biroq, siz buni deyarli sezmaysiz.) |1500.0 |100.0 |4000.0
 
-|REVERB_DAMPFREQ |The cutoff frequency (in Hz) of the lowpass filter applied to the ambiance. The lower the value, the darker the reverberation will sound. |10000.0 |200.0 |18000.0
+|REVERB_DAMPFREQ |Muhitga qo'llaniladigan past o'tkazuvchan filtrning kesish chastotasi (Gertsda). Qiymat qanchalik past bo'lsa, reverberatsiya shunchalik qayg'uli yangraydi. |10000.0 |200.0 |18000.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |0.3 |0.0 |1.0
 
