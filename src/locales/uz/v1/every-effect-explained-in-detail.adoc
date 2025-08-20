@@ -640,13 +640,13 @@ setEffect(1, TREMOLO, MIX, 1);
 |===
 
 [[volume]]
-=== VOLUME (ovoz balandligi)
+=== VOLUME (ovoz xajmi yoki balandligi)
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
 </div>
 ++++
@@ -666,12 +666,12 @@ fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
 setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 ----
 
-`VOLUME` allows you to change the loudness of a sound.
+`VOLUME` ovozning balandligini o'zgartirishga yordam beradi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|GAIN |Specifies the output volume level of the original sound. |0.0 |-60.0 |12.0
+|GAIN |Asl tovushning chiqishdagi ovoz balandligi darajasini belgilaydi. |0.0 |-60.0 |12.0
 
 |BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
 |===
@@ -681,9 +681,9 @@ setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effect bilan:</div>
     <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
 </div>
 ++++
@@ -707,7 +707,7 @@ setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3);
 setEffect(1, WAH, MIX, 1);
 ----
 
-`WAH` can make the sound mimic someone saying "Wah Wah" when the `WAH_POSITION` parameter is changed over time using the setEffect() function. It is a resonant bandpass filter, which means it lowers the volume of high and low frequencies while boosting a narrow window of frequencies in the middle.
+`WAH` tovushni kimdir "vah vah" deb kuylashga o'xshash ovozni yaratadi. Bu `WAH_POSITION` parametrini setEffect() funktsiyasini ishlatib o'zgartirganda sodir boladi. Bu resonant bandpass filtri, ya'ni u baland va past chastotalarni ovozini pasaytiradi va o'rta chastotalar oralig'ini kuchaytiradi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
