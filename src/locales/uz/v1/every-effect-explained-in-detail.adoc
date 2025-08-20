@@ -554,9 +554,9 @@ setEffect(1, REVERB, MIX, 0.5);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Effekt bilan:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Effektsiz:</div>
     <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
 </div>
 ++++
@@ -580,14 +580,14 @@ setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80);
 setEffect(1, RINGMOD, MIX, 1);
 ----
 
-`RINGMOD` creates many different artificial-sounding effects by multiplying the signals from the original and a pure sine wave (which sounds like a tuning fork). Some parameter settings will produce effects similar to ones used in old science fiction movies.
+`RINGMOD` turli hil sun'iy eshitiluvchi effektlar yaratadi. U asl tovushdan audio signalni va sinus to'lqinini ko'paytiradi (bu musiqiy sozlash asbobi tovushiga o'xshaydi). Ba'zi parametrlar eskicha fantastik kinolarda ishlatiladigan tovushlarga o'xshash effektlar yaratadi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|RINGMOD_MODFREQ |The frequency (in Hz) of the sine wave oscillator that is being multiplied into your original sound. |40.0 |0.0 |100.0
+|RINGMOD_MODFREQ |Asl tovushingizga ko'paytirilayotgan sinus to'lqin osilatorining chastotasi (Gertsda). |40.0 |0.0 |100.0
 
-|RINGMOD_FEEDBACK |The amount of affected sound that is fed-back into the effect. High values create more robotic-type sounds and sonic artifacts. |0.0 |0.0 |100.0
+|RINGMOD_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq robotsimon tovushlar va tovushli artefaktlarni yaratadi. |0.0 |0.0 |100.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -599,9 +599,9 @@ setEffect(1, RINGMOD, MIX, 1);
 
 ++++
 <div class="effect-examples">
-    <div class="audio-label">With Effect:</div>
+    <div class="audio-label">Tovush bilan:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
-    <div class="audio-label">Without Effect:</div>
+    <div class="audio-label">Tovushsiz:</div>
     <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
 </div>
 ++++
@@ -625,14 +625,14 @@ setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10);
 setEffect(1, TREMOLO, MIX, 1);
 ----
 
-`TREMOLO` produces a wobbly-sounding effect by quickly changing the volume of the sound back and forth.
+`TREMOLO` "tebrash" ga o'xshash effektni hosil qiladi. U tovushni tez-tez ko'taradi va pasaytiradi.
 
 |===
 |Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
 
-|TREMOLO_FREQ |The rate (in Hz) that the volume is changed back and forth. |4.0 |0.0 |100.0
+|TREMOLO_FREQ |Ovoz balandligini ko'tarish va pasaytirish tempi (Gertsda). |4.0 |0.0 |100.0
 
-|TREMOLO_AMOUNT |The amount (in dB) that the volume changes back and forth over during each cycle. |-6.0 |-60.0 |0.0
+|TREMOLO_AMOUNT |Har bir halqa davomida ovoz balandga va pastga o'zgarish miqdori (dB). |-6.0 |-60.0 |0.0
 
 |MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
 
@@ -640,7 +640,7 @@ setEffect(1, TREMOLO, MIX, 1);
 |===
 
 [[volume]]
-=== VOLUME
+=== VOLUME (ovoz balandligi)
 
 ++++
 <div class="effect-examples">
