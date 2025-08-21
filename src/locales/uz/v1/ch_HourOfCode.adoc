@@ -1,15 +1,15 @@
 [[HourOfCode]]
-== Hour of Code with EarSketch
+== EarSketch Bilan Bir Soat Dasturlash
 
 :nofooter:
 
-Welcome to the EarSketch Hour of Code.
+EarSketch bilan Bir Soat Dasturlashga xush kelibsiz.
 
 [[WhatIs]]
-=== What is EarSketch?
+=== EarSketch Nima?
 
 [role="curriculum-python"]
-EarSketch is a platform for making music with code. In this Hour of Code tutorial, you will learn the basics of coding in EarSketch and will be able to make music like this:
+EarSketch dasturi bu kod bilan musiqa yaratadigan platforma. Ushbu Bir Soat Dasturlash darsida siz EarSketch da dasturlashning asoslarini o'rganasiz va qyuidagi misol kabi musiqa yaratishni o'rganasiz:
 
 [role="curriculum-python"]
 audio::./audioMedia/HourOfCode-Example1.mp3[]
@@ -18,7 +18,7 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-python"]
-When you are done listening to the music, press the right arrow button at the bottom of the screen to continue.
+Musiqani tinglab bo'lganingizdan so'ng davom etishingiz uchun, ushbu ekranning pastidagi on'ga ko'rsatgich tugmasini bosing.
 
 //Welcome to the EarSketch Hour of Code.
 
@@ -27,7 +27,7 @@ When you are done listening to the music, press the right arrow button at the bo
 //=== What is EarSketch?
 
 [role="curriculum-javascript"]
-EarSketch is a platform for making music with code. In this Hour of Code tutorial, you will learn the basics of coding in EarSketch and will be able to make music like this:
+EarSketch dasturi bu kod bilan musiqa yaratadigan platforma. Ushbu Bir Soat Dasturlash darsida siz EarSketch da dasturlashning asoslarini o'rganasiz va qyuidagi misol kabi musiqa yaratishni o'rganasiz:
 
 [role="curriculum-javascript"]
 audio::./audioMedia/HourOfCode-Example1.mp3[]
@@ -36,13 +36,13 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 {empty} +
 
 [role="curriculum-javascript"]
-When you are done listening to the music, press the right arrow button at the bottom of the screen to continue.
+Musiqani tinglab bo'lganingizdan so'ng davom etishingiz uchun, ushbu ekranning pastidagi on'ga ko'rsatgich tugmasini bosing.
 
 [[GettingStarted]]
-=== Getting Started
+=== Boshlash
 
 [role="curriculum-python"]
-Below is some code created in EarSketch. It is written in a programming language called Python. Click the blue icon in the upper right corner to copy the code into the code editor. Don’t worry about understanding the code yet.
+Quyida EarSketch'da yaratilgan kod misoli keltirilgan. U Python nomli dasturlash tilida yozilgan.  Tepa o'ng burchakda joylashgan ko'k tugmani bossangiz u kodni muharrirga ko'chiradi. Hozircha kodni tushunish xaqida o'ylamang.
 
 [role="curriculum-python"]
 [source,python]
@@ -51,7 +51,7 @@ include::code-examples/ch_HourOfCode-untitled1.py.txt[]
 ----
 
 [role="curriculum-python"]
-Once the code has been copied to the code editor, click the blue "Import To Edit" button. This will allow you to make changes to the code.
+Kodni kod muharririga ko'chirgandan song, ko'k "Tahrirlash Uchun Import Qilish" tugmasini bosing. Bu sizga kodning ichida o'zgartirishlar kiritish imkoniyatini beradi.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_import.PNG[]
@@ -59,7 +59,7 @@ image::../media/HOC/hoc_import.PNG[]
 //Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
 
 [role="curriculum-javascript"]
-Below is some code created in EarSketch. It is written in a programming language called JavaScript. Click the blue icon in the upper right corner to copy the code into the code editor. Don’t worry about understanding the code yet.
+Quyida EarSketch'da yaratilgan kod misoli keltirilgan. U JavaScript nomli dasturlash tilida yozilgan.  Tepa o'ng burchakda joylashgan ko'k tugmani bossangiz u kodni muharrirga ko'chiradi. Hozircha kodni tushunish xaqida o'ylamang.
 
 [role="curriculum-javascript"]
 [source,javascript]
@@ -68,7 +68,7 @@ include::code-examples/ch_HourOfCode-untitled1.js.txt[]
 ----
 
 [role="curriculum-javascript"]
-Once the code has been copied to the code editor, click the blue "Import To Edit" button. This will allow you to make changes to the code.
+Kodni kod muharririga ko'chirgandan song, ko'k "Tahrirlash Uchun Import Qilish" tugmasini bosing. Bu sizga kodning ichida o'zgartirishlar kiritish imkoniyatini beradi.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_import.PNG[]
@@ -76,10 +76,10 @@ image::../media/HOC/hoc_import.PNG[]
 //Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
 
 [[RunTheCode]]
-=== Run The Code
+=== Kodni Ishga Turhirish
 
 [role="curriculum-python"]
-Run the example code by pressing the green "Run" button at the top of the code editor.
+Na'muna kodni ishlatish uchun kod muharririning tepasida "Ishga turhirish" tugmasini bosing.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_run.PNG[]
@@ -88,7 +88,7 @@ image::../media/HOC/hoc_run.PNG[]
 {empty} +
 
 [role="curriculum-python"]
-After you run the code, you will see that the top section of the screen will be populated by rectangles. These represent sound clips.
+Kodni ishga tushirganingizdan kegin, ekranning tepa qismini to'rtburchaklar bilan to'ldirilganini ko'rasiz. Bular tovush kliplarini bildiradi.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_daw_clips.PNG[]
@@ -113,7 +113,7 @@ The video below shows you how to open, import, run, and listen to the example co
 video::./videoMedia/037-03-RunTheCode-PY.mp4[]
 
 [role="curriculum-javascript"]
-Run the example code by pressing the green "Run" button at the top of the code editor.
+Na'muna kodni ishlatish uchun kod muharririning tepasida "Ishga turhirish" tugmasini bosing.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_run.PNG[]
@@ -122,7 +122,7 @@ image::../media/HOC/hoc_run.PNG[]
 {empty} +
 
 [role="curriculum-javascript"]
-After you run the code, you will see that the top section of the screen will be populated by rectangles. These represent sound clips.
+Kodni ishga tushirganingizdan kegin, ekranning tepa qismini to'rtburchaklar bilan to'ldirilganini ko'rasiz. Bular tovush kliplarini bildiradi.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_daw_clips.PNG[]
