@@ -1,8 +1,8 @@
 [[HourOfCode]]
-== Hour of Code with EarSketch
+== EarSketch Bilan Bir Soat Dasturlash
 
 :nofooter:
 
-Welcome to the EarSketch Hour of Code.
+EarSketch bilan Bir Soat Dasturlashga xush kelibsiz.
 
-Click the "Next Page" button or <<ch_HourOfCode#, click here>> to get started.
+Boshlash uchun "Keyingi Sahifa" tugmasini yoki  <<ch_HourOfCode#, click here>> 
