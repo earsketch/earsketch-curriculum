@@ -5,4 +5,4 @@
 
 EarSketch bilan Bir Soat Dasturlashga xush kelibsiz.
 
-Boshlash uchun "Keyingi Sahifa" tugmasini yoki  <<ch_HourOfCode#, click here>> 
+Boshlash uchun "Keyingi Sahifa" tugmasini yoki  <<ch_HourOfCode#, shu yerga bosing>>.
