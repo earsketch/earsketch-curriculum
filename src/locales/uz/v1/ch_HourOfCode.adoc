@@ -165,19 +165,19 @@ image::../media/HOC/hoc_daw_labeled.png[]
 Ovoz kliplarini trekka qoshadigan kodni kod muharririning 7-satrida joylashgan.
 
 [role="curriculum-python"]
-7-satr `fitMedia()` degan funktsiya qo'llanildi. A function is a piece of code that performs an operation. The `fitMedia()` function adds a sound clip to the time line.
+7-satr `fitMedia()` degan funktsiya qo'llanildi. Funktsia bu bir operatsiyani amalga oshiradigan bir maxsus kod.  `fitMeadia()` funktsiyasi vaqt jadvaliga bitta ovoz klipini qo'shadi.
 
 [role="curriculum-python"]
-A function generally requires parameters in order to know precisely what you want to do. The `fitMedia()` function takes in four input parameters:
+Odatda funktsiya ishlashi uchun va aniq qanday ish bajarishni bilishi uhcun unga parametrlar talab qiladi. `fitMedia()` funktsiyasi o'ziga to'rtta parametir oladi:
 
 [role="curriculum-python"]
-* sound clip
-* track number
-* start measure
-* end measure
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* so'nggi o'lchov
 
 [role="curriculum-python"]
-Let's look at line 7:
+Keling 7-satrni ko'rib chiqamiz:
 
 [role="curriculum-python"]
 [source,text]
@@ -186,7 +186,7 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5)
 ----
 
 [role="curriculum-python"]
-This means the sound clip called "RD_UK_HOUSE_MAINBEAT_8" will be added to track 1, starting at measure 1 and ending at measure 5.
+Bu degani "RD_UK_HOUSE_MAINBEAT_8" ovoz klipi 1-trekka, 1-o'lchovdan boshlab 5-o'lchovgacha qo'yiladi.
 
 [role="curriculum-javascript"]
 Kliplarning yuqorisida vaqt jadvali joylashgan. U soniyada vaqtni (yuqori qismi) va o'lchovni (pastgi qismi). O'lchov bu musiqada vaqt birligni bildiradigan atama.
@@ -204,19 +204,19 @@ image::../media/HOC/hoc_daw_labeled.png[]
 Ovoz kliplarini trekka qoshadigan kodni kod muharririning 7-satrida joylashgan.
 
 [role="curriculum-javascript"]
-7-satr `fitMedia()` degan funktsiya qo'llanildi. A function is a piece of code that performs an operation. The `fitMedia()` function adds a sound clip to the time line.
+7-satr `fitMedia()` degan funktsiya qo'llanildi. Funktsia bu bir operatsiyani amalga oshiradigan bir maxsus kod.  `fitMeadia()` funktsiyasi vaqt jadvaliga bitta ovoz klipini qo'shadi.
 
 [role="curriculum-javascript"]
-A function generally requires parameters in order to know precisely what you want to do. The `fitMedia()` function takes in four input parameters:
+Odatda funktsiya ishlashi uchun va aniq qanday ish bajarishni bilishi uhcun unga parametrlar talab qiladi. `fitMedia()` funktsiyasi o'ziga to'rtta parametir oladi:
 
 [role="curriculum-javascript"]
-* sound clip
-* track number
-* start measure
-* end measure
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* so'nggi o'lchov
 
 [role="curriculum-javascript"]
-Let's look at line 7:
+Keling 7-satrni ko'rib chiqamiz:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -225,13 +225,13 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5);
 ----
 
 [role="curriculum-javascript"]
-This means the sound clip called "RD_UK_HOUSE_MAINBEAT_8" will be added to track 1, starting at measure 1 and ending at measure 5.
+Bu degani "RD_UK_HOUSE_MAINBEAT_8" ovoz klipi 1-trekka, 1-o'lchovdan boshlab 5-o'lchovgacha qo'yiladi.
 
 [[ChangeEnd]]
-=== Changing the End Time of a Clip
+=== Klipning Tugash Vaqtini O'zgartirish
 
 [role="curriculum-python"]
-Let's change line 7 so the sound clip ends at measure 9 instead of 5. The line should now look like this:
+Keling 7-satrni ovoz klipi 5-o'lchovda emas 9-o'lchovda tugashi uchun o'zgartiramiz. Endi bu satir quyidagicha bo'lishi kerak.
 
 [role="curriculum-python"]
 [source,text]
@@ -240,13 +240,13 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9)
 ----
 
 [role="curriculum-python"]
-Use the code editor to change line 7. Then run the code, play the music, and listen to how it has changed.
+Kod muharririni ishlatib 7-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_change_end.PNG[]
 
 [role="curriculum-javascript"]
-Let's change line 7 so the sound clip ends at measure 9 instead of 5. The line should now look like this:
+Keling 7-satrni ovoz klipi 5-o'lchovda emas 9-o'lchovda tugashi uchun o'zgartiramiz. Endi bu satir quyidagicha bo'lishi kerak.
 
 [role="curriculum-javascript"]
 [source,text]
@@ -255,16 +255,16 @@ fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9);
 ----
 
 [role="curriculum-javascript"]
-Use the code editor to change line 7. Then run the code, play the music, and listen to how it has changed.
+Kod muharririni ishlatib 7-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_change_end.PNG[]
 
 [[ChangeStart]]
-=== Changing the Start Time of a Clip
+=== Klipning Boshlanish Vaqtini O'zgartirish
 
 [role="curriculum-python"]
-Now let's look at line 8. The line reads:
+Endi keling 8-satrni ko'rib chiqamiz. Unda shunday yozilgan:
 
 [role="curriculum-python"]
 [source,text]
@@ -273,10 +273,10 @@ fitMedia(RD_POP_PADCHORD_2,2,1,9)
 ----
 
 [role="curriculum-python"]
-This means the sound clip called "RD_POP_PADCHORD_2" will be added to track 2, starting at measure 1 and ending at measure 9.
+Bu degani "RD_POP_PADCHORD_2" 2-trekka, 1-o'lchovdan boshlab 9-o'lchovgacha qo'yiladi.
 
 [role="curriculum-python"]
-Change the line so the sound clip starts at measure 5 instead of 1. The line should now look like this:
+Kod satrni ovoz klipi 1-o'lchovda emas 5-o'lchovda boshlashi uchun o'zgartiring. Endi bu satir quyidagicha bo'lishi kerak.
 
 [role="curriculum-python"]
 [source,text]
@@ -285,13 +285,13 @@ fitMedia(RD_POP_PADCHORD_2,2,5,9)
 ----
 
 [role="curriculum-python"]
-Use the code editor to change line 8. Then run the code, play the music, and listen to how it has changed.
+Kod muharririni ishlatib 8-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_change_start.PNG[]
 
 [role="curriculum-javascript"]
-Now let's look at line 8. The line reads:
+Endi keling 8-satrni ko'rib chiqamiz. Unda shunday yozilgan:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -300,10 +300,10 @@ fitMedia(RD_POP_PADCHORD_2,2,1,9);
 ----
 
 [role="curriculum-javascript"]
-This means the sound clip called "RD_POP_PADCHORD_2" will be added to track 2, starting at measure 1 and ending at measure 9.
+Bu degani "RD_POP_PADCHORD_2" 2-trekka, 1-o'lchovdan boshlab 9-o'lchovgacha qo'yiladi.
 
 [role="curriculum-javascript"]
-Change the line so the sound clip starts at measure 5 instead of 1. The line should now look like this:
+Kod satrni ovoz klipi 1-o'lchovda emas 5-o'lchovda boshlashi uchun o'zgartiring. Endi bu satir quyidagicha bo'lishi kerak.
 
 [role="curriculum-javascript"]
 [source,text]
@@ -312,7 +312,7 @@ fitMedia(RD_POP_PADCHORD_2,2,5,9);
 ----
 
 [role="curriculum-javascript"]
-Use the code editor to change line 8. Then run the code, play the music, and listen to how it has changed.
+Kod muharririni ishlatib 8-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_change_start.PNG[]
@@ -339,7 +339,7 @@ On lines 7 and 8, try some different values for the start and end parameters. Th
 You can use whole numbers (like 1, 5, or 27) or decimals (like 1.25, 5.5, or 27.75) for start and end times. Remember that the smallest number you can use for a measure or track is 1.
 
 [[DrumFills]]
-=== Drum Fills
+=== Barabanli To'ldirishlar
 
 [role="curriculum-python"]
 Line 14 of the code uses the `makeBeat()` function. This function allows you to make custom rhythms.
@@ -348,9 +348,9 @@ Line 14 of the code uses the `makeBeat()` function. This function allows you to 
 The `makeBeat()` function takes in four input parameters:
 
 [role="curriculum-python"]
-* sound clip
-* track number
-* start measure
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
 * beat string
 
 [role="curriculum-python"]
@@ -372,9 +372,9 @@ Line 14 of the code uses the `makeBeat()` function. This function allows you to 
 The `makeBeat()` function takes in four input parameters:
 
 [role="curriculum-javascript"]
-* sound clip
-* track number
-* start measure
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
 * beat string
 
 [role="curriculum-javascript"]
