@@ -318,43 +318,43 @@ Kod muharririni ishlatib 8-satrni o'zgartiring. So'ngra, kodni ishga turhiring, 
 image::../media/HOC/hoc_change_start.PNG[]
 
 [[StartAndEnd]]
-=== Experiment with Start and End Times
+=== Boshlanish va Tugash Vaqtlari Bilan Tajribalar O'tkazing
 
 [role="curriculum-python"]
-Now that you know how to change the start and end times of clips in EarSketch, you can customize the music.
+Endi EarSketch'da boshlash va tugash vaqtlarini o'zgartirishni o'rganganingizdan so'ng, musiqani sozlashingiz mumkin.
 
 [role="curriculum-python"]
-On lines 7 and 8, try some different values for the start and end parameters. Then, run the code and listen to how the music changes.
+7 va 8-satrlarda boshlash va tugash parametrilarda turli qiymatlar ishlatib ko'ring. Undan so'ng kodni ishga turhiring va musiqa qanday o'zgarganga e'tibor bering.
 
 [role="curriculum-python"]
-You can use whole numbers (like 1, 5, or 27) or decimals (like 1.25, 5.5, or 27.75) for start and end times. Remember that the smallest number you can use for a measure or track is 1.
+Boshlanish va tugash vaqtlarini belgilash uchun butun sonlar (masalan, 1, 5, 27...) yoki o'nli kasrlar (masalan 1.25, 5.5, 27.75) ishlatishingiz mumkin. Trek yoki o'lchamning eng kichik qiymati 1 bo'lishini unutmang.
 
 [role="curriculum-javascript"]
-Now that you know how to change the start and end times of clips in EarSketch, you can customize the music.
+Endi EarSketch'da boshlash va tugash vaqtlarini o'zgartirishni o'rganganingizdan so'ng, musiqani sozlashingiz mumkin.
 
 [role="curriculum-javascript"]
-On lines 7 and 8, try some different values for the start and end parameters. Then, run the code and listen to how the music changes.
+7 va 8-satrlarda boshlash va tugash parametrilarda turli qiymatlar ishlatib ko'ring. Undan so'ng kodni ishga turhiring va musiqa qanday o'zgarganga e'tibor bering.
 
 [role="curriculum-javascript"]
-You can use whole numbers (like 1, 5, or 27) or decimals (like 1.25, 5.5, or 27.75) for start and end times. Remember that the smallest number you can use for a measure or track is 1.
+Boshlanish va tugash vaqtlarini belgilash uchun butun sonlar (masalan, 1, 5, 27...) yoki o'nli kasrlar (masalan 1.25, 5.5, 27.75) ishlatishingiz mumkin. Trek yoki o'lchamning eng kichik qiymati 1 bo'lishini unutmang.
 
 [[DrumFills]]
 === Barabanli To'ldirishlar
 
 [role="curriculum-python"]
-Line 14 of the code uses the `makeBeat()` function. This function allows you to make custom rhythms.
+14-satrda `makeBeat()` funktsiyasi ishlatildi. Bu funktsiya sizga turli ritmlar yaratishga yordam beradi.
 
 [role="curriculum-python"]
-The `makeBeat()` function takes in four input parameters:
+`makeBeat()` funktsiyasi to'rtta parametirni qabul qiladi:
 
 [role="curriculum-python"]
 * ovoz klipi
 * trek raqami
 * boshlang'ish o'lchov
-* beat string
+* zarba satri
 
 [role="curriculum-python"]
-Line 14 contains the code:
+14-satrda quyidagi kod yozilgan:
 
 [role="curriculum-python"]
 [source,text]
@@ -363,22 +363,22 @@ makeBeat(OS_SNARE03, 3, 4, fillA)
 ----
 
 [role="curriculum-python"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 4, and use the beat string `fillA`.
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatadi, uni  3-trek, 4-o'lchovga qo'yiladi,  va `fillA` zarba satrini ishlatadi.
 
 [role="curriculum-javascript"]
-Line 14 of the code uses the `makeBeat()` function. This function allows you to make custom rhythms.
+14-satrda `makeBeat()` funktsiyasi ishlatildi. Bu funktsiya sizga turli ritmlar yaratishga yordam beradi.
 
 [role="curriculum-javascript"]
-The `makeBeat()` function takes in four input parameters:
+`makeBeat()` funktsiyasi to'rtta parametirni qabul qiladi:
 
 [role="curriculum-javascript"]
 * ovoz klipi
 * trek raqami
 * boshlang'ish o'lchov
-* beat string
+* zarba satri
 
 [role="curriculum-javascript"]
-Line 14 contains the code:
+14-satrda quyidagi kod yozilgan:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -387,19 +387,19 @@ makeBeat(OS_SNARE03, 3, 4, fillA);
 ----
 
 [role="curriculum-javascript"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 4, and use the beat string `fillA`.
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatadi, uni  3-trek, 4-o'lchovga qo'yiladi,  va `fillA` zarba satrini ishlatadi.
 
 [[Vars]]
-=== Variables
+=== O'zgaruvchilar
 
 [role="curriculum-python"]
-In this example, `fillA` is a variable. Variables hold data such as numbers or words to be used later in the code.
+Ushbu misolda `fillA` bu o'zgaruvchi. O'zgaruvchilar kodda ishlatilishi kerak bo'lgan sozlar yoki raqamlar kabi turli ma'lumotlarni saqlaydi.
 
 [role="curriculum-python"]
-The `fillA` variable holds a string of characters, `"0---0-0-00--0000"`, which describes a rhythm for `makeBeat()`. Strings always begin and end with quotation marks. The code also defines the variables `fillB` and `fillC` as strings.
+`fillA` o'zgaruvchisi o'z ichida `"0---0-0-00--0000"` belgilar satrini saqlaydi. Bu satir `makeBeat()` uchun ritmni ifodalaydi. Satr ma'lumot turi doim q'oshtirnoq bilan boshlanadi. Kodimiz `fillB` and `fillC` satr o'zgaruvchilarini ham belgilaydi.
 
 [role="curriculum-python"]
-Let's edit line 14 to use one of the other variables. Choose either `fillB` or `fillC` to replace `fillA` in the code. Here is what line 14 will look like if you choose `fillC`:
+Keling 14-satrini boshqa o'zgaruvchilardan birini ishlatish uchun tahrirlaymiz. `fillB` yoki `fillC` o'zgaruvchilarini `fillA` o'rniga qo'yib almashtiring. `fillC` o'zgaruvchisini tanlasangiz 14-satir mana shunday shaklda bo'ladi:
 
 [role="curriculum-python"]
 [source,text]
@@ -408,16 +408,16 @@ makeBeat(OS_SNARE03, 3, 4, fillC)
 ----
 
 [role="curriculum-python"]
-Once you have chosen a new drum fill, run the code and listen to the result.
+Yangi baraban to'ldirishni tanlaganingizdan kegin kodni ishga tushiring va natija musiqasini tinglang.
 
 [role="curriculum-javascript"]
-In this example, `fillA` is a variable. Variables hold data such as numbers or words to be used later in the code.
+Ushbu misolda `fillA` bu o'zgaruvchi. O'zgaruvchilar kodda ishlatilishi kerak bo'lgan sozlar yoki raqamlar kabi turli ma'lumotlarni saqlaydi.
 
 [role="curriculum-javascript"]
-The `fillA` variable holds a string of characters, `"0---0-0-00--0000"`, which describes a rhythm for `makeBeat()`. Strings always begin and end with quotation marks. The code also defines the variables `fillB` and `fillC` as strings.
+`fillA` o'zgaruvchisi o'z ichida `"0---0-0-00--0000"` belgilar satrini saqlaydi. Bu satir `makeBeat()` uchun ritmni ifodalaydi. Satr ma'lumot turi doim q'oshtirnoq bilan boshlanadi. Kodimiz `fillB` and `fillC` satr o'zgaruvchilarini ham belgilaydi.
 
 [role="curriculum-javascript"]
-Let's edit line 14 to use one of the other variables. Choose either `fillB` or `fillC` to replace `fillA` in the code. Here is what line 14 will look like if you choose `fillC`:
+Keling 14-satrini boshqa o'zgaruvchilardan birini ishlatish uchun tahrirlaymiz. `fillB` yoki `fillC` o'zgaruvchilarini `fillA` o'rniga qo'yib almashtiring. `fillC` o'zgaruvchisini tanlasangiz 14-satir mana shunday shaklda bo'ladi:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -426,10 +426,10 @@ makeBeat(OS_SNARE03, 3, 4, fillC);
 ----
 
 [role="curriculum-javascript"]
-Once you have chosen a new drum fill, run the code and listen to the result.
+Yangi baraban to'ldirishni tanlaganingizdan kegin kodni ishga tushiring va natija musiqasini tinglang.
 
 [[BeatStrings]]
-=== Editing Beat Strings
+=== Zarba Satrini Tahrirlash
 
 [role="curriculum-python"]
 EarSketch has a function called `reverseString()` which can reverse the order of the characters in a string.
