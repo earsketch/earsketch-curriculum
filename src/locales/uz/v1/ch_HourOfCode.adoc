@@ -444,7 +444,7 @@ fillRev = reverseString(fillA)
 ----
 
 [role="curriculum-python"]
-This creates a new variable called `fillRev` that contains a reversed version of `fillA`. Since `fillA` is `"0---0-0-00--0000"`, `fillRev` will be `"0000--00-0-0---0"`.
+Bu amal `fillRev` degan yangi o'zgaruvchi yaratadi va bu o'zgaruvchi `fillA`ning teskarisidir. Since `fillA`ning satri `"0---0-0-00--0000"` bo'lsa `fillRev`ning satri `"0000--00-0-0---0"` bo'ladi.
 
 [role="curriculum-javascript"]
 EarSketch'da `reverseString()` degan funktsiya mavjud. Ushbu funktsiya belgi satrini teskarisini qaytaradi.
@@ -459,16 +459,16 @@ fillRev = reverseString(fillA);
 ----
 
 [role="curriculum-javascript"]
-This creates a new variable called `fillRev` that contains a reversed version of `fillA`. Since `fillA` is `"0---0-0-00--0000"`, `fillRev` will be `"0000--00-0-0---0"`.
+Bu amal `fillRev` degan yangi o'zgaruvchi yaratadi va bu o'zgaruvchi `fillA`ning teskarisidir. Since `fillA`ning satri `"0---0-0-00--0000"` bo'lsa `fillRev`ning satri `"0000--00-0-0---0"` bo'ladi.
 
 [[NewFill]]
-=== Making a New Fill
+=== Yangi To'ldirish Yaratish
 
 [role="curriculum-python"]
-We can use `fillRev` in a `makeBeat()` function. Instead of editing the existing `makeBeat()` function, we will make a new one to add a second drum fill to the music.
+`makeBeat()` funktsiyaning ichida `fillRev` o'zgaruvchisini ishlatishingiz mumkin. Mavjud bo'lgan `makeBeat()` ni tahrirlashni o'rniga biz yangisini yaratib uni musiqaga ikkinchi baraban to'ldirishini qo'shish uchun ishlatishimiz mumkin.
 
 [role="curriculum-python"]
-On line 17, type the following code to put the reversed fill into your song:
+17-satrda teskari to'ldirishni yaratish uchun quyidagi kodni yozing:
 
 [role="curriculum-python"]
 [source,text]
@@ -477,19 +477,19 @@ makeBeat(OS_SNARE03, 3, 8, fillRev)
 ----
 
 [role="curriculum-python"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 8, and will use the beat string stored in `fillRev`.
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatib, uni 3-trek, 8-o'lchovga qo'yadi, va `fillRev` zarba satrini ishlatadi.
 
 [role="curriculum-python"]
-Run the code and listen to the result.
+Kodni ishga tushiring va natijasini eshiting.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_new_fill.PNG[]
 
 [role="curriculum-javascript"]
-We can use `fillRev` in a `makeBeat()` function. Instead of editing the existing `makeBeat()` function, we will make a new one to add a second drum fill to the music.
+`makeBeat()` funktsiyaning ichida `fillRev` o'zgaruvchisini ishlatishingiz mumkin. Mavjud bo'lgan `makeBeat()` ni tahrirlashni o'rniga biz yangisini yaratib uni musiqaga ikkinchi baraban to'ldirishini qo'shish uchun ishlatishimiz mumkin.
 
 [role="curriculum-javascript"]
-On line 17, type the following code to put the reversed fill into your song:
+17-satrda teskari to'ldirishni yaratish uchun quyidagi kodni yozing:
 
 [role="curriculum-javascript"]
 [source,text]
@@ -498,34 +498,34 @@ makeBeat(OS_SNARE03, 3, 8, fillRev);
 ----
 
 [role="curriculum-javascript"]
-This means the beat will use the sound clip "OS_SNARE03", will be added to track 3 at measure 8, and will use the beat string stored in `fillRev`.
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatib, uni 3-trek, 8-o'lchovga qo'yadi, va `fillRev` zarba satrini ishlatadi.
 
 [role="curriculum-javascript"]
-Run the code and listen to the result.
+Kodni ishga tushiring va natijasini eshiting.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_new_fill.PNG[]
 
 [[UserFill]]
-=== Add Your Own Fill
+=== O'zingiz Tuzgan To'ldirishni Qo'shing
 
 [role="curriculum-python"]
-Use what you've learned to write another `makeBeat()` call at a different measure with a different beat string.
+Olgan bilimlaringizdan foydalanib yana bitta `makeBeat()` funktsiyasini yozing. Uni boshqa zarba satrini ishlatib boshqa o'lchovga qo'ying.
 
 [role="curriculum-python"]
-You can use or modify one of the provided strings or try to write one from scratch using "0" and "-" characters. Beat strings are usually 16 characters long, which represents one measure of music.
+Siz berilgan zarba satrlardan birini olib, uni o'zgartirib yoki umuman yangi satrni yaratishingiz mumkin. Yangi satrni yaratish uchun "0" va "-" belgilarni ishlating. Zarba satrlari odatda 16ta belgidan iborat va bu musiqaning bir o'lchoviga to'gri keladi.
 
 [role="curriculum-javascript"]
-Use what you've learned to write another `makeBeat()` call at a different measure with a different beat string.
+Olgan bilimlaringizdan foydalanib yana bitta `makeBeat()` funktsiyasini yozing. Uni boshqa zarba satrini ishlatib boshqa o'lchovga qo'ying.
 
 [role="curriculum-javascript"]
-You can use or modify one of the provided strings or try to write one from scratch using "0" and "-" characters. Beat strings are usually 16 characters long, which represents one measure of music.
+Siz berilgan zarba satrlardan birini olib, uni o'zgartirib yoki umuman yangi satrni yaratishingiz mumkin. Yangi satrni yaratish uchun "0" va "-" belgilarni ishlating. Zarba satrlari odatda 16ta belgidan iborat va bu musiqaning bir o'lchoviga to'gri keladi.
 
 [[Comments]]
-=== Using Comments
+=== Sharhlardan Foydalanish
 
 [role="curriculum-python"]
-Throughout the example code, you'll see section labels such as `# Add Sounds`, `# Fills`, and `# More Sounds`. The "#" symbol at the start of the line means that line is a comment. Comments provide information about the code but are ignored by the computer.
+Na'muna kodlarida siz `# Ovoz Qo'shish`, `# To'ldirish`, `# Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "#" belgisi o'sha satrni sharhligini bildiradi. Comments provide information about the code but are ignored by the computer.
 
 [role="curriculum-python"]
 Comments can be used as labels and explanations to help make code easier to read. They can also be used to disable lines of code so they are ignored by the computer when the code is run.
