@@ -432,10 +432,10 @@ Yangi baraban to'ldirishni tanlaganingizdan kegin kodni ishga tushiring va natij
 === Zarba Satrini Tahrirlash
 
 [role="curriculum-python"]
-EarSketch has a function called `reverseString()` which can reverse the order of the characters in a string.
+EarSketch'da `reverseString()` degan funktsiya mavjud. Ushbu funktsiya belgi satrini teskarisini qaytaradi.
 
 [role="curriculum-python"]
-On line 16 in the code, type the following:
+Kodning 16-satrida quyidagini yozing:
 
 [role="curriculum-python"]
 [source,text]
@@ -447,10 +447,10 @@ fillRev = reverseString(fillA)
 This creates a new variable called `fillRev` that contains a reversed version of `fillA`. Since `fillA` is `"0---0-0-00--0000"`, `fillRev` will be `"0000--00-0-0---0"`.
 
 [role="curriculum-javascript"]
-EarSketch has a function called `reverseString()` which can reverse the order of the characters in a string.
+EarSketch'da `reverseString()` degan funktsiya mavjud. Ushbu funktsiya belgi satrini teskarisini qaytaradi.
 
 [role="curriculum-javascript"]
-On line 16 in the code, type the following:
+Kodning 16-satrida quyidagini yozing:
 
 [role="curriculum-javascript"]
 [source,text]
