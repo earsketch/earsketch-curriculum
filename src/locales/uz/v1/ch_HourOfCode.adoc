@@ -567,10 +567,10 @@ Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
 Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
 
 [role="curriculum-python"]
-Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Tilida yangi qo'shiqni boshlashni istasangiz, yangi Python tilida skriptni yaratish uchun `+` tugmasini bosing.
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Yangi qo'shiqni boshlashni istasangiz, yangi Python tilida skriptni yaratish uchun `+` tugmasini bosing.
 
 [role="curriculum-python"]
-If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
+Agar boshqa ovozlar bilan tanishishni istasangiz, Ovoz Brauzeridan foydalaning. Brauzerni ko'rish uchun ekranning chap tarafidagi tugmani bosing.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_sound_browser1.png[]
@@ -579,7 +579,7 @@ image::../media/HOC/hoc_sound_browser1.png[]
 {empty} +
 
 [role="curriculum-python"]
-In the browser, you can search for and filter through all of the sounds available in EarSketch.
+Uning ichida siz EarSketch'da mavjud barcha ovozlarni qidiruv orqali yoki filtrlar orqali topishingiz mumkin.
 
 [role="curriculum-python"]
 image::../media/HOC/hoc_sound_browser2.PNG[]
@@ -591,10 +591,10 @@ Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
 Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
 
 [role="curriculum-javascript"]
-Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. If you want to start a new song from scratch, press the `+` icon to create a new JavaScript script.
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Yangi qo'shiqni boshlashni istasangiz, yangi JavaScript tilida skriptni yaratish uchun `+` tugmasini bosing.
 
 [role="curriculum-javascript"]
-If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
+Agar boshqa ovozlar bilan tanishishni istasangiz, Ovoz Brauzeridan foydalaning. Brauzerni ko'rish uchun ekranning chap tarafidagi tugmani bosing.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_sound_browser1.png[]
@@ -603,16 +603,16 @@ image::../media/HOC/hoc_sound_browser1.png[]
 {empty} +
 
 [role="curriculum-javascript"]
-In the browser, you can search for and filter through all of the sounds available in EarSketch.
+Uning ichida siz EarSketch'da mavjud barcha ovozlarni qidiruv orqali yoki filtrlar orqali topishingiz mumkin.
 
 [role="curriculum-javascript"]
 image::../media/HOC/hoc_sound_browser2.PNG[]
 
 [[GoingFurther]]
-=== Going Further With EarSketch
+=== EarSketch Beradigan Keng Imkiniyatlar
 
 [role="curriculum-python"]
-EarSketch offers much more than we had time to cover in the last hour. There is a full length curriculum included in this panel. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
 
 [role="curriculum-python"]
 You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
@@ -627,7 +627,7 @@ include::code-examples/ch_HourOfCode-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
-EarSketch offers much more than we had time to cover in the last hour. There is a full length curriculum included in this panel. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
 
 [role="curriculum-javascript"]
 You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
