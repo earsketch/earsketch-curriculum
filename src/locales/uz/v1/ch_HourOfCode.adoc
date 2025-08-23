@@ -549,25 +549,25 @@ Bu satrlarni qayta tiklash uchun satr boshidagi "#" belgisini o'chiring.
 Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
 
 [role="curriculum-javascript"]
-Under the `// More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Ularning har birida boshqacha tovush belgilangan.
+`// Qo'shimcha tovushlar` sharhi ostida bir nechta `fitMedia()` funktsialar yozilgan va ular hammasi sharh belgisi bilan bekor qilingan. Ularning har birida boshqacha tovush belgilangan.
 
 [role="curriculum-javascript"]
-You can enable them by deleting the "//" character at the beginning of the line.
+Bu satrlarni qayta tiklash uchun satr boshidagi "//" belgisini o'chiring.
 
 [role="curriculum-javascript"]
 Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
 
 [[MakeYourOwn]]
-=== Make Your Own Song
+=== O'zingiz Musiqa Yarating
 
 [role="curriculum-python"]
-It is time to make your own music using EarSketch.
+Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
 
 [role="curriculum-python"]
-Comment and uncomment lines of code, change start and end times in `fitMedia()`, and add fills with `makeBeat()`.
+Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
 
 [role="curriculum-python"]
-You can edit or comment out functions that were included in the example code or try to write your own new lines of code. If you want to start a new song from scratch, press the `+` icon to create a new Python script.
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Tilida yangi qo'shiqni boshlashni istasangiz, yangi Python tilida skriptni yaratish uchun `+` tugmasini bosing.
 
 [role="curriculum-python"]
 If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
@@ -585,13 +585,13 @@ In the browser, you can search for and filter through all of the sounds availabl
 image::../media/HOC/hoc_sound_browser2.PNG[]
 
 [role="curriculum-javascript"]
-It is time to make your own music using EarSketch.
+Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
 
 [role="curriculum-javascript"]
-Comment and uncomment lines of code, change start and end times in `fitMedia()`, and add fills with `makeBeat()`.
+Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
 
 [role="curriculum-javascript"]
-You can edit or comment out functions that were included in the example code or try to write your own new lines of code. If you want to start a new song from scratch, press the `+` icon to create a new JavaScript script.
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. If you want to start a new song from scratch, press the `+` icon to create a new JavaScript script.
 
 [role="curriculum-javascript"]
 If you want to explore more sound clips, you can use the Sound Browser. Access the browser by clicking the icon on the left side of the screen.
