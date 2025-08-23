@@ -525,37 +525,37 @@ Siz berilgan zarba satrlardan birini olib, uni o'zgartirib yoki umuman yangi sat
 === Sharhlardan Foydalanish
 
 [role="curriculum-python"]
-Na'muna kodlarida siz `# Ovoz Qo'shish`, `# To'ldirish`, `# Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "#" belgisi o'sha satrni sharhligini bildiradi. Comments provide information about the code but are ignored by the computer.
+Na'muna kodlarida siz `# Ovoz Qo'shish`, `# To'ldirish`, `# Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "#" belgisi o'sha satrni sharhligini bildiradi. Sharhlar kod to'g'risida qo'shimcha ma'lumot beradi va ularni kompyuter inkor qiladi.
 
 [role="curriculum-python"]
-Comments can be used as labels and explanations to help make code easier to read. They can also be used to disable lines of code so they are ignored by the computer when the code is run.
+Sharhlar bo'limlarni nomlash yoki tushintirish uchun ishlatilishi mumkin. Ular kodni o'qishni va tushunishni osonlashtiradi. Bundan tashqari, sharhlar kodning satrlarini bekor qilish uchun ishlatilishi mumkin. Bunda holda kompyuter kodni bajarganda o'sha satrni inkor qiladi.
 
 [role="curriculum-javascript"]
-Throughout the example code, you'll see section labels such as `// Add Sounds`, `// Fills`, and `// More Sounds`. The "//" symbol at the start of the line means that line is a comment. Comments provide information about the code but are ignored by the computer.
+Na'muna kodlarida siz `// Ovoz Qo'shish`, `// To'ldirish`, `// Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "//" belgisi o'sha satrni sharhligini bildiradi. Sharhlar kod to'g'risida qo'shimcha ma'lumot beradi va ularni kompyuter inkor qiladi.
 
 [role="curriculum-javascript"]
-Comments can be used as labels and explanations to help make code easier to read. They can also be used to disable lines of code so they are ignored by the computer when the code is run.
+Sharhlar bo'limlarni nomlash yoki tushintirish uchun ishlatilishi mumkin. Ular kodni o'qishni va tushunishni osonlashtiradi. Bundan tashqari, sharhlar kodning satrlarini bekor qilish uchun ishlatilishi mumkin. Bunda holda kompyuter kodni bajarganda o'sha satrni inkor qiladi.
 
 [[AddSounds]]
-=== Adding More Sounds
+=== Qo'shimcha Tovushlar
 
 [role="curriculum-python"]
-Under the `# More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Each contains a different sound.
+`# Qo'shimcha tovushlar` sharhi ostida bir nechta `fitMedia()` funktsialar yozilgan va ular hammasi sharh belgisi bilan bekor qilingan. Ularning har birida boshqacha tovush belgilangan.
 
 [role="curriculum-python"]
-You can enable them by deleting the "#" character at the beginning of the line.
+Bu satrlarni qayta tiklash uchun satr boshidagi "#" belgisini o'chiring.
 
 [role="curriculum-python"]
-Try uncommenting different combinations of lines. Then, run the code and listen to the result. See if you can guess what each line of code will add to the music before you press run.
+Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
 
 [role="curriculum-javascript"]
-Under the `// More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Each contains a different sound.
+Under the `// More Sounds` comment, there is a series of `fitMedia()` functions that are commented out. Ularning har birida boshqacha tovush belgilangan.
 
 [role="curriculum-javascript"]
 You can enable them by deleting the "//" character at the beginning of the line.
 
 [role="curriculum-javascript"]
-Try uncommenting different combinations of lines. Then, run the code and listen to the result. See if you can guess what each line of code will add to the music before you press run.
+Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
 
 [[MakeYourOwn]]
 === Make Your Own Song
