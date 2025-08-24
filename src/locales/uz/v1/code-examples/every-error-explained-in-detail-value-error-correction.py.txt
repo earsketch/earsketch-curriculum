@@ -1,4 +1,4 @@
-# Value error: Correction
+# Qiymat Xatosi: To'girlash
 
 from earsketch import *
 setTempo(120)
