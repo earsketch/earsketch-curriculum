@@ -1,4 +1,4 @@
-# Value Error: Example
+# Qiymat Xatorsi: Misol
 
 from earsketch import *
 setTempo(120)
