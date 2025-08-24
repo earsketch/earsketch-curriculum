@@ -612,10 +612,10 @@ image::../media/HOC/hoc_sound_browser2.PNG[]
 === EarSketch Beradigan Keng Imkiniyatlar
 
 [role="curriculum-python"]
-EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. Unga kirish uchun ekraningiz tepa o'ng tarafida joylashgan Mundarija tugmasini bosing.
 
 [role="curriculum-python"]
-You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
+To'liq o'quv dasturidan foydalanib siz dasturlash xaqida chuqurroq o'rganishingiz va murakkabroq musiqa yaratishingiz mumkin. Quyidagi misol cheksiz imkoniyatlardan birini ko'rsatadi.
 
 [role="curriculum-python"]
 audio::./audioMedia/HourOfCode-Example2.mp3[]
@@ -627,10 +627,10 @@ include::code-examples/ch_HourOfCode-untitled2.py.txt[]
 ----
 
 [role="curriculum-javascript"]
-EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. It can be accessed by clicking the Table of Contents icon at the top right of the browser window.
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. Unga kirish uchun ekraningiz tepa o'ng tarafida joylashgan Mundarija tugmasini bosing.
 
 [role="curriculum-javascript"]
-You can use the full curriculum to learn more about programming and create more complex music. The example below represents just one of the possibilities.
+To'liq o'quv dasturidan foydalanib siz dasturlash xaqida chuqurroq o'rganishingiz va murakkabroq musiqa yaratishingiz mumkin. Quyidagi misol cheksiz imkoniyatlardan birini ko'rsatadi.
 
 [role="curriculum-javascript"]
 audio::./audioMedia/HourOfCode-Example2.mp3[]
