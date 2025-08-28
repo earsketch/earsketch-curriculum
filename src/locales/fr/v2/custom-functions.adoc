@@ -1,9 +1,9 @@
 [[customfunctionssongstructure]]
-== Custom Functions, Song Structure
+== Fonctions personnalisées et structure de musique
 
 :nofooter:
 
-The song structure is the song's organization over time: how to create meaningful sections and transitions for the flow of your music. C'est très courant en musique de danse électronique ou dance (EDM) et crée l'anticipation d'une perte de niveau sonore. In this chapter, you'll create your own functions: custom functions, to structure your songs!
+La structure d'une musique est son organisation dans le temps : comment le.a musicien.ne crée des parties avec du sens, et des transitions pour un bon flow musical. C'est très courant en musique de danse électronique ou dance (EDM) et crée l'anticipation d'une perte de niveau sonore. Dans ce chapitre, vous créerez vos propres fonctions, appelées fonctions personnalisées, pour structurer vos musiques !
 
 [[asongsstructure]]
 === La structure d'une chanson
@@ -41,7 +41,7 @@ Sélectionnez d'abord une chanson que vous aimez. Écoutez-la et tentez de repé
 Gardez à l'esprit qu'une phrase musicale semble plus naturelle lorsque les clips sont organisés en groupes de 2, 4, 8, 16, etc. Par conséquent, vos parties devraient de préférence avoir une longueur de 2, 4, 8 ou 16 mesures.
 
 [[creatingyourcustomfunctions]]
-=== Create your custom functions
+=== Créez vos fonctions personnalisées
 
 Dans l'exemple précédent avec la chanson de forme ABA, le code est long et se répète pour la deuxième partie A. Cependant, il y a un moyen d'être plus efficace, grâce aux *fonctions personnalisées* ! There is a way to be more concise, thanks to *custom functions*! Nous allons définir une fonction qui représentera la partie A, puis nous l'appelerons à deux reprises.
 
@@ -75,7 +75,7 @@ Nous voulons maintenant ajouter la partie A de la mesure 9 à 13. Cependant, lor
 ****
 In your current script you created for the previous practice problem:
 
-1. ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition.
+1. Ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition.
 1. Dans le corps de la fonction, remplacez les mesures de début (1) et de fin (5) par `startMeasure` et `endMeasure` respectivement.
 1. Lorsque vous appelez votre fonction, ajoutez les paramètres `1` et `5` entre les parenthèses. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
 1. Ajoutez un deuxième appel de fonction, mais cette fois-ci, avec les paramètres `9` et `13`. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
@@ -109,7 +109,7 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Stratégies de transition
 
-Maintenant que vous savez comment créer des fonctions personnalisées pour structurer votre chanson, nous allons examiner la notion de transitions. *Transitions* help one section smoothly go into the next. Celles-ci permettent de relier les versets et le refrain, de faire une montée jusqu'à un drop, de mixer des pistes (DJing) ou de faire un changement de tonalité. Le but d'une transition est d'attirer l'attention de l'auditeur et de leur faire savoir qu'un changement est sur le point de se produire.
+Maintenant que vous savez comment créer des fonctions personnalisées pour structurer votre chanson, nous allons examiner la notion de transitions. *Transitions* help one section smoothly go into the next. Celles-ci permettent de relier les couplets et le refrain, de faire une montée jusqu'à un drop, de mixer des pistes (DJing) ou de faire un changement de tonalité. Le but d'une transition est d'attirer l'attention de l'auditeur et de lui faire savoir qu'un changement est sur le point de se produire.
 
 Voici quelques stratégies populaires pour créer des transitions musicales :
 
@@ -117,7 +117,7 @@ Voici quelques stratégies populaires pour créer des transitions musicales :
 . *Roulement de batterie ou « Drum Fill »* : une variation rythmique pour combler le vide avant une nouvelle partie.
 . *Track Silencing*: Silence some tracks temporarily for dramatic effect.
 . *Variation de mélodie* : Introduction d'une variation des accords, de la ligne de basse ou de la mélodie avant la nouvelle partie. Il arrive souvent qu'un dossier dans la bibliothèque de sons EarSketch contienne des variations similaires.
-. *Riser* (lire "raïseur") : Une note ou un bruit qui augmente en hauteur. It is very common in EDM (Electronic Dance Music) and creates an anticipation of a drop. Vous pouvez utiliser le terme de recherche « riser » dans le navigateur de sons. Une cymbale à main inversée peut être utilisée comme riser, comme YG_EDM_REVERSE_CRASH_1.
+. *Riser* (lire "raïseur") : Une note ou un bruit qui augmente en hauteur. C'est très courant en musique de danse électronique ou dance (EDM) et cela crée de l'anticipation. Vous pouvez utiliser le terme de recherche « riser » dans la bibliothèque de sons. Une cymbale à main inversée peut être utilisée comme riser, comme YG_EDM_REVERSE_CRASH_1.
 . *Roulement de caisse claire ou « Snare Roll »* : Une séquence de coups de caisse claire répétés, avec une densité, hauteur ou amplitude croissante. Vous pouvez utiliser un clip comme RD_FUTURE_DUBSTEP_FILL_1 ou HOUSE_BREAK_FILL_003, ou `makeBeat()`.
 . *Boucle ou « Looping »* : Répétition d'un court segment de mélodie avant une nouvelle partie.
 . *Fondu enchaîné ou « Crossfading »* : Diminution du volume d'une partie en augmentant le volume de la partie suivante.
@@ -177,7 +177,7 @@ include::code-examples/custom-functions-transition-techniques-risers.js.txt[]
 [[yourfullsong]]
 === Votre chanson complète
 
-En programmation, nous pouvons créer des *abstractions*, soit le fait de regrouper des idées pour former un concept unique. De même, en musique, nous regroupons les idées musicales en sections. Les fonctions sont un type d'abstraction utilisé en informatique. Elles intègrent plusieurs instructions dans un seul outil pour être facilement appelées. Les abstractions peuvent ainsi rendre la forme d'un programme plus claire.
+En programmation, nous pouvons créer des *abstractions*, soit le fait de regrouper des idées pour former un concept unique. De même, en musique, nous regroupons les idées musicales en sections. Les fonctions sont un type d'abstraction utilisé en informatique. Elles intègrent plusieurs instructions dans un seul outil pour être facilement appelées. Les abstractions peuvent ainsi rendre la forme d'un programme plus clair.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -185,14 +185,14 @@ En programmation, nous pouvons créer des *abstractions*, soit le fait de regrou
 
 . Choisissez un thème pour votre chanson. Pensez au type de sons, d'instruments ou de paroles qui véhiculeront au mieux votre message.
 . Sélectionnez ensuite une structure simple.
-. Et maintenant, vous pouvez enfin commencer à coder ! Commencez par sélectionner les sons et mettez-les dans des fonctions `fitMedia()`.
+. Et maintenant, vous pouvez enfin commencer à coder ! Commencez par sélectionner les sons et mettez-les dans des variables que vous utiliserez dans vos fonctions `fitMedia()`.
 . Utilisez `makeBeat()` pour ajouter des percussions.
 . Vous pouvez aussi ajouter vos propres sons.
 . Utilisez des boucles pour réduire les répétitions dans votre code.
-. Utilisez des fonctions personnalisées pour définir vos parties et créez la structure de votre chanson.
+. Utilisez des fonctions personnalisées pour définir vos parties et créer la structure de votre chanson.
 . Ajoutez une ou deux transitions.
 . Ajoutez des effets avec setEffect().
-. Ajoutez une ou plusieurs instructions conditionnelles.
+. Ajoutez une ou plusieurs instructions conditionnelles (en option).
 . Assurez-vous d'utiliser des variables pour stocker des informations comme les noms des clips de sons.
 . Assurez-vous d'utiliser des commentaires pour expliquer votre processus.
 . N'oubliez pas d'exécuter votre code et d'écouter votre chanson régulièrement. Ceci vous aidera à la modifier jusqu'à ce que vous en soyez satisfait.
