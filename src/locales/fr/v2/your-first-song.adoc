@@ -27,7 +27,7 @@ Vous avez certainement remarqué que lorsque vous créez un nouveau script, il y
 
 La fonction `setTempo()` déterminera la vitesse de votre chanson. Le *tempo* correspond à un certain nombre de battements ou beats par minute (bpm) pour la musique occidentale. Dans EarSketch, le tempo par défaut (c'est-à-dire la valeur initiale du tempo) est fixé à 120 bpm, ce qui correspond à une vitesse de marche ou de marche rapide. Pour modifier le tempo, il suffit de changer le nombre entre les parenthèses de la fonction `setTempo()`. Plus le tempo est élevé, plus votre musique sera rapide. Vous pouvez choisir un tempo entre 45 bpm et 220 bpm.
 
-.ENTRAÎNEZ-VOUS
+.Electro
 ****
 . Créez un nouveau script.
 . Placez des sons sur deux pistes différentes.
@@ -72,7 +72,7 @@ Un genre musical est un type de composition artistique (par exemple, la musique 
 "Turn Down for What" - Lil Jon
 |===
 
-.ENTRAÎNEZ-VOUS
+.Electro
 ****
 . Sélectionnez un.e artiste que vous aimez beaucoup et découvrez à quel genre il/elle appartient.
 . Sur Soundcloud ou une plateforme similaire, écoutez quelques extraits de chansons correspondants à ce genre.
@@ -97,7 +97,7 @@ En Python, les commentaires sont indiqués par une ligne commençant par le symb
 [role="curriculum-javascript"]
 En JavaScript, les commentaires sont indiqués par une ligne commençant par deux barres obliques `//`.
 
-.ENTRAÎNEZ-VOUS
+.Electro
 ****
 Notez que les premières lignes de chaque script sont des commentaires qui décrivent votre script.
 ****
@@ -135,7 +135,7 @@ Explorons les trois premières options :
 [[video101rec]]
 video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
 
-.ENTRAÎNEZ-VOUS
+.Electro
 ****
 La plupart du temps, la musique, et l'art en général, est une manière de transmettre un message. Cela peut se faire par le biais des paroles ou du style de la chanson. Nous aimerions que vous créiez une chanson courte qui exprime quelque chose. Il peut s'agir d'un sentiment que vous souhaitez partager ou d'une histoire.
 
