@@ -288,7 +288,7 @@ Voici le défi Juke-box : Rédigez un script qui demandera à l'utilisateur de c
 
 [role="curriculum-python"]
 * Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
-* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
+* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul argument est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
 * Certaines fonctions vous permettent de convertir des données d'un type à un autre. `str()` convertit n'importe quelle valeur en une chaîne de caractères.
 `int()` convertit une chaîne de caractères en nombres entiers. `float()` convertit une chaîne de caractères en nombres décimaux.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
@@ -300,7 +300,7 @@ Voici le défi Juke-box : Rédigez un script qui demandera à l'utilisateur de c
 
 [role="curriculum-javascript"]
 * Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
-* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
+* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul argument est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
 * Certaines fonctions vous permettent de convertir des données d'un type à un autre. La concaténation de chaînes de caractères `String()` convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule.  Number() convertit une chaîne de caractères en nombre.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
