@@ -228,7 +228,7 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 * Ajoutez des sons, au moins trois pistes, pour un minimum de 16 mesures.
 * Vous pouvez utiliser la fonction `makeBeat()` et une boucle « for » pour ajouter des percussions.
 * Choisissez votre piste « principale ». Il peut s'agir de votre mélodie ou d'une piste que vous souhaitez mettre en évidence.
-* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. `analyzeTrack()` renvoie une moyenne alors que les percussions sont des rafales de son, donc une moyenne n'évalue pas vraiment l'intensité sonore.
+* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
 * Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `print('Est-ce que le numéro de piste' + str(track) + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?". La fonction `str()` permet de convertir un nombre (p. ex.
 ****
 
@@ -239,7 +239,7 @@ Utilisons maintenant tous ces outils pour mixer votre chanson. Le mixage modifie
 * Ajoutez des sons, au moins trois pistes, pour un minimum de 16 mesures.
 * Vous pouvez utiliser la fonction `makeBeat()` et une boucle « for » pour ajouter des percussions.
 * Choisissez votre piste « principale ». Il peut s'agir de votre mélodie ou de la piste que vous souhaitez mettre en évidence.
-* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. `analyzeTrack()` renvoie une moyenne alors que les percussions sont des rafales de son, donc une moyenne n'évalue pas vraiment l'intensité sonore.
+* Si votre piste principale n'est pas plus forte que les autres pistes, assurez-vous d'augmenter son volume à l'aide de la fonction `setEffect()`. Ne prenez pas en compte la piste percussive, car la fonction `analyzeTrack()` n'est pas pertinente pour les percussions. Pour le volume, il s'agit de : `RMS_AMPLITUDE`.
 * Utilisez des impressions dans la console pour montrer votre processus dans la console. Voici un exemple d'instruction d'impression : `println('Est-ce que le numéro de piste' + track + 'est plus élevé que 0.01 ?')`, si le compteur `track` est égal à `1`, cela affichera 'Est-ce que le numéro de piste 1 est plus élevé que 0.01 ?".
 ****
 
@@ -270,7 +270,7 @@ include::code-examples/mixing-with-conditionals-automatic-mixing-2.js.txt[]
 === Résumé du chapitre 6
 
 [role="curriculum-python"]
-* La fonction `analyzeTrack()` nécessite deux arguments :
+* La fonction `analyzeTrack()` prend deux arguments :
 le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la hauteur ou brillance de la piste.
 * Le type de données *booléen* peut seulement prendre deux valeurs : `True` ou `False`.
 * Les booléens sont générés soit directement en créant une variable égale à `True` ou `False`, soit par des opérateurs de comparaison : `==`, `!=`, `>`, `>=`, `<`, `\<=`.
@@ -283,7 +283,7 @@ le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`,
 * Dans le cas où une condition _if_ est `False`, une instruction facultative _else_ permet l'exécution d'un bloc de code alternatif.
 
 [role="curriculum-javascript"]
-* La fonction `analyzeTrack()` nécessite deux arguments :
+* La fonction `analyzeTrack()` prend deux arguments :
 le numéro de piste et un paramètre. Lorsque le paramètre est `RMS_AMPLITUDE`, la fonction renvoie l'intensité sonore de la piste (un nombre compris entre 0 et 1). Lorsque le paramètre est `SPECTRAL_CENTROID`, la fonction renvoie la hauteur ou brillance de la piste.
 * Le type de données *booléen* peut valoir seulement deux valeurs : `true` ou `false`.
 * Les booléens sont générés soit directement en créant une variable égale à `true` ou `false`, soit par des opérateurs de comparaison : `===`, `!==`, `>`, `>=`, `<`, `\<=`.
