@@ -64,7 +64,7 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 |is equal to
 
 |!=
-|غير مطابقًا لـ
+|ليس مطابقًا لـ
 
 |>
 |أكبر من
@@ -95,7 +95,7 @@ To create a boolean, you can either initialise a variable (`variable1 = True`), 
 |is equal to
 
 |!==
-|غير مطابقًا لـ
+|ليس مطابقًا لـ
 
 |>
 |أكبر من
@@ -230,7 +230,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or one track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns indeed a mean whereas percussions are bursts of sound so a mean doesn't raelly evaluate the loudness.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions. For loudness it's: `RMS_AMPLITUDE`.
 * Use print statements to show your process in the console. Here is an example of print statement: `print('Is track number' + str(track) + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'. The function `str()` converts a number (ex: 1) into a string (ex: '1').
 ****
 
@@ -241,7 +241,7 @@ Let's use all these tools to mix your song. Mixing is modifying the volume of tr
 * Add sounds on at least 3 tracks for at least 16 measures.
 * You can use the `makeBeat()` function and a for loop to add percussions.
 * Choose your "main" track. It can be your melody, or the track that you wish to highlight.
-* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions. `analyzeTrack()` returns indeed a mean whereas percussions are bursts of sound so a mean doesn't raelly evaluate the loudness.
+* If your main track is not louder than the other tracks, make sure to increase its volume using the `setEffect()` function. Don't take the percussive track into accound, as `analyzeTrack()` is not relevant for percussions. For loudness it's: `RMS_AMPLITUDE`.
 * Use print statements to show your process in the console. Here is an example of print statement: `println('Is track number' + track + 'greater than 0.01?')`, if the counter `track` is equal to `1`, this will print 'Is track number 1 greater than 0.01?'.
 ****
 
