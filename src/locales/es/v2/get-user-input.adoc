@@ -56,7 +56,7 @@ Tu sección puede durar todos los compases que quieras.
 Luego llama a la función e imprime el último compás.
 ****
 
-Aquí hay un ejemplo:
+Aquí hay un ejemplo usando código:
 
 [role="curriculum-python"]
 [source,python]
@@ -83,7 +83,7 @@ En el cuerpo de la función, debes tener una declaración condicional que evalua
 Entonces llama a la función en compases diferentes escogiendo variaciones diferentes.
 ****
 
-Aquí hay un ejemplo:
+Aquí hay un ejemplo usando código:
 
 [role="curriculum-python"]
 [source,python]
@@ -258,7 +258,7 @@ Ahora combinaremos la respuesta de usuario y las operaciones booleanas.
 Escribe un script en que se pedirá que el usuario elija un género, dándole un número limitado de opciones (por ejemplo, "hip hop" y "clasica"). Selecciona una cadena de tiempos según la respuesta del usuario que vaya bien con el género. Puedes aceptar varias posibilidades. Por ejemplo, "HIP HOP", "hip hop" y "Hip Hop" ocasionarán que se toque la misma canción.
 ****
 
-Aquí hay un ejemplo:
+Aquí hay un ejemplo usando código:
 
 [role="curriculum-python"]
 [source,python]
