@@ -18,8 +18,8 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-* En plus de prendre des paramètres en entrée, les fonctions peuvent aussi produire une valeur en sortie. En programmation, nous appelons cela renvoyer une valeur.
-* L'*instruction de retour* est une instruction à l'intérieur de la fonction qui : 1) indique à une fonction de renvoyer une valeur lorsqu'elle est appelée. 2) indique à la fonction de s'arrêter. S'il y a des instructions après le mot clé `return`, celles-ci seront ignorées.
+* En plus de prendre des arguments en entrée, les fonctions peuvent aussi produire une valeur en sortie. En programmation, nous appelons cela renvoyer une valeur.
+* L'*instruction de retour* est une instruction à l'intérieur de la fonction qui : 1) indique à une fonction de renvoyer une valeur lorsqu'elle est appelée. 2) indique à la fonction de s'arrêter. Si, dans le corps de la fonction, il y a des instructions après le mot clé `return`, celles-ci seront ignorées.
 * Pour utiliser la valeur retournée par la fonction, créez une variable et affectez-lui l'appel de fonction.
 * Une instruction de retour n'est pas obligatoire. Sans une instruction de retour, une fonction ne renverra aucune valeur. `fitMedia()` et `setEffect()` sont des exemples de fonctions qui ne renvoient rien.
 
@@ -102,7 +102,7 @@ include::code-examples/get-user-input-conditional-statement.js.txt[]
 [[userinput]]
 === Obtenir une entrée de l'utilisateur.rice
 
-Ici, nous allons voir comment demander la saisie d'informations à l'utilisateur.rice lorsque le bouton « exécuter » est enfoncé. Ceci est possible grâce à la fonction `readInput()`. Cette fonction nécessite comme paramètre une chaîne de caractère (par exemple : "quel tempo désirez-vous appliquer pour votre musique ?"). Lorsque l'utilisateur.rice exécutera le code, il.elle verra une nouvelle fenêtre s'afficher comprenant cette chaîne de caractères et sera invité.e à saisir une réponse. La fonction `readInput()` renverra ensuite ce que l'utilisateur.rice aura saisi.
+Ici, nous allons voir comment demander la saisie d'informations à l'utilisateur.rice lorsque le bouton « exécuter » est cliqué. Ceci est possible grâce à la fonction `readInput()`. Cette fonction nécessite comme paramètre une chaîne de caractère (par exemple : "quel tempo désirez-vous appliquer pour votre musique ?"). Lorsque l'utilisateur.rice exécutera le code, ielle verra une nouvelle fenêtre s'afficher comprenant cette chaîne de caractères et sera invité.e à saisir une réponse. La fonction `readInput()` renverra ensuite ce que l'utilisateur.rice aura saisi.
 
 Par exemple, copiez le code suivant dans un nouveau script et exécutez-le :
 
@@ -123,7 +123,7 @@ Nous pourrions avoir besoin de convertir une information en un autre type de don
 [role="curriculum-python"]
 * `str()` - convertit n'importe quelle valeur en une chaîne de caractères.
 * `int()` - convertit une chaîne de caractère contenant des chiffres en un entier (par exemple : `"3"` devient `3`).
-* `float()` - convertit une chaîne de caractères contenant un nombre décimal en un nombre flottant (par exemple : `"3.5"` devient `3.5`).
+* `float()` - convertit une chaîne de caractères contenant un nombre à virgule en un nombre flottant (par exemple : `"3.5"` devient `3.5`).
 
 [role="curriculum-javascript"]
 * `String()` - convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule.
@@ -177,13 +177,13 @@ Voici quelques suggestions d'outils que vous pouvez utiliser :
 [[booleanlogic]]
 === Logique booléenne
 
-Nous allons maintenant combiner la logique booléenne et les entrées d'utilisateur pour examiner autre exemple d'interaction utilisateur.
+Nous allons maintenant combiner la logique booléenne et les entrées d'utilisateur pour examiner un autre exemple d'interaction utilisateur.
 
 [role="curriculum-python"]
-Voyons d'abord en quoi consiste la logique booléenne. You know that *comparison operators* help create a boolean. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera `True`.
+Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera `True`.
 
 [role="curriculum-javascript"]
-Voyons d'abord en quoi consiste la logique booléenne. You know that *comparison operators* help create a boolean. Par exemple, l'opérateur `===` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera
+Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `===` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera
  `true`.
 
 Maintenant, examinons les *opérateurs booléens* ; ceux-ci permettent de combiner plusieurs booléens. Il existe trois opérateurs booléens :
@@ -194,11 +194,11 @@ Maintenant, examinons les *opérateurs booléens* ; ceux-ci permettent de combi
 * `not` : prend un booléen en entrée et renvoie le booléen opposé.
 
 [role="curriculum-javascript"]
-* `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-* `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
+* `&&`: s'appelle "and" ou "et", il prend deux booléens en entrée et renvoie `true` seulement si les deux booléens sont `true`, sinon il renvoie `false`.
+* `||`: s'appelle "or" ou "ou": il prend deux booléens en entrée et renvoie `true` quand au moins un des deux booléens est `true`, sinon il renvoie `false`.
 * `!` : est nommé « not ».
 
-Par exemple, si vous avez 16 ans, la phrase "J'ai 16 ans" est vraie et la phrase "J'ai 17 ans" est fausse. La phrase "J'ai 16 ans and J'ai 17 ans" (vrai and faux) est fausse, car vous ne pouvez pas avoir à la fois 16 ans et 17 ans. Mais la phrase "J'ai 16 ans or J'ai 17 ans" (vrai ou faux) est vraie.
+Par exemple, si vous avez 16 ans, la phrase "J'ai 16 ans" est vraie et la phrase "J'ai 17 ans" est fausse. La phrase "J'ai 16 ans ET J'ai 17 ans" (vrai ET faux) est fausse, car vous ne pouvez pas avoir à la fois 16 ans et 17 ans. Mais la phrase "J'ai 16 ans OU J'ai 17 ans" (vrai ou faux) est vraie.
 
 [role="curriculum-python"]
 .ENTRAÎNEZ-VOUS
@@ -304,8 +304,8 @@ Voici le défi Juke-box : Rédigez un script qui demandera à l'utilisateur de c
 * Certaines fonctions vous permettent de convertir des données d'un type à un autre. La concaténation de chaînes de caractères `String()` convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule.  Number() convertit une chaîne de caractères en nombre.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
-** `&&`: is called "and", it takes 2 boolean inputs and returns `true` only when both inputs are `true`, otherwise returns `false`.
-** `||`: is called "or": it takes 2 boolean inputs and returns `true` when at least 1 input is `true`, otherwise returns `false`.
+** `&&`: s'appelle "and" ou "et", il prend deux booléens en entrée et renvoie `true` seulement si les deux booléens sont `true`, sinon il renvoie `false`.
+** `||`: s'appelle "or" ou "ou": il prend deux booléens en entrée et renvoie `true` quand au moins un des deux booléens est `true`, sinon il renvoie `false`.
 ** `!` : est nommé « not ».
 * Vous disposez maintenant de nombreux outils pour introduire des variations dans votre musique : les entrées d'utilisateur peuvent déterminer les éléments. Vous pouvez ajouter un paramètre dans vos fonctions personnalisées pour sélectionner une variation lorsque vous appelez votre fonction.
 
