@@ -122,7 +122,7 @@ Para agregar un clip de sonido a la EAD, empezamos escribiendo `fitMedia()`.
 
 There are 4 *parameters*, separated by commas.
 
-. *El último compás*: el compás cuando tu sonido deja de sonar.
+. *El compás de comienzo*: el compás cuando tu sonido empezará a sonar.
 . *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
 . *Start*: the starting measure
 . *End*: the ending measure
@@ -308,7 +308,7 @@ TODO: when options are ready, modify the link
 * Las reglas de *sintaxis* determinan cómo se escribe el código en el lenguaje de programación en cuestión.
 * Para crear un nuevo script haz clic en el enlace azul grande o el icono "+" si otro script ya está abierto.
 * `fitMedia()` es la manera principal de agregar sonido a la EAD. It has the following four parameters.
-** *El último compás*: el compás cuando tu sonido deja de sonar.
+** *El compás de comienzo*: el compás cuando tu sonido empezará a sonar.
 ** *numeroDePistaMusical (trackNumber):* La pista en la cual se coloca la música.
 ** *Start*: the starting measure
 ** *End*: the ending measure
