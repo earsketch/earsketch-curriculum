@@ -1,16 +1,16 @@
 [[loopandlayers]]
-== Loops and Layers
+== الحلقات والطبقات!
 
 :nofooter:
 
-In this chapter you will learn about `for` loops and how you can create repetition in your code and music. We will also cover musical layers and textures as well as some debugging tips.
+في هذا الفصل سوف تتعلم عن حلقة ` for `وكيف يمكنك إنشاء تكرار في الكود بالموسيقى الخاصة بك. وسوف نتعلم أيضا عن الطبقات الموسيقية والقوام نعرض بعض النصائح عن تصحيح الأخطاء.
 
 [[forloops]]
-=== `for` loops
+=== حلقات`for`
 
-Just like musicians can play a pattern again and again in a *loop*, programmers can ask the computer to complete tasks again and again... in a *loop*! This is more concise: instead of writing an instruction many times, you write one loop with the instructions, and the computer knows to repeat them.
+تماما كما يقوم الموسيقيين بتشغيل مقطع موسيقي مرارا وتكرارا في *حلقة*، يمكن للمبرمجين أن يطلب من الكمبيوتر اكمال وتنفيذ المهام مرارا وتكرارا... في *حلقة*! هذا أكثر نجاعة: بدلاً من كتابة التعليمات عدة مرات، تكتب حلقة واحدة (loop) مع التعليمات، والكمبيوتر يقوم بتكرارها.
 
-For example, if you want to repeat a `makeBeat()` that you have created, instead of writing down several lines of `makeBeat()` functions, you can create a `for` loop.
+على سبيل المثال، إذا كنت ترغب في تكرار ()makeBeat التي قمت بإنشائها، بدلاً من كتابة عدة أسطر من الدالة  ()makeBeat، يمكنك إنشاء حلقة  for.
 
 ////
 add new video
@@ -31,41 +31,41 @@ include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
 ----
 
 [role="curriculum-python"]
-`for` loops in Python consist of 3 basic parts:
+حلقة for في لغة بايثون (Python) مركبة من 3 اجزاء اساسية:
 
 [role="curriculum-javascript"]
-`for` loops in JavaScript consist of 4 basic parts:
+حلقة for في لغة جاڤاسكربت (JavaScript) مركبة من 4 اجزاء اساسية:
 
 [[loop-components-PY]]
-.The basic components of a for loop
+.المكونات الأساسية لحلقة for
 [role="curriculum-python"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 
 [[loop-components-JS]]
-.The basic components of a for loop
+.المكونات الأساسية لحلقة for
 [role="curriculum-javascript"]
 [caption="Figure 4.1.1: "]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
-* *Loop Counter*: Creates a variable to be used as a loop counter. You can have more than one line of instructions inside the `for` loop.
-* *Range*: A function that makes a list of numbers for the loop counter to count through. The keyword `in` connects the loop counter to the range. `range()` takes two arguments, a starting point (inclusive) and ending point (exclusive): `range(startingNumber, endingNumber)`.
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
+* *عداد الحلقة*: ننشئ متغير لاستخدامه عدادا للحلقة. يمكن أن يكون لديك أكثر من سطر واحد من الكود داخل حلقة `for`.
+* *المجال او Range*: دالة التي تنتج قائمة من الاعداد بمجال معين التي يستخدمها عداد الحلقة. The keyword `in` connects the loop counter to the range. الدالة ` ()rang ` تاخذ بارامترين، الاول يمثل بداية المجال والثاني يمثل نهاية المجال ولكن نهاية المجال لا تحوي العدد نفسه: `range(startingNumber, endingNumber)`
+* *جسم الحلقة*: جسم الحلقة يحتوي على تعليمات سيتم تكرارها. It includes everything that is *indented* (using the _tab_ key) directly after the colon `:`.
 
 [role="curriculum-javascript"]
-* *Initialization*: This creates a variable to be used as a *loop counter* before the first loop runs.
-* *Loop Condition*: This checks whether the loop should run again. If the statement is true, the loop body executes again. If the counter gets too high, the statement will be false, and we exit the loop. The computer then continues executing code after the loop.
-* *Iteration Statement*: A statement that updates the loop counter. It counts up each time the loop repeats.
-* *Loop Body*: The body of a loop contains statements that will execute repeatedly. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). You can have more than one line of instructions inside the `for` loop.
+* *اعطاء قيمة اولية*: هذا ينشئ متغير ليستخدم كـ *عداد الحلقة* قبل تشغيل الحلقة الأولى.
+* *شرط الحلقة*: هذا يفحص ما إذا كان يجب تشغيل الحلقة مرة أخرى. إذا كان الشرط صحيحاً، تقوم الحلقة بتنفيذ الكود المكتوب بجسمها مرة أخرى. If the counter gets too high, the statement will be false, and we exit the loop. ثم يواصل الكمبيوتر تنفيذ الكود الذي بعد الحلقة.
+* *Iteration Statement*: A statement that updates the loop counter. وهو يعد كل تكرار.
+* *جسم الحلقة*: جسم الحلقة يحتوي على تعليمات سيتم تكرارها. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). يمكن أن يكون لديك أكثر من سطر واحد من الكود داخل حلقة `for`.
 
-.PRACTICE
+.تدريب
 ****
-. Create a `for` loop with the counter `measure` to have your `makeBeat()` from measures `1` to `4`
-. Modify your code to go from measures `3` to `7`
-. Then modify your code to have your beats on track `2` instead of track `1`, still from measures `3` to `7`
-. Then modify your counter name, pick a track and measures, and create the appropriate `for` loop
-. Show your neighbor your last `for` loop, and have them find which track your beat is on, which measures it's going to be on, and what your counter's name is.
+. قم بإنشاء حلقة `for` مع العداد "measure" للحصول على `()makeBeat` من measure 1 إلى 4، مثل في الفيديو
+. قم بتعديل الكود للانتقال من measures 3 إلى 7
+. ثم قم بتعديل الكود لجعل البيت على المسار 2 بدلاً من المسار 1،انتبه انك  لا تزال من measures 3 إلى 7
+. ثم قم بتعديل اسم العداد الخاص بك، اختيار مسار و measures، وأنشئ حلقة ` for` مناسبة.
+. أظهر لصديقك حلقة `for` الاخيره، واطب منه ان يجد في اي مسارات الايقاع (beat)، واي عدادات تعمل،وما هي اسماء العدادات.
 ****
 
 {nbsp} +
@@ -73,7 +73,7 @@ image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 [[printstatements]]
 === Print statements
 
-To better understand the flow of your code, you can use `print()`. It allows you to display information in the console when you run the code.
+To better understand the flow of your code, you can use `print()`. اذا يمكنك عن طريقه عرض المعلومات بالكونسول (console)، اثناء تنفيذ الكود.
 
 [role="curriculum-python"]
 When use provide data to `print()`, it is *evaluated*, or simplified it to its basic form.
@@ -84,15 +84,15 @@ When use provide data to `println()`, it is *evaluated*, or simplified it to its
 Then the data is converted into text and shown in the console.
 
 [role="curriculum-python"]
-.PRACTICE
+.تدريب
 ****
-Before running the following code, try to guess what the console will display for each `print()` call.
+قبل تشغيل الكود التالي، حاول تخمين ما سيعرض الكونسول لكل امر`print` .
 ****
 
 [role="curriculum-javascript"]
-.PRACTICE
+.تدريب
 ****
-Before running the following code, try to guess what the console will display for each `println()` call.
+قبل تشغيل الكود التالي، حاول تخمين ما سيعرض الكونسول لكل امر`println` .
 ****
 
 {nbsp} +
@@ -109,7 +109,7 @@ include::code-examples/loops-and-layers-printing.py.txt[]
 include::code-examples/loops-and-layers-printing.js.txt[]
 ----
 
-Here, you will see in your console the following lines:
+وهنا سوف ترى بالكونسول الاسطر التالية:
 
 ----
 4 (this is 1+3, simplified)
@@ -123,12 +123,12 @@ ok
 ok
 ----
 
-and it ends there since measure has to be lower than 5, so 4 is your limit.
+وينتهي هناك لأن العداد يجب أن يكون أقل من 5، لذلك 4 هو الحد الاخير.
 
 [[controlflow]]
-=== Control Flow
+=== التحكم بمراحل التنفيذ
 
-Here is another example of how you can use `for` loops:
+فيما يلي مثال آخر على كيفية استخدام `for`:
 
 [role="curriculum-python curriculum-mp4"]
 [[video12bpy]]
@@ -138,7 +138,8 @@ video::./videoMedia/012-03-ExampleLoop-PY.mp4[]
 [[video12bjs]]
 video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
 
-We can create repetition in our music by typing `fitMedia()` again and again, with different measure numbers:
+يمكنك إنشاء تكرار في الموسيقى عن طريق كتابة <code>
+()fitMedia</code> مرارا، مع أرعداد مختلفة للعداد measure:
 
 [role="curriculum-python"]
 [source,python]
@@ -152,7 +153,7 @@ include::code-examples/loops-and-layers-no-loops.py.txt[]
 include::code-examples/loops-and-layers-no-loops.js.txt[]
 ----
 
-We can use a `for` loop to create the exact same music with less code. Our counter here is `measure`. Note that the body of the loop contains two lines of code, both of which use the counter `measure`.
+يمكننا استخدام حلقة `for` لإنشاء نفس الموسيقى بدقة أكثر . العداد هنا هو "measure". لاحظ أن جسم الحلقة يحتوي على سطرين من التعليمات البرمجية، وكلاهما يستخدم "measure" العداد.
 
 [role="curriculum-python"]
 [source,python]
@@ -166,7 +167,7 @@ include::code-examples/loops-and-layers-loops.py.txt[]
 include::code-examples/loops-and-layers-loops.js.txt[]
 ----
 
-The *interpreter* reads and executes a script. The order it is executed in is called the *control flow*. It usually goes line by line, top to bottom. This is why we need to define variables before calling them in the code.
+يقوم *المترجم * بقراءة وتنفيذ البرنامج (السكريبت). الترتيب الذي يتم التنفيذ به يسمى * تدفق التحكم *. عادة ما يتم الانتقال سطرا سطرا ، من أعلى إلى أسفل. هذا هو السبب في أننا نحتاج إلى تحديد المتغيرات قبل استدعائها في المقطع البرمجي.
 
 A loop is a *control flow statement*, which changes the order. At the end of a loop body, it jumps back to the top of the loop.
 
@@ -193,14 +194,14 @@ BMW
 One last interesting thing about `for` loops is incrementation.
 
 [role="curriculum-python"]
-Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen two parameters for range: `startingNumber` and `endingNumber`. There is an optional third parameter: `increment`. By default, `increment` is equal to one, but you can use it to increment by more than one. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
+Incrementation means increasing the counter's value. In `for` loops we used the `range()` function to increment the counter. We've seen 2 parameters for range: `startingNumber` and `endingNumber` (which is exclusive). There is an optional third parameter: `increment`. By default, `increment` is equal to 1, but you can use it to increment by more than one. For example, range(0, 10, 4) would increment by 4 between 0 and 10.
 
 [role="curriculum-javascript"]
-Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by `1` for on each repeat. It's possible to increment it by more than one, like `measure = measure + 4`.
+Incrementation means increasing the counter's value. In `for` loops we used the terms `measure = measure + 1`. This increments the counter `measure` by 1 for every loop. It's possible to increment it by more than one, like `measure = measure + 4`.
 
-.PRACTICE
+.تدريب
 ****
-Before running the following code, try to guess what it will do.
+قبل تشغيل المقطع البرمجي التالي ، حاول تخمين ما سيفعله.
 ****
 
 {nbsp} +
@@ -218,44 +219,44 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 ----
 
 [role="curriculum-python"]
-Here we used the `range()` function, but you can also increment (increase) or decrement (decrease) a variable using this type of expression: `measure = measure + 1`. This means measure is now equal to its former value plus one. You can use the shorthand `+=` to increment or `-=` to decrement. Here is how: `measure += 1` is equivalent to `measure = measure + 1`. And `measure -=1` is equivalent to `measure = measure - 1`
+استخدمنا هنا الدالة ` range () ` ، ولكن يمكنك أيضًا زيادة (زيادة) أو إنقاص (تقليل) متغير باستخدام هذا النوع من التعبير: ` مقياس = قياس + 1 `. هذا يعني أن المقياس يساوي الآن قيمته السابقة زائد واحد. يمكنك استخدام الاختصار ` + = ` (أو ` - = ` للتقليل). وإليك الطريقة: ` مقياس + = 1 ` يعادل ` قياس = قياس + 1 `. و ` قياس - = 1 ` يكافئ ` قياس = قياس - 1 `
 
 [role="curriculum-python"]
-* `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
-* `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
+* 1. إذا كنت تريد الزيادة بأكثر من واحد ، فاستخدم ` مقياس + = 2 `.
+* 1. إذا كنت تريد الإنقاص بأكثر من واحد ، فاستخدم ` مقياس - = 2 `.
 
 [role="curriculum-javascript"]
-Here we wrote `measure = measure + 4`, which means measure is now equal to its former value plus four. You can use some shorthands:
- `+=` (or `-=` to decrement). The following is a shorthand method for incrementing (or decrementing) a counter:
+كتبنا هنا ` مقياس = قياس + 4 ` ، مما يعني أن المقياس الآن يساوي قيمته السابقة زائد أربعة. يمكنك استخدام بعض الاختصارات:
+ ` + = ` (أو ` - = ` للتناقص). فيما يلي طريقة مختصرة لزيادة (أو إنقاص) العداد:
 
 [role="curriculum-javascript"]
-* `measure++`, or `measure += 1` increments measure by 1. If you want to increment by more than one, use `measure += 2`.
-* `measure--`, or `measure -= 1` decrements measure by 1. If you want to decrement by more than one, use `measure -= 2`.
+* ` قياس ++ ` ، أو ` قياس + = 1 ` زيادات قياس بمقدار 1. إذا كنت تريد الزيادة بأكثر من واحد ، فاستخدم ` مقياس + = 2 `.
+* ` قياس - ` ، أو ` قياس - = 1 ` تناقص القياس بمقدار 1. إذا كنت تريد الإنقاص بأكثر من واحد ، فاستخدم ` مقياس - = 2 `.
 
 [[debuggingtips]]
-=== Debugging Tips
+=== نصائح التصحيح
 
-Programming is not only writing code. It's also debugging and maintaining it. Debugging means finding and solving bugs. Bugs are another term for errors in your code. Try following these steps if you run into an error:
+البرمجة ليست مجرد كتابة مقطع برمجي. إنه'&أيضًا يعمل على تصحيح أخطائه وصيانته. التصحيح يعني حل الأخطاء. Bugs are another term for errors in your code. جرب اتباع هذه الخطوات إذا واجهك خطأ:
 
 [role="curriculum-python"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have three options here.
+. * حدد موقع الخطأ في التعليمات البرمجية: * لديك 3 خيارات.
 [role="curriculum-python"]
 .. If the console provided a line number, take a look at that line and the previous line in your code.
-.. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
-.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `print()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
+.. Use the "comment out" method. يمكنك تضييق نطاق الخطأ عن طريق وضع صيغة لبناء الجملة حول كتلة من التعليمات البرمجية ، أو * التعليق عليها * ، وتشغيل الكود. If there is no error, the error is somewhere in the commented block.
+.. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. أدخل عبارات ` print ` حيث لا تكون متأكدًا من المنطق ، والحصول على قيمة المتغيرات والتحقق من حالة البرنامج. This helps you check your understanding of the program against what is actually happening.
 . *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
+. *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
 [role="curriculum-javascript"]
 . *Read the console for clues*.
-. *Locate the error in your code:* You have three options here.
+. * حدد موقع الخطأ في التعليمات البرمجية: * لديك 3 خيارات.
 [role="curriculum-javascript"]
 .. If the console provided a line number, take a look at that line and the previous line in your code.
-.. Use the "comment out" method. You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. If there is no error, the error is somewhere in the commented block.
+.. Use the "comment out" method. يمكنك تضييق نطاق الخطأ عن طريق وضع صيغة لبناء الجملة حول كتلة من التعليمات البرمجية ، أو * التعليق عليها * ، وتشغيل الكود. If there is no error, the error is somewhere in the commented block.
 .. *Print debugging* can also be used to locate an error. Read through the problem section of your code and try to follow the logic. Insert `println()` calls where you are unsure of the logic, getting the value of variables and checking program state. This helps you check your understanding of the program against what is actually happening.
 . *Squash the bug:* Check for errors and edit the offending code, then run it to verify its correctness.
-. *Ask for help:* If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
+. *Ask for help*: If you find you have spent too much time on a bug, then ask someone for help! A fresh pair of eyes can do wonders for spotting mistakes.
 
 Below, we walk through an example of printing variables to help debug a script:
 
@@ -267,23 +268,23 @@ video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
 [[video15js]]
 video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
 
-You've seen a list of potential errors in Chapter 1. Here are some other errors that you might encounter:
+You've seen a list of potential errors in chapter 1. Here are some other errors that you might encounter:
 
 [role="curriculum-python"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign a value to your variable before using it later.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. Python comments must start with a `#` symbol.
-. *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>>.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. Python comments must start with a `#` symbol.
+. *Indentation:* Indentation is critical in Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror, indentation error>>.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
 
 [role="curriculum-javascript"]
-. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should create it with `var` before using it later.
+. *Initializing variables*: A variable must be initialized before it can be used in a script. This means you should assign values to your variables at the top of your script. Don't forget to initialize variables with `var`!
 . *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>. JavaScript comments must start with `//`.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>.
+. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. JavaScript comments must start with `//`.
+. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
 . *Arguments:* Mistakes with function arguments can lead to all kinds of errors. You must provide the correct number and type of arguments to a function call.
 
-Take a look at <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
+Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
 
 [[musicaltips]]
 === Musical tips
@@ -296,7 +297,7 @@ Let's start with the *key* of your song:
 * The *key* of a song indicates the scale, or group of pitches, in which the music is composed. Keys can be major (usually sounds "happier") or minor (usually sounds "darker").
 * For beginner composers, we recommend that you have just one key for your song. Selecting sounds from different keys might sound... off-key! In general, sounds within the same folder in the EarSketch sound library are all in the same key.
 
-Listen to the audio clip below to hear the difference between major and minor keys (the major scale and chord is first):
+Listen to the audio clip below to hear the difference between major and minor keys:
 
 ++++
 <div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
@@ -304,26 +305,26 @@ Listen to the audio clip below to hear the difference between major and minor ke
 
 Now let's talk about the different types of tracks you can have. You might remember that you can use one track of your DAW for each type of instrument. In a pop song, you can find the following basic tracks:
 
-* *Melody* is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar, etc.
-* *Harmony* is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
-* You also have a *bass line*. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard, etc.
-* Then there is *percussion*. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
+* Melody is the main idea that's often higher pitched, or "the notes that the lead sings." It can be a voice, higher notes of a keyboard, guitar...
+* Harmony is the longer toned notes that "support the melody" like the chords on a piano, strumming guitar, or a collection of strings.
+* You also have a bass line. These are lower pitches. It can be a bass, a cello, the lower notes of a keyboard...
+* Then there is percussion. If you're using `makeBeat()`, this can take several tracks. For example, you can have one track for your kick, one for your snare, and one for your hi-hat.
 
-These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain one or two of the four. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes, etc. The possibilities are endless! Explore ideas and keep the ones you like most!
+These are basic ideas that create the structure of your song's texture. However, you can have some parts of your song that only contain 1 or 2 of the 4. You can also add a lot more tracks: you can create a second melody, add drones (very long notes in the background), recorded sounds, whooshes... The possibilities are endless! explore ideas and keep the ones you like most!
 
-Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the _mere exposure effect_. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
+Finally, let's discuss *repetition* and *contrast*. Humans enjoy repetition because of what psychologists call the mere exposure effect. Upon hearing a repeated section of music, the brain will try to imagine the next note before it is played, which makes us feel as if we are participating. Likewise, each time a section of music is repeated, the listener can notice different details of the piece, because the brain no longer has to focus on processing the raw melodic content.
 
 Contrast refers to differences in subsequent sections of music, providing an important balance with repetition. Contrast is used to bring new elements to the listener’s attention. Musicians provide contrast with: rhythmic change, new melodic lines or harmonies, or variations in the instruments or sounds used.
 
-.PRACTICE
+.تدريب
 ****
-Create a complete song with:
+قم بإنشاء أغنية كاملة باستخدام:
 
 * A theme (please mention your chosen theme in your commented intro in the code)
 * The `fitMedia()` and `makeBeat()` functions
 * One or more `for` loop(s) either with `fitMedia()` or `makeBeat()`
-* At least four tracks
-* At least sixteen measures
+* At least 4 tracks
+* At least 16 measures
 * At least one uploaded sound
 * Comments and variables to organize your code
 
@@ -336,21 +337,21 @@ Remember that you can try things out and keep only the sounds/ideas that you lik
 === Chapter 4 Summary
 
 [role="curriculum-python"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, loop counter, and range. The code in the loop body must be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
 * `print()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
 * You can use 3 basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
 
 [role="curriculum-javascript"]
-* A *`for` loop* instructs the computer to execute a code section repeatedly, requiring less code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
+* A *`for` loop* instructs the computer to execute a code section repeatedly, creating more efficient code. `for` loops consist of a loop body, initialization, iteration statement, and loop condition. The code in the loop body should be indented.
 * The *control flow* represents the order in which statements are executed by the computer.
-* `println()` displays the data in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
+* The `println()` function evaluates its argument and displays the result in the console. It is a useful tool for debugging because it allows the programmer to learn the state of the program.
 * Printing, commenting out code, and the console can all be used to debug code. Additionally, asking someone for help can significantly speed up the debugging process.
-* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * The *pitch* of a sound determines how high or low it sounds on a relative scale.
 * The *key* of a song defines the *scale*, or group of pitches, in which the piece is composed, as well as the *tonic* note. Keys are either major or minor, which tend to give a different impression to the listener.
 * You can use three basic tracks for the backbone of your songs: higher pitched melody, lower pitched bass, and percussion.
