@@ -221,7 +221,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 Aquí se usó la función `range()`, pero también se puede incrementar (aumentar) o decrementar (reducir) una variable usando este tipo de expresión: `compas = compas + 1`. Esto quiere decir que compas ahora es igual a su valor anterior más uno. Se puede usar la abreviatura `+=` para incrementar o `-=` para decrementar. Así se hace: `compas += 1` es equivalente a `compas = compas + 1`. Y `compas -=1` es equivalente a `compas = compas - 1`.
 
 [role="curriculum-python"]
-* El conteo sube con cada iteración. Observa que, en Python, `print` es diferente de otras funciones porque no siempre tenemos que usar paréntesis.
+* El conteo sube con cada iteración. Si quieres incrementarlo por más de uno, usa `compas += 2`.
 * La *melodía* es la idea principal. Las dos usan "compas" como contador.
 
 [role="curriculum-javascript"]
@@ -229,7 +229,7 @@ Aquí se escribió `compas = compas + 4`, lo cual significa que compas ahora es 
  `+=` (o `-=` para decrementar). A continuación, hay un método para incrementar (o decrementar) un contador usando abreviaturas:
 
 [role="curriculum-javascript"]
-* `compas++`, o `compas += 1` incrementa compas por 1. Observa que, en Python, `print` es diferente de otras funciones porque no siempre tenemos que usar paréntesis.
+* `compas++`, o `compas += 1` incrementa compas por 1. Si quieres incrementarlo por más de uno, usa `compas += 2`.
 * `compas--`, o `compas -= 1` decrementa compas por 1. Las dos usan "compas" como contador.
 
 [[debuggingtips]]
