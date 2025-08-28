@@ -222,7 +222,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 استخدمنا هنا الدالة ` range () ` ، ولكن يمكنك أيضًا زيادة (زيادة) أو إنقاص (تقليل) متغير باستخدام هذا النوع من التعبير: ` مقياس = قياس + 1 `. هذا يعني أن المقياس يساوي الآن قيمته السابقة زائد واحد. يمكنك استخدام الاختصار ` + = ` (أو ` - = ` للتقليل). وإليك الطريقة: ` مقياس + = 1 ` يعادل ` قياس = قياس + 1 `. و ` قياس - = 1 ` يكافئ ` قياس = قياس - 1 `
 
 [role="curriculum-python"]
-* 1. إذا كنت تريد الزيادة بأكثر من واحد ، فاستخدم ` مقياس + = 2 `.
+* 1. الكلمة `in` تفحص اذا كانت قيمة عداد الحلقة في المجال المحدد.
 * 1. إذا كنت تريد الإنقاص بأكثر من واحد ، فاستخدم ` مقياس - = 2 `.
 
 [role="curriculum-javascript"]
@@ -230,7 +230,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
  ` + = ` (أو ` - = ` للتناقص). فيما يلي طريقة مختصرة لزيادة (أو إنقاص) العداد:
 
 [role="curriculum-javascript"]
-* ` قياس ++ ` ، أو ` قياس + = 1 ` زيادات قياس بمقدار 1. إذا كنت تريد الزيادة بأكثر من واحد ، فاستخدم ` مقياس + = 2 `.
+* ` قياس ++ ` ، أو ` قياس + = 1 ` زيادات قياس بمقدار 1. الكلمة `in` تفحص اذا كانت قيمة عداد الحلقة في المجال المحدد.
 * ` قياس - ` ، أو ` قياس - = 1 ` تناقص القياس بمقدار 1. إذا كنت تريد الإنقاص بأكثر من واحد ، فاستخدم ` مقياس - = 2 `.
 
 [[debuggingtips]]
@@ -240,7 +240,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 
 [role="curriculum-python"]
 . *Read the console for clues*.
-. * حدد موقع الخطأ في التعليمات البرمجية: * لديك 3 خيارات.
+. *Locate the error in your code:* You have 3 options here.
 [role="curriculum-python"]
 .. If the console provided a line number, take a look at that line and the previous line in your code.
 .. Use the "comment out" method. يمكنك تضييق نطاق الخطأ عن طريق وضع صيغة لبناء الجملة حول كتلة من التعليمات البرمجية ، أو * التعليق عليها * ، وتشغيل الكود. If there is no error, the error is somewhere in the commented block.
@@ -250,7 +250,7 @@ include::code-examples/loops-and-layers-incrementing.js.txt[]
 
 [role="curriculum-javascript"]
 . *Read the console for clues*.
-. * حدد موقع الخطأ في التعليمات البرمجية: * لديك 3 خيارات.
+. *Locate the error in your code:* You have 3 options here.
 [role="curriculum-javascript"]
 .. If the console provided a line number, take a look at that line and the previous line in your code.
 .. Use the "comment out" method. يمكنك تضييق نطاق الخطأ عن طريق وضع صيغة لبناء الجملة حول كتلة من التعليمات البرمجية ، أو * التعليق عليها * ، وتشغيل الكود. If there is no error, the error is somewhere in the commented block.
