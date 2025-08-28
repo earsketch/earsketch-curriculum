@@ -49,19 +49,19 @@ image::../media/U1P2/Loop_Components_PY.png[Alt Text]
 image::../media/U1P2/Loop_Components_JS.png[Alt Text]
 
 [role="curriculum-python"]
-* *Compteur de boucle* : Crée une variable à utiliser comme compteur de boucle. Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
+* *Compteur de boucle* : Crée une variable à utiliser comme compteur de boucle. Vous pouvez détecter une erreur en écrivant # avant une ligne de code.
 * *Plage ou « Range »* : Une fonction qui crée une liste de nombres à compter pour le compteur de boucle. The keyword `in` connects the loop counter to the range. La fonction `range()` nécessite deux arguments, un point de départ (inclusif) et un point de fin (exclusif) : `range(startingNumber, endingNumber)`.
 * *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. Cela inclut tout ce qui est *indenté* (avec un espace à gauche, à l'aide de la touche de tabulation ou _Tab_) directement après le deux-points `:`.
 
 [role="curriculum-javascript"]
 * *Initialisation* : Ceci crée une variable à utiliser comme *compteur de boucle* avant que la première boucle ne s'exécute.
-* *Condition de la boucle* : Ceci vérifie si la boucle doit être exécutée à nouveau. Si l'instruction est vraie, le corps de la boucle s'exécute à nouveau. Si le compteur dépasse la limite, l'instruction sera considérée comme fausse et la boucle se terminera. L'ordinateur continuera ensuite à exécuter le code situé après la boucle.
+* *Condition de la boucle* : Ceci vérifie si la boucle doit être exécutée à nouveau. Si l'instruction est vraie, le corps de la boucle s'exécute à nouveau. Si le compteur dépasse la limite, l'instruction sera considérée comme fausse et la boucle se terminera. L'ordinateur continuera ensuite à exécuter le code situé après la boucle (qui n'est pas indenté).
 * *Itération* : Une instruction qui met à jour le compteur de boucle. It counts up each time the loop repeats.
-* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. It is surrounded by curly braces `{ }` and is *indented* (using the _tab_ key). Vous pouvez avoir plus d'une ligne d'instructions à l'intérieur d'une boucle `for`.
+* *Corps de la boucle* : Le corps d'une boucle contient des instructions qui s'exécuteront de manière répétée. Il est encadré par des accolades `{ }` est il est *indenté* (avec un espace à gauche, à l'aide de la touche de tabulation ou _Tab_). Vous pouvez détecter une erreur en écrivant # avant une ligne de code.
 
 .ENTRAÎNEZ-VOUS
 ****
-. Créez une boucle `for` avec le compteur "measure" pour que votre fonction `makeBeat()` s'applique des mesures 1 à 4, comme dans la vidéo.
+. Créez une boucle `for` avec le compteur "mesure" pour que votre fonction `makeBeat()` s'applique des mesures 1 à 4, comme dans la vidéo.
 . Modifiez votre code pour passer des mesures 3 à 7
 . Ensuite, modifiez votre code pour que vos beats se trouvent sur la piste 2 au lieu de la piste 1, mais toujours des mesures 3 à 7.
 . Puis, modifiez votre nom de compteur, choisissez une piste et des mesures, et créez la boucle `for` appropriée
@@ -244,7 +244,7 @@ La programmation ne se limite pas à l'écriture de code. Il y a aussi une parti
 .. Utilisez la méthode de "mise en commentaire". You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée.
 .. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des instructions `print` là où vous êtes incertain.e de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement.
 . *Partez à la chasse aux bogues* : vérifiez la présence d'erreurs et modifiez les lignes de code fautives, puis exécuter le code pour vérifier sa justesse.
-. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très utile pour repérer les erreurs.
+. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très bénéfique pour détecter les erreurs.
 
 [role="curriculum-javascript"]
 . *Lisez la console pour obtenir des indices*.
@@ -252,11 +252,11 @@ La programmation ne se limite pas à l'écriture de code. Il y a aussi une parti
 [role="curriculum-javascript"]
 .. Si la console vous indique un numéro de ligne, jetez-y un coup d'œil, ainsi qu'à la ligne précédente dans votre code.
 .. Utilisez la méthode de "mise en commentaire". You can narrow down an error by putting comment syntax around a block of code, or *commenting it out*, and running the code. S'il n'y a pas d'erreur renvoyée lorsque vous exécutez le code, l'erreur est probablement située dans la ligne commentée.
-.. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des appels de fonction `println()` là où vous êtes incertain de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement.
+.. Le *débogage à l'aide de l'instruction « print »* peut également être utilisé pour localiser une erreur. Passez à travers la section de votre code qui pose problème et essayez de suivre la logique. Insérez des appels de fonction `println()` là où vous êtes incertain.e de la logique, afin d'obtenir la valeur des variables et de vérifier l'état du programme. Cela vous aidera à vérifier votre compréhension du programme par rapport à ce qui se passe concrètement.
 . *Partez à la chasse aux bogues* : vérifiez la présence d'erreurs et modifiez les lignes de code fautives, puis exécuter le code pour vérifier sa justesse.
-. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très utile pour repérer les erreurs.
+. *Demandez de l'aide* : si vous trouvez que vous avez passé trop de temps sur un bogue, n'hésitez pas à demander l'aide de quelqu'un ! Un regard neuf peut être très bénéfique pour détecter les erreurs.
 
-Dans l'exemple ci-dessous, nous allons parcourir des variables print pour aider à déboguer un script :
+Dans l'exemple ci-dessous, nous allons parcourir des variables imprimées dans la console pour aider à déboguer un script :
 
 [role="curriculum-python curriculum-mp4"]
 [[video15py]]
@@ -270,19 +270,19 @@ Dans le chapitre 1, nous vous avons présenté une liste d'erreurs potentielles 
 
 [role="curriculum-python"]
 . L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. Cela signifie que vous devez affecter des valeurs à vos variables au début de votre script.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. En Python, les commentaires doivent commencer par le symbole `#`.
+. *Commentaires :* Une erreur dans la création de commentaire provoquera une <</en/v1/every-error-explained-in-detail#syntaxerror, erreur de syntaxe>>. En Python, les commentaires doivent commencer par le symbole `#`.
 . L'*indentation *: L'indentation est très importante en Python. Lack of indentation in `for` loop bodies will cause an <</en/v1/every-error-explained-in-detail#indentationerror, indentation error>>.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
+. *Guillemets :* Oublier des guillements de début ou de fin va aussi provoquer une <</en/v1/every-error-explained-in-detail#syntaxerror, erreur de syntaxe>>.
 . Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction.
 
 [role="curriculum-javascript"]
 . L'*initialisation des variables* : Une variable doit être initialisée avant de pouvoir être utilisée dans un script. This means you should create it with `var` before using it later.
 . *Semicolons in for loop definition*: Semicolons must be used to separate the three parts (initialization, condition, and iteration statement) of a for loop definition.
-. *Comments:* Improper commenting will cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>. En JavaScript, les commentaires doivent commencer par le symbole `//`.
-. *Quotations:* Forgetting an opening or closing quotation mark can also cause a <</en/v1/every-error-explained-in-detail#syntaxerror, syntax error>>.
+. *Commentaires :* Une erreur dans la création de commentaire provoquera une <</en/v1/every-error-explained-in-detail#syntaxerror, erreur de syntaxe>>. En JavaScript, les commentaires doivent commencer par le symbole `//`.
+. *Guillemets :* Oublier des guillements de début ou de fin va aussi provoquer une <</en/v1/every-error-explained-in-detail#syntaxerror, erreur de syntaxe>>.
 . Les *arguments* : Les arguments de fonction comprenant des erreurs peuvent conduire à toutes sortes d'erreurs. Vous devez fournir le nombre et le type d'arguments appropriés à un appel de fonction.
 
-Take a look at <</en/v1/every-error-explained-in-detail#, Every Error Explained in Detail>> for a full description of different error types and what you can do to prevent them.
+Utilisez <</en/v1/every-error-explained-in-detail#, Toutes les erreurs expliquées en détails>> pour une description plus complète d'erreurs et de leurs solutions.
 
 [[musicaltips]]
 === Astuces musicales
@@ -310,7 +310,7 @@ Maintenant, voyons les différents types de pistes que vous pourriez avoir. Vous
 
 Il s'agit là d'idées de base qui permettent de définir la texture de votre chanson. Cependant, certaines parties de votre chanson peuvent ne contenir qu'un ou deux de ces quatre éléments. Vous pouvez également ajouter d'autres pistes, créer une deuxième mélodie, ajouter des bourdons (notes très longues en arrière-plan), des sons enregistrés, des « whooshes », etc. The possibilities are endless! Explorez plusieurs idées et gardez celles qui vous plaisent le plus !
 
-Enfin, parlons de la *répétition* et du *contraste*. Les êtres humains apprécient les répétitions en raison de ce que les psychologues appellent l'effet d'exposition. Lorsqu'il entend une partie de musique répétée, le cerveau essaie d'imaginer la note suivante avant qu'elle ne soit jouée, ce qui nous donne l'impression de participer. De même, chaque fois qu'une partie de musique est répétée, l'auditeur peut percevoir de nouveaux détails du morceau, car le cerveau n'a plus besoin de se concentrer sur la mélodie brute.
+Enfin, parlons de la *répétition* et du *contraste*. Les êtres humains apprécient les répétitions en raison de ce que les psychologues appellent l'effet d'exposition. Lorsqu'il entend une partie de musique répétée, le cerveau essaie d'imaginer la note suivante avant qu'elle ne soit jouée, ce qui nous donne l'impression de participer. De plus, chaque fois qu'une partie de musique est répétée, l'auditeur peut percevoir de nouveaux détails du morceau, car le cerveau n'a plus besoin de se concentrer sur la mélodie brute.
 
 La notion de contraste renvoie aux différences entre des parties successives de la musique, ce qui crée un équilibre important par rapport aux répétitions. Le contraste est utilisé pour attirer l'attention de l'auditeur sur de nouveaux éléments. Les musiciens peuvent créer un contraste grâce à des changements rythmiques, de nouvelles mélodies ou harmonies ou encore par des variations au niveau des instruments ou des sons utilisés.
 
@@ -323,7 +323,7 @@ Créez une chanson complète comprenant :
 * une ou plusieurs boucles `for` avec `fitMedia()` ou `makeBeat()`
 * au moins quatre pistes
 * au moins 16 mesures
-* au moins un son chargé
+* au moins un son que vous avez ajouté
 * des commentaires et des variables pour organiser votre code
 
 Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder que les sons/idées qui vous plaisent le plus. Aussi, n'hésitez pas à partager votre musique !
@@ -337,8 +337,8 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 [role="curriculum-python"]
 * Une *boucle `for`* indique à l'ordinateur d'exécuter une section de code de façon répétée, créant ainsi un code plus efficace. Les boucles `for` se composent d'un corps de boucle, d'un compteur de boucle et d'une plage spécifique. En outre, le code dans le corps de la boucle doit être indenté.
 * Le *flux de commande* représente l'ordre dans lequel les instructions sont exécutées par l'ordinateur.
-* L'instruction `print` évalue l'expression qui l'accompagne et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au programmeur d'en apprendre davantage sur l'état du programme.
-* La fonction « print », la mise en commentaire de code et la console sont des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
+* L'instruction `print` évalue l'expression qui l'accompagne et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au codeur.se d'en apprendre davantage sur l'état du programme.
+* La fonction « print », la mise en commentaire de code et la console sont toutes des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * La *hauteur* d'un son détermine à quel point il est aiguë ou grave.
 * La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures ou mineures, ce qui crée une impression différente chez l'auditeur.
@@ -347,8 +347,8 @@ Rappelez-vous que vous pouvez essayer plusieurs choses différentes et ne garder
 [role="curriculum-javascript"]
 * Une *boucle `for`* indique à l'ordinateur d'exécuter une section de code de façon répétée, créant ainsi un code plus efficace. Les boucles `for` sont constituées d'un corps de boucle, d'une initialisation des variables, d'une instruction d'itération et d'une condition de boucle. En outre, le code dans le corps de la boucle doit être indenté.
 * Le *flux de commande* représente l'ordre dans lequel les instructions sont exécutées par l'ordinateur.
-* La fonction `println()` évalue son argument et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au programmeur d'en apprendre davantage sur l'état du programme.
-* La fonction « print », la mise en commentaire de code et la console sont des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
+* La fonction `println()` évalue son argument et affiche le résultat dans la console. Il s'agit d'un outil utile pour le débogage, car il permet au codeur.se d'en apprendre davantage sur l'état du programme.
+* La fonction « print », la mise en commentaire de code et la console sont toutes des méthodes utilisées pour déboguer du code. Demander de l'aide à quelqu'un peut aussi considérablement accélérer le processus de débogage.
 * Revisit the expanded list of common programming errors: <<debugging-and-documenting#commonerrors, Common Errors>>.
 * La *hauteur* d'un son détermine à quel point il est aiguë ou grave.
 * La *tonalité* d'une chanson indique la gamme ou le groupe de notes dans lequel la musique est composée. Les tonalités peuvent être majeures ou mineures, ce qui crée une impression différente chez l'auditeur.
