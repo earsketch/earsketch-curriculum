@@ -30,13 +30,13 @@ In EarSketch, the variables in your scripts may point to:
 لاستخدام متغير ،
 
 [role="curriculum-python"]
-. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. تعني كتابة `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` أنك تنشئ متغيرًا يسمى synth1 وأنك تخزن البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" والذي يسمى عامل التثبيت*assignment operator*. تعني كتابة `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` أنك تنشئ متغيرًا يسمى synth1 وأنك تخزن البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
 . HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
 . ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. يمكنك فقط استخدام المتغير بعد تعيينه ، وليس قبل ذلك. على سبيل المثال ، اكتب `fitMedia(synth1, 1, 1, 3)`
 . عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
 
 [role="curriculum-javascript"]
-. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" ، والذي يُسمى عامل التثبيت *assignment operator*. نستخدم أيضًا الأمر`var` في بداية السطر. الكتابة`var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;`تعني أنك تقوم بإنشاء متغير يسمى synth1 وأنك تقوم بتخزين البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
+. يجب عليك أولا * تعيينه *. نستخدم الرمز "=" والذي يسمى عامل التثبيت*assignment operator*. نستخدم أيضًا الأمر`var` في بداية السطر. الكتابة`var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;`تعني أنك تقوم بإنشاء متغير يسمى synth1 وأنك تقوم بتخزين البيانات HIPHOP_SYNTHPLUCKLEAD_005 في هذا المتغير.
 . HIPHOP_SYNTHPLUCKLEAD_005 هي القيمة *value* الخاصة ب ` synth1 `.
 . ثم تحتاج إلى استدعاء المتغير: استخدم `synth1` في مقطعك البرمجي. على سبيل المثال، اكتب `fitMedia(synth1, 1, 1, 3);`.
 . عند تشغيل المقطع البرمجي ، سيفهم الحاسوب أنه يجب أن يستخدم اسم مقطع الصوت HIPHOP_SYNTHPLUCKLEAD_005 عند قراءة`synth1`.
@@ -186,7 +186,7 @@ video revamping tab
 
 . *Sound*: A sound constant. في متصفح الصوت ، يمكنك تحديد الفنان "MAKEBEAT". هذه أصوات قصيرة مناسبة لأوتار الطبلة.
 . *trackNumber:*المسار الذي توضع عليه الموسيقى.
-. *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
+. *Measure Number*: بدء قياس البيتات/الضربات.
 . *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
 
 على سبيل المثال `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` سيُثبت البيت
@@ -278,7 +278,7 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * `makeBeat()`تستقبل 4 عوامل:
 ** *Sound*: A sound constant
 ** *trackNumber:*المسار الذي توضع عليه الموسيقى.
-** *measureNumber-القياس:*مقياس البداية للنبضات/الايقاعات.
+** *Measure Number*: بدء قياس البيتات/الضربات.
 ** *Beat String*: سلسلة مكونة من الأحرف `"0"`, `"+"`, and `"-"`.
 * تتوافق أنماط الإيقاع المختلفة مع الأنواع الموسيقية المختلفة.
 
