@@ -1,0 +1,14 @@
+// Massivlar: Bir nechta tovushni saqlash uchun massivlardan qo'llanish
+
+// Sozlash
+setTempo(130);
+
+//Musiqa
+
+// Tovushlar massivini yaratish
+var myEnsemble = [RD_ROCK_POPRHYTHM_MAINDRUMS_12, RD_ROCK_POPELECTRICBASS_16, RD_ROCK_POPELECTRICLEAD_11];
+
+// Tovushlarni 1-dan 5-gacha o'lchovlarga joylashtirish
+fitMedia(myEnsemble[0], 1, 1, 5); // 0-indeksga kirish
+fitMedia(myEnsemble[1], 2, 1, 5); // 1-indeksga kirish
+fitMedia(myEnsemble[2], 3, 1, 5); // 2-indeksga kirish
