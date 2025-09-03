@@ -1,0 +1,16 @@
+// Foydalanuvchi kiritgan ma'lumot 1: Foydalanuvchidan tempni sorab olish
+
+// Sozlash
+
+// Tempni sorab olish
+var question = "Musiqangiz qanday tempda bo'lishini istaysiz? 45 dan 220 gacha bo'lgan raqam tanlang";
+var answer = readInput(question);
+
+// songa aylantirish
+var tempo = Number(answer);
+
+// tempni o'rnatish
+setTempo(tempo);
+
+// Musiqa
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5);
