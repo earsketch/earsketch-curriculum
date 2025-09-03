@@ -1,0 +1,414 @@
+[[loopandlayers]]
+== Halqalar va Qatlamlar
+
+:nofooter:
+
+Ushbu bobda siz `for` halqalari hamda kodingiz va musiqangizda takrorlashni qanday yaratishingiz haqida bilib olasiz. Shuningdek, biz musiqiy qatlamlar va teksturalarni, shuningdek, dasturdagi nosozliklarni tuzatish bo'yicha ba'zi maslahatlarni ko'rib chiqamiz.
+
+[[forloops]]
+=== `for` halqalari
+
+Musiqachilar andozani *halqada* qayta-qayta ijro etishi mumkin bo'lgani kabi, dasturchilar ham kompyuterdan vazifalarni qayta-qayta bajarishni so'rashi mumkin... *halqa* ichida! Bu yanada samaraliroq: ko'rsatmani ko'p marotaba yozish o'rniga, siz ko'rsatmalar bilan bitta halqa yozasiz va kompyuter ularni takrorlash kerakligini anglaydi.
+
+Misol uchun, agar siz yaratgan `makeBeat()`ni takrorlamoqchi bo'lsangiz, `makeBeat()` funktsiyalarining bir necha qatorini yozish o'rniga, `for` halqasini yaratishingiz mumkin.
+
+////
+add new video
+more info here https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=0
+in the "revamping videos" tab (includes link to script)
+////
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-looping-my-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-looping-my-beats.js.txt[]
+----
+
+[role="curriculum-python"]
+Python-da `for` halqalari 3 ta asosiy qismdan iborat:
+
+[role="curriculum-javascript"]
+JavaScript-da `for` halqalari 4 ta asosiy qismdan iborat:
+
+[[loop-components-PY]]
+.Loop halqasining tarkibiy qismlari
+[role="curriculum-python"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_PY.png[Alt Text]
+
+[[loop-components-JS]]
+.Loop halqasining tarkibiy qismlari
+[role="curriculum-javascript"]
+[caption="Figure 4.1.1: "]
+image::../media/U1P2/Loop_Components_JS.png[Alt Text]
+
+[role="curriculum-python"]
+* *Loop Counter*: Halqa hisoblagichi sifatida foydalanish uchun o'zgaruvchini yaratadi. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
+* *Range*: halqa hisoblagichi uchun sonlar roʻyxatini tuzadigan funktsiya. `in` so'zi halqaning ichidagi hisoblagichni diapazonga (range) bog'laydi. `range()` ikkita argument oladi, boshlang'ich nuqta (o'z ichiga olgan holda) va tugash nuqtasi (mustasno holda): `range(startingNumber, endingNumber)`.
+* *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U `:` ikki nuqtadan so'ng to'g'ridan-to'g'ri *chekingan* (_tab_ tugmasi yordamida) barcha narsalarni o'z ichiga oladi.
+
+[role="curriculum-javascript"]
+* *Initialization*: Bu birinchi halqa ishga tushishidan oldin *halqa hisoblagichi* sifatida foydalanish uchun oʻzgaruvchini yaratadi.
+* *Loop Condition*: Bu halqa qayta ishga tushishini tekshiradi. Agar bayonot rost bo'lsa, halqa tanasi yana ijro etiladi. Hisoblagich juda baland bo'lsa, bayonot yolg'on bo'ladi va biz halqadan chiqamiz. So'ng kompyuter halqadan keyingi kodni bajarishni davom ettiradi.
+* *Takrorlanish bayonoti*: halqa hisoblagichini yangilaydigan bayonot. U halqa har safar takrorlanganda hisobni olib boradi.
+* *Loop body*: halqaning tanasi qayta-qayta bajariladigan bayonotlarni o'z ichiga oladi. U jingalak qavslar `{ }` bilan o'ralgan va (_tab_ tugmasi yordamida) *chekingan*. Siz `for` halqasida bir nechta koʻrsatmalar qatoriga ega boʻlishingiz mumkin.
+
+.AMALIYOT
+****
+. `makeBeat()` 1 dan 4 gacha boʻlgan oʻlchovlarga ega boʻlishi uchun “measure” hisoblagichi bilan `for` halqasini yarating
+. 3 dan 7 gacha bo'lgan o'lchovlarga o'tish uchun kodingizni o'zgartiring
+. So'ng 3 dan 7 gacha o'lchovlar saqlangan holda zarbalaringiz 1-trek o'rniga 2-trekda bo'lishi uchun kodingizni o'zgartiring
+. So'ng hisoblagich nomini o'zgartiring, trek va o'lchovlarni tanlang va tegishli `for` halqasini yarating
+. Qo‘shningizga so'nggi `for` halqasini ko'rsating va ular sizning zarbangiz qaysi trekda yoqilganligini, unda qaysi o'lchovlar yoqilaganini va hisoblagichingizning nomini aniqlashlarini so‘rang.
+****
+
+{nbsp} +
+
+[[printstatements]]
+=== Chop Etish Bayonotlari
+
+Kodingiz oqimini yaxshiroq tushunish uchun `print()` chop etish bayonotidan foydalanishingiz mumkin. Bu kodni ishga tushirganingizda konsolda ma'lumotni ko'rsatishga imkon beradi.
+
+[role="curriculum-python"]
+Biz print() uchun ma'lumotni uzatganimizda, u *baholanadi*, ya'ni uning sodda shakliga keltiriladi.
+
+[role="curriculum-javascript"]
+Biz println() uchun ma'lumotni uzatganimizda, u *baholanadi*, ya'ni uning sodda shakliga keltiriladi.
+
+Ma'lumot matnga o'giriliadi va konsolda ko'rsatiladi.
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+Quyidagi kodni ishga tushirishdan oldin, har bir `print()` chaqiruvi uchun konsol nimani ko'rsatishini taxmin qilishga harakat qiling.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+Quyidagi kodni ishga tushirishdan oldin, har bir `println()` chaqiruvi uchun konsol nimani ko'rsatishini taxmin qilishga harakat qiling.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-printing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-printing.js.txt[]
+----
+
+Bu yerda siz konsolingizda quyidagi qatorlarni ko'rasiz:
+
+----
+4 (this is 1+3, simplified)
+1 (initially your counter measure is equal to 1)
+ok
+2 (now your counter measure is equal to 2)
+ok (every time we go through one loop, we print "ok", that's why it's repeated)
+3
+ok
+4
+ok
+----
+
+va u shu yerda tugaydi, chunki o'lchov 5 dan kam bo'lishi kerak, shuning uchun 4 siz uchun chegara hisoblanadi.
+
+[[controlflow]]
+=== Boshqaruv Oqimi
+
+`For` halqalaridan qanday foydalanishga yana bir misol:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12bpy]]
+video::./videoMedia/012-03-ExampleLoop-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12bjs]]
+video::./videoMedia/012-03-ExampleLoop-JS.mp4[]
+
+Biz musiqamizda takrorlanish uchun `fitMedia()` ni turli oʻlchov raqamlari bilan qayta-qayta kiritishimiz mumkin:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-no-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-no-loops.js.txt[]
+----
+
+Aynan bir musiqani yanada samarali yaratish uchun `for` halqasidan foydanishimiz mumkin. Bizning hisoblagichimiz bu yerda `o'lchov`dir. E'tibor bering, halqaning tanasi 2 qator kodni o'z ichiga oladi, ularning ikkalasi ham "o'lchov" hisoblagichidan foydalanadi.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-loops.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-loops.js.txt[]
+----
+
+*Interpretator* skriptni o‘qiydi va bajaradi. Uning bajarilish tartibi *boshqaruv oqimi* deb ataladi. Odatda u yuqoridan pastgacha satr bo'ylab o'tadi. Shuning uchun biz kodda ularni chaqirishdan oldin o'zgaruvchilarni aniqlashimiz kerak.
+
+Halqa bu tartibni o'zgartiradigan *boshqaruv oqimining bayonoti*. Halqa tanasining oxiridan u halqaning yuqori qismiga sakrab o'tadi.
+
+Bu animatsiya boshqaruv oqimining `for` halqasida qanday harakatlanishini va halqa hisoblagichining qiymati har bir *takrorlanish*da yoki halqa tanasining takrorlanishida qanday o‘zgarishini ko‘rsatadi:
+
+[[loop-py]]
+.For haqasidan orqali o'tish
+[role="curriculum-python"]
+[caption="Figure 4.2.1: "]
+image::../media/U1P2/LoopPy_updated.gif[Alt Text]
+
+.For haqasidan orqali o'tish
+[role="curriculum-javascript"]
+[caption="Figure 4.2.1: "]
+[[loop-js]]
+image::../media/U1P2/LoopJS_updated.gif[Alt Text]
+
+////
+Although it is valid syntax, a `*monospace bold phrase*` causes a build error in AsciidocFX. Might be something to do with DocBook conversion. No bold for now. May see how ES handles it in the future.
+
+BMW
+////
+
+`for` halqalari haqida yana bir qiziqarli narsa - bu o'sish.
+
+[role="curriculum-python"]
+O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida hisoblagichni oshirish uchun `range()` funktsiyasidan foydalandik. Oraliq uchun biz ikkita parametrni ko'rdik: `boshlang'ichRaqam` va `tugashRaqami`. `O'sish` deb nomlanuvchi ixtiyoriy uchinchi parametr mavjud. `O'sish`ning standart parametri 1 ga teng, lekin uni bir nechta oshirish uchun ishlatishingiz mumkin. Masalan, range(0, 10, 4) funktsiyasi 0 va 10 oralig'idagi raqamlarni 4-tadan oshiradi.
+
+[role="curriculum-javascript"]
+O'sish hisoblagich qiymatini oshirishni anglatadi. `for` halqalarida biz `measure = measure + 1` atamalaridan foydalanganmiz. Bu har bir halqa uchun `o'lchov` hisoblagichini `1` ga oshiradi. Uni bir necha marta oshirish mumkin, masalan, `measure = measure + 4'.
+
+.AMALIYOT
+****
+Quyidagi kodni ishga tushirishdan oldin, u nima ish bajarishini taxmin qilishga harakat qiling.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/loops-and-layers-incrementing.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/loops-and-layers-incrementing.js.txt[]
+----
+
+[role="curriculum-python"]
+Bu yerda biz `range()` funktsiyasidan foydalandik, lekin siz `measure = measure + 1` ifodasi yordamida oʻzgaruvchini oshirish (o'sish) yoki tushirishingiz (pasayish) ham mumkin. Bu shuni anglatadiki, endi o'lchov o'zining avvalgi qiymatiga bir qo'shilgan bilan barobar. Siz o'sish uchun `+=` yoki pasayish uchun `-=` qisqartmasidan foydalanishingiz mumkin. Bu quyidagicha: `measure += 1` va `measure = measure + 1` teng iboralar. Shuningdek, `measure -=1` va `measure = measure- 1` teng iboralar
+
+[role="curriculum-python"]
+* `measure += 1` o'lchovni 1 ga oshiradi. Agar siz bir nechta orttirmoqchi bo'lsangiz, `measure += 2` dan foydalaning.
+* `measure -= 1` o'lchovni 1 ga oshiradi. Agar siz birdan ortiq pasaytirmoqchi bo'lsangiz, `measure -= 2` dan foydalaning.
+
+[role="curriculum-javascript"]
+Bu yerda biz `measure = measure + 4` deb yozdik, yaʼni oʻlchov endi avvalgi qiymatiga nisbatan toʻrttaga ko'p qiymatga teng. Siz ba'zi qisqartmalardan foydalanishingiz mumkin:
+ `+=` (yoki pasayish uchun `-=`). Quyida hisoblagichni oshirish (yoki pasaytirish) uchun qisqartirilgan usul keltirilgan:
+
+[role="curriculum-javascript"]
+* `measure++` yoki `measure += 1` o'lchovni 1 ga oshiradi. Agar siz bir nechta orttirmoqchi bo'lsangiz, `measure += 2` dan foydalaning.
+* `measure--` yoki `measure -= 1` o'lchovni 1 ga pasaytiradi. Agar siz birdan ortiq pasaytirmoqchi bo'lsangiz, `measure -= 2` dan foydalaning.
+
+[[debuggingtips]]
+=== Nosozliklarni Tuzatish Bo'yicha Maslahatlar
+
+Dasturlash faqat kod yozish emas. Bundan tashqari, undagi nosozliklarni tuzatish va xizmat ko'satish. Nosozliklarni tuzatish xatolarni topish va hal qilishni anglatadi. Nosozliklar - bu kodingizdagi xatolar uchun yana bir atama. Agar xatoga yo'l qo'ysangiz, quyidagi amallarni bajarib ko'ring:
+
+[role="curriculum-python"]
+. *Ishoralar uchun konsolni o'qing*.
+. *Kodingizdagi xatoni toping:* Bu yerda sizda 3 ta variant bor.
+[role="curriculum-python"]
+.. Agar konsol qator raqamini taqdim etgan bo'lsa, kodingizdagi ushbu qatorga va avvalgi qatorga qarang.
+.. "Sharhlash" usulidan foydalaning. Siz kod blokiga sharh sintaksisini qo'yish yoki *uni sharhlash* va kodni ishga tushirish orqali xatoni qisqartirishingiz mumkin. Agar xatolik yuz bermasa, demak xato sharhlangan blokning biror joyida bo'ladi.
+.. *Chop etishda nosozliklarni tuzatish* xatoni aniqlash uchun ham ishlatilishi mumkin. Kodingizning muammoli qismini o'qing va mantiqqa amal qilishga harakat qiling. Mantiqqa ishonchingiz komil bo'lmagan, o'zgaruvchilar qiymatini olish va dastur holatini tekshirish uchun `print()` chaqiruvlarini kiriting. Bu sizga dasturda haqiqatda nima bo'layotganini tekshirish jarayonini tushunishingizga yordam beradi.
+. *Xatoni bartaraf qiling:* Xatolarni tekshiring va uni keltirib chiqargan kodni tahrirlang, so'ng uning to'g'riligini tekshirish uchun uni ishga tushiring.
+. *Yordam so'rang:* Agar xatoga ko'p vaqt sarflaganingizni aniqlasangiz, kimdandir yordam so'rang! Yangi bir juft ko'z xatolarni aniqlash uchun mo''jizalar yaratishi mumkin.
+
+[role="curriculum-javascript"]
+. *Ishoralar uchun konsolni o'qing*.
+. *Kodingizdagi xatoni toping:* Bu yerda sizda 3 ta variant bor.
+[role="curriculum-javascript"]
+.. Agar konsol qator raqamini taqdim etgan bo'lsa, kodingizdagi ushbu qatorga va avvalgi qatorga qarang.
+.. "Sharhlash" usulidan foydalaning. Siz kod blokiga sharh sintaksisini qo'yish yoki *uni sharhlash* va kodni ishga tushirish orqali xatoni qisqartirishingiz mumkin. Agar xatolik yuz bermasa, demak xato sharhlangan blokning biror joyida bo'ladi.
+.. *Chop etishda nosozliklarni tuzatish* xatoni aniqlash uchun ham ishlatilishi mumkin. Kodingizning muammoli qismini o'qing va mantiqqa amal qilishga harakat qiling. Mantiqqa ishonchingiz komil bo'lmagan, o'zgaruvchilar qiymatini olish va dastur holatini tekshirish uchun `println()` chaqiruvlarini kiriting. Bu sizga dasturda haqiqatda nima bo'layotganini tekshirish jarayonini tushunishingizga yordam beradi.
+. *Xatoni bartaraf qiling:* Xatolarni tekshiring va uni keltirib chiqargan kodni tahrirlang, so'ng uning to'g'riligini tekshirish uchun uni ishga tushiring.
+. *Yordam so'rang:* Agar xatoga ko'p vaqt sarflaganingizni aniqlasangiz, kimdandir yordam so'rang! Yangi bir juft ko'z xatolarni aniqlash uchun mo''jizalar yaratishi mumkin.
+
+Quyida biz skriptdagi nosozlikni tuzatishga yordam beradigan chop etish o‘zgaruvchilarining misolini ko‘rib chiqamiz:
+
+[role="curriculum-python curriculum-mp4"]
+[[video15py]]
+video::./videoMedia/015-02-TheDebuggingProcess-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video15js]]
+video::./videoMedia/015-02-TheDebuggingProcess-JS.mp4[]
+
+1-Bobda siz uchratishingiz mumkin bo'lgan xatolar ro'yxatini ko'rdingiz. Siz duch kelishingiz mumkin bo'lgan boshqa xatolar:
+
+[role="curriculum-python"]
+. *O'zgaruvchilarni ishga tushirish*: O'zgaruvchini skriptda foydalanishdan avval uni ishga tushirish kerak. O'zqaruvchilarni ishlatishdan oldin unga qiymat belgilashingiz lozim.
+. *Sharhlar:* Noto'g'ri sharhlash <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>ga sabab bo'ladi. Python sharhlari `#` belgisi bilan boshlanishi kerak.
+. *Chekinish:* Python-da chekinish juda muhim. `for` halqa jismlarida chekinish bo`lmasa, <</en/v1/every-error-explained-in-detail#indentationerror,indentation error>> hosil bo`ladi.
+. *Qo'shtirnoqlar:* Ochish yoki yopish qo'shtirnoq belgisini unutish ham <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
+. *Argumentlar:* Funktsiya argumentlari bilan bog'liq xatolar barcha turdagi xatolarga olib kelishi mumkin. Funktsiya chaqiruviga argumentlarning to'g'ri raqamini va turini kiritishingiz kerak.
+
+[role="curriculum-javascript"]
+. *O'zgaruvchilarni ishga tushirish*: O'zgaruvchini skriptda foydalanishdan avval uni ishga tushirish kerak. Bu degani siz uni ishlatishdan oldin `var` vayonoti bilan yaratishingiz kerak.
+. *For halqasi ta'rifida nuqta-vergul:* Nuqta-vergul for halqasining ta'rifiining uch qismni ajratish uchun ishlatiladi (ishga tushirish, shart, va iteratsiya bayonoti).
+. *Sharhlar:* Noto'g'ri sharhlash <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>>ga sabab bo'ladi. JavaScript sharhlari `//` belgisi bilan boshlanishi kerak.
+. *Qo'shtirnoqlar:* Ochish yoki yopish qo'shtirnoq belgisini unutish ham <</en/v1/every-error-explained-in-detail#syntaxerror,syntax error>> hosil bo'lishiga olib keladi.
+. *Argumentlar:* Funktsiya argumentlari bilan bog'liq xatolar barcha turdagi xatolarga olib kelishi mumkin. Funktsiya chaqiruviga argumentlarning to'g'ri raqamini va turini kiritishingiz kerak.
+
+Turli xil xatolarning toʻliq tavsifi va ularni oldini olish uchun nima qilishingiz mumkinligi haqida <</en/v1/every-error-explained-in-detail#,Every Error Explained in Detail>>ni koʻrib chiqing.
+
+[[musicaltips]]
+=== Musiqiy maslahatlar
+
+Endi sizda musiqa yaratish uchun `fitMedia()`, `makeBeat()` va `for` halqalari kabi koʻplab vositalar mavjud boʻlgani uchun biz musiqiy gʻoyalarni koʻrib chiqamiz.
+
+Qo'shiqingizning *kalitidan* boshlaylik:
+
+* *Tovush pardasi* - bu nota qanchalik baland yoki past ovozda chiqishi. Biz nisbiy musiqiy ohanglarga *shkalada* yoki tovush chastotasining jarangiga qarab musiqiy notalar to'plamiga buyurtma beramiz.
+* Qo'shiqning *kaliti* musiqa tuzilgan miqyosdagi tovush pardalarining shkalasi yoki guruhini ko'rsatadi. Kalitlar major (odatda "quvnoqroq" yangraydi) yoki minor (odatda "qayg'uli" yangraydi) bo'lishi mumkin.
+* Yosh bastakorlar uchun qo'shiqda faqat bitta kalitdan foydalanishni tavsiya qilamiz. Tovushlarni turli kalitlardan tanlash bu narsaga olib keladi... soxta jaranglash! Umuman olganda, EarSketch tovush kutubxonasida bir jilddagi tovushlarning bari ayni kalitda bo'ladi.
+
+Major va minor kalitlar o'rtasidagi farqni eshitish uchun quyidagi audio klipni tinglang (major shkala va akkord birinchi navbatda):
+
+++++
+<div class="curriculum-mp3">audioMedia/MajorMinor.mp3</div>
+++++
+
+Endi sizda bo'lishi mumkin bo'lgan treklarning har xil turlari haqida gapiraylik. Har bir uskuna turi uchun RAIS-ning bitta trekidan foydalanishingiz mumkinligi yodingizda bo'lsa kerak. Pop qo'shiqda siz quyidagi asosiy treklarni topishingiz mumkin:
+
+* *Melodiya* - bu ko'pincha balandroq pardada bo'lgan asosiy g'oya yoki "yetakchi kuylanadigan notalar." Bu ovoz, klaviaturaning yuqori notalari, gitara va boshqalar bo'lishi mumkin.
+* *Uyg'unlik* - bu pianinodagi akkordlar, chalinadigan gitara yoki satrlar to'plami kabi "ohangni qo'llab-quvvatlovchi" uzunroq tovushli notalardir.
+* Sizda *bas qatori* ham bor. Bular pastroq tovush pardalari. Bu bas, violonchel, klaviaturaning pastki notalari va boshqalar bo'lishi mumkin.
+* Keyin *zarbdorlik* mavjud. Agar siz `makeBeat()` dan foydalansangiz, bu bir nechta treklarni olishi mumkin. Masalan, tepki zarbasi uchun bitta trekka, pistirma zarbasi uchun bitta trekka va likopcha zarbasi uchun yana bitta trekka ega bo'lishingiz mumkin.
+
+Bular qo'shig'ingizning tuzilishini yaratadigan asosiy g'oyalardir. Biroq, siz qo'shiqning faqat 4 tadan 1 yoki 2 qismini o'z ichiga olgan ba'zi qismlariga ega bo'lishingiz mumkin. Bundan tashqari, siz yanada ko'proq treklarni qo'shishingiz mumkin: siz ikkinchi ohangni yaratishingiz, dronlarni (orqa fondagi juda uzun notalar), yozib olingan tovushlarni, shovqinlarni va hokazolarni qo'shishingiz mumkin. Imkoniyatlar cheksizdir! G'oyalarni o'rganing va o'zingizga eng yoqqanlarini saqlang!
+
+Nihoyat, keling, *takrorlash* va *kontrast*ni muhokama qilaylik. Psixologlar _shunchaki ta'sir qilish effekti_ deb ataydigan ibora tufayli odamlar takrorlashni yaxshi ko'radilar. Musiqaning takrorlangan qismini eshitgandan so'ng, miya keyingi notani yangrashidan oldin uni tasavvur qilishga harakat qiladi, bu bizni unda ishtirok etayotgandek his qildiradi. Xuddi shunday, musiqaning har bir qismi takrorlanganda, tinglovchi asarning turli tafsilotlarini sezishi mumkin, chunki miya endi ohangdor tarkibni qayta ishlashga e'tibor qaratishi lozim bo'lmaydi.
+
+Kontrast musiqaning keyingi bo'limlaridagi farqlarni bildiradi, bu takrorlash bilan muhim muvozanatni ta'minlaydi. Kontrast tinglovchilar e'tiboriga yangi elementlarni jalb qilish uchun ishlatiladi. Musiqachilar kontrastni quyidagilar bilan ta'minlaydilar: ritmik o'zgarishlar, yangi ohangli chiziqlar yoki uyg'unliklar, yohud ishlatiladigan asboblar yoki tovushlarning o'zgarishi.
+
+.AMALIYOT
+****
+Bular bilan to'liq qo'shiq yarating:
+
+* Mavzu (iltimos, kodda sharhlangan kirish qismida siz tanlagan mavzuni eslatib o'ting)
+* `fitMedia()` va `makeBeat()` fuktsiyalari
+* `fitMedia()` yoki `makeBeat()` bilan bir yoki bir nechta `for` halqa(lar)
+* Kamida 4 ta trek
+* Kamida 16 ta o'lchov
+* Kamida bitta yuklangan tovush
+* Kodingizni tartibga solish uchun sharhlar va o'zgaruvchilar
+
+Yodda tutingki, siz narsalarni sinab ko'rishingiz va faqat o'zingiz yoqtirgan tovushlarni/g'oyalarni saqlashingiz mumkin. Musiqangizni baham ko'rishdan tortinmang!
+****
+
+{nbsp} +
+
+[[chapter4summary]]
+=== 4-Bob Xulosa
+
+[role="curriculum-python"]
+* *`for` halqasi* kompyuterga kod qismini qayta-qayta bajarishni buyuradi, bu esa yanada samarali kod yaratadi. `for` halqalari halqa tanasi, halqa hisoblagichi va diapazondan iborat. Halqa tanasidagi kod chekinishli bo'lishi kerak.
+* *Boshqaruv oqimi* bayonotlar kompyuter tomonidan bajarilish tartibini ifodalaydi.
+* `print()` ma'lumotni konsolda aks ettiradi. Bu nosozliklarni tuzatish uchun foydali vositadir, chunki u dasturchiga dastur holatini o'rganish imkonini beradi.
+* Chop etish, kodni sharhlash va konsol - bularning barchasidan koddagi nosozlikni tuzatish uchun foydalanish mumkin. Bundan tashqari, kimdirdan yordam so'rash nosozliklarni tuzatish jarayonini sezilarli darajada tezlashtirishi mumkin.
+* Umumiy dasturlash xatolarining kengaytirilgan ro'yxatini qayta ko'rib chiqish: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Ohangning *tovush pardasi* nisbiy shkalada uning qanchalik baland yoki past yangrashini aniqlaydi.
+* Qo'shiqning *kaliti* parcha yaratilgan miqyosdagi tovush pardalarining *shkalasi* yoki guruhini ko'rsatadi hamda *tonik* notasini belgilaydi. Kalitlar major yoki minor bo'lib, ular tinglovchiga farqli taassurot qoldiradi.
+* Siz qo'shiqlaringizning asosi uchun 3 ta asosiy trekdan foydalanishingiz mumkin: baland pardadagi melodiya, pastroq pardadagi bass va zarbdorlik.
+
+[role="curriculum-javascript"]
+* *`for` halqasi* kompyuterga kod qismini qayta-qayta bajarishni buyuradi, bu esa yanada samarali kod yaratadi. `for` halqalari halqa tanasi, ishga tushirish, takrorlanish bayonoti va halqa shartidan iborat. Halqa tanasidagi kod chekinishli bo'lishi kerak.
+* *Boshqaruv oqimi* bayonotlar kompyuter tomonidan bajarilish tartibini ifodalaydi.
+* `println()` ma'lumotni konsolda aks ettiradi. Bu nosozliklarni tuzatish uchun foydali vositadir, chunki u dasturchiga dastur holatini o'rganish imkonini beradi.
+* Chop etish, kodni sharhlash va konsol - bularning barchasidan koddagi nosozlikni tuzatish uchun foydalanish mumkin. Bundan tashqari, kimdirdan yordam so'rash nosozliklarni tuzatish jarayonini sezilarli darajada tezlashtirishi mumkin.
+* Umumiy dasturlash xatolarining kengaytirilgan ro'yxatini qayta ko'rib chiqish: <<debugging-and-documenting#commonerrors,Common Errors>>.
+* Ohangning *tovush pardasi* nisbiy shkalada uning qanchalik baland yoki past yangrashini aniqlaydi.
+* Qo'shiqning *kaliti* parcha yaratilgan miqyosdagi tovush pardalarining *shkalasi* yoki guruhini ko'rsatadi hamda *tonik* notasini belgilaydi. Kalitlar major yoki minor bo'lib, ular tinglovchiga farqli taassurot qoldiradi.
+* Siz qo'shiqlaringizning asosi uchun 3 ta asosiy trekdan foydalanishingiz mumkin: baland pardadagi melodiya, pastroq pardadagi bass va zarbdorlik.
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Quyidagilardan qaysi biri `for` halqasining komponenti EMAS?
+
+[answers]
+* Halqa interpretatori
+* Halqa Hisoblagichi
+* Halqa Tanasi
+* Halqa Diapazoni
+--
+
+[question]
+--
+Quyidagilardan qaysi biri musiqiy kompozitsiyada halqalardan to'g'ri foydalanish EMAS?
+
+[answers]
+* Hech qachon takrorlanmaydigan zarba andozasini yaratish
+* Musiqiy kliplarni xar uchinchi o'lchovlarga joylashtirish
+* Bir necha ketma-ket harakatlar bo'yicha zarbani takrorlash
+* Musiqiy kesmalarni toq o'lchovlarga joylashtirish
+--
+
+[question]
+--
+Quyidagilardan qaysi biri nosozliklarni tuzatish uchun tavsiya etilgan usullardan biri EMAS?
+
+[answers]
+* Kodni nusxalash va Google-ga joylashtirish
+* O'zgaruvchi qiymatlarini konsolga chop etish
+* Konsolda aniqlangan xato qatorlariga qarash
+* Boshqalardan yordam so'rash
+--
+
+[question]
+--
+Quyidagilardan qaysi biri konsolda chop etilishi mumkin bo'lgan narsa EMAS?
+
+[answers]
+* Kod Sharhlari
+* Satrlar
+* Matematik Ifodalar
+* O'zgaruvchilar
+--
+
+[question]
+--
+____ tovushning qanchalik baland yoki pastligini belgilovchi sifati.
+
+[answers]
+* Ohang
+* Temp
+* Ritm
+* Ovoz Balandligi
+--
