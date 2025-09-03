@@ -1,0 +1,11 @@
+# O'stirish: O'zgaruvchan baraban zarbasini yaratish
+
+from earsketch import *
+setTempo(120)
+
+groove1 = HIPHOP_DUSTYGROOVE_011
+groove2 = HIPHOP_DUSTYGROOVE_010
+
+for measure in range(1, 9, 4):
+    fitMedia(groove1, 1, measure, measure + 2)
+    fitMedia(groove2, 2, measure + 2, measure + 4)
