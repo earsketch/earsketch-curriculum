@@ -1,0 +1,27 @@
+# Balandlashtirib kirish (fade in) ba pastlashib chiqish (fade out): Balandlash va pasaytirish uchun barcha treklarni halaqa qilish
+
+# Sozlash
+from earsketch import *
+setTempo(100)
+
+# O'zgaruvchilar
+melody1 = MILKNSIZZ_ADIOS_BRASS
+melody2 = MILKNSIZZ_ADIOS_STRINGS
+kick = OS_KICK04
+hihat = OS_OPENHAT03
+kickBeat = "0-------0-0-0---"
+hihatBeat = "---0---0--00----"
+
+# Musiqani 1-trekka qo'yish
+fitMedia(melody1, 1, 1, 5)
+fitMedia(melody2, 1, 5, 9)
+
+# For halqasidan qo'llanib o'lchamga loyiq qilib trekka zarbalarni qoshish. Tepuvchi baraban 2-trekka va hai-het barabani 3-trekka. 
+for measure in range(1, 9):
+    makeBeat(kick, 2, measure, kickBeat)
+    makeBeat(hihat, 3, measure, hihatBeat)
+
+# Balandlashish va pasaytirishni 1-trekdan 3-trekkacha qo'yish
+for track in range(1, 4):
+    setEffect(track, VOLUME, GAIN, -60, 1, 0, 3)
+    setEffect(track, VOLUME, GAIN, 0, 7, -60, 9)
