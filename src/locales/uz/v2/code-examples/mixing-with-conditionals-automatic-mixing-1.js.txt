@@ -1,0 +1,19 @@
+// Trekni avtomatik ravishda miks qilish 1: Agar trek 1 ovozi trek 2 nikidan baland bo'lsa, uning ovozini pasaytiramiz
+
+// Sozlash
+setTempo(120);
+
+// 2ta trekni yaratish
+var melody1 = RD_CINEMATIC_SCORE_STRINGS_14;
+var melody2 = RD_UK_HOUSE__5THCHORD_1;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 2, 1, 9);
+
+// Treklarning ovozlarini baholash
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+
+// Agar trek 1 ovozi trek 2 nikidan baland bo'lsa, uning ovozini pasaytiramiz
+if (loudnessTrack1 > loudnessTrack2) {
+    setEffect(1, VOLUME, GAIN, -10);
+}
