@@ -3,7 +3,7 @@
 
 :nofooter:
 
-La structure d'une musique est son organisation dans le temps : comment le.a musicien.ne crée des parties avec du sens, et des transitions pour un bon flow musical. C'est très courant en musique de danse électronique ou dance (EDM) et crée l'anticipation d'une perte de niveau sonore. Dans ce chapitre, vous créerez vos propres fonctions, appelées fonctions personnalisées, pour structurer vos musiques !
+La structure d'une musique est son organisation dans le temps : comment le.a musicien.ne crée des parties avec du sens, et des transitions pour un bon flow musical. Dans ce chapitre, vous créerez vos propres fonctions, appelées fonctions personnalisées, pour structurer vos musiques !
 
 [[asongsstructure]]
 === La structure d'une chanson
@@ -69,17 +69,17 @@ C'est parce que vous devez *appeler* une fonction pour l'utiliser.
 Pour appeler votre fonction, ajoutez la ligne `sectionA()` non indentée après la définition de votre fonction. Lorsque vous exécuterez le code, vous devriez voir la partie A dans votre DAW.
 ****
 
-Nous voulons maintenant ajouter la partie A de la mesure 9 à 13. Cependant, lorsque la fonction sectionA() est appelée, nous remarquons que les sons sont placés des mesures 1 à 5. Pour remédier à ce problème, nous allons créer des *paramètres* pour notre fonction.
+Nous voulons maintenant ajouter la partie A de la mesure 9 à 13. Cependant, lorsque la fonction sectionA() est appelée, nous remarquons que les sons sont placés des mesures 1 à 5. Pour remédier à ce problème, nous allons créer des *paramètres* pour notre fonction. Auparavant, quand nous appelions des fonctions EarSketch, nous utilisions le terme argument pour parler de ce qui est entre parenthèses. Au moment de créer la fonction, nous parlons de paramètres.
 
 .ENTRAÎNEZ-VOUS
 ****
-In your current script you created for the previous practice problem:
+Dans le script actuel (avec la partie A),
 
-1. Ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition.
-1. Dans le corps de la fonction, remplacez les mesures de début (1) et de fin (5) par `startMeasure` et `endMeasure` respectivement.
-1. Lorsque vous appelez votre fonction, ajoutez les paramètres `1` et `5` entre les parenthèses. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
-1. Ajoutez un deuxième appel de fonction, mais cette fois-ci, avec les paramètres `9` et `13`. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
-1. Définissez une fonction pour la partie B, en suivant le même processus, et appelez la partie B des mesures 5 à 9 et des mesures 13 à 17.
+1. Ajoutez les paramètres `startMeasure` et `endMeasure` séparés par une virgule entre les parenthèses de la fonction sectionA() dans sa définition. (`sectionA(startMeasure,endMeasure)`).
+2. Dans le corps de la fonction, remplacez les mesures de début (1) et de fin (5) par `startMeasure` et `endMeasure` respectivement.
+3. Lorsque vous appelez votre fonction, ajoutez les paramètres `1` et `5` entre les parenthèses. Les paramètres sont séparés par une virgule. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
+4. Ajoutez un deuxième appel de fonction, mais cette fois-ci, avec les paramètres `9` et `13`. Exécutez le code pour vous assurer qu'il n'y a aucune erreur.
+5. Définissez une fonction pour la partie B, en suivant le même processus, et appelez la partie B des mesures 5 à 9 et des mesures 13 à 17.
 ****
 
 Voici à quoi devrait ressembler votre code :
@@ -109,18 +109,18 @@ video::./videoMedia/009-03-CustomFunctions-JS.mp4[]
 [[transitionstrategies]]
 === Stratégies de transition
 
-Maintenant que vous savez comment créer des fonctions personnalisées pour structurer votre chanson, nous allons examiner la notion de transitions. *Transitions* help one section smoothly go into the next. Celles-ci permettent de relier les couplets et le refrain, de faire une montée jusqu'à un drop, de mixer des pistes (DJing) ou de faire un changement de tonalité. Le but d'une transition est d'attirer l'attention de l'auditeur et de lui faire savoir qu'un changement est sur le point de se produire.
+Maintenant que vous savez comment créer des fonctions personnalisées pour structurer votre chanson, nous allons examiner la notion de transitions. Les *transitions* aident à passer en douceur d'une partie à l'autre. Celles-ci permettent de relier les couplets et le refrain, de faire une montée jusqu'à un drop, de mixer des pistes (DJing) ou de faire un changement de tonalité. Le but d'une transition est d'attirer l'attention de l'auditeur et de lui faire savoir qu'un changement est sur le point de se produire.
 
 Voici quelques stratégies populaires pour créer des transitions musicales :
 
-. *Cymbale à main ou « Crash Cymbal »* : placement d'une cymbale à main sur le premier beat ou rythme d'une nouvelle partie.
-. *Roulement de batterie ou « Drum Fill »* : une variation rythmique pour combler le vide avant une nouvelle partie.
-. *Track Silencing*: Silence some tracks temporarily for dramatic effect.
+. *Cymbale à main ou « Crash Cymbal »* : placement d'une cymbale à main sur le premier beat ou rythme d'une nouvelle partie. Voyez l'exemple https://www.youtube.com/watch?v=RssWT0Wem2w&t=0m55s[suivant^].
+. *Roulement de batterie ou « Drum Fill »* : une variation rythmique pour combler le vide avant une nouvelle partie. Voyez ces https://www.youtube.com/watch?v=YMskGG39Y0Y[exemples^] de roulements de batterie.
+. *Pistes en sourdine ou «Track Dropouts »* : Ajouts de drops de manière temporaire dans les pistes (une piste devient muette) pour créer des pauses. Écoutez https://www.youtube.com/watch?v=PxIgHSOLO_Q[Love de Imagine Dragons], à 1'16 par exemple.
 . *Variation de mélodie* : Introduction d'une variation des accords, de la ligne de basse ou de la mélodie avant la nouvelle partie. Il arrive souvent qu'un dossier dans la bibliothèque de sons EarSketch contienne des variations similaires.
-. *Riser* (lire "raïseur") : Une note ou un bruit qui augmente en hauteur. C'est très courant en musique de danse électronique ou dance (EDM) et cela crée de l'anticipation. Vous pouvez utiliser le terme de recherche « riser » dans la bibliothèque de sons. Une cymbale à main inversée peut être utilisée comme riser, comme YG_EDM_REVERSE_CRASH_1.
-. *Roulement de caisse claire ou « Snare Roll »* : Une séquence de coups de caisse claire répétés, avec une densité, hauteur ou amplitude croissante. Vous pouvez utiliser un clip comme RD_FUTURE_DUBSTEP_FILL_1 ou HOUSE_BREAK_FILL_003, ou `makeBeat()`.
-. *Boucle ou « Looping »* : Répétition d'un court segment de mélodie avant une nouvelle partie.
-. *Fondu enchaîné ou « Crossfading »* : Diminution du volume d'une partie en augmentant le volume de la partie suivante.
+. *Riser* (lire "raïseur") : Une note ou un bruit qui augmente en hauteur. C'est très courant en musique de danse électronique ou dance (EDM) et cela crée de l'anticipation. Vous pouvez utiliser le terme de recherche « riser » dans la bibliothèque de sons. Une cymbale à main inversée peut être utilisée comme riser, comme YG_EDM_REVERSE_CRASH_1. Voici un exemple de riser dans https://www.youtube.com/watch?v=1KGsAozrCnA&t=31m30s[un set techno de Carl Cox^].
+. *Roulement de caisse claire ou « Snare Roll »* : Une séquence de coups de caisse claire répétés, avec une densité, hauteur ou amplitude croissante. Vous pouvez utiliser un clip comme RD_FUTURE_DUBSTEP_FILL_1 ou HOUSE_BREAK_FILL_003, ou `makeBeat()`. Voyez ici un https://www.youtube.com/watch?v=c3HLuTAsbFE[exemple^].
+. *Boucle ou « Looping »* : Répétition d'un court segment de mélodie avant une nouvelle partie. Voyez ici un https://www.youtube.com/watch?v=AQg4wnbBjiQ[exemple^] de boucle en DJing.
+. *Fondu enchaîné ou « Crossfading »* : Diminution du volume d'une partie en augmentant le volume de la partie suivante. 
 . *Anacrouse ou « Anacrusis »* : Lorsque la mélodie de la nouvelle partie commence quelques beats plus tôt.
 
 .ENTRAÎNEZ-VOUS
@@ -184,8 +184,10 @@ En programmation, nous pouvons créer des *abstractions*, soit le fait de regrou
 À présent, tentez de créer une chanson complète en utilisant tous les outils que vous avez découverts dans EarSketch ! Retrouvez ci-dessous une suggestion de méthodologie de travail, mais que vous pouvez adapter comme vous le souhaitez :
 
 . Choisissez un thème pour votre chanson. Pensez au type de sons, d'instruments ou de paroles qui véhiculeront au mieux votre message.
-. Sélectionnez ensuite une structure simple.
+. Choisissez une structure de musique simple (comme ABA).
 . Et maintenant, vous pouvez enfin commencer à coder ! Commencez par sélectionner les sons et mettez-les dans des variables que vous utiliserez dans vos fonctions `fitMedia()`.
+. Assurez-vous d'utiliser des variables pour stocker des informations comme les noms des clips de sons.
+. Assurez-vous d'utiliser des commentaires pour expliquer votre processus.
 . Utilisez `makeBeat()` pour ajouter des percussions.
 . Vous pouvez aussi ajouter vos propres sons.
 . Utilisez des boucles pour réduire les répétitions dans votre code.
@@ -193,10 +195,9 @@ En programmation, nous pouvons créer des *abstractions*, soit le fait de regrou
 . Ajoutez une ou deux transitions.
 . Ajoutez des effets avec setEffect().
 . Ajoutez une ou plusieurs instructions conditionnelles (en option).
-. Assurez-vous d'utiliser des variables pour stocker des informations comme les noms des clips de sons.
-. Assurez-vous d'utiliser des commentaires pour expliquer votre processus.
 . N'oubliez pas d'exécuter votre code et d'écouter votre chanson régulièrement. Ceci vous aidera à la modifier jusqu'à ce que vous en soyez satisfait.
 . Choisissez le titre de votre chanson.
+. Devenez musicien.ne célèbre.
 ****
 
 Voici un exemple de chanson complète :

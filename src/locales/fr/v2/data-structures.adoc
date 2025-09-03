@@ -13,10 +13,10 @@ Vous avez maintenant de nombreux outils à votre disposition pour créer des mor
 === What is a Data Structure
 
 [role="curriculum-python"]
-If you have very long lists of sound variables, it's possible to organize them using *lists*. Une <strong>liste<strong>, également appelée tableau dans certains langages de programmation, est une collection de valeurs ou d'</strong>éléments</strong> entre crochets (<code>[]</code>) et séparés par des virgules. Voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *listes*. Une *liste*, également appelée *tableau* dans certains langages de programmation, est une collection de valeurs ou d'*éléments* entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-javascript"]
-If you have very long lists of sound variables, it's possible to organize them using *arrays*. An *array*, also called a list in some programming languages, is a collection of values, or *elements*, between brackets (`[]`) and separated by commas. Voici un exemple :
+Si vous avez de très longues listes de variables de sons, il est possible de les organiser efficacement grâce à des *tableaux*. Un *tableau*, également appelé *liste* dans certains langages de programmation, est une collection de valeurs ou d'*éléments* entre crochets (`[]`) et séparés par des virgules. En voici un exemple :
 
 [role="curriculum-python"]
 [source,python]
@@ -31,10 +31,10 @@ include::code-examples/data-structures-instead-of-writing-this.js.txt[]
 ----
 
 [role="curriculum-python"]
-If you have replaced variables with a list, how will you reference the content of the list? En fait, nous utiliserons des index. Each element of a list is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
+Si vous avez remplacé les variables par une liste, comment allez-vous accéder au contenu de la liste ? En fait, nous allons utiliser des index. Chaque élément d'une liste se verra assigner un index, en commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[2]` appelle OS_SNARE05.
 
 [role="curriculum-javascript"]
-If you have replaced variables with an array, how will you reference the content of the array? En fait, nous utiliserons des index. Each element of an array is assigned an index, starting at `0`. In the previous example, `drums[0]` is calling `OS_KICK03`, `drums[1]` is calling `OS_OPENHAT01` and `drums[2]` is calling `OS_SNARE05`.
+Si vous avez remplacé les variables par un tableau, comment allez-vous accéder au contenu du tableau ? En fait, nous utiliserons des index. Chaque élément d'un tableau se verra assigner un index, commençant par `0`. Dans l'exemple précédent, `drums[0]` appelle `OS_KICK03`, `drums[1]` appelle `OS_OPENHAT01` et `drums[2]` appelle OS_SNARE05.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -63,10 +63,10 @@ include::code-examples/data-structures-arrays.js.txt[]
 image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
 
 [role="curriculum-python"]
-We've seen that `list[index]` will reference an element of the list. Ceci peut également être utilisé pour modifier un élément de la liste. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
+Nous avons vu que `liste[index]` appellera un élément de la liste. Ceci peut également être utilisé pour modifier un élément de la liste. Par exemple, dans l'exemple précédent : `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément de la liste Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 [role="curriculum-javascript"]
-We've seen that `array[index]` will reference an element of the array. Ceci peut également être utilisé pour modifier un élément du tableau. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the array to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. This process is similar to updating a variable. It uses the *assignment operator* `=`.
+Nous avons vu que `tableau[index]` appellera un élément du tableau. Ceci peut également être utilisé pour modifier un élément du tableau. Par exemple, dans l'ensemble précédent : l'expression `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` assignera `RD_ROCK_POPRHYTHM_MAINDRUMS_11` au premier élément du tableau. Ce processus est similaire à la mise à jour d'une variable, il utilise l'opérateur d'affectation `=`.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -89,7 +89,7 @@ include::code-examples/data-structures-iterating-through-arrays.js.txt[]
 ----
 
 [role="curriculum-python"]
-A useful tip: `len()` function, with the name of the list as parameter, returns the number of elements of the list. So `list[0]` is the first element of `list`, and `list[len(list) - 1]` is the last one. For example, if `list = ["Hello", "fellow", "EarSketchers"]`, `len(list)` returns `3`. The indices are `0`, `1` and `2`. Le dernier index est 3-1 = 2.
+Conseil utile : la fonction len(), avec le nom de la liste comme argument, renvoie le nombre d'éléments de la liste. Donc `list[0]` est le premier élément de `list` et `list[len(list)-1]` est le dernier. Par exemple, si `list = ["Hello","fellow","EarSketchers"]`, `len(list)` renvoie `3`. Les index sont `0`, `1` et `2`. Le dernier index est 3-1 = 2.
 
 [role="curriculum-javascript"]
 A useful tip: the `length` property (`array.length`) returns the number of elements of the array. So `array[0]` is the first element of `array`, and `array[array.length - 1]` is the last one. For example, if `array = ["Hello", "fellow", "EarSketchers"];`, `array.length` returns `3`. The indices are `0`, `1` and `2`. Le dernier index est 3-1 = 2.
@@ -136,9 +136,9 @@ We will see two ways you can use data structures with `makeBeat()`. First, let's
 We will see two ways you can use data structures with `makeBeat()`. First, let's have a look at how similar strings and arrays are:
 
 [role="curriculum-python"]
-* Tout comme les listes, les chaînes de caractères ont des index. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
-* You can use the function `len()` with strings, which returns the number of characters in the string. The last character is at index `len(string) - 1`.
-The indices of the string `"EarSketch"` are shown in the table below.
+1. Tout comme les listes, les chaînes de caractères ont des index. Un *index* représente la position d'un caractère particulier dans une chaîne de caractère commençant par 0. Par exemple, `"Sarah"[3]` renvoie `a`.
+2. Vous pouvez utiliser la fonction `len()` avec des chaînes de caractères, ce qui renvoie le nombre de caractères dans la chaîne de caractères. Le dernier caractère est à l'index `len(string)-1`.
+Les index de la chaîne de caractères `"EarSketch"` sont affichés dans le tableau ci-dessous.
 
 [role="curriculum-javascript"]
 * Tout comme les tableaux, les chaînes de caractères ont des index. An *index* represents the position of a particular character in a string, starting at 0. For example `"Sarah"[3]` returns `a`.
@@ -170,11 +170,12 @@ The indices of the string `"EarSketch"` are shown in the table below.
 |8
 |===
 
+
 [role="curriculum-python"]
 * Vous pouvez concaténer des listes comme vous le faites avec des chaînes de caractères. Use the concatenation operator (`+`): the syntax is `newList = listA + listB`.
 
 [role="curriculum-javascript"]
-* Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. We use the `concat` *method*. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des paramètres. To use it, place it after your array name, with a dot: the syntax is `newArray = arrayA.concat(arrayB)`. This is called *dot-notation*.
+3. Vous pouvez concaténer des tableaux comme vous le faites avec des chaînes de caractères. Nous utiliserons la *méthode* `concat`. En fait, une méthode est similaire à une fonction, car elle possède des parenthèses qui contiennent des arguments. Pour l'utiliser, vous devez la placer après le nom de votre tableau avec un point : la syntaxe est `newArray = arrayA.concat(arrayB)`. C'est ce qu'on appelle la *notation par points*.
 
 [role="curriculum-python"]
 * You can get a *substring*, also known as a slice, of a larger string. Cela permet de découper un beat, une technique populaire dans la musique électronique et le remixage. Its syntax is `newString = oldString[startIndex: endIndex]`. The substring includes the character at `startIndex` but not the character at `endIndex`. For example, `"Sarah[1:4]"` will return `"ara"`. You can do the same with lists: `newList = oldList[startIndex: endIndex]`.
@@ -311,11 +312,13 @@ Congratulations, now you have acquired musical and coding skills that allow you 
 
 *Peer Feedback* is common in programming and helps you improve your code and music thanks to comments from others. Feedback must be *constructive*, meaning it builds a peer up, rather them breaking them down. Lors de la rétroaction :
 
-* *Be specific* - Refer to specific blocks and lines of code and to specific measures and tracks of music.
-* *Be descriptive* - Describe your reasoning and the process you would take to improve a script.
-* *Be sensitive to your peer's musical vision/goals* - Your own musical tastes should not factor in to an evaluation of your peer's music.
-* *Be positive* - In addition to what needs improvement, point out code blocks and musical passages that are strong.
-* *Don't compare* - Treat your peer's code as their own, not as a competition with your own or other peers' code.
+Le *feedback par les pairs* est courant en programmation et vous aide à améliorer votre code et votre musique grâce aux commentaires des autres. Les commentaires doivent être *constructifs*, autrement dit, ils doivent permettre à un pair de s'améliorer, plutôt que de le.a rabaisser. Lors du feedback :
+
+* *Soyez spécifique* : Faites référence à des blocs et des lignes de code spécifiques ainsi qu'à des mesures et des pistes de musique spécifiques.
+* *Soyez descriptif* : Expliquez votre raisonnement de manière détaillée ainsi que le processus que vous suivriez pour améliorer le script.
+* *Soyez sensible à la vision et aux objectifs musicaux de votre collègue* : Vos goûts musicaux ne devraient pas être pris en compte lorsque vous évaluez la musique de votre collègue.
+* *Soyez positif* : en plus d'indiquer ce qui a besoin d'être amélioré, signalez les blocs de code et les passages musicaux qui sont réussis.
+* *Ne faites pas de comparaisons* : Traitez le code de vos collègues comme le leur, et non comme une compétition avec votre propre code ou celui d'autes collègues.
 
 De même, lorsque vous recevez des commentaires :
 
@@ -355,27 +358,29 @@ Créez une chanson complète et faites-la évaluer par votre voisin.e pour l'am�
 === Résumé du chapitre 9
 
 [role="curriculum-python"]
-* A *list* is a collection of values combined into a single entity, a good way to organize data. Aussi, il est possible de stocker n'importe quel type de données dans une liste.
-* Tout comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
-* List elements are referenced with bracket notation, like `myList[1]`. Characters in a string can be referenced similarly: `myString[1]`.
-* The function `len()` returns the number of elements in a list, or the number of characters in a string. The syntax is `len(list)`.
-* Lists and arrays can be concatenated and sliced using *list operations*, a set of tools for modifying a list.
-* The syntax for creating a subset of a list from a larger, existing list is `newList = oldList[startIndex: endIndex]`.
-* Lists can be combined using the concatenation operator, `+`, like `newList = listA + listB`.
-* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different list indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same list.
-* Exchanging constructive information with others is a form of *peer feedback*. Cela offre la possibilité d’apprendre des autres.
+* Une *liste* ou « list » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans une liste.
+* Comme pour les chaînes de caractère, les éléments d'une liste sont affectés à un index. Les index de liste commencent à 0.
+* Les éléments d'une liste sont accessibles par la notation entre crochets `myList[1]`. Les caractères dans une chaîne peuvent être récupérés de la même manière : `myString[1]`.
+* La fonction `len()` renvoie le nombre d'éléments dans une liste ou le nombre de caractères dans une chaîne avec la syntaxe `len(list)`.
+* Les listes peuvent être concaténées et découpées en utilisant les *opérations de liste*, un ensemble d'outils pour modifier une liste.
+* La syntaxe pour créer un sous-ensemble de liste à partir d'une liste existante plus grande est `newList = oldList[startIndex: endIndex]`.
+* Les listes peuvent être combinées en utilisant l'opérateur de concaténation, `+`, comme dans l'exemple : `newList = listA + listB`.
+* `makeBeat()` permet de composer des rythmes à partir de plusieurs clips à la fois à l'aide d'une chaîne de caractères de beat (rythme) qui fait référence à différents index de liste. Aussi, `makeBeat()` peut accéder aux clips dans les index 0 à 9, à condition qu'ils soient stockés dans le même tableau.
+* L'échange de commentaires constructifs avec d'autres personnes est une forme de *feedback par les pairs*. Cela offre la possibilité d’apprendre des autres.
+
 
 [role="curriculum-javascript"]
-* An *array* is a collection of values combined into a single entity, a good way to organize data. Items stored within an array, or elements, can be any data type.
-* Tout comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
-* Array elements are referenced with bracket notation, like `myArray[1]`. Characters in a string can be referenced similarly: `myString[1]`.
-* The property `length` returns the number of elements in an array, or the number of characters in a string. The syntax is `array.length` or `string.length`.
-* Arrays can be concatenated and sliced using *array operations*, a set of tools for modifying an array.
-* The syntax for slicing out an array from a larger, existing array is `newArray = oldArray.slice(startIndex, endIndex)`.
-* The syntax for slicing out a substring from a larger string is `newString = oldString.substring(startIndex, endIndex)`.
-* Arrays can be combined using the `concat()` method, like `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` can construct rhythms from multiple sounds at once by passing in a beat string that refers to different arrays indices. `makeBeat()` can access sounds in indices 0 through 9, provided they are stored in the same array.
-* Exchanging constructive information with others is a form of *peer feedback*. Cela offre la possibilité d’apprendre des autres.
+* Un *tableau* ou « array » est un ensemble de valeurs combinées en une seule entité, un moyen efficace de stocker des données. Aussi, il est possible de stocker n'importe quel type de données dans un tableau.
+* Comme pour les chaînes de caractère, les éléments d'un tableau sont affectés à un index. Les index de tableau commencent à 0.
+* Les éléments d'un tableau sont accessibles par la notation entre crochets `myArray[1]`. Les caractères dans une chaîne peuvent être accédés de la même manière : `myString[1]`.
+* La propriété `length` renvoie le nombre d'éléments dans un tableau ou le nombre de caractères dans une chaîne avec la syntaxe `array.length` ou `string.length`.
+* Les tableaux peuvent être concaténés et découpés en utilisant des *opérations de tableau*, soit un ensemble d'outils pour modifier un tableau.
+* La syntaxe pour découper un tableau à partir d'un tableau existant plus grand est `newArray = oldArray.slice(startIndex, endIndex)`.
+* La syntaxe pour découper une sous-chaîne d'une chaîne de caractères plus grande est `newString = oldString.substring(startIndex, endIndex)`.
+* Les tableaux peuvent être concaténés en utilisant la méthode de concaténation `concat()`, comme dans l'exemple : `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` permet de composer des rythmes à partir de plusieurs clips à la fois à l'aide d'une chaîne de caractères de beat (rythme) qui fait référence à différents index de tableau. Aussi, `makeBeat()` peut accéder aux clips dans les index 0 à 9, à condition qu'ils soient stockés dans le même tableau.
+* L'échange de commentaires constructifs avec d'autres personnes est une forme de *feedback par les pairs*. Cela offre la possibilité d’apprendre des autres.
+
 
 [[chapter-questions]]
 === Questions

@@ -27,16 +27,15 @@ In EarSketch, the variables in your scripts may point to:
 
 A *character* can be any  number, letter or symbol. Une chaîne de caractères est une série de caractères entourée de guillemets, comme `"Bonjour le monde 123 !"`.
 
-Pour utiliser une variable,
-.
-
 [role="curriculum-python"]
+Pour utiliser une variable,
 . Vous devez d'abord lui *affecter une valeur*. Nous utilisons le symbole « = », qui est appelé *l'opérateur d'affectation*. Le fait d'écrire `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` signifie que vous créez une variable appelée synth1 et que vous stockez la donnée (le clip audio) HIPHOP_SYNTHPLUCKLEAD_005 dans cette variable.
 . HIPHOP_SYNTHPLUCKLEAD_005 est la *valeur* de `synth1`.
 . Ensuite, vous devez appeler la variable : utilisez `synth1` dans votre code. Vous ne pourrez utiliser la variable qu'une fois qu'elle aura été affectée, pas avant. Par exemple, vous pouvez écrire `fitMedia(synth1, 1, 1, 3)`.
 . Lorsque vous exécuterez le code, l'ordinateur comprendra qu'il doit utiliser le nom du clip audio HIPHOP_SYNTHPLUCKLEAD_005 lorsqu'il lit `synth1`.
 
 [role="curriculum-javascript"]
+Pour utiliser une variable,
 . Vous devez d'abord lui *affecter une valeur*. Nous utilisons le symbole « = », qui est appelé *l'opérateur d'affectation*. Nous utilisons également la commande `var` au début de la ligne. L'expression `var synth1 = HIPHOP_SYNTHPLUCKLEAD_005;` signifie que vous créez une variable appelée synth1 et que vous stockez la donnée (clip audio) HIPHOP_SYNTHPLUCKLEAD_005 dans cette variable.
 . HIPHOP_SYNTHPLUCKLEAD_005 est la *valeur* de `synth1`.
 . Ensuite, vous devez appeler la variable : utilisez `synth1` dans votre code. Par exemple, vous pouvez écrire `fitMedia(synth1, 1, 1, 3);`.
@@ -84,13 +83,12 @@ Une *constante* est similaire à une variable, car elle stocke des valeurs. Tout
 
 Commençons par découvrir quelques notions de base sur le rythme :
 
-* *Rhythm* is a pattern of sound, often repeated.
+* Le *rythme* d'une chanson est la manière dont les sons sont arrangés dans le temps.
 * Le *tempo* est la vitesse de la musique en BPM (battements ou beats par minute).
 * Le *temps ou « beat »* est comme le « pouls régulier » d'une chanson. Lors d'un concert, lorsqu'un public tape des mains, il clappe sur le temps.
-* Une *mesure* est une unité de temps musicale avec un nombre de beats prédéterminé. Dans EarSketch, 1 *mesure* comporte 4 temps. En anglais, comme il y a 4 beats par measure, on appelle les beats des 1/4 notes.
-* Each beat can be divided into *subbeats*. For example, a 1/4 note can be divided into 2 *eighth (1/8) notes*. Lorsque vous comptez des noires, vous dites « 1, 2, 3, 4... En comptant des croches, vous pouvez utiliser le terme « et » : « 1 et 2 et 3 et 4 et...
-* An 1/8 note can also be divided into 2 *sixteenth (1/16) notes*. When counting 1/16 notes, you can use "e" and "a" on each side of the "and": "1 e and a 2 e and a 3 e and a 4 e and a...."
-* 1 measure is 4 x (1/4) notes, 8 x (1/8) notes, or 16 x (1/16) notes. Notez que la somme de toutes les notes d'une mesure doit être égale à 1. Elles peuvent être mélangées et combinées comme 1/4 (noire) + 1/4 (noire) + [1/8 (croche) + 1/8 (croche)] + [1/16 (double croche) + 1/16 (double croche) + 1/16 (double croche) + 1/16 (double croche)] = 1.
+* Une *mesure* est une unité de temps musicale avec un nombre de beats prédéterminé. Dans EarSketch, 1 *mesure* comporte 4 temps. Les beats sont aussi appelés des *noires*.
+* Chaque temps peut être divisé en *sous-temps*. Par exemple, une noire peut valoir *deux croches*. Lorsque vous comptez des noires, vous dites « 1, 2, 3, 4... ». En comptant des croches, vous pouvez utiliser le terme « et » : « 1 et 2 et 3 et 4 et... ». Une croche peut également valoir * deux doubles croches*.
+* Une mesure correspond à 4 noires ou 8 croches ou 16 doubles croches. Notez que la somme de toutes les notes d'une mesure doit être égale à 1. Elles peuvent être mélangées et combinées comme 1/4 (noire) + 1/4 (noire) + [1/8 (croche) + 1/8 (croche)] + [1/16 (double croche) + 1/16 (double croche) + 1/16 (double croche) + 1/16 (double croche)] = 1.
 * Un *métronome* aide le musicien à régler le rythme de sa pièce en faisant un bruit de clic sur le temps. Dans la station de travail audionumérique (DAW) de EarSketch, vous pouvez activer ou désactiver le métronome à l'aide de l'icône du métronome à gauche du volume du son.
 
 [[imediameasurepng]]
@@ -122,6 +120,8 @@ Par exemple : `"0-00-00-0+++0+0+"`.
 * `0` commence à jouer le clip de son percussif (un seul coup de percussion, par exemple).
 * `+` prolonge le clip audio à la prochaine demi-croche (1/16). Il suit toujours un `0` ou `+`.
 * `-` correspond à un silence (aucun son).
+
+Pour rappel, une chaîne de caractères est un type de données. Elle se compose d'une série de caractères (comme `0` ou `+`) entre guillemets.
 
 .ENTRAÎNEZ-VOUS
 ****
@@ -184,8 +184,8 @@ video revamping tab
 
 Maintenant, voyons comment vous pouvez créer votre rythme ou « beat ». Ici, nous utiliserons le terme « beat » au lieu de rythme percussif : un motif répété de sons percussifs. Nous utiliserons la fonction `makeBeat()` avec quatre arguments :
 
-. *Sound*: A sound constant. Vous pouvez utiliser le filtre GENRE dans la bibliothèque de sons et sélectionner « MAKEBEAT » : ce sont des clips audio courts adaptés pour les motifs rythmiques. These are short sounds appropriate for beat patterns.
-. *trackNumber :* La piste sur laquelle la musique est placée.
+. *Nom du clip* : Il s'agit du clip audio que vous désirez. Vous pouvez utiliser le filtre GENRE dans la bibliothèque de sons et sélectionner « MAKEBEAT » : ce sont des clips audio courts adaptés pour les motifs rythmiques.
+. *Numéro de piste* : Il s'agit de la piste sur laquelle se trouvera votre beat.
 . *Numéro de mesure* : Il s'agit de la mesure de départ pour votre beat.
 . *Chaîne de percussion :* Une chaîne de caractères qui spécifie le rythme créé.
 
@@ -270,13 +270,13 @@ include::code-examples/add-beats-examples-of-beats.js.txt[]
 * Dans EarSketch, une mesure est divisée en quatre temps ou quatre noires. Chaque caractère correspond à une double croche (1/16), donc les chaînes de percussion de 16 caractères dureront une mesure.
 * Les *variables* créent un espace dans la mémoire de l'ordinateur pour stocker des données.
 * Vous devez d'abord affecter la valeur (les données) au nom de la variable en utilisant le signe `=`. Ensuite, vous pouvez utiliser la variable en écrivant son nom dans le code.
-* Une *chaîne de caractères* est un type de données qui se compose d'une série de caractères entourés de guillemets simples ou doubles.
+* Une *chaîne de caractères* est un type de données qui se compose d'une série de caractères entourés de guillemets simples ou doubles. 
 * Des clips de sons percussifs peuvent être trouvés en utilisant le filtre GENRE dans le navigateur de sons ; sélectionnez le genre MAKEBEAT.
 * Les chaînes de caractères sont utilisées avec la fonction `makeBeat()` pour créer des motifs rythmiques dans EarSketch. `makeBeat()` utilise une chaîne de beat pour définir chaque double croche de son motif. Un `0` commence à jouer un clip, un `+` prolonge la note jusqu&#8217à la prochaine double croche et `-` crée un silence.
 * La fonction `makeBeat()` nécessite quatre arguments :
-** *Sound*: A sound constant
-** *trackNumber :* La piste sur laquelle la musique est placée.
-** *Numéro de mesure* : Il s'agit de la mesure de départ pour votre beat.
+** *Nom du clip :* Le clip à partir duquel un beat est construit.
+** *Numéro de piste :* La piste sur laquelle la musique est placée.
+** *Mesure de départ :* La mesure de départ du beat. La chaîne du beat détermine la longueur totale.
 ** *Chaîne de percussion :* Une chaîne de caractères qui spécifie le rythme créé.
 * Différents motifs rythmiques correspondent à différents genres musicaux.
 

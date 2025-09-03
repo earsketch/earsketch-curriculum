@@ -351,7 +351,7 @@ Die `makeBeat()` Funktion nimmt vier Eingabeparameter auf:
 * Soundclip
 * Tracknummer
 * Starttakt
-* Beat String
+* Beat-String
 
 [role="curriculum-python"]
 Zeile 14 enthält den Code:

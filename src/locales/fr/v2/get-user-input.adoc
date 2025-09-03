@@ -18,10 +18,10 @@ video::./videoMedia/013-01-ReturnStatements-PY.mp4[]
 [[video131js]]
 video::./videoMedia/013-01-ReturnStatements-JS.mp4[]
 
-* En plus de prendre des arguments en entrée, les fonctions peuvent aussi produire une valeur en sortie. En programmation, nous appelons cela renvoyer une valeur.
-* L'*instruction de retour* est une instruction à l'intérieur de la fonction qui : 1) indique à une fonction de renvoyer une valeur lorsqu'elle est appelée. 2) indique à la fonction de s'arrêter. Si, dans le corps de la fonction, il y a des instructions après le mot clé `return`, celles-ci seront ignorées.
-* Pour utiliser la valeur retournée par la fonction, créez une variable et affectez-lui l'appel de fonction.
-* Une instruction de retour n'est pas obligatoire. Sans une instruction de retour, une fonction ne renverra aucune valeur. `fitMedia()` et `setEffect()` sont des exemples de fonctions qui ne renvoient rien.
+. En plus de prendre des arguments en entrée, les fonctions peuvent aussi produire une valeur en sortie. En programmation, nous appelons cela renvoyer une valeur. Notez que la valeur de sortie est différente du résultat de la fonction. Par exemple la fonction fitMedia() a pour résultat de placer un son dans le DAW, mais elle n'a pas de valeur de sortie.
+. L'*instruction de retour* est une instruction à l'intérieur de la fonction qui : 1) indique à une fonction de renvoyer une valeur lorsqu'elle est appelée. 2) indique à la fonction de s'arrêter. Si, dans le corps de la fonction, il y a des instructions après le mot clé `return`, celles-ci seront ignorées.
+. Pour utiliser la valeur retournée par la fonction, créez une variable et affectez-lui l'appel de fonction.
+. Une instruction de retour n'est pas obligatoire. Sans une instruction de retour, une fonction ne renverra aucune valeur. `fitMedia()` et `setEffect()` sont des exemples de fonctions qui ne renvoient rien.
 
 Voici un exemple de code :
 
@@ -180,7 +180,7 @@ Voici quelques suggestions d'outils que vous pouvez utiliser :
 Nous allons maintenant combiner la logique booléenne et les entrées d'utilisateur pour examiner un autre exemple d'interaction utilisateur.
 
 [role="curriculum-python"]
-Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera `True`.
+Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* permettent de créer un booléen. Par exemple, l'opérateur `==` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera `True`.
 
 [role="curriculum-javascript"]
 Voyons d'abord en quoi consiste la logique booléenne. Nous savons que les *opérateurs de comparaison* aident à créer un booléen. Par exemple, l'opérateur `===` vérifie si deux valeurs sont égales, et si c'est le cas, le booléen sera
@@ -196,7 +196,7 @@ Maintenant, examinons les *opérateurs booléens* ; ceux-ci permettent de combi
 [role="curriculum-javascript"]
 * `&&`: s'appelle "and" ou "et", il prend deux booléens en entrée et renvoie `true` seulement si les deux booléens sont `true`, sinon il renvoie `false`.
 * `||`: s'appelle "or" ou "ou": il prend deux booléens en entrée et renvoie `true` quand au moins un des deux booléens est `true`, sinon il renvoie `false`.
-* `!` : est nommé « not ».
+* `!` : est nommé « not ». Il prend un booléen en entrée et renvoie le booléen opposé.
 
 Par exemple, si vous avez 16 ans, la phrase "J'ai 16 ans" est vraie et la phrase "J'ai 17 ans" est fausse. La phrase "J'ai 16 ans ET J'ai 17 ans" (vrai ET faux) est fausse, car vous ne pouvez pas avoir à la fois 16 ans et 17 ans. Mais la phrase "J'ai 16 ans OU J'ai 17 ans" (vrai ou faux) est vraie.
 
@@ -287,26 +287,25 @@ Voici le défi Juke-box : Rédigez un script qui demandera à l'utilisateur de c
 === Résumé du chapitre 8
 
 [role="curriculum-python"]
-* Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
+* *Les instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
 * `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul argument est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
-* Certaines fonctions vous permettent de convertir des données d'un type à un autre. `str()` convertit n'importe quelle valeur en une chaîne de caractères.
-`int()` convertit une chaîne de caractères en nombres entiers. `float()` convertit une chaîne de caractères en nombres décimaux.
+* Certaines fonctions vous permettent de convertir des données d'un type à un autre. `str()` convertit n'importe quelle valeur en une chaîne de caractères. `int()` convertit une chaîne de caractères en nombres entiers. `float()` convertit une chaîne de caractères en nombres décimaux.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
 ** `and` : prend deux booléens en entrée et renvoie `True` uniquement lorsque les deux sont `True`, sinon il renvoie `False`.
 ** `or` : prend deux booléens en entrée et renvoie `True` lorsqu'au moins une entrée est `True`, sinon il renvoie `False`.
 ** `not` : prend un booléen en entrée et renvoie le booléen opposé.
-* Vous disposez maintenant de nombreux outils pour introduire des variations dans votre musique : les entrées d'utilisateur peuvent déterminer les éléments. Vous pouvez ajouter un paramètre dans vos fonctions personnalisées pour sélectionner une variation lorsque vous appelez votre fonction.
+* Vous disposez maintenant de nombreux outils pour introduire des variations dans votre musique : les entrées d'utilisateur peuvent en déterminer les éléments. Vous pouvez ajouter un paramètre dans vos fonctions personnalisées pour sélectionner une variation lorsque vous appelez votre fonction.
 
 [role="curriculum-javascript"]
 * Les *instructions de retour* peuvent être incluses dans une définition de fonction pour renvoyer un résultat lorsque la fonction est appelée.
-* `readInput()` demandera à l'utilisateur du texte lorsque le code sera exécuté. Le seul argument est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
-* Certaines fonctions vous permettent de convertir des données d'un type à un autre. La concaténation de chaînes de caractères `String()` convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule.  Number() convertit une chaîne de caractères en nombre.
+* `readInput()` demandera à l'utilisateur d'écrire du texte lorsque le code sera exécuté. Le seul paramètre est une chaîne de caractères que l'utilisateur verra s'afficher. Vous pouvez ensuite utiliser le texte de l'utilisateur dans votre code, par exemple, pour changer le tempo ou le genre de votre musique.
+* Certaines fonctions vous permettent de convertir des données d'un type à un autre. `String()` convertit n'importe quelle valeur en une chaîne de caractères. Notez que dans ce cas, il s'agit d'un nom de fonction qui commence par une lettre majuscule. Number() convertit une chaîne de caractères en nombre.
 * Vous pouvez *concaténer* (lier) des chaînes de caractères ensemble : "Hello"+"World" renverra "HelloWorld".
 * La *logique booléenne* inclut les opérations booléennes. Voici les opérateurs booléens :
-** `&&`: s'appelle "and" ou "et", il prend deux booléens en entrée et renvoie `true` seulement si les deux booléens sont `true`, sinon il renvoie `false`.
-** `||`: s'appelle "or" ou "ou": il prend deux booléens en entrée et renvoie `true` quand au moins un des deux booléens est `true`, sinon il renvoie `false`.
-** `!` : est nommé « not ».
+* `&&`: s'appelle "and" ou "et", il prend deux booléens en entrée et renvoie `true` seulement si les deux booléens sont `true`, sinon il renvoie `false`.
+* `||`: s'appelle "or" ou "ou": il prend deux booléens en entrée et renvoie `true` quand au moins un des deux booléens est `true`, sinon il renvoie `false`.
+** `!` : est nommé « not ». Il prend un booléen en entrée et renvoie le booléen opposé.
 * Vous disposez maintenant de nombreux outils pour introduire des variations dans votre musique : les entrées d'utilisateur peuvent déterminer les éléments. Vous pouvez ajouter un paramètre dans vos fonctions personnalisées pour sélectionner une variation lorsque vous appelez votre fonction.
 
 [[chapter-questions]]

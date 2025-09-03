@@ -67,9 +67,10 @@ Un genre musical est un type de composition artistique (par exemple, la musique 
 
 |Dubstep et trap
 |140-150
-|"Scary Monsters and Nice Sprites" - Skrillex
-
-"Turn Down for What" - Lil Jon
+|Jessica Audiffred & Walshy Fire - Stupid Love (feat. Nia V)
+|Drum and Bass
+|160-180
+|Mollie Collins - Lost & Found
 |===
 
 .Electro
@@ -79,8 +80,8 @@ Un genre musical est un type de composition artistique (par exemple, la musique 
 . Tentez de trouver des similitudes entre les chansons.
 . Vous pouvez également faire une recherche par genre sur Wikipedia afin d'obtenir plus d'informations sur le sujet.
 ****
-
-Sounds are automatically stretched to fit your song's tempo. Notez qu'un clip de son peut parfois sonner très différemment lorsque vous le pré-écoutez et lorsqu'il est joué dans votre chanson. The effect can be extreme if the tempos are very different.
+ 
+Notez qu'un clip de son peut parfois sonner très différemment lorsque vous le pré-écoutez et lorsqu'il est joué dans votre chanson. Cela est dû au fait que le tempo du clip est différent de celui de votre chanson. Pour connaître le tempo exact de l'extrait, survolez le nom du clip dans le navigateur de sons. Ensuite, vous pouvez modifier le tempo de votre chanson en conséquence ou choisir un clip audio qui corresponde mieux au tempo de votre chanson.
 
 To find the original tempo of sound, hover over the sound constant Sound Browser.
 
@@ -92,15 +93,12 @@ Les *commentaires* sont des lignes de code qui ne sont pas exécutées par l'ord
 EarSketch scripts begin with comments that you can use to enter a description of your song. Cela permet aux autres programmeur.se.s de comprendre plus facilement en quoi consiste votre code.
 
 [role="curriculum-python"]
-En Python, les commentaires sont indiqués par une ligne commençant par le symbole `#`.
+Les *commentaires* sont des lignes de code qui ne sont pas exécutées par l'ordinateur. Nous les utilisons uniquement pour rendre le code plus facile à comprendre ou pour mieux l'organiser. En Python, les commentaires sont indiqués par une ligne commençant par le symbole `#`.
 
 [role="curriculum-javascript"]
 En JavaScript, les commentaires sont indiqués par une ligne commençant par deux barres obliques `//`.
 
-.Electro
-****
-Notez que les premières lignes de chaque script sont des commentaires qui décrivent votre script.
-****
+Notez que les premières lignes de chaque script sont des commentaires qui décrivent votre script. Vous devrez remplir ces informations pour chaque nouveau script. Cela permet aux autres programmeur.se.s de comprendre plus facilement en quoi consiste votre code.
 
 Vous pouvez également utiliser des commentaires pour décrire ce que différentes sections de votre code feront. Voyez l'exemple ci-dessous. Vous pouvez coller le code, puis l'exécuter. Notez comment les commentaires offrent une description pour chaque section :
 
@@ -121,9 +119,11 @@ include::code-examples/your-first-song-comments.js.txt[]
 [[uploadingsounds]]
 === Charger vos propres sons
 
-You can upload your own sounds through the Sound Browser on the left side of your screen. Ouvrez votre navigateur de sons et cliquez sur le bouton « ajouter un son » sous les filtres.
+Vous pouvez charger vos propres clips audio dans la bibliothèque de sons, si vous êtes connecté.e à votre compte EarSketch. Ouvrez votre navigateur de sons et cliquez sur le bouton « ajouter un son » sous les filtres. Une fenêtre s'ouvrira ensuite. Explorons les trois premières options :
 
-You must be logged in to upload sounds.
+. *Charger un nouveau son* vous permet de choisir parmi des fichiers audio (.mp3, .aiff, etc.) déjà sur votre ordinateur. Modifiez le nom du fichier au besoin ("constant value(required)"), puis cliquez sur « CHARGER ».
+. *Enregistrement rapide* vous permet d'enregistrer de courts clips directement dans la bibliothèque EarSketch. Visualisez la vidéo ci-dessous pour en savoir plus.
+. *Freesound* vous permet d'importer directement des sons à partir de Freesound.org, une base de données audio open-source. Dans la barre de recherche, vous pouvez rechercher un type de son (p. ex. : des sons d'oiseaux, de pluie, de rue bondée, etc.). Idéalement, faites la recherche en anglais, il y a peu de sons dont les titres sont en français. Sous la rubrique « Résultats », vous verrez une liste de sons apparaître. Vous pouvez écouter les sons en cliquant sur le bouton de lecture. S'il vous convient, sélectionnez le bouton à gauche du nom du fichier, puis cliquez sur « CHARGER » au bas de la page.
 
 Explorons les trois premières options :
 
@@ -174,17 +174,19 @@ END OF OPTIONAL
 [[copyright]]
 === Les droits d'auteur.ice
 
+Le *droit d'auteur.ice ou Copyright* est la partie de la loi qui couvre la *propriété intellectuelle* ou la propriété de l'œuvre créative, comme la musique. Lorsque vous utilisez des échantillons (petits extraits musicaux, samples en anglais) ou remixez de la musique existante, vous devez absolument créditer les auteurs. Vous pouvez le faire dans les commentaires de votre code. Avant d’utiliser les sons créés par d’autres musiciens et de partager votre propre musique, apprenez-en davantage sur le droit d’auteur !
+
 Le *droit d'auteur ou Copyright* est la partie de la loi qui couvre la *propriété intellectuelle* ou la propriété de l'œuvre créative, comme la musique. Lorsque vous utilisez des échantillons (petits extraits musicaux, samples en anglais) ou remixez de la musique existante, vous devez absolument créditer les auteurs. Avant d’utiliser les sons créés par d’autres musiciens et de partager votre propre musique, apprenez-en davantage sur le droit d’auteur !
 
 Lorsque vous créez une nouvelle œuvre assez substantielle, vous obtenez automatiquement un droit d'auteur.ice ! Aux États-Unis, cela signifie que vous pouvez les reproduire, apporter des modifications et partager ce que vous créez.
 
-Il y a deux droits d'auteur liés à une chanson : les droits de la chanson (par l'auteur.ice ou le.a compositeur.ice) et les droits d'enregistrement sonore (souvent par la maison de disques). Les redevances provenant des représentations publiques vont à l’auteur-compositeur tandis que la plupart des redevances provenant des ventes de disques vont à la maison de disques.
+Il y a deux droits d'auteur liés à une chanson : les droits de la chanson (par l'auteur.ice ou le.a compositeur.ice) et les droits d'enregistrement sonore (souvent par la maison de disques). Les redevances provenant des représentations publiques vont à l’auteur.ice-compositeur.ice tandis que la plupart des redevances provenant des ventes de disques vont à la maison de disques.
 
 La *violation du droit d'auteur.ice* est une appropriation illégale des avantages liés au droit d'auteur, comme le téléchargement illégal de la musique. Aux États-Unis, *l'utilisation équitable ou « fair use » * permet l'utilisation de contenu protégé par un droit d'auteur sous certaines conditions, comme des fins éducatives ou ne réutilisant que de petits extraits de l'œuvre. L'utilisation équitable est déterminée par un juge au cas par cas.
 
-Outre l'utilisation équitable, il y a un moyen d'utiliser et de partager de la musique de manière ouverte. Ces artistes ont partagé leurs échantillons sous une licence *Creative Commons* qui donne la permission aux autres personnes d'utiliser leur travail.
+Outre l'utilisation équitable, il y a un moyen d'utiliser et de partager de la musique de manière ouverte. Le droit d'auteur devrait nous aider à créer et à partager davantage d'art, et non à restreindre son utilisation. En effet, EarSketch fonctionne parce que les artistes ont partagé leurs œuvres ou travail avec vous par le biais d'*échantillons* dans la bibliothèque de sons. Ces artistes ont partagé leurs échantillons sous une licence *Creative Commons* qui donne la permission aux autres personnes d'utiliser leur travail. Vous avez donc un accès ouvert à ces échantillons dans EarSketch et toute la musique que vous y créez est partageable, mais vous ne pouvez pas la vendre. Le fait de partager votre musique ou de permettre à d'autres étudiants de remixer votre code est une façon de redonner à la communauté et d'aider à diffuser de nouvelles œuvres dans le monde.
 
-Copyright is not all about getting people in trouble. If you upload a song to the internet, you might not mind if someone downloads it without asking; you want people to share your music! Le droit d'auteur devrait nous aider à créer et à partager davantage d'art, et non à restreindre son utilisation. When you are creating songs in EarSketch, we want you to think less about _stealing_ and more about _sharing_. En effet, EarSketch fonctionne parce que les artistes ont partagé leurs œuvres ou travail avec vous par le biais d'*échantillons* dans la bibliothèque de sons. Le fait de partager votre musique ou de permettre à d'autres étudiants de remixer votre code est une façon de redonner à la communauté et d'aider à diffuser de nouvelles œuvres dans le monde.
+Les licences *Creative Commons* (ou CC) permettent aux créateur.rice.s de préciser les droits qu'ielles désirent conserver et les droits qu'ielles laissent libres. Voici les différentes clauses possibles d'une licence CC : « Vous pouvez utiliser cette œuvre comme vous le souhaitez, SAUF QUE...&#8203 ; »
 
 Lorsque vous partagez un script dans EarSketch, il vous sera demandé de choisir une licence pour votre chanson.
 
@@ -205,7 +207,7 @@ For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LI
 * Le *stockage secondaire* fait référence à un stockage de données à long terme, souvent en grands volumes. Les données du stockage secondaire doivent être mises en mémoire avant que le CPU puisse y accéder.
 * Le *droit d’auteur.ice* est une partie de la loi qui couvre la propriété d'une œuvre créative, comme la musique. C'est très important pour les musiciens, car cela définit comment l'œuvre d'une autre personne peut être utilisée et partagée.
 * Si vous créez une nouvelle œuvre musicale, vous disposez automatiquement d’un droit d’auteur.ice. En d'autres termes, vous avez des droits sur le travail que vous avez créé.
-* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser.
+* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser. Parfois, certains droits sur une œuvre sont conservés avec les licences *Creative Commons*. EarSketch vous permet d'ajouter des licences Creative Commons à votre musique par le biais de la fenêtre de partage.
 
 [role="curriculum-javascript"]
 * Le *tempo* est la vitesse à laquelle un morceau de musique est joué, exprimé en battements ou beats par minute (bpm). Le tempo est lié au genre musical.
@@ -218,7 +220,10 @@ For full details, refer to our https://earsketch.gatech.edu/landing/#/license[LI
 * Le *stockage secondaire* fait référence à un stockage de données à long terme, souvent en grands volumes. Les données du stockage secondaire doivent être mises en mémoire avant que le CPU puisse y accéder.
 * Le *droit d’auteur.ice* est une partie de la loi qui couvre la propriété d'une œuvre créative, comme la musique. C'est très important pour les musiciens, car cela définit comment l'œuvre d'une autre personne peut être utilisée et partagée.
 * Si vous créez une nouvelle œuvre musicale, vous disposez automatiquement d’un droit d’auteur.ice. En d'autres termes, vous avez des droits sur le travail que vous avez créé.
-* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser.
+* La *concession de licence* pour un morceau de musique accorde la permission à d'autres personnes de l'utiliser. Parfois, certains droits sur une œuvre sont conservés avec les licences *Creative Commons*. EarSketch vous permet d'ajouter des licences Creative Commons à votre musique par le biais de la fenêtre de partage.
+
+
+
 
 [[chapter-questions]]
 === Questions
@@ -270,7 +275,6 @@ Parmi les affirmations suivantes, laquelle est vraie ?
 [question]
 --
 Que faut-il faire pour obtenir un droit d'auteur.ice ?
-
 [answers]
 * Créer et publier toute nouvelle œuvre
 * Acheter un brevet
