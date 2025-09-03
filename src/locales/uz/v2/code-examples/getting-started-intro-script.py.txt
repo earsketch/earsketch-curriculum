@@ -1,0 +1,8 @@
+# Boshlang'ich Skript: Ushbu kod RAISga bitta tovush qoshadi
+
+# Setup Section
+from earsketch import *
+setTempo(120)
+
+# Musiqa bo'limi
+fitMedia(TECHNO_SYNTHPLUCK_001, 1, 1, 9)
