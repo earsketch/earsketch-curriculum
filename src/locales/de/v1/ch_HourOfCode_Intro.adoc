@@ -5,4 +5,4 @@
 
 Willkommen zur Hour of Code.
 
-Klicke auf die Schaltfläche „Nächste Seite“ oder <<ch_HourOfCode#, click here>>, um zu beginnen.
+Klicke auf die Schaltfläche „Nächste Seite“, um zu beginnen.
