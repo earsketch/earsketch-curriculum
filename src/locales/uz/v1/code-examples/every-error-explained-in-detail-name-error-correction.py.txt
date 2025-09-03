@@ -1,0 +1,7 @@
+//Nom Xatosi: To'g'irlash
+
+from earsketch import *
+setTempo(120)
+
+bugun = readInput("Bugun qaysi kun?")
+print("Bugun " + bugun)
