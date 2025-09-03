@@ -1,0 +1,23 @@
+# String Operations: Expand a beat string into a longer beat string
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Music
+initialBeat = "0+0+00-00+++-0++"
+drumInstr = RD_UK_HOUSE_MAINBEAT_10
+
+def expander(beatString):
+    newBeat = ""
+    for i in range(0, len(beatString)):
+        beatSlice = beatString[0:i]
+        newBeat = newBeat + beatSlice
+    # return the new beat string so it can be used outside the function
+    return newBeat
+
+finalBeat = expander(initialBeat)
+print(finalBeat)
+
+# makeBeat(drumInstr, 1, 1, initialBeat) # initial beat string
+makeBeat(drumInstr, 1, 1, finalBeat)
