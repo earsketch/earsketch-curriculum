@@ -20,5 +20,5 @@ function expander(beatString) {
 var finalBeat = expander(initialBeat);
 println(finalBeat);
 
-// makeBeat(drumInstr, 1, 1, initialBeat); // ursprünglicher Beat-String
+// makeBeat(drumInstr, 1, 1, initialBeat); // ursprünglicher Beat String
 makeBeat(drumInstr, 1, 1, finalBeat);
