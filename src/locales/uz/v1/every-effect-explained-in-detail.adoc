@@ -1,0 +1,720 @@
+[[ch_28]]
+== Har Bir Effektning Batafsil Tavsifi
+
+:nofooter:
+
+[[bandpass]]
+=== BANDPASS
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/bandpass_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, BANDPASS, BANDPASS_FREQ, 1000)
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9)
+setEffect(1, BANDPASS, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, BANDPASS, BANDPASS_FREQ, 1000);
+setEffect(1, BANDPASS, BANDPASS_RESONANCE, 0.9);
+setEffect(1, BANDPASS, MIX, 1);
+----
+
+`BANDPASS` faqat ma'lum diapazondagi chastotalarni o'tazadi ("pass" ingliz tilida o'tkazish ma'nosini bildiradi). Chastotalar diapazonini o'zgartirish mumkin. Boshqa barcha chastotalar o'tkazilmaydi. Diapazonni kichikroq qilib belgilanganingizada (ya'ni `BANDPASS_RESONANCE` ning qiymatini 1 ga yaqinroq bo'lsa), siz telefon yoki megafonga o'xshash tovush yaratasiz. Chastotalar oralig'ini kengaytirganingizda (ya'ni `BANDPASS_RESONANCE` 0 ga yaqinroqqa tenglashtirganingizda), siz kuchliroq eshitilayotgan tovushlarini boshqa tovushlar bilan samaraliroq qo'shilib ketishiga erishishingiz mumkin.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|BANDPASS_FREQ |O'tish uchun chastotalar oynasining markaziy chastotasi (Gertsda). |800.0 |20.0 |20000.0
+
+|BANDPASS_RESONANCE |BANDPASS_FREQ qiymati atrofida chastotalarni kuchaytirish. Balandroq qiymat rezonansni kichik chastotalar oralig'ini ko'proq kuchaytiradi. Kichikroq qiymat esa katta chastotatalar oralig'ini pasaytiradi.  |0.5 |0.0 |1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |0.1 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[chorus]]
+=== CHORUS (xor)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/chorus_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, CHORUS, CHORUS_LENGTH, 15)
+setEffect(1, CHORUS, CHORUS_NUMVOICES, 1)
+setEffect(1, CHORUS, CHORUS_RATE, 10)
+setEffect(1, CHORUS, MIX, 0.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, CHORUS, CHORUS_LENGTH, 15);
+setEffect(1, CHORUS, CHORUS_NUMVOICES, 1);
+setEffect(1, CHORUS, CHORUS_RATE, 10);
+setEffect(1, CHORUS, MIX, 0.5);
+----
+
+`CHORUS` ansamblga o'xshagan effekt yaratadi. U ovozning turli nusxalarini yaratib, ularning ohangini bir oz o'zgrtirib ularni yana asl ovoz bilan miks qiladi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|CHORUS_LENGTH |Asl tovush ichidan naqorat effekti faollashtirilgan vaqt uzunligi (millisoniya - ms). |15.0 |1.0 |250.0
+
+|CHORUS_NUMVOICES |Foydalanilgan asl tovushning nusxalari miqdori. Kattaroq qiymatlar ansamblga o'xshash katta effekt yaratadi. |1.0 |1.0 |8.0
+
+|CHORUS_RATE |Tovush pardasining aylanish yoki "tebranish" darajasi (Gertsda). Pastroq qiymatlar silliq aylanuvchi tovushlarni yaratadi, yuqori qiymatlar esa ko'proq tebranish effektlarini yaratadi. |0.5 |0.1 |16.0
+
+|CHORUS_MOD |Tovush pardasining tebranish chuqurligi (ya'ni, qancha tovush pardasi aylanmasi ishlatiladi). Past sozlamalar tabiiyroq tovushni yaratadi, yuqoriroq sozlamalar esa sun'iyroq tovushni yaratadi. |0.7 |0.0 |1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[compressor]]
+=== COMPRESSOR (kompressor)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/compressor_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30)
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, COMPRESSOR, COMPRESSOR_THRESHOLD, -30);
+setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
+----
+
+`COMPRESSOR` ovozning eng baland qismini pasaytiradi va eng past qismini balandlashtiradi. By dinamik diapazonni toraytiradi, ya'ni trekning balandligi boshidan oxirigacha barqaror bo'ladi. Musiqa prodyuserlari barabanlarni sozlash uchun kompressorlardan foydalanishadi va bu barabani "zarbaliroq" eshitilishiga yordam beradi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|COMPRESSOR_THRESHOLD |Kompressor tovushni kamaytira boshlagan amplituda (ovoz balandligi) darajasi (dB da). |-18.0 |-30.0 |0.0
+
+|COMPRESSOR_RATIO |Belgilangan o'sishning kamayish miqdori. 3:1 nisbati, agar asl tovush chegaradan 3 dB yuqori bo'lsa, ta'sirlangan tovush chegaradan 1 dB yuqori bo'lishini anglatadi. |10.0 |1.0 |100.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[delay]]
+=== DELAY (kechiktirish)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effect bilan:</div>
+    <div class="curriculum-mp3">audioMedia/delay_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/delay_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 3)
+setEffect(1, DELAY, DELAY_TIME, 370)
+setEffect(1, DELAY, DELAY_FEEDBACK, -3.5)
+setEffect(1, DELAY, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 3);
+setEffect(1, DELAY, DELAY_TIME, 370);
+setEffect(1, DELAY, DELAY_FEEDBACK, -3.5);
+setEffect(1, DELAY, MIX, 1);
+----
+
+`KECHIKTIRISH` asl tovushning takroriy aks-sadosi kabi kechikishini hosil qiladi. U asl tovush bilan birga uning kechiktirilgan va ovozi pastroq nushasini ijro etadi. Birinchi aks sado dang so'ng, uning yana bir aks sadosini (birinchidan pastroq), va yana bir aks sadoni (oldindagidan pastroq) va hokazolarni ijro etadi.  Agar siz aks sadolarning orasidagi vaqtni (`DELAY_TIME`) zarbaning uzunligiga teng qilib belgilasangiz, qiziqarli ritmik effekt xosil qilishingiz mumkin.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|DELAY_TIME |Asl trek kechiktirilgan vaqt miqdori millisoniyalarda (ms) va kechikishning ketma-ket takrorlanishi orasidagi vaqt. |300.0 |0.0 |4000.0
+
+|DELAY_FEEDBACK |Kechiktirish keltirib chiqaradigan takrorlashlarning nisbiy miqdori. Yuqori qiymatlar ko'proq "aks-sadolarni" yaratadi. "Haddan tashqari" yuqori qiymatlarda extiyot bo'ling chunki u fidbek (jarangli ovoz) xosil qilishi mumkin.  |-3.0 |-120.0 |-1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |0.5 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[distortion]]
+=== DISTORTION (qiyshaytirish, buzish)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/distortion_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, DISTORTION, DISTO_GAIN, 27)
+setEffect(1, DISTORTION, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, DISTORTION, DISTO_GAIN, 27);
+setEffect(1, DISTORTION, MIX, 1);
+----
+
+`DISTORTION` kir, ovozga yomon eshtiladigan, g'idir-bidir effekt qo'shadi. Tovush to'lqini kesib unga boshqa ohanglar qo'shadi (bular asl tovushnlarga bog'liq balandroq chastotadagi tovushlar). `DISTORTION` odatda elektrik gitarada rok va grandj janridagi musiqalarda ishlatiladi. Lekin siz uni boshqa turli ovozlar bilan ishlatishingiz mumkin.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|DISTO_GAIN |Asl tovushning haddan tashqari kuchaytirish miqdori. |20.0 |0.0 |50.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[eq3band]]
+=== EQ3BAND
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/eq3band_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, EQ3BAND, EQ3BAND_LOWGAIN, -15)
+setEffect(1, EQ3BAND, EQ3BAND_MIDGAIN, -5)
+setEffect(1, EQ3BAND, EQ3BAND_HIGHGAIN, 15)
+setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000)
+setEffect(1, EQ3BAND, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, EQ3BAND, EQ3BAND_LOWGAIN, -15);
+setEffect(1, EQ3BAND, EQ3BAND_MIDGAIN, -5);
+setEffect(1, EQ3BAND, EQ3BAND_HIGHGAIN, 15);
+setEffect(1, EQ3BAND, EQ3BAND_HIGHFREQ, 2000);
+setEffect(1, EQ3BAND, MIX, 1);
+----
+
+`EQ3BAND` uch oraliqli ekvalayzer. Bu asbob treknin uchta chastota oralig'ini sozlash uchun ishlatiladi: bass, o'rta o'ralig, baland o'ralig (treble).   Ekvalayzer musiqa aranjirovkasida istalmagan chastotalarni olib tashlash, treklar orasida muvozanat yaratish (radioda ijro etish uchun), yoki shunchaki ovozning his-xususiyatini o'zgartirsh uchun ishlatiladi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|EQ3BAND_LOWGAIN |Ekvalayzer chastotasining past diapazonining o'sishi (dB-da). Salbiy qiymatlar past chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
+
+|EQ3BAND_LOWFREQ |Past diapazonning eng yuqori chastotasini (Gertsda) belgilaydi. |200.0 |20.0 |20000.0
+
+|EQ3BAND_MIDGAIN |Ekvalayzer chastotasining o'rta diapazonining o'sishi (dB-da). Salbiy qiymatlar o'rta chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
+
+|EQ3BAND_MIDFREQ |O'rta diapazonning markaziy chastotasini (Gertsda) belgilaydi. |2000.0 |20.0 |20000.0
+
+|EQ3BAND_HIGHGAIN |Ekvalayzer chastotasining yuqori diapazonining o'sishi (dB-da). Salbiy qiymatlar yuqori chastotalar ovoz balandligini pasaytiradi, ijobiy qiymatlar esa ularni oshiradi. |0.0 |-24.0 |18.0
+
+|EQ3BAND_HIGHFREQ |Yuqori diapazonning kesish chastotasini (Gertsda) belgilaydi. |2000.0 |20.0 |20000.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[filter]]
+=== FILTER (filtr)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/filter_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/filter_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, FILTER, FILTER_FREQ, 20, 1, 4000, 3)
+setEffect(1, FILTER, FILTER_RESONANCE, 0.9)
+setEffect(1, FILTER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, FILTER, FILTER_FREQ, 20, 1, 4000, 3);
+setEffect(1, FILTER, FILTER_RESONANCE, 0.9);
+setEffect(1, FILTER, MIX, 1);
+----
+
+`FILTER` tovushni yumshatishi, "qorong'uroq" qilishi, yoki uni chuqurroq qilishi mumkin.  U yuqori chastotadagi ovozlarni filtr orqali pasaytiradi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|FILTER_FREQ |Kesish chastotasi (Gerts), ya'ni bu qiymatdan yuqori bo'lgan barcha chastotalar o'chirilgan (bu qiymatdan qanchalik yuqori bo'lsa, ovoz balandligi pastlashib boraveradi). |1000.0 |20.0 |20000.0
+
+|FILTER_RESONANCE |BANDPASS_FREQ qiymati atrofida chastotalarni kuchaytirish. Balandroq rezonans qiymatlar FILTER_FREQ atrofida tor oraliqdagi chastotalarni qattiq kuchaytiradi va bu o'tkirroq, jaranglaydigan ovoz xosil qiladi. Kichikroq qiymatlar esa keng oraliqdagi chastotalarni ozgina kuchaytiradi. |0.8 |0.0 |1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[flanger]]
+=== FLANGER
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/flanger_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, FLANGER, FLANGER_LENGTH, 10)
+setEffect(1, FLANGER, FLANGER_FEEDBACK, -5)
+setEffect(1, FLANGER, FLANGER_RATE, 20)
+setEffect(1, FLANGER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, FLANGER, FLANGER_LENGTH, 10);
+setEffect(1, FLANGER, FLANGER_FEEDBACK, -5);
+setEffect(1, FLANGER, FLANGER_RATE, 20);
+setEffect(1, FLANGER, MIX, 1);
+----
+
+`FLANGER` "hushtak chalish"-ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Parametrlar qiymatlarini ekstrimal darajaga tenglaganda, `FLANGER` sun'iy, robotga o'xshash ovoz yaratadi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|FLANGER_LENGTH |Flanger effekti faollashtirilgan asl tovushdan kechikish vaqtining uzunligi (ms da). |6.0 |0.0 |200.0
+
+|FLANGER_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor (dB). Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. |-50.0 |-80.0 |-1.0
+
+|FLANGER_RATE |Tovush pardasining aylanish yoki "hushtak chalish" darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq shovqinli jaranglaydigan effektlar va tovush artefaktlarini yaratadi. |0.6 |0.001 |100.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[pan]]
+=== PAN
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/pan_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/pan_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, PAN, LEFT_RIGHT, -100, 1.5, 100, 2.5);
+----
+
+`PAN` bu chap va o'ng audio kanallari orasidagi muvozanatga ta'sir qiladi. Agar siz naushnikni taqib `PAN` effektini ishlatsangiz, chap va o'ng qulog'ingizda ijro etilayotgan ovozni o'zgarganini eshitasiz.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|LEFT_RIGHT |Stereo maydon ichida asl tovushning chap/o‘ng joyini belgilaydi (0,0 markazda, -100,0 to‘liq chapda, 100,0 to‘liq o‘ngda). |0.0 |-100.0 |100.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[phaser]]
+=== PHASER
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/phaser_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, PHASER, PHASER_RATE, 0.7)
+setEffect(1, PHASER, PHASER_RANGEMIN, 440)
+setEffect(1, PHASER, PHASER_RANGEMIN, 1600)
+setEffect(1, PHASER, PHASER_FEEDBACK, -2)
+setEffect(1, PHASER, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, PHASER, PHASER_RATE, 0.7);
+setEffect(1, PHASER, PHASER_RANGEMIN, 440);
+setEffect(1, PHASER, PHASER_RANGEMIN, 1600);
+setEffect(1, PHASER, PHASER_FEEDBACK, -2);
+setEffect(1, PHASER, MIX, 1);
+----
+
+`PHASER` "tez uchish"ga o'xshash effekt yaratadi. Bu effect asl tovushning nusxasini olib uni bir oz kechiktirib, kegin asl tovushga yanda miks qiladi. Bunda, ask tovushning va uning nusxasining ba'zi chastotalari bir birini bekor qiladi. 
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|PHASER_RATE |Yengil kechiktirish vaqti oldinga va orqaga o'zgarish darajasi (Gertsda). Pastroq qiymatlar yumshoqroq takrorlanadigan tovushlarni yaratadi, yuqoriroq qiymatlar esa ko'proq robot tovushiga o'xshash effektlar va tovush artefaktlarini yaratadi. |0.5 |0.0 |10.0
+
+|PHASER_RANGEMIN |Ta'sir qilingan chastota diapazonining past qiymati (Gertsda). |440.0 |40.0 |20000.0
+
+|PHASER_RANGEMAX |Ta'sir qilingan chastota diapazonining yuqori qiymati (Gertsda). |1600.0 |40.0 |20000.0
+
+|PHASER_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq sun'iy tovushlarni yaratadi. |-3.0 |-120.0 |-1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[pitchshift]]
+=== PITCHSHIFT
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effect bilan:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_wet.mp3</div>
+    <div class="audio-label">Effectsiz:</div>
+    <div class="curriculum-mp3">audioMedia/pitchshift_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, PITCHSHIFT, PITCHSHIFT_SHIFT, -10);
+----
+
+`PITCHSHIFT` ovozning ohangini ko'taradi yoki pasaytiradi. Bu bir nechta trekning birgalikda yaxshiroq eshitilishi uchun yordam berishi mumkin. 
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|PITCHSHIFT_SHIFT |Yarim ohanglarda asl ohangning tovush pardasini sozlash miqdorini belgilaydi (va o'nli nuqtadan keyingi qiymatlar bilan berilgan yarim ohangning kasrlari). 12 semitones equal 1 octave. |0.0 |-12.0 |12.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[reverb]]
+=== REVERB
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/reverb_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, REVERB, REVERB_TIME, 2000)
+setEffect(1, REVERB, REVERB_DAMPFREQ, 18000)
+setEffect(1, REVERB, MIX, 0.5)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, REVERB, REVERB_TIME, 2000);
+setEffect(1, REVERB, REVERB_DAMPFREQ, 18000);
+setEffect(1, REVERB, MIX, 0.5);
+----
+
+`REVERB` sekin so'nadigan ambians (muhit tovush) ni qoshadi. Bu ovozni zichroq va "sehrliroq" qiladi yoki ovozni huddi kichik xonada yozib olingan kabi aks etadi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|REVERB_TIME |Muhitning so'nish vaqti millisekundlarda (ms). Avtomatlashtirish egri chizig'i yordamida vaqt o'tishi bilan REVERB_TIME modulyatsiya qilinganda, o'rama asosli reverbatsiyaning tabiati tufayli qiymat faqat har chorak notada (vaqt = 0,25) avtomatlashtirishning boshlang'ich nuqtasidan boshlab "zinapoya" ko'rinishida yangilanadi. (Biroq, siz buni deyarli sezmaysiz.) |1500.0 |100.0 |4000.0
+
+|REVERB_DAMPFREQ |Muhitga qo'llaniladigan past o'tkazuvchan filtrning kesish chastotasi (Gertsda). Qiymat qanchalik past bo'lsa, reverberatsiya shunchalik qayg'uli yangraydi. |10000.0 |200.0 |18000.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |0.3 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[ringmod]]
+=== RINGMOD
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/ringmod_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+ffitMedia(YG_TECHNO_VOX_2, 1, 1, 2)
+setEffect(1, RINGMOD, RINGMOD_MODFREQ, 100)
+setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80)
+setEffect(1, RINGMOD, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(YG_TECHNO_VOX_2, 1, 1, 2);
+setEffect(1, RINGMOD, RINGMOD_MODFREQ, 100);
+setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80);
+setEffect(1, RINGMOD, MIX, 1);
+----
+
+`RINGMOD` turli hil sun'iy eshitiluvchi effektlar yaratadi. U asl tovushdan audio signalni va sinus to'lqinini ko'paytiradi (bu musiqiy sozlash asbobi tovushiga o'xshaydi). Ba'zi parametrlar eskicha fantastik kinolarda ishlatiladigan tovushlarga o'xshash effektlar yaratadi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|RINGMOD_MODFREQ |Asl tovushingizga ko'paytirilayotgan sinus to'lqin osilatorining chastotasi (Gertsda). |40.0 |0.0 |100.0
+
+|RINGMOD_FEEDBACK |Ta'sir qilingan tovush effektga "qaytargan" miqdor. Yuqori qiymatlar ko'proq robotsimon tovushlar va tovushli artefaktlarni yaratadi. |0.0 |0.0 |100.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[tremolo]]
+=== TREMOLO
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Tovush bilan:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_wet.mp3</div>
+    <div class="audio-label">Tovushsiz:</div>
+    <div class="curriculum-mp3">audioMedia/tremolo_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, TREMOLO, TREMOLO_FREQ, 7.5)
+setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10)
+setEffect(1, TREMOLO, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, TREMOLO, TREMOLO_FREQ, 7.5);
+setEffect(1, TREMOLO, TREMOLO_AMOUNT, -10);
+setEffect(1, TREMOLO, MIX, 1);
+----
+
+`TREMOLO` "tebrash" ga o'xshash effektni hosil qiladi. U tovushni tez-tez ko'taradi va pasaytiradi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|TREMOLO_FREQ |Ovoz balandligini ko'tarish va pasaytirish tempi (Gertsda). |4.0 |0.0 |100.0
+
+|TREMOLO_AMOUNT |Har bir halqa davomida ovoz balandga va pastga o'zgarish miqdori (dB). |-6.0 |-60.0 |0.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[volume]]
+=== VOLUME (ovoz xajmi yoki balandligi)
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effekt bilan:</div>
+    <div class="curriculum-mp3">audioMedia/volume_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/volume_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3)
+setEffect(1, VOLUME, GAIN, -55, 1, 0, 3)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(EIGHT_BIT_ANALOG_DRUM_LOOP_001, 1, 1, 3);
+setEffect(1, VOLUME, GAIN, -55, 1, 0, 3);
+----
+
+`VOLUME` ovozning balandligini o'zgartirishga yordam beradi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|GAIN |Asl tovushning chiqishdagi ovoz balandligi darajasini belgilaydi. |0.0 |-60.0 |12.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
+
+[[wah]]
+=== WAH
+
+++++
+<div class="effect-examples">
+    <div class="audio-label">Effect bilan:</div>
+    <div class="curriculum-mp3">audioMedia/wah_wet.mp3</div>
+    <div class="audio-label">Effektsiz:</div>
+    <div class="curriculum-mp3">audioMedia/wah_dry.mp3</div>
+</div>
+++++
+
+[role="curriculum-python"]
+[source,python]
+----
+from earsketch import *
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3)
+setEffect(1, WAH, WAH_POSITION, 0, 1, 0.5, 2)
+setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3)
+setEffect(1, WAH, MIX, 1)
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+fitMedia(RD_UK_HOUSE_ACOUSTICGUITAR_1, 1, 1, 3);
+setEffect(1, WAH, WAH_POSITION, 0, 1, 0.5, 2);
+setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3);
+setEffect(1, WAH, MIX, 1);
+----
+
+`WAH` tovushni kimdir "vah vah" deb kuylashga o'xshash ovozni yaratadi. Bu `WAH_POSITION` parametrini setEffect() funktsiyasini ishlatib o'zgartirganda sodir boladi. Bu resonant bandpass filtri, ya'ni u baland va past chastotalarni ovozini pasaytiradi va o'rta chastotalar oralig'ini kuchaytiradi.
+
+|===
+|Parametr |Izoh |Standart Qiymat |minQiymat |maksQiymat
+
+|WAH_POSITION |Belglangan doimiy kenglikdagi chastota diapazonining markaziy chastotasi. |0.0 |0.0 |1.0
+
+|MIX |Asl ovozga qanchalik effekt qo'shish qiymati. Minimal qiymat 0.0 bo'lganda, ovozni asl ("quruq") shaklini ijro etadi Maximal qiymat 1.0 bo'lganda, ovozni o'zgartirilgan ("ho'l") shaklini ijro etadi. |1.0 |0.0 |1.0
+
+|BYPASS |Bypass ishlatilganda, effekt o'chiriladi.  `BYPASS` da faqat ikkita qiymat qo'llash mumkin. 1.0 (effektni o'chirish uchun) va 0.0 (effektni yoqish uchun).  |0.0 |0.0 |1.0
+|===
