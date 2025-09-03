@@ -1,0 +1,27 @@
+# O'tish Usullari - Trekni O'chirish: Qismdan qismga trekni o'chirish orqali otish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+#Musiqa
+introLead = TECHNO_ACIDBASS_002
+mainLead1 = TECHNO_ACIDBASS_003
+mainLead2 = TECHNO_ACIDBASS_005
+auxDrums1 = TECHNO_LOOP_PART_025
+auxDrums2 = TECHNO_LOOP_PART_030
+mainDrums = TECHNO_MAINLOOP_019
+bass = TECHNO_SUBBASS_002
+
+# 1-qism
+fitMedia(introLead, 1, 1, 5)
+fitMedia(mainLead1, 1, 5, 9)
+fitMedia(auxDrums1, 2, 3, 5)
+fitMedia(auxDrums2, 2, 5, 8)  # Baraban chiqib ketdi
+fitMedia(mainDrums, 3, 5, 8)
+
+# 2-qism
+fitMedia(mainLead2, 1, 9, 17)
+fitMedia(auxDrums2, 2, 9, 17)  # Baraban yana kirib keldi
+fitMedia(mainDrums, 3, 9, 17)
+fitMedia(bass, 4, 9, 17)
