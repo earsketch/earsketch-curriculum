@@ -1,0 +1,19 @@
+# Chop etish: println() ni konsolda turli xabarlarni chop etish uchun ishlatish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# O'zgaruvchilar
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Birinchi chop etish bayonoti
+print(1 + 3)
+
+# Zarbamizni halqalash
+# E'tibor bering, chop etish operatori for halqasida, shuning uchun u halqaning har bir takrorlanishida bajariladi.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")
