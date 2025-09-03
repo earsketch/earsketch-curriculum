@@ -1,0 +1,4 @@
+if (shart) {
+    // bu yerda shart rost bo'lsa kompyuter bajarishi kerak bolgan ko'rsatmalarni yozing
+    // E'tibor bering, ko'rsatmalar yozganda checkinish mavjut, huddi for halqalari kabi. 
+}
