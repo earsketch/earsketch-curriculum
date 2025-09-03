@@ -1,0 +1,17 @@
+# Tovush hajmi effekti: 2 ta trek tovush hajmini o'zgartirish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# O'zgaruvchilar
+piano1 = COMMON_LOVE_THEME_PIANO_2
+percussions1 = HOUSE_BREAK_FILL_002
+
+# Tovushlarni joylashtirish
+fitMedia(piano1, 1, 1, 5)
+fitMedia(percussions1, 2, 3, 5)
+
+# Miks qilish: pianino trekini ovozini baland qilish va barabanlar trekini pasaytirish
+setEffect(1, VOLUME, GAIN, 2)
+setEffect(2, VOLUME, GAIN, -15)
