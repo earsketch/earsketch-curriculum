@@ -1,0 +1,19 @@
+#O'zgaruvchilar: Tovushlarni saqlash uchun va redatsiyani yengillashtirish uchun o'zgaruvchilar ishlatish
+
+# Sozlash
+from earsketch import *
+setTempo(100)
+
+#Tovushlar
+synth1 = HIPHOP_SYNTHPLUCKLEAD_005
+synth2 = HIPHOP_SOLOMOOGLEAD_001
+drums = HIPHOP_TRAPHOP_BEAT_008
+
+# fitMedia() 1-trekni ichiga synth1 va synch2 nomli tovushlarni qo'shadi.
+fitMedia(synth1, 1, 1, 2)
+fitMedia(synth2, 1, 2, 3)
+fitMedia(synth1, 1, 3, 4)
+fitMedia(synth2, 1, 4, 5)
+
+# fitMedia() 2-trek ichiga baraban qo'shadi.
+fitMedia(drums, 2, 1, 9)
