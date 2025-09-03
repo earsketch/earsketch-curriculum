@@ -1,0 +1,48 @@
+from earsketch import *
+from random import randint
+
+setTempo(120)
+
+def addSection(clips, drums, beat, lead, segLen, start, length):
+    track = 3
+    for n in range(length):
+        makeBeat(drums, 1, start + n, beat)
+    for c in clips:
+        fitMedia(c, track, start, start + length)
+        track += 1
+    if lead:
+        generateLead(segLen, start, length)
+
+def generateLead(segLen, start, L):
+    leadClips = [RD_EDM_RAVELEAD_1, RD_EDM_RAVELEAD_2, RD_EDM_RAVELEAD_3, RD_EDM_RAVELEAD_4, RD_EDM_RAVELEAD_5, RD_EDM_RAVELEAD_6]
+    numSegs = int(L / segLen)
+    for n in range(numSegs):
+        r = randint(0, 5)
+        fitMedia(leadClips[r], 2, start, start + segLen)
+        start += segLen
+
+clips1 = [RD_EDM_RAZORBASS_2, RD_EDM_ANALOGLEAD_4, RD_EDM_ANALOGPLUCK_2]
+
+clips2 = [RD_EDM_CHORDPART_5, RD_EDM_PERCSYNTHLEAD_1, YG_EDM_FX_12]
+
+clips3 = [RD_EDM_CHORDPART_5, RD_EDM_PERCSYNTHLEAD_1, YG_EDM_FX_12, RD_EDM_SFX_RISER_1]
+
+drums = [OS_KICK02, OS_SNARE04, Y24_FX_2, Y24_ELECTRO_2, OS_OPENHAT05]
+
+beat1 = "0430322-12-13223"
+beat2 = "0+1+0+110+1+0111"
+beat3 = "0+++0+++0+++0+++"
+
+addSection(clips2, drums, beat3, False, 1, 1, 4)
+addSection(clips3, drums, beat2, True, 2, 5, 4)
+addSection(clips1, drums, beat1, True, 0.5, 9, 4)
+addSection(clips1, drums, beat1, True, 0.25, 13, 4)
+addSection(clips2, drums, beat3, True, 1, 17, 4)
+addSection(clips2, drums, "", False, 1, 21, 4)
+
+#Effektlar
+pan = [0, 0, 50, -50, -35, 35]
+vol = [0, -1, 0, 0, 0, 0]
+for i in range(6):
+    setEffect(i + 1, PAN, LEFT_RIGHT, pan[i])
+    setEffect(i + 1, VOLUME, GAIN, vol[i])
