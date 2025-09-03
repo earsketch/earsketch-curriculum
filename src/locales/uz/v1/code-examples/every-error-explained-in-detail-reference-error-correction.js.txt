@@ -1,0 +1,6 @@
+//Mos Yozuvlar Xatosi: To'g'irlash
+
+setTempo(120);
+
+var bugun = readInput("Bugun qaysi kun?");
+print("Bugun " + bugun);
