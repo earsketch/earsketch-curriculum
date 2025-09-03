@@ -1,0 +1,48 @@
+// Avttomatix ravishta miks qilish 2: Treklarni miks qilish uchun shartli bayonotlarni ishlatish
+
+// Sozlash
+setTempo(120);
+
+// Ohang va bass qo'shish
+var melody1 = YG_ALT_POP_GUITAR_3;
+var melody2 = YG_ALT_POP_GUITAR_1;
+var bass1 = YG_ALT_POP_BASS_1;
+var bass2 = DUBSTEP_SUBBASS_008;
+var strings = YG_HIP_HOP_STRINGS_4;
+fitMedia(melody1, 1, 1, 9);
+fitMedia(melody2, 1, 9, 17);
+fitMedia(bass1, 2, 1, 9);
+fitMedia(bass2, 2, 9, 17);
+fitMedia(strings, 3, 9, 17);
+
+// makeBeat() bilan Zarbalarni qo'shish 
+var beatKick = "0---0-----0-0---";
+var beatSnare = "--0-0------000-";
+var soundKick = OS_KICK02;
+var soundSnare = OS_SNARE06;
+for (var measure = 5; measure > 17; measure++) {
+    makeBeat(soundKick, 4, measure, beatKick);
+    makeBeat(soundSnare, 5, measure, beatSnare);
+}
+
+// Treklarni miks qilish
+// Avval biz treklarning ovozini balandligini tahlil qilamiz
+var loudnessTrack1 = analyzeTrack(1, RMS_AMPLITUDE);
+println("1-trekning balandligi" + loudnessTrack1);
+var loudnessTrack2 = analyzeTrack(2, RMS_AMPLITUDE);
+println("2-trekning balandligi" + loudnessTrack2);
+var loudnessTrack3 = analyzeTrack(3, RMS_AMPLITUDE);
+println("3-trekning balandligi" + loudnessTrack3);
+
+if (loudnessTrack1 < loudnessTrack2) {
+    // agar 1-trek ovozi 2-treknikidan pastroq bo'lsa 1-trekning ovozini ko'taramiz
+    setEffect(1, VOLUME, GAIN, +5);
+    println("1-trek ovozi 2-trekdan pastroq");
+} else if (loudnessTrack1 < loudnessTrack3) {
+    // agar 1-trek 2-treknikidan balandroq lekin 3-trekdan pastroq bulsa 1-trekning ovozini ko'taramiz
+    setEffect(1, VOLUME, GAIN, +5);
+    println("1-trek ovozi 3-treknikidan pastroq");
+} else {
+    // agar 1-trek ovozi ovozi 2-trekniki va 3-treknikidan balandroq bo'lsa, hech narsa o'zgartirmaymiz
+    println("1-trekning ovozi boshqalarnikidan balandroq");
+}
