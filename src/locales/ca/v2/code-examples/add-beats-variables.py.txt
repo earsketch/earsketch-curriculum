@@ -1,0 +1,19 @@
+# Variables: Using variables to store sounds and simplify edits
+
+# Setup
+from earsketch import *
+setTempo(100)
+
+# Sounds
+synth1 = HIPHOP_SYNTHPLUCKLEAD_005
+synth2 = HIPHOP_SOLOMOOGLEAD_001
+drums = HIPHOP_TRAPHOP_BEAT_008
+
+# fitMedia() adds the sounds synth1 and synth2 alternatively on track 1.
+fitMedia(synth1, 1, 1, 2)
+fitMedia(synth2, 1, 2, 3)
+fitMedia(synth1, 1, 3, 4)
+fitMedia(synth2, 1, 4, 5)
+
+# fitMedia() adds the drums on track 2.
+fitMedia(drums, 2, 1, 9)
