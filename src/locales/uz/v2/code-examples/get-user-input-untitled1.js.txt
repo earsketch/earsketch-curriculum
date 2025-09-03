@@ -1,0 +1,2 @@
+var answer = readInput("Musiqangiz qanday tempda bo'lishini istaysiz?");
+println(answer);
