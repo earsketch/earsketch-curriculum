@@ -47,7 +47,7 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-Versuchen wir, ein Codebeispiel in EarSketch auszuführen! Drücke im Feld unten auf das blaue Zwischenablagensymbol oben rechts. Dadurch wird der Beispielcode in eine neue Datei im *Code Editor* eingefügt. Du brauchst den Code noch nicht zu verstehen. Klicke einfach auf _ausführen_. Deine Musik wird in der DAW angezeigt. Du kannst den _play_ Button drücken, um ihn zu hören.
+Versuchen wir, ein Codebeispiel in EarSketch auszuführen! Drücke im Feld unten auf das blaue Zwischenablagensymbol oben rechts. Dadurch wird der Beispielcode in eine neue Datei im *Code Editor* eingefügt. Deine Musik wird in der DAW angezeigt. Du kannst den _play_ Button drücken, um ihn zu hören.
 
 [role="curriculum-python"]
 [source,python]
