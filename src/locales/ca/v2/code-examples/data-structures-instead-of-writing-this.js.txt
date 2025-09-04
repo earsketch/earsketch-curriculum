@@ -1,0 +1,7 @@
+// Instead of writing this:
+var kick = OS_KICK03;
+var hihat = OS_OPENHAT01;
+var snare = OS_SNARE05;
+
+// You can write this:
+var drums = [OS_KICK03, OS_OPENHAT01, OS_SNARE05];

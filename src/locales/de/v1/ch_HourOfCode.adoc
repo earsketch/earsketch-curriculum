@@ -351,7 +351,7 @@ Die `makeBeat()` Funktion nimmt vier Eingabeparameter auf:
 * Soundclip
 * Tracknummer
 * Starttakt
-* Beat-String
+* Beat String
 
 [role="curriculum-python"]
 Zeile 14 enthält den Code:
@@ -363,7 +363,7 @@ makeBeat(OS_SNARE03, 3, 4, fillA)
 ----
 
 [role="curriculum-python"]
-Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat-String „fillA“ verwendet.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat String „fillA“ verwendet.
 
 [role="curriculum-javascript"]
 Zeile 14 des Codes verwendet die `makeBeat()` Funktion. Mit dieser Funktion kannst du eigene Rhythmen erstellen.
@@ -375,7 +375,7 @@ Die `makeBeat()` Funktion nimmt vier Eingabeparameter auf:
 * Soundclip
 * Tracknummer
 * Starttakt
-* Beat-String
+* Beat String
 
 [role="curriculum-javascript"]
 Zeile 14 enthält den Code:
@@ -387,7 +387,7 @@ makeBeat(OS_SNARE03, 3, 4, fillA);
 ----
 
 [role="curriculum-javascript"]
-Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat-String „fillA“ verwendet.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, in Takt 4 zu Spur 3 hinzugefügt wird und den Beat String „fillA“ verwendet.
 
 [[Vars]]
 === Variablen
@@ -477,7 +477,7 @@ makeBeat(OS_SNARE03, 3, 8, fillRev)
 ----
 
 [role="curriculum-python"]
-Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat-String verwendet.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat String verwendet.
 
 [role="curriculum-python"]
 Führen den Code aus und höre dir das Ergebnis an.
@@ -498,7 +498,7 @@ makeBeat(OS_SNARE03, 3, 8, fillRev);
 ----
 
 [role="curriculum-javascript"]
-Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat-String verwendet.
+Das bedeutet, dass der Beat den Soundclip „OS_SNARE03“ verwendet, bei Takt 8 zu Track 3 hinzugefügt wird und den in `fillRev` gespeicherten Beat String verwendet.
 
 [role="curriculum-javascript"]
 Führen den Code aus und höre dir das Ergebnis an.
@@ -510,16 +510,16 @@ image::../media/HOC/hoc_new_fill.PNG[]
 === Deinen eigenen Fill hinzufügen
 
 [role="curriculum-python"]
-Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat-String zu schreiben.
+Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat String zu schreiben.
 
 [role="curriculum-python"]
-Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat-Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
+Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
 
 [role="curriculum-javascript"]
-Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat-String zu schreiben.
+Verwende das, was du gelernt hast, um einen weiteren `makeBeat()` Aufruf mit einem anderen Beat String zu schreiben.
 
 [role="curriculum-javascript"]
-Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat-Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
+Du kannst eine der vorgegebenen Strings verwenden oder abändern oder versuchen, mit den Zeichen „0“ und „-“ einen neuen zu schreiben. Beat Strings sind in der Regel 16 Zeichen lang, was einem Takt der Musik entspricht.
 
 [[Comments]]
 === Kommentare verwenden

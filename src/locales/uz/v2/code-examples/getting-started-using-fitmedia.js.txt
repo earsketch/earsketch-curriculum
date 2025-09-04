@@ -1,0 +1,7 @@
+// fitMedia() dan foydalanish: RAISga tovush qo'shish
+
+// Sozlash
+setTempo(120);
+
+// Musiqa
+fitMedia(Y18_DRUM_SAMPLES_2, 1, 1, 5);

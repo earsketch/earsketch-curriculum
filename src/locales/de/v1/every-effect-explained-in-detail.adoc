@@ -135,7 +135,7 @@ setEffect(1, COMPRESSOR, COMPRESSOR_RATIO, 100);
 
 |COMPRESSOR_THRESHOLD |Die Amplitude (Lautstärke, in dB) oberhalb derer der Kompressor beginnt, die Lautstärke zu reduzieren. |-18.0 |-30.0 |0.0
 
-|COMPRESSOR_RATIO |Die Menge der angegebenen Verstärkerreduzierung. Ein Verhältnis von 3:1 bedeutet, dass, wenn der ursprüngliche Sound 3 dB über dem Schwellenwert liegt, dann liegt der betroffene Sound 1 dB über den Schwellenwert. |10.0 |1.0 |100.0
+|COMPRESSOR_RATIO |Die Menge der angegebenen Verstärkerreduzierung. Ein Verhältnis von 3:1 bedeutet, dass, wenn der ursprüngliche Sound 3 dB über dem Schwellenwert liegt, der betroffene Sound 1 dB über den Schwellenwert liegt. |10.0 |1.0 |100.0
 
 |BYPASS |Wenn du einen Effekt umgehst, schaltet sich der Effekt aus. Die einzigen gültigen Werte für `BYPASS` sind 1.0 (um den Effekt auszuschalten) und 0.0 (um den Effekt beizubehalten). |0.0 |0.0 |1.0
 |===
@@ -314,7 +314,7 @@ setEffect(1, FILTER, FILTER_RESONANCE, 0.9);
 setEffect(1, FILTER, MIX, 1);
 ----
 
-FILTER" kann den Sound abschwächen, abdunkeln oder ihm Tiefe verleihen. Dies geschieht durch den Einsatz eines Tiefpass-Filters, der das Volumen von Hochfrequenzen verringert.
+"FILTER" kann den Sound abschwächen, abdunkeln oder ihm Tiefe verleihen. Dies geschieht durch den Einsatz eines Tiefpass-Filters, der das Volumen von Hochfrequenzen verringert.
 
 |===
 |Parameter |Beschreibung |Default Value |minValue |maxValue
@@ -580,7 +580,7 @@ setEffect(1, RINGMOD, RINGMOD_FEEDBACK, 80);
 setEffect(1, RINGMOD, MIX, 1);
 ----
 
-RINGMOD" erzeugt viele verschiedene künstlich klingende Effekte durch Multiplikation der Signale des Originals und einer reinen Sinuswelle (die wie eine Stimmgabel klingt). Einige Parametereinstellungen erzeugen ähnliche Effekte wie in alten Science-Fiction-Filmen.
+"RINGMOD" erzeugt viele verschiedene künstlich klingende Effekte durch Multiplikation der Signale des Originals und einer reinen Sinuswelle (die wie eine Stimmgabel klingt). Einige Parametereinstellungen erzeugen ähnliche Effekte wie in alten Science-Fiction-Filmen.
 
 |===
 |Parameter |Beschreibung |Default Value |minValue |maxValue

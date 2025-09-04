@@ -1,0 +1,34 @@
+// Satr va Ro'yxatlar Operatsiyalari: Massiv va satrlar bilan nima qila olishimizni namoyish qilamiz
+
+// Sozlash
+setTempo(120);
+
+// Zarba satrlarini va massivlarni yaratish
+var stringA = "0+++----0+++--0+";
+var stringB = "0-0-0-0-----0-0-";
+var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];
+var soundsB = [YG_GOSPEL_GUITAR_2, YG_GOSPEL_ORGAN_2];
+
+Har bir satrning ikkinchi belgisini chop eting.
+println(stringA[1]);
+println(stringB[1]);
+
+// Massivlaringizning oxirgi elementini chop eting.
+println(soundsA[soundsA.length - 1]);
+println(soundsB[soundsB.length - 1]);
+
+// stringA va stringB yopishmasidan stringC yarating va chop eting.
+var stringC = stringA + stringB;
+println(stringC);
+
+// soundsA, soundsB va yana soundsA yopishmasidan SoundsC yarating va chop eting.
+var soundsC = (soundsA.concat(soundsB)).concat(soundsA);
+println(soundsC);
+
+// stringC ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan stringD yarating va chop eting.
+var stringD = stringC.substring(1, 5);
+println(stringD);
+
+//soundsC ning uchinchidan oxirgi elementigacha bo'lgan qismidan soundsD yarating va chop eting.
+var soundsD = soundsC.slice(2, soundsC.length);
+println(soundsD);

@@ -1,0 +1,12 @@
+// Mantiqiy ifodalar: mantiqiy ifodalarni chop etish
+
+// Sozlash
+setTempo(120);
+
+println(!true);
+println(true && false);
+println(true || false);
+println(true && true);
+println((true && false) || true);
+println(true && !false);
+println(!(false || false));

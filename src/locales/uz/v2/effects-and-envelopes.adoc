@@ -1,0 +1,321 @@
+[[effectsandenvelopes]]
+== Effektlar va Zarflar
+
+:nofooter:
+
+EarSketch bastakorga yangi va noyob tovushlarni yaratish uchun ovoz kliplarini o'zgartirish imkonini beradi. Bunga ushbu bobning diqqat markazida bo'lgan `setEffect()` funktsiyasi orqali erishiladi.
+
+[[effectsinearsketch]]
+=== Earsketch-da Effektlardan Foydalanish
+
+:nofooter:
+
+*Effektlar* bizga tovush sifatini o'zgartirish imkonini beradi. Filtr qo'shish bilan fotosuratni qanday o'zgartirish mumkin bo'lsa, audio effekt qo'shish bilan ham tovush shunday o'zgartiriladi. Masalan, siz ovoz balandligini o'zgartirishingiz, aks-sado yoki reverberatsiya qo'shishingiz va hokazo.
+
+[role="curriculum-python curriculum-mp4"]
+[[video4py]]
+video::./videoMedia/004-01-UsingEffectsinEarSketch-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video4js]]
+video::./videoMedia/004-01-UsingEffectsinEarSketch-JS.mp4[]
+
+Biz `fitMedia()` kabi 4 ta argumentni oladigan `setEffect()` funktsiyasidan foydalanamiz:
+
+. 1. *trek*: Trek raqami yoki `MIX_TRACK` kabi ifoda
+. 2. *tur*: `DELAY` kabi effekt konstantasi
+. *parametr*: `DELAY_TIME` kabi parametr konstantasi
+. *qiymat*: `200` kabi parametr qiymati.  Bu qiymat effektning qiymatlar diapazonida bo'lishi shart. 
+
+.AMALIYOT
+****
+2 trekdan iborat yangi qo'shiq yozing va `setEffect()` funktsiyasidan foydalanib ikkala trekning ovoz balandligini o'zgartiring.
+Bunday holda, effekt nomi (2-argument) `VOLUME`, effekt parametri (3-argument) esa `GAIN` hisoblanadi. Effekt qiymati (4-argument) -60 dan +12 gacha bo'lgan detsibellar soni (dB).
+****
+
+Quyida misol keltirilgan:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-volume-effect.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-volume-effect.js.txt[]
+----
+
+Biz “OVOZ BALANDLIGI” effektini ko‘rdik. Endi “KECHIKTIRISH”ni ko'rib chiqamiz. Quyidagi 2 ta klipni tinglang, biri *kechiktirish* effekti qo'llaniladi, boshqasida esa yo'q.
+
+Effektsiz:
+
+++++
+<div class="curriculum-mp3">audioMedia/reference.mp3</div>
+++++
+
+Kechiktirish effekti:
+
+++++
+<div class="curriculum-mp3">audioMedia/delay2.mp3</div>
+++++
+
+Bunday holda effekt nomi (2-argument) `DELAY`, effekt parametri (3-argument) esa `DELAY_TIME` (aks-sado "javob berishdan" qancha vaqt oldin) yoki `DELAY_FEEDBACK` (sizning aks-sadongiz qanchalik baland) boʻlishi mumkin. `DELAY_TIME` qiymati millisekundlarda (1000 millisekund bir soniya) va `DELAY_FEEDBACK` qiymati -120 va -1 oralig`idagi raqamdir.
+
+Masalan, 'setEffect(1, DELAY, DELAY_TIME, 500)' 1-trekka kechiktirish/aks-sado 500 ms davom etadigan kechiktirish qo'yadi.
+
+.AMALIYOT
+****
+. Effektlar roʻyxatidagi kechiktirish effekti haqida bu yerda oʻqing: <</en/v1/every-effect-explained-in-detail#,effects>>
+. So'ng quyidagi kodni ishga tushiring va musiqani effektlarsiz tinglang
+. So'ng birinchi `setEffect()` qatori boshidan sharhni olib tashlang va farqni tinglang
+. So'ng ikkinchi `setEffect()` qatori boshidan sharhni olib tashlang va farqni tinglang ("sharhni olib tashlash" `#` yoki `//` kod bloki kabi sharh sintaksisini o'chirishni anglatadi)
+E'tibor bering, kechiktirish vaqti - 500ms, bu bir zarbaning uzunligi hisoblanadi. Temp daqiqada 120 zarba bo'lganligi sababli, har 60/120 = 1/2 soniyada bitta zarba mavjud. 1 soniya = 1000ms, shuning uchun 1/2 soniya 1000/2 = 500ms.
+Kechiktirish vaqtini o'zgartirishga urinib ko'rishingiz va musiqangiz ohangi yaxshi yoki yomon tomonga o'zgarganini kuzatishingiz mumkin.
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-delay-effect.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-delay-effect.js.txt[]
+----
+
+{nbsp} +
+
+[[functionsandmoreeffects]]
+=== Funktsiyalar va Boshqa Effektlar
+
+Hozirgacha siz EarSketch-da `fitMedia()` yoki `setEffect()` kabi bir nechta funktsiyalardan foydalangansiz. E'tibor bering, funktsiya nomlari har doim kichik harf bilan boshlanadi va ko'p hollarda fe'ldir. Qaslar kompyuterga funktsiyani *chaqirish* yoki *bajarish*ni buyuradi. Qavslar orasidagi *Argumentlar* yoki parametrlar vergul bilan ajratiladi.
+
+[role="curriculum-python"]
+* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch yoki EarSketch IDI Python-ga musiqiy xususiyatlarni qo'shadi. IDI-ning yana bir misoli Google Maps IDI: xaritalarni veb-saytlar yoki ilovalarga joylashtirish uchun vositalar to'plami.
+* Keyingi bobda siz o'zingizning shaxsiy funktsiyalaringizni qanday yaratishni ham o'rganasiz.
+
+[role="curriculum-javascript"]
+* `setTempo()`, `fitMedia()`, `makeBeat()` va so'ng `setEffect()` argumentlarni oladi. Ular EarSketch *Ilova Dasturlash Interfeysi* yoki *IDI* ning bir qismidir. EarSketch yoki EarSketch IDI JavaScript-ga musiqiy xususiyatlarni qo'shadi. IDI-ning yana bir misoli Google Maps IDI: xaritalarni veb-saytlar yoki ilovalarga joylashtirish uchun vositalar to'plami.
+* Keyingi bobda siz o'zingizning shaxsiy funktsiyalaringizni qanday yaratishni ham o'rganasiz.
+
+Funktsiya argumentlarining har biri ma'lum bir ma'lumot turiga ega bo'lishi mumkin. Argumentlar tartibi muhim ahamiyatga ega. Quyida ma'lumotlar turiga misollar keltirilgan:
+
+* *Raqamlar*
+** * Butun sonlar* (yoki "int") 0, 5 yoki -26 kabi butun sonlardir. Masalan: trek raqamlari. 
+** *Suzuvchi nuqta* raqamlari 0,125 yoki -21,0 kabi ratsional sonlardir. Masalan: -4.2dB ovoz balandligi. 
+* *Satrlar* matnni bildiradi.  Masalan: `"0000----0000----"`
+
+Endi `setEffect()` funktsiyasi bilan ko'proq ishlaymiz. Quyidagi videoda ba'zi effektlardan qanday foydalanish kerakligi ko'rsatilgan:
+
+////
+VIDEO IS BEEING MADE
+more info here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
+("videos revamping" tab)
+////
+
+*Reverb* (reverberatsiya uchun qisqartma) bu devorlarga urilib, quloqlaringizga qaytadigan tovushdir. Bu sizning tovushingizga koinot hissini beradi. Kichik yotoqxonada gapirish va katta cherkovda gapirish o'rtasidagi farq haqida o'ylab ko'ring. Xona qanchalik katta va "tekis" bo'lsa, to'lqinlar sizning quloqlaringizga qaytish uchun shunchalik uzoq vaqt talab etadi, bu tovush shuning uchun "keng xona aks-sadosi" deyiladi. `REVERB` effekti tovushning so'nish vaqtini (`REVERB_DECAY`) va mavjud effekt miqdorini (`MIX`) boshqarish parametrlariga ega.
+
+Trekka reverbatsiya qo'shish natijasini eshitish uchun quyidagi kliplarni tinglang:
+
+Effektsiz:
+
+++++
+<div class="curriculum-mp3">audioMedia/reverbReference.mp3</div>
+++++
+
+Reverbatsiya effekti:
+
+++++
+<div class="curriculum-mp3">audioMedia/reverbEffect.mp3</div>
+++++
+
+{nbsp} +
+
+.AMALIYOT
+****
+Effektlarning toʻliq roʻyxati uchun <</en/v1/every-effect-explained-in-detail#,this chapter>> ga oʻting.
+Ovoz balandligi effekti va boshqa 2 ta effektli qoʻshiq yarating. Nima qilayotganingizni sharhlarda yozishni va kerak bo'lganda o'zgaruvchilar yaratishni unutmang.
+****
+
+[[effectsandenvelopes2]]
+=== Effektlar va Zarflar
+
+Siz effektlardan foydalanishni boshladingiz va biroz vaqt o'tgach bir effektning o'zgarishini xohlaysiz. Misol uchun, siz qo'shiqning boshida tovushning asta kuchayishini (tovushning o'sib borishi) xohlashingiz mumkin.
+
+*Zarflar* bizga effektning vaqt o'tishi bilan qanday o'zgarishini aniqlash imkonini beradi.
+
+Biz 2 ta qiymat-vaqt juftligidan foydalanamiz. Har bir juftlik effekt qiymati va mos keladigan o'lchovni o'z ichiga oladi. Masalan, `(-60, 1, 0, 3)` - nuqta 1-oʻlchovda -60 qiymatiga, boshqa nuqta esa 3-o'lchovda 0-qiymatiga qoʻyilganligini bildiradi. Zarf ushbu nuqtalar o'rtasida *qiyalik* deb nomlangan chiziq hosil qiladi:
+
+[[envelopepoints]]
+.EarSketch-da izohli zarf
+[caption="Figure 5.3.1: "]
+image::../media/U2/NewEnvelope.png[Alt Text]
+
+Zarfni o'zgartirish uchun sizga 7 ta argumentli `setEffect()` funktsiyasi kerak bo'ladi (oxirgi 4 ta argument 2 qiymat-vaqt juftligidir):
+
+. trek
+. tur
+. parametr
+. startValue (boshlang'ich qiymat)
+. boshlash
+. endValue (tugash qiymati)
+. tugash
+
+7 parametrdan oxirgi 3 tasi *ixtiyoriy parametrlar*. Agar biz `setEffect()` dan atigi 4 ta parametr bilan foydalanganimizdagi kabi belgilangan boʻlmasa, effekt butun trekka qoʻllaniladi.
+
+Bu yerda tovushning asta kuchayishiga bir misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-envelopes.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-envelopes.js.txt[]
+----
+
+Endi boshqa zarf misollari uchun ushbu videoni tomosha qiling
+
+[role="curriculum-python curriculum-mp4"]
+[[video5b]]
+video::./videoMedia/005-03-MoreEffectsB-PY.mp4[]
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-complex-envelopes.py.txt[]
+----
+
+[role="curriculum-javascript curriculum-mp4"]
+video::./videoMedia/005-03-MoreEffectsB-JS.mp4[]
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-complex-envelopes.js.txt[]
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Yangi qo'shiq yarating. Barcha treklarga zarf qo'shish uchun (masalan: barcha treklaringiz uchun tovushning asta kuchayishi va so'nishi) yoki ayni trekdagi effektni qayta takrorlash uchun bitta "for" halqasidan foydalaning. Siz o'zingiz yoqtirgan har qanday effektdan foydalanishingiz mumkin.
+Qo'shningizdan qo'shiqni effektli va effektsiz tinglab ko'rishini so'rang (qo'shiqni effektsiz eshitish uchun effekt yaratuvchi satrlarning bosh qismini sharhlang). Qo'shningiz qaysi effektni qo'shganingizni taxmin qilishi kerak.
+****
+
+Yuqoridagi amaliyotga quyida misol keltirilgan. Halqaning har bir takrorlanishi zarfning bir o'lchovli segmentini qo'shadi. GAIN parametrini avtomatlashtirish ritmik ovoz pasayishni yaratadi. Effekt yaratgan farqni eshitish uchun RAIS-da effektni chetlab o'tishga almashtirib ko'ring (RAIS-dagi effekt trekining chap tomonidagi "chetlab o'tish" tugmasi).
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-rhythmic-ramps.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-rhythmic-ramps.js.txt[]
+----
+
+Bu yerda barcha treklarda tovushning asta kuchayishi va asta so'nishiga misoli keltirilgan:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/effects-and-envelopes-fade-in-and-fade-out.js.txt[]
+----
+
+{nbsp} +
+
+[[chapter5summary]]
+=== 5-Bob Xulosa
+
+* *Effektlar* tovush sifatini o‘zgartirib, ularni yanada noyob qiladi.
+* *Ovoz balandligi* tovushning jaranglash balandligi bilan bog'liq. *Kechiktirish* aks-sado hosil qiladi. *Reverb* tovushning keng xonada yangrayotgandek his qildiradi. *Panoramalash* musiqangizni chap yoki o'ng tomonga joylashtiradi.
+* Effektlar EarSketch-da `setEffect()` funktsiyasi bilan amalga oshiriladi. Uning sintaktikasi `setEffect(terk, tur, parametir, qiymat)`
+. 1. *trek*: Trek raqami yoki `MIX_TRACK` kabi ifoda
+. 2. *tur*: `DELAY` kabi effekt konstantasi
+. *parametr*: `DELAY_TIME` kabi parametr konstantasi
+. *qiymat*: `200` kabi parametr qiymati.  Bu qiymat effektning qiymatlar diapazonida bo'lishi shart. 
+* *Funktsiyalar* kompyuterning bajarishi uchun ko'rsatmalarni o'z ichiga oladi. Ma'lumotlar funktsiyalarga *argumentlar* orqali yuboriladi, bu funktsiya qanday bajarilishiga ta'sir qiladi. Ikki argumentli *chaqiruv* funktsiyasining sintaksisi `myFunction(argument1, argument2)`. 4 ta argumentli *chaqiruv* funktsiyasida ishlatiladigan sintaksisga `makeBeat(kick, 2, measure, kickBeat)` misol bola oladi.
+* EarSketch effektlarining toʻliq roʻyxati va ularning parametrlarini har biri uchun tavsiflari bilan birga <</en/v1/every-effect-explained-in-detail#,effects>> da topish mumkin.
+* *Zarflar* - effekt parametri vaqt o'tishi bilan qanday o'zgarishini belgilaydi. Ular _(qiymat, vaqt, qiymat, vaqt)_ kabi qiymat-vaqt juftliklari bilan tavsiflanadi.
+* Zarflar uchun 7 parametrli `setEffect()` argumentlari: setEffect(trek, tur, parametr, boshlang'ichQiymat, boshlash, tugashQiymati, tugash).
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+EarSketch-da effekt nima qilish imkonini beradi?
+
+[answers]
+* Loyiha doirasida tovush sifatini o'zgartirish
+* Trekka tovush qo'shish
+* Baraban zarbasini yaratish
+* Qo'shiqning tempini o'zgartirish
+--
+
+[question]
+--
+Bulardan qaysi biri `setEffect()` argumenti EMAS?
+
+[answers]
+* Klip Nomi
+* Effekt Nomi
+* Effekt Qiymati
+* Trek Raqami
+--
+
+[question]
+--
+3 dan 50 millisekundgacha bo'lgan trekdagi kechiktirish effektining kechikish vaqtini qanday o'rnatgan bo'lardingiz?
+
+[answers]
+* `setEffect(3, DELAY, DELAY_TIME, 50.0)`
+* `setEffect(DELAY, 3, DELAY_TIME, 50.0)`
+* `fitMedia(DELAY, 3, DELAY_TIME, 50.0)`
+* `setEffect(50, DELAY_FEEDBACK, 1)`
+--
+
+[question]
+--
+Quyidagilardan qaysi biri `setEffect()` zarflarida foydalaniladigan parametr emas?
+
+[answers]
+* Klip Uzunligi
+* Boshlanish Qiymati
+* Trek Raqami
+* Effekt
+--
+
+[question]
+--
+Quyidagi `setEffect()` funktsiyasi qanday vazifa bajaradi?
+
+[source,python]
+----
+setEffect(1, DISTORTION, DISTO_GAIN, 0, 1, 50, 11)
+----
+
+[answers]
+* 1-trekdagi distortsiya miqdorini 10 ta o'lchovga oshirish.
+* 1-trekdagi distortsiya miqdorini 50 ta oʻlchovga kamaytirish.
+* 1-trekdagi ovoz balandligiini 10 ta o'lchovga oshirish.
+* 1-trekdagi ovoz balandligini 50 ta oʻlchovga kamaytirish.
+--

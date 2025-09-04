@@ -1,0 +1,19 @@
+# Qaytarish bayonotlari 2: Bo'lim funktsiyasining nihoyat o'lchamini qaytarish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+melody1 = RD_WORLD_PERCUSSION_KALIMBA_PIANO_1
+drums1 = RD_WORLD_PERCUSSION_DRUMPART_24
+
+# Funktsiya ta'rifi
+def verse(start):
+    end = start + 4
+    fitMedia(melody1, 1, start, end)
+    fitMedia(drums1, 2, start, end)
+    return end
+
+# Funktsiyani chaqirish
+endMeasure = verse(1)  # she'r funktsiyasini chaqirish va boshlang'ich o'lchamni 1ga tenglashtirish
+print(endMeasure)

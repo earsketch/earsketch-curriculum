@@ -3,7 +3,7 @@
 // Setup
 setTempo (120);
 
-// Erstellen meiner Beat-Strings und Arrays
+// Erstellen meiner Beat Strings und Arrays
 var stringA = "0+++----0+++--0+";
 var stringB = "0-0-0-0-----0-0-";
 var soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1];

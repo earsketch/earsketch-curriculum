@@ -1,0 +1,32 @@
+// Mantiqiy operatsiyalar: Ishlatuvchidan janrni so'rab olish va javobga ko'ra zarbani yaratish
+
+// Sozlash
+setTempo(120);
+
+//Tovush o'zgaruvchilari
+var kick = OS_KICK02;
+var hihat = OS_CLOSEDHAT04;
+var clap = OS_CLAP03;
+
+// Zarba satr o'zgaruvchilari
+var hiphopKickBeat = "0++++---0+++0+++";
+var hiphopHihatBeat = "----0---00---000";
+var edmKickBeat = "0+++----0+++----";
+var edmClapBeat = "----0-------0---";
+
+// Ishlatuvchidan kirimni so'rab olish
+var genre = readInput("Qaysi janrni yoqtirasiz? Hip Hop yoki EDM?");
+
+// Kerak bo'lgan ritmni yaratish
+if ((genre === "Hip Hop") || (genre === "hip hop") || (genre === "HIP HOP")) {
+    makeBeat(kick, 1, 1, kickBeat);
+    makeBeat(hihat, 2, 1, hiphopHihatBeat);
+} else if ((genre === "edm") || (genre === "Edm") || (genre === "EDM")) {
+    makeBeat(kick, 1, 1, edmKickBeat);
+    makeBeat(clap, 2, 1, edmClapBeat);
+} else {
+    println("Kechirasiz. Siz tanlagan janrni biz o'qiy olmadik. Iltimos, kodni qayta ishga tushiring.");
+}
+
+// 2-trekka reverb effektini qo'shish
+setEffect(2, REVERB, MIX, 0.1);

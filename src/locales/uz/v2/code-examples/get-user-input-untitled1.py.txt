@@ -1,0 +1,2 @@
+answer = readInput("Musiqangiz qanday tempda bo'lishini istaysiz?")
+print(answer)

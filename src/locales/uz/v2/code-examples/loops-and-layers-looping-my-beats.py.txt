@@ -1,0 +1,13 @@
+# Zarbalarni halqalash: makeBeat() ko'rsatmasini for halqasi bilan ishlatish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+# O'zgaruvchilar
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# Zarbamizni halqalash
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)

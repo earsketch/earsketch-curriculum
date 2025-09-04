@@ -1,0 +1,497 @@
+[[getorganizedwithdatastructures]]
+== Ma'lumot Tuzilmalari
+
+:nofooter:
+
+[role="curriculum-python"]
+EarSketch yordamida qo'shiqlar yaratish uchun sizda ko'plab vositalar mavjud. Siz yozadigan skriptlar juda xilma-xil va uzun bo'lishi mumkin. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, ro'yxatlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+
+[role="curriculum-javascript"]
+EarSketch yordamida qo'shiqlar yaratish uchun sizda ko'plab vositalar mavjud. Siz yozadigan skriptlar juda xilma-xil va uzun bo'lishi mumkin. Ushbu bo'lim sizga kodingizni yanada tartibga solishga, xususan, massivlar deb nomlangan maxsus abstraktsiya va `makeBeat()`ning yangi funktsiyasidan foydalangan holda yordam beradi.
+
+[[datastructures]]
+=== Ma'lumot Tuzilmalari nima
+
+[role="curriculum-python"]
+Agar sizda tovush o'zgaruvchilari ro'yxati juda uzun bo'lsa, *ro'yxatlar* ko'magida ularni samarali tartibga solish mumkin. Ba'zi dasturlash tillarida massiv deb ham ataladigan *ro'yxat* burchakli qavslar (`[]`) orasidagi, shuningdek vergul bilan ajratilgan qiymatlar yoki *elementlar* to'plamidir. Mana bir misol:
+
+[role="curriculum-javascript"]
+Agar sizda tovush o'zgaruvchilari ro'yxati juda uzun bo'lsa, *massivlar* ko'magida ularni samarali tartibga solish mumkin. Ba'zi dasturlash tillarida ro'yxat deb ham ataladigan *massiv* burchakli qavslar (`[]`) orasidagi, shuningdek vergul bilan ajratilgan qiymatlar yoki *elementlar* to'plamidir. Mana bir misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-instead-of-writing-this.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-instead-of-writing-this.js.txt[]
+----
+
+[role="curriculum-python"]
+Agar siz o'zgaruvchilarni massiv bilan almashtirgan bo'lsangiz, massiv tarkibini qanday chaqirasiz? Biz indekslardan foydalanamiz. Roʻyxatning har bir elementiga `0` dan boshlab indeks beriladi. Avvalgi misolda `drums[0]` - `OS_KICK03`ni, `drums[1]` - `OS_OPENHAT01`ni va `drums[2]` - `OS_SNARE05`ni chaqirmoqda.
+
+[role="curriculum-javascript"]
+Agar siz o'zgaruvchilarni massiv bilan almashtirgan bo'lsangiz, massiv tarkibini qanday chaqirasiz? Biz indekslardan foydalanamiz. Massivning har bir elementiga `0` dan boshlab indeks beriladi. Avvalgi misolda `drums[0]` - `OS_KICK03`ni, `drums[1]` - `OS_OPENHAT01`ni va `drums[2]` - `OS_SNARE05`ni chaqirmoqda.
+
+.AMALIYOT
+****
+Uchta tovushdan iborat ro'yxat/massiv yarating.
+Keyin 3 ta `fitMedia()` chaqiruvlaridan foydalanib, 3 ta klipni 1 o'lchovdan 5 o'lchovlarhacha 1, 2 va 3-treklarga joylashtiring.
+****
+
+Mana bir misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-list.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-arrays.js.txt[]
+----
+
+//.The EarSketch Share window for collaboration (Let Others Edit)
+
+//[caption="Figure 21.4.2: "]
+
+image::../media/U3/18_1_Graphics_ES.jpg[Alt Text]
+
+[role="curriculum-python"]
+Biz `list[index]` ro'yxat elementini chaqirishini ko'rdik. Bundan ro'yxat elementini o'zgartirish uchun ham foydalanish mumkin. For example, `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` in the previous example will change the first element of the list to `RD_ROCK_POPRHYTHM_MAINDRUMS_11`. Bu jarayon o'zgaruvchini yangilashga o'xshaydi. U `=` *tayinlash operatoridan* foydalanadi.
+
+[role="curriculum-javascript"]
+Biz `array[index]` massiv elementini chaqirishini ko'rdik. Bundan massiv elementini o'zgartirish uchun ham foydalanish mumkin. Masalan, oldingi misoldagi `myEnsemble[0] = RD_ROCK_POPRHYTHM_MAINDRUMS_11` massivning birinchi elementini `RD_ROCK_POPRHYTHM_MAINDRUMS_11` ga o'zgartiradi. Bu jarayon o'zgaruvchini yangilashga o'xshaydi. U `=` *tayinlash operatoridan* foydalanadi.
+
+.AMALIYOT
+****
+Avvalgi misolda `fitMedia()` ni uch marta chaqirmaslik uchun for halqasidan foydalaning. Hisoblagich sifatida trek raqamidan foydalanishingiz mumkin.
+Indeks raqami `0` da, trekingiz esa `1` da boshlanishi kerak. For halqasi ichida trek raqamidan bittaga kam bo'lgan raqamga teng `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi.
+****
+
+Quyida bir misol keltirilgan. Kodni ishga tushirganingizda nima chop etilishini ko'rish uchun konsolga qarashingiz mumkin.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-iterating-through-lists.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-iterating-through-arrays.js.txt[]
+----
+
+[role="curriculum-python"]
+Foydali maslahat: len() funktsiyasi - roʻyxat nomi parametr sifatida roʻyxat elementlari sonini qaytaradi. Demak, `list[0]` - `list`ning birinchi elementi va `list[len(list) - 1]` oxirgi elementi hisoblanadi. Masalan, agar `list = ["Salom", "o'rtoq", "EarSketchchilar"];` bo'lsa, `len(list)` `3`ni qaytaradi. Indekslar `0`, `1` va `2`. Oxirgi indeks 3-1 = 2.
+
+[role="curriculum-javascript"]
+Foydali maslahat: `length` xususiyati (`array.length`) massiv elementlari sonini qaytaradi. Demak, `massiv[0]` - `massiv`ning birinchi elementi, `massiv[array.length - 1]` esa oxirgi elementi hisoblanadi. Masalan, agar `array = ["Salom", "o'rtoq", "EarSketchchilar"];` bo'lsa, `array.length` `3`ni qaytaradi. Indekslar `0`, `1` va `2`. Oxirgi indeks 3-1 = 2.
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+Biz EarSketch-da qo'shimcha muqaddima yaratamiz, unda asboblar (treklar) vaqt o'tishi bilan musiqaga birma-bir qo'shiladi. Masalan, birinchi trek 1-o'lchovdan boshlanadi, so'ng ikkinchi trek 2-o'lchovdan boshlanadi va hokazo. Odatda, bunday usul qo'shiqning muqaddimasida ishlatiladi.
+
+Ro'yxat va `for` halqasidan foydalanib, 1 dan 5 gacha bo'lgan o'lchovlardan shunday muqaddima yarating. Oldingi misolda bo'lgani kabi, hisoblagich sifatida `trek`dan foydalanishingiz mumkin va siz `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi. Bundan tashqari, siz `len()` funktsiyasidan foydalanib, `o'lchov` oʻzgaruvchisini yaratishingiz mumkin.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+Biz EarSketch-da qo'shimcha muqaddima yaratamiz, unda asboblar (treklar) vaqt o'tishi bilan musiqaga birma-bir qo'shiladi. Masalan, birinchi trek 1-o'lchovdan boshlanadi, so'ng ikkinchi trek 2-o'lchovdan boshlanadi va hokazo. Odatda, bunday usul qo'shiqning muqaddimasida ishlatiladi.
+
+Ro'yxat va `for` halqasidan foydalanib, 1 dan 5 gacha bo'lgan o'lchovlardan shunday muqaddima yarating. Oldingi misolda bo'lgani kabi, hisoblagich sifatida `trek`dan foydalanishingiz mumkin va siz `indeks` o'zgaruvchisini yaratishingiz kerak bo'ladi. Bundan tashqari, siz `length` xususiyatidan foydalanib, `o'lchov` o‘zgaruvchisini yaratishingiz mumkin.
+****
+
+Mana bir misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-additive-introduction.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-additive-introduction.js.txt[]
+----
+
+{nbsp} +
+
+[[usingdatastructureswithmakebeat]]
+=== Ma'lumot Tuzilmalaridan `makeBeat()` bilan foydalaning
+
+[role="curriculum-python"]
+Biz `makeBeat()` yordamida maʼlumot tuzilmalaridan foydalanishning ikkita usulini koʻrib chiqamiz. Birinchidan, keling, satrlar va ro'yxatlar qanchalik o'xshashligini ko'rib chiqaylik:
+
+[role="curriculum-javascript"]
+Biz `makeBeat()` yordamida maʼlumot tuzilmalaridan foydalanishning ikkita usulini koʻrib chiqamiz. Birinchidan, keling, satrlar va massivlar qanchalik o'xshashligini ko'rib chiqaylik:
+
+[role="curriculum-python"]
+* Ro'yxatlar singari, satrlar ham indekslarga ega. *Indeks* 0 dan boshlanadigan satrdagi ma'lum bir belgining o'rnini ifodalaydi. Masalan, `"Sarah"[3]` `a` ni qaytaradi.
+* Siz satrlar bilan `len()` funktsiyasidan foydalanishingiz mumkin, bu satrdagi belgilar miqdorini qaytaradi. Oxirgi belgi `len(string) - 1` indeksida.
+`"EarSketch"` satrining indekslari quyidagi jadvalda ko'rsatilgan.
+
+[role="curriculum-javascript"]
+* Massivlar singari, satrlar ham indekslarga ega. *Indeks* 0 dan boshlanadigan satrdagi ma'lum bir belgining o'rnini ifodalaydi. Masalan, `"Sarah"[3]` `a` ni qaytaradi.
+* Siz satrlar bilan `.length` xususiyatidan foydalanishingiz mumkin, bu satrdagi belgilar miqdorini qaytaradi. Oxirgi belgi `string.length - 1` indeksida.
+`"EarSketch"` satrining indekslari quyidagi jadvalda ko'rsatilgan.
+
+[cols="h,^,^,^,^,^,^,^,^,^"]
+|===
+|Belgi
+|E
+|a
+|r
+|S
+|k
+|e
+|t
+|c
+|h
+
+|Indeks
+|0
+|1
+|2
+|3
+|4
+|5
+|6
+|7
+|8
+|===
+
+[role="curriculum-python"]
+* Satrlarni yopishtirgan kabi roʻyxatlarni ham yopishtirishingiz mumkin. Yopishtirish operatoridan foydalaning (`+`): sintaksisi `newList = listA + listB`.
+
+[role="curriculum-javascript"]
+* Satrlarni birlashtirgan kabi massivlarni ham yopishtirishingiz mumkin. Biz "yopishtirish" *usuli*dan foydalanamiz. Usul funktsiyaga o'xshaydi, chunki u parametrlarni o'z ichiga olgan qavslarga ega. Uni ishlatish uchun uni massiv nomidan keyin, nuqta bilan qo'ying: sintaksis `newArray = arrayA.concat(arrayB)`. Bu *nuqtali qaydnoma* deb ataladi.
+
+[role="curriculum-python"]
+* Siz kattaroq satrning bir qismi sifatida ham tanilgan *quyi-satr*ni olishingiz mumkin. Bu elektron musiqa va remiks qilishda mashhur bo'lgan uslub - zarbani kesishga imkon beradi. Uning sintaksisi `newString = oldString[startIndex: endIndex]`. Quyi-satr `startIndex` belgisini o`z ichiga oladi, lekin `endIndex` belgisini olmaydi. Masalan, `"Sarah[1:4]"` `"ara"`ni qaytaradi. Roʻyxatlar bilan ham xuddi shunday qilishingiz mumkin: `newList = oldList[startIndex: endIndex]`.
+
+[role="curriculum-javascript"]
+* Siz kattaroq satrning bir qismi sifatida ham tanilgan *quyi-satr*ni olishingiz mumkin. Bu elektron musiqa va remiks qilishda mashhur bo'lgan uslub - zarbani kesishga imkon beradi. Uning sintaksisi `newString = oldString.substring(startIndex, endIndex)`. Quyi-satr `startIndex` belgisini o`z ichiga oladi, lekin `endIndex` belgisini olmaydi. Masalan, `"Sarah.substring(1, 4)"` - `"ara"`ni qaytaradi. Siz `slice()` usuli yordamida massivlar bilan ham shunday qilishingiz mumkin: `newList = oldList.slice(startIndex, endIndex)`. `concat()`, `substring()` va `slice()` usullar bo`lib, barchasi nuqta belgilaridan foydalanadi.
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+Yangi skriptda:
+
+. 4 ta oʻzgaruvchi yarating: 2 ta zarba satri (`stringA` va `stringB`) va 2 ta ovozli klip roʻyxati (`soundsA` va `soundsB`).
+. Har bir satrning ikkinchi belgisini chop eting.
+. Ro'yxatlaringizning oxirgi elementini chop eting.
+. `stringA` va `stringB` yopishmasidan `stringC` yarating va chop eting.
+. `SoundsA`, `soundsB` va yana `soundsA` yopishmasidan `SoundsC` yarating va chop eting.
+. `stringC` ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan `stringD` yarating va chop eting.
+. `soundsC` ning uchinchidan oxirgi elementigacha bo'lgan qismidan `soundsD` yarating va chop eting.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+Yangi skriptda:
+
+. 4 ta oʻzgaruvchi yarating: 2 ta zarba satri (`stringA` va `stringB`) va 2 ta ovozli klip roʻyxati (`soundsA` va `soundsB`).
+. Har bir satrning ikkinchi belgisini chop eting.
+. Massivlaringizning oxirgi elementini chop eting.
+. `stringA` va `stringB` yopishmasidan `stringC` yarating va chop eting.
+. `SoundsA`, `soundsB` va yana `soundsA` yopishmasidan `SoundsC` yarating va chop eting.
+. `stringC` ning ikkinchidan beshinchigacha belgilarini o'z ichiga olgan qismidan `stringD` yarating va chop eting.
+. `soundsC` ning uchinchidan oxirgi elementigacha bo'lgan qismidan `soundsD` yarating va chop eting.
+****
+
+Mana bir yechim misoli:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-string-and-lists-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-string-and-lists-operations.js.txt[]
+----
+
+Bu `makeBeat()` orqali satr amaliyotlaridan qanday foydalanishga misol:
+
+[role="curriculum-python curriculum-mp4"]
+[[video13py]]
+video::./videoMedia/013-03-Substrings-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video13js]]
+video::./videoMedia/013-03-Substrings-JS.mp4[]
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-string-operations.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-string-operations.js.txt[]
+----
+
+[role="curriculum-python"]
+Nihoyat, `makeBeat()` bir vaqtning o'zida bir nechta ovozli kliplarni boshqarishi mumkin. Bu sizga faqatgina bir `makeBeat()` qatori yordamida barcha zarbdor tovushlarni bitta trekka joylashtirish imkonini beradi. Ovozli faylingizni birinchi argument sifatida o'tkazish o'rniga, siz ovozli fayllar ro'yxatini o'tkazasiz. Zarba satrida tovushni ijro etish uchun “0” dan foydalanish o‘rniga “0”dan “9”gacha bo‘lgan raqamlardan foydalanishingiz mumkin. Bu raqamlar sizning tovush ro'yxatingizdagi indeksni bildiradi. Quyidagi "boot cat boot cat" ritmi bilan "avval va keyin" misolini ko'rib chiqing.
+
+[role="curriculum-javascript"]
+Nihoyat, `makeBeat()` bir vaqtning o'zida bir nechta ovozli kliplarni boshqarishi mumkin. Bu sizga faqatgina bir `makeBeat()` qatori yordamida barcha zarbdor tovushlarni bitta trekka joylashtirish imkonini beradi. Ovozli faylingizni birinchi argument sifatida o'tkazish o'rniga, siz ovozli fayllar massivini o'tkazasiz. Zarba satrida tovushni ijro etish uchun “0” dan foydalanish o‘rniga “0”dan “9”gacha bo‘lgan raqamlardan foydalanishingiz mumkin. Bu raqamlar sizning tovush ro'yxatingizdagi indeksni bildiradi. Quyidagi "boom bap boot bap" ritmi bilan "avval va keyin" misolini ko'rib chiqing.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-making-a-drum-set.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-making-a-drum-set.js.txt[]
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Janr bo'yicha zarbalar uchun 3.4-bobdagi kod misolidan nusxa oling. Har bir janrda faqat bitta `makeBeat()` qatoriga ega bo'lish uchun kodni o'zgartiring. Ba'zan, likopcha zarbasi tepki yoki pistirma zarbasi bilan bir vaqtda ijro etiladi. Bunday holda, siz faqat likopcha uchun bitta “makeBeat()” qatoriga ega bo'lishingiz mumkin.
+****
+
+Yechimi bunday:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/data-structures-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/data-structures-examples-of-beats.js.txt[]
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Ushbu bobda o'rganganlaringizdan foydalanib, `makeBeat()` yordamida o'zingizga yoqadigan ritmlarni yarating. Janr bo'yicha zarbalar uchun 3.4-bobdagi videoga murojaat qilishingiz mumkin. Kodingizni ishga tushirishingiz, yaratgan narsalaringizni tinglashingiz va uni sizga yoqmagunga qadar o'zgartirishingiz mumkinligini unutmang.
+****
+
+{nbsp} +
+
+[[evaluatingcorrectness]]
+=== To'g'rilikni Baholash
+
+Tabriklaymiz, endi siz EarSketch bilan ijodiy bo'lish imkonini beruvchi musiqiy va dasturlash ko'nikmalariga ega bo'ldingiz! Biz ishonch hosil qilmoqchi bo'lgan oxirgi narsa - kodingiz iloji boricha tiniq bo'lishi. Quyida siz tekshirishingiz mumkin bo'lgan ba'zi elementlar:
+
+* *Ixchamlik* o'z maqsadini samarali bajaradigan qisqa kodni bildiradi. Kodingizni yanada ixcham qilishga yordam beradigan ba'zi savollar:
+** Funktsiya chaqiruvlarini ketma-ket bir necha marta nusxalash/joylashtirishni amalga oshirdimmi? Agar shunday bo'lsa, halqalash bilan soddalashtiring!
+** Har qanday kod bloklarini qayta ishlatamanmi? Agar shunday bo'lsa, ularni funktsiyaga qo'ying!
+** Kod davomida qayta-qayta ishlatadigan tovush konstantalari yoki matematik ifodalar bormi? Agar shunday bo'lsa, ularni o'zgaruvchilarga tayinlang! Ro'yxat ham foydali bo'lishi mumkin.
+* *Aniqlik* kod o'z funktsiyasi va dasturchining niyatini qanchalik yaxshi bildirishi bilan bog'liq. Agar sizning tengdoshlaringiz sizning kodingizda tushunmovchilikka yoki chalkashlikka uchrayotgan bo'lsa, demak bu kod aniq emas. Kodingizni aniqlashtirishga yordam beradigan ba'zi savollar:
+** Mening o'zgaruvchilarim va funktsiyalarimning nomlari tushunarlimi? Agar unday bo'lmasa, ularni qayta nomlang.
+** Har bir kod blokini va har qanday chalkash kod satrlarini tushuntirish uchun sharhlardan foydalandimmi?
+** Kodimni tartibga solishda yordam berish uchun maxsus funktsiyalar va halqalar kabi hisoblash tuzilmalaridan foydalanganmanmi?
+** Mening skriptimning tuzilishi qo'shig'imning tuzilishini aks ettiradimi? Ba'zan bu kodni o'qishni osonlashtiradi. 
+
+*Tengdoshlarning fikr-mulohazalari* dasturlashda keng tarqalgan bo‘lib, boshqalarning sharhlari ko'magida kod va musiqangizni mukammallashtirishga yordam beradi. Fikr-mulohaza *konstruktiv* bo'lishi kerak, ya'ni u tengdoshlar orasini buzishdan ko'ra ular orasidagi munosabatni mustahkamlaydi. Boshqalarga fikr bildirishda:
+
+* *Aniq bo'ling* - Kodning muayyan bloklari va qatorlariga hamda musiqaning muayyan o'lchovlari va treklariga murojaat qiling.
+* *Tavsiflovchi bo'ling* - Skriptni mukammal qilish uchun o'z fikringizni va amalga oshirayotgan jarayoningizni tavsiflab bering.
+* *Tengdoshingizning musiqiy qarashlari/maqsadlariga hushyor bo'ling* - Sizning musiqiy didingiz tengdoshingiz musiqasini baholashga ta'sir qilmasligi kerak.
+* *Ijobiy bo'ling* - Mukammallik ehtiyoj sezgan narsalardan tashqari, kuchli kod bloklari va musiqiy parchalarni ko'rsatib o'ting.
+* *Taqqoslamang* - Tengdoshingizning kodini o'zingizning yoki boshqa tengdoshlaringizning kodlari bilan raqobatlashuvchi sifatida emas, balki ularning shaxsiy mulki sifatida ko'ring.
+
+Xuddi shunday, fikr-mulohazalarni qabul qilishda:
+
+* *Aniq bo'ling* - Muammolarni keltirib chiqaradigan kodning bloklari yoki qatorlarini, musiqaning treklari yoki o'lchovlarini ko'rsating. Bu sizga tengdoshlaringizdan eng foydali bo'lgan fikr-mulohazalarni olish imkonini beradi.
+* *Tinglang* - Tengdoshingiz gapirib bo'lguncha javob berishni kuting. Tengdoshingiz yetkazayotgan ma'lumotlarga e'tiborli bo'ling. Ularning fikr-mulohazalari asosida kodingizni sharhlang. Ushbu sharhlar qayta ko'rib chiqishda foydali bo'lishi mumkin.
+* *Savollar bering* - O'zingiz bilmagan mantiq, muammolar, nosozliklar, musiqiy uyg'unlik yoki to'g'rilikning biron bir elementi haqida so'rang.
+
+[role="curriculum-python"]
+.AMALIYOT
+****
+To'liq qo'shiq yarating va uni mukammallashtirish uchun qo'shningiz tomonidan tinglab baho berishini so'rang. Boshlashingiz uchun ba'zi fikrlar:
+
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Sizning tuzilmangiz ABA kabi oddiy bo'lishi mumkin.
+* Tovushlarni tanlash va narsalarni sinab ko'rishni boshlang. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
+* Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
+* `setEffect()` yordamida ba'zi effektlarni qo'shing. Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
+* Siz qo'shiqni miks qilish uchun shartli bayonotdan foydalanishingiz mumkin (har bir trekning ovozini moslashtiring).
+* Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rashingiz mumkin.
+* Agar lozim bo'lsa, ba'zi elementlarni ro'yxatga joylashtiring.
+****
+
+[role="curriculum-javascript"]
+.AMALIYOT
+****
+To'liq qo'shiq yarating va uni mukammallashtirish uchun qo'shningiz tomonidan tinglab baho berishini so'rang. Boshlashingiz uchun ba'zi fikrlar:
+
+* Boshlashdan avval doim qo'shiq uchun mavzu va tuzilma haqida fikr yuritish tavsiya etiladi. Sizning tuzilmangiz ABA kabi oddiy bo'lishi mumkin.
+* Tovushlarni tanlash va narsalarni sinab ko'rishni boshlang. Tovush va zarba satri o'zgaruvchilarini yarating hamda `fitMedia()` va `makeBeat()` chaqiruvlaridan foydalaning. Siz shaxsiy tovushlaringizni yuklashingiz mumkin.
+* Qachon foydali bo'lsa, for-halqalari va maxsus funktsiyalar yarating.
+* `setEffect()` yordamida ba'zi effektlarni qo'shing.  Siz tovushning asta kuchayishi/so'nishi, biroz kechiktirish va reverbatsiya qo'shishingiz mumkin...
+* Siz qo'shiqni miks qilish uchun shartli bayonotdan foydalanishingiz mumkin (har bir trekning ovozini moslashtiring).
+* Qo'shig'ingizdagi biror narsani o'zgartirish uchun foydalanuvchi kiritishini so'rashingiz mumkin.
+* Agar lozim bo'lsa, ba'zi elementlarni massivga joylashtiring.
+****
+
+[[chapter9summary]]
+=== 9-Bob Xulosa
+
+[role="curriculum-python"]
+* *Ro'yxat* - bu yagona obyektga birlashtirilgan qiymatlar to'plami, bu ma'lumotlarni saqlashning samarali usuli. Ro'yxat yoki elementlar ichida saqlangan mahsulotlar har qanday ma'lumot turi bo'lishi mumkin.
+* Satrlardagi singari, ro'yxat elementlariga indeks tayinlanadi. Ro'yxat indekslari 0 dan boshlanadi.
+* Roʻyxat elementlariga `myList[1]` kabi burchakli qavs belgisi bilan kirish mumkin. Satrdagi belgilarga xuddi shunday kirish mumkin: `myString[1]`.
+* `len()` funktsiyasi roʻyxatdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `len(list)`.
+* Ro'yxatlarni o‘zgartirish vositalari to‘plami - *ro'yxat operatsiyalari* yordamida yopishtirish va kesish mumkin.
+* Kattaroq, mavjud roʻyxatdan roʻyxatning quyi toʻplamini yaratish sintaksisi - `newList = oldList[startIndex: endIndex]`.
+* Roʻyxatlar yopishtirish operatori `+` yordamida birlashtirilishi mumkin, masalan, `newList = listA + listB`.
+* `makeBeat()` bir vaqtning o'zida bir nechta ovozlardan ritmlarni turli ro'yxat indekslariga tegishli bo'lgan zarba satrini o'tkazish orqali qurishi mumkin. `makeBeat()` 0 dan 9 gacha bo'lgan indekslardagi ovozlarga kirishi mumkin, agar ular bir xil ro'yxatda saqlangan bo'lsa.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. Bu boshqalardan o'rganish imkoniyatini beradi.
+
+[role="curriculum-javascript"]
+* *Massiv* - bu yagona obyektga birlashtirilgan qiymatlar to'plami, bu ma'lumotlarni saqlashning samarali usuli. Massiv yoki elementlar ichida saqlangan mahsulotlar har qanday ma'lumot turi bo'lishi mumkin.
+* Satrlardagi singari, massiv elementlariga indeks tayinlanadi. Massiv indekslari 0 dan boshlanadi.
+* Massiv elementlariga `myArray[1]` kabi burchakli qavs belgisi bilan kirish mumkin. Satrdagi belgilarga xuddi shunday kirish mumkin: `myString[1]`.
+* `length` xossasi massivdagi elementlar miqdorini yoki satrdagi belgilar miqdorini qaytaradi. Sintaksis `array.length` yoki `string.length`.
+* Massivlarni o‘zgartirish vositalari to‘plami - *massiv operatsiyalari* yordamida yopishtirish va kesish mumkin.
+* Kattaroq, mavjud massivdan massivni ajratib olish sintaksisi `newArray = oldArray.slice(startIndex, endIndex)`.
+* Kattaroq satrdan quyi-satrni kesib olish sintaksisi - `newString = oldString.substring(startIndex, endIndex)`.
+* Massivlarni `concat()` usuli yordamida yopishtirish mumkin, masalan, `newArray = arrayA.concat(arrayB)`.
+* `makeBeat()` bir vaqtning o'zida bir nechta ovoz ritmlarni turli massiv indekslariga tegishli bo'lgan zarba satrini o'tkazish orqali qurishi mumkin. `makeBeat()` 0 dan 9 gacha bo'lgan indekslardagi kliplarga kirishi mumkin, agar ular bir xil massivda saqlangan bo'lsa.
+* Boshqalar bilan konstruktiv ma'lumot almashish *tengdoshlarning fikr-mulohazalari*ning bir shaklidir. Bu boshqalardan o'rganish imkoniyatini beradi.
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Quyidagi amallardan qaysi biri roʻyxatlar/massivlarni birlashtirish uchun ishlatiladi?
+
+[answers]
+* Yopishtirish
+* Kesish
+* Birlashtirish
+* Qo'shish
+--
+
+[role="curriculum-python"]
+[question]
+--
+Pythonda ro'yxat birinchi elementining indeks raqami nechchi?
+
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-python"]
+[question]
+--
+"len(myList)" nimani qaytaradi?
+
+[answers]
+* `myList` elementlari miqdori
+* `myList` ma`lumot turlari
+* `myList` elementlari
+* `myList` kengligi
+--
+
+[role="curriculum-python"]
+[question]
+--
+Ikki ro‘yxatni (`listA` va `listB`) yopishtirish sintaksisi qanday?
+
+[answers]
+* `listA + listB`
+* `listA ++ listB`
+* `listA va listB`
+* `listB + listA`
+--
+
+[role="curriculum-python"]
+[question]
+--
+OldList dan birinchi va oxirgi elementlarsiz ro'yxatni qanday olish mumkin?
+
+[answers]
+* `oldList[1:len(oldList) - 1]`
+* `oldList[1:len(oldList)]`
+* `oldList[0:len(oldList)]`
+* `oldList[2:len(oldList - 1)]`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Javascriptda massiv birinchi elementining indeks raqami nechchi?
+
+[answers]
+* `0`
+* `1`
+* `2`
+* `-1`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+`myArray.length` nimani qaytaradi?
+
+[answers]
+* `myArray` elementlari miqdori
+* `myArray` ma`lumot turlari
+* `myArray` elementlari
+* `myArray` kengligi
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Ikki massivni (`arrayA` va `arrayB`) yopishtirish sintaksisi qanday?
+
+[answers]
+* `arrayA.concat(arrayB)`
+* `arrayA.concatenate(arrayB)`
+* `arrayB.concat(arrayA)`
+* `arrayB.concatenate(arrayB)`
+--
+
+[role="curriculum-javascript"]
+[question]
+--
+Birinchi va oxirgi elementlarsiz `oldArray` dan massivni qanday olish mumkin?
+
+[answers]
+* `oldArray.slice(1, oldArray.length - 1)`
+* `oldArray.slice(1, oldArray.length)`
+* `oldArray.slice(0, oldArray.length)`
+* `oldArray.slice(2:oldArray.length - 1)`
+--
+
+[[conclusion]]
+=== Xulosa
+
+EarSketch sarguzashtida ishtirok etganingiz uchun katta rahmat! Umid qilamizki, siz ushbu vositadan zavqlandingiz va ko'p narsalarni o'rgandingiz :)
+
+////
+Thank you video
+////

@@ -1,0 +1,339 @@
+[[addsomebeats]]
+== Zarbalar Qo'shing!
+
+:nofooter:
+
+Ushbu bo'limda siz shaxsiy zarbalaringizni qanday yaratishni o'rganasiz! Biz o'zgaruvchilarni, makeBeat() deb nomlangan yangi funktsiyani va janr bo'yicha turli xil zarba misollarini ko'rib chiqamiz.
+
+[[variables]]
+=== O'zgaruvchilar
+
+[role="curriculum-python curriculum-mp4"]
+[[video2py]]
+video::./videoMedia/002-05-Variables-PY.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video2js]]
+video::./videoMedia/002-05-Variables-JS.mp4[]
+
+O'zgaruvchi nima? *O'zgaruvchi* bu dasturimizda ishlatmoqchi bo'lgan biror bir miqdor yoki ma'lumotga berilgan nom.
+
+EarSketchda dasturingizning o'zgaruvchilari quyidagilarga korsatishi mumkin:
+
+* *Raqam.* (masalan, trek raqami yoki o'lchov raqami)
+* *Fayl.* (masalan, audio fayl)
+* *Satr* (masalan, ovozli klip yoki ba'zi misralar nomi)
+* *Belgi* (masalan, `A`, `a`, `2`, or `=`)
+
+*Belgi* bu xar qanday raqam, xarf, yoki alomat bolishi mumkin. Satr bu qo'shtirnoq bilan ajratilgan belgilar guruhi, masalan, '"Salom Dunyo 123!"'.
+
+O'zgaruvchidan foydalanish uchun,
+
+[role="curriculum-python"]
+. Avval uni *tayinlash* kerak. Biz *tayinlash operatori* deb ataladigan "=" belgisidan foydalanamiz. `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` ni yozish siz synth1 deb nomlangan o'zgaruvchini yaratishingizni va HIPHOP_SYNTHPLUCKLEAD_005 ma'lumotlarini ushbu o'zgaruvchiga saqlashingizni anglatadi.
+. HIPHOP_SYNTHPLUCKLEAD_005 - `synth1`ning *qiymati*.
+. Keyin o'zgaruvchini chaqirishingiz kerak: kodingizda `synth1` dan foydalaning. O'zgaruvchidan faqat u tayinlangandan keyin foydalanishingiz mumkin, undan avval emas. Masalan, `fitMedia(synth1, 1, 1, 3)` deb yozing.
+. Kodni ishga tushirganingizda, kompyuter `synth1` deganda HIPHOP_SYNTHPLUCKLEAD_005 ovozli klip nomidan foydalanishi kerakligini tushunadi.
+
+[role="curriculum-javascript"]
+. Avval uni *tayinlash* kerak. Biz *tayinlash operatori* deb ataladigan "=" belgisidan foydalanamiz. Biz satr boshida `var` buyrug'idan ham foydalanamiz. `synth1 = HIPHOP_SYNTHPLUCKLEAD_005` ni yozish siz synth1 deb nomlangan o'zgaruvchini yaratishingizni va HIPHOP_SYNTHPLUCKLEAD_005 ma'lumotlarini ushbu o'zgaruvchiga saqlashingizni anglatadi.
+. HIPHOP_SYNTHPLUCKLEAD_005 - `synth1`ning *qiymati*.
+. Keyin o'zgaruvchini chaqirishingiz kerak: kodingizda `synth1` dan foydalaning. Masalan, `fitMedia(synth1, 1, 1, 3);` deb yozing.
+. Kodni ishga tushirganingizda, kompyuter `synth1` deganda HIPHOP_SYNTHPLUCKLEAD_005 ovozli klip nomidan foydalanishi kerakligini tushunadi.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-instead-of-this.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-instead-of-this.js.txt[]
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Avvalgi skriptlaringizda ovozli klip nomlarini saqlash uchun o'zgaruvchilardan foydalaning. Yordam olish uchun quyidagi misollarni ko'rib chiqing. O'zgaruvchilaringiz qisqa va tushunarli nomlarga ega ekanligiga ishonch hosil qiling (masalan, `bas`, `tovush_`,...).
+****
+
+{nbsp} +
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-variables.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-variables.js.txt[]
+----
+
+E'tibor bering, o'zgaruvchini tushunarli va tavsiflovchi tarzda nomlash muhim. Misol uchun, hech qanday ma'lumot bermaydigan `music1` yoki `test` o'rniga `synth1` ni belgilang. Shunday qilib, siz yoki boshqa birov sizning kodingizni o'qiganda, ular siz nimani nazarda tutayotganingizni ko'rishlari mumkin.
+
+*Konstanta* o'zgaruvchiga o'xshaydi, chunki u o'zida qiymatlarni saqlaydi. Biroq, konstantaning qiymati hech qachon o'zgarmaydi. Masalan, EarSketch da `TECHNO_SYNTHPLUCK_001` konstanta bo'lib, u mos keladigan audio faylga ishora qiladi. An'anaga ko'ra, konstanta nomlari katta harflar bilan yoziladi va bo'shliq o'rniga pastki chiziqdan foydalaniladi.
+
+[[drumbeatstrings]]
+=== Zarba Satrlari
+
+Keling, avval ritm haqidagi ba'zi asosiy tushunchalarni bilib olaylik:
+
+* *Ritm* bu tovush andozasi va u odatta takgorlanadi.
+* *Temp* - bu musiqaning DZMdagi tezligi (daqiqada zarba miqdori).
+* *Zarba* qo'shiqning "barqaror yurak urishi"ga o'xshaydi. Tomoshabinlar kontsertda qarsak chalsa, bir maromdagi zarbdor qarsak hosil bo'ladi.
+* *O'lchov* - bu oldindan belgilangan zarbalar soniga ega musiqiy vaqt birligi. EarSketch-da 1 *o'lchov* 4 zarba uzunligidadir. 1 oʻlchovda 4 ta zarba boʻlgani uchun zarbalar *chorak (1/4) notalar* deb ham ataladi.
+* Har bir zarba *quyi-zarbalar* ga bo'linishi mumkin. Masalan, 1/4 nota 2 ta *sakkizinchi (1/8) nota*ga boʻlinishi mumkin. 1/4 notalarni sanayotganingizda “1, 2, 3, 4...” deb aytasiz 1/8 notalarni sanayotganda siz "va" dan foydalanishingiz mumkin: "1 va 2 va 3 va 4 va...."
+* 1/8 nota esa 2 ta *o‘n oltinchi (1/16) nota*ga bo‘linishi mumkin. 1/16 notalarni sanayotganda siz "va" ning har bir tomonida "e" va "a" dan foydalanishingiz mumkin: "1 e va a 2 e va a 3 e va a 4 e va a...."
+* 1 o'lchov - 4 ta 1/4 nota, 8 ta 1/8 nota yoki 16 ta 1/16 nota. E'tibor bering, bitta o'lchovdagi barcha notalarning yig'indisi 1 ga teng bo'lishi kerak. Ularni 1/4 + 1/4 + (1/8 + 1/8) + (1/16 + 1/16 + 1/16 + 1/16) = 1 kabi miks qilish va moslashtirish mumkin.
+* *Metronom* musiqachiga zarbani chertish orqali o'z asarining ritmini o'rnatishga yordam beradi. EarSketch RAIS-da siz ovoz darajasining chap tomonidagi "metronomni almashtirish" belgisi yordamida metronomni yoqishingiz yoki o'chirishingiz mumkin.
+
+[[imediameasurepng]]
+.O'lchov
+[caption="Figure 3.2.1: "]
+image::../media/U1P1/measure.png[A measure]
+
+[[imediabeatpng]]
+.Zarba
+[caption="Figure 3.2.2: "]
+image::../media/U1P1/beat.png[A beat]
+
+[[imediasixteenthnotepng]]
+.1/16 nota
+[caption="Figure 3.2.3: "]
+image::../media/U1P1/sixteenthnote.png[A sixteenth note]
+
+.AMALIYOT
+****
+Sevimli qo'shig'ingizni tinglang va ritmda qarsak chalishga harakat qiling. Ushbu mashqni qo'shningiz bilan bajarishingiz mumkin.
+****
+
+Ritmlarning har birini `zarba` (beat string) satrini ichiga bastalaymiz.  
+
+Baraban satri - bu `"0"`, `"+"` yoki `"-"` belgilaridan foydalaniladigan satr. Shuni eslatib o'tish kerakki, satr (ya'ni string) bu bir nechta belgidan iborat bolgan (Masaln `0` yoki `+`)  ma'lumotning bir turi va u qo'shtirnoq ichida yoziladi.  
+
+Masalan: `"0-00-00-0+++0+0+"`
+
+* `0` zarbdor ovozli klipni ijro eta boshlaydi (masalan, barabanning bir zarbasi).
+* `+` audio klipni keyingi quyi-zarbaga kengaytiradi. U har doim `0` yoki `+` dan keyin keladi.
+* `-` sukut, sukunat degan ma’noni anglatadi.
+
+.AMALIYOT
+****
+Quyidagi baraban satrlarining har biri uchun nollarga qarsak chalishga harakat qiling. So'ng tegishli audioni tinglang va siz haq ekanligingizni tekshiring. Ushbu mashq baraban satrlari qanday ishlashini tushunishga yordam beradi.
+****
+
+Bu yerda 1 o'lchovli zarba sarrlarining ba'zi misollari:
+
+Chorak notalar: `"0+++0+++0+++0+++"`
+(o'qing: "1, 2, 3, 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
+++++
+
+Sakkizinchi notalar: `"0+0+0+0+0+0+0+0+"`
+(o'qing: "1 va 2 va 3 va 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString11.mp3</div>
+++++
+
+O'n oltinchi notalar: `"0000000000000000"`
+(bu juda tez, tempga bog'liq)
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString12.mp3</div>
+++++
+
+`"0-0-0---0-0-0---"`
+(o'qing: "1 va 2, 3 va 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString2.mp3</div>
+++++
+
+`"0---0---0-0-0---"`
+(o'qing: "1, 2, 3 va 4")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString3.mp3</div>
+++++
+
+`"0---0---0---0000"`
+(o'qing: "1, 2, 3, 4 e va a")
+
+++++
+<div class="curriculum-mp3">audioMedia/beatString4.mp3</div>
+++++
+
+{nbsp} +
+
+////
+ADDITIONAL VIDEO TO BE ADDED
+See https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020
+video revamping tab
+////
+
+[[makebeat]]
+=== `makeBeat()` funktsiyasi
+
+Endi shaxsiy zarbangizni qanday yarishingiz mumkinligini ko'rib chiqaylik. Bu yerda biz "zarba" atamasini baraban urishining qisqartmasi sifatida ishlatamiz: zarbdor tovushlarning takroriy ritmik andozalari. Biz `makeBeat()` funktsiyasidan 4 ta argument bilan foydalanamiz:
+
+. *Ovoz(Sound):* Ovoz konstantasi.   "MAKEBEAT" ni tanlash uchun Ovoz Brauzerida janr filtrini ishlatishingizni tavsiya qilamiz. Bular zarba andozalarini yaratishga to'gri keladigan qisqa ovozlardir. 
+. *Trek (Track)*: Trek raqami
+. *Boshlanish (start)*: Boshlanish o'lchami
+. *Zarba (beat)*: `"0"`, `"+"` va `"-"` belgilaridan tashkil topgan satr.
+
+Masalan: `makeBeat(DUBSTEP_FILTERCHORD_002, 1, 1, "0--0--000--00-0-")` funktsiyasi `DUBSTEP_FILTERCHORD_002` ovozli klipidan foydalangan xolda `0--0--000--00-0-` andozasini 1-trekning 1-o'lchoviga joylashtiradi.
+
+Keling, ushbu video orqali batafsil ma'lumotni ko'ramiz:
+
+[role="curriculum-python curriculum-mp4"]
+[[video12py]]
+video::./videoMedia/3_3_makebeat_py.mp4[]
+
+[role="curriculum-javascript curriculum-mp4"]
+[[video12js]]
+video::./videoMedia/3_3_makebeat_js.mp4[]
+
+Mana videoda ko'rsatilgan misol:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-multi-beat.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-multi-beat.js.txt[]
+----
+
+{nbsp} +
+
+.AMALIYOT
+****
+Yangi `beatString1` o'zgaruvchisi, `"0"`, `"+"` va `"-"` belgilaridan iborat 16 ta belgili satr yarating.
+1-trekdagi qo'shiqqa zarba abdozasini qo'shish uchun `makeBeat()` funktsiyasidan foydalaning.
+Shuni yodda tuting:
+
+. O'zgaruvchilarni ishlatishdan avval ularni `=` belgisi bilan belgilashingiz kerak.
+. Xuddi `fitMedia()` kabi, `makeBeat()` funktsiyasi ham kichik (`m`) harf bilan boshlanadi va oʻrtada katta (`B`) harfi bo'ladi.
+. Xuddi `fitMedia()` kabi, `makeBeat()` funktsiyasi vergul bilan ajratilgan 4 ta parametrga ega.
+
+Musiqangizni tinglaganingizda, agar sizga birinchi versiya yoqmasa, u sizga yoqmagunga qadar, uni yanada yaxshiroq yangrashi uchun zarbangizni o'zgartiring.
+****
+
+{nbsp} +
+
+.AMALIYOT
+****
+Yangi skript yarating va `fitMedia()` yordamida 2 yoki 3 ta ovozli klip qo'shing. Klip nomlarini saqlash uchun o'zgaruvchilardan foydalaning.
+Kamida 2 xil zarba qo'shish uchun `makeBeat()` funktsiyasidan foydalaning. Siz ularni bir vaqtning o'zida ikkita turli trekda yoki bitta trekda birin-ketin ijro etishingiz mumkin.
+****
+
+[[beatsandgenres]]
+=== Musiqiy janringiz asosida zarba yarating
+
+Endi siz `makeBeat()` va zarba satrlari bilan ishlashni boshlaganingizdan so'ng, keling, siz foydalanishingiz mumkin bo'lgan bir nechta asosiy zarba andozalarini ko'rib chiqamiz.
+Siz musiqiy janr - bu shakl, uslub yoki mavzu bo'yicha o'xshashlik bilan tavsiflangan badiiy kompozitsiya (masalan, musiqa) toifasi ekanligini bilib oldingiz. Xuddi shunday, ba'zi janrlarda o'ziga xos zarba andozalari mavjud. Quyida ba'zi misollar keltirilgan:
+
+Biz 3 xil tovushdan foydalanamiz: zarba (1-trek), pistirma (2-trek) va likopcha (3-trek). Bu tovushlarning har biri uchun 3 xil trekda bitta `makeBeat()` funktsiyasidan foydalanamiz.
+
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
+
+Mana tegishli kod:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/add-beats-examples-of-beats.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/add-beats-examples-of-beats.js.txt[]
+----
+
+[[chapter3summary]]
+=== 3-Bob Xulosa
+
+* EarSketch-da 1 o'lchov 4 ta zarbaga yoki 4 chorak notaga bo'linadi. 1 zarba 4 ta o'n oltidan bir (1/16) notaga bo'linadi.
+* *O'zgaruvchilar* ma'lumotlarni saqlash uchun kompyuter xotirasida bo'sh joy yaratadi.
+* Siz avval `=` belgisi yordamida o'zgaruvchi nomiga qiymatni (ma'lumotlarni) belgilashingiz kerak. Keyin kodga o'zgaruvchining nomini yozib, undan foydalanishingiz mumkin.
+* *Satr* - bu birtirnoq yoki qo'shtirnoq bilan qoplangan belgilar qatoridan iborat ma'lumotlar turi.
+* Zarbdor ovozli kliplarni Ovoz Brauzeridagi ARTIST filtri yordamida topish mumkin: MAKEBEAT artistini tanlang.
+* Satrlar EarSketch da ritmik andozalar yaratish uchun `makeBeat()` funktsiyasi bilan ishlatiladi. `makeBeat()` o'z andozasining har o'n oltinchi notasini aniqlash uchun zarba satrini oladi. `0` klip ijrosini boshlaydi, `+` notani keyingi quyi-zarba uchun kengaytiradi va `-` sukut yaratadi.
+* `makeBeat()` to'rtta argument oladi:
+** *Ovoz(Sound):* Ovoz konstantasi
+** *Trek (Track)*: Trek raqami
+** *Boshlanish (start)*: Boshlanish o'lchami
+** *Zarba (beat)*: `"0"`, `"+"` va `"-"` belgilaridan tashkil topgan satr.
+* Turli xil zarba andozalari turli musiqiy janrlarga mos keladi.
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+Ushbu variantlardan qaysi biri satr hisoblanadi?
+
+[answers]
+* "Besh"
+* 5
+* BESH
+* Besh
+--
+
+[question]
+--
+Zarba andozasi satrida "0" nimani anglatadi?
+
+[answers]
+* Klip ijrosini boshlash
+* Sukut
+* Klipni kengaytirish
+* Klipni tugatish
+--
+
+[question]
+--
+EarSketch-da bir o'lchov...
+
+[answers]
+* 4 zarba uzunligida
+* Uzunligi 4 ta quyi-zarba
+* 16 zarba uzunligida
+* 1 chorak nota
+--
+
+[question]
+--
+1/16 nota...
+
+[answers]
+* chorak notaning chorak qismi
+* yarim zarba
+* chorak o'lchov
+* 1 o'lchov
+--
+
+[question]
+--
+`makeBeat()` funktsiyasidan foydalanish uchun parametrlar tartibi qanday boʻlishi kerak?
+
+[answers]
+* klip nomi, trek, boshlang'ich o'lchov, zarba satri
+* temp, trek, boshlang'ich o'lchov, yakuniy o'lchov
+* klip nomi, boshlang'ich o'lchov, yakuniy o'lchov, zarba satri
+* zarba satri, trek, boshlang'ich o'lchov, klip nomi
+--

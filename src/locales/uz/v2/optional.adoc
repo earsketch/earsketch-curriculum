@@ -1,0 +1,6 @@
+[[optional]]
+== Ixtiyoriy: Qo'shimcha o'rganish!
+
+:nofooter:
+
+Ushbu bo'limda siz kod ko'rsatmalarini samarali tarzda takrorlash imkonini beruvchi for halqalari haqida bilib olasiz. Shuningdek, biz tovush effektlari va vaqt o'tishi bilan effektlarning evolyutsiyasi bo'lgan zarflarni ko'rib chiqamiz. Va nihoyat, siz treklaringizni mix qilish va shartlardan foydalanishni o'rganasiz.

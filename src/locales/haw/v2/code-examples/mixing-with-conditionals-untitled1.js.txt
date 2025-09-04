@@ -1,0 +1,4 @@
+if (condition) {
+    // Here write the instructions the computer needs to execute if the condition evaluates to true
+    // Note that the instructions are indented, just like in for loops
+}

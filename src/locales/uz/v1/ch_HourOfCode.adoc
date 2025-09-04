@@ -1,0 +1,642 @@
+[[HourOfCode]]
+== EarSketch Bilan Bir Soat Dasturlash
+
+:nofooter:
+
+EarSketch bilan Bir Soat Dasturlashga xush kelibsiz.
+
+[[WhatIs]]
+=== EarSketch Nima?
+
+[role="curriculum-python"]
+EarSketch dasturi bu kod bilan musiqa yaratadigan platforma. Ushbu Bir Soat Dasturlash darsida siz EarSketch da dasturlashning asoslarini o'rganasiz va qyuidagi misol kabi musiqa yaratishni o'rganasiz:
+
+[role="curriculum-python"]
+audio::./audioMedia/HourOfCode-Example1.mp3[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Musiqani tinglab bo'lganingizdan so'ng davom etishingiz uchun, ushbu ekranning pastidagi on'ga ko'rsatgich tugmasini bosing.
+
+//Welcome to the EarSketch Hour of Code.
+
+//[[WhatIs]]
+
+//=== What is EarSketch?
+
+[role="curriculum-javascript"]
+EarSketch dasturi bu kod bilan musiqa yaratadigan platforma. Ushbu Bir Soat Dasturlash darsida siz EarSketch da dasturlashning asoslarini o'rganasiz va qyuidagi misol kabi musiqa yaratishni o'rganasiz:
+
+[role="curriculum-javascript"]
+audio::./audioMedia/HourOfCode-Example1.mp3[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Musiqani tinglab bo'lganingizdan so'ng davom etishingiz uchun, ushbu ekranning pastidagi on'ga ko'rsatgich tugmasini bosing.
+
+[[GettingStarted]]
+=== Boshlash
+
+[role="curriculum-python"]
+Quyida EarSketch'da yaratilgan kod misoli keltirilgan. U Python nomli dasturlash tilida yozilgan.  Tepa o'ng burchakda joylashgan ko'k tugmani bossangiz u kodni muharrirga ko'chiradi. Hozircha kodni tushunish xaqida o'ylamang.
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/ch_HourOfCode-untitled1.py.txt[]
+----
+
+[role="curriculum-python"]
+Kodni kod muharririga ko'chirgandan song, ko'k "Tahrirlash Uchun Import Qilish" tugmasini bosing. Bu sizga kodning ichida o'zgartirishlar kiritish imkoniyatini beradi.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_import.PNG[]
+
+//Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
+
+[role="curriculum-javascript"]
+Quyida EarSketch'da yaratilgan kod misoli keltirilgan. U JavaScript nomli dasturlash tilida yozilgan.  Tepa o'ng burchakda joylashgan ko'k tugmani bossangiz u kodni muharrirga ko'chiradi. Hozircha kodni tushunish xaqida o'ylamang.
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/ch_HourOfCode-untitled1.js.txt[]
+----
+
+[role="curriculum-javascript"]
+Kodni kod muharririga ko'chirgandan song, ko'k "Tahrirlash Uchun Import Qilish" tugmasini bosing. Bu sizga kodning ichida o'zgartirishlar kiritish imkoniyatini beradi.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_import.PNG[]
+
+//Click https://earsketch.gatech.edu/earsketch2/#?sharing=YxVT1jXrjUl7iCRTegP4zw[here] go to the EarSketch web app and open the starter code.
+
+[[RunTheCode]]
+=== Kodni Ishga Turhirish
+
+[role="curriculum-python"]
+Na'muna kodni ishlatish uchun kod muharririning tepasida "Ishga turhirish" tugmasini bosing.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_run.PNG[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Kodni ishga tushirganingizdan kegin, ekranning tepa qismini to'rtburchaklar bilan to'ldirilganini ko'rasiz. Bular tovush kliplarini bildiradi.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_daw_clips.PNG[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Kod bilan yaratilgan musiqani ijro etish uchun kliplarning yuqorisida joylashgan "Ijro etish" tugmasini bosing.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_play.PNG[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Quyidagi video kodni ochish, import qilish, ishga tushirish va eshitish na'munasini ko'rsatadi.
+
+[[video1livepy]]
+[role="curriculum-python"]
+video::./videoMedia/037-03-RunTheCode-PY.mp4[]
+
+[role="curriculum-javascript"]
+Na'muna kodni ishlatish uchun kod muharririning tepasida "Ishga turhirish" tugmasini bosing.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_run.PNG[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Kodni ishga tushirganingizdan kegin, ekranning tepa qismini to'rtburchaklar bilan to'ldirilganini ko'rasiz. Bular tovush kliplarini bildiradi.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_daw_clips.PNG[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Kod bilan yaratilgan musiqani ijro etish uchun kliplarning yuqorisida joylashgan "Ijro etish" tugmasini bosing.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_play.PNG[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Quyidagi video kodni ochish, import qilish, ishga tushirish va eshitish na'munasini ko'rsatadi.
+
+[[video1livejs]]
+[role="curriculum-javascript"]
+video::./videoMedia/037-03-RunTheCode-JS.mp4[]
+
+[[Clips]]
+=== Ovoz Kliplarini Qo'shish
+
+[role="curriculum-python"]
+Kliplarning yuqorisida vaqt jadvali joylashgan. U soniyada vaqtni (yuqori qismi) va o'lchovni (pastgi qismi). O'lchov bu musiqada vaqt birligni bildiradigan atama.
+
+[role="curriculum-python"]
+Kliplar qatorlab ko'rsatilgan, va har bir qator trek deb nomlanadi.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_daw_labeled.png[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Ovoz kliplarini trekka qoshadigan kodni kod muharririning 7-satrida joylashgan.
+
+[role="curriculum-python"]
+7-satr `fitMedia()` degan funktsiya qo'llanildi. Funktsia bu bir operatsiyani amalga oshiradigan bir maxsus kod.  `fitMeadia()` funktsiyasi vaqt jadvaliga bitta ovoz klipini qo'shadi.
+
+[role="curriculum-python"]
+Odatda funktsiya ishlashi uchun va aniq qanday ish bajarishni bilishi uhcun unga parametrlar talab qiladi. `fitMedia()` funktsiyasi o'ziga to'rtta parametir oladi:
+
+[role="curriculum-python"]
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* so'nggi o'lchov
+
+[role="curriculum-python"]
+Keling 7-satrni ko'rib chiqamiz:
+
+[role="curriculum-python"]
+[source,text]
+----
+fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5)
+----
+
+[role="curriculum-python"]
+Bu degani "RD_UK_HOUSE_MAINBEAT_8" ovoz klipi 1-trekka, 1-o'lchovdan boshlab 5-o'lchovgacha qo'yiladi.
+
+[role="curriculum-javascript"]
+Kliplarning yuqorisida vaqt jadvali joylashgan. U soniyada vaqtni (yuqori qismi) va o'lchovni (pastgi qismi). O'lchov bu musiqada vaqt birligni bildiradigan atama.
+
+[role="curriculum-javascript"]
+Kliplar qatorlab ko'rsatilgan, va har bir qator trek deb nomlanadi.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_daw_labeled.png[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Ovoz kliplarini trekka qoshadigan kodni kod muharririning 7-satrida joylashgan.
+
+[role="curriculum-javascript"]
+7-satr `fitMedia()` degan funktsiya qo'llanildi. Funktsia bu bir operatsiyani amalga oshiradigan bir maxsus kod.  `fitMeadia()` funktsiyasi vaqt jadvaliga bitta ovoz klipini qo'shadi.
+
+[role="curriculum-javascript"]
+Odatda funktsiya ishlashi uchun va aniq qanday ish bajarishni bilishi uhcun unga parametrlar talab qiladi. `fitMedia()` funktsiyasi o'ziga to'rtta parametir oladi:
+
+[role="curriculum-javascript"]
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* so'nggi o'lchov
+
+[role="curriculum-javascript"]
+Keling 7-satrni ko'rib chiqamiz:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,5);
+----
+
+[role="curriculum-javascript"]
+Bu degani "RD_UK_HOUSE_MAINBEAT_8" ovoz klipi 1-trekka, 1-o'lchovdan boshlab 5-o'lchovgacha qo'yiladi.
+
+[[ChangeEnd]]
+=== Klipning Tugash Vaqtini O'zgartirish
+
+[role="curriculum-python"]
+Keling 7-satrni ovoz klipi 5-o'lchovda emas 9-o'lchovda tugashi uchun o'zgartiramiz. Endi bu satir quyidagicha bo'lishi kerak.
+
+[role="curriculum-python"]
+[source,text]
+----
+fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9)
+----
+
+[role="curriculum-python"]
+Kod muharririni ishlatib 7-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_change_end.PNG[]
+
+[role="curriculum-javascript"]
+Keling 7-satrni ovoz klipi 5-o'lchovda emas 9-o'lchovda tugashi uchun o'zgartiramiz. Endi bu satir quyidagicha bo'lishi kerak.
+
+[role="curriculum-javascript"]
+[source,text]
+----
+fitMedia(RD_UK_HOUSE_MAINBEAT_8,1,1,9);
+----
+
+[role="curriculum-javascript"]
+Kod muharririni ishlatib 7-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_change_end.PNG[]
+
+[[ChangeStart]]
+=== Klipning Boshlanish Vaqtini O'zgartirish
+
+[role="curriculum-python"]
+Endi keling 8-satrni ko'rib chiqamiz. Unda shunday yozilgan:
+
+[role="curriculum-python"]
+[source,text]
+----
+fitMedia(RD_POP_PADCHORD_2,2,1,9)
+----
+
+[role="curriculum-python"]
+Bu degani "RD_POP_PADCHORD_2" 2-trekka, 1-o'lchovdan boshlab 9-o'lchovgacha qo'yiladi.
+
+[role="curriculum-python"]
+Kod satrni ovoz klipi 1-o'lchovda emas 5-o'lchovda boshlashi uchun o'zgartiring. Endi bu satir quyidagicha bo'lishi kerak.
+
+[role="curriculum-python"]
+[source,text]
+----
+fitMedia(RD_POP_PADCHORD_2,2,5,9)
+----
+
+[role="curriculum-python"]
+Kod muharririni ishlatib 8-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_change_start.PNG[]
+
+[role="curriculum-javascript"]
+Endi keling 8-satrni ko'rib chiqamiz. Unda shunday yozilgan:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+fitMedia(RD_POP_PADCHORD_2,2,1,9);
+----
+
+[role="curriculum-javascript"]
+Bu degani "RD_POP_PADCHORD_2" 2-trekka, 1-o'lchovdan boshlab 9-o'lchovgacha qo'yiladi.
+
+[role="curriculum-javascript"]
+Kod satrni ovoz klipi 1-o'lchovda emas 5-o'lchovda boshlashi uchun o'zgartiring. Endi bu satir quyidagicha bo'lishi kerak.
+
+[role="curriculum-javascript"]
+[source,text]
+----
+fitMedia(RD_POP_PADCHORD_2,2,5,9);
+----
+
+[role="curriculum-javascript"]
+Kod muharririni ishlatib 8-satrni o'zgartiring. So'ngra, kodni ishga turhiring, musiqani ijro qiling va qanday o'zgarganini eshiting.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_change_start.PNG[]
+
+[[StartAndEnd]]
+=== Boshlanish va Tugash Vaqtlari Bilan Tajribalar O'tkazing
+
+[role="curriculum-python"]
+Endi EarSketch'da boshlash va tugash vaqtlarini o'zgartirishni o'rganganingizdan so'ng, musiqani sozlashingiz mumkin.
+
+[role="curriculum-python"]
+7 va 8-satrlarda boshlash va tugash parametrilarda turli qiymatlar ishlatib ko'ring. Undan so'ng kodni ishga turhiring va musiqa qanday o'zgarganga e'tibor bering.
+
+[role="curriculum-python"]
+Boshlanish va tugash vaqtlarini belgilash uchun butun sonlar (masalan, 1, 5, 27...) yoki o'nli kasrlar (masalan 1.25, 5.5, 27.75) ishlatishingiz mumkin. Trek yoki o'lchamning eng kichik qiymati 1 bo'lishini unutmang.
+
+[role="curriculum-javascript"]
+Endi EarSketch'da boshlash va tugash vaqtlarini o'zgartirishni o'rganganingizdan so'ng, musiqani sozlashingiz mumkin.
+
+[role="curriculum-javascript"]
+7 va 8-satrlarda boshlash va tugash parametrilarda turli qiymatlar ishlatib ko'ring. Undan so'ng kodni ishga turhiring va musiqa qanday o'zgarganga e'tibor bering.
+
+[role="curriculum-javascript"]
+Boshlanish va tugash vaqtlarini belgilash uchun butun sonlar (masalan, 1, 5, 27...) yoki o'nli kasrlar (masalan 1.25, 5.5, 27.75) ishlatishingiz mumkin. Trek yoki o'lchamning eng kichik qiymati 1 bo'lishini unutmang.
+
+[[DrumFills]]
+=== Barabanli To'ldirishlar
+
+[role="curriculum-python"]
+14-satrda `makeBeat()` funktsiyasi ishlatildi. Bu funktsiya sizga turli ritmlar yaratishga yordam beradi.
+
+[role="curriculum-python"]
+`makeBeat()` funktsiyasi to'rtta parametirni qabul qiladi:
+
+[role="curriculum-python"]
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* zarba satri
+
+[role="curriculum-python"]
+14-satrda quyidagi kod yozilgan:
+
+[role="curriculum-python"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 4, fillA)
+----
+
+[role="curriculum-python"]
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatadi, uni  3-trek, 4-o'lchovga qo'yiladi,  va `fillA` zarba satrini ishlatadi.
+
+[role="curriculum-javascript"]
+14-satrda `makeBeat()` funktsiyasi ishlatildi. Bu funktsiya sizga turli ritmlar yaratishga yordam beradi.
+
+[role="curriculum-javascript"]
+`makeBeat()` funktsiyasi to'rtta parametirni qabul qiladi:
+
+[role="curriculum-javascript"]
+* ovoz klipi
+* trek raqami
+* boshlang'ish o'lchov
+* zarba satri
+
+[role="curriculum-javascript"]
+14-satrda quyidagi kod yozilgan:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 4, fillA);
+----
+
+[role="curriculum-javascript"]
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatadi, uni  3-trek, 4-o'lchovga qo'yiladi,  va `fillA` zarba satrini ishlatadi.
+
+[[Vars]]
+=== O'zgaruvchilar
+
+[role="curriculum-python"]
+Ushbu misolda `fillA` bu o'zgaruvchi. O'zgaruvchilar kodda ishlatilishi kerak bo'lgan sozlar yoki raqamlar kabi turli ma'lumotlarni saqlaydi.
+
+[role="curriculum-python"]
+`fillA` o'zgaruvchisi o'z ichida `"0---0-0-00--0000"` belgilar satrini saqlaydi. Bu satir `makeBeat()` uchun ritmni ifodalaydi. Satr ma'lumot turi doim q'oshtirnoq bilan boshlanadi. Kodimiz `fillB` and `fillC` satr o'zgaruvchilarini ham belgilaydi.
+
+[role="curriculum-python"]
+Keling 14-satrini boshqa o'zgaruvchilardan birini ishlatish uchun tahrirlaymiz. `fillB` yoki `fillC` o'zgaruvchilarini `fillA` o'rniga qo'yib almashtiring. `fillC` o'zgaruvchisini tanlasangiz 14-satir mana shunday shaklda bo'ladi:
+
+[role="curriculum-python"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 4, fillC)
+----
+
+[role="curriculum-python"]
+Yangi baraban to'ldirishni tanlaganingizdan kegin kodni ishga tushiring va natija musiqasini tinglang.
+
+[role="curriculum-javascript"]
+Ushbu misolda `fillA` bu o'zgaruvchi. O'zgaruvchilar kodda ishlatilishi kerak bo'lgan sozlar yoki raqamlar kabi turli ma'lumotlarni saqlaydi.
+
+[role="curriculum-javascript"]
+`fillA` o'zgaruvchisi o'z ichida `"0---0-0-00--0000"` belgilar satrini saqlaydi. Bu satir `makeBeat()` uchun ritmni ifodalaydi. Satr ma'lumot turi doim q'oshtirnoq bilan boshlanadi. Kodimiz `fillB` and `fillC` satr o'zgaruvchilarini ham belgilaydi.
+
+[role="curriculum-javascript"]
+Keling 14-satrini boshqa o'zgaruvchilardan birini ishlatish uchun tahrirlaymiz. `fillB` yoki `fillC` o'zgaruvchilarini `fillA` o'rniga qo'yib almashtiring. `fillC` o'zgaruvchisini tanlasangiz 14-satir mana shunday shaklda bo'ladi:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 4, fillC);
+----
+
+[role="curriculum-javascript"]
+Yangi baraban to'ldirishni tanlaganingizdan kegin kodni ishga tushiring va natija musiqasini tinglang.
+
+[[BeatStrings]]
+=== Zarba Satrini Tahrirlash
+
+[role="curriculum-python"]
+EarSketch'da `reverseString()` degan funktsiya mavjud. Ushbu funktsiya belgi satrini teskarisini qaytaradi.
+
+[role="curriculum-python"]
+Kodning 16-satrida quyidagini yozing:
+
+[role="curriculum-python"]
+[source,text]
+----
+fillRev = reverseString(fillA)
+----
+
+[role="curriculum-python"]
+Bu amal `fillRev` degan yangi o'zgaruvchi yaratadi va bu o'zgaruvchi `fillA`ning teskarisidir. Since `fillA`ning satri `"0---0-0-00--0000"` bo'lsa `fillRev`ning satri `"0000--00-0-0---0"` bo'ladi.
+
+[role="curriculum-javascript"]
+EarSketch'da `reverseString()` degan funktsiya mavjud. Ushbu funktsiya belgi satrini teskarisini qaytaradi.
+
+[role="curriculum-javascript"]
+Kodning 16-satrida quyidagini yozing:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+fillRev = reverseString(fillA);
+----
+
+[role="curriculum-javascript"]
+Bu amal `fillRev` degan yangi o'zgaruvchi yaratadi va bu o'zgaruvchi `fillA`ning teskarisidir. Since `fillA`ning satri `"0---0-0-00--0000"` bo'lsa `fillRev`ning satri `"0000--00-0-0---0"` bo'ladi.
+
+[[NewFill]]
+=== Yangi To'ldirish Yaratish
+
+[role="curriculum-python"]
+`makeBeat()` funktsiyaning ichida `fillRev` o'zgaruvchisini ishlatishingiz mumkin. Mavjud bo'lgan `makeBeat()` ni tahrirlashni o'rniga biz yangisini yaratib uni musiqaga ikkinchi baraban to'ldirishini qo'shish uchun ishlatishimiz mumkin.
+
+[role="curriculum-python"]
+17-satrda teskari to'ldirishni yaratish uchun quyidagi kodni yozing:
+
+[role="curriculum-python"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 8, fillRev)
+----
+
+[role="curriculum-python"]
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatib, uni 3-trek, 8-o'lchovga qo'yadi, va `fillRev` zarba satrini ishlatadi.
+
+[role="curriculum-python"]
+Kodni ishga tushiring va natijasini eshiting.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_new_fill.PNG[]
+
+[role="curriculum-javascript"]
+`makeBeat()` funktsiyaning ichida `fillRev` o'zgaruvchisini ishlatishingiz mumkin. Mavjud bo'lgan `makeBeat()` ni tahrirlashni o'rniga biz yangisini yaratib uni musiqaga ikkinchi baraban to'ldirishini qo'shish uchun ishlatishimiz mumkin.
+
+[role="curriculum-javascript"]
+17-satrda teskari to'ldirishni yaratish uchun quyidagi kodni yozing:
+
+[role="curriculum-javascript"]
+[source,text]
+----
+makeBeat(OS_SNARE03, 3, 8, fillRev);
+----
+
+[role="curriculum-javascript"]
+Bu degani bu zarba "OS_SNARE03" ovoz klipini ishlatib, uni 3-trek, 8-o'lchovga qo'yadi, va `fillRev` zarba satrini ishlatadi.
+
+[role="curriculum-javascript"]
+Kodni ishga tushiring va natijasini eshiting.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_new_fill.PNG[]
+
+[[UserFill]]
+=== O'zingiz Tuzgan To'ldirishni Qo'shing
+
+[role="curriculum-python"]
+Olgan bilimlaringizdan foydalanib yana bitta `makeBeat()` funktsiyasini yozing. Uni boshqa zarba satrini ishlatib boshqa o'lchovga qo'ying.
+
+[role="curriculum-python"]
+Siz berilgan zarba satrlardan birini olib, uni o'zgartirib yoki umuman yangi satrni yaratishingiz mumkin. Yangi satrni yaratish uchun "0" va "-" belgilarni ishlating. Zarba satrlari odatda 16ta belgidan iborat va bu musiqaning bir o'lchoviga to'gri keladi.
+
+[role="curriculum-javascript"]
+Olgan bilimlaringizdan foydalanib yana bitta `makeBeat()` funktsiyasini yozing. Uni boshqa zarba satrini ishlatib boshqa o'lchovga qo'ying.
+
+[role="curriculum-javascript"]
+Siz berilgan zarba satrlardan birini olib, uni o'zgartirib yoki umuman yangi satrni yaratishingiz mumkin. Yangi satrni yaratish uchun "0" va "-" belgilarni ishlating. Zarba satrlari odatda 16ta belgidan iborat va bu musiqaning bir o'lchoviga to'gri keladi.
+
+[[Comments]]
+=== Sharhlardan Foydalanish
+
+[role="curriculum-python"]
+Na'muna kodlarida siz `# Ovoz Qo'shish`, `# To'ldirish`, `# Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "#" belgisi o'sha satrni sharhligini bildiradi. Sharhlar kod to'g'risida qo'shimcha ma'lumot beradi va ularni kompyuter inkor qiladi.
+
+[role="curriculum-python"]
+Sharhlar bo'limlarni nomlash yoki tushintirish uchun ishlatilishi mumkin. Ular kodni o'qishni va tushunishni osonlashtiradi. Bundan tashqari, sharhlar kodning satrlarini bekor qilish uchun ishlatilishi mumkin. Bunda holda kompyuter kodni bajarganda o'sha satrni inkor qiladi.
+
+[role="curriculum-javascript"]
+Na'muna kodlarida siz `// Ovoz Qo'shish`, `// To'ldirish`, `// Yana Ovozlar` kabi bo'lim nomlarini ko'rasiz. Satrning boshidagi "//" belgisi o'sha satrni sharhligini bildiradi. Sharhlar kod to'g'risida qo'shimcha ma'lumot beradi va ularni kompyuter inkor qiladi.
+
+[role="curriculum-javascript"]
+Sharhlar bo'limlarni nomlash yoki tushintirish uchun ishlatilishi mumkin. Ular kodni o'qishni va tushunishni osonlashtiradi. Bundan tashqari, sharhlar kodning satrlarini bekor qilish uchun ishlatilishi mumkin. Bunda holda kompyuter kodni bajarganda o'sha satrni inkor qiladi.
+
+[[AddSounds]]
+=== Qo'shimcha Tovushlar
+
+[role="curriculum-python"]
+`# Qo'shimcha tovushlar` sharhi ostida bir nechta `fitMedia()` funktsialar yozilgan va ular hammasi sharh belgisi bilan bekor qilingan. Ularning har birida boshqacha tovush belgilangan.
+
+[role="curriculum-python"]
+Bu satrlarni qayta tiklash uchun satr boshidagi "#" belgisini o'chiring.
+
+[role="curriculum-python"]
+Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
+
+[role="curriculum-javascript"]
+`// Qo'shimcha tovushlar` sharhi ostida bir nechta `fitMedia()` funktsialar yozilgan va ular hammasi sharh belgisi bilan bekor qilingan. Ularning har birida boshqacha tovush belgilangan.
+
+[role="curriculum-javascript"]
+Bu satrlarni qayta tiklash uchun satr boshidagi "//" belgisini o'chiring.
+
+[role="curriculum-javascript"]
+Satrlarni turli kombinatsiyalarda tiklab ko'ring. Undan so'ng kodni ishga turhiring va natijasini eshiting. Ishga tushirish tugmasini bosishdan oldin, har bir satr qanday musiqa qo'shishini taxmin qilib ko'ring.
+
+[[MakeYourOwn]]
+=== O'zingiz Musiqa Yarating
+
+[role="curriculum-python"]
+Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
+
+[role="curriculum-python"]
+Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
+
+[role="curriculum-python"]
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Yangi qo'shiqni boshlashni istasangiz, yangi Python tilida skriptni yaratish uchun `+` tugmasini bosing.
+
+[role="curriculum-python"]
+Agar boshqa ovozlar bilan tanishishni istasangiz, Ovoz Brauzeridan foydalaning. Brauzerni ko'rish uchun ekranning chap tarafidagi tugmani bosing.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_sound_browser1.png[]
+
+[role="curriculum-python"]
+{empty} +
+
+[role="curriculum-python"]
+Uning ichida siz EarSketch'da mavjud barcha ovozlarni qidiruv orqali yoki filtrlar orqali topishingiz mumkin.
+
+[role="curriculum-python"]
+image::../media/HOC/hoc_sound_browser2.PNG[]
+
+[role="curriculum-javascript"]
+Endi EarSketch'da o'zingiz musiqa yaratish vaqti keldi.
+
+[role="curriculum-javascript"]
+Sharh belgisini qo'shing yoki bekor qiling, `fitMedia()`ning ichida boshlanish va tugash vaqtlarini o'zgartiring, va `makeBeat()` bilan to'ldirishlar qo'shing.
+
+[role="curriculum-javascript"]
+Na'muna kodida berilgan kodni ichida sharh belgisini ishlatib funktsiyalarni o'chiring yoki ularni o'zgartiring. Istasangiz yangi kodni o'zingiz boshidan yozishga urinib ko'ring. Yangi qo'shiqni boshlashni istasangiz, yangi JavaScript tilida skriptni yaratish uchun `+` tugmasini bosing.
+
+[role="curriculum-javascript"]
+Agar boshqa ovozlar bilan tanishishni istasangiz, Ovoz Brauzeridan foydalaning. Brauzerni ko'rish uchun ekranning chap tarafidagi tugmani bosing.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_sound_browser1.png[]
+
+[role="curriculum-javascript"]
+{empty} +
+
+[role="curriculum-javascript"]
+Uning ichida siz EarSketch'da mavjud barcha ovozlarni qidiruv orqali yoki filtrlar orqali topishingiz mumkin.
+
+[role="curriculum-javascript"]
+image::../media/HOC/hoc_sound_browser2.PNG[]
+
+[[GoingFurther]]
+=== EarSketch Beradigan Keng Imkiniyatlar
+
+[role="curriculum-python"]
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. Unga kirish uchun ekraningiz tepa o'ng tarafida joylashgan Mundarija tugmasini bosing.
+
+[role="curriculum-python"]
+To'liq o'quv dasturidan foydalanib siz dasturlash xaqida chuqurroq o'rganishingiz va murakkabroq musiqa yaratishingiz mumkin. Quyidagi misol cheksiz imkoniyatlardan birini ko'rsatadi.
+
+[role="curriculum-python"]
+audio::./audioMedia/HourOfCode-Example2.mp3[]
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/ch_HourOfCode-untitled2.py.txt[]
+----
+
+[role="curriculum-javascript"]
+EarSketch biz bir soat ichida olgan bilimlardan boshqa ko'p qobiliyatlari bor. To'lig o'quv darsi mana shu panelda ko'rsatiladi. Unga kirish uchun ekraningiz tepa o'ng tarafida joylashgan Mundarija tugmasini bosing.
+
+[role="curriculum-javascript"]
+To'liq o'quv dasturidan foydalanib siz dasturlash xaqida chuqurroq o'rganishingiz va murakkabroq musiqa yaratishingiz mumkin. Quyidagi misol cheksiz imkoniyatlardan birini ko'rsatadi.
+
+[role="curriculum-javascript"]
+audio::./audioMedia/HourOfCode-Example2.mp3[]
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/ch_HourOfCode-untitled2.js.txt[]
+----
