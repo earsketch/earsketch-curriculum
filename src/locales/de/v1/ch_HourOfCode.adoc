@@ -39,7 +39,7 @@ audio::./audioMedia/HourOfCode-Example1.mp3[]
 Wenn du mit dem Anhören der Musik fertig bist, drücke die rechte Pfeiltaste am oberen Rand des Bildschirms, um fortzufahren.
 
 [[GettingStarted]]
-=== Loslegen
+=== Starttakt
 
 [role="curriculum-python"]
 Unten ist ein Code, der in der EarSketch erstellt wurde. Er ist in einer Programmiersprache namens Python geschrieben. Klicke auf das blaue Symbol in der oberen rechten Ecke, um den Code in den Code-Editor zu kopieren. Mach dir noch keine Gedanken über das Verständnis des Codes.
@@ -327,7 +327,7 @@ Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern k
 Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und hör zu, wie sich die Musik verändert.
 
 [role="curriculum-python"]
-Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
+1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
 
 [role="curriculum-javascript"]
 Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern kannst, kannst du die Musik anpassen.
@@ -336,7 +336,7 @@ Da du nun weißt, wie du die Start- und Endzeit von Clips in EarSketch ändern k
 Probiere in den Zeilen 7 und 8 verschiedene Werte für die Parameter start und end aus. Führe dann den Code aus und hör zu, wie sich die Musik verändert.
 
 [role="curriculum-javascript"]
-Du kannst ganze Zahlen (z. B. 1, 5 oder 27) oder Dezimalzahlen (z. B. 1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
+1,25, 5,5 oder 27,75) für Start- und Endzeiten verwenden. Denk daran, dass die kleinste Zahl, die du für einen Takt oder eine Spur verwenden kannst, 1 ist.
 
 [[DrumFills]]
 === Drum fills
