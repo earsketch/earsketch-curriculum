@@ -1,0 +1,7 @@
+#Nom Xatosi: Misol
+
+from earsketch import *
+setTempo(120)
+
+bugun = ReadInput("Bugun qaysi kun?")
+print("Bugun" + bugun)

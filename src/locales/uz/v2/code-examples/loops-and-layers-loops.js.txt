@@ -1,0 +1,14 @@
+// Halqalar: Kod halqalari orqali musiqaviy takrorlashlar
+
+// Sozlash
+setTempo(120);
+
+// Musiqa
+var drums1 = ELECTRO_DRUM_MAIN_BEAT_008;
+var drums2 = ELECTRO_DRUM_MAIN_BEAT_007;
+
+// Bir xil kodni yozishni o'rniga halqalardan foydalanish
+for (var measure = 1; measure < 9; measure = measure + 1) {
+    fitMedia(drums1, 1, measure, measure + 0.5);
+    fitMedia(drums2, 1, measure + 0.5, measure + 1);
+}

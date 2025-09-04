@@ -1,0 +1,14 @@
+// analyzeTrack(): analyzeTrack() funktsiyasini trekning ovozini balandligni chop etish uchun ishlatish
+
+// Sozlash
+setTempo(120);
+
+// Musiqani 1-trekka qo'yish
+var sound = COMMON_LOVE_VOX_COMMON_1;
+fitMedia(sound, 1, 1, 9);
+
+// 1-trekni ovozining balangligini saqlash uchun o'zgaruvchini yaratish
+var loudness1 = analyzeTrack(1, RMS_AMPLITUDE);
+
+// Trek ovozini balandligini konsolda ko'rsatish
+println(loudness1);

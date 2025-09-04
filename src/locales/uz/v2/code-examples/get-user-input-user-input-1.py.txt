@@ -1,0 +1,16 @@
+# Foydalanuvchi kiritgan ma'lumot 1: Foydalanuvchidan tempni sorab olish
+
+# Sozlash
+from earsketch import *
+
+# Tempni sorab olish
+question = "Musiqangiz qanday tempda bo'lishini istaysiz? 45dan 220gacha bo'lgan raqam tanlang"
+
+// butun songa aylantirish
+tempo = int(answer)
+
+# tempni o'rnatish
+setTempo(tempo)
+
+# Musiqa
+fitMedia(COMMON_LOVE_THEME_STRINGS_1, 1, 1, 5)

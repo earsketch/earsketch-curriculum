@@ -1,0 +1,10 @@
+if (shart1) {
+    // # Bu yerda shart1 Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing.
+} else if (condition2) {
+    // Bu yerda shart2 bajarilganligi Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing. Agar shart2 bajarilganiligi Yolg'on deb baholansa, keyingi satrga kompyuter keyingi satrga o'tadi.
+    // elif bu else if'ni qisqartirilgani. Aks holda agar deb tarjima qilsak bo'ladi.
+} else if (shart3) {
+    // Bu yerda shart3 bajarilgani Rost deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing. Agar shart3 bajarilganiligi Yolg'on deb baholansa, keyingi satrga kompyuter keyingi satrga o'tadi.
+} else {
+    // Bu yerda uchchala shart bajarilgani Yolg'on deb baholansa, kompyuter bajarishi kerak bo'lgan ko'rsatmalarni yozing
+}

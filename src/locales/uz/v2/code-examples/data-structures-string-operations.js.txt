@@ -1,0 +1,24 @@
+// Satr operatsiyalari: Zarba satrini uzaytirish
+
+// Sozlash
+setTempo(120);
+
+// Musiqa
+var initialBeat = "0+0+00-00+++-0++";
+var drumInstr = RD_UK_HOUSE_MAINBEAT_10;
+
+function expander(beatString) {
+    var newBeat = "";
+    for (var i = 0; i < beatString.length; i = i + 1) {
+        beatSlice = beatString.substring(0, i);
+        newBeat = newBeat + beatSlice;
+    }
+    // Yangi satrini funktsiyadan tashqari ishlatish uchun qaytarib olish
+    return newBeat;
+}
+
+var finalBeat = expander(initialBeat);
+println(finalBeat);
+
+// makeBeat(drumInstr, 1, 1, initialBeat); // boshlang'ich zarba satri
+makeBeat(drumInstr, 1, 1, finalBeat);

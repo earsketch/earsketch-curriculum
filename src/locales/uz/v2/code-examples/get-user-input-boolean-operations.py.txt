@@ -1,0 +1,31 @@
+# Mantiqiy operatsiyalar: Ishlatuvchidan janrni so'rab olish va javobga ko'ra zarbani yaratish
+
+from earsketch import *
+setTempo(120)
+
+# Tovush o'zgaruvchilari
+kick = OS_KICK02
+hihat = OS_CLOSEDHAT04
+clap = OS_CLAP03
+
+# Zarba satr o'zgaruvchilari
+hiphopKickBeat = "0++++---0+++0+++"
+hiphopHihatBeat = "----0---00---000"
+edmKickBeat = "0+++----0+++----"
+edmClapBeat = "----0-------0---"
+
+# Ishlatuvchidan kirimni so'rab olish
+genre = readInput("Qaysi janrni yoqtirasiz? Hip Hop yoki EDM?")
+
+# Kerak bo'lgan ritmni yaratish
+if (genre == "Hip Hop") or (genre == "hip hop") or (genre == "HIP HOP"):
+    makeBeat(kick, 1, 1, hiphopKickBeat)
+    makeBeat(hihat, 2, 1, hiphopHihatBeat)
+elif (genre == "edm") or (genre == "Edm") or (genre == "EDM"):
+    makeBeat(kick, 1, 1, edmKickBeat)
+    makeBeat(clap, 2, 1, edmClapBeat)
+else:
+    print("Kechirasiz. Siz tanlagan janrni biz o'qiy olmadik. Iltimos, kodni qayta ishga tushiring.")
+
+# 2-trekka reverb effektini qo'shish
+setEffect(2, REVERB, MIX, 0.1)

@@ -329,7 +329,7 @@ Genauso, wenn du Feedback erhältst:
 Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewen, um ihn zu verbessern. Hier sind einige Ideen, um loszulegen:
 
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
-* Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
+* Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu. Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
@@ -343,7 +343,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewen, um ihn zu verbessern. Hier sind einige Ideen, um loszulegen:
 
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
-* Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat-String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
+* Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
 * Füge einige Effekte mit `setEffect()` hinzu.  Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
@@ -362,7 +362,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Listen und Arrays können mit *Listenoperation*, einem Set von Tools zur Änderung einer Liste, verkettet und gesliced werden.
 * Die Syntax für das Erstellen einer Teilmenge einer Liste aus einer größeren, vorhandenen Liste ist `newList = oldList[startIndex: endIndex]`.
 * Listen können mit dem Verkettungsoperator, `+`, wie `newList = listA + listB` kombiniert werden.
-* `makeBeat()` kann Rhythmen aus mehreren Sounds gleichzeitig konstruieren, indem er in einem Beat-String übergeht, der auf verschiedene Listenindizes verweist. `makeBeat()` kann auf Sounds in Indizes 0 bis 9 zugreifen, vorausgesetzt, sie werden in der gleichen Liste gespeichert.
+* `makeBeat()` kann Rhythmen aus mehreren Sounds gleichzeitig konstruieren, indem er in einem Beat String übergeht, der auf verschiedene Listenindizes verweist. `makeBeat()` kann auf Sounds in Indizes 0 bis 9 zugreifen, vorausgesetzt, sie werden in der gleichen Liste gespeichert.
 * Der Austausch konstruktiver Informationen mit anderen ist eine Form von *Peer-Feedback*. Es bietet die Möglichkeit, von anderen zu lernen.
 
 [role="curriculum-javascript"]
@@ -374,7 +374,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Die Syntax um ein Array aus einem größeren, existierenden Array herauszuschneiden, ist `newArray = oldArray.slice(startIndex, endIndex)`.
 * Die Syntax zum Slicing eines Substring aus einem größeren String ist `newString = oldString.substring(startIndex, endIndex)`.
 * Arrays können mit der Methode `concat()` kombiniert werden, wie `newArray = arrayA.concat(arrayB)`.
-* `makeBeat()` kann Rhythmen aus mehreren Sounds auf einmal erstellen, indem ein Beat-String übergeben wird, der sich auf verschiedene Array-Indexe bezieht. makeBeat()` kann auf Sounds in den Indexen 0 bis 9 zugreifen, sofern sie im selben Array gespeichert sind.
+* `makeBeat()` kann Rhythmen aus mehreren Sounds auf einmal erstellen, indem ein Beat String übergeben wird, der sich auf verschiedene Array-Indexe bezieht. makeBeat()` kann auf Sounds in den Indexen 0 bis 9 zugreifen, sofern sie im selben Array gespeichert sind.
 * Der Austausch konstruktiver Informationen mit anderen ist eine Form von *Peer-Feedback*. Es bietet die Möglichkeit, von anderen zu lernen.
 
 [[chapter-questions]]

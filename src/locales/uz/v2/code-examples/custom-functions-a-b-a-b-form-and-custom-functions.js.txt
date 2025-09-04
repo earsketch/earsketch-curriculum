@@ -1,0 +1,29 @@
+// A-B-A-B shaklidagi va maxsus funktsiyalar: A va B qismga ega bo'lgan qo'shiq va uni funktsiyalar yordamida yaratish
+
+// Sozlash
+setTempo(120);
+
+//Musiqa
+
+// A qismini funktsiya orqali yaratish
+function sectionA(startMeasure, endMeasure) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_7, 1, startMeasure, endMeasure); // asosiy
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_24, 2, startMeasure, endMeasure); // baraban
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_2, 3, startMeasure, endMeasure); // bass
+    setEffect(3, VOLUME, GAIN, -20, startMeasure, 0, endMeasure); // bass ovozini ko'tarish
+}
+
+// B qismini funktsiya orqali yaratish
+function sectionB(startMeasure, endMeasure) {
+    fitMedia(RD_WORLD_PERCUSSION_KALIMBA_PIANO_1, 1, startMeasure, endMeasure); // boshqacha asosiy melodiya
+    fitMedia(RD_WORLD_PERCUSSION_DRUMPART_5, 2, startMeasure, endMeasure); // baraban o'zgarishi
+    fitMedia(RD_UK_HOUSE__EVOLVEPAD_3, 3, startMeasure, endMeasure); // kontrastli bass: sekinroq va ovozi balandroq
+    setEffect(3, VOLUME, GAIN, 5, startMeasure, 5, endMeasure); // bass ovozini ko'tarish
+    fitMedia(RD_WORLD_PERCUSSION_SEEDSRATTLE_1, 4, startMeasure, endMeasure); // shitirlash: yangi element qoshiladi
+}
+
+// Funktsiyalarimni chariqish
+sectionA(1, 5);
+sectionB(5, 9);
+sectionA(9, 13);
+sectionB(13, 17);

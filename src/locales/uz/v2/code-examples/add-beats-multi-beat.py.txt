@@ -1,0 +1,14 @@
+#Multi Zarba: Bir nechta makeBeat funksiyasini turli ritmlar bilan ishlatish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+#Musiqa
+synth = DUBSTEP_FILTERCHORD_002
+cymbal = OS_CLOSEDHAT01
+beat1 = "-00-00+++00--0-0"
+beat2 = "0--0--000--00-0-"
+
+makeBeat(synth, 1, 1, beat1)
+makeBeat(cymbal, 2, 1, beat2)

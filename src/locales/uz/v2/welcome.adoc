@@ -1,0 +1,26 @@
+[[welcome]]
+== Xush Kelibsiz Talabalar va O'qituvchilar!
+
+:nofooter:
+
+EarSketch Dasturiga Xush Kelibsiz!
+
+*O‘qituvchilar*: https://earsketch.gatech.edu/teachermaterials/EarSketch_Alignment_Guide.pdf[yangi o‘quv dasturi bo‘yicha qo‘llanma^] bilan tanishing va qo‘shimcha ma’lumot uchun https://www.teachers.earsketch.org[EarSketch O'qituvchi Saytiga^] tashrif buyuring.
+
+*Talabalar*: EarSketch haqida batafsil ma'lumot olish uchun quyida davom eting
+
+Bu yerda siz informatika va musiqa texnologiyasini yonma-yon o'rganasiz. Shaxsiy musiqangizni yaratish uchun Python yoki JavaScript-dan foydalanasiz.
+
+Musiqachilar va dasturchilar yangi tovushlar, effektlar va qo'shiqlar yaratish uchun kompyuter kodini yozadilar.
+
+[role="curriculum-mp4"]
+[[video0]]
+video::../landing/media/homepagevid.a1cf3d01.mp4[poster=../landing/img/homepagevid-poster.8993a985.png]
+
+Kompyuter kodini yozishni o'rganish - bu turli martaba yo'llarida sizga foydali bo'ladigan mahoratdir.
+
+Balki siz afsonaviy musiqa prodyuseri yoki sanoatning eng talabgor ovoz yozish muhandisi bo'lasiz! EarSketch-ga sayohatingizda omad tilaymiz.
+
+Boshlash uchun ushbu matnning yuqori qismidagi o'ng ko'rsatkichni bosing.
+
+Oʻqituvchilar, bepul oʻqituvchi materiallari va hamjamiyatiga kirish uchun https://www.teachers.earsketch.org/[bu yerga^] bosing!

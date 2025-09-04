@@ -4,7 +4,7 @@
 from earsketch import *
 setTempo(120)
 
-# Meine Beat-Strings und Arrays erstellen
+# Erstellen meiner Beat Strings und Arrays
 stringA = "0+++----0+++--0+"
 stringB = "0-0-0-0-----0-0-"
 soundsA = [RD_FUTURE_DUBSTEP_MAINBEAT_1, RD_FUTURE_DUBSTEP_BASSWOBBLE_2, RD_POP_SFX_NOISERHYTHM_1]

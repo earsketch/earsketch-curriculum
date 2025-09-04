@@ -1,0 +1,19 @@
+# Printing: Using print() to print messages in the console
+
+# Setup
+from earsketch import *
+setTempo(120)
+
+# Variables
+drum1 = OS_SNARE03
+beat_string = "0---0---0-0-0---"
+
+# First print statement
+print(1 + 3)
+
+# Looping our beat
+# Note that the print statement is in the for loop so it will be executed at each iteration of the loop.
+for measure in range(1, 5):
+    makeBeat(drum1, 1, measure, beat_string)
+    print(measure)
+    print("ok")

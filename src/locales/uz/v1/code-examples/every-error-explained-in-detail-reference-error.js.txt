@@ -1,0 +1,6 @@
+// Mos Yozuvlar Xatosi: Misol
+
+setTempo(120);
+
+var bugun = readInput("Bugun qaysi kun?");
+print("Bugun " + Bugun);

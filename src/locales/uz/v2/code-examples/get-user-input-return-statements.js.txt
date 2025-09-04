@@ -1,0 +1,25 @@
+// Qaytarish Bayonotlari: Ikkita zarbani qaytarish bayonotlari orqali birlashtirish
+
+// Sozlash
+setTempo(100);
+
+var rhythm1 = "0+++0+0+0+--0+00";
+var rhythm2 = "0+0-00++0-000+++";
+
+// Musiqa
+function createBeat(startMeasure, sound, beatString) {
+    var endMeasure = startMeasure + 3;
+    for (var measure = startMeasure; measure < endMeasure; measure++) {
+        makeBeat(sound, 1, measure, beatString);
+    }
+
+    // Nihoyat o'lchovni funktsiyadan tashaqari ishlata olish uchun qaytarish
+    return endMeasure;
+}
+
+// Funktsiyani chaqirish
+// O'zgaruvchiga qaytarilgan qiymatni tayinlash
+var newStart = createBeat(1, HIPHOP_DUSTYGROOVE_007, rhythm1);
+
+// Qaytarilgan qiymatni yana bir bor funktsiyaga o'tkazish
+createBeat(newStart, HIPHOP_DUSTYGROOVE_010, rhythm2);

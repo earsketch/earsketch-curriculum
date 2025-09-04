@@ -1,0 +1,10 @@
+//Index Xatosi: To'g'irlash
+
+from earsketch import *
+setTempo(100)
+
+orch = [Y18_STRINGS_2_3, HIPHOP_DUSTYGROOVE_002, Y41_STRINGS_2]
+
+fitMedia(orch[0], 1, 1, 17)
+fitMedia(orch[1], 2, 5, 17)
+fitMedia(orch[2], 3, 9, 17)

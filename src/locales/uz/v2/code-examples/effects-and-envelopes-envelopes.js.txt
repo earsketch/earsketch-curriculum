@@ -1,0 +1,11 @@
+// Zarflar: 7 parametrli setEffect() bilan zarflar yaratish
+
+// Sozlash
+setTempo(120);
+
+// Musiqa
+fitMedia(ELECTRO_ANALOGUE_LEAD_012, 1, 1, 9);
+
+// 1 va 3 o'lchamlari orasida effekt rampasini yaratish. U -60dB dan 0dB ga otadi.
+// Bu 'fade in', ya'ni sekin asta tovushning baland bolishi
+setEffect(1, VOLUME, GAIN, -60, 1, 0, 3);

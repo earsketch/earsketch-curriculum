@@ -1,0 +1,14 @@
+# Qo'shma Kirish: Royxat iteratsiyasi orqali qo'shma kirishni yaratish
+
+# Sozlash
+from earsketch import *
+setTempo(120)
+
+#Musiqa
+introSounds = [HIPHOP_DUSTYGROOVE_003, TECHNO_LOOP_PART_006, HOUSE_SFX_WHOOSH_001, TECHNO_CLUB5THPAD_001]
+
+for measure in range(1, len(introSounds) + 1):
+    # len(introSounds)'ga 1 qo'shamiz chunki diapazonning ikkinchi argumenti ekslyuziv hisoblanadi
+    index = measure - 1  # nolga asoslangan ro'yxat indeksi
+    track = measure  # trekni o'lchov asosida o'zgartirish
+    fitMedia(introSounds[index], track, measure, 5)

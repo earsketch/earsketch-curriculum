@@ -1,0 +1,290 @@
+[[customizeyourfirstsong]]
+== Birinchi qo'shig'ingizni sozlang
+
+:nofooter:
+
+Ushbu bo'limda siz qo'shig'ingizning tempini qanday o'zgartirishni, kodingizga sharhlar qo'shishni va qo'shiq xabarini kuchaytirish uchun o'z tovushlaringizni yuklashni o'rganasiz.
+
+[[settempo]]
+=== `setTempo()` funktsiyasi
+
+[role="curriculum-python"]
+--
+Hozirga kelib, siz yangi skript yaratishda kodingiz ishlashi uchun avvaldan mavjud elementlar borligini payqadingiz:
+
+. `#` bilan boshlangan baʼzi sharhlar: bu haqda keyingi boʻlimda batafsil toʻxtalamiz
+. loyihaga EarSketch funktsiyalarini (masalan, `fitMedia()`) qo‘shadigan `from earsketch import*` qatori
+. `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
+--
+
+[role="curriculum-javascript"]
+--
+Hozirga kelib, siz yangi skript yaratishda kodingiz ishlashi uchun avvaldan mavjud elementlar borligini payqadingiz:
+
+. `//` bilan boshlangan baʼzi sharhlar: bu haqda keyingi boʻlimda batafsil toʻxtalamiz
+. `setTempo(120)` funktsiyasi, biz uni quyida batafsil ko'rib chiqamiz
+--
+
+`setTempo()` funktsiyasi qo'shiq tezligini aniqlaydi. G'arb musiqasida *Temp* - bu daqiqada zarbalar miqdori (dzm) sanaladi. EarSketch-da standart temp (ya'ni tempning boshlang'ich qiymati) 120dzm ga o'rnatiladi, bu tez yurish yoki marsh tezligiga mos keladi. Tempni oʻzgartirish uchun `setTempo()` funktsiyasida qavslar orasidagi raqamni oʻzgartirish kifoya. Temp qanchalik baland bo'lsa, musiqangiz shunchalik tezlashadi. Siz tempni _45dzm va 220dzm_ oraligʻida tanlashingiz mumkin.
+
+.AMALIYOT
+****
+. Yangi skript yarating.
+. Tovushlarni 2 xil trekka joylashtiring
+. Tempni o'zgartiring va qo'shiqni tinglang.
+. Do'stingiz uchun qo'shiqni 3 farqli tempda ijro eting. So'ng undan eng sekindan eng tez tempga qarab daraja berishini so'rang.
+****
+
+Janr - bu shakl, uslub yoki mavzu bo'yicha o'xshashlik bilan tavsiflangan badiiy kompozitsiyaning (masalan, musiqa) toifasi. Turli janrlar turli xil temp diapazonlariga ega. Masalan:
+
+[cols="^3*"]
+|===
+|JANR |DZM |MISOL
+
+|Pop
+|110-130
+|"Thriller" - Michael Jackson
+
+"I Wanna Dance With Somebody" - Whitney Houston
+
+|Hip-Hop
+|70-100
+|"Rapper's Delight" - The Sugar Hill Gang
+
+"Fight the Power" - Public Enemy
+
+|Kantri
+|90-110
+|"I Walk the Line" - Johnny Cash
+
+"Jolene" - Dolly Parton
+
+|Xaus / Elektron Raqs Musiqasi
+|110-130
+|"One More Time" - Daft Punk
+
+"Good Vibrations" - Marky Mark
+
+|Dabstep / Trep
+|140-150
+|"Scary Monsters and Nice Sprites" - Skrillex
+
+"Turn Down for What" - Lil Jon
+|===
+
+.AMALIYOT
+****
+. O'zingizga yoqqan ijrochilardan birini tanlang va ular qaysi janrga tegishli ekanligini bilib oling.
+. Ushbu janrni qidiring (https://soundcloud.com/[Soundcloud] da yoki shunga o'xshash) va shu janrdagi qo'shiqlardan bir nechta parchalarni tinglang.
+. Qo'shiqlar orasidagi o'xshashlikni tinglang.
+. Shuningdek, janr haqida ko'proq ma'lumot olish uchun Vikipediyani tadqiq qilishingiz mumkin.
+****
+
+Ovozlar avtomatik ravshda ashulangiz tempiga moslab cho'ziladi yoki qisqartiriladi. Aynan shuning uchun, Ovoz Brauzerida ovozlarni ba'zan qo'shig'ingiz ichida ijro etganda boshqacha eshitiladi. Bunda effekt templar orasidagi farq katta bo'lganda qattiq seziladi.
+
+Ovozning aniq tempini ko'rish uchun Ovoz Brauzerida kursorni ovoz konstantasi (ya'ni nomi) ustiga olib boring.
+
+[[comments]]
+=== Kodingizga sharhlar qo'shish
+
+*Sharhlar* bu kompyuter tomonidan bajarilmaydigan kod qatorlari. Sharhlar kodning ichiga turli hil izohlar qo'shish uchun ishlatiladi.
+
+EarSketch skriptlarida sharhlarni qoshig'ingiz haqida ma'lumot berish uchun ishlatishingiz mumkin. Bu boshqa dasturchilarga kodingiz nima haqida ekanligini tushunishni osonlashtiradi.
+
+[role="curriculum-python"]
+Pythonda sharhlar qatori funt belgisi - `#` bilan boshlanadi.
+
+[role="curriculum-javascript"]
+JavaScript-da sharhlar qatori ikki yotiq chiziq belgisi - `//` bilan boshlanadi.
+
+.AMALIYOT
+****
+Skriptingizda, birnchi satrda qo'shig'ingiz xaqida qisqacha ma'lumot bering.
+****
+
+Kodingizning turli bo'limlari nima ish bajarishini ta'riflash uchun sharhlardan ham foydalanishingiz mumkin. Quyida misol keltiramiz. Siz kodni joylashtirishingiz va ishga tushirishingiz mumkin. Sharhlar turli bo'limlarni qanday ta'riflashiga e'tibor bering:
+
+[role="curriculum-python"]
+[source,python]
+----
+include::code-examples/your-first-song-comments.py.txt[]
+----
+
+[role="curriculum-javascript"]
+[source,javascript]
+----
+include::code-examples/your-first-song-comments.js.txt[]
+----
+
+{nbsp} +
+
+[[uploadingsounds]]
+=== Shaxsiy tovushlaringizni yuklash
+
+Chap taraftagi Ovoz Brauzeri orqali ozingizning ovoz parchalarini yuklab olishingiz mumkin. "Ovozlar" yorlig'i ostida "Ovozni qo'shish" tugmasini bosing.
+
+Ovozlarni EarSketch ga yuklash uchun siz hisobigningiza kirgan bolishingiz kerak.
+
+Keling, birinchi 3 ta variantni ko'rib chiqaylik.
+
+. *Tovushni Yuklash* kompyuteringizda avvaldan mavjud bo'lgan audio fayllarni tanlash imkonini beradi.
+. *Tez Yozib Olish* kompyuteringizning mikrofonidan foydalanib ovoz yozib olish imkoniyatini beradi.
+. *Freesound* ochiq manbali audio ma'lumotlar bazasi bo'lgan http://freesound.org[freesound.org^] dan tovushlarni bevosita import qilish imkonini beradi. Qidiruv satrida sizga kerak bo'lgan ovozni qidiring. Undan so'ng faylni tanlash uchun fayl nomining yonidagi tugmani bosing.
+
+[role="curriculum-mp4"]
+[[video101rec]]
+video::./videoMedia/010-01-Recording&UploadingSounds-PY-JS.mp4[]
+
+.AMALIYOT
+****
+Musiqa va umuman san'at ko'pincha xabarni yetkazishning bir usuli hisoblanadi. Bu qo'shiq matni va/yoki qo'shiqning kayfiyati orqali bo'lishi mumkin. Sizdan nimanidir ifodalovchi qisqa qo'shiq yaratishingizni xohlaymiz. Bu siz baham ko'rmoqchi bo'lgan tuyg'u yoki hikoya bo'lishi mumkin.
+
+. Ifodalashni xohlayotgan narsangizni tasavvur qiling
+. Keyin yoki:
+.. She'r yozing va uni qo'shiq qilib aytayotganingizni yoki uni o'qiyotganingizni yozib oling, yoki
+.. Xabaringiz bilan bog'liq ba'zi tovushlarni yozib oling yoki yuklab oling
+. `fitMedia()` funktsiyasidan foydalanib, ushbu yozuvlarni qo'shiqqa qo'shing
+. Qo'shimcha ovozlarni fitMedia() ning yordamida qo'shing
+. Qo'shiqni do'stingizga taqdim eting
+. Siz o'z qo'shiqlaringizni va ifodalamoqchi bo'lgan narsalarni muhokama qilishingiz mumkin
+****
+
+Shu onda ishlayotgan kmpyuter dastury *jarayon* (process) deb ataladi.
+
+Siz jarayonni boshlaganingizda, kompyuter kodi avval kompyuterning *xotirasida* saqlanadi chunki u yeardan kod tezroq chaqiriladi. *Markaziy Protcessor* (CPU) xar bir ko'rsatmani xotiradan olib uni bajaradi. Markazin protsessor odatda kompyuterning "miyasi" deb hisoblanadi.
+
+Kompyuterning xotirasi Xotira, asosiy xotira yoki RAM (Random Access Memory) deb ham ataladi. U amallarni tez va vaqtincha bo'ladi va faqat aktiv jarayonlar uchun ishlatiladi.
+
+Xotira (yoki qisqa muddatli saqlash) va uzoq muddatli saqlash o'rtasida farq bor. Qattiq disk yoki bulutli zaxira kabi uzoq muddatli saqlash ikkilamchi xotira deb ataladi. *Ikkilamchi xotira*, hatto kompyuter o'chirilgandan keyin ham uzoq vaqt davomida katta hajmdagi ma'lumotlarni saqlaydi. Markaziy Protsessor to'g'ridan-to'g'ri ikkilamchi xotira bilan o'zaro aloqa qilmaydi. Markaziy Protsessor jarayonni amalga oshirayotganda, protsessor ularga tezda kira olishi uchun ikkilamchi xotiradan olingan ma'lumotlar birinchi navbatda xotiraga joylashtirilishi kerak.
+
+Ba'zida Markaziy Protsessor foydalanishi uchun xotiradagi ma'lumotlar ikkilamchi xotira o'rniga kirish qurilmasidan keladi. *Kirishlar* - bu mikrofondan audio kabi kompyuter tomonidan qabul qilingan signallar yoki ma'lumotlar. Xuddi shunday, *chiqishlar* undan yuboriladigan signallar yoki ma'lumotlar, masalan, karnay orqali audio chiqishi. Kirish/chiqish yoki I/O - bu kompyuterning tashqi dunyo, jumladan, odamlar bilan aloqa vositasi!
+
+Keling, misol sifatida EarSketch-ga ovoz yozishni ko'rib chiqaylik. Avval, biz ma'lumotlarni kompyuterga kiritish qurilmasi - mikrofon orqali yozib olamiz. Markaziy Protsessor bu audio ma'lumotlarni o'z xotirasida saqlaydi. Yozuvingizni tinglash uchun ijro tugmasini bossangiz, Markaziy Protsessor ma'lumotlarga kiradi va ularni chiqish, karnay yoki quloqchinlarga yuboradi. Yuklash tugmasini bosganingizda, Markaziy Protsessor audio ma'lumotlarni standart ovoz fayli formatiga (WAV fayli yoki .wav) o'zgartiruvchi jarayonni ishga tushiradi va uni EarSketch serveriga yuboradi. Server barcha EarSketch foydalanuvchilariga, shu jumladan shaxsiy kompyuteringizga xizmat ko'rsatadigan tashqi tizimdir. EarSketch serveri tovush faylini xotiradan serverning ikkilamchi xotirasiga saqlaydi, shunda siz kelajakda unga kirishingiz mumkin.
+
+Quyidagi qo'shimcha videoni ko'ring:
+
+[role="curriculum-mp4"]
+[[video11cpu]]
+video::./videoMedia/010-02-ProcessesandMemory-PY-JS.mp4[]
+
+////
+END OF OPTIONAL
+////
+
+[[copyright]]
+=== Mualliflik Huquqidan Oqilona Foydalaning
+
+*Mualliflik huquqi* qonunning *intellektual mulk* yoki musiqa kabi ijodiy ishlarga egalik huquqini qamrab oluvchi qismidir. Namunalarni (kichik musiqa qismlarini) ishlatganda yoki mavjud musiqalarni remiks qilishda siz mualliflarni ko'rsatib o'tishingiz kerak va buni kodingiz sharhlarida amalga oshirishingiz mumkin. Boshqa bastakorlarning tovushlaridan foydalanish va oʻz musiqangizni baham koʻrishdan oldin mualliflik huquqi haqida koʻproq bilib oling!
+
+Original va yetarlicha mazmunli narsalarni yaratganingizda, siz avtomatik ravishda mualliflik huquqini olasiz! Qo'shma Shtatlarda, bu siz nusxa ko'chirishingiz, o'zgartirishlar kiritishingiz va yaratgan narsalaringizni baham ko'rishingiz mumkinligini anglatadi.
+
+Qo'shiq bilan bog'liq ikkita mualliflik huquqi mavjud: qo'shiqqa bo'lgan huquqlar (yozuvchi yoki bastakor tomonidan) va tovushli yozuvga bo'lgan huquqlar (ko'pincha ovoz yozish kompaniyasi). Ommaviy chiqishlardan olingan to'lov haqi qo'shiq muallifiga tushadi va qo'shiq yozuvi sotishdan tushgan to'lov haqining aksariyati ovoz yozish kompaniyasiga tushadi.
+
+*Mualliflik huquqining buzilishi* musiqani noqonuniy yuklab olish kabi mualliflik huquqining buzilishidir. Qo'shma Shtatlarda *adolatli foydalanish* mualliflik huquqi bilan himoyalangan kontentdan ma'lum sharoitlarda, masalan, ta'lim yoki tanqidiy maqsadlarda foydalanishga ruxsat beradi, asarning faqat kichik qismini qayta ishlatishga imkon beradi. Odil foydalanish har bir holat uchun sudya tomonidan alohida-alohida belgilanadi.
+
+Adolatli foydalanishdan tashqari, musiqadan ochiq foydalanish va ulashish usuli ham mavjud. Ijrochilar Ovozlar Brauzeriga *namunalar* (tovushli yozuvning kichik qismi) orqali siz bilan o'z ishlarini baham ko'rgani uchun EarSketch ishlaydi.
+
+*Mualliflik huquqi* faqatgina kimdirni jazolash uchun mavjud emas. Agar siz qo'shiqni internetga yuklasangiz, siz kimdir uni sizdan ruxsat so'ramasdan ishlashiga qarshi bo'lmasligingiz mumkin. Siz boshqalar musiqangizni ulashishni istaysiz! Mualliflik huquqi bizga kam emas, balki ko'proq san'at yaratish va baham ko'rishda yordam berishi kerak. EarSketch da qo'shiq yaratganingizda, siz _o'g'irlash_ haqida emas _ulashish_ haqida ko'proq o'ylashingizni istaymiz. EarSketch boshqa sanatkorlar sisl bilan o'z ishalrini ulashgani evaziga ishlaydi . Ularning hissalari musiqa na'munalar kutubxonasini yaratdi.  Musiqangizni baham ko'rish yoki boshqa talabalarga kodingizni remiks qilishiga ruxsat berish - bu badalni to'lash va dunyoga yangi san'at asalarini taqdim etishga yordam berish hisoblanadi.
+
+EarSketch da ovoz va musiqalarni ishlatganingizda, mualliflik xuquqi egasidan ruxsat olganingizga yoki ovozlarni adolatli ishlatganigizga amin bo'ling.
+
+Batafsil ma'lumot ucuhun bizning https://earsketch.gatech.edu/landing/#/license[LITSENZIYAMIZNI^] ko'rib chiqing.
+
+[[chapter2summary]]
+=== 2-Bob Xulosa
+
+[role="curriculum-python"]
+* *Temp* - bu musiqa asarining ijro etilish tezligi, u daqiqada zarba miqdorida (dzm) belgilanadi. Temp janrga bog'liq.
+* EarSketch Ovozlar Brauzerida ovozlar tegishli papkalarida tashkil etilgan. Klipning aniq tempini ko'rish uchun Tovush Brauzerida kursorni ism ustiga olib boring.
+* Sharhlar - bu kompyuter tomonidan bajarilmaydigan kod satrlari. Ular skript ichida eslatmalar qilish uchun foydalidir.
+* `from earsketch import *` loyihangizga EarSketch IDI-ni qo‘shadi.
+* `setTempo();` qo'shiqning tempini belgilash imkonini beradi. U har bir EarSketch skriptiga kiritilishi kerak.
+* Shaxsiy tovushlaringizni Ovoz Brauzeri orqali EarSketch-ga yuklashingiz mumkin. Shunchaki "Ovoz Qo'shish" tugmasini bosing.
+* *Jarayon* bu kompyuterda bajariladigan vazifadir. Qayta ishlash - dastur ko'rsatmalarini bajarish uchun mas'ul bo'lgan kompyuterning *Markaziy Protsessori* tomonidan amalga oshiriladi.
+* *Xotira* (RAM yoki asosiy xotira deb nomlanadi) Markaziy Protsessor foydalanishi uchun maʼlumotlar va ishlov berish koʻrsatmalarini vaqtincha saqlaydi.
+* *Ikkilamchi xotira* ma'lumotlarni uzoq muddatli, ko'pincha katta hajmlarda saqlashni nazarda tutadi. Protsessor ikkilamchi xotiradagi ma'lumotlarga kira olishi uchun ular xotiraga joylashtirilishi kerak.
+* *Mualliflik huquqi* - bu musiqa kabi ijodiy ishlarga egalik huquqini qamrab oluvchi qonunning bir qismi. Bastakorlar uchun bu muhim, chunki u boshqa shaxsning ishidan qanday foydalanish va almashish mumkinligini belgilaydi.
+* Agar siz aniq va yangi musiqiy asar yaratsangiz, sizda avtomatik ravishda mualliflik huquqi mavjud. Boshqacha qilib aytganda, siz yaratgan asar ustida huquqlarga egasiz.
+* Musiqa asarini *litsenziyalash* boshqalarga undan foydalanishga ruxsat beradi.
+
+[role="curriculum-javascript"]
+* *Temp* - bu musiqa asarining ijro etilish tezligi, u daqiqada zarba miqdorida (dzm) belgilanadi. Temp janrga bog'liq.
+* EarSketch Ovozlar Brauzerida ovozlar tegishli papkalarida tashkil etilgan. Klipning aniq tempini ko'rish uchun Tovush Brauzerida kursorni ism ustiga olib boring.
+* Sharhlar - bu kompyuter tomonidan bajarilmaydigan kod satrlari. Ular skript ichida eslatmalar qilish uchun foydalidir.
+* `setTempo();` qo'shiqning tempini belgilash imkonini beradi. U har bir EarSketch skriptiga kiritilishi kerak.
+* Shaxsiy tovushlaringizni Ovoz Brauzeri orqali EarSketch-ga yuklashingiz mumkin. Shunchaki "Ovoz Qo'shish" tugmasini bosing.
+* *Jarayon* bu kompyuterda bajariladigan vazifadir. Qayta ishlash - dastur ko'rsatmalarini bajarish uchun mas'ul bo'lgan kompyuterning *Markaziy Protsessori* tomonidan amalga oshiriladi.
+* *Xotira* (RAM yoki asosiy xotira deb nomlanadi) Markaziy Protsessor foydalanishi uchun maʼlumotlar va ishlov berish koʻrsatmalarini vaqtincha saqlaydi.
+* *Ikkilamchi xotira* ma'lumotlarni uzoq muddatli, ko'pincha katta hajmlarda saqlashni nazarda tutadi. Protsessor ikkilamchi xotiradagi ma'lumotlarga kira olishi uchun ular xotiraga joylashtirilishi kerak.
+* *Mualliflik huquqi* - bu musiqa kabi ijodiy ishlarga egalik huquqini qamrab oluvchi qonunning bir qismi. Bastakorlar uchun bu muhim, chunki u boshqa shaxsning ishidan qanday foydalanish va almashish mumkinligini belgilaydi.
+* Agar siz aniq va yangi musiqiy asar yaratsangiz, sizda avtomatik ravishda mualliflik huquqi mavjud. Boshqacha qilib aytganda, siz yaratgan asar ustida huquqlarga egasiz.
+* Musiqa asarini *litsenziyalash* boshqalarga undan foydalanishga ruxsat beradi.
+
+[[chapter-questions]]
+=== Savollar
+
+[question]
+--
+`setTempo()` EarSketch-da qanday imkoniyat beradi?
+
+[answers]
+* Qo'shiqning tempini belgilash
+* Trekka ovoz qo'shish
+* Baraban zarbasini yaratish
+* Loyiha doirasida tovush sifatini o'zgartirish
+--
+
+[question]
+--
+Temp birligi nima?
+
+[answers]
+* DZM (Daqiqada Zarba Miqdori)
+* O'lchovlar
+* Detsibellar(dB)
+* Soniyalar
+--
+
+[question]
+--
+Izohlarni nima uchun ishlatishingiz mumkin?
+
+[answers]
+* Yuqoridagilarning barchasi
+* Kodingizni tartibga solish
+* Skriptingizning boshida skriptingiz izohini yozish
+* Kodingizni boshqa dasturchilar uchun o'qishni osonlashtiradi
+--
+
+[question]
+--
+Quyidagi bayonotlardan qaysi biri to‘g‘ri?
+
+[answers]
+* Qattiq disk ikkilamchi xotiraga misol bo'la oladi
+* Audio ma'lumotlar kompyuterning Markaziy Protsessoriga saqlanadi
+* Markaziy Protsessor dasturlar uchun ko'rsatma ma'lumotlarini saqlaydi
+* Ikkilamchi xotira ma'lumotlarni qisqa vaqt davomida saqlaydi
+--
+
+[question]
+--
+Qanday qilib mualliflik huquqini olasiz?
+
+[answers]
+* Har qanday yangi asar yaratish va nashr etish orqali
+* Patent sotib olish orqali
+* Yashirin tashkilotga a'zo bo'lish orqali
+* Ishingiz uchun litsenziya tanlash orqali
+--
+
+[question]
+--
+Musiqiy litsenziya nima?
+
+[answers]
+* Litsenziya boshqalarga musiqani ishlatishga ruxsat beradi
+* Bastalash jarayoni
+* Musiqiy janr
+* Ashulangizning tasviri
+--

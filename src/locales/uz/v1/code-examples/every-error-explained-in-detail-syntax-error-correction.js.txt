@@ -1,0 +1,14 @@
+//Sintax Xatosi: To'g'irlash
+
+setTempo(120);
+
+var clap = RD_TRAP_ARCADEFIRESFX_1;
+var beatString = "00+-0-00+0+-0+++";
+
+for (var measure = 1; measure < 32; measure++) {
+    if (measure % 4 === 0) {
+    // EarSketch API funksiyasini dan foydalanib zarba satrini aralashtirish
+        beatString = shuffleString(beatString);
+    }
+    makeBeat(clap, 1, measure, beatString);
+}

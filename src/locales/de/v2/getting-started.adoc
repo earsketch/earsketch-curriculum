@@ -47,7 +47,7 @@ video::./videoMedia/001-06-TheDAWinDetail-PY-JS.mp4[]
 TODO: This video needs some revamping. See recommandations here: https://docs.google.com/spreadsheets/d/114pWGd27OkNC37ZRCZDIvoNPuwGLcO8KM5Z_sTjpn0M/edit#gid=302140020 (videos revamping tab)
 ////
 
-Versuchen wir, ein Codebeispiel in EarSketch auszuführen! Drücke im Feld unten auf das blaue Zwischenablagensymbol oben rechts. Dadurch wird der Beispielcode in eine neue Datei im *Code Editor* eingefügt. Du brauchst den Code noch nicht zu verstehen. Klicke einfach auf _ausführen_: Deine Musik wird in der DAW angezeigt. Du kannst den _play_ Button drücken, um ihn zu hören.
+Versuchen wir, ein Codebeispiel in EarSketch auszuführen! Drücke im Feld unten auf das blaue Zwischenablagensymbol oben rechts. Dadurch wird der Beispielcode in eine neue Datei im *Code Editor* eingefügt. Du brauchst den Code noch nicht zu verstehen. Klicke einfach auf _ausführen_. Deine Musik wird in der DAW angezeigt. Du kannst den _play_ Button drücken, um ihn zu hören.
 
 [role="curriculum-python"]
 [source,python]
@@ -135,7 +135,7 @@ Die obige Anweisung platziert den Sound `Y18_DRUM_SAMPLES_2` auf Track `2` von T
 
 Versuche `fitMedia()` zu einem Skript hinzuzufügen.
 
-Wenn du alle deine Parameter hinzugefügt hast, drücke _AUSFÜHREN_. Du wirst deine Sounds in der DAW visualisiert sehen. Drücke _play_ um deinen Song zu hören.
+Wenn du alle deine Parameter hinzugefügt hast, drücke _AUSFÜHREN_. Du wirst deine Sounds in der DAW visualisiert sehen. Drücke _play_, um deinen Song zu hören.
 
 [role="curriculum-javascript"]
 Hinweis: In JavaScript kann am Ende jeder Anweisung optional ein Semikolon `;` hinzugefügt werden. Die Verwendung des Semikolons ist deine persönliche Wahl.
@@ -184,7 +184,7 @@ include::code-examples/getting-started-using-fitmedia.py.txt[]
 include::code-examples/getting-started-using-fitmedia.js.txt[]
 ----
 
-Füge deinem Skript für eine zusätzliche Herausforderung weitere <code>fitMedia()</code>-Aufrufe hinzu, wie wir es im Folgenden tun. Beachte, dass wir für jeden `fitMedia()` Aufruf eine andere Tracknummer verwenden:
+Füge deinem Skript für eine zusätzliche Herausforderung weitere fitMedia() Aufrufe hinzu, wie wir es im Folgenden tun. Beachte, dass wir für jeden `fitMedia()` Aufruf eine andere Tracknummer verwenden:
 
 [role="curriculum-python"]
 [source,python]

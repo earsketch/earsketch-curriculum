@@ -1,0 +1,11 @@
+// Incrementing: Creating an alternating drum beat
+
+setTempo(120);
+
+var groove1 = HIPHOP_DUSTYGROOVE_011;
+var groove2 = HIPHOP_DUSTYGROOVE_010;
+
+for (var measure = 1; measure < 9; measure = measure + 4) {
+    fitMedia(groove1, 1, measure, measure + 2);
+    fitMedia(groove2, 2, measure + 2, measure + 4);
+}

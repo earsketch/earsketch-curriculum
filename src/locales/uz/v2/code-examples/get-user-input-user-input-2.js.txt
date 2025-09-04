@@ -1,0 +1,12 @@
+// Foydalanuvchidan olingan ma'lumot 2: Foydalanuvchi belgilagan parametrlardan dubstep janridagi musiqa yaratish
+
+// Sozlash
+setTempo(120);
+
+// Musiqa
+var soundNumber = readInput("10dan and 46gacha bolgan musiqa raqamini tanlang: ");
+var dubstepSound = "DUBSTEP_BASS_WOBBLE_0";
+var finalSound = dubstepSound + soundNumber;
+
+// Foydalanuvchi tanlagan dubstep musiqa
+fitMedia(finalSound, 1, 1, 5);
