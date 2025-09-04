@@ -125,7 +125,7 @@ Para cada una de las siguientes cadenas de golpes de tambor, trata de marcar cad
 
 Aquí hay algunos ejemplos de cadenas de golpes de tambor (también conocidas como cadenas de tiempos o cadenas de ritmo) que duran 1 compás:
 
-Negras: `"0\+++0+++0\+++0+++"`
+Negras: `"0+++0+++0+++0+++"`
 (se dice: "1, 2, 3, 4")
 
 ++++
