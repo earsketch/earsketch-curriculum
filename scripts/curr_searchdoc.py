@@ -1,11 +1,10 @@
 # Parses curriculum html files to create JSON text search dataset (.js file)
 
-import codecs
+import codecs, os
 import json
-import os
+from bs4 import BeautifulSoup
 import sys
 
-from bs4 import BeautifulSoup
 
 if len(sys.argv) < 2:
     print("Error, no arguments given")
@@ -14,9 +13,9 @@ if len(sys.argv) < 2:
 curr_dir = sys.argv[1]
 
 current_locale = os.path.basename(os.path.normpath(curr_dir))
-toc_html_path = curr_dir + "/toc.html"
-toc = codecs.open(toc_html_path, "r").read()
-parser = BeautifulSoup(toc, "html.parser")
+toc_html_path = curr_dir + '/toc.html'
+toc = codecs.open(toc_html_path, 'r').read()
+parser = BeautifulSoup(toc, 'html.parser')
 
 documents = []
 
@@ -28,55 +27,53 @@ n_processed_ch = 0
 for unit in parser.find_all("div", attrs={"class": "sect1"})[:-1]:
     n_processed_units += 1
     unit_data = {
-        "title": unit.find("a").text,
-        "id": unit.find("a").attrs["href"],
+        'title': unit.find('a').text,
+        'id': unit.find('a').attrs['href'],
     }
 
     # chapters
-    for chapter in unit.find_all("div", attrs={"class": "sect2"}):
+    for chapter in unit.find_all('div', attrs={'class':'sect2'}):
         n_processed_ch += 1
-        url = chapter.find("a").attrs["href"]
+        url = chapter.find('a').attrs['href']
 
         # read the html of current chapter
-        chapter_html = codecs.open(curr_dir + "../" + url, "r").read()
-        sections = BeautifulSoup(chapter_html, "html.parser")
+        chapter_html = codecs.open(curr_dir+'../'+url, 'r').read()
+        sections = BeautifulSoup(chapter_html, 'html.parser')
 
-        ch_data = {"title": chapter.find("a").text, "id": url}
+        ch_data = {
+            'title': chapter.find('a').text,
+            'id': url
+        }
 
-        paragraphs = sections.find("p")
+        paragraphs = sections.find('p')
         if paragraphs != None:
-            ch_data["text"] = paragraphs.text
+            ch_data['text'] = paragraphs.text
             documents.append(ch_data)
 
         # subsections of chapter
-        for section in sections.find_all("div", attrs={"class": "sect2"}):
+        for section in sections.find_all('div', attrs={'class':'sect2'}):
             sec_data = {
-                "title": section.find("h3").text,
-                "id": url + "#" + section.find("h3").attrs["id"],
+                'title': section.find('h3').text,
+                'id': url+'#'+section.find('h3').attrs['id']
             }
-            paragraphs = section.find("p")
+            paragraphs = section.find('p')
             if paragraphs != None:
-                sec_data["text"] = paragraphs.text
+                sec_data['text'] = paragraphs.text
                 documents.append(sec_data)
 
 
 # print documents
-wf = open(curr_dir + "/curr_searchdoc.json", "w")
+wf = open(curr_dir+'/curr_searchdoc.json', 'w')
 wf.write(json.dumps(documents, indent=4))
 wf.close()
 
-print(
-    str(n_processed_units)
-    + " units with "
-    + str(n_processed_ch)
-    + " chapters processed"
-)
+print(str(n_processed_units) + " units with " + str(n_processed_ch) + " chapters processed")
 
 print("Fixing toc html links to make links usable")
 
 # fix the toc link href paths
-for a in parser.find_all("a"):
-    a["href"] = a["href"].replace("/" + current_locale + "/", "")
+for a in parser.find_all('a'):
+    a['href'] = a['href'].replace('/'+current_locale+'/', '')
 
-with open(toc_html_path, "wb") as wf:
+with open(toc_html_path, 'wb') as wf:
     wf.write(parser.encode_contents())
