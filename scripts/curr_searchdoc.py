@@ -23,7 +23,8 @@ documents = []
 print("Processing html files to create text search dataset...")
 n_processed_units = 0
 n_processed_ch = 0
-for unit in parser.find_all('div', attrs={'class':'sect1'}):
+# Skip the last unit to exclude Archived Curriculum from the search index
+for unit in parser.find_all("div", attrs={"class": "sect1"})[:-1]:
     n_processed_units += 1
     unit_data = {
         'title': unit.find('a').text,
