@@ -90,9 +90,9 @@ setEffect(1, CHORUS, MIX, 0.5);
 
 |CHORUS_NUMVOICES |Die Anzahl der verwendeten Kopien des Originalsounds. Größere Werte erzeugen einen größeren Ensembleeffekt. |1.0 |1.0 |8.0
 
-|CHORUS_RATE |Die Rate (in Hz), in der der Pitch cycelt oder "wackelt" Niedrigere Werte erzeugen sanfte zyklische Sounds, während höhere Werte mehr wackelnde Effekte erzeugen. |0.5 |0.1 |16.0
+|CHORUS_RATE |Die Rate (in Hz), in der der Pitch cycelt oder "wackelt" Die Rate (in Hz), in der der Pitch cycelt oder "wackelt" Niedrigere Werte erzeugen sanfte zyklische Sounds, während höhere Werte mehr wackelnde Effekte erzeugen. |0.5 |0.1 |16.0
 
-|CHORUS_MOD |Die Tiefe des Pitch-Wackeln (d.h. wie viel Pitch-Cycling verwendet wird). Niedrige Einstellungen erzeugen einen natürlicheren Sound, während höhere Einstellungen einen künstlicheren Sound erzeugen. |0.7 |0.0 |1.0
+|CHORUS_MOD |wie viel Pitch-Cycling verwendet wird). Niedrige Einstellungen erzeugen einen natürlicheren Sound, während höhere Einstellungen einen künstlicheren Sound erzeugen. |0.7 |0.0 |1.0
 
 |MIX |Die Menge an Sound-Effekts, die in den ursprünglichen Sound gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
@@ -319,7 +319,7 @@ setEffect(1, FILTER, MIX, 1);
 |===
 |Parameter |Beschreibung |Default Value |minValue |maxValue
 
-|FILTER_FREQ |Die Grenzfrequenz (Hz), d. h. alle Frequenzen, die über diesem Wert liegen, werden abgeschwächt (sie werden immer leiser, je weiter sie von diesem Wert entfernt sind). |1000.0 |20.0 |20000.0
+|FILTER_FREQ |alle Frequenzen, die über diesem Wert liegen, werden abgeschwächt (sie werden immer leiser, je weiter sie von diesem Wert entfernt sind). |1000.0 |20.0 |20000.0
 
 |FILTER_RESONANCE |Der Boost von Frequenzen in der Nähe des FILTER_FREQ-Pegels. Höhere Werte der Resonanz verstärken ein kleines Frequenzfenster nahe des FILTER_FREQ und erzeugen einen schärferen, klingenderen Sound um diese Frequenzen herum, während niedrigere Werte der Resonanz ein größeres Fenster dezent anheben. |0.8 |0.0 |1.0
 
@@ -370,7 +370,7 @@ setEffect(1, FLANGER, MIX, 1);
 
 |FLANGER_FEEDBACK |Der Anteil (in dB), mit dem der betroffene Sound in den Effekt „zurückgeführt“ wird. Höhere Werte erzeugen künstlichere Sounds. |-50.0 |-80.0 |-1.0
 
-|FLANGER_RATE |Die Rate (in Hz), in der der Pitch cycelt oder "whoosht" Niedrigere Werte erzeugen sanfte zyklische Sounds, während höhere Werte mehr whooshende Effekte und klangliche Artefakte erzeugen. |0.6 |0.001 |100.0
+|FLANGER_RATE |Die Rate (in Hz), in der der Pitch cycelt oder "whoosht" Die Rate (in Hz), in der der Pitch cycelt oder "whoosht" Niedrigere Werte erzeugen sanfte zyklische Sounds, während höhere Werte mehr whooshende Effekte und klangliche Artefakte erzeugen. |0.6 |0.001 |100.0
 
 |MIX |Die Menge an Sound-Effekts, die in den ursprünglichen Sound gemischt wird. Im minimalen Wert 0.0 wird nur das originale ("trockene") Audio abgespielt. Mit dem maximalen Wert 1.0 wird nur der veränderte ("nasse") Ton abgespielt. |1.0 |0.0 |1.0
 
@@ -707,7 +707,7 @@ setEffect(1, WAH, WAH_POSITION, 0, 2, 0.5, 3);
 setEffect(1, WAH, MIX, 1);
 ----
 
-Mit `WAH` kann der Sound jemanden nachahmen, der „Wah Wah“ sagt, wenn der Parameter `WAH_POSITION` mit der Funktion setEffect() über die Zeit verändert wird. Es handelt sich um einen resonanten Bandpassfilter, d. h. er senkt die Lautstärke der hohen und tiefen Frequenzen ab, während er ein schmales Frequenzfenster in der Mitte anhebt.
+Mit `WAH` kann der Sound jemanden nachahmen, der „Wah Wah“ sagt, wenn der Parameter `WAH_POSITION` mit der Funktion setEffect() über die Zeit verändert wird. er senkt die Lautstärke der hohen und tiefen Frequenzen ab, während er ein schmales Frequenzfenster in der Mitte anhebt.
 
 |===
 |Parameter |Beschreibung |Default Value |minValue |maxValue

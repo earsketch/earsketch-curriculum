@@ -331,7 +331,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
-* Füge einige Effekte mit `setEffect()` hinzu. Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
+* Füge einige Effekte mit `setEffect()` hinzu. Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb...
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 * Wenn nötig, füge einige Elemente in eine Liste.
@@ -345,7 +345,7 @@ Erstelle einen vollständigen Song und lass ihn von deinem Nachbarn peer-reviewe
 * Es ist immer empfehlenswert, über ein Thema für dein Lied und eine Struktur nachzudenken, bevor du beginnst. Die Struktur kann so einfach wie ABA sein.
 * Starte die Auswahl von Sounds und das Testen der Dinge. Erstelle Sound- und Beat String-Variablen und verwende `fitMedia()` und `makeBeat()` Aufrufe. Du kannst deine eigenen Sounds hochladen.
 * Wann immer es nützlich ist, erstelle for-loops und benutzerdefinierte Funktionen.
-* Füge einige Effekte mit `setEffect()` hinzu.  Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb... hinzufügen.
+* Füge einige Effekte mit `setEffect()` hinzu.  Du kannst einen Fade-In, Fade-Out, etwas Delay, Reverb...
 * Du kannst eine bedingte Anweisung verwenden, um deinen Song zu mischen (passe die Lautstärke der einzelnen Tracks an).
 * Du kannst nach Benutzerinput fragen, um etwas in deinem Song zu ändern.
 * Wenn nötig, füge einige Elemente in einen Array.
