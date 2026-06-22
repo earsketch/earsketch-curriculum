@@ -123,7 +123,7 @@ image::../media/U1P1/sixteenthnote.png[A sixteenth note]
 
 فيما يلي بعض الأمثلة على أوتار الإيقاع بمقياس واحد:
 
-Quarter notes: `"0\+++0+++0\+++0+++"`
+Quarter notes: `"0+++0+++0+++0+++"`
 (read: "1,2,3,4")
 ++++
 <div class="curriculum-mp3">audioMedia/beatString1.mp3</div>
@@ -231,9 +231,9 @@ include::../../en/v2/code-examples/add-beats-multi-beat.js.txt[]
 
 سنستخدم 3 أنواع من الأصوات: ركلة (المسار 1) ، فخ (المسار 2) ، وهيهات (المسار 3). سنستخدم دالة واحدة ` makeBeat () ` لكل من هذه الأصوات ، على 3 مسارات مختلفة.
 
-////
-video is currently being edited
-////
+[role="curriculum-mp4"]
+[[video1a]]
+video::./videoMedia/3_4_beat_by_genre.mp4[]
 
 هذا هو المقطع البرمجي المقابل:
 

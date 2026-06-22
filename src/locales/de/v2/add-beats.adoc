@@ -129,7 +129,7 @@ Versuche für jede der folgenden Zeichenfolgen auf die Nullen zu klatschen. Hör
 
 Hier sind einige Beispiele für 1-Takt Beat-Strings:
 
-Viertelnoten: `"0\+++0+++0\+++0+++"`
+Viertelnoten: `"0+++0+++0+++0+++"`
 (gelesen: "1, 2, 3, 4")
 
 ++++
